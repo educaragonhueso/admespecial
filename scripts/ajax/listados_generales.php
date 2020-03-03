@@ -29,6 +29,11 @@ $tcentro->setNombre();
 $cabecera="campos_cabecera_".$subtipo_listado;
 $camposdatos="campos_bbdd_".$subtipo_listado;
 
+
+if($subtipo_listado=='sor_ale') $nombre_listado='LISTADO ALUMNOS SEGUN NUMERO ALEATORIO PARA SORTEO';
+if($subtipo_listado=='sor_bar') $nombre_listado='LISTADO SOLICITUDES BAREMADAS';
+if($subtipo_listado=='sor_det') $nombre_listado='LISTADO DETALLE BAREMO';
+
 ######################################################################################
 $log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, CABECERA: ".$cabecera);
 $log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, CAMPOS DATOS: ".$camposdatos);
@@ -62,13 +67,17 @@ if($_POST['pdf']==1)
 	$cab=$$cabecera;
 	$pdf->SetFont('Helvetica','',8);
 	//$pdf->AddPage('L','',0,$subtipo_listado);
-	$pdf->AddPage('L','',0,$subtipo_listado);
+	$pdf->AddPage('L','',0,$nombre_listado);
 	$pdf->BasicTable($cab,$datos);
-	$pdf->Ln(20);
+	$pdf->Ln();
 	 // Arial italic 8
 	$pdf->SetFont('Arial','I',8);
 	  // Page number
-	$pdf->Cell(0,10,'En Zaragoza______________________a____de____2020_',0,0,'C');
+	$pdf->Cell(40,10,'SELLO CENTRO',1,0,'C');
+	$pdf->Cell(140,10,'En ______________________ a ____de________ de 2020',0,0,'C');
+	$pdf->Cell(0,10,'Firmado:',0,0);
+	$pdf->Ln();
+	$pdf->Cell(220,10,'El Director/a',0,0,'R');
 	$pdf->Output(DIR_SOR.$subtipo_listado.'.pdf','F');
 }
 
