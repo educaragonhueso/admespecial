@@ -14,6 +14,7 @@ $log_listado_solicitudes=new logWriter('log_listado_solicitudes',DIR_LOGS);
 ########################################################################################
 
 //VARIABLES
+$dia_sorteo=0;
 $modo='presorteo';
 $id_centro=$_POST['id_centro'];
 $estado_convocatoria=$_POST['estado_convocatoria'];
@@ -66,16 +67,20 @@ if($_POST['rol']=='admin' or strpos($_POST['rol'],'sp')!==FALSE)
 }
 else
 {
-	$form_sorteo_parcial='<div class="input-group mb-3">
+	//Si se ha asignado el nuemro de sorteo habilitamos la casilla para introducir el número
+	if($fase_sorteo==1) $disabled='';
+	else $disabled='disabled';
+
+	$form_sorteo_parcial='<div id="form_sorteo_parcial" class="input-group mb-3">
 		<div class="input-group-append">
 		</div>
 		<div class="input-group-append">
 			<button class="btn btn-success" type="submit" id="boton_realizar_sorteo">Realizar sorteo</button>
 		</div>
-		<input type="text" id="num_sorteo" name="num_sorteo" value="" placeholder="NUMERO OBTENIDO" disabled>
-		<input type="hidden" id="num_solicitudes" name="num_solicitudes" value="'.$nsolicitudes.'" placeholder="NUMERO OBTENIDO" disabled>
+		<input type="text" id="num_sorteo" name="num_sorteo" value="" style="width:400px;" placeholder="NUMERO OBTENIDO, DEBE ESTAR ENTRE 1 y '.$nsolicitudes.'" '.$disabled.'>
+		<input type="hidden" id="num_solicitudes" name="num_solicitudes" value="'.$nsolicitudes.'" placeholder="NUMERO OBTENIDO" '.$disabled.'>
 	</div>';
-	$form_sorteo_completo='<div class="input-group mb-3">
+	$form_sorteo_completo='<div id="form_sorteo" class="input-group mb-3">
 		<div class="input-group-append">
 			<button class="btn btn-success" type="submit" id="boton_asignar_numero">Asignar numero</button>
 		</div>
@@ -151,10 +156,10 @@ else
 	  #Mostramos formulario para el sorteo si es el dia correcto
         $fase_sorteo=$tcentro->getFaseSorteo();
 	#Mostramos formulario para el sorteo si es el dia correcto
-	$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: ".$fase_sorteo." DIA SORTEO: ".$dia_sorteo);
+	$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES, : FASE SORTEO: ".$fase_sorteo." DIA SORTEO: ".$dia_sorteo);
 	if($fase_sorteo==0)
 	{
-			if($dia_sorteo==1) print($form_sorteo);
+			if($dia_sorteo==1) print($form_sorteo_completo);
 			if($_POST['id_centro']!='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
 			print($form_nuevasolicitud);
 			print('<br>');
