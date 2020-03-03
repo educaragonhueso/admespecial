@@ -1567,7 +1567,7 @@ vid=vid.replace("print",'');
 	  data: {id_alumno:vid},
 	  url:'../scripts/ajax/print_solicitud.php',
 	      success: function(data) {
-				window.open('scripts/datos/'+data,'_blank');
+				window.open('imprimirsolicitud.php?id='+vid,'_blank');
 		},
 	      error: function() {
 		alert('Problemas imprimiendo solicitud!');
