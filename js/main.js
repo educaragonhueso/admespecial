@@ -9,6 +9,11 @@ $( ":input" ).select(function() {
 //METODOS DE CALCULO DE SORTEO
 
 $('body').on('click', '#boton_asignar_numero', function(e){
+
+var answer = window.confirm("Estas seguro? Esta operacion solo se puede realizar una vez")
+if (!answer) {
+   console.log("op cancelada");
+    }
 var vrol=$('#rol').attr("value");
 var vestado_convocatoria=$('#estado_convocatoria').text();
 var vidcentro=$('#id_centro').text();
@@ -33,6 +38,7 @@ var vidcentro=$('#id_centro').text();
 //REALIZAR SORTEO
 
 $('body').on('click', '#boton_realizar_sorteo', function(e){
+
 var vid=$(this).attr("id");
 var vrol=$('#rol').attr("value");
 var vidcentro=$('#id_centro').text();
