@@ -179,6 +179,7 @@ else
         }
 	else
 	{
+                        if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
 			print($list->showSolicitudes($solicitudes,$_POST['rol']));
 	}
 
