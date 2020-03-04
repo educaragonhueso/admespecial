@@ -49,10 +49,11 @@ $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CABE
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CAMPOS DATOS: ".$camposdatos);
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, SUBTIPO: ".$subtipo_listado);
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CENTRO:ESTADO ".$id_centro.":".$estado_centro);
+$log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, ESTADO CONVOCATORIA:  ".$estado_convocatoria);
 ######################################################################################
 
 //mostramos las solitudes completas sin incluir borrador
-$solicitudes=$list->getSolicitudes($id_centro,0,$estado_centro,$modo='provisionales',$subtipo_listado,$estado_convocatoria); 
+$solicitudes=$list->getSolicitudes($id_centro,0,$estado_centro,$modo='provisionales',$subtipo_listado,'todas',$estado_convocatoria); 
 
 ######################################################################################
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, DATOS: ");
