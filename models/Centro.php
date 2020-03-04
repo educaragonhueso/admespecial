@@ -31,7 +31,8 @@ class Centro extends EntidadBase{
 		}
     public function getNumeroSorteo()
 	{
-			$sql="select num_sorteo from centros where id_centro=$this->c";
+			$sql="select num_sorteo from centros where id_centro=$this->id_centro";
+			$this->log_sorteo->warning('sql get num sorteo '.$sql);
 			$query=$this->conexion->query($sql);
 			if($query)
 			return $query->fetch_object()->num_sorteo;
