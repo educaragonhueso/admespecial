@@ -27,7 +27,12 @@ include('includes/head.php');
 			<button class="btn btn-primary" id="imprimir">IMPRIMIR</button>
 	  	<span type="hidden" id="estado_convocatoria" name="estado_convocatoria" value="<?php echo $_SESSION['estado_convocatoria']; ?>"></span>
 	  	<span type="hidden" id="rol" name="rol" value="<?php echo $_SESSION['rol']; ?>"></span> 
-				<?php include 'includes/cabecera_impresion.php';?>
+				<?php 
+					echo '<div class="row" style="padding-top:10px;padding-bottom:10px;">';
+					echo '<div class="col text-right"><b>NUMERO IDENTIFICADOR DE SOLICITUD:</b><br> '.$sc->getIdSolicitud($_GET['id']).' </b></div>';
+					echo '</div>';
+					include 'includes/cabecera_impresion.php';
+				?>
 			<div class="row ">
 				<div id="headimp" style="width:100%">
 					<?php echo $sc->imprimirSolicitud($_GET['id']);?>			
@@ -40,6 +45,17 @@ include('includes/head.php');
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+<style>
+@media print {
+  body {
+	display: block;
+    overflow: visible !important;
+  }
+}
+</style>
+
 <script>
 $('#imprimir').click(function(){
 
@@ -52,3 +68,4 @@ $('#imprimir').show();
 });
 </script>
 </body>
+</html>
