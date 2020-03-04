@@ -10,7 +10,7 @@ include('includes/head.php');
 	  <span type="hidden" id="provincia" name="provincia" value="<?php echo $_SESSION['provincia'];?>"></span>
 	  <span type="hidden" id="estado" name="estado" value="<?php echo $_SESSION['estado']; ?>"></span>
 	  <span type="hidden" id="rol" name="rol" value="<?php echo $_SESSION['rol']; ?>"><b>ROL: </b><?php echo $_SESSION['rol']; ?></b></span> 
-		<?php /*usamos metodo del controlador de centros activo*/if($_SESSION['num_sorteo']!=0) echo "<br><b>Numero sorteo:</b> ".$_SESSION['num_sorteo'];else echo "<br><b>Sorteo No realizado</b> ";?>
+		<?php if($_SESSION['rol']=='centro') if($_SESSION['num_sorteo']!=0) echo "<br><b>Numero sorteo:</b> ".$_SESSION['num_sorteo'];else echo "<br><b>Sorteo No realizado</b> ";?>
 		<?php if($_SESSION['rol']=='centro' or $_SESSION['rol']=='admin' or $_SESSION['provincia']!='aragon') include('includes/menusuperior.php');?>
 		<?php /*usamos metodo del controlador de centros activo echo $this->showTimeline('centro',$_SESSION['id_centro'],'matricula');*/?>
 		<div class="row ">
