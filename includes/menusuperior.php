@@ -1,7 +1,7 @@
 <?php if(isset($_SESSION['provincia'])) {$provincia=$_SESSION['provincia'];} else $provincia='ARAGON';?>            
 <h2 style='text-align:center;'>ADMISION ALUMNOS EDUCACION ESPECIAL <?php echo strtoupper($provincia);?></h2>
 		 <p hidden id='id_centro'><?php echo $_SESSION['id_centro'];?></p> 
-		 <p hidden id='id_estado_convocatoria'><?php echo $_SESSION['estado_convocatoria'];?></p> 
+		 <p hidden id='estado_convocatoria'><?php echo $_SESSION['estado_convocatoria'];?></p> 
 		 <p hidden id='id_sorteo'><?php echo $_SESSION['sorteo'];?></p> 
 <!--elementos a la izda-->
 <nav id='navgir' class="navbar navbar-expand-md navbar-dark bg-dark">
