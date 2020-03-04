@@ -479,11 +479,12 @@ class ListadosController extends ControladorBase{
 		
 	return $tres;
 	}
-  public function showTablaResumenMatricula($a,$datos='matricula',$nombre_centro='',$rol='centro',$cabecera='si',$id_centro){
+  public function showTablaResumenMatricula($a,$datos='matricula',$nombre_centro='',$rol='centro',$cabecera='si',$id_centro,$nsorteo=0){
 	$display='';
+	if($nsorteo==0) $sorteo='<i>Sorteo no realizado</i>';
+	else $sorteo=' <b> NUMERO SORTEO: </b>'.$nsorteo;
 	//if($cabecera=='no') $display='none';
-	$this->log_listado_general->warning('DISPLAY/CABECERA: '.$display.'--'.$cabecera);
-	$tres='<div id="table'.$id_centro.'" class="container tresumenmat"><h2>'.strtoupper($datos).'-- <span  class="cabcenmat" id="cabcen'.$id_centro.'">'.strtoupper($nombre_centro).'</span></h2>';
+	$tres='<div id="table'.$id_centro.'" class="container tresumenmat"><h2>'.strtoupper($datos).'-- <span  class="cabcenmat" id="cabcen'.$id_centro.'">'.strtoupper($nombre_centro).' '.$sorteo.'</span></h2>';
  	$tres.='<table class="table table-dark table-striped desk" id="table'.$id_centro.'">';
   	if($cabecera=='si')
 		 $tres.='<thead>
