@@ -2,6 +2,7 @@
 session_start();
 include('includes/head.php');
 ?>
+<html>
 <body>
     <div class="wrapper">
         <div id="content">
@@ -9,6 +10,7 @@ include('includes/head.php');
 	  <span type="hidden" id="provincia" name="provincia" value="<?php echo $_SESSION['provincia'];?>"></span>
 	  <span type="hidden" id="estado" name="estado" value="<?php echo $_SESSION['estado']; ?>"></span>
 	  <span type="hidden" id="rol" name="rol" value="<?php echo $_SESSION['rol']; ?>"><b>ROL: </b><?php echo $_SESSION['rol']; ?></b></span> 
+		<?php /*usamos metodo del controlador de centros activo*/if($_SESSION['num_sorteo']) echo "<b>Numero sorteo:</b> ".$_SESSION['num_sorteo'];?>
 		<?php if($_SESSION['rol']=='centro' or $_SESSION['rol']=='admin' or $_SESSION['provincia']!='aragon') include('includes/menusuperior.php');?>
 		<?php /*usamos metodo del controlador de centros activo echo $this->showTimeline('centro',$_SESSION['id_centro'],'matricula');*/?>
 		<div class="row ">
@@ -36,16 +38,16 @@ include('includes/head.php');
 				echo '<row><div class="col-12"><p><h1></h1></p></div></row>';
 				echo '<row><p><h2></h2></p></row>';	
 				echo '<p><h2></h2></p>';	
-	echo '<main role="main" class="container">
+				echo '<main role="main" class="container">
 
-      <div class="starter-template">
-        <h1>INCICIO DE INSCRIPCION</h1>
-        <p class="lead">INSCRIPCIONES VIA WEB: DEL 11 al 16 de MARZO (inclusive)</p>
-        <p class="lead">INSCRIPCIONES EN LOS CENTROS: DEL 11 al 17 de MARZO (inclusive)</p>
-        <p class="lead"><i>En cualquier caso los impresos hay que entregarlos en el centro firmados</i></p>
-	<a href="'.URL_BASE.'"><button class="btn btn-outline-info" id="inicio" type="button">VOLVER</button></a>    </div>
+			      <div class="starter-template">
+				<h1>INCICIO DE INSCRIPCION</h1>
+				<p class="lead">INSCRIPCIONES VIA WEB: DEL 11 al 16 de MARZO (inclusive)</p>
+				<p class="lead">INSCRIPCIONES EN LOS CENTROS: DEL 11 al 17 de MARZO (inclusive)</p>
+				<p class="lead"><i>En cualquier caso los impresos hay que entregarlos en el centro firmados</i></p>
+				<a href="'.URL_BASE.'"><button class="btn btn-outline-info" id="inicio" type="button">VOLVER</button></a>    </div>
 
-    </main><!-- /.container -->';
+			    </main><!-- /.container -->';
 			}
 		?>
 		</div>
