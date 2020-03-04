@@ -947,7 +947,7 @@ $('body').on('click', '.calumno', function(e){
   var vmodo='normal';
   var vid=$(this).attr("data-idal");
   var idappend="filasol"+vid;
-  var vestado=$('#id_estado_convocatoria').text();
+  var vestado=$('#estado_convocatoria').text();
   var vpin=$('#pin').attr("value");
   var vrol=$('#rol').attr("value");
   if($('#fsolicitud'+vid).length) 
@@ -1077,7 +1077,7 @@ $(".lprovisionales").click(function () {
   var vrol=$('#rol').attr("value");
   var vtipo=$(this).attr("data-tipo");
   var vsubtipo=$(this).attr("data-subtipo");
-  var vestado_convocatoria=$('#estado_convocatoria').text();
+  var vestado_convocatoria=$('#estado_convocatoria').val();
 $.ajax({
   method: "POST",
   url: "../scripts/ajax/listados_provisionales.php",
@@ -1086,6 +1086,8 @@ $.ajax({
 
 				if(vrol=='centro')
 				{
+				console.log("vestado_convocatoria");
+				console.log(vestado_convocatoria);
 				$("#l_matricula").html(data);
 				$("#tresumen").hide();
 				}
