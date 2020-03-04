@@ -94,16 +94,16 @@ class CentrosController extends ControladorBase{
 
 	public function showTabla($rol='centro',$id_centro='',$datos='matricula',$cabecera='si')
 	{
-			$list=new ListadosController($datos,0);
-      //Creamos el objeto centro
-      $centro=new Centro($this->adapter,$id_centro);
-      $centro->setNombre();
-      //obtenemos resumen
-			$tablamatricula=$centro->getResumen($rol,$datos);
-			$this->log_listadoscentros->warning("CABECERA EN SHOWTABLAS: ".$cabecera);
-			
-			return($list->showTablaResumenMatricula($tablamatricula,$datos,$centro->getNombre(),$rol,$cabecera,$id_centro));
-    }
+		      $list=new ListadosController($datos,0);
+		      //Creamos el objeto centro
+		      $centro=new Centro($this->adapter,$id_centro);
+		      $centro->setNombre();
+		      $nsorteo=$centro->getNumeroSorteo();
+		      //obtenemos resumen
+		      $tablamatricula=$centro->getResumen($rol,$datos);
+		      $this->log_listadoscentros->warning("CABECERA EN SHOWTABLAS: ".$cabecera);
+	return($list->showTablaResumenMatricula($tablamatricula,$datos,$centro->getNombre(),$rol,$cabecera,$id_centro,$nsorteo));
+    	}
 
     public function crear(){
         if(isset($_POST["nombre"])){
