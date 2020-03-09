@@ -680,10 +680,11 @@ $formsol.='
 							</div>
 							<div class="radio">
 								<label><input type="radio" name="transporte" value="1">Cambio de centro</label>
-							</div>';
+							</div>
+					</div>';
 }
-$formsol.='</div>
-				</div>
+$formsol.='
+</div>
 <!--FIN FILA DATOS-->
 <!--INICIO FILA DATOS-->
         <div class="row">
