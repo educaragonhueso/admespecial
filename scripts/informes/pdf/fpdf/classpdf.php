@@ -17,7 +17,7 @@ function Header($title='')
     $this->Cell(80,10,'PROCESO DE ESCOLARIZACION DE ALUMNOS EN CENTROS SOSTENIDOS CON FONDOS PUBLICOS',0,1,'C');
     
 		$this->Cell(80);
-		$this->Cell(80,10,'CURSO 2019/2020',0,1,'C');
+		$this->Cell(80,10,'CURSO 2020/2021',0,1,'C');
 		$this->Cell(80);
 		$this->Cell(80,10,trim($title),0,1,'C');
     // Line break
@@ -36,7 +36,7 @@ function HeaderListados($titulo)
     $this->Cell(80,10,'PROCESO DE ESCOLARIZACION DE ALUMNOS EN CENTROS SOSTENIDOS CON FONDOS PUBLICOS',0,1);
     
 		$this->Cell(80);
-		$this->Cell(50,10,'CURSO 2019/2020',0,1,'C');
+		$this->Cell(50,10,'CURSO 2020/2021',0,1,'C');
 		$this->Cell(80);
 		$this->Cell(50,10,$titulo,0,1,'C');
     // Line break
