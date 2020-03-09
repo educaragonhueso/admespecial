@@ -16,15 +16,18 @@ class Centro extends EntidadBase{
 			if($ajax=='no') parent::__construct($adapter, $table);
 			require_once DIR_CLASES.'LOGGER.php';
 			require_once DIR_APP.'parametros.php';
+			
 			$this->log_sorteo=new logWriter('log_sorteo',DIR_LOGS);
 			$this->log_matricula=new logWriter('log_matricula',DIR_LOGS);
-    }
+    		}
    //devolvemos las vacantes en cada tpo de estudios 
     public function getNumSolicitudes($c=1)
 		{
 			$sql="SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=$c";
+
 			$this->log_sorteo->warning("OBTENIENDO NUMERO DE SOLICITUDES");
 			$this->log_sorteo->warning($sql);
+
 			$query=$this->conexion->query($sql);
 			if($query) {$row = $query->fetch_object();return $row->nsolicitudes;}
 			else return 0;
@@ -32,7 +35,9 @@ class Centro extends EntidadBase{
     public function getNumeroSorteo()
 	{
 			$sql="select num_sorteo from centros where id_centro=$this->id_centro";
-			$this->log_sorteo->warning('sql get num sorteo '.$sql);
+
+			$this->log_sorteo->warning('CONSULTA OBTENCION NUMERO DE SORTEO: '.$sql);
+
 			$query=$this->conexion->query($sql);
 			if($query)
 			return $query->fetch_object()->num_sorteo;
@@ -43,15 +48,17 @@ class Centro extends EntidadBase{
 			$sql="select ifnull(IF(t3.plazas-t2.np<0,0,t3.plazas-t2.np),t3.plazas) as vacantes from          (select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=".$this->id_centro." ) as t3          left join          (select  tipo_alumno_actual as tf, ifnull(count(*),0) as np from matricula where id_centro=".$this->id_centro." and estado='continua' group by tipo_alumno_actual ) as t2  on t3.ta=t2.tf;
 ";
 			$query=$this->conexion->query($sql);
-			$this->log_matricula->warning('sql vacantes: '.$sql);
+
+			$this->log_matricula->warning('CONSULTA OBTENCION VACANTES: '.$sql);
+
 			if($query)
-    	{
+    			{
 				while ($row = $query->fetch_object()) 
 				{
 					$resultSet[]=$row;
 				}
 			}
-      return $resultSet;
+      		return $resultSet;
 		} 
     public function getDatosMatriculaCentro($rol,$t,$centro)
 		{
@@ -115,54 +122,61 @@ class Centro extends EntidadBase{
 					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=".$this->id_centro." and fase_solicitud='baremada') t3 on t2.nc=t3.nc";
 					}
 			}
+	
+	
 			$this->log_matricula->warning("CONSULTA DATOS RESUMEN MATRICULA: ".$sql);
+	
 			$query=$this->conexion->query($sql);
 			if($query)
-    	{
+    			{
 				while ($row = $query->fetch_object()) 
 				{
 					$resultSet[]=$row;
 				}
 			}
-      return $resultSet;
-    }
+      			return $resultSet;
+    		}
 
     public function setSorteo($ns=0,$c=1) 
 		{
 			$sql="update centros set num_sorteo=$ns where id_centro=$c";
-			$this->log_sorteo->warning("ACTUALIZANDO VALORES CENTROS");
+		
+			$this->log_sorteo->warning("CONSULTA ACTUALIZACION VALORES CENTROS: ");
 			$this->log_sorteo->warning($sql);
+		
 			$query=$this->conexion->query($sql);
 			if($query)
 				return 1;
 			else{ 
-						$this->log_sorteo->warning("ERROR");
+						$this->log_sorteo->warning("ERROR ACTUALIZANDO VALORES NUM SORTEO EN CENTROS: ");
 						$this->log_sorteo->warning($this->conexion->error);
+				
 						return 0;
-					}
+				}
 		}
     public function getFases($c=1) 
 		{
 		$resultado=array(0,0,0);
 		$sql="select nombre_centro nc,count(*) as nb,fase_solicitud from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=$this->id_centro  group by nombre_centro,fase_solicitud";
+
 		$this->log_matricula->warning("CONSULTA DATOS ESTADO SOLICITUDES: ".$sql,DIR_LOGS);
+
 			$query=$this->conexion->query($sql);
-			if($query)
-    	{
-				while ($row = $query->fetch_object()) 
-				{
-					$this->log_matricula->warning(print_r($row,true));
+		if($query)
+    		{
+			while ($row = $query->fetch_object()) 
+			{
 					if($row->fase_solicitud=='borrador')	$resultado[0]=$row->nb;
 					if($row->fase_solicitud=='validada')	$resultado[1]=$row->nb;
 					if($row->fase_solicitud=='baremada')	$resultado[2]=$row->nb;
-				}
+			}
 			}
 			else 
-				$this->log_matricula->warning($this->conexion->error);
-		$this->log_matricula->warning(print_r($resultado,true));
+			$this->log_matricula->warning($this->conexion->error);
+			$this->log_matricula->warning(print_r($resultado,true));
 			
 			return  $resultado;
-    }
+    		}
     public function getDatosSorteo($c=1,$tipo='') 
 		{
 			$sql="select vacantes_ebo,vacantes_tva,num_sorteo_ebo,num_sorteo_tva,solicitudes_ebo,solicitudes_tva from centros where id_centro=$c";
@@ -180,18 +194,23 @@ class Centro extends EntidadBase{
     public function setFaseSorteo($f) 
     {
 			$sql="update centros set fase_sorteo='$f' where id_centro='$this->id_centro'";
-			$this->log_sorteo->warning("ACTUALIZANDO FASE SORTEO");
+
+			$this->log_sorteo->warning("CONSULTA ACTUALIZANDO FASE SORTEO");
 			$this->log_sorteo->warning($sql);
+
 			$query=$this->conexion->query($sql);
 			if($query)
 			return  1;
 			else return 0;
     }
-    public function getFaseSorteo() {
+    public function getFaseSorteo() 
+    {
 			$query=$this->conexion->query($sql);
 			$sql="select fase_sorteo from centros where id_centro=$this->id_centro";
+
 			$this->log_sorteo->warning("OBTENIENDO FASE SORTEO");
 			$this->log_sorteo->warning($sql);
+
 			$query=$this->conexion->query($sql);
 			if($query)
     			{
