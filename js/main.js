@@ -1070,7 +1070,7 @@ $.ajax({
       }
 });
 });
-//LISTADO SOLICITUDES PROVISIONALES 
+//LISTADO SOLICITUDES PROVISIONALES ACTUALIZADO
 $(".lprovisionales").click(function () {  
   var vpdf='1';
   var vid_centro=$('#id_centro').text();
