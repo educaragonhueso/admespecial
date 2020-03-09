@@ -59,7 +59,7 @@ if($consulta=='autocompletar')
 	print($datos_solicitud);
 else
 	{
-	if($rol=='alumno') print($botonimp);
+	//if($rol=='alumno') print($botonimp);
 	print($sform);
 	
 	print($script);
