@@ -825,8 +825,21 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
   
 	public function getSolAdmitidas($nvebo=0,$nvtva=0,$c=0) 
 	{
+		/*
+				
 				$sqlbaseebo="SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=$c order by c.id_centro, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc LIMIT $nvebo";
 				$sqlbasetva="SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=$c order by c.id_centro, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc LIMIT $nvtva";
+		*/		
+				$sqlbaseebo="SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=$c order by c.id_centro, a.transporte desc,b.puntos_validados desc,
+					b.validar_hnos_centro,b.validar_tutores_centro,b.validar_proximidad_domicilio,b.validar_renta_inferior,b.validar_discapacidad,b.validar_tipo_familia,
+					b.hermanos_centro,b.tutores_centro,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),FIELD(discapacidad,'alumno','hpadres','no'),
+					FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+					a.nordensorteo asc,a.nasignado desc LIMIT $nvebo";
+				$sqlbasetva="SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=$c order by c.id_centro, a.transporte desc,b.puntos_validados desc,
+					b.validar_hnos_centro,b.validar_tutores_centro,b.validar_proximidad_domicilio,b.validar_renta_inferior,b.validar_discapacidad,b.validar_tipo_familia,
+					b.hermanos_centro,b.tutores_centro,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),FIELD(discapacidad,'alumno','hpadres','no'),
+					FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+					a.nordensorteo asc,a.nasignado desc LIMIT $nvebo";
 				$qebo=$this->db->query($sqlbaseebo);
 				$qtva=$this->db->query($sqlbasetva);
 		$this->log_sorteo->warning(print_r($sqlbaseebo,true));

@@ -1,4 +1,3 @@
-git add documentacion/a4modsol.pdf
-git push origin master
-git commit -m  menusup2
-git add --all :/
+git add $1
+git commit -m  $2
+git push

@@ -72,7 +72,7 @@ header('Content-Type: text/html; charset=UTF-8');
         }
         if(empty($nombre_usuario_err) && empty($clave_err))
 	{
-            $sql = "SELECT nombre_usuario, clave,rol,nombre_centro,id_centro,primera_conexion FROM usuarios u left join centros c  ON u.id_usuario=c.id_usuario WHERE  u.nombre_usuario = ?";
+            $sql = "SELECT nombre_usuario, clave,rol,nombre_centro,id_centro,primera_conexion,num_sorteo FROM usuarios u left join centros c  ON u.id_usuario=c.id_usuario WHERE  u.nombre_usuario = ?";
 	    if($stmt = $conexion->prepare($sql))
 		{
                 // Bind variables to the prepared statement as parameters
@@ -88,7 +88,7 @@ header('Content-Type: text/html; charset=UTF-8');
                     if($stmt->num_rows == 1)
 		    						{                    
                         // Bind result variables
-                        $stmt->bind_result($nombre_usuario, $hashed_clave,$rol,$nombre_centro,$id_centro,$primera_conexion);
+                        $stmt->bind_result($nombre_usuario, $hashed_clave,$rol,$nombre_centro,$id_centro,$primera_conexion,$num_sorteo);
                         if($stmt->fetch())
 			{
                            if(md5(strtoupper($clave))== $hashed_clave || md5($clave)== $hashed_clave)
@@ -97,6 +97,7 @@ header('Content-Type: text/html; charset=UTF-8');
 					$_SESSION['clave'] = $clave;      
 					$_SESSION['rol'] = $rol;      
 					$_SESSION['nombre_centro'] = $nombre_centro;      
+					$_SESSION['num_sorteo'] = $num_sorteo;      
 					$_SESSION['id_centro'] = $id_centro;
 					if($rol=='centro' and  $primera_conexion=='si')
 						header("location: login_pconexion.php");

@@ -35,11 +35,18 @@ class SolicitudController extends ControladorBase{
         	$dsolicitud=$solicitud->compSol($dni_tutor,$nombre_alumno,$apellido1);
 		return $dsolicitud;
 		}
+    public function getIdSolicitud($id)
+		{
+		$sql="SELECT concat(a.id_alumno,a.id_centro_destino) as id_solicitud  from alumnos a where a.id_alumno=$id";
+ 		$query=$this->getConexion()->query($sql);
+		if($query)
+	    		return $query->fetch_object()->id_solicitud;
+		else return 0;
+		}
 
     public function imprimirSolicitud($id)
 		{
-
-    return $this->showFormSolicitud($id,$id_centro=0,$this->rol,$collapsed=0,$imprimir=1);
+    		return $this->showFormSolicitud($id,$id_centro=0,$this->rol,$collapsed=0,$imprimir=1);
 		}
     public function procesarFormularioExistente($id,$dsolicitud,$collapsed=1,$rol='centro',$imprimir=0)
 		{

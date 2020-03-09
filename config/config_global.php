@@ -16,17 +16,17 @@ define("DATA_SCRIPTS_DIR",'/scripts/datos_entrada/');
 
 define("URL_BASE",'http://preadmespecial.aragon.es/');
 
-define("DIA_INICIO",'2020/02/28');
-define("DIA_INICIO_INSCRIPCION",'2020/03/02');
-define("DIA_FIN_INSCRIPCION",'2020/03/17');
-define("DIA_MAX_SOL_ALUMNO",'2020/03/16');
+define("DIA_INICIO",'2020/03/04');
+define("DIA_INICIO_INSCRIPCION",'2020/03/04');
+define("DIA_FIN_INSCRIPCION",'2020/03/05');
+define("DIA_MAX_SOL_ALUMNO",'2020/03/05');
 
-define("DIA_SORTEO",'2020/03/12');
+define("DIA_SORTEO",'2020/03/04');
 
-define("DIA_BAREMACION",'2020/03/19');
-define("DIA_PUBLICACION_BAREMACION",'2020/03/24');
+define("DIA_BAREMACION",'2020/03/06');
+define("DIA_PUBLICACION_BAREMACION",'2020/03/07');
 
-define("DIA_PROVISIONALES",'2020/03/31');
+define("DIA_PROVISIONALES",'2020/03/07');
 define("DIA_DEFINITIVOS",'2020/04/16');
 
 define("DIA_SORTEO_SP",'2020/04/22');
