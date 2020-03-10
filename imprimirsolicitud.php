@@ -48,23 +48,23 @@ include('includes/head.php');
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
 <style>
-@media print {
-  body {
-	display: block;
-    overflow: visible !important;
-  }
+@media print 
+{
+* {
+overflow: visible !important;
+}
 }
 </style>
 
 <script>
-$('#imprimir').click(function(){
-
-document.body.style.zoom = "80%"; 
-$('#inicio').hide();
-$('#imprimir').hide();
-window.print();
-$('#inicio').show();
-$('#imprimir').show();
+$('#imprimir').click(function()
+{
+	document.body.style.zoom = "80%"; 
+	$('#inicio').hide();
+	$('#imprimir').hide();
+	window.print();
+	$('#inicio').show();
+	$('#imprimir').show();
 });
 </script>
 </body>
