@@ -176,7 +176,7 @@ input[type=text], input[type=password] {
 
     <body>
         <div class="wrapper">
-            <h2>ADMISIÓN CENTROS EDUACIÓN ESPECIAL CURSO 2019/2020</h2>
+            <h2>ADMISIÓN CENTROS EDUACIÓN ESPECIAL CURSO 2020/2021</h2>
 	<button type="button" class="btn btn-primary" id="csolicitud">Crear solicitud</button>
 
 	<?php if(IPREMOTA==$_SERVER['HTTP_X_FORWARDED_FOR'] || DIA_INICIO<=$hoy) { ?>
