@@ -25,16 +25,17 @@ include('includes/head.php');
 				echo '<button class="btn btn-outline-info" id="inicio" type="button"><h2>ULTIMO DIA PARA INSCRIBIRSE!!!</h2></button><br>';
 			echo '<br>';
 	  		echo '<input type="hidden" id="pin" name="pin" value="'.$_SESSION['clave'].'" ></input> ';
+			echo '<a href="'.URL_BASE.'"><button class="btn btn-outline-info" id="inicio" type="button">INICIO</button></a>';
 			if($_SESSION['nombre_usuario']=='nousuario')
 				echo '<button class="btn btn-outline-info" id="nuevasolicitud" type="button">Nueva solicitud</button>';
 			else //usuario alumno autenticado
 			{
 				echo '<button class="btn btn-outline-info calumno" id="versolicitud" type="button">Ver solicitud</button>';
+				echo '<a id="imprimir" target="_blank"><input class="btn btn-primary imprimirsolicitud" style="background-color:brown;padding-left:20px" type="button" value="Vista Previa Impresion Documento"/></a>';
 			}
-			echo '<a href="'.URL_BASE.'"><button class="btn btn-outline-info" id="inicio" type="button">INICIO</button></a>';
 		}
 		if($_SESSION['rol']=='alumno' && $_SESSION['dia_inicio_inscripcion']==0)
-			{
+		{
 				echo '<row><div class="col-12"><p><h1></h1></p></div></row>';
 				echo '<row><p><h2></h2></p></row>';	
 				echo '<p><h2></h2></p>';	
@@ -48,7 +49,7 @@ include('includes/head.php');
 				<a href="'.URL_BASE.'"><button class="btn btn-outline-info" id="inicio" type="button">VOLVER</button></a>    </div>
 
 			    </main><!-- /.container -->';
-			}
+		}
 		?>
 		</div>
 		<div class="row ">
@@ -68,6 +69,12 @@ include('includes/head.php');
 			 $( "#nuevasolicitud" ).trigger( "click" );
 			 $( "#versolicitud" ).trigger( "click" );
  			});
+
+			$( "#imprimir" ).click(function() {
+			 var idsolicitud=$("form").attr("id");
+			 idsolicitud=idsolicitud.replace("fsolicitud","");
+			 window.open("imprimirsolicitud.php?id="+idsolicitud);
+			});
 		</script>
 </body>
 </html>
