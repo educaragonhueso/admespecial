@@ -717,17 +717,20 @@ $('body').on('click', '.send', function(e){
 	var valid='1';
 	var valid=validarFormulario(fsolicitud,vid);
 	var mensaje="Debes incluir un ";
+	if(valid=='fnac')
+	{
+		if(campo_dnisol(fsolicitud)==0)
+		{
+			console.log("Resultado comprobacion dni: "+campo_dnisol(fsolicitud));
+			mensaje="Debes incluir un DNI del alumno por ser mayor de 14 años";
+			$('input[name=dni_alumno]').focus();	
+		}
+		else valid='1';
+	}
 	if(valid!='1')
 	{
 		mensaje=mensaje+valid.split('-')[0];
-		if(valid.indexOf('fnac')==0)
-		{
-			if(campo_dnisol(fsolicitud)==0)
-			{
-				mensaje="Debes incluir un DNI del alumno por ser mayor de 14 años";
-				$('input[name=dni_alumno]').focus();	
-			}
-		}
+		if(valid=='Fecha nacimiento-fnac') mensaje="Debes incluir una fecha de nacimiento";
 		$('input[name='+valid.split('-')[1]+']').focus();	
     		$.alert({
         		title: 'FORMULARIO INCOMPLETO',
@@ -826,7 +829,9 @@ function campo_dnisol(str) {
   var res = str.match(/&dni_alumno=.*&fnac/g);
   res=res[0].replace('&fnac','');
   res=res.replace('&dni_alumno=','');
-	if(comprobar_nif(res.length)==0) return 0;
+	console.log("dni/Tamaño dni: "+res+" "+res.length)
+	//if(comprobar_nif(res.length)==0) return 0;
+	if(res.length!=9) return 0;
 	else return 1;
 }
 
