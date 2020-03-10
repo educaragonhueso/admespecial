@@ -777,7 +777,7 @@ $('body').on('click', '.send', function(e){
 			if(vrol.indexOf('alumno')!=-1)
 			{ 
 				$.alert({
-					title: 'SOLICITUD GUARDADA CORRECTAMENTE, PARA MODIFICAR USA EL PIN: '+data,
+					title: 'SOLICITUD GUARDADA CORRECTAMENTE.<br> PARA MODIFICARLA ACCEDE A LA PÁGINA PRINCIPAL CON EL NIF DE TU TUTOR Y LA CLAVE<br><br><b> '+data+'</b>',
 					content: ''
 					});
 			//añadimos boton para imprimir
@@ -829,7 +829,6 @@ function campo_dnisol(str) {
   var res = str.match(/&dni_alumno=.*&fnac/g);
   res=res[0].replace('&fnac','');
   res=res.replace('&dni_alumno=','');
-	console.log("dni/Tamaño dni: "+res+" "+res.length)
 	//if(comprobar_nif(res.length)==0) return 0;
 	if(res.length!=9) return 0;
 	else return 1;
@@ -870,14 +869,53 @@ if(d[0].indexOf('datos_tutor1')==0)
 	{
 	if(d[1]=='') {return 'Datos de tutor/a-datos_tutor1';};
 	}
+if(d[0].indexOf('tributantes_dni1')==0)
+	{
+	var nomt1=$("input[name='tributantes_nombre1']").val();
+	console.log("nomt1: "+nomt1+" long: "+nomt1.length);
+	if(nomt1.length!=0) 
+		{
+		if(d[1].length!=9) 
+			return 'DNI TRIBUTANTE DE 9 CARACTERES-tributantes_dni1';
+		else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni1';
+		}
+	}
+if(d[0].indexOf('tributantes_dni2')==0)
+	{
+	var nomt2=$("input[name='tributantes_nombre2']").val();
+	if(nomt2.length!=0) 
+		{
+		if(d[1].length!=9) 
+			return 'DNI TRIBUTANTE DE 9 CARACTERES-tributantes_dni2';
+		else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni12';
+		}
+	}
+if(d[0].indexOf('tributantes_dni3')==0)
+	{
+	var nomt3=$("input[name='tributantes_nombre3']").val();
+	if(nomt3.length!=0) 
+		{
+		if(d[1].length!=9) 
+			return 'DNI TRIBUTANTE DE 9 CARACTERES-tributantes_dni3';
+		else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni3';
+		}
+	}
+if(d[0].indexOf('tributantes_dni4')==0)
+	{
+	var nomt4=$("input[name='tributantes_nombre4']").val();
+	if(nomt4.length!=0) 
+		{
+		if(d[1].length!=9) 
+			return 'DNI TRIBUTANTE DE 9 CARACTERES-tributantes_dni4';
+		else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni4';
+		}
+	}
 if(d[0].indexOf('baremo_proximidad_domicilio')==0)
 	{
-	console.log("validando dlaboral: "+id);
 	var valor1=$("input[id='baremo_calle_dlaboral"+id+"']").val();
 	var valor2=$("input[id='baremo_calle_dllimitrofe"+id+"']").val();
 	if($("input[value='dlaboral']").is(':checked'))
 	{
-		console.log("CHECKED: "+valor1.length+" valor");
 		if(valor1.length<=2) return "Valor para el domicilio laboral";
 	}
 	if($("input[value='dllimitrofe']").is(':checked'))
@@ -1603,8 +1641,8 @@ function comprobar_nif(dni){
        var letra;
        var expresion_regular_dni;
       	//de momento marcamos q tenga 9 caracteres por incluir el nie
-      	if(dni.length==9) return 1;
-	else return 0; 
+      	//if(dni.length==9) return 1;
+//	else return 0; 
        expresion_regular_dni = /^\d{8}[a-zA-Z]$/;
        
        if(expresion_regular_dni.test (dni) == true){
@@ -1615,7 +1653,7 @@ function comprobar_nif(dni){
           letra='TRWAGMYFPDXBNJZSQVHLCKET';
           letra=letra.substring(numero,numero+1);
           if (letra!=let) {
-						return 0;
+		return 0;
           }else{
             return 1;
           }

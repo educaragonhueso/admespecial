@@ -49,18 +49,18 @@ echo '</div>';
 echo '<div class="row" style="padding-top:10px;width:100%">';
 		echo '<div class="col-6">';
 					echo '<input type="checkbox" name="re1" value="re1">';
-					echo '<label for="re1">Acreditación del domicilio familiar</label><br>';
+					echo '<label for="re1" style="padding-left:10px">Acreditación del domicilio familiar</label><br>';
 		echo '</div>';
 		echo '<div class="col-6">';
 					echo '<input type="checkbox" id="re2" name="re2" value="re2">';
-					echo '<label for="re2">Documento acreditativo del domicilio familiar</label><br>';
+					echo '<label for="re2" style="padding-left:10px">Documento acreditativo del domicilio familiar</label><br>';
 		echo '</div>';
 echo '</div>';
 
 echo '<div class="row" style="padding-top:10px;width:100%">';
 		echo '<div class="col-6">';
 					echo '<input type="checkbox" name="re1" value="re1">';
-					echo '<label for="re1">Acreditación del domicilio laboral</label><br>';
+					echo '<label for="re1" style="padding-left:10px">Acreditación del domicilio laboral</label><br>';
 		echo '</div>';
 		echo '<div class="col-6">';
 			echo '<div class="row" style="padding-top:10px;width:100%">';
@@ -116,8 +116,6 @@ echo '<div class="row" style="padding-top:10px;width:100%">';
 	echo '</div>';
 echo '</div>';
 echo '<div class="row" style="padding-top:10px;width:100%">';
-
-echo '<div class="row" style="padding-top:10px;width:100%">';
 	echo '<div class="col-1" style="text-align:right">';
 		echo '<input type="checkbox" name="re1" value="re1">';
 	echo '</div>';
@@ -139,36 +137,36 @@ echo  '<table class="table table-bordered">
     </thead>
     <tbody>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
       </tr>
     </tbody>
   </table>';
@@ -200,18 +198,18 @@ echo  '<table class="table table-bordered">
     </thead>
     <tbody>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
       </tr>
     </tbody>
   </table>';

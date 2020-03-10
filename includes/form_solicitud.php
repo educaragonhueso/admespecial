@@ -748,7 +748,7 @@ Los abajo firmantes declaran responsablemente que cumplen con sus obligaciones t
                     </div>
                     <div class="col-md-3">
                         <div class="md-form mb-0">
-                            <input type="text" id="tributantes_dni1" value="" name="tributantes_dni1" placeholder="NIF" class="form-control" >
+                            <input type="text" id="tributantes_dni1" value="" name="tributantes_dni1" placeholder="NIF" pattern="[a-zA-Z0-9]{9}" class="form-control" >
                         </div>
                     </div>
                 </div>
@@ -778,7 +778,7 @@ Los abajo firmantes declaran responsablemente que cumplen con sus obligaciones t
                     </div>
                     <div class="col-md-3">
                         <div class="md-form mb-0">
-                            <input type="text" id="tributantes_dni2" value="" name="tributantes_dni2" placeholder="NIF" class="form-control" >
+                            <input type="text" id="tributantes_dni2" value="" name="tributantes_dni2" placeholder="NIF" pattern="[a-zA-Z0-9]{9}" class="form-control" >
                         </div>
                     </div>
                 </div>
@@ -808,7 +808,7 @@ Los abajo firmantes declaran responsablemente que cumplen con sus obligaciones t
                     </div>
                     <div class="col-md-3">
                         <div class="md-form mb-0">
-                            <input type="text" id="tributantes_dni3" value="" name="tributantes_dni3" placeholder="NIF" class="form-control" >
+                            <input type="text" id="tributantes_dni3" value="" name="tributantes_dni3" placeholder="NIF" pattern="[a-zA-Z0-9]{9}" class="form-control" >
                         </div>
                     </div>
                 </div>
@@ -838,7 +838,7 @@ Los abajo firmantes declaran responsablemente que cumplen con sus obligaciones t
                     </div>
                     <div class="col-md-3">
                         <div class="md-form mb-0">
-                            <input type="text" id="tributantes_dni4" value="" name="tributantes_dni4" placeholder="NIF" class="form-control" >
+                            <input type="text" id="tributantes_dni4" value="" name="tributantes_dni4" placeholder="NIF" pattern="[a-zA-Z0-9]{9}" class="form-control" >
                         </divs>
                     </div>
                 </div>
