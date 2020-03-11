@@ -205,8 +205,8 @@ class Centro extends EntidadBase{
     }
     public function getFaseSorteo() 
     {
-			$query=$this->conexion->query($sql);
 			$sql="select fase_sorteo from centros where id_centro=$this->id_centro";
+			$query=$this->conexion->query($sql);
 
 			$this->log_sorteo->warning("OBTENIENDO FASE SORTEO");
 			$this->log_sorteo->warning($sql);
