@@ -356,6 +356,10 @@ echo '<div class="row" style="padding-top:70px">';
 <br>Cuando se presente fuera del plazo de presentación de solicitudes.																																																								
 <br>Cuando se aprecie la existencia de indicios razonados y suficientes de falsedad de la documentación aportada por el interesado o de los datos reflejados en la misma.																																																								
 ';
+echo '<div class="row" style="padding-top:100px;width:100%;padding-left:700px">';
+echo 'SR/A DIRECTOR/A O TITULAR DEL CENTRO   _________________________________________';
+
+echo '</div>';
 echo '</div>';
 
 
