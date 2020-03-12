@@ -91,7 +91,7 @@ class SolicitudController extends ControladorBase{
 			$this->formulario=str_replace('id="btotales"','id="btotales'.$id.'"',$this->formulario);
 			$this->formulario=str_replace('id="bvalidados"','id="bvalidados'.$id.'"',$this->formulario);
 			
-			//cambiamos los id de los centros de escolarización de origen , si llos hay
+			//cambiamos los id de los centros de escolarización de origen , si los hay
 			$this->formulario=str_replace('id="nuevaesc"','class="nuevaesc" id="nuevaesc'.$id.'"',$this->formulario);
 			$this->formulario=str_replace('id="tnuevaesc"','id="tnuevaesc'.$id.'"',$this->formulario);
 			$this->formulario=str_replace('class="row filanuevaesc"','class="row filanuevaesc'.$id.'"',$this->formulario);
@@ -339,8 +339,8 @@ class SolicitudController extends ControladorBase{
 			$this->formulario=str_replace('id="labelbaremo"','id="labelbaremo'.$nuevoid.'"',$this->formulario);
 			$this->formulario=str_replace('id="baremo_validar_proximidad_domicilio"','id="baremo_validar_proximidad_domicilio'.$nuevoid.'"',$this->formulario);
 			
-			$this->formulario=str_replace('id="baremo_calle_dlaboral"','id="baremo_calle_dlaboral'.$nuevoid.'" value="'.$sval.'"',$this->formulario);
-			$this->formulario=str_replace('id="baremo_calle_dllimitrofe"','id="baremo_calle_dllimitrofe'.$nuevoid.'" value="'.$sval.'"',$this->formulario);
+			$this->formulario=str_replace('id="baremo_calle_dlaboral"','id="baremo_calle_dlaboral'.$nuevoid.'" value=""',$this->formulario);
+			$this->formulario=str_replace('id="baremo_calle_dllimitrofe"','id="baremo_calle_dllimitrofe'.$nuevoid.'" value=""',$this->formulario);
 			
 			$this->formulario=str_replace('name="boton_baremo_validar_tutores_centro"','name="boton_baremo_validar_tutores_centro'.$nuevoid.'"',$this->formulario);
 			$this->formulario=str_replace('id="baremo_validar_tutores_centro"','id="baremo_validar_tutores_centro'.$nuevoid.'"',$this->formulario);

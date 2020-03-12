@@ -1091,9 +1091,11 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 	{
 		//averiguamos si es de ed especial
 		if($this->getTipoCentro($idcentro)==1)
-			$query="select concat(nombre_centro,'*') as nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='".$idcentro."' limit 1";
+			//$query="select concat(nombre_centro,'*') as nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='".$idcentro."' limit 1";
+			$query="select concat(nombre_centro,'*') as nombre_centro from centros c where c.id_centro='".$idcentro."' limit 1";
 		else
-			$query="select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='".$idcentro."'";
+			//$query="select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='".$idcentro."'";
+			$query="select nombre_centro from centros c where c.id_centro='".$idcentro."'";
 
 		$this->log_actualizar_solicitud->warning("devolviendo nombre de centro");
 		$this->log_actualizar_solicitud->warning($query);
