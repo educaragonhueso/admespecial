@@ -721,7 +721,6 @@ $('body').on('click', '.send', function(e){
 	{
 		if(campo_dnisol(fsolicitud)==0)
 		{
-			console.log("Resultado comprobacion dni: "+campo_dnisol(fsolicitud));
 			mensaje="Debes incluir un DNI del alumno por ser mayor de 14 años";
 			$('input[name=dni_alumno]').focus();	
 		}

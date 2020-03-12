@@ -1109,7 +1109,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		else return 0;
     }
 	public function getCentroId($nombrecentro) {
-		$query="select id_centro from centros  where nombre_centro='".$nombrecentro."'";
+		$query="select id_centro from centros  where nombre_centro='".trim($nombrecentro,'*')."'";
 		$this->log_actualizar_solicitud->warning($query);
 		$soldata=$this->db()->query($query);
     if($soldata->num_rows==0) return 0;
