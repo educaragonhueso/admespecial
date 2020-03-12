@@ -81,8 +81,16 @@ if($_POST['pdf']==1)
 	$cab=$$cabecera;
 	$pdf->SetFont('Helvetica','',8);
 	$pdf->AddPage('L','',0,$titulo_listado);
-	$pdf->BasicTable($cab,$datos);
-	$pdf->AddPage('L','',0,$titulo_listado);
+	$pdf->BasicTable($cab,$datos,0,30,'provisional');
+	$pdf->Ln(20);
+	$pdf->SetFont('Arial','I',8);
+	  // Page number
+	$pdf->Cell(30);
+	$pdf->Cell(40,10,'SELLO CENTRO',1,0,'C');
+	$pdf->Cell(140,10,'En ______________________ a ____de________ de 2020',0,0,'C');
+	$pdf->Cell(0,10,'Firmado:',0,0);
+	$pdf->Ln();
+	$pdf->Cell(220,10,'El Director/a',0,0,'R');
 	$pdf->Output(DIR_PROV.$subtipo_listado.'.pdf','F');
 }
 
