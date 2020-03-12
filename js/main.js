@@ -775,15 +775,23 @@ $('body').on('click', '.send', function(e){
 			if(tipo=='GRABAR SOLICITUD')
 			{
 			if(vrol.indexOf('alumno')!=-1)
-			{ 
+			{	
+				if(data.indexOf('ERROR')!=-1) 
+				$.alert({
+					title: data+'</b>',
+					content: ''
+					});
+				else
+				{
 				$.alert({
 					title: 'SOLICITUD GUARDADA CORRECTAMENTE.<br> PARA MODIFICARLA ACCEDE A LA PÁGINA PRINCIPAL CON EL NIF DE TU TUTOR Y LA CLAVE<br><br><b> '+data+'</b>',
 					content: ''
 					});
-			//añadimos boton para imprimir
-			var bimp= $('<a href="imprimirsolicitud.php?id='+vid+'"><input class="btn btn-primary imprimirsolicitud" style="background-color:brown;padding-left:20px" type="button" value="Vista Previa Impresion Documento"/></a>');
-			$('.send').text("ACTUALIZAR SOLICITUD");
-			$('.send').after(bimp);
+					//añadimos boton para imprimir
+					var bimp= $('<a href="imprimirsolicitud.php?id='+vid+'"><input class="btn btn-primary imprimirsolicitud" style="background-color:brown;padding-left:20px" type="button" value="Vista Previa Impresion Documento"/></a>');
+					$('.send').text("ACTUALIZAR SOLICITUD");
+					$('.send').after(bimp);
+				}
 			return;
 			}
 			if(data.indexOf('ERROR')!=-1){ alert(data);return ;}

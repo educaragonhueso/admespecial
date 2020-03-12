@@ -37,7 +37,13 @@ $fsol_entrada.="&baremo_ptstotal=".$_POST['ptsbaremo'];
 parse_str($fsol_entrada, $fsol_salida);
 if($rol=='alumno')
 	{
-	$fsol_salida['id_centro_destino']=$tsol->getCentroId($_POST['id_centro_destino']);
+	$id_centro_destino=$tsol->getCentroId($_POST['id_centro_destino']);
+	if($id_centro_destino==0) 
+		{
+		print('ERROR GUARDANDO DATOS: EL CENTRO SOLICITADO NO EXISTE');
+		exit();
+		}
+	$fsol_salida['id_centro_destino']=$id_centro_destino;
 	$log_nueva->warning("SOLICITUD NUEVA DE ALUMNO, NOMBRE CENTRO: ".$_POST['id_centro_destino']);
 	$log_nueva->warning("SOLICITUD NUEVA DE ALUMNO, ID CENTRO: ".$fsol_salida['id_centro_destino']);
 	}
@@ -69,9 +75,9 @@ for($i=1;$i<7;$i++)
 		}
 	}
 //comprobamos los campos tipo check: padres trabajan en el cenntro y renta inferior
-if(!isset($fsol_salida['baremo_tutores_centro']))
+if(!isset($fsol_salida['baremo_tutores_centro'.$_POST['idsol']]))
 	$fsol_salida['baremo_tutores_centro']=0;
-if(!isset($fsol_salida['baremo_renta_inferior']))
+if(!isset($fsol_salida['baremo_renta_inferior'.$_POST['idsol']]))
 	$fsol_salida['baremo_renta_inferior']=0;
 //Si es nueva solicitud
 if($modo=="GRABAR SOLICITUD")

@@ -3,18 +3,26 @@ session_start();
 $_SESSION=array();
 require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/config/config_global.php";
 require_once DIR_CORE.'/Conectar.php';
+
 $hoy=date("Y/m/d");      
-$_SESSION['estado']='inicioinscrion';
+$_SESSION['estado']='inicioinscripcion';
 $_SESSION['rol'] = 'alumno';      
 $_SESSION['provincia']='aragon';
+$_SESSION['fin_inscripcion_centros']=0;
+
+if($hoy==DIA_FIN_INSCRIPCION)
+	$_SESSION['fin_inscripcion_centros']=1;
 
 if($hoy<DIA_INICIO_INSCRIPCION)
 	$_SESSION['dia_inicio_inscripcion']=0;
 else $_SESSION['dia_inicio_inscripcion']=1;
 //dia ultimo inscripcion alumno
 if(DIA_MAX_SOL_ALUMNO==$hoy)
-	$_SESSION['fin_sol_alumno']='1';
-else $_SESSION['fin_sol_alumno']='0';
+	$_SESSION['fin_sol_alumno']='1';//dia para solicitudes anonimas. 0.antes de empezar, 1.dia maximo solicitud, 2.plazo finalizado
+elseif($hoy>DIA_MAX_SOL_ALUMNO)
+	$_SESSION['fin_sol_alumno']='2';
+else	
+	 $_SESSION['fin_sol_alumno']='0';
 
 $_SESSION['nombre_centro'] = '9999';      
 $_SESSION['nombre_usuario'] ="nousuario";    
@@ -72,13 +80,14 @@ header('Content-Type: text/html; charset=UTF-8');
         }
         if(empty($nombre_usuario_err) && empty($clave_err))
 	{
-            $sql = "SELECT nombre_usuario, clave,rol,nombre_centro,id_centro,primera_conexion,num_sorteo FROM usuarios u left join centros c  ON u.id_usuario=c.id_usuario WHERE  u.nombre_usuario = ?";
+            $sql = "SELECT nombre_usuario, clave,rol,nombre_centro,id_centro,primera_conexion,num_sorteo FROM usuarios u left join centros c  ON u.id_usuario=c.id_usuario WHERE  u.nombre_usuario = ? and u.clave= ?";
 	    if($stmt = $conexion->prepare($sql))
 		{
                 // Bind variables to the prepared statement as parameters
-                $stmt->bind_param("s", $param_usuario);
+                $stmt->bind_param("ss", $param_usuario,$param_clave);
                 // Set parameters
                 $param_usuario = $nombre_usuario;
+                $param_clave = md5($clave);
                 // Attempt to execute the prepared statement
                 if($stmt->execute())
 								{
@@ -86,7 +95,7 @@ header('Content-Type: text/html; charset=UTF-8');
                     $stmt->store_result();
                     // Check if username exists, if yes then verify password
                     if($stmt->num_rows == 1)
-		    						{                    
+		    {                    
                         // Bind result variables
                         $stmt->bind_result($nombre_usuario, $hashed_clave,$rol,$nombre_centro,$id_centro,$primera_conexion,$num_sorteo);
                         if($stmt->fetch())
@@ -125,7 +134,7 @@ else
                         // Display an error message if username doesn't exist
                         $nombre_usuario_err = 'No existe una cuenta para este usuario'.$username.$hashed_password;
                     }
-                }else{echo "Oops! Algo falló, prueba otra vez más tarde o habla con el administrador: lhueso@aragon.es";}
+                }else{echo "Algo falló, prueba otra vez más tarde o habla con el administrador: lhueso@aragon.es";}
             $stmt->close();
             	}
 					else {echo "No ha podido comprobarse las credenciales, prueba más tarde o consulta al administrador lhueso@aragon.es";}
