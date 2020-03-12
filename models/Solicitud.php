@@ -600,7 +600,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 			$this->log_nueva_solicitud->warning("ID INSERCION ALUMNO:");
 			$this->log_nueva_solicitud->warning($id_alumno);
 			
-			if($id_alumno)
+			if($id_alumno>0)
 			{
 				//filtramos los datos del baremo
 				$sol_baremo=$this->get_datos_tabla($nsol,'baremo',$id_alumno,'baremo');	
