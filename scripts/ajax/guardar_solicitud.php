@@ -21,12 +21,13 @@ $tsol=new Solicitud($conexion);
 $modo=$_POST['modo'];
 $rol=$_POST['rol'];
 
+$_POST['id_centro_estudios_origen']=trim($_POST['id_centro_estudios_origen'],'*');
 $fsol_entrada=$_POST['fsol'];
 
 
 
 ######################################################################################
-$log_actualizar->warning("POST REICBIDO ACTUALIZANDO:");
+$log_actualizar->warning("POST RECIBIDO ACTUALIZANDO:");
 $log_actualizar->warning(print_r($fsol_entrada,true));
 ######################################################################################
 if($rol!='alumno')
@@ -75,9 +76,9 @@ for($i=1;$i<7;$i++)
 		}
 	}
 //comprobamos los campos tipo check: padres trabajan en el cenntro y renta inferior
-if(!isset($fsol_salida['baremo_tutores_centro'.$_POST['idsol']]))
+if(!isset($fsol_salida['baremo_tutores_centro']))
 	$fsol_salida['baremo_tutores_centro']=0;
-if(!isset($fsol_salida['baremo_renta_inferior'.$_POST['idsol']]))
+if(!isset($fsol_salida['baremo_renta_inferior']))
 	$fsol_salida['baremo_renta_inferior']=0;
 //Si es nueva solicitud
 if($modo=="GRABAR SOLICITUD")
