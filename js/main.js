@@ -717,7 +717,8 @@ $('body').on('click', '.send', function(e){
 	var valid='1';
 	var valid=validarFormulario(fsolicitud,vid);
 	var mensaje="Debes incluir un ";
-	if(valid=='fnac')
+	
+	if(valid.indexOf('fnac')!=-1)
 	{
 		if(campo_dnisol(fsolicitud)==0)
 		{
@@ -836,7 +837,6 @@ function campo_dnisol(str) {
   var res = str.match(/&dni_alumno=.*&fnac/g);
   res=res[0].replace('&fnac','');
   res=res.replace('&dni_alumno=','');
-	//if(comprobar_nif(res.length)==0) return 0;
 	if(res.length!=9) return 0;
 	else return 1;
 }
@@ -869,7 +869,7 @@ if(d[0].indexOf('nombre')==0)
 	}
 if(d[0].indexOf('dni_tutor1')==0)
 	{
-	if(comprobar_nif(d[1])==0) {return 'DNI TUTOR VÁLIDO-dni_tutor1';};
+	if(comprobar_nifnie(d[1])==0) {return 'DNI/NIE TUTOR VÁLIDO-dni_tutor1';};
 	}
 //comp datos sección datos personales
 if(d[0].indexOf('datos_tutor1')==0)
@@ -1642,6 +1642,15 @@ function calcEdad(dateString) {
 }
 });
 
+function comprobar_nifnie(dni)
+	{
+	var numero;
+	var let;
+	var letra;
+	var expresion_regular_dni;
+      	if(dni.length==9) return 1;
+	else return 0; 
+	}
 function comprobar_nif(dni){
        var numero;
        var let;
