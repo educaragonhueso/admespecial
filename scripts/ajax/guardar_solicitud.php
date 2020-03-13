@@ -80,6 +80,13 @@ if(!isset($fsol_salida['baremo_tutores_centro']))
 	$fsol_salida['baremo_tutores_centro']=0;
 if(!isset($fsol_salida['baremo_renta_inferior']))
 	$fsol_salida['baremo_renta_inferior']=0;
+//comprobamos los campos tipo check: padres trabajan en el cenntro y renta inferior
+if(!isset($fsol_salida['nuevaesc']))
+	$fsol_salida['nuevaesc']=0;
+if(!isset($fsol_salida['num_hadmision']))
+	$fsol_salida['num_hadmision']=0;
+if(!isset($fsol_salida['num_hbaremo']))
+	$fsol_salida['num_hbaremo']=0;
 //Si es nueva solicitud
 if($modo=="GRABAR SOLICITUD")
 	{
