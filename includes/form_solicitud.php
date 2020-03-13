@@ -106,8 +106,8 @@ $formsol.=
                     </div>
                     <div class="col-md-4">
                         <div class="md-form mb-0">
-			    NIF madre/padre o tutor/a*
-                            <input type="text" id="dni_tutor1" value="" name="dni_tutor1" placeholder="NIF Tutor" pattern="[0-9a-zA-Z]{9}" class="form-control" required>
+			    NIF/NIE madre/padre o tutor/a*
+                            <input type="text" id="dni_tutor1" value="" name="dni_tutor1" placeholder="NIF/NIE Tutor" pattern="[0-9a-zA-Z]{9}" class="form-control" required>
                         </div>
                     </div>
 
@@ -124,8 +124,8 @@ $formsol.=
                     </div>
                     <div class="col-md-4">
                         <div class="md-form mb-0">
-			NIF madre/padre o tutor/a
-			<input type="text" id="dni_tutor2" value="" name="dni_tutor2" placeholder="NIF tutor"   pattern="[0-9a-zA-Z]{9}"  class="form-control">
+			NIF/NIE madre/padre o tutor/a
+			<input type="text" id="dni_tutor2" value="" name="dni_tutor2" placeholder="NIF/NIE tutor"   pattern="[0-9a-zA-Z]{9}"  class="form-control">
                         </div>
                     </div>
 
