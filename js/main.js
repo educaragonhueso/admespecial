@@ -1,6 +1,8 @@
 $(document).ready(function(){
-
 var botoncontrol="<button id='' type='button' class='btn btn-outline-dark'>Validar baremo</button>";
+
+
+
 
 $( ":input" ).select(function() {
 
@@ -715,7 +717,7 @@ $('body').on('click', '.send', function(e){
   var fsolicitud=$('#fsolicitud'+vid).serialize();
 	//Validacion formulario, de momento se omite
 	var valid='1';
-	var valid=validarFormulario(fsolicitud,vid);
+	//var valid=validarFormulario(fsolicitud,vid);
 	var mensaje="Debes incluir un ";
 	
 	if(valid.indexOf('fnac')!=-1)
@@ -1634,13 +1636,15 @@ vid=vid.replace("print",'');
 
 });
 
+});
 //////////////////////////////////////////////
 //FUCNIONES DE AYUDA
-function calcEdad(dateString) {
-  var birthday = +new Date(dateString);
-  return ~~((Date.now() - birthday) / (31557600000));
-}
-});
+function calcEdad(dstring) { // birthday is a date
+ var dt = new Date();
+  var fnac = dstring.split('/')[2];
+  var actual =dt.getYear()+1900;
+   return actual-fnac;
+ }
 
 function comprobar_nifnie(dni)
 	{
