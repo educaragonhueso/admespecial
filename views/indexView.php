@@ -9,6 +9,39 @@ include('includes/head.php');
 	  <input type="hidden" id="estado_convocatoria" name="estado_estado_convocatoria" value="<?php echo $_SESSION['estado_convocatoria']; ?>"></input>
 	  <span type="hidden" id="provincia" name="provincia" value="<?php echo $_SESSION['provincia'];?>"></span>
 	  <span type="hidden" id="estado" name="estado" value="<?php echo $_SESSION['estado']; ?>"></span>
+
+	<?php 
+		if($_SESSION['inicio_prorroga']==1)
+		{
+			echo "<p><b>
+Desde la Dirección General de Panificación y Equidad se informa que de acuerdo con lo dispuesto en la disposición adicional tercera del Real Decreto 463/2020, de 14 de marzo, por el que se declara el estado de alarma para la gestión de la situación de crisis sanitaria ocasionada por el COVID-19, quedan suspendidos los procedimientos de escolarización vigentes en la Comunidad Autónoma de Aragón.</b>
+<br>
+Ello implica:
+<ol>
+	<li>
+	El domingo 15 de marzo de 2020, los solicitantes podrán realizar solicitudes por internet.
+	</li>
+	<li>
+	El lunes día 16 de marzo se suspenderá la presentación de las solicitudes.
+	</li>
+	<li>
+	El proceso se retomará en cuanto las circunstancias lo permitan. Se recuperarán los dos días de presentación de solicitudes pendientes, así como el resto de fases del procedimiento.
+	</li>
+	<li>
+	Se considerarán como válidas las solicitudes presentadas correctamente desde el día 11 al 15 de marzo.
+	</li>
+</ol>
+</p>
+";
+			exit();
+		} 
+		if($_SESSION['estado_convocatoria']==4) 
+			if($_SESSION['rol']=='admin' or $_SESSION['rol']=='sp')
+			{
+				include('includes/menusuperior.php');
+			}
+	?>
+
 	<?php echo "<b><i> AVISO IMPORTANTE: Si se va a imprimir la solicitud se recomienda el uso de cualquier navegador distinto de Mozilla-Firefox ya que puede dar problemas al imprimirla</i></b><br>";?>
 	  <span type="hidden" id="rol" name="rol" value="<?php echo $_SESSION['rol']; ?>"><b>ROL: </b><?php echo $_SESSION['rol']; 
 		?></b></span> 
