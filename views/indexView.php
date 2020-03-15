@@ -70,7 +70,7 @@ Ello implica:
 				echo '<h1>FINALIZADO PROCESO DE ADMISIÓN<br></h1>';
 				if($_SESSION['fin_inscripcion_centros']==1) echo '<h1>DIRIGETE AL CENTRO PARA COMPLETAR LA INSCRIPCIÓN</h1>';
 				}
-			elseif($_SESSION['fin_sol_alumno']<2)//autenticado en perirodo de inscripcion  alumno
+			elseif($_SESSION['fin_sol_alumno']<2 and $_SESSION['nombre_usuario']!='nousuario')//autenticado en perirodo de inscripcion  alumno
 			{
 				echo '<button class="btn btn-outline-info calumno" id="versolicitud" type="button">Ver solicitud</button>';
 				echo '<a id="imprimir" target="_blank"><input class="btn btn-primary imprimirsolicitud" style="background-color:brown;padding-left:20px" type="button" value="Vista Previa Impresion Documento"/></a>';
