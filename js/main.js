@@ -717,7 +717,7 @@ $('body').on('click', '.send', function(e){
   var fsolicitud=$('#fsolicitud'+vid).serialize();
 	//Validacion formulario, de momento se omite
 	var valid='1';
-	//var valid=validarFormulario(fsolicitud,vid);
+	var valid=validarFormulario(fsolicitud,vid);
 	var mensaje="Debes incluir un ";
 	
 	if(valid.indexOf('fnac')!=-1)
@@ -886,7 +886,7 @@ if(d[0].indexOf('tributantes_dni1')==0)
 		{
 		if(d[1].length!=9) 
 			return 'DNI TRIBUTANTE DE 9 CARACTERES-tributantes_dni1';
-		else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni1';
+		//else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni1';
 		}
 	}
 if(d[0].indexOf('tributantes_dni2')==0)
@@ -896,7 +896,7 @@ if(d[0].indexOf('tributantes_dni2')==0)
 		{
 		if(d[1].length!=9) 
 			return 'DNI TRIBUTANTE DE 9 CARACTERES-tributantes_dni2';
-		else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni12';
+		//else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni12';
 		}
 	}
 if(d[0].indexOf('tributantes_dni3')==0)
@@ -906,7 +906,7 @@ if(d[0].indexOf('tributantes_dni3')==0)
 		{
 		if(d[1].length!=9) 
 			return 'DNI TRIBUTANTE DE 9 CARACTERES-tributantes_dni3';
-		else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni3';
+		//else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni3';
 		}
 	}
 if(d[0].indexOf('tributantes_dni4')==0)
@@ -916,7 +916,7 @@ if(d[0].indexOf('tributantes_dni4')==0)
 		{
 		if(d[1].length!=9) 
 			return 'DNI TRIBUTANTE DE 9 CARACTERES-tributantes_dni4';
-		else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni4';
+		//else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni4';
 		}
 	}
 if(d[0].indexOf('baremo_proximidad_domicilio')==0)
@@ -1640,6 +1640,7 @@ vid=vid.replace("print",'');
 //////////////////////////////////////////////
 //FUCNIONES DE AYUDA
 function calcEdad(dstring) { // birthday is a date
+console.log(dstring);
  var dt = new Date();
   var fnac = dstring.split('/')[2];
   var actual =dt.getYear()+1900;
