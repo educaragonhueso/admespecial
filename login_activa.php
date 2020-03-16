@@ -10,35 +10,11 @@ $_SESSION['rol'] = 'alumno';
 $_SESSION['provincia']='aragon';
 $_SESSION['fin_inscripcion_centros']=0;
 $_SESSION['inicio_prorroga']=0;
+$_SESSION['version']=VERSION;
+
 if($hoy==DIA_INICIO_PRORROGA)
 	$_SESSION['inicio_prorroga']=1;
 
-if($_SESSION['inicio_prorroga']==1)
-{
-echo "<div style='padding-left: 250px;padding-top: 50px;width: 1000px;'><b>
-Desde la Dirección General de Panificación y Equidad se informa que de acuerdo con lo dispuesto en la disposición adicional tercera del Real Decreto 463/2020, de 14 de marzo, por el que se declara el estado de alarma para la gestión de la situación de crisis sanitaria ocasionada por el COVID-19, quedan suspendidos los procedimientos de escolarización vigentes en la Comunidad Autónoma de Aragón.</b>
-<br>
-<br>
-<br>
-Ello implica:
-<ol>
-	<li>
-	El domingo 15 de marzo de 2020, los solicitantes podrán realizar solicitudes por internet.
-	</li>
-	<li>
-	El lunes día 16 de marzo se suspenderá la presentación de las solicitudes.
-	</li>
-	<li>
-	El proceso se retomará en cuanto las circunstancias lo permitan. Se recuperarán los dos días de presentación de solicitudes pendientes, así como el resto de fases del procedimiento.
-	</li>
-	<li>
-	Se considerarán como válidas las solicitudes presentadas correctamente desde el día 11 al 15 de marzo.
-	</li>
-</ol>
-</div>
-";
-			exit();
-		} 
 
 if($hoy==DIA_FIN_INSCRIPCION)
 	$_SESSION['fin_inscripcion_centros']=1;
@@ -265,6 +241,29 @@ input[type=text], input[type=password] {
             </li>
         </ul>
     </div>
+<?php echo "<div style='padding-left: 250px;padding-top: 50px;width: 1000px;'><b>
+Desde la Dirección General de Panificación y Equidad se informa que de acuerdo con lo dispuesto en la disposición adicional tercera del Real Decreto 463/2020, de 14 de marzo, por el que se declara el estado de alarma para la gestión de la situación de crisis sanitaria ocasionada por el COVID-19, quedan suspendidos los procedimientos de escolarización vigentes en la Comunidad Autónoma de Aragón.</b>
+<br>
+<br>
+<br>
+Ello implica:
+<ol>
+	<li>
+	El domingo 15 de marzo de 2020, los solicitantes podrán realizar solicitudes por internet.
+	</li>
+	<li>
+	El lunes día 16 de marzo se suspenderá la presentación de las solicitudes.
+	</li>
+	<li>
+	El proceso se retomará en cuanto las circunstancias lo permitan. Se recuperarán los dos días de presentación de solicitudes pendientes, así como el resto de fases del procedimiento.
+	</li>
+	<li>
+	Se considerarán como válidas las solicitudes presentadas correctamente desde el día 11 al 15 de marzo.
+	</li>
+</ol>
+</div>
+";
+?>
     <!--/.Call to action-->
 
     <hr>

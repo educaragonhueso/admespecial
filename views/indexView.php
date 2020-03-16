@@ -11,7 +11,7 @@ include('includes/head.php');
 	  <span type="hidden" id="estado" name="estado" value="<?php echo $_SESSION['estado']; ?>"></span>
 
 	<?php 
-		if($_SESSION['inicio_prorroga']==1)
+		if($_SESSION['inicio_prorroga']==1 and $_SESSION['rol']!='centro' and $_SESSION['version']!='PRE')
 		{
 			echo "<p><b>
 Desde la Dirección General de Panificación y Equidad se informa que de acuerdo con lo dispuesto en la disposición adicional tercera del Real Decreto 463/2020, de 14 de marzo, por el que se declara el estado de alarma para la gestión de la situación de crisis sanitaria ocasionada por el COVID-19, quedan suspendidos los procedimientos de escolarización vigentes en la Comunidad Autónoma de Aragón.</b>
@@ -64,7 +64,7 @@ Ello implica:
 			echo '<br>';
 			if($_SESSION['nombre_usuario']=='nousuario' and $_SESSION['fin_sol_alumno']==1)//usuario no autenticado
 				echo '<p style="padding-left:100px"><button class="btn btn-outline-info" id="nuevasolicitud" type="button">Nueva solicitud</button></p>';
-			elseif($_SESSION['nombre_usuario']=='nousuario' and $_SESSION['fin_sol_alumno']=='2') //fin inscripcion para ciudadano
+			elseif($_SESSION['nombre_usuario']=='nousuario' and $_SESSION['fin_sol_alumno']<'2') //fin inscripcion para ciudadano
 				{
 				print_r($_SESSION);
 				echo '<h1>FINALIZADO PROCESO DE ADMISIÓN<br></h1>';
