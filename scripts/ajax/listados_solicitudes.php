@@ -40,6 +40,8 @@ $hoy = date("Y/m/d");
 $form_nuevasolicitud='<div class="input-group-append" id="cab_fnuevasolicitud"><button class="btn btn-outline-info" id="nuevasolicitud" type="button">Nueva solicitud</button></div>';
 
 $log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES CON ROL: ".$_POST['rol']);
+
+
 //Para el caso de acceso del administrador o servicios provinciales
 if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 {
@@ -95,6 +97,9 @@ else
 	//si se ha pulsado en el boton de asignar numero de sorteo
 	if(isset($_POST['asignar'])) 
 	{
+				########################################################################################
+				$log_listado_solicitudes->warning("NUMERO DE SORTEO ASIGNADO");
+				########################################################################################
 		if($list->asignarNumSol($id_centro)!=1){ print("Error asignando numero para el sorteo");exit();}
 		//actualizamos el centro para marcar la fase del sorteo
 		$tcentro->setFaseSorteo(1);
@@ -103,6 +108,9 @@ else
 	//si se ha enviado el numero de sorteo
 	if(isset($_POST['nsorteo']))
 	{
+				########################################################################################
+				$log_listado_solicitudes->warning("SORTEO REALIZADO");
+				########################################################################################
 			$modo='sorteo';
 			$nsorteo=$_POST['nsorteo'];
 			//Actualizamos el numero de sorteo para el centro
@@ -112,19 +120,19 @@ else
 			$vacantes_ebo=$dsorteo[0]->vacantes;
 			$vacantes_tva=$dsorteo[1]->vacantes;
 				
-			if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) print("NO HAY VACANTES<br>");
+			if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
+				print("NO HAY VACANTES<br>");
 			else
 			{
+			########################################################################################
+			$log_listado_solicitudes->warning("COPIANDO TABLA IDCENTRO: ".$id_centro);
+			########################################################################################
 				$tcentro->setFaseSorteo(2);
+				$tcentro->actualizaVacantes($vacantes_ebo,$vacantes_tva);
+				$ct=$tsolicitud->copiaTabla('provisional',$id_centro);	
+				$log_listado_solicitudes->warning("RESULTADO COPIAR TABLA $ct ");
                                 $fase_sorteo=2;
 			//Si hemos llegado al dia de las provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
-				if($estado_convocatoria==3)
-				{
-				$tsolicitud->copiaTabla('provisional',$id_centro);	
-				########################################################################################
-				$log_listado_solicitudes->warning("CREADA TABLA PROV. ESTADO: ".$tcentro->getEstado());
-				########################################################################################
-				}
 			}	
 			########################################################################################
 			$log_listado_solicitudes->warning("ACTUALIZANDO DATOS ALUMNOS SORTEO vacantes: ".$nsolicitudes);

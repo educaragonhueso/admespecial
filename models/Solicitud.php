@@ -30,12 +30,25 @@ class Solicitud extends EntidadBase{
   public function copiaTabla($tipo,$centro=0)
 	{
 		$tabla="alumnos_".$tipo;
-		$sql='DELETE from '.$tabla;
-		if($this->db()->query($sql)==0) return 0;
+		$this->log_sorteo->warning("ENTRANDO EN COPIAR TABLA $tipo $centro $tabla");
+		if($centro!=0)
+			{
+			$dsql='DELETE from '.$tabla.' WHERE id_centro_destino='.$centro;
+			$isql='INSERT IGNORE INTO '.$tabla.' SELECT * from alumnos where id_centro_destino='.$centro;
+			$this->log_sorteo->warning("CARGANDO TABLA $tabla ".$isql);
+			}
+		else
+			{
+			$dsql='DELETE from '.$tabla;
+			$isql='INSERT IGNORE INTO '.$tabla.' SELECT * from alumnos';
 
-		$sql='INSERT IGNORE INTO '.$tabla.' SELECT * from alumnos';
-		$this->log_sorteo->warning("CARGANDO TABLA $tabla ".$sql);
-		if($this->db()->query($sql)) return 1;
+			}
+		$this->log_sorteo->warning("BORRANDO DE TABLA $tabla ".$dsql);
+		$this->log_sorteo->warning("CARGANDO TABLA $tabla ".$isql);
+		
+		if($this->db()->query($dsql))
+			if($this->db()->query($isql)) return 1;
+			else return 0;
 		else return 0;
 
 	}
@@ -554,7 +567,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 	while($this->existeCuenta($clave,$sol['dni_tutor1'])==0)	
 		$clave=rand(1000,9999);
 
-	if(strlen($sol['dni_tutor1']==0)) return 0; 
+	if(strlen($sol['dni_tutor1'])==0) return 0; 
 	
 	$this->log_nueva_solicitud->warning("CONSULTA INSERCION USUARIO:");
   $query="INSERT INTO usuarios(nombre_usuario,rol,clave,clave_original) VALUES('".$sol['dni_tutor1']."','alumno',md5('".$clave."'),$clave)";
@@ -805,7 +818,6 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		$nombre_centro=$this->getNombre($id_centro);
 		$sol_completa['nombre_centro_destino']=$nombre_centro;
 		$this->log_nueva_solicitud->warning("NUEVA SOLICITUD,id centro/nombre centro: ".$id_centro.'/'.$nombre_centro);
-		$this->log_nueva_solicitud->warning(print_r($sol_completa,true));
 		}
 	else
 		{
