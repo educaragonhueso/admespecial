@@ -8,7 +8,7 @@ require_once DIR_BASE.'controllers/ListadosController.php';
 require_once DIR_BASE.'controllers/CentrosController.php';
 require_once DIR_BASE.'models/Centro.php';
 
-if($_POST['rol']=='admin' || $_POST['provincia']!='aragon') 
+if($_POST['rol']=='admin' || $_POST['provincia']!='todas') 
 {
 	$cencont=new CentrosController();
 	print($cencont->showTablas($_POST['rol'],$_POST['id_centro'],'matricula',$_POST['provincia']));

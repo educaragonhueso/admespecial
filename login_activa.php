@@ -7,7 +7,7 @@ date_default_timezone_set('Europe/Madrid');
 $hoy=date("Y/m/d");      
 $_SESSION['estado']='inicioinscripcion';
 $_SESSION['rol'] = 'alumno';      
-$_SESSION['provincia']='aragon';
+$_SESSION['provincia']='todas';
 $_SESSION['fin_inscripcion_centros']=0;
 $_SESSION['inicio_prorroga']=0;
 $_SESSION['version']=VERSION;

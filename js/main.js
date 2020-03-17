@@ -1075,13 +1075,14 @@ if($('#fnuevasolicitud').length)
 $(".show_solicitudes").click(function () {  
   var vid_centro=$('#id_centro').text();
   var vrol=$('#rol').attr("value");
-var vestado_convocatoria=$('#estado_convocatoria').attr("value");
+  var vprovincia=$('#provincia').attr("value");
+  var vestado_convocatoria=$('#estado_convocatoria').attr("value");
 $.ajax({
   method: "POST",
   url: "../scripts/ajax/listados_solicitudes.php",
-  data: {id_centro:vid_centro,rol:vrol,estado_convocatoria:vestado_convocatoria},
+  data: {id_centro:vid_centro,rol:vrol,estado_convocatoria:vestado_convocatoria,provincia:vprovincia},
       success: function(data) {
-				if(vrol=='admin' || vrol.indexOf('sp')!=-1)
+				if(vrol=='admin' || vrol=='sp')
 				{
 				$(".tresumensol").remove();
 				$(".tresumenmat").remove();

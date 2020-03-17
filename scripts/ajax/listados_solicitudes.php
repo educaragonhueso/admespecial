@@ -24,7 +24,8 @@ $conexion=$list->getConexion();
 $tcentro=new Centro($conexion,$_POST['id_centro'],'ajax');
 
 $provincia='todas';
-if(strpos($_POST['rol'],'sp')!==FALSE) $provincia=substr($_POST['rol'],2);
+if(isset($_POST['provincia']))
+	$provincia=$_POST['provincia'];
 
 $tsolicitud=new Solicitud($conexion);
 $tcentro->setNombre();
@@ -40,7 +41,7 @@ $form_nuevasolicitud='<div class="input-group-append" id="cab_fnuevasolicitud"><
 
 $log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES CON ROL: ".$_POST['rol']);
 //Para el caso de acceso del administrador o servicios provinciales
-if($_POST['rol']=='admin' or strpos($_POST['rol'],'sp')!==FALSE)
+if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 {
 			$centros=$list->getCentrosIds($provincia);	
 			foreach($centros as $centro)
@@ -99,7 +100,7 @@ else
 		$tcentro->setFaseSorteo(1);
 		$fase_sorteo=1;
 	}
-	//si se ha realizado el sorteo
+	//si se ha enviado el numero de sorteo
 	if(isset($_POST['nsorteo']))
 	{
 			$modo='sorteo';
@@ -116,8 +117,8 @@ else
 			{
 				$tcentro->setFaseSorteo(2);
                                 $fase_sorteo=2;
-			//Si hemos llegado al dia d elas provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
-				if($estado_convocatoria==2)
+			//Si hemos llegado al dia de las provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
+				if($estado_convocatoria==3)
 				{
 				$tsolicitud->copiaTabla('provisional',$id_centro);	
 				########################################################################################
