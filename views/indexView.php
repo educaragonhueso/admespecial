@@ -11,7 +11,7 @@ include('includes/head.php');
 	  <span type="hidden" id="estado" name="estado" value="<?php echo $_SESSION['estado']; ?>"></span>
 
 	<?php 
-		if($_SESSION['inicio_prorroga']==1 and $_SESSION['rol']!='centro' and $_SESSION['version']!='PRE')
+		if($_SESSION['inicio_prorroga']==1 and $_SESSION['rol']=='alumno' and $_SESSION['version']!='PRE')
 		{
 			echo "<p><b>
 Desde la Dirección General de Panificación y Equidad se informa que de acuerdo con lo dispuesto en la disposición adicional tercera del Real Decreto 463/2020, de 14 de marzo, por el que se declara el estado de alarma para la gestión de la situación de crisis sanitaria ocasionada por el COVID-19, quedan suspendidos los procedimientos de escolarización vigentes en la Comunidad Autónoma de Aragón.</b>
@@ -40,6 +40,7 @@ Ello implica:
 			{
 				include('includes/menusuperior.php');
 			}
+		print_r($_SESSION);
 	?>
 
 	<?php echo "<b><i> AVISO IMPORTANTE: Si se va a imprimir la solicitud se recomienda el uso de cualquier navegador distinto de Mozilla-Firefox ya que puede dar problemas al imprimirla</i></b><br>";?>
@@ -55,26 +56,29 @@ Ello implica:
 		<?php if($_SESSION['rol']=='admin') echo $this->showTablas($_SESSION['rol'],$_SESSION['id_centro'],'matricula','todas');?>
 		<?php if($_SESSION['provincia']!='aragon'){echo "sprovincial"; echo $this->showTablas($_SESSION['rol'],$_SESSION['id_centro'],'matricula',$_SESSION['provincia']);}?>
 		<?php 
+		//print_r($_SESSION);
 		if($_SESSION['rol']=='alumno' && $_SESSION['dia_inicio_inscripcion']==1)
 		{
-	  		echo '<input type="hidden" id="pin" name="pin" value="'.$_SESSION['clave'].'" ></input> ';
+			if(isset($_SESSION['clave']))
+	  			echo '<input type="hidden" id="pin" name="pin" value="'.$_SESSION['clave'].'" ></input> ';
 			echo '<a href="'.URL_BASE.'"><button class="btn btn-outline-info" id="inicio" type="button">INICIO</button></a>';
-			if($_SESSION['fin_sol_alumno']=='1')
-				echo '<h2 style="padding-left:100px">ULTIMO DIA PARA INSCRIBIRSE!!!</h2>';
 			echo '<br>';
-			if($_SESSION['nombre_usuario']=='nousuario' and $_SESSION['fin_sol_alumno']==1)//usuario no autenticado
+			if($_SESSION['nombre_usuario']=='nousuario' and $_SESSION['fin_sol_alumno']!=2 and $_SESSION['fin_sol_alumno']!=-1)//usuario no autenticado
+				{
+				if($_SESSION['fin_sol_alumno']=='1')
+					echo '<h2 style="padding-left:100px">ULTIMO DIA PARA INSCRIBIRSE!!!</h2>';
 				echo '<p style="padding-left:100px"><button class="btn btn-outline-info" id="nuevasolicitud" type="button">Nueva solicitud</button></p>';
+				}
 			elseif($_SESSION['nombre_usuario']=='nousuario' and $_SESSION['fin_sol_alumno']<'2') //fin inscripcion para ciudadano
 				{
-				print_r($_SESSION);
 				echo '<h1>FINALIZADO PROCESO DE ADMISIÓN<br></h1>';
 				if($_SESSION['fin_inscripcion_centros']==1) echo '<h1>DIRIGETE AL CENTRO PARA COMPLETAR LA INSCRIPCIÓN</h1>';
 				}
 			elseif($_SESSION['fin_sol_alumno']<2 and $_SESSION['nombre_usuario']!='nousuario')//autenticado en perirodo de inscripcion  alumno
-			{
+				{
 				echo '<button class="btn btn-outline-info calumno" id="versolicitud" type="button">Ver solicitud</button>';
 				echo '<a id="imprimir" target="_blank"><input class="btn btn-primary imprimirsolicitud" style="background-color:brown;padding-left:20px" type="button" value="Vista Previa Impresion Documento"/></a>';
-			}
+				}
 		}
 		elseif($_SESSION['dia_inicio_inscripcion']==0)
 		{

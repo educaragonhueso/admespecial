@@ -12,9 +12,10 @@ $_SESSION['fin_inscripcion_centros']=0;
 $_SESSION['inicio_prorroga']=0;
 $_SESSION['version']=VERSION;
 
+$_SESSION['fin_sol_alumno']=-1;
+
 if($hoy==DIA_INICIO_PRORROGA)
 	$_SESSION['inicio_prorroga']=1;
-
 
 if($hoy==DIA_FIN_INSCRIPCION)
 	$_SESSION['fin_inscripcion_centros']=1;
@@ -24,11 +25,11 @@ if($hoy<DIA_INICIO_INSCRIPCION)
 else $_SESSION['dia_inicio_inscripcion']=1;
 //dia ultimo inscripcion alumno
 if(DIA_MAX_SOL_ALUMNO==$hoy)
-	$_SESSION['fin_sol_alumno']='1';//dia para solicitudes anonimas. 0.antes de empezar, 1.dia maximo solicitud, 2.plazo finalizado
+	$_SESSION['fin_sol_alumno']=1;//dia para solicitudes anonimas. -1. antes del perioodo 0.durante el perido normal de inscripcion, 1.dia maximo solicitud, 2.plazo finalizado
 elseif($hoy>DIA_MAX_SOL_ALUMNO)
-	$_SESSION['fin_sol_alumno']='2';
+	$_SESSION['fin_sol_alumno']=2;
 else	
-	 $_SESSION['fin_sol_alumno']='0';
+	 $_SESSION['fin_sol_alumno']=0;
 
 $_SESSION['nombre_centro'] = '9999';      
 $_SESSION['nombre_usuario'] ="nousuario";    
