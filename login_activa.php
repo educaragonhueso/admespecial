@@ -123,8 +123,8 @@ header('Content-Type: text/html; charset=UTF-8');
 					else $_SESSION['estado']='inicioinscripcion';
 					if(strpos($_SESSION['rol'],'sp')!==FALSE) 
 					{	
-						$_SESSION['rol']='sp';
 						$_SESSION['provincia']=substr($_SESSION['rol'],2);
+						$_SESSION['rol']='sp';
 					}
 					//print_r($_SESSION);
 					header("location: index.php");
