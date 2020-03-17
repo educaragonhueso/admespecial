@@ -27,14 +27,15 @@ class Solicitud extends EntidadBase{
 			$this->log_listados_provisionales=new logWriter('log_listados_provisionales',DIR_LOGS);
     }
      
-  public function copiaTablaProvisionales($centro=0)
+  public function copiaTabla($tipo,$centro=0)
 	{
-		$sql_provisionales='DELETE from alumnos_provisional';
-		if($this->db()->query($sql_provisionales)==0) return 0;
+		$tabla="alumnos_".$tipo;
+		$sql='DELETE from '.$tabla;
+		if($this->db()->query($sql)==0) return 0;
 
-		$sql_provisionales='INSERT IGNORE INTO alumnos_provisional SELECT * from alumnos';
-		$this->log_sorteo->warning("CARGANDO TABLA PROVISIONALES: ".$sql_provisionales);
-		if($this->db()->query($sql_provisionales)) return 1;
+		$sql='INSERT IGNORE INTO '.$tabla.' SELECT * from alumnos';
+		$this->log_sorteo->warning("CARGANDO TABLA $tabla ".$sql);
+		if($this->db()->query($sql)) return 1;
 		else return 0;
 
 	}
@@ -519,7 +520,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 	
 	public function existeCuenta($clave=0,$usuario='')
 	{
-	$squery="SELECT nombre_usuario,clave_original FROM usuarios where nombre_usuario=".$usuario." and clave_original=".$clave;
+	$squery="SELECT nombre_usuario,clave_original FROM usuarios where nombre_usuario='".$usuario."' and clave_original=".$clave;
    	$this->log_nueva_solicitud->warning("DATOS CUENTA ".$squery); 
 	$query=$this->db->query($squery);
 	if($query->num_rows>0) return 0;
@@ -803,7 +804,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		//Obtenemos nombre del centro a partir dle id
 		$nombre_centro=$this->getNombre($id_centro);
 		$sol_completa['nombre_centro_destino']=$nombre_centro;
-		$this->log_nueva_solicitud->warning("NUEVA SOLICITUD, nombre centro: ".$nombre_centro);
+		$this->log_nueva_solicitud->warning("NUEVA SOLICITUD,id centro/nombre centro: ".$id_centro.'/'.$nombre_centro);
 		$this->log_nueva_solicitud->warning(print_r($sol_completa,true));
 		}
 	else
@@ -830,16 +831,12 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 				$sqlbaseebo="SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=$c order by c.id_centro, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc LIMIT $nvebo";
 				$sqlbasetva="SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=$c order by c.id_centro, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc LIMIT $nvtva";
 		*/		
-				$sqlbaseebo="SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=$c order by c.id_centro, a.transporte desc,b.puntos_validados desc,
-					b.validar_hnos_centro,b.validar_tutores_centro,b.validar_proximidad_domicilio,b.validar_renta_inferior,b.validar_discapacidad,b.validar_tipo_familia,
-					b.hermanos_centro,b.tutores_centro,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),FIELD(discapacidad,'alumno','hpadres','no'),
+				$sqlbaseebo="SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=$c order by c.id_centro, a.transporte desc,b.puntos_validados desc,b.validar_hnos_centro desc,b.validar_tutores_centro desc,b.validar_proximidad_domicilio desc,b.validar_renta_inferior desc,b.validar_discapacidad desc,b.validar_tipo_familia desc,b.hermanos_centro desc,b.tutores_centro desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),FIELD(discapacidad,'alumno','hpadres','no'),
 					FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
 					a.nordensorteo asc,a.nasignado desc LIMIT $nvebo";
-				$sqlbasetva="SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=$c order by c.id_centro, a.transporte desc,b.puntos_validados desc,
-					b.validar_hnos_centro,b.validar_tutores_centro,b.validar_proximidad_domicilio,b.validar_renta_inferior,b.validar_discapacidad,b.validar_tipo_familia,
-					b.hermanos_centro,b.tutores_centro,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),FIELD(discapacidad,'alumno','hpadres','no'),
+				$sqlbasetva="SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=$c order by c.id_centro, a.transporte desc,b.puntos_validados desc,b.validar_hnos_centro desc,b.validar_tutores_centro desc,b.validar_proximidad_domicilio desc,b.validar_renta_inferior desc,b.validar_discapacidad desc,b.validar_tipo_familia desc,b.hermanos_centro desc,b.tutores_centro desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),FIELD(discapacidad,'alumno','hpadres','no'),
 					FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
-					a.nordensorteo asc,a.nasignado desc LIMIT $nvebo";
+					a.nordensorteo asc,a.nasignado desc LIMIT $nvtva";
 				$qebo=$this->db->query($sqlbaseebo);
 				$qtva=$this->db->query($sqlbasetva);
 		$this->log_sorteo->warning(print_r($sqlbaseebo,true));
@@ -1016,7 +1013,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 						if($c<=1)
 							$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,c.nombre_centro,b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta' and est_desp_sorteo='admitida' order by c.id_centro desc,a.tipoestudios desc,a.transporte desc,b.puntos_validados desc";
 						else
-							$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,c.nombre_centro,b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='admitida' and id_centro=$c order by a.tipoestudios asc,a.transporte desc, b.puntos_validados desc";
+							$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,c.nombre_centro,b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='admitida' and id_centro=$c order by a.tipoestudios asc,a.transporte desc, b.puntos_validados desc,a.nordensorteo  desc";
 					elseif($subtipo_listado=='noadmitidos_prov')
 						if($c<=1)
 							$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='noadmitida' order by c.id_centro, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc";
@@ -1052,11 +1049,11 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 				}
 
 				$query=$this->db->query($sql);
-        if($query)
+        			if($query)
 				while ($row = $query->fetch_object()) 
 				{
-           $resultSet[]=$row;
-        }
+           				$resultSet[]=$row;
+        			}
         return $resultSet;
 	}
 
@@ -1087,6 +1084,21 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		else return 1;
 	}
 
+	public function getEstadoSol($idsol) 
+	{
+		$query="select estado_solicitud from alumnos where id_alumno='".$idsol."'";
+
+		$this->log_actualizar_solicitud->warning("CONSULTA ESTADO DE SOLICITUD: ");
+		$this->log_actualizar_solicitud->warning($query);
+		$soldata=$this->db()->query($query);
+	  if($soldata->num_rows==0) return 'noapta';
+	  if($row = $soldata->fetch_object()) 
+		{
+   	 	$solSet=$row;
+		return $solSet->estado_solicitud;
+    		}
+		else return 'noapta';
+    	}
 	public function getCentroNombre($idcentro) 
 	{
 		//averiguamos si es de ed especial
@@ -1100,14 +1112,14 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		$this->log_actualizar_solicitud->warning("devolviendo nombre de centro");
 		$this->log_actualizar_solicitud->warning($query);
 		$soldata=$this->db()->query($query);
-    if($soldata->num_rows==0);
+	  if($soldata->num_rows==0);
 	  if($row = $soldata->fetch_object()) 
 		{
-   	 $solSet=$row;
+   	 	$solSet=$row;
 		return $solSet->nombre_centro;
-    }
+    		}
 		else return 0;
-    }
+    	}
 	public function getCentroId($nombrecentro) {
 		$query="select id_centro from centros  where nombre_centro='".trim($nombrecentro,'*')."'";
 		$this->log_actualizar_solicitud->warning($query);

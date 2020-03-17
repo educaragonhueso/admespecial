@@ -111,7 +111,7 @@ else
 			$vacantes_ebo=$dsorteo[0]->vacantes;
 			$vacantes_tva=$dsorteo[1]->vacantes;
 				
-			if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) print("NO HAY VACANTES");
+			if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) print("NO HAY VACANTES<br>");
 			else
 			{
 				$tcentro->setFaseSorteo(2);
@@ -119,7 +119,7 @@ else
 			//Si hemos llegado al dia d elas provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
 				if($estado_convocatoria==2)
 				{
-				$tsolicitud->copiaTablaProvisionales($id_centro);	
+				$tsolicitud->copiaTabla('provisional',$id_centro);	
 				########################################################################################
 				$log_listado_solicitudes->warning("CREADA TABLA PROV. ESTADO: ".$tcentro->getEstado());
 				########################################################################################

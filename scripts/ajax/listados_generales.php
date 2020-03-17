@@ -29,10 +29,10 @@ $tcentro->setNombre();
 $cabecera="campos_cabecera_".$subtipo_listado;
 $camposdatos="campos_bbdd_".$subtipo_listado;
 
-
+$formato=''; //formato listado en el pdf
 if($subtipo_listado=='sor_ale') $nombre_listado='LISTADO ALUMNOS SEGUN NUMERO ALEATORIO PARA SORTEO';
 if($subtipo_listado=='sor_bar') $nombre_listado='LISTADO SOLICITUDES BAREMADAS';
-if($subtipo_listado=='sor_det') $nombre_listado='LISTADO DETALLE BAREMO';
+if($subtipo_listado=='sor_det') {$nombre_listado='LISTADO DETALLE BAREMO';$formato='provisional';}
 
 ######################################################################################
 $log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, CABECERA: ".$cabecera);
@@ -66,10 +66,9 @@ if($_POST['pdf']==1)
 	$pdf = new PDF();
 	$cab=$$cabecera;
 	$pdf->SetFont('Helvetica','',8);
-	//$pdf->AddPage('L','',0,$subtipo_listado);
 	$pdf->AddPage('L','',0,$nombre_listado);
-	$pdf->BasicTable($cab,$datos);
-	$pdf->Ln();
+	$pdf->BasicTable($cab,$datos,0,30,$formato);
+	$pdf->Ln(20);
 	 // Arial italic 8
 	$pdf->SetFont('Arial','I',8);
 	  // Page number

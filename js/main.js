@@ -1015,6 +1015,12 @@ $.ajax({
 	{
 		if(vrol.indexOf("alumno")!=-1)
 		{
+			if(data.indexOf("DUP")!=-1)
+				$.alert({
+					title: 'LA SOLICITUD ESTÁ MARCADA COMO APTA, NO PUEDE MODIFICARSE',
+					content: 'CONTINUAR'
+					});
+		
 			if($("#tablasolicitud").length!=0)
 				$("#tablasolicitud").toggle();
 			else	$("#l_matricula").after(data);
@@ -1083,6 +1089,8 @@ $.ajax({
 				}
 				else
 				{
+				$(".tresumensol").remove();
+				$(".tresumenmat").remove();
 				$("#l_matricula").html(data);
 				$("#tresumen").hide();
 				}
@@ -1138,8 +1146,6 @@ $.ajax({
 
 				if(vrol=='centro')
 				{
-				console.log("vestado_convocatoria");
-				console.log(vestado_convocatoria);
 				$("#l_matricula").html(data);
 				$("#tresumen").hide();
 				}
@@ -1493,9 +1499,10 @@ var cen_options =
 			onSelectItemEvent: function() {
 			var nombre = $("#fcentrosadmin").getSelectedItemData().nombre_centro;
 			var idcentro = $("#fcentrosadmin").getSelectedItemData().id_centro;
-			//$("#tresumen").children("h2").text(nombre);
 			$("#id_centro").text(idcentro);
+			$("#id_centro").attr("value",idcentro);
 			$("#rol").text('centro');
+			$("#rol").attr("value","centro");
 			},
 			maxNumberOfElements: 10,
 			match: 

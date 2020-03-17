@@ -38,6 +38,9 @@ $fsol_entrada.="&baremo_ptstotal=".$_POST['ptsbaremo'];
 parse_str($fsol_entrada, $fsol_salida);
 if($rol=='alumno')
 	{
+	$estado_sol=$tsol->getEstadoSol($_POST['idsol']);
+	if($estado_sol=='apta') return 'ERROR, NO SE PUEDE MODIFICAR UNA SOLICITUD APTA';
+	$log_nueva->warning("SOLICITUD NO ESTA EN ESTADO APTA, ESTADO: ".$estado_sol);
 	$id_centro_destino=$tsol->getCentroId($_POST['id_centro_destino']);
 	if($id_centro_destino==0) 
 		{
