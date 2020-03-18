@@ -48,9 +48,9 @@ elseif($_SESSION['fecha_actual']==DIA_BAREMACION) //24 Marzo 12h publicacion sol
 elseif($_SESSION['fecha_actual']>DIA_BAREMACION and $_SESSION['fecha_actual']<DIA_PROVISIONALES) //Reclamacion solicitudes baremadas
  		$_SESSION['estado_convocatoria'] =22;//0. inicio inscripciones, 1. dia de sorteo, 2. baremacion, 3. Provisionales, 4. Definitivos      
 elseif($_SESSION['fecha_actual']>=DIA_PROVISIONALES and $_SESSION['fecha_actual']<DIA_DEFINITIVOS) //Periodo reclamacin provisionales
- 		$_SESSION['estado_convocatoria'] =3;//0. inicio inscripciones, 1. dia de sorteo, 2. baremacion, 3. Provisionales, 4. Definitivos      
+ 		$_SESSION['estado_convocatoria'] =30;//0. inicio inscripciones, 1. dia de sorteo, 2. baremacion, 3. Provisionales, 4. Definitivos      
 elseif($_SESSION['fecha_actual']==DIA_DEFINITIVOS) //jueves 16 abril
- 		$_SESSION['estado_convocatoria'] =4;//0. inicio inscripciones, 1. dia de sorteo, 2. baremacion, 3. Provisionales, 4. Definitivos      
+ 		$_SESSION['estado_convocatoria'] =40;//0. inicio inscripciones, 1. dia de sorteo, 2. baremacion, 3. Provisionales, 4. Definitivos      
 
 $_SESSION['fecha_inscripcion'] = date("2020/11/01");      
 $_SESSION['fecha_iniccioprovisionales'] = date("2019/11/01");      
@@ -87,7 +87,7 @@ header('Content-Type: text/html; charset=UTF-8');
         }
         if(empty($nombre_usuario_err) && empty($clave_err))
 	{
-            $sql = "SELECT nombre_usuario, clave,rol,nombre_centro,id_centro,primera_conexion,num_sorteo FROM usuarios u left join centros c  ON u.id_usuario=c.id_usuario WHERE  u.nombre_usuario = ? and u.clave= ?";
+            $sql = "SELECT nombre_usuario, clave,rol,nombre_centro,id_centro,primera_conexion,num_sorteo,fase_sorteo FROM usuarios u left join centros c  ON u.id_usuario=c.id_usuario WHERE  u.nombre_usuario = ? and u.clave= ?";
 	    if($stmt = $conexion->prepare($sql))
 		{
                 // Bind variables to the prepared statement as parameters
@@ -104,7 +104,7 @@ header('Content-Type: text/html; charset=UTF-8');
                     if($stmt->num_rows == 1)
 		    {                    
                         // Bind result variables
-                        $stmt->bind_result($nombre_usuario, $hashed_clave,$rol,$nombre_centro,$id_centro,$primera_conexion,$num_sorteo);
+                        $stmt->bind_result($nombre_usuario, $hashed_clave,$rol,$nombre_centro,$id_centro,$primera_conexion,$num_sorteo,$fase_sorteo);
                         if($stmt->fetch())
 			{
                            if(md5(strtoupper($clave))== $hashed_clave || md5($clave)== $hashed_clave)
@@ -115,6 +115,7 @@ header('Content-Type: text/html; charset=UTF-8');
 					$_SESSION['nombre_centro'] = $nombre_centro;      
 					$_SESSION['num_sorteo'] = $num_sorteo;      
 					$_SESSION['id_centro'] = $id_centro;
+					$_SESSION['fase_sorteo'] = $fase_sorteo;
 					if($rol=='centro' and  $primera_conexion=='si')
 						header("location: login_pconexion.php");
      					else

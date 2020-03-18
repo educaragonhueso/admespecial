@@ -7,6 +7,7 @@ require_once DIR_BASE.'core/EntidadBase.php';
 require_once DIR_BASE.'controllers/ListadosController.php';
 require_once DIR_BASE.'models/Centro.php';
 require_once DIR_BASE.'scripts/informes/pdf/fpdf/classpdf.php';
+require_once DIR_BASE.'models/Solicitud.php';
 
 ######################################################################################
 $log_listados_provisionales=new logWriter('log_listados_provisionales',DIR_LOGS);
@@ -26,6 +27,8 @@ $tcentro=new Centro($conexion,$_POST['id_centro'],'ajax');
 $tcentro->setNombre();
 $nsorteo=$tcentro->getNumeroSorteo();
 
+$tsolicitud=new Solicitud($conexion);
+
 $nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
 $dsorteo=$tcentro->getVacantes($id_centro);
 $vacantes_ebo=$dsorteo[0]->vacantes;
@@ -36,20 +39,21 @@ $titulo_listado=strtoupper($tipo_listado)." ".strtoupper($subtipo).$tcentro->get
 $estado_centro=$tcentro->getFaseSorteo();
 //OPERACIONES ACTUALIZACION SOLICITUDES SEGUN ESTADO CONVOCATORIA
 //Si se ha realizado ya el sorteo en ese centro y aun no estamos en el estado de provisionales
-if($estado_centro==2 and $estado_convocatoria<3)
+if($estado_centro==2 and $estado_convocatoria<=3)
 	{
 		$nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
 		$nsorteo=$tcentro->getNumeroSorteo();
 		$dsorteo=$tcentro->getVacantes($id_centro);
 		$vacantes_ebo=$dsorteo[0]->vacantes;
 		$vacantes_tva=$dsorteo[1]->vacantes;
+		$log_listados_provisionales->warning("ACTUALIZANDO DATOS:  NSOLICITUDES/IDCENTRO $nsorteo/$id_centro");
 		$tcentro->actualizaVacantes($vacantes_ebo,$vacantes_tva);
 		if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
 			print("NO HAY VACANTES<br>");
 		//si se ha hecho el sorteo en el centro, copiamos la tabla a provisionales
 		$tsolicitud->copiaTabla('provisional',$id_centro);	
 	########################################################################################
-	$log_listado_solicitudes->warning("CREADA TABLA PROV. ESTADO: ".$tcentro->getEstado());
+	$log_listados_provisionales->warning("CREADA TABLA PROV. ESTADO: ".$tcentro->getEstado());
 	########################################################################################
 	}
 
@@ -58,8 +62,6 @@ $camposdatos="campos_bbdd_".$subtipo_listado;
 
 ######################################################################################
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CABECERA: ".$cabecera);
-$log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CAMPOS DATOS: ".$camposdatos);
-$log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, SUBTIPO: ".$subtipo_listado);
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CENTRO:ESTADO ".$id_centro.":".$estado_centro);
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, ESTADO CONVOCATORIA:  ".$estado_convocatoria);
 ######################################################################################

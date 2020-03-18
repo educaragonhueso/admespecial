@@ -1,5 +1,5 @@
 <?php
-$formsol='<tr style="width:87%"><td colspan="12" style="width:inherit"><div class="container" id="tablasolicitud">
+$formsol='<tr style="width:1300px"><td colspan="12" style="width:inherit"><div class="container" id="tablasolicitud">
 <div class="row">
 <div class="col-md-12 mb-md-0 mb-5">
 <form lang="es" id="fsolicitud"  class="was-validated formsolicitud"  name="contact-form"  method="POST">';

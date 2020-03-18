@@ -52,7 +52,7 @@
 				 </div>
 				<?php }?>
                             </li>
-		<?php if($_SESSION['estado_convocatoria']>=3){?>
+		<?php if($_SESSION['estado_convocatoria']>=30 or $_SESSION['fase_sorteo']==2) {?>
                             <li class="nav-item active msuperior dropdown">
                                  <a class="show_provisionales nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
 				 <div class="dropdown-menu">

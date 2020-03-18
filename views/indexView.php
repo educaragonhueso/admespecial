@@ -43,7 +43,7 @@ Ello implica:
 	  			echo '<span type="hidden" id="provincia" name="provincia" value='.$_SESSION["provincia"].'><b>PROVINCIA: </b>'.$_SESSION["provincia"].'</b></span>'; 
 			}
 		*/
-		print_r($_SESSION);
+		if($_SESSION['version']=='PRE')	print_r($_SESSION);
 	?>
 
 	<?php echo "<b><i> AVISO IMPORTANTE: Si se va a imprimir la solicitud se recomienda el uso de cualquier navegador distinto de Mozilla-Firefox ya que puede dar problemas al imprimirla</i></b><br>";?>
