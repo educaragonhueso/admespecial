@@ -256,6 +256,18 @@ class Centro extends EntidadBase{
         return $this->password;
     }
 
+    public function actualizaVacantes($vebo,$vtva) {
+			$sql="update centros_grupos set vacantes_ebo=$vebo, vacantes_tva=$vtva where id_centro='$this->id_centro'";
+
+			$this->log_sorteo->warning("CONSULTA ACTUALIZANDO VACANTES: idcentro/ebo/tva: ".$this->id_centro."/".$vebo."/".$vtva);
+			$this->log_sorteo->warning($sql);
+
+			$query=$this->conexion->query($sql);
+			if($query)
+			return  1;
+			else return 0;
+        $this->password = $password;
+    }
     public function setPassword($password) {
         $this->password = $password;
     }

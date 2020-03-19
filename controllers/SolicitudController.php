@@ -50,7 +50,7 @@ class SolicitudController extends ControladorBase{
 		}
     public function procesarFormularioExistente($id,$dsolicitud,$collapsed=1,$rol='centro',$imprimir=0)
 		{
-			//si es para imprimir quitamos el boton de actualizar
+			//si es para imprimir o para solo lectura quitamos el boton de actualizar
 			if($imprimir==1) 
 			{
 				$this->formulario=str_replace('<a class="btn btn-primary send" >GRABAR SOLICITUD</a>','',$this->formulario);

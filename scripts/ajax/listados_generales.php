@@ -35,8 +35,6 @@ if($subtipo_listado=='sor_bar') $nombre_listado='LISTADO SOLICITUDES BAREMADAS';
 if($subtipo_listado=='sor_det') {$nombre_listado='LISTADO DETALLE BAREMO';$formato='provisional';}
 
 ######################################################################################
-$log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, CABECERA: ".$cabecera);
-$log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, CAMPOS DATOS: ".$camposdatos);
 $log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, CENTRO: ".$id_centro);
 ######################################################################################
 
@@ -44,8 +42,7 @@ $log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, CENTRO: ".$i
 $solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo=3); 
 
 ######################################################################################
-$log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, DATOS: ");
-$log_listados_generales->warning(print_r($solicitudes,true));
+$log_listados_generales->warning("OBTENIDAS SOLICITUDES GENERALES");
 ######################################################################################
 
 if($_POST['pdf']==1)

@@ -11,7 +11,7 @@
             			<a style='color:white!important;float:left!important'  href='<?php echo $_SESSION['url_base'];?>'>INICIO</a>
                             </li>
                             <li class="nav-item active msuperior dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Documentación</a>
+                                <a class="nav-link dropdown-toggle desplegable" id="navbardrop" data-toggle="dropdown">Documentación</a>
 				 <div class="dropdown-menu">
 				 <a class="dropdown-item" href="documentacion/a4modsol.pdf" id="doca4" target="_blank">Modelo solicitud autorrellenable (anexoIV)</a>
 				 <a class="dropdown-item" href="documentacion/instrucciones_proceso.pdf" id="docinst" target="_blank">Instrucciones generales</a>
@@ -26,7 +26,7 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
                             <li class="nav-item msuperior dropdown">
-                                <a class="show_provisionales nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">EXPORTAR DATOS</a>
+                                <a class="show_provisionales nav-link dropdown-toggle desplegable" id="navbardrop" data-toggle="dropdown" href="#">Exportar datos</a>
 				 <div class="dropdown-menu">
 				<?php 	if($_SESSION['provincia']!='aragon' or $_SESSION['rol']=='admin'){ echo '<a class="exportcsv dropdown-item" href="#" id="csv_mat" data-tipo="csv" data-subtipo="csv_mat">Listado vacantes (csv)  </a>';}?>
 				<?php 	if($_SESSION['rol']=='centro'){ echo '<a class="exportpdf dropdown-item" href="#" id="pdf_mat" data-tipo="pdf" data-subtipo="pdf_mat">Listado vacantes (pdf) </a>';}?>
@@ -42,9 +42,9 @@
                                 <a class="show_solicitudes nav-link" href="#">Solicitudes</a>
                             </li>
 		<?php if($_SESSION['estado_convocatoria']>=1){?>
-                            <li class="nav-item active msuperior dropdown">
+                            <li class="nav-item active msuperior dropdown" id="msorteo">
 				<?php if($_SESSION['sorteo']==1){?>
-                                <a class="show_provisionales nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">Sorteo</a>
+                                <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Sorteo</a>
 				 <div class="dropdown-menu">
 				 <a class="lgenerales dropdown-item" href="#" id="sor_ale" data-subtipo="sor_ale" data-tipo="sorteo">Numero aleatorio </a>
 				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_bar">Solicitudes baremadas</a>
@@ -53,8 +53,8 @@
 				<?php }?>
                             </li>
 		<?php if($_SESSION['estado_convocatoria']>=30 or $_SESSION['fase_sorteo']==2) {?>
-                            <li class="nav-item active msuperior dropdown">
-                                 <a class="show_provisionales nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
+                            <li class="nav-item active msuperior dropdown" id="mprovisional">
+                                 <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
 				 <div class="dropdown-menu">
 				 <a class="lprovisionales dropdown-item" href="#" data-subtipo="admitidos_prov">Admitidos provisional</a>
 				 <a class="lprovisionales dropdown-item" href="#" data-subtipo="noadmitidos_prov">No admitidos provisional</a>
@@ -62,16 +62,16 @@
 																		 </div>
                             </li>
 			<?php }?>
-			<?php if($_SESSION['estado_convocatoria']==4){?>
-                            <li class="nav-item active msuperior dropdown">
-                                 <a class="show_provisionales nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">Definitivos</a>
+		<?php if($_SESSION['estado_convocatoria']>=40){?>
+                            <li class="nav-item active msuperior dropdown" id="mdefinitivo">
+                                 <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Definitivos</a>
 		                 <div class="dropdown-menu">
 				 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="admitidos_def">Admitidos definitivo</a>
 				 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="noadmitidos_def">No admitidos definitivo</a>
 				 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="excluidos_def">Excluidos definitivo</a>
 				 </div>
                             </li>
-			<?php }?>
+		<?php }?>
 		<?php }?>
         </ul>
     </div>

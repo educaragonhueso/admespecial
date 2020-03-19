@@ -113,7 +113,7 @@ class ListadosController extends ControladorBase{
 		elseif($modo=='definitivos')
 		{
 			$this->log_listados_definitivos->warning('OBTENIENDO DEFINITIVOS');
-		    	$allsolicitudes=$solicitud->getAllSolListados($id_centro,2,$subtipo_listado,$estado_convocatoria);
+		    	$allsolicitudes=$solicitud->getAllSolListados($id_centro,2,$subtipo_listado,$fase_sorteo,$estado_convocatoria);
 		}
 	return $allsolicitudes;
 	}
@@ -286,7 +286,7 @@ class ListadosController extends ControladorBase{
 
 	foreach($a as $sol) 
 	{
-		if($rol=='admin')
+		if($rol=='admin' || $rol=='sp')
 		{
 			$centroanterior=$centroactual;
 			$centroactual=$sol->id_centro;

@@ -14,6 +14,7 @@ $log_listado_solicitudes=new logWriter('log_listado_solicitudes',DIR_LOGS);
 ########################################################################################
 
 //VARIABLES
+$menu_provisionales=''; //añadirlo si se ha realizado el sorteo
 $dia_sorteo=0;
 $modo='presorteo';
 $id_centro=$_POST['id_centro'];
@@ -108,35 +109,46 @@ else
 	//si se ha enviado el numero de sorteo
 	if(isset($_POST['nsorteo']))
 	{
-				########################################################################################
-				$log_listado_solicitudes->warning("SORTEO REALIZADO");
-				########################################################################################
-			$modo='sorteo';
-			$nsorteo=$_POST['nsorteo'];
-			//Actualizamos el numero de sorteo para el centro
-                        if($tcentro->setSorteo($nsorteo,$id_centro)==0) {print("ERROR SORTEO"); exit();}
+		########################################################################################
+		$log_listado_solicitudes->warning("SORTEO REALIZADO");
+		########################################################################################
+		$modo='sorteo';
+		$nsorteo=$_POST['nsorteo'];
+		//Actualizamos el numero de sorteo para el centro
+		if($tcentro->setSorteo($nsorteo,$id_centro)==0) {print("ERROR SORTEO"); exit();}
+		
+		$dsorteo=$tcentro->getVacantes($id_centro);
+		$vacantes_ebo=$dsorteo[0]->vacantes;
+		$vacantes_tva=$dsorteo[1]->vacantes;
 			
-			$dsorteo=$tcentro->getVacantes($id_centro);
-			$vacantes_ebo=$dsorteo[0]->vacantes;
-			$vacantes_tva=$dsorteo[1]->vacantes;
-				
-			if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
-				print("NO HAY VACANTES<br>");
-			else
-			{
-			########################################################################################
-			$log_listado_solicitudes->warning("COPIANDO TABLA IDCENTRO: ".$id_centro);
-			########################################################################################
-				$tcentro->setFaseSorteo(2);
-				$tcentro->actualizaVacantes($vacantes_ebo,$vacantes_tva);
-				$ct=$tsolicitud->copiaTabla('provisional',$id_centro);	
-				$log_listado_solicitudes->warning("RESULTADO COPIAR TABLA $ct ");
-                                $fase_sorteo=2;
-			//Si hemos llegado al dia de las provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
-			}	
-			########################################################################################
-			$log_listado_solicitudes->warning("ACTUALIZANDO DATOS ALUMNOS SORTEO vacantes: ".$nsolicitudes);
-			########################################################################################
+		if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
+			print("NO HAY VACANTES<br>");
+		else
+		{
+		########################################################################################
+		$log_listado_solicitudes->warning("COPIANDO TABLA IDCENTRO: ".$id_centro);
+		########################################################################################
+			$tcentro->setFaseSorteo(2);
+			$tcentro->actualizaVacantes($vacantes_ebo,$vacantes_tva);
+			$ct=$tsolicitud->copiaTabla('provisional',$id_centro);	
+			$log_listado_solicitudes->warning("RESULTADO COPIAR TABLA $ct ");
+			$fase_sorteo=2;
+		//Si hemos llegado al dia de las provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
+		}	
+		########################################################################################
+		$log_listado_solicitudes->warning("ACTUALIZANDO DATOS ALUMNOS SORTEO vacantes: ".$nsolicitudes);
+		########################################################################################
+
+		//si hay sorteo mostraremos la opción de provisionales
+		$menu_provisionales='
+                            <li class="nav-item active msuperior dropdown" id="provisional">
+                                 <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
+				 <div class="dropdown-menu">
+				 <a class="lprovisionales dropdown-item" href="#" data-subtipo="admitidos_prov">Admitidos provisional</a>
+				 <a class="lprovisionales dropdown-item" href="#" data-subtipo="noadmitidos_prov">No admitidos provisional</a>
+				 <a class="lprovisionales dropdown-item" href="#" data-subtipo="excluidos_prov">Excluidos provisional</a>
+																		 </div>
+                            </li>::';		
 	}
 
 	########################################################################################
@@ -188,6 +200,7 @@ else
         }
 	else
 	{
+			print($menu_provisionales);
                         if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
 			print($list->showSolicitudes($solicitudes,$_POST['rol']));
 	}
