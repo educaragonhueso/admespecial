@@ -63,14 +63,19 @@ return;
 	      success: function(data) {
 				if(data.indexOf('NO HAY VACANTES')!=-1)
 				{
-					$.alert({
-								title: 'NO HAY VACANTES EN O NO HAY SOLCITUDES APTAS',
-								content: 'CONTINUAR'
-							});
+				$.alert({
+					title: 'NO HAY VACANTES EN O NO HAY SOLCITUDES APTAS'
+					});
 				return;
 				}
 				else
 				{
+				var prov=data.split('::')[0];
+				var data=data.split('::')[1];
+				if(document.getElementById("mprovisional")== null)
+				{
+					$("#msorteo").after(prov);
+				}
 				$("#l_matricula").html(data);
 				$("#tresumen").hide();
 				}
@@ -1091,9 +1096,9 @@ $.ajax({
 				else
 				{
 				$(".tresumensol").remove();
-				$(".tresumenmat").remove();
-				$("#l_matricula").html(data);
+				$(".tresumenmat").hide();
 				$("#tresumen").hide();
+				$("#l_matricula").html(data);
 				}
       },
       error: function() {
@@ -1168,10 +1173,11 @@ $(".ldefinitivos").click(function () {
   var vrol=$('#rol').attr("value");
   var vtipo=$(this).attr("data-tipo");
   var vsubtipo=$(this).attr("data-subtipo");
+  var vestado_convocatoria=$('#estado_convocatoria').val();
 $.ajax({
   method: "POST",
   url: "../scripts/ajax/listados_definitivos.php",
-  data: {id_centro:vid_centro,rol:vrol,tipo:vtipo,subtipo:vsubtipo,pdf:vpdf},
+  data: {id_centro:vid_centro,rol:vrol,tipo:vtipo,subtipo:vsubtipo,pdf:vpdf,estado_convocatoria:vestado_convocatoria},
       success: function(data) {
 
 				if(vrol=='centro')
@@ -1202,17 +1208,17 @@ $.ajax({
   data: {id_centro:vid_centro,rol:vrol,provincia:vprovincia},
       success: function(data) 
 			{
-				if(vrol=='admin') 
-				{
-						$("#l_matricula").html(data);
-				}
-				else
-				{
-					//	$(".tresumenmat").hide();
-						$("#tresumen"+vid_centro).show();
-						$("#l_matricula").html(data);
-				}
-      },
+			if(vrol=='admin') 
+			{
+					$("#l_matricula").html(data);
+			}
+			else
+			{
+					$("#tresumen"+vid_centro).show();
+					$("#l_matricula").html(data);
+					$(".tresumenmat").show();
+			}
+      			},
       error: function() {
         alert('Erorr LISTADO matricula');
       }
