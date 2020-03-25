@@ -24,15 +24,18 @@ $rol=$_POST['rol'];
 $_POST['id_centro_estudios_origen']=trim($_POST['id_centro_estudios_origen'],'*');
 $fsol_entrada=$_POST['fsol'];
 
-
-
 ######################################################################################
 $log_actualizar->warning("POST RECIBIDO ACTUALIZANDO:");
 $log_actualizar->warning(print_r($fsol_entrada,true));
 ######################################################################################
 if($rol!='alumno')
-	$fsol_entrada.="&id_centro_destino=".$_POST['id_centro_destino'];
-
+	{
+	if($modo!="GRABAR SOLICITUD")
+		{
+		if($tsol->getCentroId($_POST['id_centro_destino'])!=0)
+			$id_centro_destino=$tsol->getCentroId($_POST['id_centro_destino']);
+		}
+	}
 $fsol_entrada.="&baremo_ptstotal=".$_POST['ptsbaremo'];
 
 parse_str($fsol_entrada, $fsol_salida);
@@ -51,6 +54,7 @@ if($rol=='alumno')
 	$log_nueva->warning("SOLICITUD NUEVA DE ALUMNO, NOMBRE CENTRO: ".$_POST['id_centro_destino']);
 	$log_nueva->warning("SOLICITUD NUEVA DE ALUMNO, ID CENTRO: ".$fsol_salida['id_centro_destino']);
 	}
+$fsol_salida['id_centro_destino']=$id_centro_destino;
 
 ######################################################################################
 $log_actualizar->warning("VALOR CENTRO ORIGEN:");

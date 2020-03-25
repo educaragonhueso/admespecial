@@ -116,31 +116,6 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		$this->log_actualizar_solicitud->warning($sql_baremo);
 		}
 
-		/*
-		//generamos datos para la tabla tributantes. Campos con prefijo tributantes_
-		foreach($sol as $key=>$elto)
-		{
-		if(strpos($key,'tributantes_')!==false) 
-			{
-			if(strlen($elto)==0) continue;
-			
-			$key=str_replace("tributantes_","",$key);	
-			$key=str_replace($id,"",$key);	
-			$query_tributantes.=$key."='".$elto."',";	
-			//contamos los hermanos que hay
-			if(strpos($key,'tributantes_')!==false) $num_tributantes++; 
-			$dtributantes=1;
-			}
-		}
-		if($dtributantes==1)
-		{
-    //cerramos actualizacion tributantes
-		$sql_baremo=trim($query_baremo,',')." WHERE id_alumno=".$id;
-		if($dbaremo==1) $update=$this->db()->query($sql_baremo);
-		$this->log_actualizar_solicitud->warning("CONSULTA ACTUALIZACION BAREMO");
-		$this->log_actualizar_solicitud->warning($sql_baremo);
-		}
-		*/
 		//generamos datos para la tabla alumnos. Sin campos con prefijo -hermanos_-
 		foreach($sol as $key=>$elto)
 		{
