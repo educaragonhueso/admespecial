@@ -202,6 +202,7 @@ else
 	{
 			print($menu_provisionales);
                         if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
+                        if($estado_convocatoria<=30) print($form_nuevasolicitud);
 			print($list->showSolicitudes($solicitudes,$_POST['rol']));
 	}
 
