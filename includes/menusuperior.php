@@ -72,10 +72,21 @@
 				 </div>
                             </li>
 		<?php }?>
+		<?php if($_SESSION['rol']>='admin'){?>
+                            <li class="nav-item active msuperior dropdown" id="mdefinitivo">
+                                 <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASEII</a>
+		                 <div class="dropdown-menu">
+				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol">Listado Solicitudes fase2</a>
+				 </div>
+                            </li>
+		<?php }?>
 		<?php }?>
         </ul>
     </div>
 </nav>
-<?php if($_SESSION['id_centro']==1) 
-echo '<input class="form-control" id="fcentrosadmin" placeholder="Introduce datos del centro" type="text">';
+<?php 
+//if($_SESSION['id_centro']==1) 
+//echo '<input class="form-control" id="fcentrosadmin" placeholder="Introduce datos del centro" type="text">';
+if($_SESSION['id_centro']<=1) 
+echo '<input class="form-control" id="fcentrosadminzgz" placeholder="Introduce datos del centro" type="text">';
 ?>

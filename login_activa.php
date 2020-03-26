@@ -14,7 +14,7 @@ $_SESSION['version']=VERSION;
 
 $_SESSION['fin_sol_alumno']=-1;
 
-if($hoy==DIA_INICIO_PRORROGA)
+if($hoy>=DIA_INICIO_PRORROGA)
 	$_SESSION['inicio_prorroga']=1;
 
 if($hoy==DIA_FIN_INSCRIPCION)

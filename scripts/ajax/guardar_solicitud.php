@@ -44,7 +44,7 @@ if($rol=='alumno')
 	$estado_sol=$tsol->getEstadoSol($_POST['idsol']);
 	if($estado_sol=='apta') return 'ERROR, NO SE PUEDE MODIFICAR UNA SOLICITUD APTA';
 	$log_nueva->warning("SOLICITUD NO ESTA EN ESTADO APTA, ESTADO: ".$estado_sol);
-	$id_centro_destino=$tsol->getCentroId($_POST['id_centro_destino']);
+	$id_centro_destino=$tsol->getCentroId($_POST['id_centro_destino'],'especial');
 	if($id_centro_destino==0) 
 		{
 		print('ERROR GUARDANDO DATOS: EL CENTRO SOLICITADO NO EXISTE');
@@ -53,8 +53,9 @@ if($rol=='alumno')
 	$fsol_salida['id_centro_destino']=$id_centro_destino;
 	$log_nueva->warning("SOLICITUD NUEVA DE ALUMNO, NOMBRE CENTRO: ".$_POST['id_centro_destino']);
 	$log_nueva->warning("SOLICITUD NUEVA DE ALUMNO, ID CENTRO: ".$fsol_salida['id_centro_destino']);
+	$fsol_salida['id_centro_destino']=$id_centro_destino;
 	}
-$fsol_salida['id_centro_destino']=$id_centro_destino;
+
 
 ######################################################################################
 $log_actualizar->warning("VALOR CENTRO ORIGEN:");
