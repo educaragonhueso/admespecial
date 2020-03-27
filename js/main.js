@@ -153,7 +153,10 @@ var val=$(this).attr("value");
 if(val=='0')
 		$(this).attr('value','1');
 else
+	{
 		$(this).attr('value','0');
+		$("button[name=boton_baremo_validar_tutores_centro"+vid+"]").text('Validar tutores trabajan centro')
+	}
 });
 
 
@@ -167,10 +170,12 @@ var val=$(this).attr("value");
 $("#labeltributo"+vid).toggle();
 $("#tributo").toggle();
 if(val=='0')
-		$(this).attr('value','1');
+	$(this).attr('value','1');
 else
-		$(this).attr('value','0');
-
+	{
+	$(this).attr('value','0');
+	$("button[name=boton_baremo_validar_renta_inferior"+vid+"]").text('Validar renta')
+	}
 });
 
 
@@ -334,8 +339,11 @@ if(val_def!=0)
 	$('#labelbaremo'+vid).addClass('cverde');
 	}
 
-$('#baremo_validar_tutores_centro'+vid).val('1');
-$(this).text('Invalidar tutores trabajan centro');
+if($("input[id=baremo_tutores_centro"+vid+"]").val()=='1')
+{
+	$('#baremo_validar_tutores_centro'+vid).val('1');
+	$(this).text('Invalidar tutores trabajan centro');
+}
 }
 else
 	{
@@ -361,9 +369,13 @@ if(val_def!=0)
 	$('#labelbaremo'+vid).addClass('cverde');
 	}
 
-$('#baremo_validar_renta_inferior'+vid).val('1');
-$(this).text('Invalidar renta');
+if($("input[id=baremo_renta_inferior"+vid+"]").val()=='1')
+{
+	$('#baremo_validar_renta_inferior'+vid).val('1');
+	$(this).text('Invalidar renta');
 }
+}
+
 else
 	{
 	$(this).text('Validar renta');
@@ -930,6 +942,7 @@ if(d[0].indexOf('baremo_proximidad_domicilio')==0)
 	var valor2=$("input[id='baremo_calle_dllimitrofe"+id+"']").val();
 	if($("input[value='dlaboral']").is(':checked'))
 	{
+		console.log("domicilio laboral check"+d);
 		if(valor1.length<=2) return "Valor para el domicilio laboral";
 	}
 	if($("input[value='dllimitrofe']").is(':checked'))
@@ -1130,6 +1143,25 @@ $.ajax({
 				$("#l_matricula").html(data);
 				$(".container").hide();
 				}
+      },
+      error: function() {
+        alert('Error LISTANDO solicitudes: '+vsubtipo);
+      }
+});
+});
+//LISTADO SOLICITUDES FASEII
+$(".lfase2").click(function () {  
+  var vpdf='1';
+  var vrol=$('#rol').attr("value");
+  var vsubtipo=$(this).attr("data-subtipo");
+  var vestado_convocatoria=$('#estado_convocatoria').val();
+$.ajax({
+  method: "POST",
+  url: "../scripts/ajax/listados_solicitudes_fase2.php",
+  data: {rol:vrol,subtipo:vsubtipo,pdf:vpdf,estado_convocatoria:vestado_convocatoria},
+      success: function(data) {
+				$("#l_matricula").html(data);
+				$(".container").hide();
       },
       error: function() {
         alert('Error LISTANDO solicitudes: '+vsubtipo);
@@ -1496,6 +1528,34 @@ $("#localidad").easyAutocomplete(loc_options);
 $("#localidad_origen").easyAutocomplete(loc_options);
 $('input[id*=loc_dfamiliar]').easyAutocomplete(loc_options);
 
+var cen_options_zaragoza = 
+	{
+	url: "../datosweb/centros_especial_zaragoza.json",
+	getValue:"nombre_centro",
+		list: 
+		{
+			onSelectItemEvent: function() {
+			var nombre = $("#fcentrosadminzgz").getSelectedItemData().nombre_centro;
+			var idcentro = $("#fcentrosadminzgz").getSelectedItemData().id_centro;
+			$("#id_centro").text(idcentro);
+			$("#id_centro").attr("value",idcentro);
+			$("#rol").text('centro');
+			$("#rol").attr("value","centro");
+			},
+			maxNumberOfElements: 10,
+			match: 
+			{
+			enabled: true
+			},
+			onKeyEnterEvent: function() 
+			{
+			},
+			onClickEvent: function() 
+			{
+			}
+		}
+	};
+$("#fcentrosadminzgz").easyAutocomplete(cen_options_zaragoza);
 
 var cen_options = 
 	{

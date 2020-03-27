@@ -18,90 +18,25 @@ $log_listados_solicitudes_fase2->warning(print_r($_POST,true));
 $dir_pdf=DIR_BASE.'/scripts/datossalida/pdflistados/fase2/';
 $estado_convocatoria=$_POST['estado_convocatoria'];
 $tipo_listado='solicitudes_fase2';
+
 $subtipo_listado=$_POST['subtipo'];//dentro de cada tipo, el subtipo de listado
+$cabecera="campos_cabecera_".$subtipo_listado;
+$camposdatos="campos_bbdd_".$subtipo_listado;
+
 $filtro_datos='<input type="text" class="form-control" id="filtrosol"  placeholder="Introduce datos del alumno"><small id="emailHelp" class="form-text text-muted"></small>';
 $list=new ListadosController('alumnos');
 $conexion=$list->getConexion();
 
 $tsolicitud=new Solicitud($conexion);
 
-$dsorteo=$tcentro->getVacantes($id_centro);
-$vacantes_ebo=$dsorteo[0]->vacantes;
-$vacantes_tva=$dsorteo[1]->vacantes;
-
-$titulo_listado=strtoupper($tipo_listado)." ".strtoupper($subtipo).$tcentro->getNombre();
-//obtenemos estado de la convocatoria ara el centro
-$estado_centro=$tcentro->getFaseSorteo();
-//OPERACIONES ACTUALIZACION SOLICITUDES SEGUN ESTADO CONVOCATORIA
-//Si se ha realizado ya el sorteo en ese centro y aun no estamos en el estado de provisionales
-if($estado_centro==2 and $estado_convocatoria<=3)
-	{
-		$nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
-		$nsorteo=$tcentro->getNumeroSorteo();
-		$dsorteo=$tcentro->getVacantes($id_centro);
-		$vacantes_ebo=$dsorteo[0]->vacantes;
-		$vacantes_tva=$dsorteo[1]->vacantes;
-		$log_listados_provisionales->warning("ACTUALIZANDO DATOS:  NSOLICITUDES/IDCENTRO $nsorteo/$id_centro");
-		$tcentro->actualizaVacantes($vacantes_ebo,$vacantes_tva);
-		if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
-			print("NO HAY VACANTES<br>");
-		//si se ha hecho el sorteo en el centro, copiamos la tabla a provisionales
-		$tsolicitud->copiaTabla('provisional',$id_centro);	
-	########################################################################################
-	$log_listados_provisionales->warning("CREADA TABLA PROV. ESTADO: ".$tcentro->getEstado());
-	########################################################################################
-	}
-
-$cabecera="campos_cabecera_".$subtipo_listado;
-$camposdatos="campos_bbdd_".$subtipo_listado;
-
-######################################################################################
-$log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CABECERA: ".$cabecera);
-$log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CENTRO:ESTADO ".$id_centro.":".$estado_centro);
-$log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, ESTADO CONVOCATORIA:  ".$estado_convocatoria);
-######################################################################################
-
 //mostramos las solitudes completas sin incluir borrador
-$solicitudes=$list->getSolicitudes($id_centro,0,$estado_centro,$modo='provisionales',$subtipo_listado,'todas',3); 
+$solicitudes=$list->getSolicitudes(1,0,0,$modo='fase2',$subtipo_listado,'todas',3); 
 
 ######################################################################################
-$log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, DATOS: ");
-$log_listados_provisionales->warning(print_r($solicitudes,true));
+$log_listados_solicitudes_fase2->warning("OBTENIDAS SOLICITUDES FASE II:");
+$log_listados_solicitudes_fase2->warning(print_r($solicitudes,true));
 ######################################################################################
 
-//actualizamos las solicitudes por si hay cambios para tener en cuenta el sorteo previo
-
-
-if($_POST['pdf']==1)
-{
-	$datos=array();
-	$i=0;
-	//extraemos los campos de datos q nos interesan
-	foreach($solicitudes as $sol)
-	{
-		$datos[$i] = new stdClass;
-		foreach($$camposdatos as $d)
-		{
-			$datos[$i]->$d=$sol->$d;
-		}
-	$i++;
-	}
-	$pdf = new PDF();
-	$cab=$$cabecera;
-	$pdf->SetFont('Helvetica','',8);
-	$pdf->AddPage('L','',0,$titulo_listado);
-	$pdf->BasicTable($cab,$datos,0,30,'provisional');
-	$pdf->Ln(20);
-	$pdf->SetFont('Arial','I',8);
-	  // Page number
-	$pdf->Cell(30);
-	$pdf->Cell(40,10,'SELLO CENTRO',1,0,'C');
-	$pdf->Cell(140,10,'En ______________________ a ____de________ de 2020',0,0,'C');
-	$pdf->Cell(0,10,'Firmado:',0,0);
-	$pdf->Ln();
-	$pdf->Cell(220,10,'El Director/a',0,0,'R');
-	$pdf->Output(DIR_PROV.$subtipo_listado.'.pdf','F');
-}
 
 if($subtipo_listado=='admitidos_prov') $subtipo='ADMITIDOS PROVISIONAL';
 if($subtipo_listado=='noadmitidos_prov') $subtipo='NO ADMITIDOS PROVISIONAL';
