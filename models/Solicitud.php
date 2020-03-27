@@ -1042,7 +1042,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 				elseif($tipo==3) //fase II
 				{
 					if($c<=1)
-						$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1 FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc";
+						$sql=" SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1 FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc";
 					else return 0;
 				$this->log_listados_solicitudes_fase2->warning("CONSULTA SOLICITUDES FASE2 SUBTIPO: ".$subtipo_listado);
 				$this->log_listados_solicitudes_fase2->warning($sql);
