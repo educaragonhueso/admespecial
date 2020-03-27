@@ -3,7 +3,7 @@ require_once "config_global.php";
 require_once "Conectar.php";
 require_once 'UtilidadesAdmision.php';
 
-$tipo='provisional';
+$tipo='definitivo';
 
 $conexion=new Conectar();
 

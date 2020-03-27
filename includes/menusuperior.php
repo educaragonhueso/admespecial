@@ -72,7 +72,7 @@
 				 </div>
                             </li>
 		<?php }?>
-		<?php if($_SESSION['rol']>='admin'){?>
+		<?php if($_SESSION['rol']=='admin' or $_SESSION['rol']=='sp'){?>
                             <li class="nav-item active msuperior dropdown" id="mdefinitivo">
                                  <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASEII</a>
 		                 <div class="dropdown-menu">
