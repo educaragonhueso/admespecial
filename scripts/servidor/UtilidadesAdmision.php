@@ -31,6 +31,12 @@ class UtilidadesAdmision{
 		else return 0;
 
 	}
+  public function compruebaReservas($centro=0)
+	{
+//si alguien reserva una plaza se supone q el centro ha marcado q continua asi q no genera vacante
+//si alguien reserva laza incorrectamente debe anularse esa reserva y anotarse en un fichero asi como en la base de datos, añadiendo un campo llamado reserva incorrecta
+//en el formulario de fase 2 deberá aparecer si tiene o no reserva y esta es correcta 
+	}
   public function actualizaVacantesCentros($centro=0)
 	{
 		$vebo[0]=$this->centro->getVacantes();
