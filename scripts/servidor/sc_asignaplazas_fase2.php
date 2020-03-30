@@ -12,6 +12,7 @@ require_once DIR_BASE.'models/Alumno.php';
 #operaciones antes de iniciar la fase2
 require_once 'UtilidadesAdmision.php';
 
+//tipo de fase
 $tipo='fase2';
 
 $ccentros=new CentrosController();
