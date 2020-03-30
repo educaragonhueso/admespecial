@@ -110,4 +110,31 @@ var cen_options =
 		}
 	};
 $(".cdefinitivo").easyAutocomplete(cen_options);
+//FORMULARIO PARA MODIFICAR MANUALMENTE CENTRO DEFINITIVO ALLUMNOS FASE2
+$('body').on('click', '.cdefinitivo', function(e){
+  var vid=$(this).attr("id");
+  var vcdefinitivo=$("#cdefinitivo"+vid).val();
+  var vtipoestudios=$(this).attr("data-tipo");
+	console.log("definitivo");
+$.ajax({
+  method: "POST",
+  data: {id_alumno:vid,cdefinitivo:vcdefinitivo,tipoestudios:vtipoestudios},
+  url:'../scripts/ajax/cambio_estado_fase2.php',
+   	success: function(data) 
+	{
+	console.log("ok");
+	console.log(data);
+	if(data.indexOf("OK")!=-1)
+		$.alert({
+			title: 'CENTRO MODIFICADO CORRECTAMENTE',
+			content: 'CONTINUAR'
+			});
+      	},
+      	error: function() {
+        alert('PROBLEMAS EDITANDO SOLICITUD!');
+      	}
 });
+
+});
+
+});//FIN GETREADY
