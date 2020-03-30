@@ -1,936 +1,576 @@
-[02-Mar-2020 11:09:33] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[02-Mar-2020 11:09:33] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[02-Mar-2020 11:09:33] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[02-Mar-2020 11:09:33] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[02-Mar-2020 11:09:33] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[02-Mar-2020 11:09:33] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 0 DIA SORTEO: 1
-[02-Mar-2020 11:10:47] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[02-Mar-2020 11:10:47] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[02-Mar-2020 11:10:47] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[02-Mar-2020 11:10:47] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[02-Mar-2020 11:10:47] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[02-Mar-2020 11:10:47] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 0 DIA SORTEO: 1
-[02-Mar-2020 11:12:21] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[02-Mar-2020 11:12:21] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[02-Mar-2020 11:12:21] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[02-Mar-2020 11:12:21] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[02-Mar-2020 11:12:21] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[02-Mar-2020 11:12:21] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 09:03:45] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 09:03:45] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 09:03:45] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 09:03:45] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 09:03:45] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 09:03:45] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 0 DIA SORTEO: 
-[03-Mar-2020 09:52:59] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 09:52:59] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 09:52:59] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 09:52:59] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 09:52:59] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 09:52:59] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 0 DIA SORTEO: 
-[03-Mar-2020 09:54:30] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 09:54:30] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 09:54:30] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 09:54:30] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 09:54:30] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 09:54:30] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 0 DIA SORTEO: 
-[03-Mar-2020 09:56:13] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 09:56:13] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 09:56:13] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 09:56:13] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 09:56:13] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 09:56:13] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 0 DIA SORTEO: 
-[03-Mar-2020 09:56:21] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 09:56:21] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 09:56:21] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 09:56:21] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 09:56:21] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 09:56:21] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 0 DIA SORTEO: 
-[03-Mar-2020 10:05:48] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 10:05:48] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 10:05:48] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 10:05:48] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 10:05:48] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 10:05:48] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 0 DIA SORTEO: 
-[03-Mar-2020 10:06:21] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 10:06:21] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 10:06:21] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 10:06:21] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 10:06:21] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 10:06:21] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 0 DIA SORTEO: 
-[03-Mar-2020 10:07:11] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 10:07:11] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 10:07:11] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 10:07:11] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 10:07:11] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 10:07:11] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 1 DIA SORTEO: 
-[03-Mar-2020 10:10:40] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 10:10:40] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 10:10:40] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 10:10:40] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 10:10:40] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 10:10:40] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 1 DIA SORTEO: 
-[03-Mar-2020 10:11:33] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 10:11:33] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 10:11:33] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 10:11:33] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 10:11:33] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 10:11:33] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 1 DIA SORTEO: 
-[03-Mar-2020 10:11:48] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 10:11:48] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 10:11:48] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 10:11:48] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 10:11:48] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 10:11:48] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 1 DIA SORTEO: 
-[03-Mar-2020 10:12:20] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 10:12:20] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 10:12:20] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 10:12:20] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 10:12:20] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 10:12:20] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 1 DIA SORTEO: 
-[03-Mar-2020 10:13:19] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 10:13:19] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 10:13:19] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 10:13:19] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 10:13:19] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 10:13:19] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 0 DIA SORTEO: 
-[03-Mar-2020 10:13:36] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 10:13:36] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 10:13:36] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 10:13:36] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 10:13:36] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 10:13:36] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 1 DIA SORTEO: 
-[03-Mar-2020 10:29:19] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 10:29:19] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 10:29:19] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 10:29:19] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 10:29:19] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 10:29:19] : [WARNING] - OBTENIENDO SOLICITUDES, SORTEO: FASE SORTEO: 1 DIA SORTEO: 
-[03-Mar-2020 11:17:47] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 11:17:47] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 11:17:47] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 11:17:47] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 11:17:47] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 11:17:47] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 
-[03-Mar-2020 11:22:40] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 11:22:40] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 11:22:40] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 11:22:40] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 11:22:40] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 11:22:40] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 0
-[03-Mar-2020 11:29:02] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 11:29:02] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 11:29:02] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 11:29:02] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 11:29:02] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 11:29:02] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 0
-[03-Mar-2020 11:31:37] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 11:31:37] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 11:31:37] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 11:31:37] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 11:31:37] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 11:31:37] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 0
-[03-Mar-2020 11:35:38] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 11:35:38] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 11:35:38] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 11:35:38] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 11:35:38] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 11:35:38] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 0
-[03-Mar-2020 11:41:05] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 11:41:05] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 11:41:05] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 11:41:05] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 11:41:05] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 11:41:05] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 0
-[03-Mar-2020 11:41:15] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 11:41:15] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 11:41:15] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 11:41:15] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 11:41:15] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 11:41:15] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 0
-[03-Mar-2020 11:41:25] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 11:41:25] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 11:41:25] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 11:41:25] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 11:41:25] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 11:41:25] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 0
-[03-Mar-2020 11:41:35] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 11:41:35] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 11:41:35] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 11:41:35] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 11:41:35] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 11:41:35] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 0
-[03-Mar-2020 11:41:45] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 11:41:45] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 11:41:45] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 11:41:45] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 11:41:45] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 11:41:45] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 0
-[03-Mar-2020 11:41:53] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 11:41:53] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 11:41:53] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 11:41:53] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 11:41:53] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 11:41:53] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 0
-[03-Mar-2020 12:00:58] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:00:58] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:00:58] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:00:58] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:00:58] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:00:58] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:02:09] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:02:09] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:02:09] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:02:09] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:02:09] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:02:09] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:02:18] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:02:18] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:02:18] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:02:18] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:02:18] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:02:18] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:02:25] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:02:25] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:02:25] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:02:25] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:02:25] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:02:25] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:02:33] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:02:33] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:02:33] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:02:33] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:02:33] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:02:33] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:02:39] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:02:39] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:02:39] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:02:39] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:02:39] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:02:39] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:02:46] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:02:46] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:02:46] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:02:46] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:02:46] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:02:46] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:02:52] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:02:52] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:02:52] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:02:52] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:02:52] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:02:52] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:03:05] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:03:05] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:03:05] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:03:05] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:03:05] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:03:05] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:03:11] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:03:11] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:03:11] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:03:11] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:03:11] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:03:11] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:03:23] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:03:23] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:03:23] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:03:23] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:03:23] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:03:23] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:03:38] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:03:38] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:03:38] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:03:38] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:03:38] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:03:38] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:03:53] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:03:53] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:03:53] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:03:53] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:03:53] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:03:53] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:04:14] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:04:14] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:04:14] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:04:14] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:04:14] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:04:14] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:05:06] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:05:06] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:05:06] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:05:06] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:05:06] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:05:06] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:06:00] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:06:00] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:06:00] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:06:00] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:06:00] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:06:00] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:07:24] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:07:24] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:07:24] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:07:24] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:07:24] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:07:24] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:20:02] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:20:02] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:20:02] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:20:02] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:20:02] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:20:02] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:21:05] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:21:05] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:21:05] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:21:05] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:21:05] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:21:05] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:22:19] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:22:19] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:22:19] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:22:19] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:22:19] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:22:19] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:25:20] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:25:20] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:25:20] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:25:20] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:25:20] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:25:20] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:25:21] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:25:21] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 12:25:21] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 12:25:21] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:25:21] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:25:21] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 12:25:58] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:25:58] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 12:25:58] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 12:25:58] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:25:58] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:25:58] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 12:26:56] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:26:56] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:26:56] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:26:56] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:26:56] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:26:56] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:27:48] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:27:48] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:27:48] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:27:48] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:27:48] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:27:48] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:29:28] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:29:28] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:29:28] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:29:28] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:29:28] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:29:28] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:29:31] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:29:31] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 12:29:31] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 12:29:31] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:29:31] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:29:31] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 12:30:48] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:30:48] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:30:48] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:30:48] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:30:48] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:30:48] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:30:52] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:30:52] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 12:30:52] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 12:30:52] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:30:52] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:30:52] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 12:31:34] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:31:34] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 12:31:34] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 12:31:34] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:31:34] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:31:34] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 12:32:36] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:32:36] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 12:32:36] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 12:32:36] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:32:36] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:32:36] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 12:34:49] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:34:49] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 12:34:49] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 12:34:49] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:34:49] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:34:49] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 12:35:26] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:35:26] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 12:35:26] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 12:35:26] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:35:26] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:35:26] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 12:35:41] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:35:41] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:35:41] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:35:41] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:35:41] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:35:41] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 12:35:44] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:35:44] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 12:35:44] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 12:35:44] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:35:44] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:35:44] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 12:35:50] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:35:50] : [WARNING] - ACTUALIZANDO DATOS ALUMNOS SORTEO vacantes: 12
-[03-Mar-2020 12:35:50] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 12:35:50] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:35:50] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:35:50] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 12:35:54] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:35:54] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 12:35:54] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:35:54] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:35:54] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 12:36:00] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 12:36:00] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 12:36:00] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 12:36:00] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 12:36:00] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 12:36:00] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 13:11:18] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:11:18] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[03-Mar-2020 13:11:18] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[03-Mar-2020 13:11:18] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:11:18] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:11:18] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[03-Mar-2020 13:11:23] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:11:23] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 13:11:23] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 13:11:23] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:11:23] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:11:23] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 13:11:25] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:11:25] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 13:11:25] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 13:11:25] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:11:25] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:11:25] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 13:11:30] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:11:30] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 13:11:30] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 13:11:30] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:11:30] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:11:30] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 13:11:34] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:11:34] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:12:57] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:12:57] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 13:12:57] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 13:12:57] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:12:57] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:12:57] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 13:13:08] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:13:08] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:13:50] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:13:50] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 13:13:50] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 13:13:50] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:13:50] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:13:50] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 13:13:52] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:13:52] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:16:07] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:16:07] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:17:07] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:17:07] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 13:17:07] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 13:17:07] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:17:07] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:17:07] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 13:17:41] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:17:41] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[03-Mar-2020 13:17:41] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[03-Mar-2020 13:17:41] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:17:41] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:17:41] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[03-Mar-2020 13:17:50] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:17:50] : [WARNING] - ACTUALIZANDO DATOS ALUMNOS SORTEO vacantes: 12
-[03-Mar-2020 13:17:50] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:17:50] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:17:50] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:17:50] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:18:03] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:18:03] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:18:03] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:18:03] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:18:03] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:18:06] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:18:06] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:18:06] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:18:06] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:18:06] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:18:11] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:18:11] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:18:11] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:18:11] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:18:11] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:18:14] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:18:14] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:18:14] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:18:14] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:18:14] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:18:19] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:18:19] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:18:45] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:18:45] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:18:45] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:18:45] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:18:45] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:19:05] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:19:05] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:19:05] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:19:05] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:19:05] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:23:23] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:23:23] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:23:23] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:23:23] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:23:23] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:24:10] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:24:10] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:24:10] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:24:10] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:24:10] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:24:45] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:24:45] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:24:45] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:24:45] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:24:45] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:27:22] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:27:22] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:28:24] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:28:24] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:29:53] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:29:53] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:30:34] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:30:34] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:30:52] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:30:52] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:33:01] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:33:01] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:34:12] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:34:12] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:35:01] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:35:01] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:35:39] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:35:39] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:36:04] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:36:04] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:37:10] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:37:10] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:40:15] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:40:15] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:40:37] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:40:37] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:41:21] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:41:21] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:42:17] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:42:17] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:43:31] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:43:31] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:43:55] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:43:55] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:45:07] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:45:07] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:45:43] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:45:43] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:51:01] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:51:01] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:51:01] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:51:01] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:51:01] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:51:52] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:51:52] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:51:52] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:51:52] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:51:52] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:52:16] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:52:16] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:52:16] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:52:16] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:52:16] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:52:44] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:52:44] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:52:44] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:52:44] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:52:44] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:53:16] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:53:16] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:53:16] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:53:16] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:53:16] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:54:13] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:54:13] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:54:13] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:54:13] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:54:13] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:54:36] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:54:36] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:54:36] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:54:36] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:54:36] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:55:52] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:55:52] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:55:52] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:55:52] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:55:52] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:56:16] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:56:16] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:56:16] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:56:16] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:56:16] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:57:27] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:57:27] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:57:27] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:57:27] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:57:27] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:58:33] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:58:33] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:58:33] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:58:33] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:58:33] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:59:09] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:59:09] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:59:09] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:59:09] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:59:09] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 13:59:39] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 13:59:39] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 13:59:39] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 13:59:39] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 13:59:39] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 14:00:21] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 14:00:21] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 14:00:21] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 14:00:21] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 14:00:21] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 14:01:14] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 14:01:14] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 14:01:14] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 14:01:14] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 14:01:14] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 14:05:03] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 14:05:03] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 14:05:03] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 14:05:03] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 14:05:03] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 14:08:01] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 14:08:01] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 14:08:01] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 14:08:01] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 14:08:01] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 14:23:13] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 14:23:13] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 14:23:13] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 14:23:13] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 14:23:13] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 14:23:24] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 14:23:24] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 14:23:24] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 14:23:24] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 14:23:24] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 14:23:25] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 14:23:25] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 14:23:25] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 14:23:25] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 14:23:25] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[03-Mar-2020 14:23:27] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 14:23:27] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:07:54] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:07:54] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:07:54] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:07:54] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:07:54] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:08:21] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:08:21] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:08:40] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:08:40] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:09:23] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:09:23] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:10:38] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:10:38] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:10:38] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:10:38] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:10:38] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:12:18] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:12:18] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:12:18] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:12:18] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:12:18] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:13:54] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:13:54] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:13:54] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:13:54] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:13:54] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:14:55] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:14:55] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:14:55] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:14:55] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:14:55] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:15:01] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:15:01] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:15:01] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:15:01] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:15:01] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:15:22] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:15:22] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:15:22] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:15:22] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:15:22] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:16:01] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:16:01] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:16:01] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:16:01] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:16:01] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:17:54] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:17:54] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:17:54] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:17:54] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:17:54] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:18:07] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:18:07] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:18:07] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:18:07] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:18:07] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:21:08] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:21:08] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:21:08] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:21:08] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:21:08] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:21:53] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:21:53] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:21:53] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:21:53] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:21:53] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:22:06] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:22:06] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:22:06] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:22:06] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:22:06] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:22:41] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:22:41] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:22:41] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:22:41] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:22:41] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:23:27] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:23:27] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:23:27] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:23:27] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:23:27] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:24:18] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:24:18] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:24:18] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:24:18] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:24:18] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:25:39] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:25:39] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:25:39] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:25:39] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:25:39] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:26:33] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:26:33] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:26:33] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:26:33] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:26:33] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:26:50] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:26:50] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:26:50] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:26:50] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:26:50] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:27:36] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:27:36] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:27:36] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:27:36] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:27:36] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:28:01] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:28:01] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:28:01] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:28:01] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:28:01] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:28:31] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:28:31] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:28:31] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:28:31] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:28:31] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:28:49] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:28:49] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:28:49] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:28:49] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:28:49] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:29:14] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:29:14] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:29:14] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:29:14] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:29:14] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:30:18] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:30:18] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:35:02] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:35:02] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:35:02] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:35:02] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:35:02] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[03-Mar-2020 19:37:15] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[03-Mar-2020 19:37:15] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[03-Mar-2020 19:37:15] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[03-Mar-2020 19:37:15] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[03-Mar-2020 19:37:15] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[04-Mar-2020 08:23:56] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 08:23:56] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 08:23:56] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 08:23:56] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 08:23:56] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[04-Mar-2020 08:24:18] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 08:24:18] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 08:25:12] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 08:25:12] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 08:25:54] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 08:25:54] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 08:25:54] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 08:25:54] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 08:25:54] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[04-Mar-2020 08:26:31] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 08:26:31] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 08:26:37] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 08:26:37] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 08:27:02] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 08:27:02] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 08:27:02] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 08:27:02] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 08:27:02] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[04-Mar-2020 08:58:42] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 08:58:42] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[04-Mar-2020 08:58:42] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[04-Mar-2020 08:58:42] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 08:58:42] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 08:58:42] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 0
-[04-Mar-2020 08:58:45] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 08:58:45] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 09:04:11] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 09:04:11] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 09:04:11] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 09:04:11] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 09:04:11] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[04-Mar-2020 10:08:42] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 10:08:42] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 10:08:42] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 10:08:42] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 10:08:42] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[04-Mar-2020 11:17:53] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 11:17:53] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[04-Mar-2020 11:17:53] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[04-Mar-2020 11:17:53] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 11:17:53] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 11:17:53] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 0
-[04-Mar-2020 11:18:14] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 11:18:14] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[04-Mar-2020 11:18:14] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[04-Mar-2020 11:18:14] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 11:18:14] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 11:18:14] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[04-Mar-2020 12:02:18] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 12:02:18] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[04-Mar-2020 12:02:18] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[04-Mar-2020 12:02:18] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:02:18] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:02:18] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[04-Mar-2020 12:02:29] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 12:02:29] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0
-[04-Mar-2020 12:02:29] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO
-[04-Mar-2020 12:02:29] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:02:29] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:02:29] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 0 DIA SORTEO: 1
-[04-Mar-2020 12:02:35] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 12:02:35] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 1
-[04-Mar-2020 12:02:35] : [WARNING] - OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO
-[04-Mar-2020 12:02:35] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:02:35] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:02:35] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 1 DIA SORTEO: 1
-[04-Mar-2020 12:02:45] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 12:02:45] : [WARNING] - ACTUALIZANDO DATOS ALUMNOS SORTEO vacantes: 12
-[04-Mar-2020 12:02:45] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 12:02:45] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:02:45] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:02:45] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[04-Mar-2020 12:02:48] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 12:02:48] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 12:02:48] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:02:48] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:02:48] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[04-Mar-2020 12:02:51] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:02:51] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:03:08] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 12:03:08] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 12:03:08] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:03:08] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:03:08] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[04-Mar-2020 12:03:10] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 12:03:10] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 12:03:10] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:03:10] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:03:10] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[04-Mar-2020 12:03:11] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:03:11] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:03:14] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:03:14] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:03:26] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 12:03:26] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 12:03:26] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:03:26] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:03:26] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[04-Mar-2020 12:03:39] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 12:03:39] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 12:03:39] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:03:39] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:03:39] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[04-Mar-2020 12:03:41] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 12:03:41] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 12:03:41] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:03:41] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:03:41] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[04-Mar-2020 12:03:44] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:03:44] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:03:48] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:03:48] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:06:35] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 12:06:35] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 12:06:35] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:06:35] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:06:35] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[04-Mar-2020 12:23:30] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 12:23:30] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 12:23:30] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:23:30] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:23:30] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[04-Mar-2020 12:23:34] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[04-Mar-2020 12:23:34] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[04-Mar-2020 12:23:34] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:23:34] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[04-Mar-2020 12:23:34] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 1
-[04-Mar-2020 12:23:43] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[04-Mar-2020 12:23:43] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[05-Mar-2020 17:24:53] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[05-Mar-2020 17:24:53] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[05-Mar-2020 17:24:53] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[05-Mar-2020 17:24:53] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[05-Mar-2020 17:24:53] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[05-Mar-2020 17:25:00] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[05-Mar-2020 17:25:00] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[05-Mar-2020 17:25:23] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
-[05-Mar-2020 17:25:23] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
-[05-Mar-2020 17:25:23] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[05-Mar-2020 17:25:23] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
-[05-Mar-2020 17:25:23] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
-[05-Mar-2020 17:25:26] : [WARNING] - CONSULTA SOLICITUDES SORTEO
-[05-Mar-2020 17:25:26] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 09:40:01] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 09:40:01] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 10:15:27] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 10:15:27] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 10:15:27] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 10:15:27] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 10:15:27] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 10:21:09] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 10:21:09] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 10:21:09] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 10:21:09] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 10:21:09] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:31:27] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:31:27] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:31:27] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:31:27] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:31:27] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:32:20] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:32:20] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:32:20] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:32:20] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:32:20] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:33:39] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:33:39] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:33:39] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:33:39] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:33:39] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:34:23] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:34:23] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:34:23] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:34:23] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:34:23] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:37:55] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:37:55] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:37:55] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:37:55] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:37:55] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:38:46] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:38:46] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:38:46] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:38:46] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:38:46] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:38:48] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:38:48] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:38:48] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:38:48] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:38:48] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:40:07] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:40:07] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:40:07] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:40:07] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:40:07] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:41:00] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:41:00] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:41:00] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:41:00] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:41:00] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:42:16] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:42:16] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:42:16] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:42:16] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:42:16] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:44:52] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:44:52] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:44:52] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:44:52] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:44:52] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:47:14] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:47:14] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:47:14] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:47:14] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:47:14] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:49:25] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:49:25] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:49:25] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:49:25] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:49:25] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:50:18] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:50:18] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:50:18] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:50:18] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:50:18] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:53:18] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:53:18] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:53:18] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:53:18] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:53:18] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Mar-2020 11:53:59] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Mar-2020 11:53:59] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2
+[27-Mar-2020 11:53:59] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Mar-2020 11:53:59] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Mar-2020 11:53:59] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: admin
+[30-Mar-2020 09:56:14] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT distinct(id_centro) from centros_grupos
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22002338
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - PÍO XII
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => PÍO XII
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22002511
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - PIRÁMIDE
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => PIRÁMIDE
+            [borrador] => 2
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22003835
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - MONTECORONA
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MONTECORONA
+            [borrador] => 8
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22004891
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - BIELLO ARAGÓN
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => BIELLO ARAGÓN
+            [borrador] => 3
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22005157
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - LA ALEGRÍA
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LA ALEGRÍA
+            [borrador] => 1
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22010001
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - SAN JORGE
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN JORGE
+            [borrador] => 1
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44003259
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - ARBOLEDA
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ARBOLEDA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44004148
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - GLORIA FUERTES
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => GLORIA FUERTES
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50000850
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - CAMPO DE BORJA
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => CAMPO DE BORJA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50004612
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - MONCAYO
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MONCAYO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50006049
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - JULIÁN SANZ IBÁÑEZ
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => JULIÁN SANZ IBÁÑEZ
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50006128
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - SAN BRAULIO
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN BRAULIO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50007376
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - LA PURÍSIMA PARA NIÑOS SORDOS
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LA PURÍSIMA PARA NIÑOS SORDOS
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50007674
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50008630
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - CEDES
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => CEDES
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50008678
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - RECTOR MAMÉS ESPERABÉ
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => RECTOR MAMÉS ESPERABÉ
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50008915
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - SAN GERMÁN
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN GERMÁN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50009488
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - LOS PUEYOS
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LOS PUEYOS
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50009646
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - MARÍA SORIANO
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MARÍA SORIANO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50010387
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - ALBORADA
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ALBORADA
+            [borrador] => 1
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50011537
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - RINCÓN DE GOYA
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => RINCÓN DE GOYA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50017369
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - ANGEL RIVIÈRE
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ANGEL RIVIÈRE
+            [borrador] => 5
+            [validada] => 8
+            [baremada] => 9
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50018131
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - JEAN PIAGET
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => JEAN PIAGET
+            [borrador] => 18
+            [validada] => 0
+            [baremada] => 17
+        )
+
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[30-Mar-2020 09:56:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50019408
+)
+
+[30-Mar-2020 09:56:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[30-Mar-2020 09:56:14] : [WARNING] - SEGEDA
+[30-Mar-2020 09:56:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SEGEDA
+            [borrador] => 18
+            [validada] => 0
+            [baremada] => 17
+        )
+
+)
+
+[30-Mar-2020 10:05:52] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[30-Mar-2020 10:05:52] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,a.id_centro_destino as id_centro,c.nombre_centro as nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' order by c.id_centro,a.tipoestudios, a.apellido1,a.nombre,c.id_centro, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc

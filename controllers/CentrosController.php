@@ -4,17 +4,17 @@ class CentrosController extends ControladorBase{
     public $adapter;
 	
     public function __construct($conectar=1) 
-		{
+	{
     	parent::__construct();
-		  if($conectar==1)
-			{
-			$this->conectar=new Conectar();
-      $this->adapter=$this->conectar->conexion();
-			}
-			require_once DIR_CLASES.'LOGGER.php';
-			require_once DIR_APP.'parametros.php';
-    			require_once DIR_BASE.'/controllers/ListadosController.php';
-			$this->log_listadoscentros=new logWriter('log_listadoscentros',DIR_LOGS);
+	if($conectar==1)
+	{
+	$this->conectar=new Conectar();
+      	$this->adapter=$this->conectar->conexion();
+	}
+	require_once DIR_CLASES.'LOGGER.php';
+	require_once DIR_APP.'parametros.php';
+	require_once DIR_BASE.'/controllers/ListadosController.php';
+	$this->log_listadoscentros=new logWriter('log_listadoscentros',DIR_LOGS);
     }
     
     public function index(){
@@ -40,16 +40,17 @@ class CentrosController extends ControladorBase{
 			return $tline;
 		}
 
-		public function getAllCentros($provincia='todas')
-		{
-			if($provincia=='todas')	$sql="SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)";
-			else	$sql="SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia='$provincia'";
-			$this->log_listadoscentros->warning("CONSULTA CENTROS");
-			$this->log_listadoscentros->warning($sql);
-			$query=$this->adapter->query($sql);
-			if($query) return $query;
-			else return 0;
-		}
+	public function getAllCentros($provincia='todas')
+	{
+		if($provincia=='todas')	$sql="SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)";
+		else	$sql="SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia='$provincia'";
+		$this->log_listadoscentros->warning("CONSULTA CENTROS");
+		$this->log_listadoscentros->warning($sql);
+		$query=$this->adapter->query($sql);
+		
+		if($query) return $query;
+		else return 0;
+	}
 
 		public function getCentrosData($datos='matricula')
 		{

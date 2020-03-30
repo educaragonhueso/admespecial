@@ -98,9 +98,9 @@ else
 	//si se ha pulsado en el boton de asignar numero de sorteo
 	if(isset($_POST['asignar'])) 
 	{
-				########################################################################################
-				$log_listado_solicitudes->warning("NUMERO DE SORTEO ASIGNADO");
-				########################################################################################
+		########################################################################################
+		$log_listado_solicitudes->warning("NUMERO DE SORTEO ASIGNADO");
+		########################################################################################
 		if($list->asignarNumSol($id_centro)!=1){ print("Error asignando numero para el sorteo");exit();}
 		//actualizamos el centro para marcar la fase del sorteo
 		$tcentro->setFaseSorteo(1);
@@ -128,11 +128,11 @@ else
 		########################################################################################
 		$log_listado_solicitudes->warning("COPIANDO TABLA IDCENTRO: ".$id_centro);
 		########################################################################################
-			$tcentro->setFaseSorteo(2);
-			$tcentro->actualizaVacantes($vacantes_ebo,$vacantes_tva);
-			$ct=$tsolicitud->copiaTabla('provisional',$id_centro);	
-			$log_listado_solicitudes->warning("RESULTADO COPIAR TABLA $ct ");
-			$fase_sorteo=2;
+		$tcentro->setFaseSorteo(2);
+		$tcentro->actualizaVacantes($vacantes_ebo,$vacantes_tva);
+		$ct=$tsolicitud->copiaTabla('provisional',$id_centro);	
+		$log_listado_solicitudes->warning("RESULTADO COPIAR TABLA $ct ");
+		$fase_sorteo=2;
 		//Si hemos llegado al dia de las provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
 		}	
 		########################################################################################

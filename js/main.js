@@ -1149,25 +1149,6 @@ $.ajax({
       }
 });
 });
-//LISTADO SOLICITUDES FASEII
-$(".lfase2").click(function () {  
-  var vpdf='1';
-  var vrol=$('#rol').attr("value");
-  var vsubtipo=$(this).attr("data-subtipo");
-  var vestado_convocatoria=$('#estado_convocatoria').val();
-$.ajax({
-  method: "POST",
-  url: "../scripts/ajax/listados_solicitudes_fase2.php",
-  data: {rol:vrol,subtipo:vsubtipo,pdf:vpdf,estado_convocatoria:vestado_convocatoria},
-      success: function(data) {
-				$("#l_matricula").html(data);
-				$(".container").hide();
-      },
-      error: function() {
-        alert('Error LISTANDO solicitudes: '+vsubtipo);
-      }
-});
-});
 //LISTADO SOLICITUDES PROVISIONALES ACTUALIZADO
 $(".lprovisionales").click(function () {  
   var vpdf='1';

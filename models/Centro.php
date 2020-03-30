@@ -7,7 +7,6 @@ class Centro extends EntidadBase{
     private $nombre_centro;
     
     public function __construct($adapter,$id_centro='',$ajax='no',$estadocentro=0) 
-    //public function __construct($adapter,$id_centro='',$ajax='no') 
 		{
 			$table="centros";
 			$this->id_centro=$id_centro;
@@ -20,11 +19,24 @@ class Centro extends EntidadBase{
 			$this->log_sorteo=new logWriter('log_sorteo',DIR_LOGS);
 			$this->log_matricula=new logWriter('log_matricula',DIR_LOGS);
     		}
+   //devolvemos los datos de centros y vancantes definitivas para asignar plazas fase2
+    public function getCentrosFase2($c=1)
+		{
+			$sql="SELECT * FROM centros where clase_centro='especial'";
+			$sol_fase2=array();
+			$query=$this->conexion->query($sql);
+			if(!$query) return $sol_fase2;
+			while($row = $query->fetch_assoc())
+				$sol_fase2[]=$row;
+			return $sol_fase2;
+		}
    //devolvemos las vacantes en cada tpo de estudios 
     public function getNumSolicitudes($c=1)
 		{
-			$sql="SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=$c";
-
+			if($c==1)
+				$sql="SELECT count(*) as nsolicitudes FROM alumnos_fase2";
+			else
+				$sql="SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=$c";
 			$this->log_sorteo->warning("OBTENIENDO NUMERO DE SOLICITUDES");
 			$this->log_sorteo->warning($sql);
 

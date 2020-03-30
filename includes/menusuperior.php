@@ -3,6 +3,7 @@
 		 <p hidden id='id_centro'><?php echo $_SESSION['id_centro'];?></p> 
 		 <p hidden id='estado_convocatoria'><?php echo $_SESSION['estado_convocatoria'];?></p> 
 		 <p hidden id='id_sorteo'><?php echo $_SESSION['sorteo'];?></p> 
+		 <p hidden id='sorteo_fase2'><?php echo $_SESSION['sorteo_fase2'];?></p> 
 <!--elementos a la izda-->
 <nav id='navgir' class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
@@ -85,8 +86,6 @@
     </div>
 </nav>
 <?php 
-//if($_SESSION['id_centro']==1) 
-//echo '<input class="form-control" id="fcentrosadmin" placeholder="Introduce datos del centro" type="text">';
 if($_SESSION['id_centro']<=1) 
 echo '<input class="form-control" id="fcentrosadminzgz" placeholder="Introduce datos del centro" type="text">';
 ?>

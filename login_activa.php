@@ -11,6 +11,7 @@ $_SESSION['provincia']='todas';
 $_SESSION['fin_inscripcion_centros']=0;
 $_SESSION['inicio_prorroga']=0;
 $_SESSION['version']=VERSION;
+$_SESSION['sorteo_fase2'] =0;      
 
 $_SESSION['fin_sol_alumno']=-1;
 
@@ -126,8 +127,10 @@ header('Content-Type: text/html; charset=UTF-8');
 					{	
 						$_SESSION['provincia']=substr($_SESSION['rol'],2);
 						$_SESSION['rol']='sp';
+						$_SESSION['sorteo_fase2']=1;
 					}
-					//print_r($_SESSION);
+					if($_SESSION['rol']=='admin') 
+						$_SESSION['sorteo_fase2']=1;
 					header("location: index.php");
 					}
 			   } 
@@ -195,7 +198,7 @@ input[type=text], input[type=password] {
 
     <body>
         <div class="wrapper">
-            <h2>ADMISIÓN CENTROS EDUACIÓN ESPECIAL CURSO 2020/2021</h2>
+            <h2>ADMISIÓN CENTROS EDUCACIÓN ESPECIAL CURSO 2020/2021</h2>
 	<button type="button" class="btn btn-primary" id="csolicitud">Crear solicitud</button>
 
 	<?php if(IPREMOTA==$_SERVER['HTTP_X_FORWARDED_FOR'] || DIA_INICIO<=$hoy) { ?>

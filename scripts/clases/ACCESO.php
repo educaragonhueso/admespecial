@@ -22,7 +22,7 @@ class ACCESO
 	{
 		//generar usuarios
 		$clave=rand(1000,9999);
-		$nid=50019900;//ultimo usuario
+		$nid=60019900;//ultimo usuario
 		$nidal=1;//ultimo alumno
 		$nsol=0;
 		$ndni=35123000;

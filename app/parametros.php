@@ -59,7 +59,7 @@ $campos_bbdd_noadmitidos_def=array('nordensorteo','nasignado','apellido1','apell
 $campos_cabecera_excluidos_def=array('NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
 $campos_bbdd_excluidos_def=array('nasignado','apellido1','apellido2','nombre','puntos_validados');
 //DATOS PARA LISTADOS SOLICITUDES FASE II
-$campos_cabecera_lfase2_sol=array('Primer Apellido','Segundo apellido','Nombre','Calle','Centro preferente','Centro alt1');
-$campos_bbdd_lfase2_sol=array('apellido1','apellido2','nombre','calle_dfamiliar','nombre_centro','centro1');
+$campos_cabecera_lfase2_sol=array('Primer Apellido','Segundo apellido','Nombre','Calle','Centro preferente','Centro alt1','Definitivo');
+$campos_bbdd_lfase2_sol=array('apellido1','apellido2','nombre','calle_dfamiliar','nombre_centro','centro1','centro_definitivo');
 
 ?>

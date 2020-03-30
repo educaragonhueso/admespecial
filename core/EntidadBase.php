@@ -6,11 +6,10 @@ class EntidadBase{
 
     public function __construct($adapter,$table) {
         $this->table=(string) $table;
-		$this->conectar = null;
-		$this->db = $adapter;
-		require_once DIR_CLASES.'LOGGER.php';
-		require_once DIR_APP.'parametros.php';
-		$this->log_nueva_entidad=new logWriter('log_nueva_entidad',DIR_LOGS);
+	$this->conectar = null;
+	$this->db = $adapter;
+	require_once DIR_CLASES.'LOGGER.php';
+	require_once DIR_APP.'parametros.php';
     }
     
     public function getConetar(){
@@ -34,7 +33,6 @@ class EntidadBase{
 	{ 
 		$sql="SELECT * FROM $this->table where $centro=".$c;
 		$query=$this->db->query($sql);
-		$this->log_nueva_entidad->warning($sql);
 	}
         if($query)
 	while ($row = $query->fetch_object()) {

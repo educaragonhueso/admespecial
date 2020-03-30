@@ -22,6 +22,7 @@ class ListadosController extends ControladorBase{
 				$this->log_listados_definitivos=new logWriter('log_listados_definitivos',DIR_LOGS);
 				$this->log_listados_solicitudes=new logWriter('log_listado_solicitudes',DIR_LOGS);
 				$this->log_gencsvs=new logWriter('log_gencsvs',DIR_LOGS);
+				$this->log_listados_solicitudes_fase2=new logWriter('log_listados_solicitudes_fase2',DIR_LOGS);
     }
     
     public function getConexion()
@@ -114,6 +115,11 @@ class ListadosController extends ControladorBase{
 		{
 			$this->log_listados_definitivos->warning('OBTENIENDO DEFINITIVOS');
 		    	$allsolicitudes=$solicitud->getAllSolListados($id_centro,2,$subtipo_listado,$fase_sorteo,$estado_convocatoria);
+		}
+		elseif($modo=='fase2')
+		{
+			$this->log_listados_solicitudes_fase2->warning("Funcion: getSolicitudes FASE II:");
+		    	$allsolicitudes=$solicitud->getAllSolListados($id_centro,3,$subtipo_listado,$fase_sorteo,$estado_convocatoria);
 		}
 	return $allsolicitudes;
 	}
@@ -259,7 +265,15 @@ class ListadosController extends ControladorBase{
 			if($i==0)
     		$li.="<td class='".$class." dalumno ".$d."' data-idal='".$sol->id_alumno."'>".strtoupper($sol->$d)."</td>";
 			else
-				$li.="<td id='".$d.$sol->id_alumno."' class='".$d."'>".$sol->$d."</td>";
+				if($d=='centro_definitivo')
+				{
+                            	$select='<input type="text" class="cdefinitivo" value="'.$sol->$d.'" placeholder="Elige centro" class="form-control"  data-toggle="tooltip">';
+				$select.='<input type="hidden" id="corigen'.$sol->id_alumno.'"  value="'.$sol->$d.'"> ';
+				$li.="<td id='".$d.$sol->id_alumno."'>".$select."</td>";
+					
+				}
+				else
+					$li.="<td id='".$d.$sol->id_alumno."' class='".$d."'>".$sol->$d."</td>";
 			$i++;
 			}
 		$li.="</tr>";
