@@ -267,8 +267,9 @@ class ListadosController extends ControladorBase{
 			else
 				if($d=='centro_definitivo')
 				{
-                            	$select='<input type="text" class="cdefinitivo" id="cdefinitivo'.$sol->id_alumno.'" value="'.$sol->$d.'" placeholder="Elige centro" class="form-control"  data-toggle="tooltip">';
-				$select.='<button data-tipo="'.$sol->tipoestudios.'"  id="'.$sol->id_alumno.'"  class="cdefinitivo" value="Cambiar">Cambiar</button> ';
+                            	$select='<input type="text" class="inputcdefinitivo" id="cdefinitivo'.$sol->id_alumno.'" value="'.$sol->$d.'" placeholder="Elige centro" class="form-control"  data-toggle="tooltip">';
+				
+				$select.='<button data-tipo="'.$sol->tipoestudios.'" data-idcentro="'.$sol->$d.'"  id="'.$sol->id_alumno.'"  class="cdefinitivo" value="Cambiar">Cambiar</button> ';
 				$li.="<td id='".$d.$sol->id_alumno."'>".$select."</td>";
 					
 				}

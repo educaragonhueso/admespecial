@@ -113,16 +113,15 @@ $(".cdefinitivo").easyAutocomplete(cen_options);
 //FORMULARIO PARA MODIFICAR MANUALMENTE CENTRO DEFINITIVO ALLUMNOS FASE2
 $('body').on('click', '.cdefinitivo', function(e){
   var vid=$(this).attr("id");
-  var vcdefinitivo=$("#cdefinitivo"+vid).val();
+  var vcdestino=$("#cdefinitivo"+vid).val();
   var vtipoestudios=$(this).attr("data-tipo");
-	console.log("definitivo");
+  var vcorigen=$(this).attr("data-idcentro");
 $.ajax({
   method: "POST",
-  data: {id_alumno:vid,cdefinitivo:vcdefinitivo,tipoestudios:vtipoestudios},
+  data: {id_alumno:vid,centrodestino:vcdestino,tipoestudios:vtipoestudios,centroorigen:vcorigen},
   url:'../scripts/ajax/cambio_estado_fase2.php',
    	success: function(data) 
 	{
-	console.log("ok");
 	console.log(data);
 	if(data.indexOf("OK")!=-1)
 		$.alert({
@@ -131,7 +130,7 @@ $.ajax({
 			});
       	},
       	error: function() {
-        alert('PROBLEMAS EDITANDO SOLICITUD!');
+        alert('PROBLEMAS CAMBIANDO CENTRO!');
       	}
 });
 

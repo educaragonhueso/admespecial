@@ -24,6 +24,6 @@ var cen_options =
 			}
 		}
 	};
-$('.cdefinitivo').easyAutocomplete(cen_options);
+$('.inputcdefinitivo').easyAutocomplete(cen_options);
 </script>";
 ?>

@@ -1137,7 +1137,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
     }
 		else return 0;
     }
-		public function getId() {
+    public function getId() {
         return $this->id_alumno;
     }
  
@@ -1146,15 +1146,15 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
     }
      
     public function getNombre($idc) {
-			$query="select nombre_centro from centros  where id_centro='".$idc."'";
-			$soldata=$this->db()->query($query);
-			if($soldata->num_rows==0) return 0;
-			if($row = $soldata->fetch_object()) 
-			{
-			 $solSet=$row;
-			return $solSet->nombre_centro;
-			}
-			else return 0;
+	$query="select nombre_centro from centros  where id_centro='".$idc."'";
+	$soldata=$this->db()->query($query);
+	if($soldata->num_rows==0) return 0;
+	if($row = $soldata->fetch_object()) 
+	{
+	 $solSet=$row;
+	return $solSet->nombre_centro;
+	}
+	else return 0;
     }
  
     public function setNombre($nombre) {

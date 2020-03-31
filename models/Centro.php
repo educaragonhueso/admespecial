@@ -18,7 +18,21 @@ class Centro extends EntidadBase{
 			
 			$this->log_sorteo=new logWriter('log_sorteo',DIR_LOGS);
 			$this->log_matricula=new logWriter('log_matricula',DIR_LOGS);
+			$this->log_fase2=new logWriter('log_fase2',DIR_LOGS);
     		}
+    public function getIdNombre($n) {
+	$query="select id_centro from centros where nombre_centro='".$n."' limit 1";
+	$this->log_fase2->warning("CONSULTA IDCENTRO $query");
+	
+	$soldata=$this->conexion->query($query);
+	if($soldata->num_rows==0) return 0;
+	if($row = $soldata->fetch_object()) 
+	{
+	 $solSet=$row;
+	return $solSet->id_centro;
+	}
+	else return 0;
+    }
    //devolvemos los datos de centros y vancantes definitivas para asignar plazas fase2
     public function getCentrosFase2($c=1)
 		{
@@ -255,24 +269,29 @@ class Centro extends EntidadBase{
     }
 
     public function setNombre() {
-				//si el centros es -1,-2 o -3 es un servicio provincial asi iq no tiene nombre
-				if($this->id_centro<0) $this->nombre_centro='sp';
-				else
-				{
-				$nombre_centro = $this->conexion->query("SELECT nombre_centro FROM centros WHERE id_centro =".$this->id_centro)->fetch_object()->nombre_centro; 
-      		$this->nombre_centro = $nombre_centro;
-				}
+	//si el centros es -1,-2 o -3 es un servicio provincial asi iq no tiene nombre
+	if($this->id_centro<0) $this->nombre_centro='sp';
+	else
+	{
+	$nombre_centro = $this->conexion->query("SELECT nombre_centro FROM centros WHERE id_centro =".$this->id_centro)->fetch_object()->nombre_centro; 
+	$this->nombre_centro = $nombre_centro;
+	}
     }
 
     public function getPassword() {
         return $this->password;
     }
 
-    public function actualizaVacantes($vebo,$vtva) {
-			$sql="update centros_grupos set vacantes_ebo=$vebo, vacantes_tva=$vtva where id_centro='$this->id_centro'";
+    public function actualizaVacantes($vebo,$vtva,$tipo=0,$inc) {
+			if($tipo==0)
+			$sql="update centros set vacantes_ebo=$vebo, vacantes_tva=$vtva where id_centro='$this->id_centro'";
+			elseif($tipo==1)
+			$sql="update centros set vacantes_ebo=vacantes_ebo".$inc."1 where id_centro='$this->id_centro'";
+			elseif($tipo==2)
+			$sql="update centros set vacantes_tva=vacantes_tva".$inc."1 where id_centro='$this->id_centro'";
 
-			$this->log_sorteo->warning("CONSULTA ACTUALIZANDO VACANTES: idcentro/ebo/tva: ".$this->id_centro."/".$vebo."/".$vtva);
-			$this->log_sorteo->warning($sql);
+			$this->log_fase2->warning("CONSULTA ACTUALIZANDO VACANTES: idcentro/ebo/tva: ".$this->id_centro."/".$vebo."/".$vtva);
+			$this->log_fase2->warning($sql);
 
 			$query=$this->conexion->query($sql);
 			if($query)
