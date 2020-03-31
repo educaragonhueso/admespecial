@@ -43,6 +43,7 @@ $('body').on('click', '#boton_realizar_sorteo', function(e){
 
 var vid=$(this).attr("id");
 var vrol=$('#rol').attr("value");
+var vestadoconvocatoria=$('#estado_convocatoria').text();
 var vidcentro=$('#id_centro').text();
 var vsolicitudes=$(this).attr("data-solicitudes");
 var vnum_sorteo=$('#num_sorteo').val();
@@ -58,7 +59,7 @@ return;
 }
 	$.ajax({
 	  method: "POST",
-	  data: {id_centro:vidcentro,nsorteo:parseInt(vnum_sorteo),rol:vrol},
+	  data: {id_centro:vidcentro,nsorteo:parseInt(vnum_sorteo),rol:vrol,estado_convocatoria:vestadoconvocatoria},
 	  url:'../scripts/ajax/listados_solicitudes.php',
 	      success: function(data) {
 				if(data.indexOf('NO HAY VACANTES')!=-1)

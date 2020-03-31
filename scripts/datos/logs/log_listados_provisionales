@@ -652,3 +652,288 @@
 [31-Mar-2020 08:56:02] : [WARNING] - CONSULTA SOLICITUDES TABLA:alumnos_fase2
 [31-Mar-2020 08:58:30] : [WARNING] - CONSULTA SOLICITUDES TABLA:alumnos_fase2
 [31-Mar-2020 09:00:07] : [WARNING] - CONSULTA SOLICITUDES TABLA:alumnos_fase2
+[31-Mar-2020 11:59:36] : [WARNING] - OBTENIENDO DATOS PROVISIONALES POST:
+[31-Mar-2020 11:59:36] : [WARNING] - Array
+(
+    [id_centro] => 50017369
+    [rol] => centro
+    [subtipo] => admitidos_prov
+    [pdf] => 1
+    [estado_convocatoria] => 1
+)
+
+[31-Mar-2020 11:59:36] : [WARNING] - ACTUALIZANDO DATOS:  NSOLICITUDES/IDCENTRO 10/50017369
+[31-Mar-2020 12:10:59] : [WARNING] - OBTENIENDO DATOS PROVISIONALES POST:
+[31-Mar-2020 12:10:59] : [WARNING] - Array
+(
+    [id_centro] => 50017369
+    [rol] => centro
+    [subtipo] => admitidos_prov
+    [pdf] => 1
+    [estado_convocatoria] => 1
+)
+
+[31-Mar-2020 12:10:59] : [WARNING] - ACTUALIZANDO DATOS:  NSOLICITUDES/IDCENTRO 10/50017369
+[31-Mar-2020 12:11:07] : [WARNING] - OBTENIENDO DATOS PROVISIONALES POST:
+[31-Mar-2020 12:11:07] : [WARNING] - Array
+(
+    [id_centro] => 50017369
+    [rol] => centro
+    [subtipo] => admitidos_prov
+    [pdf] => 1
+    [estado_convocatoria] => 1
+)
+
+[31-Mar-2020 12:11:07] : [WARNING] - ACTUALIZANDO DATOS:  NSOLICITUDES/IDCENTRO 10/50017369
+[31-Mar-2020 12:19:14] : [WARNING] - OBTENIENDO DATOS PROVISIONALES POST:
+[31-Mar-2020 12:19:14] : [WARNING] - Array
+(
+    [id_centro] => 50017369
+    [rol] => centro
+    [subtipo] => admitidos_prov
+    [pdf] => 1
+    [estado_convocatoria] => 1
+)
+
+[31-Mar-2020 12:19:14] : [WARNING] - ACTUALIZANDO DATOS:  NSOLICITUDES/IDCENTRO 10/50017369
+[31-Mar-2020 12:24:20] : [WARNING] - OBTENIENDO DATOS PROVISIONALES POST:
+[31-Mar-2020 12:24:20] : [WARNING] - Array
+(
+    [id_centro] => 50017369
+    [rol] => centro
+    [subtipo] => admitidos_prov
+    [pdf] => 1
+    [estado_convocatoria] => 1
+)
+
+[31-Mar-2020 12:24:20] : [WARNING] - ACTUALIZANDO DATOS:  NSOLICITUDES/IDCENTRO 10/50017369
+[31-Mar-2020 12:33:42] : [WARNING] - OBTENIENDO DATOS PROVISIONALES POST:
+[31-Mar-2020 12:33:42] : [WARNING] - Array
+(
+    [id_centro] => 50017369
+    [rol] => centro
+    [subtipo] => admitidos_prov
+    [pdf] => 1
+    [estado_convocatoria] => 1
+)
+
+[31-Mar-2020 12:33:42] : [WARNING] - ACTUALIZANDO DATOS:  NSOLICITUDES/IDCENTRO 10/50017369
+[31-Mar-2020 12:34:19] : [WARNING] - OBTENIENDO DATOS PROVISIONALES POST:
+[31-Mar-2020 12:34:19] : [WARNING] - Array
+(
+    [id_centro] => 50017369
+    [rol] => centro
+    [subtipo] => admitidos_prov
+    [pdf] => 1
+    [estado_convocatoria] => 1
+)
+
+[31-Mar-2020 12:34:19] : [WARNING] - ACTUALIZANDO DATOS:  NSOLICITUDES/IDCENTRO 10/50017369
+[31-Mar-2020 12:38:57] : [WARNING] - OBTENIENDO DATOS PROVISIONALES POST:
+[31-Mar-2020 12:38:57] : [WARNING] - Array
+(
+    [id_centro] => 50017369
+    [rol] => centro
+    [subtipo] => admitidos_prov
+    [pdf] => 1
+    [estado_convocatoria] => 1
+)
+
+[31-Mar-2020 12:38:57] : [WARNING] - ACTUALIZANDO DATOS:  NSOLICITUDES/IDCENTRO 10/50017369
+[31-Mar-2020 12:38:57] : [WARNING] - CREADA TABLA PROV. ESTADO: 10
+[31-Mar-2020 12:38:57] : [WARNING] - OBTENIENDO SOLICITUDES PROVISIONALES, CABECERA: campos_cabecera_admitidos_prov
+[31-Mar-2020 12:38:57] : [WARNING] - OBTENIENDO SOLICITUDES PROVISIONALES, CENTRO:ESTADO 50017369:2
+[31-Mar-2020 12:38:57] : [WARNING] - OBTENIENDO SOLICITUDES PROVISIONALES, ESTADO CONVOCATORIA:  1
+[31-Mar-2020 12:38:57] : [WARNING] - OBTENIENDO PROVISIONALES GETALLSOLLISTADOS
+[31-Mar-2020 12:38:57] : [WARNING] - CONSULTA SOLICITUDES TABLA:alumnos_provisional
+[31-Mar-2020 12:38:57] : [WARNING] - CONSULTA SOLICITUDES PROVISIONALES ADMITIDOS SUBTIPO: admitidos_prov
+[31-Mar-2020 12:38:57] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,c.nombre_centro,b.puntos_validados FROM alumnos_provisional a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='admitida' and id_centro=50017369 order by a.tipoestudios asc,a.transporte desc, b.puntos_validados desc,a.nordensorteo  desc
+[31-Mar-2020 12:38:57] : [WARNING] - OBTENIENDO SOLICITUDES PROVISIONALES, DATOS: 
+[31-Mar-2020 12:38:57] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 146
+            [nombre] => nombre145
+            [apellido1] => pape145
+            [apellido2] => sape145
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 12
+            [nombre_centro] => ANGEL RIVIÈRE
+            [puntos_validados] => 6
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 702
+            [nombre] => nombre701
+            [apellido1] => pape701
+            [apellido2] => sape701
+            [tipoestudios] => ebo
+            [fase_solicitud] => baremada
+            [estado_solicitud] => apta
+            [transporte] => 2
+            [nordensorteo] => 15
+            [nasignado] => 7
+            [nombre_centro] => ANGEL RIVIÈRE
+            [puntos_validados] => 6
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 471
+            [nombre] => nombre470
+            [apellido1] => pape470
+            [apellido2] => sape470
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 2
+            [nordensorteo] => 4
+            [nasignado] => 13
+            [nombre_centro] => ANGEL RIVIÈRE
+            [puntos_validados] => 6
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 807
+            [nombre] => nombre806
+            [apellido1] => pape806
+            [apellido2] => sape806
+            [tipoestudios] => tva
+            [fase_solicitud] => baremada
+            [estado_solicitud] => apta
+            [transporte] => 2
+            [nordensorteo] => 10
+            [nasignado] => 2
+            [nombre_centro] => ANGEL RIVIÈRE
+            [puntos_validados] => 0
+        )
+
+    [4] => stdClass Object
+        (
+            [id_alumno] => 896
+            [nombre] => nombre895
+            [apellido1] => pape895
+            [apellido2] => sape895
+            [tipoestudios] => tva
+            [fase_solicitud] => baremada
+            [estado_solicitud] => apta
+            [transporte] => 1
+            [nordensorteo] => 17
+            [nasignado] => 9
+            [nombre_centro] => ANGEL RIVIÈRE
+            [puntos_validados] => 6
+        )
+
+)
+
+[31-Mar-2020 12:39:52] : [WARNING] - OBTENIENDO DATOS PROVISIONALES POST:
+[31-Mar-2020 12:39:52] : [WARNING] - Array
+(
+    [id_centro] => 50017369
+    [rol] => centro
+    [subtipo] => admitidos_prov
+    [pdf] => 1
+    [estado_convocatoria] => 1
+)
+
+[31-Mar-2020 12:39:52] : [WARNING] - ACTUALIZANDO DATOS:  NSOLICITUDES/IDCENTRO 10/50017369
+[31-Mar-2020 12:39:52] : [WARNING] - CREADA TABLA PROV. ESTADO: 10
+[31-Mar-2020 12:39:52] : [WARNING] - OBTENIENDO SOLICITUDES PROVISIONALES, CABECERA: campos_cabecera_admitidos_prov
+[31-Mar-2020 12:39:52] : [WARNING] - OBTENIENDO SOLICITUDES PROVISIONALES, CENTRO:ESTADO 50017369:2
+[31-Mar-2020 12:39:52] : [WARNING] - OBTENIENDO SOLICITUDES PROVISIONALES, ESTADO CONVOCATORIA:  1
+[31-Mar-2020 12:39:52] : [WARNING] - OBTENIENDO PROVISIONALES GETALLSOLLISTADOS
+[31-Mar-2020 12:39:52] : [WARNING] - CONSULTA SOLICITUDES TABLA:alumnos_provisional
+[31-Mar-2020 12:39:52] : [WARNING] - CONSULTA SOLICITUDES PROVISIONALES ADMITIDOS SUBTIPO: admitidos_prov
+[31-Mar-2020 12:39:52] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,c.nombre_centro,b.puntos_validados FROM alumnos_provisional a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='admitida' and id_centro=50017369 order by a.tipoestudios asc,a.transporte desc, b.puntos_validados desc,a.nordensorteo  desc
+[31-Mar-2020 12:39:52] : [WARNING] - OBTENIENDO SOLICITUDES PROVISIONALES, DATOS: 
+[31-Mar-2020 12:39:52] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 146
+            [nombre] => nombre145
+            [apellido1] => pape145
+            [apellido2] => sape145
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 12
+            [nombre_centro] => ANGEL RIVIÈRE
+            [puntos_validados] => 6
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 702
+            [nombre] => nombre701
+            [apellido1] => pape701
+            [apellido2] => sape701
+            [tipoestudios] => ebo
+            [fase_solicitud] => baremada
+            [estado_solicitud] => apta
+            [transporte] => 2
+            [nordensorteo] => 15
+            [nasignado] => 7
+            [nombre_centro] => ANGEL RIVIÈRE
+            [puntos_validados] => 6
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 471
+            [nombre] => nombre470
+            [apellido1] => pape470
+            [apellido2] => sape470
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 2
+            [nordensorteo] => 4
+            [nasignado] => 13
+            [nombre_centro] => ANGEL RIVIÈRE
+            [puntos_validados] => 6
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 807
+            [nombre] => nombre806
+            [apellido1] => pape806
+            [apellido2] => sape806
+            [tipoestudios] => tva
+            [fase_solicitud] => baremada
+            [estado_solicitud] => apta
+            [transporte] => 2
+            [nordensorteo] => 10
+            [nasignado] => 2
+            [nombre_centro] => ANGEL RIVIÈRE
+            [puntos_validados] => 0
+        )
+
+    [4] => stdClass Object
+        (
+            [id_alumno] => 896
+            [nombre] => nombre895
+            [apellido1] => pape895
+            [apellido2] => sape895
+            [tipoestudios] => tva
+            [fase_solicitud] => baremada
+            [estado_solicitud] => apta
+            [transporte] => 1
+            [nordensorteo] => 17
+            [nasignado] => 9
+            [nombre_centro] => ANGEL RIVIÈRE
+            [puntos_validados] => 6
+        )
+
+)
+

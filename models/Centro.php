@@ -21,7 +21,7 @@ class Centro extends EntidadBase{
 			$this->log_fase2=new logWriter('log_fase2',DIR_LOGS);
     		}
     public function getIdNombre($n) {
-	$query="select id_centro from centros where nombre_centro='".$n."' limit 1";
+	$query="select id_centro from centros where nombre_centro='".$n."' and clase_centro='especial' limit 1";
 	$this->log_fase2->warning("CONSULTA IDCENTRO $query");
 	
 	$soldata=$this->conexion->query($query);

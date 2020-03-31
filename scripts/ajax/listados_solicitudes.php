@@ -129,7 +129,7 @@ else
 		$log_listado_solicitudes->warning("COPIANDO TABLA IDCENTRO: ".$id_centro);
 		########################################################################################
 		$tcentro->setFaseSorteo(2);
-		$tcentro->actualizaVacantes($vacantes_ebo,$vacantes_tva);
+		//$tcentro->actualizaVacantes($vacantes_ebo,$vacantes_tva);
 		$ct=$tsolicitud->copiaTabla('provisional',$id_centro);	
 		$log_listado_solicitudes->warning("RESULTADO COPIAR TABLA $ct ");
 		$fase_sorteo=2;
