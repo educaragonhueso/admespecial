@@ -48,42 +48,108 @@ class UtilidadesAdmision{
 		else return 1;
 	}
  	public function setFase2Sorteo($f){return 1;}
+ 	public function setVacantesCentroFase2($idc,$v,$t){
+
+		$sql="UPDATE centros set vacantes_$t=$v where id_centro=$idc";
+		if(!$this->con->query($sql)) return $this->con->error;
+		else return 1;
+
+	}
+ 	public function setAlumnoCentroFase2($ida,$idc,$nc){
+		$sql="UPDATE alumnos_fase2 set id_centro_definitivo=$idc,centro_definitivo='$nc' where id_alumno=$ida";
+		if(!$this->con->query($sql)) return $this->con->error;
+		else return 1;
+	}
  	public function asignarVacantesCentros($centros_fase2=array(),$alumnos_fase2=array())
 	{
 		if(sizeof($centros_fase2)==0 or sizeof($alumnos_fase2)==0) return -1;
 		$this->log_fase2->warning("ASIGNANDO VACANTES FASE2");
-		return 1;
 
+		//empezamos con las ebo
 		foreach($centros_fase2 as $centro)
 			{			
-			//empezamos con las ebo
 			$this->centro->setId($centro['id_centro']);
-			$vebo=$centro->getvacantes_fase2('ebo');
+			$this->centro->setNombre();
+
+			$nombrecentro=$this->centro->getNombre();
+			if(!$nombrecentro) return "NO HAY NOMBRE DE CENTRO";
+
+			$vebo=$this->centro->getVacantesFase2(1,'ebo');
+			$vasignadaebo=1;
+			$this->log_fase2->warning("ENTRANDO CENTRO $nombrecentro FASE2 EBO, plazas: $vebo");
+			print("ENTRANDO CENTRO $nombrecentro, idcentor ".$centro['id_centro']." FASE2 EBO, plazas: $vebo".PHP_EOL);
 			$vasignadaebo=1;
 			while($vebo>0 and $vasignadaebo==1)
 				{
 				$vasignadaebo=0;
 				//revisar cada alumno (hay q considerar el orden de elección del alumno, el sorteo etc.) y si ha solicitado plaza en primera opción
 				foreach($alumnos_fase2 as $alumno)
-					if($alumno['id_centro1']==$centro['id_centro'])
+					{
+					print("ALUMNO: $alumno->id_centro".PHP_EOL);	
+					if($alumno->centro_definitivo!='nocentro' || $alumno->tipoestudios!='ebo') continue;
+					if($alumno->id_centro==$centro['id_centro'])
 					{ 
-						$this->setCentroFase2($alumno['id_alumno'],$centro['idcentro']);
+						$this->setAlumnoCentroFase2($alumno->id_alumno,$centro['id_centro'],$nombrecentro);
 						$asignadaebo=1;
 						$vebo--;
+						print(PHP_EOL."coincidencia alumno: $alumno->id_alumno. Centro: $nombrecentro".PHP_EOL);
+						$this->log_fase2->warning("ENTREGADA PLAZA DEL CENTRO $nombrecentro A: $alumno->id_alumno");
+					}
+					if($vebo==0)
+						{ 
+						if($this->setVacantesCentroFase2($centro['id_centro'],$vebo,'ebo')!=1) return 0;
+						print(PHP_EOL."Terminado centro: $nombrecentro".PHP_EOL);
+						break;
+						}
 					}
 				
 				}
+			if($this->setVacantesCentroFase2($centro['id_centro'],$vebo,'ebo')!=1) return 0;
 			}
-		$centros=$this->centros->getAllCentros();
-		while($row = $centros->fetch_assoc()) { $acentros[]=$row;}
-		foreach($acentros as $centro)
-		{
+		print("FIN asignaciones EBO".PHP_EOL);
+		//seguimos con las tva
+		foreach($centros_fase2 as $centro)
+			{			
 			$this->centro->setId($centro['id_centro']);
-			$vacantes=$this->centro->getVacantes();
-			$sql="UPDATE centros set vacantes_ebo=".$vacantes[0]->vacantes.",vacantes_tva=".$vacantes[1]->vacantes." where id_centro=".$centro['id_centro'];
-			if(!$this->con->query($sql)) return $this->con->error;
-		}
-	return 1;
+			$this->centro->setNombre();
+
+			$nombrecentro=$this->centro->getNombre();
+			if(!$nombrecentro) return "NO HAY NOMBRE DE CENTRO";
+
+			$vtva=$this->centro->getVacantesFase2(1,'tva');
+			$vasignadatva=1;
+			$this->log_fase2->warning("ENTRANDO CENTRO $nombrecentro FASE2 EBO, plazas: $vtva");
+			print("ENTRANDO CENTRO $nombrecentro, idcentor ".$centro['id_centro']." FASE2 TVA, plazas: $vtva".PHP_EOL);
+			$vasignadaebo=1;
+			while($vtva>0 and $vasignadatva==1)
+				{
+				$vasignadatva=0;
+				//revisar cada alumno (hay q considerar el orden de elección del alumno, el sorteo etc.) y si ha solicitado plaza en primera opción
+				foreach($alumnos_fase2 as $alumno)
+					{
+					print("ALUMNO: $alumno->id_centro".PHP_EOL);	
+					if($alumno->centro_definitivo!='nocentro' || $alumno->tipoestudios!='tva') continue;
+					if($alumno->id_centro==$centro['id_centro'])
+					{ 
+						$this->setAlumnoCentroFase2($alumno->id_alumno,$centro['id_centro'],$nombrecentro);
+						$asignadatva=1;
+						$vtva--;
+						print(PHP_EOL."coincidencia alumno: $alumno->id_alumno. Centro: $nombrecentro".PHP_EOL);
+						$this->log_fase2->warning("ENTREGADA PLAZA DEL CENTRO $nombrecentro A: $alumno->id_alumno");
+					}
+					if($vtva==0)
+						{ 
+						if($this->setVacantesCentroFase2($centro['id_centro'],$vtva,'tva')!=1) return 0;
+						print(PHP_EOL."Terminado centro: $nombrecentro".PHP_EOL);
+						break;
+						}
+					}
+				
+				}
+			if($this->setVacantesCentroFase2($centro['id_centro'],$vtva,'tva')!=1) return 0;
+			}
+		print("FIN asignaciones TVA".PHP_EOL);
+		return 1;
 	}
   public function actualizaVacantesCentros($centro=0)
 	{

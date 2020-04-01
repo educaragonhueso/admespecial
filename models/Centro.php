@@ -69,6 +69,21 @@ class Centro extends EntidadBase{
 			return $query->fetch_object()->num_sorteo;
 			else return 0;
 	}
+    public function getVacantesFase2($idcentro=1,$tipo='ebo'){
+			$tvacantes="vacantes_".$tipo;
+			if(!isset($id_centro)) $id_centro=$this->id_centro;
+			$sql="select $tvacantes from centros where id_centro=$id_centro";
+
+			$this->log_sorteo->warning('CONSULTA OBTENCION VACANTES FASE2: '.$sql);
+
+			$query=$this->conexion->query($sql);
+			if($query)
+			return $query->fetch_object()->$tvacantes;
+			else return 0;
+		
+		
+
+		}
     public function getVacantes($rol='centro',$tipo='')
 		{
 			$sql="select ifnull(IF(t3.plazas-t2.np<0,0,t3.plazas-t2.np),t3.plazas) as vacantes from          (select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=".$this->id_centro." ) as t3          left join          (select  tipo_alumno_actual as tf, ifnull(count(*),0) as np from matricula where id_centro=".$this->id_centro." and estado='continua' group by tipo_alumno_actual ) as t2  on t3.ta=t2.tf;
@@ -265,6 +280,8 @@ class Centro extends EntidadBase{
     }
     
     public function getNombre() {
+	if(!$this->nombre_centro)
+		return 0;	
         return $this->nombre_centro;
     }
 

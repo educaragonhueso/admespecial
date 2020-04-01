@@ -18,6 +18,7 @@ $tipo='fase2';
 $ccentros=new CentrosController();
 $con=$ccentros->conectar->conexion();
 
+//Obtenemos todos los alumnos y todos los centros con sus vacantes
 $talumnos_fase2=new Alumno($con,'alumnos_fase2');
 $alumnos_fase2=$talumnos_fase2->getAll();
 
@@ -27,15 +28,16 @@ $centros_fase2=$tcentros_fase2->getCentrosFase2();
 $utils=new UtilidadesAdmision($ccentros->conectar->conexion(),'',$tcentros_fase2);
 
 
-//asignar vacantetes
+//asignar vacantetes de cada centro
 $avac=$utils->asignarVacantesCentros($centros_fase2,$alumnos_fase2);
 if($avac==1)
 {
 	echo PHP_EOL."Asignadas vacantes centros para fase 2 a las ".date('H:m')." del dia ".date('d-M-Y').PHP_EOL;	
 	
 }
-elseif($avac==-1) print(PHP_EOL."Error asignando vacantes centros fase2, array vacio");
-
+elseif($avac=="NO CENTRO") print(PHP_EOL."Error asignando vacantes centros fase2, NO CENTRO");
+elseif($avac==-1) print("Array de alumnos o de centros vacio");
+print($avac);
 
 
 exit();
