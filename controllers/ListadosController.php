@@ -69,11 +69,11 @@ class ListadosController extends ControladorBase{
 			return 0;
 		}
 	}
-  public function actualizaSolicitudesSorteo($id_centro,$numero,$solicitudes,$nvebo=0,$nvtva=0)
+  public function actualizaSolicitudesSorteo($id_centro,$numero,$solicitudes,$nvebo=0,$nvtva=0,$fasecentro=1)
 	{
 		//Creamos el objeto solicitud
     $solicitud=new Solicitud($this->adapter);
-    $res=$solicitud->actualizaSolSorteo($id_centro,$numero,$solicitudes,$nvebo,$nvtva);
+    $res=$solicitud->actualizaSolSorteo($id_centro,$numero,$solicitudes,$nvebo,$nvtva,$fasecentro);
 	return $res;
 	}
   public function getMatriculas($id_centro=1,$tiposol=0,$fase_sorteo=0,$modo='normal')
@@ -98,8 +98,10 @@ class ListadosController extends ControladorBase{
 		$solicitud=new Solicitud($this->adapter);
 		if($modo=='normal')// listados previos al sorteo
     		{	
-			  //Conseguimos todas las solcitudes del centro
-	    		$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia);
+	    		if($fase_sorteo==2)
+				$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia,'alumnos_provisional');
+			else
+	    			$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia);
  		}
 		elseif($modo=='csv')
 		{
@@ -256,16 +258,32 @@ class ListadosController extends ControladorBase{
 	
 		$i=0;	
 		//los listados provisionales no permiten acceder a los datos de la solicitud
-		if($provisional==1) $class='';
+		if($provisional>=1) $class='';
 		else $class='calumno';
 
 		$li="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:black'>";
 		foreach($datos as $d)
 			{
 			if($i==0)
-    		$li.="<td class='".$class." dalumno ".$d."' data-idal='".$sol->id_alumno."'>".strtoupper($sol->$d)."</td>";
+			{
+  		  		$li.="<td class='".$class." dalumno ".$d."' data-idal='".$sol->id_alumno."'>".strtoupper($sol->$d)."</td>";
+					
+			}
 			else
-				if($d=='centro_definitivo')
+				if($d=='centro1')
+				{
+				$html="<select>";
+  				if(isset($sol->centro1)) $html.="<option>".substr($sol->centro1,0,10)."</option>";
+  				if(isset($sol->centro2)) $html.="<option>".substr($sol->centro2,0,10)."</option>";
+  				if(isset($sol->centro3)) $html.="<option>".substr($sol->centro3,0,10)."</option>";
+  				if(isset($sol->centro4)) $html.="<option>".substr($sol->centro4,0,10)."</option>";
+  				if(isset($sol->centro5)) $html.="<option>".substr($sol->centro5,0,10)."</option>";
+  				if(isset($sol->centro6)) $html.="<option>".substr($sol->centro6,0,10)."</option>";
+				$html.="</select>";
+				$li.="<td id='".$d.$sol->id_alumno."'>".$html."</td>";
+				
+				}
+				elseif($d=='centro_definitivo')
 				{
                             	$select='<input type="text" class="inputcdefinitivo" id="cdefinitivo'.$sol->id_alumno.'" value="'.$sol->$d.'" placeholder="Elige centro" class="form-control"  data-toggle="tooltip">';
 				

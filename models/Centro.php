@@ -45,12 +45,14 @@ class Centro extends EntidadBase{
 			return $sol_fase2;
 		}
    //devolvemos las vacantes en cada tpo de estudios 
-    public function getNumSolicitudes($c=1)
+    public function getNumSolicitudes($c=1,$fasecentro=1)
 		{
+		if($fasecentro==2) $tabla='alumnos_provisional';
+		else $tabla='alumnos';
 			if($c==1)
 				$sql="SELECT count(*) as nsolicitudes FROM alumnos_fase2";
 			else
-				$sql="SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=$c";
+				$sql="SELECT count(*) as nsolicitudes FROM $tabla where fase_solicitud!='borrador' and id_centro_destino=$c";
 			$this->log_sorteo->warning("OBTENIENDO NUMERO DE SOLICITUDES");
 			$this->log_sorteo->warning($sql);
 

@@ -1021,6 +1021,7 @@ $('body').on('click', '.calumno', function(e){
   var vestado=$('#estado_convocatoria').text();
   var vpin=$('#pin').attr("value");
   var vrol=$('#rol').attr("value");
+  var vidcentro=$('#id_centro').text();
   if($('#fsolicitud'+vid).length) 
   	{
 	$('#fsolicitud'+vid).toggle();
@@ -1028,7 +1029,7 @@ $('body').on('click', '.calumno', function(e){
 	}
 $.ajax({
   method: "POST",
-  data: {id_alumno:vid,modo:vmodo,pin:vpin,rol:vrol},
+  data: {id_alumno:vid,modo:vmodo,pin:vpin,rol:vrol,id_centro:vidcentro},
   url:'../scripts/ajax/editar_solicitud.php',
    	success: function(data) 
 	{

@@ -1,3 +1,38 @@
+SECUENCIA PROCESO ADMISION
+
+1. FASE 0
+
+Los alumnos se inscriben mediante la web o a traves de los centros
+
+2. FASE I
+
+Finaliza la inscripción se procede a realizar el sorteo, previa asignación del número correspondiente a cada solicitud.
+
+Una vez realizado cada centro pasa a 'estado de sorteo' igual a 2 y sus solicitudes, automáticamnete se trasaladan a la tabla provisional
+A partir de ese momento las operaciones q haga el centro sobre dichas solicitudes serán sobre los datos de la tabla alumnos_provisional
+
+En la fecha indicada se pasarán los datos de todas las solicitudes a la tabla provisional respetando las de los centros q hayan realiado el sorteo.
+
+En la fecha de pub de definitivos se pasarán, via crontab, todas las solicitudes de provisional a alumnos_definitivo
+
+En el momneto de iniciar la fase II se pasarán todas las solicitudes de alumnos_Definitivo a alumnos_Fase2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 TAREAS FASE II
 
 Cuando la convocatoria pasa del estado definitiva:

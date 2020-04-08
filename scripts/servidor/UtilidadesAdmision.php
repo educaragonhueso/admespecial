@@ -167,26 +167,56 @@ class UtilidadesAdmision{
 	}
   public function copiaTabla($tipo,$centro=0)
 	{
-		$tabla="alumnos_".$tipo;
-		$sql='DELETE from '.$tabla;
-		print($sql);
-		if($this->con->query($sql)==0) return 0;
-
-		$sql='INSERT IGNORE INTO '.$tabla.' SELECT * from alumnos';
-		if($this->con->query($sql)) return 1;
+		if($tipo=='definitivo') $tabla_origen='alumnos_provisional';
+		elseif($tipo=='provisional') $tabla_origen='alumnos';
 		else return 0;
+		//copiamos registros de centros que todavía no han realizado el sorteo o q están en fase menos q 2
+		$tabla_destino="alumnos_".$tipo;
+		if($tipo=='provisional')
+			$sql="INSERT IGNORE INTO $tabla_destino SELECT a.* from $tabla_origen a, centros c WHERE a.id_centro_destino=c.id_Centro and c.fase_Sorteo<'2'";
+		else
+			$sql="INSERT IGNORE INTO $tabla_destino SELECT a.* from $tabla_origen a";
+		print($sql);if($this->con->query($sql)) return 1;
+		else return $this->con->error;
 
 	}
   public function copiaTablaFase2($tipo,$centro=0)
 	{
 		$tabla="alumnos_".$tipo;
 		$sql='DELETE from '.$tabla;
-		if(!$this->con->query($sql)) return 0;
-		$sqlfase2=" SELECT  t1.*,t2.centro1,t2.id_centro1 FROM (SELECT a.id_alumno id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,c.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro_destino as id_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro  order by c.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc)  as t1 join (SELECT a.id_alumno,c.id_centro as id_centro1, c.nombre_centro as centro1 from alumnos a, centros c where c.id_centro=a.id_centro_destino1) as t2 on t1.id_alumno=t2.id_alumno";
+		
+		$res=$this->con->query($sql);
+		if(!$res) return $this->con->error;
+		
+
+		$sqlfase2="	SELECT  t1.*,t2.centro1,t2.id_centro1,t3.centro2,t3.id_centro2,t4.centro3,t4.id_centro3,t5.centro4,t5.id_centro4,t6.centro5,t6.id_centro5,t7.centro6,t7.id_centro6, 'nocentro ' as centro_definitivo, '0' as id_centro_definitivo FROM 
+	(SELECT a.id_alumno, a.nombre, a.apellido1, a.apellido2,a.calle_dfamiliar,c.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro_destino as id_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno 
+	left join centros c on a.id_centro_destino=c.id_centro  order by c.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc)
+	as t1 
+	join 
+	(SELECT a.id_alumno,c.id_centro as id_centro1, c.nombre_centro as centro1 from alumnos a, centros c where c.id_centro=a.id_centro_destino1) 
+	as t2 on t1.id_alumno=t2.id_alumno
+left join 
+	(SELECT a.id_alumno,c.id_centro as id_centro2, c.nombre_centro as centro2 from alumnos a, centros c where c.id_centro=a.id_centro_destino2) 
+	as t3 on t1.id_alumno=t3.id_alumno
+left join 
+	(SELECT a.id_alumno,c.id_centro as id_centro3, c.nombre_centro as centro3 from alumnos a, centros c where c.id_centro=a.id_centro_destino3) 
+	as t4 on t1.id_alumno=t4.id_alumno
+left join 
+	(SELECT a.id_alumno,c.id_centro as id_centro4, c.nombre_centro as centro4 from alumnos a, centros c where c.id_centro=a.id_centro_destino4) 
+	as t5 on t1.id_alumno=t5.id_alumno
+left join 
+	(SELECT a.id_alumno,c.id_centro as id_centro5, c.nombre_centro as centro5 from alumnos a, centros c where c.id_centro=a.id_centro_destino5) 
+	as t6 on t1.id_alumno=t6.id_alumno
+left join 
+	(SELECT a.id_alumno,c.id_centro as id_centro6, c.nombre_centro as centro6 from alumnos a, centros c where c.id_centro=a.id_centro_destino6) 
+	as t7 on t1.id_alumno=t7.id_alumno
+";
+		//$sqlfase2=" SELECT  t1.*,t2.centro1,t2.id_centro1 FROM (SELECT a.id_alumno id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,c.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro_destino as id_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro  order by c.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc)  as t1 join (SELECT a.id_alumno,c.id_centro as id_centro1, c.nombre_centro as centro1 from alumnos a, centros c where c.id_centro=a.id_centro_destino1) as t2 on t1.id_alumno=t2.id_alumno";
 		$sql='INSERT IGNORE INTO '.$tabla.' '.$sqlfase2;
-		print($sql);
+		print(PHP_EOL.$sql.PHP_EOL);
 		if($this->con->query($sql)) return 1;
-		else return 0;
+		else return $this->con->error;
 
 	}
   public function compruebaReservas($centro=0)
@@ -205,7 +235,16 @@ class UtilidadesAdmision{
 		else return 0;
 
 	}
- 
+  public function getCentrosIds()
+	{
+	$ares=array();
+	$sql="SELECT id_centro FROM centros where fase_sorteo<2";
+	$res=$this->con->query($sql);
+	if(!$res) return $this->con->error;
+	while($row=$res->fetch_row())
+		$ares[]=$row;
+	return  $ares;
+	} 
  
 }
 ?>

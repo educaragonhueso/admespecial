@@ -15938,3 +15938,1959 @@
 
 )
 
+[08-Apr-2020 06:57:24] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 06:57:24] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 06:57:24] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 06:57:24] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 06:57:24] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 06:57:24] : [WARNING] - OBTENIDAS 0 SOLICITUDES FASE II:
+[08-Apr-2020 06:57:24] : [WARNING] - Array
+(
+)
+
+[08-Apr-2020 07:40:36] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 07:40:36] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 07:40:36] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 07:40:36] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 07:40:36] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 07:40:36] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 07:40:36] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 0
+            [nasignado] => 0
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 0
+            [nasignado] => 0
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 3
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 0
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 07:40:51] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 07:40:51] : [WARNING] - Array
+(
+    [asignar] => 1
+    [rol] => admin
+    [estado_convocatoria] => 
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 07:40:51] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 07:40:51] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 07:40:51] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 07:40:51] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 07:40:51] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 0
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 0
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 3
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 0
+            [nasignado] => 4
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 07:40:58] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 07:40:58] : [WARNING] - Array
+(
+    [asignar] => 2
+    [rol] => admin
+    [nsorteo] => 3
+    [estado_convocatoria] => 
+)
+
+[08-Apr-2020 07:40:58] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 07:40:58] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 07:40:58] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 07:40:58] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 07:40:58] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 3
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 4
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 07:41:08] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 07:41:08] : [WARNING] - Array
+(
+    [asignar] => 1
+    [rol] => admin
+    [estado_convocatoria] => 
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 07:41:08] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 07:41:08] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 07:41:08] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 07:41:08] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 07:41:08] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 3
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 4
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 07:47:43] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 07:47:43] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 07:47:43] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 07:47:43] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 07:47:43] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 07:47:43] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 07:47:43] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 3
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro2] => ALBORADA
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 4
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro2] => JEAN PIAGET
+            [centro3] => CEDES
+            [centro4] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 07:48:30] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 07:48:30] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 07:48:30] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 07:48:30] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 07:48:30] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 07:48:30] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 07:48:30] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 3
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro2] => ALBORADA
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 4
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro2] => JEAN PIAGET
+            [centro3] => CEDES
+            [centro4] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 07:54:08] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 07:54:08] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 07:54:08] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 07:54:08] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 07:54:08] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 07:54:08] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 07:54:08] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 3
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro2] => ALBORADA
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 4
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro2] => JEAN PIAGET
+            [centro3] => CEDES
+            [centro4] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 07:56:40] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 07:56:40] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 07:56:40] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 07:56:40] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 07:56:40] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 07:56:40] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 07:56:40] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 3
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro2] => ALBORADA
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 4
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro2] => JEAN PIAGET
+            [centro3] => CEDES
+            [centro4] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 07:58:19] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 07:58:19] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 07:58:19] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 07:58:19] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 07:58:19] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 07:58:19] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 07:58:19] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 3
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro2] => ALBORADA
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 4
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro2] => JEAN PIAGET
+            [centro3] => CEDES
+            [centro4] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 07:58:39] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 07:58:39] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 07:58:39] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 07:58:39] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 07:58:39] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 07:58:39] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 07:58:39] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 3
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro2] => ALBORADA
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 4
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro2] => JEAN PIAGET
+            [centro3] => CEDES
+            [centro4] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 08:02:09] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 08:02:09] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 08:02:09] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 08:02:09] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 08:02:09] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 08:02:09] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 08:02:09] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 3
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro2] => ALBORADA
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 4
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro2] => JEAN PIAGET
+            [centro3] => CEDES
+            [centro4] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 08:04:36] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 08:04:36] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 08:04:36] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 08:04:36] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 08:04:36] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 08:04:36] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 08:04:36] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 3
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro2] => ALBORADA
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 4
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro2] => JEAN PIAGET
+            [centro3] => CEDES
+            [centro4] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 08:05:09] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 08:05:09] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 08:05:09] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 08:05:09] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 08:05:09] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 08:05:09] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 08:05:09] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 3
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro2] => ALBORADA
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 4
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro2] => JEAN PIAGET
+            [centro3] => CEDES
+            [centro4] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 08:09:44] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 08:09:44] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 08:09:44] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 08:09:44] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 08:09:44] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 08:09:44] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 08:09:44] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 3
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro2] => ALBORADA
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 4
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro2] => JEAN PIAGET
+            [centro3] => CEDES
+            [centro4] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 08:11:26] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 08:11:26] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 08:11:26] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 08:11:26] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 08:11:26] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 08:11:26] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 08:11:26] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 3
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro2] => ALBORADA
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 4
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro2] => JEAN PIAGET
+            [centro3] => CEDES
+            [centro4] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 08:12:58] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 08:12:58] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 08:12:58] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 08:12:58] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 08:12:58] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 08:12:58] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 08:12:58] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 3
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro2] => ALBORADA
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 4
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro2] => JEAN PIAGET
+            [centro3] => CEDES
+            [centro4] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+)
+
+[08-Apr-2020 08:13:33] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Apr-2020 08:13:33] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Apr-2020 08:13:33] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Apr-2020 08:13:33] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol
+[08-Apr-2020 08:13:33] : [WARNING] -  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 08:13:33] : [WARNING] - OBTENIDAS 4 SOLICITUDES FASE II:
+[08-Apr-2020 08:13:33] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8928
+            [nombre] => CLAUDIA
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [calle_dfamiliar] => C/ TRAVESÍA DEL RIEGO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 4
+            [nasignado] => 2
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => ALBORADA
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8923
+            [nombre] => ANA YAMILETH
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [calle_dfamiliar] => CALLE OCEÁNO ÍNDICO
+            [nombre_centro] => JEAN PIAGET
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 3
+            [nasignado] => 3
+            [puntos_validados] => 0
+            [id_centro] => 50018131
+            [centro1] => CEDES
+            [centro2] => ALBORADA
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [calle_dfamiliar] => PEDRO IV
+            [nombre_centro] => ANGEL RIVIÈRE
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 4
+            [puntos_validados] => 10
+            [id_centro] => 50017369
+            [centro1] => ALBORADA
+            [centro2] => JEAN PIAGET
+            [centro3] => CEDES
+            [centro4] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 8924
+            [nombre] => ANDRES
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [calle_dfamiliar] => CALLE BASILIO BOGGIERO
+            [nombre_centro] => ALBORADA
+            [tipoestudios] => ebo
+            [fase_solicitud] => borrador
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 2
+            [nasignado] => 1
+            [puntos_validados] => 0
+            [id_centro] => 50010387
+            [centro1] => JULIÁN SANZ IBÁÑEZ
+            [centro2] => 
+            [centro3] => 
+            [centro4] => 
+            [centro5] => 
+            [centro6] => 
+            [centro_definitivo] => nocentro 
+        )
+
+)
+

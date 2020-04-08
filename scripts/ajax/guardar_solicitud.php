@@ -37,13 +37,6 @@ if($rol!='alumno')
 		parse_str($fsol_entrada, $fsol_tmp);
 		$id_centro_destino=$tsol->getCentroId($fsol_tmp['id_centro_destino'],'especial');
 		}
-	/*
-	if($modo!="GRABAR SOLICITUD")
-		{
-		if($tsol->getCentroId($_POST['id_centro_destino'])!=0)
-			$id_centro_destino=$tsol->getCentroId($_POST['id_centro_destino']);
-		}
-	*/
 	}
 $fsol_entrada.="&baremo_ptstotal=".$_POST['ptsbaremo'];
 
@@ -66,11 +59,6 @@ if($rol=='alumno')
 if(!isset($fsol_salida['id_centro_destino']) or $fsol_Salida['id_centro_destino']<=1)
 	$fsol_salida['id_centro_destino']=$id_centro_destino;
 
-
-######################################################################################
-$log_actualizar->warning("VALOR CENTRO ORIGEN:");
-$log_actualizar->warning($fsol_salida['id_centro_estudios_origen']);
-######################################################################################
 
 $fsol_salida['id_centro_estudios_origen']=trim($fsol_salida['id_centro_estudios_origen'],'*');
 

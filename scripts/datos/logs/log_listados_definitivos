@@ -8,3 +8,143 @@
 [27-Mar-2020 16:46:03] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro_destino as id_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='admitida' order by c.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
 [27-Mar-2020 16:48:56] : [WARNING] - CONSULTA SOLICITUDES DEFINITIVOS SUBTIPO: lfase2_sol
 [27-Mar-2020 16:48:56] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,c.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro_destino as id_centro FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='admitida' order by c.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Apr-2020 06:52:02] : [WARNING] - OBTENIENDO DATOS DEFINITIVOS POST:
+[08-Apr-2020 06:52:02] : [WARNING] - Array
+(
+    [id_centro] => 50017369
+    [rol] => centro
+    [subtipo] => admitidos_def
+    [pdf] => 1
+    [estado_convocatoria] => 40
+)
+
+[08-Apr-2020 06:52:02] : [WARNING] - ACTUALIZANDO DEFINITIVOS, DATOS:  ESTADO CENTRO/IDCENTRO 2/40
+[08-Apr-2020 06:52:02] : [WARNING] - ACTUALIZANDO DEFINITIVOS, DATOS:  NSOLICITUDES/IDCENTRO 3/50017369
+[08-Apr-2020 06:53:41] : [WARNING] - OBTENIENDO DATOS DEFINITIVOS POST:
+[08-Apr-2020 06:53:41] : [WARNING] - Array
+(
+    [id_centro] => 50017369
+    [rol] => centro
+    [subtipo] => admitidos_def
+    [pdf] => 1
+    [estado_convocatoria] => 40
+)
+
+[08-Apr-2020 06:53:41] : [WARNING] - ACTUALIZANDO DEFINITIVOS, DATOS:  ESTADO CENTRO/IDCENTRO 2/40
+[08-Apr-2020 06:53:41] : [WARNING] - OBTENIENDO LISTADOS DEFINITIVOS, CENTRO: 50017369
+[08-Apr-2020 06:53:41] : [WARNING] - update alumnos set est_desp_sorteo='noadmitida' where id_centro_destino=50017369
+[08-Apr-2020 06:53:41] : [WARNING] - UPDATE alumnos a set est_desp_sorteo='admitida' where fase_solicitud!='borrador' and tipoestudios='ebo' and id_centro_destino=50017369 and estado_solicitud='apta' and a.id_alumno in(8927,146,471,466)
+[08-Apr-2020 06:53:41] : [WARNING] - UPDATE alumnos a set est_desp_sorteo='admitida' where fase_solicitud!='borrador' and tipoestudios='tva' and id_centro_destino=50017369 and estado_solicitud='apta' and a.id_alumno in(807,662,896)
+[08-Apr-2020 06:53:41] : [WARNING] - OBTENIENDO DEFINITIVOS
+[08-Apr-2020 06:53:41] : [WARNING] - CONSULTA SOLICITUDES DEFINITIVOS SUBTIPO: admitidos_def
+[08-Apr-2020 06:53:41] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados FROM alumnos_definitivo a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='admitida' and id_centro=50017369  order by c.id_centro,a.tipoestudios, a.transporte desc,b.puntos_validados desc,b.validar_hnos_centro desc,b.validar_tutores_centro desc,b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),b.validar_renta_inferior desc,b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc
+[08-Apr-2020 06:53:41] : [WARNING] - OBTENIENDO SOLICITUDES GENERALES, DATOS: 
+[08-Apr-2020 06:53:41] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8927
+            [nombre] => SERGI
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 1
+            [nasignado] => 3
+            [puntos_validados] => 10
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 146
+            [nombre] => nombre145
+            [apellido1] => pape145
+            [apellido2] => sape145
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 3
+            [nordensorteo] => 5
+            [nasignado] => 7
+            [puntos_validados] => 6
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 471
+            [nombre] => nombre470
+            [apellido1] => pape470
+            [apellido2] => sape470
+            [tipoestudios] => ebo
+            [fase_solicitud] => validada
+            [estado_solicitud] => apta
+            [transporte] => 2
+            [nordensorteo] => 7
+            [nasignado] => 9
+            [puntos_validados] => 12
+        )
+
+    [3] => stdClass Object
+        (
+            [id_alumno] => 466
+            [nombre] => nombre465
+            [apellido1] => pape465
+            [apellido2] => sape465
+            [tipoestudios] => ebo
+            [fase_solicitud] => baremada
+            [estado_solicitud] => apta
+            [transporte] => 2
+            [nordensorteo] => 8
+            [nasignado] => 10
+            [puntos_validados] => 11
+        )
+
+    [4] => stdClass Object
+        (
+            [id_alumno] => 807
+            [nombre] => nombre806
+            [apellido1] => pape806
+            [apellido2] => sape806
+            [tipoestudios] => tva
+            [fase_solicitud] => baremada
+            [estado_solicitud] => apta
+            [transporte] => 2
+            [nordensorteo] => 15
+            [nasignado] => 17
+            [puntos_validados] => 0
+        )
+
+    [5] => stdClass Object
+        (
+            [id_alumno] => 662
+            [nombre] => nombre661
+            [apellido1] => pape661
+            [apellido2] => sape661
+            [tipoestudios] => tva
+            [fase_solicitud] => baremada
+            [estado_solicitud] => apta
+            [transporte] => 1
+            [nordensorteo] => 2
+            [nasignado] => 4
+            [puntos_validados] => 6
+        )
+
+    [6] => stdClass Object
+        (
+            [id_alumno] => 896
+            [nombre] => nombre895
+            [apellido1] => pape895
+            [apellido2] => sape895
+            [tipoestudios] => tva
+            [fase_solicitud] => baremada
+            [estado_solicitud] => apta
+            [transporte] => 1
+            [nordensorteo] => 4
+            [nasignado] => 6
+            [puntos_validados] => 6
+        )
+
+)
+

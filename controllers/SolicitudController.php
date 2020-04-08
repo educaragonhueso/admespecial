@@ -390,7 +390,7 @@ class SolicitudController extends ControladorBase{
 		return 1;
 		}
 
-    public function showFormSolicitud($id=0,$id_centro=0,$rol='alumno',$collapsed=1,$imprimir=0)
+    public function showFormSolicitud($id=0,$id_centro=0,$rol='alumno',$collapsed=1,$imprimir=0,$fase_sorteo=0)
 		{
 			//Creamos una nueva solicitud
 			$solicitud=new Solicitud($this->adapter);
@@ -406,7 +406,10 @@ class SolicitudController extends ControladorBase{
 			//modificacion solicitud
 			else
 			{
-				$dsolicitud=$solicitud->getSol_pruebas($id,'existente',0);
+				if($fase_sorteo==2)
+					$dsolicitud=$solicitud->getSol_pruebas($id,'existente',0,'alumnos_provisional');
+				else
+					$dsolicitud=$solicitud->getSol_pruebas($id,'existente',0,'alumnos');
 				
 				$this->log_editar->warning("DATOS SOLICITUD A EDITAR");
 				$this->log_editar->warning(print_r($dsolicitud,true));

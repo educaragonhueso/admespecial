@@ -34,7 +34,9 @@ $vacantes_ebo=$dvacantes[0]->vacantes;
 $vacantes_tva=$dvacantes[1]->vacantes;
 
 $log_listados_definitivos->warning("ACTUALIZANDO DEFINITIVOS, DATOS:  ESTADO CENTRO/IDCENTRO $estado_centro/$estado_convocatoria");
+//La convocatoria esta en definitivo según el dia programado
 //si la convocatoria esta en definitivo, entramos una vez para copiar la tabla con los datos del centro
+/*
 if($estado_centro==2 and $estado_convocatoria==40)
 	{
 		$nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
@@ -53,6 +55,7 @@ if($estado_centro==2 and $estado_convocatoria==40)
 		########################################################################################
 		if(!$tcentro->setFaseSorteo(3)) {print("ERROR PROVISIONALES"); exit();}
 	}
+*/
 $cabecera="campos_cabecera_".$subtipo_listado;
 $camposdatos="campos_bbdd_".$subtipo_listado;
 

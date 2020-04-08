@@ -1,0 +1,1 @@
+CREADA OBJETO UTILINSERT IGNORE INTO alumnos_provisional SELECT a.* from alumnos a, centros c WHERE a.id_centro_destino=c.id_Centro and c.fase_Sorteo<"2"Copia tabla solicitudesprovisional realizada corectamente a las 06:04 del dia 08-Apr-2020

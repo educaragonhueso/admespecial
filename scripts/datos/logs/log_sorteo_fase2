@@ -99,3 +99,12 @@
 [30-Mar-2020 10:34:27] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado = (@r := @r + 1) ORDER BY  RAND()
 [30-Mar-2020 10:34:27] : [WARNING] - OK ASIGNANDO NUM SORTEO EN FASE2
 [30-Mar-2020 10:34:40] : [WARNING] - ASIGNANDO NUMERO DESPUES DE SORTEO UPDATE alumnos_fase2 a set nordensorteo=4+nasignado-3+1 where nasignado<3 -- UPDATE alumnos_fase2 a set nordensorteo=nasignado-3+1 where nasignado>=3
+[08-Apr-2020 07:40:51] : [WARNING] - ASIGNANDO NUMERO SORTEO
+[08-Apr-2020 07:40:51] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado =0
+[08-Apr-2020 07:40:51] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado = (@r := @r + 1) ORDER BY  RAND()
+[08-Apr-2020 07:40:51] : [WARNING] - OK ASIGNANDO NUM SORTEO EN FASE2
+[08-Apr-2020 07:40:58] : [WARNING] - ASIGNANDO NUMERO DESPUES DE SORTEO UPDATE alumnos_fase2 a set nordensorteo=4+nasignado-3+1 where nasignado<3 -- UPDATE alumnos_fase2 a set nordensorteo=nasignado-3+1 where nasignado>=3
+[08-Apr-2020 07:41:08] : [WARNING] - ASIGNANDO NUMERO SORTEO
+[08-Apr-2020 07:41:08] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado =0
+[08-Apr-2020 07:41:08] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado = (@r := @r + 1) ORDER BY  RAND()
+[08-Apr-2020 07:41:08] : [WARNING] - OK ASIGNANDO NUM SORTEO EN FASE2

@@ -19,6 +19,7 @@ $dia_sorteo=0;
 $modo='presorteo';
 $id_centro=$_POST['id_centro'];
 $estado_convocatoria=$_POST['estado_convocatoria'];
+
 $filtro_solicitudes='<input type="text" class="form-control" id="filtrosol"  placeholder="Introduce datos del alumno o centro"><small id="emailHelp" class="form-text text-muted"></small>';
 $list=new ListadosController('alumnos');
 $conexion=$list->getConexion();
@@ -29,6 +30,10 @@ if(isset($_POST['provincia']))
 	$provincia=$_POST['provincia'];
 
 $tsolicitud=new Solicitud($conexion);
+
+//si el cecntro esta en fase 2 mostramos solicitudes de listados provisionales
+//$fase_centro=$tsolicitud->getFaseCentro($id_centro);
+
 $tcentro->setNombre();
 $nombre_centro=$tcentro->getNombre();
 $nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
@@ -37,7 +42,6 @@ $nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
 if($_POST['rol']=='centro') $fase_sorteo=$tcentro->getFaseSorteo();//0: no realizado, 1: se han asignado los numeros aleatorios, 2: se ha realizado sorteo
 else $fase_sorteo=2;
 $hoy = date("Y/m/d");
-
 $form_nuevasolicitud='<div class="input-group-append" id="cab_fnuevasolicitud"><button class="btn btn-outline-info" id="nuevasolicitud" type="button">Nueva solicitud</button></div>';
 
 $log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES CON ROL: ".$_POST['rol']);
@@ -157,9 +161,9 @@ else
 	if($hoy==DIA_SORTEO) {$dia_sorteo=1;}
 	if($fase_sorteo==2) {
 	//mostramos las solitudes completas sin incluir borrador
-	$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo); 
+	$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo,'normal','','todos'); 
 	}
-	elseif($fase_sorteo==0)
+	elseif($fase_sorteo==0 or $fase_sorteo==1)
 	{
 			//mostramos las solitudes completas, incluyendo borrador
 			$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO");
@@ -167,6 +171,7 @@ else
 	}
 	else
 	{
+			print("iENTRANDO PROV FASE SORTEO $fase_sorteo");
 			$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO");
 			//mostramos solicitudes con el numero de sorteo asignado
 			$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo); 
