@@ -11,7 +11,6 @@ require_once DIR_APP.'parametros.php';
 
 $log_editar_solicitud=new logWriter('log_editar_solicitud',DIR_LOGS);
 
-
 $consulta=$_POST['modo'];
 if(isset($_POST['id_alumno'])) $id=$_POST['id_alumno'];
 else $id=0;
@@ -24,6 +23,7 @@ $scontroller=new SolicitudController($rol);
 $conexion=$scontroller->getConexion();
 $tsol=new Solicitud($conexion);
 $tcentro=new Centro($conexion,$_POST['id_centro'],'ajax');
+
 if(isset($_POST['id_centro'])){
 $id_centro=$_POST['id_centro'];
 $fase_sorteo=$tsol->getFaseCentro($id_centro);

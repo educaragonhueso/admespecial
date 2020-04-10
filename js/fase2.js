@@ -113,17 +113,63 @@ $(".cdefinitivo").easyAutocomplete(cen_options);
 //FORMULARIO PARA MODIFICAR MANUALMENTE CENTRO DEFINITIVO ALLUMNOS FASE2
 $('body').on('click', '.cdefinitivo', function(e){
   var vid=$(this).attr("id");
-  var vcdestino=$("#cdefinitivo"+vid).val();
+  var vacdefinitivo=$("#selectcentro"+vid+" option:selected").attr("value");
+  var vcdefinitivo=vacdefinitivo.split(':')[0];
+  var vvacdefinitivo=vacdefinitivo.split(':')[1];
+
+
+  var vidcdefinitivo=$("#selectcentro"+vid+" option:selected").attr("class");
+  vidcdefinitivo=vidcdefinitivo.replace("vacantesebo","");
   var vtipoestudios=$(this).attr("data-tipo");
-  var vcorigen=$(this).attr("data-idcentro");
+  var vcactual=$("#centro_definitivo"+vid).text();
+  
+  var vidcactual=$("#centro_definitivo"+vid).attr("data-idcactual");
+  vidcactual=vidcactual.replace("idcactual","");
+  
+  var vclasdefinitivo=$("#selectcentro"+vid+" option:selected").attr("class");
+  var vclasactual=$(".vacantes"+vtipoestudios+vidcactual).attr("class");
+  //vacantes ccentro actual
+  var vvaccactual=$(".vacantes"+vtipoestudios+vidcactual).attr("value").split(':')[1];
+			
+ vacantesfinales_def=+vvacdefinitivo-1;
+ vacantesfinales_act=+vvaccactual+1;
+ 
+console.log("Centro definitivo: "+vcdefinitivo);
+console.log("id centro definitivo: "+vidcdefinitivo);
+console.log("vac centro definitivo: "+vvacdefinitivo);
+console.log("vacantes finales cdefinitivo: "+vacantesfinales_def);
+
+console.log("Centro actual: "+vcactual);
+console.log("id centro actual: "+vidcactual);
+console.log("class centro actual: "+vclasactual);
+console.log("Vacantes centro actual: "+vvaccactual);
+console.log("vacantes finales actual: "+vacantesfinales_act);
+
+
+if(vidcactual==vidcdefinitivo)
+{
+		$.alert({
+			title: 'YA SE ENCUENTRA EN ESE CENTRO',
+			content: 'CONTINUAR'
+			});
+		return;
+}
 $.ajax({
   method: "POST",
-  data: {id_alumno:vid,centrodestino:vcdestino,tipoestudios:vtipoestudios,centroorigen:vcorigen},
+  data: {id_alumno:vid,centrodefinitivo:vcdefinitivo,idcentrodefinitivo:vidcdefinitivo,vacdefinitivo:vvacdefinitivo,tipoestudios:vtipoestudios,centroactual:vcactual,idcentroactual:vidcactual},
   url:'../scripts/ajax/cambio_estado_fase2.php',
    	success: function(data) 
 	{
-	console.log(data);
 	if(data.indexOf("OK")!=-1)
+
+		$("."+vclasdefinitivo).text(vcdefinitivo+':'+vacantesfinales_def);
+		$("."+vclasdefinitivo).attr("value",vcdefinitivo+':'+vacantesfinales_def);
+
+		$("."+vclasactual).text(vcactual+':'+vacantesfinales_act);
+		$("."+vclasactual).attr("value",vcactual+':'+vacantesfinales_act);
+
+		$("#centro_definitivo"+vid).attr("data-idcactual","idcactual"+vidcdefinitivo);
+		$("#centro_definitivo"+vid).text(vcdefinitivo);
 		$.alert({
 			title: 'CENTRO MODIFICADO CORRECTAMENTE',
 			content: 'CONTINUAR'

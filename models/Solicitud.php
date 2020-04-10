@@ -35,13 +35,13 @@ class Solicitud extends EntidadBase{
 		if($centro!=0)
 			{
 			$dsql='DELETE from '.$tabla.' WHERE id_centro_destino='.$centro;
-			$isql='INSERT IGNORE INTO '.$tabla.' SELECT * from alumnos where id_centro_destino='.$centro;
+			$isql='INSERT IGNORE INTO '.$tabla.' SELECT * from alumnos where and est_desp_sorteo="noadmitida" id_centro_destino='.$centro;
 			$this->log_sorteo->warning("CARGANDO TABLA $tabla ".$isql);
 			}
 		else
 			{
 			$dsql='DELETE from '.$tabla;
-			$isql='INSERT IGNORE INTO '.$tabla.' SELECT * from alumnos';
+			$isql='INSERT IGNORE INTO '.$tabla.' SELECT * from alumnos WHERE est_desp_sorteo="noadmitida"';
 
 			}
 		$this->log_sorteo->warning("BORRANDO DE TABLA $tabla ".$dsql);
@@ -1084,7 +1084,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 				elseif($tipo==3) //fase2
 				{
 					if($c<=1)
-						$sql=" SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc";
+						$sql="SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.calle_dfamiliar,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno  order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc";
 					else return 0;
 				$this->log_listados_solicitudes_fase2->warning("CONSULTA SOLICITUDES FASE2 SUBTIPO: ".$subtipo_listado);
 				$this->log_listados_solicitudes_fase2->warning($sql);

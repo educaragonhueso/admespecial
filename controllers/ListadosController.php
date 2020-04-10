@@ -254,7 +254,7 @@ class ListadosController extends ControladorBase{
 
 	return $html;
 	}
-  public function showSolicitudListado($sol,$datos,$provisional=0){
+  public function showSolicitudListado($sol,$datos,$provisional=0,$htmldatoscentros=''){
 	
 		$i=0;	
 		//los listados provisionales no permiten acceder a los datos de la solicitud
@@ -285,11 +285,20 @@ class ListadosController extends ControladorBase{
 				}
 				elseif($d=='centro_definitivo')
 				{
+				$li.="<td id='".$d.$sol->id_alumno."' data-idcactual='idcactual".$sol->id_centro_definitivo."'>".$sol->$d."</td>";
+				}
+				elseif($d=='centrosdisponibles')
+				{
+				/*
                             	$select='<input type="text" class="inputcdefinitivo" id="cdefinitivo'.$sol->id_alumno.'" value="'.$sol->$d.'" placeholder="Elige centro" class="form-control"  data-toggle="tooltip">';
 				
 				$select.='<button data-tipo="'.$sol->tipoestudios.'" data-idcentro="'.$sol->$d.'"  id="'.$sol->id_alumno.'"  class="cdefinitivo" value="Cambiar">Cambiar</button> ';
 				$li.="<td id='".$d.$sol->id_alumno."'>".$select."</td>";
-					
+				$li.="<td id='".$d.$sol->id_alumno."'>".$htmldatoscentros."</td>";
+				*/	
+				$select="<div id='".$d.$sol->id_alumno."' class='listacentros'><select id='selectcentro".$sol->id_alumno."'>".$htmldatoscentros."</select></div>";
+				$select.='<button data-tipo="'.$sol->tipoestudios.'" data-idcentro="'.$sol->$d.'"  id="'.$sol->id_alumno.'"  class="cdefinitivo" value="Cambiar">Cambiar</button> ';
+				$li.="<td id='".$d.$sol->id_alumno."'>".$select."</td>";
 				}
 				else
 					$li.="<td id='".$d.$sol->id_alumno."' class='".$d."'>".$sol->$d."</td>";
@@ -300,6 +309,14 @@ class ListadosController extends ControladorBase{
 	}
   public function showListado($a,$rol='centro',$cabecera=array(),$camposdatos=array(),$provisional=0)
 	{
+		$centros=$this->getCentrosNombreVacantes();
+		$htmlcentros="";
+		foreach($centros as $centro)
+			{
+			$cdata_parcial=substr($centro['nombre_centro'],0,10).":".$centro['vacantes_ebo'];
+			$cdata_completo=$centro['nombre_centro'].":".$centro['vacantes_ebo'];
+  			$htmlcentros.="<option class='vacantesebo".$centro['id_centro']."' value='$cdata_completo'>".$cdata_parcial."</option>";
+			}
 	$centroanterior='';
 	$centroactual='';
 
@@ -339,7 +356,7 @@ class ListadosController extends ControladorBase{
 			$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
 			$cab=1;
 		}
-		$html.=$this->showSolicitudListado($sol,$camposdatos,$provisional);	
+		$html.=$this->showSolicitudListado($sol,$camposdatos,$provisional,$htmlcentros);	
 	}
 	$html.="</tbody>";
 	$html.='</table>';
@@ -622,6 +639,20 @@ class ListadosController extends ControladorBase{
 			return $resumencentros;
 		
 		}
+    public function getCentrosNombreVacantes($provincia='todas')
+		{
+			if($provincia!='todas')
+				$sql="SELECT  id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros c, centros c where clase_centro='especial' and c.id_centro=cg.id_centro and provincia='$provincia'";
+			else
+				$sql="SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'";
+			$this->log_listados_solicitudes->warning("CONSULTA LISTADO SOLICITUDES: ".$sql);
+			$r=$this->adapter->query($sql);
+			 while ($obj = $r->fetch_object()) 
+				{
+    				    $ares[]=(array)$obj;
+    				}				
+			return $ares;
+		}
 
     public function getCentrosIds($provincia='todas')
 		{
@@ -633,8 +664,8 @@ class ListadosController extends ControladorBase{
 			$r=$this->adapter->query($sql);
 			 while ($obj = $r->fetch_object()) 
 				{
-        $ares[]=$obj;
-    		}
+    				    $ares[]=$obj;
+    				}				
 			return $ares;
 		}
     public function getResumenMatriculaCentro($rol,$id_centro=1,$tiposol=0,$modo='csv')

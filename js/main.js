@@ -1,13 +1,5 @@
 $(document).ready(function(){
 var botoncontrol="<button id='' type='button' class='btn btn-outline-dark'>Validar baremo</button>";
-
-
-
-
-$( ":input" ).select(function() {
-
-});
-
 //METODOS DE CALCULO DE SORTEO
 
 $('body').on('click', '#boton_asignar_numero', function(e){
