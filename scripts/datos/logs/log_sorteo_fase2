@@ -108,3 +108,28 @@
 [08-Apr-2020 07:41:08] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado =0
 [08-Apr-2020 07:41:08] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado = (@r := @r + 1) ORDER BY  RAND()
 [08-Apr-2020 07:41:08] : [WARNING] - OK ASIGNANDO NUM SORTEO EN FASE2
+[13-Apr-2020 08:22:55] : [WARNING] - ASIGNANDO NUMERO SORTEO
+[13-Apr-2020 08:22:55] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado =0
+[13-Apr-2020 08:22:55] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado = (@r := @r + 1) ORDER BY  RAND()
+[13-Apr-2020 08:22:55] : [WARNING] - OK ASIGNANDO NUM SORTEO EN FASE2
+[13-Apr-2020 08:23:07] : [WARNING] - ASIGNANDO NUMERO SORTEO
+[13-Apr-2020 08:23:07] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado =0
+[13-Apr-2020 08:23:07] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado = (@r := @r + 1) ORDER BY  RAND()
+[13-Apr-2020 08:23:07] : [WARNING] - OK ASIGNANDO NUM SORTEO EN FASE2
+[13-Apr-2020 08:23:07] : [WARNING] - ASIGNANDO NUMERO SORTEO
+[13-Apr-2020 08:23:07] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado =0
+[13-Apr-2020 08:23:07] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado = (@r := @r + 1) ORDER BY  RAND()
+[13-Apr-2020 08:23:07] : [WARNING] - OK ASIGNANDO NUM SORTEO EN FASE2
+[13-Apr-2020 08:23:08] : [WARNING] - ASIGNANDO NUMERO SORTEO
+[13-Apr-2020 08:23:08] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado =0
+[13-Apr-2020 08:23:08] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado = (@r := @r + 1) ORDER BY  RAND()
+[13-Apr-2020 08:23:08] : [WARNING] - OK ASIGNANDO NUM SORTEO EN FASE2
+[13-Apr-2020 08:23:09] : [WARNING] - ASIGNANDO NUMERO SORTEO
+[13-Apr-2020 08:23:09] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado =0
+[13-Apr-2020 08:23:09] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado = (@r := @r + 1) ORDER BY  RAND()
+[13-Apr-2020 08:23:09] : [WARNING] - OK ASIGNANDO NUM SORTEO EN FASE2
+[13-Apr-2020 08:23:09] : [WARNING] - ASIGNANDO NUMERO SORTEO
+[13-Apr-2020 08:23:09] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado =0
+[13-Apr-2020 08:23:09] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado = (@r := @r + 1) ORDER BY  RAND()
+[13-Apr-2020 08:23:09] : [WARNING] - OK ASIGNANDO NUM SORTEO EN FASE2
+[13-Apr-2020 08:23:20] : [WARNING] - ASIGNANDO NUMERO DESPUES DE SORTEO UPDATE alumnos_fase2 a set nordensorteo=4+nasignado-3+1 where nasignado<3 -- UPDATE alumnos_fase2 a set nordensorteo=nasignado-3+1 where nasignado>=3

@@ -20,10 +20,11 @@ $tsol=new Solicitud($conexion);
 
 $modo=$_POST['modo'];
 $rol=$_POST['rol'];
+$estado_convocatoria=$_POST['estado_convocatoria'];
 
 $_POST['id_centro_estudios_origen']=trim($_POST['id_centro_estudios_origen'],'*');
 $fsol_entrada=$_POST['fsol'];
-
+print_r($_POST);
 ######################################################################################
 $log_actualizar->warning("POST RECIBIDO ACTUALIZANDO:");
 $log_actualizar->warning(print_r($fsol_entrada,true));
@@ -108,13 +109,16 @@ if($modo=="GRABAR SOLICITUD")
 	}
 else 
 	{
+		#######################################################################################################
 		$log_actualizar->warning("ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:");
 		$log_actualizar->warning($fsol_entrada);
-		$log_actualizar->warning("ACTUALIZAR FORMULARIO RECIBIDO: ".$modo);
+		$log_actualizar->warning("ACTUALIZAR FORMULARIO RECIBIDO: ".$modo."ESTADO CONVOCATORIA: $estado_convocatoria ");
 		$log_actualizar->warning(json_encode($fsol_salida));
 		$log_actualizar->warning("ACTUALIZANDO SOLICITUD...");
 		$log_actualizar->warning(print_r($fsol_salida,true));
-		$res=$tsol->update($fsol_salida,$_POST['idsol']);
+		#######################################################################################################
+		//modificamos solicitud teniendo en cuenta la fase en la q esta el centro y el estado de la convocatoria
+		$res=$tsol->update($fsol_salida,$_POST['idsol'],$estado_convocatoria);
 	}
 if(gettype($res)=='string') 
 		print($res);

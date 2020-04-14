@@ -14,7 +14,7 @@ $tsolicitud=new UtilidadesAdmision($conexion->Conexion());
 ########################################################################################
 //Si hemos llegado al dia d elas provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
 $res=$tsolicitud->copiaTabla($tipo,0);	
-if($res==1) echo "Copia tabla solicitudes".$tipo." realizada corectamente a las ".date('H:m')." del dia ".date('d-M-Y').PHP_EOL;	
+if($res==1) echo PHP_EOL."Copia tabla solicitudes".$tipo." realizada corectamente a las ".date('H:m')." del dia ".date('d-M-Y').PHP_EOL;	
 else print("Error copiando tabla provisionales $res".PHP_EOL);
 
 ########################################################################################

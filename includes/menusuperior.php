@@ -53,7 +53,7 @@
 				 </div>
 				<?php }?>
                             </li>
-		<?php if($_SESSION['estado_convocatoria']>=30 or $_SESSION['fase_sorteo']==2) {?>
+		<?php if(($_SESSION['estado_convocatoria']<30 and $_SESSION['estado_convocatoria']>=2)  or $_SESSION['fase_sorteo']==2) {?>
                             <li class="nav-item active msuperior dropdown" id="mprovisional">
                                  <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
 				 <div class="dropdown-menu">
@@ -63,9 +63,9 @@
 																		 </div>
                             </li>
 			<?php }?>
-		<?php if($_SESSION['estado_convocatoria']>=40){?>
+		<?php if($_SESSION['estado_convocatoria']>=30){?>
                             <li class="nav-item active msuperior dropdown" id="mdefinitivo">
-                                 <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Definitivos</a>
+                                 <a class="show_definitivos nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Definitivos</a>
 		                 <div class="dropdown-menu">
 				 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="admitidos_def">Admitidos definitivo</a>
 				 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="noadmitidos_def">No admitidos definitivo</a>

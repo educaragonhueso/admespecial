@@ -28,29 +28,25 @@ class Solicitud extends EntidadBase{
 			$this->log_listados_solicitudes_fase2=new logWriter('log_listados_solicitudes_fase2',DIR_LOGS);
     }
      
-  public function copiaTabla($tipo,$centro=0)
+  public function copiaTablaProvisionalCentro($centro)
 	{
-		$tabla="alumnos_".$tipo;
-		$this->log_sorteo->warning("ENTRANDO EN COPIAR TABLA $tipo $centro $tabla");
+		$tabla_destino='alumnos_provisional_definitiva';
+		$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.est_desp_sorteo,c.nombre_centro,b.puntos_validados,a.id_centro_destino as id_centro_destino FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador'";
+	//volcamos la tabla con los datos de solicitudes y los del baremo tal como aparecen en el listado de provisionales o definitivos
+		$this->log_sorteo->warning("ENTRANDO EN COPIAR TABLA CENTRO: $centro");
 		if($centro!=0)
 			{
-			$dsql='DELETE from '.$tabla.' WHERE id_centro_destino='.$centro;
-			$isql='INSERT IGNORE INTO '.$tabla.' SELECT * from alumnos where and est_desp_sorteo="noadmitida" id_centro_destino='.$centro;
-			$this->log_sorteo->warning("CARGANDO TABLA $tabla ".$isql);
+			$dsql='DELETE from '.$tabla_destino.' WHERE id_centro_destino='.$centro;
+			$isql='INSERT IGNORE INTO '.$tabla_destino.' '.$sql.' and id_centro_destino='.$centro;
 			}
-		else
-			{
-			$dsql='DELETE from '.$tabla;
-			$isql='INSERT IGNORE INTO '.$tabla.' SELECT * from alumnos WHERE est_desp_sorteo="noadmitida"';
-
-			}
+		else return 0;
 		$this->log_sorteo->warning("BORRANDO DE TABLA $tabla ".$dsql);
 		$this->log_sorteo->warning("CARGANDO TABLA $tabla ".$isql);
 		
 		if($this->db()->query($dsql))
 			if($this->db()->query($isql)) return 1;
-			else return 0;
-		else return 0;
+			else return $this->db()->error;
+		else return $this->db()->error;
 
 	}
   public function crearPdf($id)
@@ -83,8 +79,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		return $row->fase_sorteo;
 	else return -1;
 	}
-  public function update($sol,$id){
-	
+  public function update($sol,$id,$estado_convocatoria=0){
 	//si el centro esta en estado de baremacion, ya se ha hecho el sorteo, pasamos a la tabal de provisionales
 	$fase=0;
 	if(isset($sol['id_centro_destino']))
@@ -93,10 +88,15 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		if($fase==-1) return 0;
 	}
 	$this->log_actualizar_solicitud->warning("ACTUALIZAR SOLICITUD: ".$query);
-	if($fase==2) //fase provisional o baremacion
+	if($fase==2 and $estado_convocatoria>=2 and $estado_convocatoria <30) //fase posterior al sorteo pero anterior a definitivos
 		$tabla_alumnos='alumnos_provisional';
+	elseif($estado_convocatoria>=2 and $estado_convocatoria <30) //fase posterior al sorteo pero anterior a definitivos
+		$tabla_alumnos='alumnos_provisional';
+	elseif($estado_convocatoria>=30) //fase posterior a provisionales. Las modificaciones se harán en definitivos
+		$tabla_alumnos='alumnos_definitivo';
 	else
 		$tabla_alumnos='alumnos';
+
   	$query_alumnos="UPDATE $tabla_alumnos set ";
   	$query_hermanos="UPDATE hermanos set ";
   	$query_baremo="UPDATE baremo set ";
@@ -852,8 +852,8 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 				$sqlbaseebo="SELECT a.id_alumno FROM $tabla a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=$c $order LIMIT $nvebo";
 				$sqlbasetva="SELECT a.id_alumno FROM $tabla a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=$c $order LIMIT $nvtva";
 				
-				$qebo=$this->db->query($sqlbaseebo);
-				$qtva=$this->db->query($sqlbasetva);
+		$qebo=$this->db->query($sqlbaseebo);
+		$qtva=$this->db->query($sqlbasetva);
 		$this->log_sorteo->warning("CONSULTA SOLICITUDES ADMITIDAS");
 		$this->log_sorteo->warning(print_r($sqlbaseebo,true));
 		$this->log_sorteo->warning(print_r($sqlbasetva,true));
@@ -879,8 +879,9 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 	}
 	public function actualizaSolSorteo($c=1,$numero=0,$solicitudes=0,$nvebo=0,$nvtva=0,$fasecentro=1) 
 	{
-		if($fasecentro==2) $tabla='alumnos_provisional';
-		else $tabla='alumnos';
+		//if($fasecentro==2) $tabla='alumnos_provisional';
+		//else 
+		$tabla='alumnos';
 		$resultSet=array();
 		//ponemos todas llas solicitudes a noadmitidos por si ya ha habido otro sorteo
 		$sql_excluida="update $tabla set est_desp_sorteo='noadmitida' where id_centro_destino=$c";
@@ -888,7 +889,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		$sql1="UPDATE $tabla a set nordensorteo=$solicitudes+nasignado-$numero+1 where nasignado<$numero and id_centro_destino='$c' and fase_solicitud!='borrador' ";
 		$sql2="UPDATE $tabla a set nordensorteo=nasignado-$numero+1 where nasignado>=$numero and id_centro_destino='$c' and fase_solicitud!='borrador' ";
 
-		$this->log_sorteo->warning("OBTENIENDO IDS SOLICITUDES FASE CENTRO: $fasecentro");
+		$this->log_sorteo->warning("OBTENIENDO IDS SOLICITUDES FASE CENTRO: $fasecentro, CENTRO: $c, CONSULTA: $sql1");
 		//obtenemos los ids de solicitudes admitidas según ls criterios del baremo
 		$ids=$this->getSolAdmitidas($nvebo,$nvtva,$c,$fasecentro);
 		$this->log_sorteo->warning("RESPUESTA IDS:");
@@ -942,10 +943,10 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 			return 0;
 		}
 	}
-	public function genSolDefinitivas($c=1,$nvebo=0,$nvtva=0) 
+	public function genSolDefinitivas($c=1,$nvebo=0,$nvtva=0,$fasecentro=1) 
 	{
-				//obteneos la consulta q nos devuelve el listado ordenado de solicitudes
-		$ids=$this->getSolAdmitidas($nvebo,$nvtva,$c);
+		//obteneos la consulta q nos devuelve el listado ordenado de solicitudes admitidas teniendo en cuenta la fase, si es 2 usaremos como fuene la tabla provisioalm sino la de alumnos normal
+		$ids=$this->getSolAdmitidas($nvebo,$nvtva,$c,$fasecentro);
 
 		$idsebo='';
 		foreach($ids['ebo'] as $id)
@@ -957,17 +958,17 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		$idstva=rtrim($idstva,',');	
 		if($c!=1)
 		{
-				//ponemos todas llas solicitudes a noadmitidas
-				$sql_noadmitida="update alumnos set est_desp_sorteo='noadmitida' where id_centro_destino=$c";
-				$sqlebo="UPDATE alumnos a set est_desp_sorteo='admitida' where fase_solicitud!='borrador' and tipoestudios='ebo' and id_centro_destino=$c and estado_solicitud='apta' and a.id_alumno in(".$idsebo.")";
-				$sqltva="UPDATE alumnos a set est_desp_sorteo='admitida' where fase_solicitud!='borrador' and tipoestudios='tva' and id_centro_destino=$c and estado_solicitud='apta' and a.id_alumno in(".$idstva.")";
+			//ponemos todas llas solicitudes a noadmitidas
+			$sql_noadmitida="update alumnos set est_desp_sorteo='noadmitida' where id_centro_destino=$c";
+			$sqlebo="UPDATE alumnos a set est_desp_sorteo='admitida' where fase_solicitud!='borrador' and tipoestudios='ebo' and id_centro_destino=$c and estado_solicitud='apta' and a.id_alumno in(".$idsebo.")";
+			$sqltva="UPDATE alumnos a set est_desp_sorteo='admitida' where fase_solicitud!='borrador' and tipoestudios='tva' and id_centro_destino=$c and estado_solicitud='apta' and a.id_alumno in(".$idstva.")";
 
-				$this->log_listados_definitivos->warning($sql_noadmitida);
-				$this->log_listados_definitivos->warning($sqlebo);
-				$this->log_listados_definitivos->warning($sqltva);
-				$noad=$this->db->query($sql_noadmitida);
-				$qebo=$this->db->query($sqlebo);
-				$qtva=$this->db->query($sqltva);
+			$this->log_listados_definitivos->warning($sql_noadmitida);
+			$this->log_listados_definitivos->warning($sqlebo);
+			$this->log_listados_definitivos->warning($sqltva);
+			$noad=$this->db->query($sql_noadmitida);
+			$qebo=$this->db->query($sqlebo);
+			$qtva=$this->db->query($sqltva);
         if($qebo and $qtva and $noad)
 					return 1;
 				else return 0;
@@ -985,7 +986,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 					else
 						$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios, nasignado, b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno where order by a.id_centro_destino,a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc";
 				}
-				else //En cualquier otro caso quitamos las q están en fase de borrador
+				else //En cualquier otro caso mostramos todas menos las q están en fase de borrador
 				{
 					if($c!=1)
 						$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno where $centro=".$c." and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc";
@@ -1007,7 +1008,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 	{
 		$order=" order by c.id_centro,a.tipoestudios, a.transporte desc,b.puntos_validados desc,b.validar_hnos_centro desc,b.validar_tutores_centro desc,b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),b.validar_renta_inferior desc,b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc";
 
-		if($tipo==1) $tabla_alumnos='alumnos_provisional';
+		if($tipo==1) $tabla_alumnos='alumnos_provisional_definitiva';
 		elseif($tipo==2) $tabla_alumnos='alumnos_definitivo';
 		elseif($tipo==3) $tabla_alumnos='alumnos_fase2';
 		else $tabla_alumnos='alumnos';
@@ -1034,24 +1035,20 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 					if($subtipo_listado=='admitidos_prov')
 						if($c<=1)
 							$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,c.nombre_centro,b.puntos_validados,a.id_centro_destino as id_centro FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta' and est_desp_sorteo='admitida' $order";
-							//$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,c.nombre_centro,b.puntos_validados,a.id_centro_destino as id_centro FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta' and est_desp_sorteo='admitida' order by c.id_centro desc,a.tipoestudios asc,a.transporte desc,b.puntos_validados desc";
 						else
-							$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,c.nombre_centro,b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='admitida' and id_centro=$c $order";
-							//$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,c.nombre_centro,b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='admitida' and id_centro=$c order by a.tipoestudios asc,a.transporte desc, b.puntos_validados desc,a.nordensorteo  desc";
+							$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,c.nombre_centro,b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='admitida' and c.id_centro=$c $order";
 					elseif($subtipo_listado=='noadmitidos_prov')
 						if($c<=1)
 							$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro_destino as id_centro  FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='noadmitida' $order";
 							//$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro_destino as id_centro  FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='noadmitida' order by c.id_centro, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc";
 						else
-							$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='noadmitida' and id_centro=$c $order";
+							$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta'  and est_desp_sorteo='noadmitida' and c.id_centro=$c $order";
 					
 					elseif($subtipo_listado=='excluidos_prov')
 						if($c<=1)
 							$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,a.id_centro_destino as id_centro  FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and( estado_solicitud='duplicada' or estado_solicitud='irregular') $order";
-							//$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,a.id_centro_destino as id_centro  FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and( estado_solicitud='duplicada' or estado_solicitud='irregular') order by c.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc";
 						else
-							$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador'  and( estado_solicitud='duplicada' or estado_solicitud='irregular') and id_centro=$c $order";
-							//$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador'  and( estado_solicitud='duplicada' or estado_solicitud='irregular') and id_centro=$c order by a.tipoestudios asc,a.transporte desc, b.puntos_validados desc";
+							$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador'  and( estado_solicitud='duplicada' or estado_solicitud='irregular') and c.id_centro=$c $order";
 				$this->log_listados_provisionales->warning("CONSULTA SOLICITUDES PROVISIONALES ADMITIDOS SUBTIPO: ".$subtipo_listado);
 				$this->log_listados_provisionales->warning($sql);
 				}

@@ -72,9 +72,9 @@ class ListadosController extends ControladorBase{
   public function actualizaSolicitudesSorteo($id_centro,$numero,$solicitudes,$nvebo=0,$nvtva=0,$fasecentro=1)
 	{
 		//Creamos el objeto solicitud
-    $solicitud=new Solicitud($this->adapter);
-    $res=$solicitud->actualizaSolSorteo($id_centro,$numero,$solicitudes,$nvebo,$nvtva,$fasecentro);
-	return $res;
+    		$solicitud=new Solicitud($this->adapter);
+ 		$res=$solicitud->actualizaSolSorteo($id_centro,$numero,$solicitudes,$nvebo,$nvtva,$fasecentro);
+		return $res;
 	}
   public function getMatriculas($id_centro=1,$tiposol=0,$fase_sorteo=0,$modo='normal')
 	{
@@ -92,16 +92,20 @@ class ListadosController extends ControladorBase{
 		}
 	return $allmatriculas;
 	}
-  public function getSolicitudes($id_centro=1,$tiposol=0,$fase_sorteo=0,$modo='normal',$subtipo_listado='',$provincia='todas',$estado_convocatoria=0)
+  public function getSolicitudes($id_centro=1,$tiposol=0,$fase_sorteo=0,$modo='normal',$subtipo_listado='',$provincia='todos',$estado_convocatoria=0)
 	{
 		$this->log_gencsvs->warning('ENTRANDO EN GETSOLICITUDEs, MODO: '.$modo);
 		$solicitud=new Solicitud($this->adapter);
 		if($modo=='normal')// listados previos al sorteo
-    		{	
-	    		if($fase_sorteo==2)
+    		{
+			/*	
+	    		if($fase_sorteo==2 and $estado_convocatoria<30)
 				$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia,'alumnos_provisional');
+			elseif($estado_convocatoria>=30)
+				$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia,'alumnos_definitivo');
 			else
-	    			$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia);
+			*/
+	    		$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia);
  		}
 		elseif($modo=='csv')
 		{

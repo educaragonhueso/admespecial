@@ -713,6 +713,7 @@ else $("#oponenautorizar"+id).prop('disabled', true);
 /////////////////////////////////////////////////////////////////////////////////
 //ACTUALIZAR - CREAR NUEVA SOLICITUD
 $('body').on('click', '.send', function(e){
+  var vestado_convocatoria=$('#estado_convocatoria').val();
   var tipo=$(this).text();
   var vrol=$('#rol').attr("value");
   var vid_centro='';
@@ -754,7 +755,7 @@ $('body').on('click', '.send', function(e){
 	{
 	$.ajax({
 	  method: "POST",
-	  data: { fsol:fsolicitud,idsol:vid,modo:tipo,id_centro_destino:vid_centro,ptsbaremo:vptsbaremo,rol:vrol},
+	  data: { fsol:fsolicitud,idsol:vid,modo:tipo,id_centro_destino:vid_centro,ptsbaremo:vptsbaremo,rol:vrol,estado_convocatoria:vestado_convocatoria},
 	  url:'../scripts/ajax/guardar_solicitud.php',
 	 	success: function(data) {
 		if(data.indexOf('10')!=-1)
@@ -807,14 +808,14 @@ $('body').on('click', '.send', function(e){
 			return;
 			}
 			if(data.indexOf('ERROR')!=-1){ alert(data);return ;}
-  		else {
+  			else {
 						$('#sol_table').find('tbody').prepend(data);
 							$.alert({
 								title: 'SOLICITUD GUARDADA CORRECTAMENTE',
 								content: 'DE ACUERDO'
 								});
 					}
-		 				$('#fnuevasolicitud').remove();
+		 			$('#fnuevasolicitud').remove();
 			}
 			else if(tipo=='ACTUALIZAR SOLICITUD')
 			{
@@ -1010,7 +1011,7 @@ $('body').on('click', '.calumno', function(e){
   var vmodo='normal';
   var vid=$(this).attr("data-idal");
   var idappend="filasol"+vid;
-  var vestado=$('#estado_convocatoria').text();
+  var vestado_convocatoria=$('#estado_convocatoria').val();
   var vpin=$('#pin').attr("value");
   var vrol=$('#rol').attr("value");
   var vidcentro=$('#id_centro').text();
@@ -1021,7 +1022,7 @@ $('body').on('click', '.calumno', function(e){
 	}
 $.ajax({
   method: "POST",
-  data: {id_alumno:vid,modo:vmodo,pin:vpin,rol:vrol,id_centro:vidcentro},
+  data: {id_alumno:vid,modo:vmodo,pin:vpin,rol:vrol,id_centro:vidcentro,estado_convocatoria:vestado_convocatoria},
   url:'../scripts/ajax/editar_solicitud.php',
    	success: function(data) 
 	{
@@ -1038,6 +1039,7 @@ $.ajax({
 			else	$("#l_matricula").after(data);
 		}
       	$("#"+idappend).after(data);
+	console.log(data);
 	if(vestado=='3') {disableForm($('#fsolicitud'+vid)) ;}
       	},
       	error: function() {
@@ -1143,8 +1145,8 @@ $.ajax({
       }
 });
 });
-//LISTADO SOLICITUDES PROVISIONALES ACTUALIZADO
-$(".lprovisionales").click(function () {  
+//LIS  TADO SOLICITUDES PROVISIONALES ACTUALIZADO
+$('body').on('click', '.lprovisionales', function(e){
   var vpdf='1';
   var vid_centro=$('#id_centro').text();
   var vrol=$('#rol').attr("value");

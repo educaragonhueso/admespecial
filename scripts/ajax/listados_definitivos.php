@@ -66,7 +66,7 @@ $log_listados_definitivos->warning("OBTENIENDO LISTADOS DEFINITIVOS, CENTRO: ".$
 //actualizamos solicitudes para tener en cuenta las que hayan cambiado
 //Esto solo puede hacerse en el momento q finalice el plazo de provisionales!!!!!!!!
 $solicitud=new Solicitud($conexion);
-$solicitudes=$solicitud->genSolDefinitivas($id_centro,$vacantes_ebo,$vacantes_tva); 
+$solicitudes=$solicitud->genSolDefinitivas($id_centro,$vacantes_ebo,$vacantes_tva,2); 
 //mostramos las solitudes completas sin incluir borrador
 $solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo=0,$modo='definitivos',$subtipo_listado); 
 

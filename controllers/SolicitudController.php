@@ -390,7 +390,7 @@ class SolicitudController extends ControladorBase{
 		return 1;
 		}
 
-    public function showFormSolicitud($id=0,$id_centro=0,$rol='alumno',$collapsed=1,$imprimir=0,$fase_sorteo=0)
+    public function showFormSolicitud($id=0,$id_centro=0,$rol='alumno',$collapsed=1,$imprimir=0,$fase_sorteo=0,$estado_convocatoria=0)
 		{
 			//Creamos una nueva solicitud
 			$solicitud=new Solicitud($this->adapter);
@@ -406,8 +406,12 @@ class SolicitudController extends ControladorBase{
 			//modificacion solicitud
 			else
 			{
-				if($fase_sorteo==2)
+				if($fase_sorteo==2 and $estado_convocatoria>=2 and $estado_convocatoria<30)
 					$dsolicitud=$solicitud->getSol_pruebas($id,'existente',0,'alumnos_provisional');
+				elseif($estado_convocatoria>=2 and $estado_convocatoria<30)
+					$dsolicitud=$solicitud->getSol_pruebas($id,'existente',0,'alumnos_provisional');
+				elseif($estado_convocatoria>=30)
+					$dsolicitud=$solicitud->getSol_pruebas($id,'existente',0,'alumnos_definitivo');
 				else
 					$dsolicitud=$solicitud->getSol_pruebas($id,'existente',0,'alumnos');
 				

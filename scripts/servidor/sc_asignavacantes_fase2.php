@@ -27,7 +27,6 @@ $centros_fase2=$tcentros_fase2->getCentrosFase2();
 
 $utils=new UtilidadesAdmision($ccentros->conectar->conexion(),'',$tcentros_fase2);
 
-
 //asignar vacantetes de cada centro
 $avac=$utils->asignarVacantesCentros($centros_fase2,$alumnos_fase2);
 if($avac==1)

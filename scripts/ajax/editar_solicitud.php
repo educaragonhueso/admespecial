@@ -31,12 +31,8 @@ $log_editar_solicitud->warning("FASE SORTEO CENTRO: $id_centro , FASE: $fase_sor
 }
 else $id_centro=0;
 
-//revisar si es un administrador para mostrar los datos de la tabla provisionales
-if(isset($_POST['estado_convocatoria'])){
-	if($_POST['estado_convocatoria']>=30){
-		$fase_sorteo=2;
-		}
-}
+$estado_convocatoria=$_POST['estado_convocatoria'];
+print_r($_POST);
 $estado_sol='irregular';
 $solo_lectura=0;
 
@@ -57,7 +53,7 @@ if($rol=='alumno')
 if(isset($_POST['codigo_centro'])) $id_centro=$_POST['codigo_centro'];
 
 //obtenemos formulario con los datos
-$sform=$scontroller->showFormSolicitud($id,$id_centro,$rol,1,$solo_lectura,$fase_sorteo);
+$sform=$scontroller->showFormSolicitud($id,$id_centro,$rol,1,$solo_lectura,$fase_sorteo,$estado_convocatoria);
 
 $botonimp='<a href="imprimirsolicitud.php?id='.$id.'" target="_blank"><input class="btn btn-primary imprimirsolicitud" style="background-color:brown;padding-left:20px" type="button" value="Vista Previa Impresion Documento"/></a>';
 //Si el id es cero obentemos el nuevo id

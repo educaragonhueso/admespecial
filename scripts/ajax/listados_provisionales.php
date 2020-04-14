@@ -39,7 +39,7 @@ $titulo_listado=strtoupper($tipo_listado)." ".strtoupper($subtipo_listado).$tcen
 $estado_centro=$tcentro->getFaseSorteo();
 //OPERACIONES ACTUALIZACION SOLICITUDES SEGUN ESTADO CONVOCATORIA
 //Si se ha realizado ya el sorteo en ese centro y aun no estamos en el estado de provisionales
-if($estado_centro<=2 and $estado_convocatoria<=3)
+if($estado_centro==2 and $estado_convocatoria<30)
 	{
 		$nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
 		$nsorteo=$tcentro->getNumeroSorteo();
@@ -47,12 +47,11 @@ if($estado_centro<=2 and $estado_convocatoria<=3)
 		$vacantes_ebo=$dsorteo[0]->vacantes;
 		$vacantes_tva=$dsorteo[1]->vacantes;
 		$log_listados_provisionales->warning("ACTUALIZANDO DATOS:  NSOLICITUDES/IDCENTRO/ESTADO CENTRO $nsorteo/$id_centro/$estado_centro");
-		//$tcentro->actualizaVacantes($vacantes_ebo,$vacantes_tva);
-		if($estado_centro==2)
-		{
-			if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva,2)==0) 
+	
+		if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva,2)==0) 
 				print("NO HAY VACANTES<br>");
-		}
+		$ct=$tsolicitud->copiaTablaProvisionalCentro($id_centro);	
+		/*
 		elseif($estado_centro<2)
 		{
 			if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva,1)==0) 
@@ -60,11 +59,11 @@ if($estado_centro<=2 and $estado_convocatoria<=3)
 		//si se ha hecho el sorteo en el centro, copiamos la tabla a provisionales
 		$tsolicitud->copiaTabla('provisional',$id_centro);	
 		}
+		*/
 	########################################################################################
-	$log_listados_provisionales->warning("CREADA TABLA PROV. ESTADO: ".$tcentro->getEstado());
+	$log_listados_provisionales->warning("ACTUALIZADA TABLA PROVISIONALES $ct");
 	########################################################################################
 	}
-
 $cabecera="campos_cabecera_".$subtipo_listado;
 $camposdatos="campos_bbdd_".$subtipo_listado;
 

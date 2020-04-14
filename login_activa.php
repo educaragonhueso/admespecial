@@ -52,6 +52,8 @@ elseif($_SESSION['fecha_actual']>=DIA_PROVISIONALES and $_SESSION['fecha_actual'
  		$_SESSION['estado_convocatoria'] =30;//0. inicio inscripciones, 1. dia de sorteo, 2. baremacion, 3. Provisionales, 4. Definitivos      
 elseif($_SESSION['fecha_actual']==DIA_DEFINITIVOS) //jueves 16 abril
  		$_SESSION['estado_convocatoria'] =40;//0. inicio inscripciones, 1. dia de sorteo, 2. baremacion, 3. Provisionales, 4. Definitivos      
+elseif($_SESSION['fecha_actual']>=DIA_SORTEO_FASE2) //jueves 16 abril
+ 		$_SESSION['estado_convocatoria'] =50;//0. inicio inscripciones, 1. dia de sorteo, 2. baremacion, 3. Provisionales, 4. Definitivos      
 
 $_SESSION['fecha_inscripcion'] = date("2020/11/01");      
 $_SESSION['fecha_iniccioprovisionales'] = date("2019/11/01");      

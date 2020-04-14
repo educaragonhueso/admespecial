@@ -31,9 +31,6 @@ if(isset($_POST['provincia']))
 
 $tsolicitud=new Solicitud($conexion);
 
-//si el cecntro esta en fase 2 mostramos solicitudes de listados provisionales
-//$fase_centro=$tsolicitud->getFaseCentro($id_centro);
-
 $tcentro->setNombre();
 $nombre_centro=$tcentro->getNombre();
 $nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
@@ -46,6 +43,26 @@ $form_nuevasolicitud='<div class="input-group-append" id="cab_fnuevasolicitud"><
 
 $log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES CON ROL: ".$_POST['rol']);
 
+//si hay sorteo mostraremos la opción de provisionales
+$menu_provisionales='
+	    <li class="nav-item active msuperior dropdown" id="provisional">
+		 <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
+		 <div class="dropdown-menu">
+		 <a class="lprovisionales dropdown-item" href="#" data-subtipo="admitidos_prov">Admitidos provisional</a>
+		 <a class="lprovisionales dropdown-item" href="#" data-subtipo="noadmitidos_prov">No admitidos provisional</a>
+		 <a class="lprovisionales dropdown-item" href="#" data-subtipo="excluidos_prov">Excluidos provisional</a>
+																 </div>
+	    </li>::';		
+// opción de provisionales
+$menu_definitivos='
+	    <li class="nav-item active msuperior dropdown" id="definitivo">
+		 <a class="show_definitivos nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Definitivos</a>
+		 <div class="dropdown-menu">
+		 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="admitidos_def">Admitidos definitivo</a>
+		 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="noadmitidos_def">No admitidos definitivo</a>
+		 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="excluidos_def">Excluidos definitivo</a>
+																 </div>
+	    </li>::';		
 
 //Para el caso de acceso del administrador o servicios provinciales
 if($_POST['rol']=='admin' or $_POST['rol']=='sp')
@@ -73,7 +90,7 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 			print('<br>');
 			}
 }
-else
+else//accedemos como centro
 {
 	//Si se ha asignado el nuemro de sorteo habilitamos la casilla para introducir el número
 	if($fase_sorteo==1) $disabled='';
@@ -133,35 +150,31 @@ else
 		$log_listado_solicitudes->warning("COPIANDO TABLA IDCENTRO: ".$id_centro);
 		########################################################################################
 		$tcentro->setFaseSorteo(2);
-		//$tcentro->actualizaVacantes($vacantes_ebo,$vacantes_tva);
-		$ct=$tsolicitud->copiaTabla('provisional',$id_centro);	
+		
+		$ct=$tsolicitud->copiaTablaProvisionalCentro($id_centro);	
 		$log_listado_solicitudes->warning("RESULTADO COPIAR TABLA $ct ");
 		$fase_sorteo=2;
 		//Si hemos llegado al dia de las provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
 		}	
-		########################################################################################
-		$log_listado_solicitudes->warning("ACTUALIZANDO DATOS ALUMNOS SORTEO vacantes: ".$nsolicitudes);
-		########################################################################################
-
-		//si hay sorteo mostraremos la opción de provisionales
-		$menu_provisionales='
-                            <li class="nav-item active msuperior dropdown" id="provisional">
-                                 <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
-				 <div class="dropdown-menu">
-				 <a class="lprovisionales dropdown-item" href="#" data-subtipo="admitidos_prov">Admitidos provisional</a>
-				 <a class="lprovisionales dropdown-item" href="#" data-subtipo="noadmitidos_prov">No admitidos provisional</a>
-				 <a class="lprovisionales dropdown-item" href="#" data-subtipo="excluidos_prov">Excluidos provisional</a>
-																		 </div>
-                            </li>::';		
 	}
-
+	//SECCION OBTENCION DATOS
 	########################################################################################
-	$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES, FASE: ".$fase_sorteo);
+	$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES, FASE: ".$fase_sorteo." ESTADO CONVOCATORIA: $estado_convocatoria");
 	########################################################################################
 	if($hoy==DIA_SORTEO) {$dia_sorteo=1;}
-	if($fase_sorteo==2) {
-	//mostramos las solitudes completas sin incluir borrador
-	$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo,'normal','','todos'); 
+	
+	/*
+	//si ya se ha realizado el sorteo o el estado es provisional (30) mostramos las solicitudes correspondientes
+	if($fase_sorteo==2 || $estado_convocatoria>=2) 
+	{
+		//si se ha realizado el sorteo en el centro pero no estamos en provisionales todavía mostramos las solitudes completas sin incluir borrador
+		if($estado_convocatoria<30)
+			$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo,'normal','','todos',$estado_convocatoria); 
+		//si estamos en provisionales obtenemos solicitudes de la tabla  de definitivos
+		if($estado_convocatoria>=30){
+			$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo,'normal','','todos',$estado_convocatoria); 
+			print("LISTANDO SOLICITUDES NUMERO: ".sizeof($solicitudes)." FASE: ".$fase_sorteo." ESTADO: $estado_convocatoria");
+			}
 	}
 	elseif($fase_sorteo==0 or $fase_sorteo==1)
 	{
@@ -171,15 +184,20 @@ else
 	}
 	else
 	{
-			print("iENTRANDO PROV FASE SORTEO $fase_sorteo");
+			print("ENTRANDO PROV FASE SORTEO $fase_sorteo");
 			$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO");
 			//mostramos solicitudes con el numero de sorteo asignado
 			$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo); 
 	}
+	*/
+	//obtenemos solicitudes normales
+	$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo); 
 	$tablaresumen=$tcentro->getResumen($_POST['rol'],'alumnos');
 	$nombre_centro=$tcentro->getNombre();
 
-	  #Mostramos formulario para el sorteo si es el dia correcto
+
+	//SECCION MOSTAR DATOS
+	#Mostramos formulario para el sorteo si es el dia correcto
         $fase_sorteo=$tcentro->getFaseSorteo();
 	#Mostramos formulario para el sorteo si es el dia correcto
 	$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES, : FASE SORTEO: ".$fase_sorteo." DIA SORTEO: ".$dia_sorteo);
@@ -203,14 +221,14 @@ else
                         print($filtro_solicitudes);
                         print($list->showSolicitudes($solicitudes,$_POST['rol']));
         }
-	else
+	//elseif($fase_sorteo==2 and $estado_convocatoria<30)
+	elseif($fase_sorteo==2)
 	{
-			print($menu_provisionales);
+			//print($menu_provisionales);
                         if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
                         if($estado_convocatoria<=30) print($form_nuevasolicitud);
 			print($list->showSolicitudes($solicitudes,$_POST['rol']));
 	}
-
 }
 
 
