@@ -59,6 +59,7 @@ class UtilidadesAdmision{
  	public function setAlumnoCentroFase2($ida,$idc,$nc){
 		//modificamos el centro en a tabla de alumnos_fase2
 		$sql="UPDATE alumnos_fase2 set id_centro_definitivo=$idc,centro_definitivo='$nc' where id_alumno=$ida";
+		print($sql.PHP_EOL);
 		if(!$this->con->query($sql)) return $this->con->error;
 		else return 1;
 	}
@@ -95,43 +96,38 @@ class UtilidadesAdmision{
 			$vasignadaebo=1;
 			$this->log_fase2->warning("ENTRANDO CENTRO $nombrecentro FASE2 EBO, plazas: $vebo");
 			print("ENTRANDO CENTRO $nombrecentro, idcentro ".$centro['id_centro']." FASE2 EBO, plazas: $vebo".PHP_EOL);
+			$idcentro=$centro['id_centro'];
 			$vasignadaebo=1;
 			while($vebo>0 and $vasignadaebo==1)
 				{
 				$vasignadaebo=0;
+				
 				//revisar cada alumno (hay q considerar el orden de elección del alumno, el sorteo etc.) y si ha solicitado plaza en primera opción
 				foreach($alumnos_fase2 as $alumno)
 					{
-					if($alumno->centro_definitivo!='nocentro' || $alumno->tipoestudios!='ebo') continue;
-					print("PROCESANDO ALUMNO: ");
-					print_r($alumno);
-					print("CENTRO SOLICITADO ALUMNO: $alumno->id_centro".PHP_EOL);	
-					if($alumno->id_centro==$centro['id_centro'])
+					if($alumno->centro_definitivo!='NOCENTRO' || $alumno->tipoestudios!='ebo') continue;
+					print("ALUMNO ID: $alumno->id_alumno  CENTRO DE ALUMNO: $alumno->id_centro CENTRO DEFINITIVO: $alumno->centro_definitivo".PHP_EOL);	
+					if($alumno->id_centro==$idcentro)
 					{ 
 						$this->setAlumnoCentroFase2($alumno->id_alumno,$centro['id_centro'],$nombrecentro);
 						$asignadaebo=1;
 						$vebo--;
-						print(PHP_EOL."coincidencia alumno: $alumno->id_alumno. Centro: $nombrecentro".PHP_EOL);
+						print(PHP_EOL."COINCIDENCIA: $alumno->id_alumno CENTRO: $nombrecentro".PHP_EOL);
 						//comprobamos si tenía reserva de plaza, en caso afirmativo, se genera nueva plaza
-						print("COMPROBANDO RESERVA DE PLAZA DEL CENTRO $nombrecentro ALUMNO: $alumno->id_alumno");
 						$reserva=$this->getReservaPlaza($alumno->id_alumno,'ebo');
-						//si habia reserva de plaza tenemos que actualizar las vacantes para ese centro y volver a procesarlo
-						if($reserva!=0)
-						{
-							if($this->setVacantesCentroFase2($reserva,0,'ebo',1)!=1) return 0;
-							print("ACTUALIZADA VACANTE CENTRO $reserva ALUMNO: ".$alumno->id_alumno);
-							//intentamos asignar la vacante nueva
-							$vc=$this->asginarVacanteCentro($reserva,$alumnos_fase2);
-							if($vc!=0)
-							{ 
-								print("ASIGNADA PLAZA RESERVA CENTRO $reserva");
-							}
-							else
-								print("NO ASIGNADA PLAZA RESERVA CENTRO $reserva");
-						}
-						print("ENTREGADA PLAZA DEL CENTRO $nombrecentro A: ".$alumno->id_alumno);
+						print(PHP_EOL."ENTREGADA PLAZA DEL CENTRO $nombrecentro A: ".$alumno->id_alumno.PHP_EOL);
 						$this->log_fase2->warning("ENTREGADA PLAZA DEL CENTRO $nombrecentro A: $alumno->id_alumno");
+						//si habia reserva de plaza tenemos que actualizar las vacantes para ese centro y volver a procesarlo
+						print(PHP_EOL."COMPROBANDO RESERVA DE PLAZA $reserva[0]".PHP_EOL);
+						if($reserva[0]!=0 and $alumno->id_centro!=$reserva[0])
+						{
+							if($this->setVacantesCentroFase2($reserva[0],0,'ebo',1)!=1) return 0;
+							print("LIBERADA RESERVA CENTRO $reserva[0] ALUMNO: ".$alumno->id_alumno);
+							if($this->setVacantesCentroFase2($idcentro,$vebo,'ebo')!=1) return 0;
+							return -2;
+						}
 					}
+					//si se acaban las vacantes del centro
 					if($vebo==0)
 						{ 
 						if($this->setVacantesCentroFase2($centro['id_centro'],$vebo,'ebo')!=1) return 0;
@@ -145,6 +141,7 @@ class UtilidadesAdmision{
 			if($this->setVacantesCentroFase2($centro['id_centro'],$vebo,'ebo')!=1) return 0;
 			}
 		print("FIN asignaciones EBO".PHP_EOL);
+		exit();
 		//seguimos con las tva
 		foreach($centros_fase2 as $centro)
 			{			

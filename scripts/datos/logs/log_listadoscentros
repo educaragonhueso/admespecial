@@ -63338,3 +63338,159 @@
 )
 
 [19-Apr-2020 09:04:26] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - CONSULTA CENTROS
+[19-Apr-2020 21:21:01] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)
+[19-Apr-2020 21:21:01] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[19-Apr-2020 21:21:01] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 24
+    [type] => 0
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22002338
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22002511
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22003835
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22004891
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22005157
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22010001
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44003259
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44004148
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50000850
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50004612
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50006049
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50006128
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50007376
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50007674
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50008630
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50008678
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50008915
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50009488
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50009646
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50010387
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50011537
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50017369
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50018131
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[19-Apr-2020 21:21:01] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50019408
+)
+
+[19-Apr-2020 21:21:01] : [WARNING] - CABECERA EN SHOWTABLAS: no
