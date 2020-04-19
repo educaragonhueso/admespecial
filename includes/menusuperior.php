@@ -77,7 +77,8 @@
                             <li class="nav-item active msuperior dropdown" id="mdefinitivo">
                                  <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASEII</a>
 		                 <div class="dropdown-menu">
-				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol">Listado Solicitudes fase2</a>
+				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_ebo">Listado Solicitudes fase2 EBO</a>
+				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_tva">Listado Solicitudes fase2 TVA</a>
 				 </div>
                             </li>
 		<?php }?>

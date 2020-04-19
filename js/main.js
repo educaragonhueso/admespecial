@@ -35,7 +35,7 @@ $('body').on('click', '#boton_realizar_sorteo', function(e){
 
 var vid=$(this).attr("id");
 var vrol=$('#rol').attr("value");
-var vestadoconvocatoria=$('#estado_convocatoria').text();
+var vestadoconvocatoria=$('#estado_convocatoria').val();
 var vidcentro=$('#id_centro').text();
 var vsolicitudes=$(this).attr("data-solicitudes");
 var vnum_sorteo=$('#num_sorteo').val();
@@ -71,6 +71,7 @@ return;
 				}
 				$("#l_matricula").html(data);
 				$("#tresumen").hide();
+				$("#form_sorteo_parcial").hide();
 				}
 		},
 	      error: function() {
@@ -141,6 +142,7 @@ $('#calle_dllimitrofe').hide('slow');
 $('body').on('change', 'input[type=checkbox][name*=baremo_tutores_centro]', function(e){
 var vid=$(this).attr("id");
 var vid=vid.replace('baremo_tutores_centro','');
+
 var bar_def=recalcular_baremo(vid);
 var val=$(this).attr("value");
 if(val=='0')
@@ -149,6 +151,7 @@ else
 	{
 		$(this).attr('value','0');
 		$("button[name=boton_baremo_validar_tutores_centro"+vid+"]").text('Validar tutores trabajan centro')
+		$('#baremo_validar_tutores_centro'+vid).val('0');
 	}
 });
 
@@ -168,6 +171,7 @@ else
 	{
 	$(this).attr('value','0');
 	$("button[name=boton_baremo_validar_renta_inferior"+vid+"]").text('Validar renta')
+	$('#baremo_validar_renta_inferior'+vid).val('0');
 	}
 });
 
@@ -202,85 +206,87 @@ $('body').on('change', 'input[type=radio][name*=baremo_tipo_familia]', function(
 });
 
 function recalcular_baremo(id){
-var totalbaremo=0;
-var total_hbaremo=0;
-var total_baremo_validado=0;
+	var totalbaremo=0;
+	var total_hbaremo=0;
+	var total_baremo_validado=0;
 
-var baremo1=$('input[name=baremo_proximidad_domicilio'+id+']:checked').attr("data-baremo");
-var baremo1_validado=$('#baremo_validar_proximidad_domicilio'+id).val();
+	var baremo1=$('input[name=baremo_proximidad_domicilio'+id+']:checked').attr("data-baremo");
+	var baremo1_validado=$('#baremo_validar_proximidad_domicilio'+id).val();
 
 
-var baremo2=$('input[id=baremo_tutores_centro'+id+']:checked').attr("data-baremo");
-var baremo2_validado=$('#baremo_validar_tutores_centro'+id).val();
+	var baremo2=$('input[id=baremo_tutores_centro'+id+']:checked').attr("data-baremo");
+	var baremo2_validado=$('#baremo_validar_tutores_centro'+id).val();
 
-var baremo3=$('input[id=baremo_renta_inferior'+id+']:checked').attr("data-baremo");
-var baremo3_validado=$('#baremo_validar_renta_inferior'+id).val();
+	var baremo3=$('input[id=baremo_renta_inferior'+id+']:checked').attr("data-baremo");
+	var baremo3_validado=$('#baremo_validar_renta_inferior'+id).val();
 
-var baremo4=$('input[name=baremo_discapacidad'+id+']:checked').attr("data-baremo");
-var baremo4_validado=$('#baremo_validar_discapacidad'+id).val();
+	var baremo4=$('input[name=baremo_discapacidad'+id+']:checked').attr("data-baremo");
+	var baremo4_validado=$('#baremo_validar_discapacidad'+id).val();
 
-var baremo5=$('input[name=baremo_tipo_familia'+id+']:checked').attr("data-baremo");
-var baremo5_validado=$('#baremo_validar_tipo_familia'+id).val();
+	var baremo5=$('input[name=baremo_tipo_familia'+id+']:checked').attr("data-baremo");
+	var baremo5_validado=$('#baremo_validar_tipo_familia'+id).val();
 
-var baremo_h1=$('#hermanos_datos_baremo1'+id).val();
-var baremo_h2=$('#hermanos_datos_baremo2'+id).val();
-var baremo_h3=$('#hermanos_datos_baremo3'+id).val();
-var baremo6_validado=$('#baremo_validar_hnos_centro'+id).val();
+	var baremo_h1=$('#hermanos_datos_baremo1'+id).val();
+	var baremo_h2=$('#hermanos_datos_baremo2'+id).val();
+	var baremo_h3=$('#hermanos_datos_baremo3'+id).val();
+	var baremo6_validado=$('#baremo_validar_hnos_centro'+id).val();
 
-if(baremo1)
+	if(baremo1)
+		{
+		totalbaremo=totalbaremo+parseInt(baremo1);
+		if(baremo1_validado==1) 	total_baremo_validado=total_baremo_validado+parseInt(baremo1);
+		}
+	if(baremo2)
+		{
+		totalbaremo=totalbaremo+parseInt(baremo2);
+		if(baremo2_validado==1) 	total_baremo_validado=total_baremo_validado+parseInt(baremo2);
+		}
+	if(baremo3)
+		{
+		totalbaremo=totalbaremo+parseInt(baremo3);
+		if(baremo3_validado==1) 	total_baremo_validado=total_baremo_validado+parseInt(baremo3);
+		}
+	if(baremo4)
+		{
+		totalbaremo=totalbaremo+parseFloat(baremo4);
+		if(baremo4_validado==1) 	total_baremo_validado=total_baremo_validado+parseFloat(baremo4);
+		}
+	if(baremo5)
+		{
+		totalbaremo=totalbaremo+parseFloat(baremo5);
+		if(baremo5_validado==1) 	total_baremo_validado=total_baremo_validado+parseFloat(baremo5);
+		}
+	//calculo baremo de hermanos en el centro
+	if($('#num_hbaremo'+id).is(':checked'))
 	{
-	totalbaremo=totalbaremo+parseInt(baremo1);
-	if(baremo1_validado==1) 	total_baremo_validado=total_baremo_validado+parseInt(baremo1);
+	if(baremo_h1.length>=3) 
+		{
+		total_hbaremo=total_hbaremo+8;
+		}
+	if(baremo_h2.length>=3) 
+		{
+		total_hbaremo=total_hbaremo+1;
+		}
+	if(baremo_h3.length>=3) 
+		{
+		total_hbaremo=total_hbaremo+1;
+		}
+	if(baremo6_validado==1){ 	
+		total_baremo_validado=total_baremo_validado+parseFloat(total_hbaremo);	
+				}
 	}
-if(baremo2)
-	{
-	totalbaremo=totalbaremo+parseInt(baremo2);
-	if(baremo2_validado==1) 	total_baremo_validado=total_baremo_validado+parseInt(baremo2);
-	}
-if(baremo3)
-	{
-	totalbaremo=totalbaremo+parseInt(baremo3);
-	if(baremo3_validado==1) 	total_baremo_validado=total_baremo_validado+parseInt(baremo3);
-	}
-if(baremo4)
-	{
-	totalbaremo=totalbaremo+parseFloat(baremo4);
-	if(baremo4_validado==1) 	total_baremo_validado=total_baremo_validado+parseFloat(baremo4);
-	}
-if(baremo5)
-	{
-	totalbaremo=totalbaremo+parseFloat(baremo5);
-	if(baremo5_validado==1) 	total_baremo_validado=total_baremo_validado+parseFloat(baremo5);
-	}
-//calculo baremo de hermanos en el centro
-if($('#num_hbaremo'+id).is(':checked'))
-{
-if(baremo_h1.length>=3) 
-	{
-	total_hbaremo=total_hbaremo+8;
-	}
-if(baremo_h2.length>=3) 
-	{
-	total_hbaremo=total_hbaremo+1;
-	}
-if(baremo_h3.length>=3) 
-	{
-	total_hbaremo=total_hbaremo+1;
-	}
-if(baremo6_validado==1){ 	total_baremo_validado=total_baremo_validado+parseFloat(total_hbaremo);	}
-}
-else
-	{ 
-	total_hbaremo=0;
-	}
-totalbaremo=totalbaremo+total_hbaremo;
+	else
+		{ 
+		total_hbaremo=0;
+		}
+	totalbaremo=totalbaremo+total_hbaremo;
 
-$("#id_puntos_baremo_totales"+id).text(totalbaremo);
-$("#id_puntos_baremo_validados"+id).text(total_baremo_validado);
-//cambiamos valore sen campos de formulario
-$("#btotales"+id).val(totalbaremo);
-$("#bvalidados"+id).val(total_baremo_validado);
-comprobar_baremo(totalbaremo,total_baremo_validado,id);
+	$("#id_puntos_baremo_totales"+id).text(totalbaremo);
+	$("#id_puntos_baremo_validados"+id).text(total_baremo_validado);
+	//cambiamos valore sen campos de formulario
+	$("#btotales"+id).val(totalbaremo);
+	$("#bvalidados"+id).val(total_baremo_validado);
+	comprobar_baremo(totalbaremo,total_baremo_validado,id);
 
 return totalbaremo;
 }
@@ -758,14 +764,7 @@ $('body').on('click', '.send', function(e){
 	  data: { fsol:fsolicitud,idsol:vid,modo:tipo,id_centro_destino:vid_centro,ptsbaremo:vptsbaremo,rol:vrol,estado_convocatoria:vestado_convocatoria},
 	  url:'../scripts/ajax/guardar_solicitud.php',
 	 	success: function(data) {
-		if(data.indexOf('10')!=-1)
-		{
-			$.alert({
-				title: 'ERROR CREANDO SOLICITUD',
-				content: data
-				});
-		return;
-		} 
+		console.log(data);
 		if(data.indexOf('1062')!=-1) 
 		{
 			error='El dni del tutor ya existe';
@@ -1040,7 +1039,7 @@ $.ajax({
 		}
       	$("#"+idappend).after(data);
 	console.log(data);
-	if(vestado=='3') {disableForm($('#fsolicitud'+vid)) ;}
+	if(vestado_convocatoria=='3') {disableForm($('#fsolicitud'+vid)) ;}
       	},
       	error: function() {
         alert('PROBLEMAS EDITANDO SOLICITUD!');

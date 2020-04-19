@@ -1,3 +1,28 @@
+PRUEBAS PREVIO REINICIO 
+
+0. Usuario alumno
+
+	Crear solicitud
+	Modificar solicitud
+		En perioro ordinario
+		Ultimo dia
+		Despues plazo
+
+1. Usuario centro
+
+	Crear solicitud
+	Modificar solicitud
+		periodo normal
+		en provisionales
+
+2. Usuario sp
+
+
+3. Usuario admin
+
+
+
+
 SECUENCIA PROCESO ADMISION
 
 1. FASE 0
@@ -31,8 +56,16 @@ En el momento q se determine se permitirá realizar un nuevo sorteo para asignar
 
 TAREAS FASE II
 
+-Dar de alta a dos alumno en matricula
+-Dar de alta dos solicitudes reservando plaza, como si fuera el alumno anterior
+-Realizar el proceso de admisión de forma q el alumno sea no admitido  y el otro sea admitido
+-En los listados provisionales poner el color rojo en el alumno admitido por no coincidir los datos de matricula y solicitud
+-Pasar a fase II y comprobar los datos en general
+
 Cuando la convocatoria pasa del estado definitiva:
  
+
+
 0. Actualizar las vacantes teniend en cuenta si alguien reserva plaza y se le ha concedido una en otro centro. Entonces se libera la reserva y el centro tiene una vacante más
 
 1. El admin o los servicios prov verán la opción de 'listados fase II' con los alumnos

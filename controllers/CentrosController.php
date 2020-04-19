@@ -3,7 +3,7 @@ class CentrosController extends ControladorBase{
     public $conectar;
     public $adapter;
 	
-    public function __construct($conectar=1) 
+    public function __construct($conectar=1,$conexion=null) 
 	{
     	parent::__construct();
 	if($conectar==1)
@@ -11,6 +11,9 @@ class CentrosController extends ControladorBase{
 	$this->conectar=new Conectar();
       	$this->adapter=$this->conectar->conexion();
 	}
+	else
+      		$this->adapter=$conexion;
+
 	require_once DIR_CLASES.'LOGGER.php';
 	require_once DIR_APP.'parametros.php';
 	require_once DIR_BASE.'/controllers/ListadosController.php';
@@ -40,10 +43,19 @@ class CentrosController extends ControladorBase{
 			return $tline;
 		}
 
-	public function getAllCentros($provincia='todas')
+	public function getAllCentros($provincia='todas',$clase='todos')
 	{
+	if($clase=='todos')
+		{
 		if($provincia=='todas')	$sql="SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)";
 		else	$sql="SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia='$provincia'";
+		}
+	elseif($clase=='especial')
+		{
+		if($provincia=='todas')	$sql="SELECT id_centro FROM centros where id_centro>1 and clase_centro='especial' and id_centro in(select id_centro from matricula)";
+		else	$sql="SELECT id_centro FROM centros where id_centro>1 and clase_centro='especial' and id_centro in(select id_centro from matricula) and provincia='$provincia'";
+		}
+
 		$this->log_listadoscentros->warning("CONSULTA CENTROS");
 		$this->log_listadoscentros->warning($sql);
 		$query=$this->adapter->query($sql);

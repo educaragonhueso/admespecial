@@ -50,7 +50,7 @@ if($estado_centro==2 and $estado_convocatoria<30)
 	
 		if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva,2)==0) 
 				print("NO HAY VACANTES<br>");
-		$ct=$tsolicitud->copiaTablaProvisionalCentro($id_centro);	
+		$ct=$tsolicitud->copiaTablaCentro($id_centro,'alumnos_provisional_final');	
 		/*
 		elseif($estado_centro<2)
 		{
@@ -72,6 +72,8 @@ $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CABE
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CENTRO:ESTADO ".$id_centro.":".$estado_centro);
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, ESTADO CONVOCATORIA:  ".$estado_convocatoria);
 ######################################################################################
+
+
 
 //mostramos las solitudes completas sin incluir borrador
 $solicitudes=$list->getSolicitudes($id_centro,1,$estado_centro,$modo='provisionales',$subtipo_listado,'todas',3); 

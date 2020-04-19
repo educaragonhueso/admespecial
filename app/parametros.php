@@ -59,7 +59,9 @@ $campos_bbdd_noadmitidos_def=array('nordensorteo','nasignado','apellido1','apell
 $campos_cabecera_excluidos_def=array('NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
 $campos_bbdd_excluidos_def=array('nasignado','apellido1','apellido2','nombre','puntos_validados');
 //DATOS PARA LISTADOS SOLICITUDES FASE II
-$campos_cabecera_lfase2_sol=array('PrimerAp','SegundoAp','Nombre','Calle','Centro pref.','Centros alternativos','Definitivo','CentrosDisp.');
-$campos_bbdd_lfase2_sol=array('apellido1','apellido2','nombre','calle_dfamiliar','nombre_centro','centro1','centro_definitivo','centrosdisponibles');
+$campos_cabecera_lfase2_sol_ebo=array('Ap1','Ap2','Nombre','Loc','Calle','Cen.Origen','Cen.Pref','Cen.Alt','Baremo','Prioridad','Estado','Cen.Adj','NSorteo','Centros','Reserva');
+$campos_bbdd_lfase2_sol_ebo=array('apellido1','apellido2','nombre','localidad','calle_dfamiliar','centro_origen','nombre_centro','centro1','puntos_validados','transporte','estado_solicitud','centro_definitivo','nasignado','centrosdisponibles','centro_origen');
 
+$campos_cabecera_lfase2_sol_tva=array('Ap1','Ap2','Nombre','Loc','Calle','Cen.Origen','Cen.Pref','Cen.Alt','Baremo','Prioridad','Estado','Cen.Adj','NSorteo','Centros','Reserva');
+$campos_bbdd_lfase2_sol_tva=array('apellido1','apellido2','nombre','localidad','calle_dfamiliar','centro_origen','nombre_centro','centro1','puntos_validados','transporte','estado_solicitud','centro_definitivo','nasignado','centrosdisponibles','centro_origen');
 ?>

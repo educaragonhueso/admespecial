@@ -41,13 +41,13 @@ $nsolicitudes=$tcentro->getNumSolicitudes();
 if($_POST['asignar']=='1')
 	{
 	if($utils->asignarNumSorteoFase2()!=1){ print("Error asignando numero para el sorteo");exit();}
-	$subtipo_listado="lfase2_sol";//si es para el sorteo el subtipo es lfase2_sol
+	//$subtipo_listado="lfase2_sol";//si es para el sorteo el subtipo es lfase2_sol
 	}
 //si se ha pulsado el boton de realizar sorteo
 if($_POST['asignar']=='2')
 	{
 	if($utils->actualizarSolSorteoFase2(1,$nsorteo,$nsolicitudes)!=1){ print("Error realizando el sorteo");exit();}
-	$subtipo_listado="lfase2_sol";//si es para el sorteo el subtipo es lfase2_sol
+//	$subtipo_listado="lfase2_sol";//si es para el sorteo el subtipo es lfase2_sol
 	}
 $cabecera="campos_cabecera_".$subtipo_listado;
 $camposdatos="campos_bbdd_".$subtipo_listado;
@@ -57,10 +57,10 @@ $fase2_sorteo=1;
 
 $form_sorteo_fase2='<div id="form_sorteo" class="input-group mb-3">
 		<div class="input-group-append">
-			<button class="btn btn-success" type="submit" id="boton_asignar_numero_fase2">Asignar numero</button>
+			<button class="btn btn-success" type="submit" id="boton_asignar_numero_fase2" data-subtipo="'.$subtipo_listado.'">Asignar numero</button>
 		</div>
 		<div class="input-group-append">
-			<button class="btn btn-success" type="submit" id="boton_realizar_sorteo_fase2">Realizar sorteo</button>
+			<button class="btn btn-success" type="submit" id="boton_realizar_sorteo_fase2" data-subtipo="'.$subtipo_listado.'">Realizar sorteo</button>
 		</div>
 		<input type="text" id="num_sorteo" name="num_sorteo" value="" placeholder="NUMERO OBTENIDO" disabled>
 		<input type="hidden" id="num_solicitudes" name="num_solicitudes" value="'.$nsolicitudes.'" placeholder="NUMERO OBTENIDO" disabled>
@@ -71,15 +71,18 @@ $solicitudes=$list->getSolicitudes(1,0,0,$modo='fase2',$subtipo_listado,'todas',
 
 ######################################################################################
 $log_listados_solicitudes_fase2->warning("OBTENIDAS $nsolicitudes SOLICITUDES FASE II:");
-$log_listados_solicitudes_fase2->warning(print_r($solicitudes,true));
 ######################################################################################
-
-//if($sorteo_fase2==1)
+print_r($_POST);
+//Si es el listado normal, no hay sorteo
+if($_POST['asignar']==0)
+	{
 	print($form_sorteo_fase2); //mostramos formulario sorteo solo si no se ha hecho ya
-
-print($list->showFiltrosTipo());
-print($filtro_datos);
-print("<div style='text-align:center'><h1>LISTADO LISTADO SOLICITUDES COMPLETO</h1></div>");
+	$tablaresumen=$tcentro->getResumenFase2($_POST['rol']);
+	print($list->showTablaResumenFase2($tablaresumen));
+	print($list->showFiltrosTipo());
+	print($filtro_datos);
+	print("<div id='listado_fase2' style='text-align:center'><h1>LISTADO LISTADO SOLICITUDES COMPLETO</h1></div>");
+	}
 print($list->showListado($solicitudes,$_POST['rol'],$$cabecera,$$camposdatos,$provisional=1));
 print($script);
 ?>

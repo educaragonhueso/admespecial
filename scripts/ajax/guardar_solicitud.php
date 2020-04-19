@@ -118,12 +118,10 @@ else
 		$log_actualizar->warning(print_r($fsol_salida,true));
 		#######################################################################################################
 		//modificamos solicitud teniendo en cuenta la fase en la q esta el centro y el estado de la convocatoria
-		$res=$tsol->update($fsol_salida,$_POST['idsol'],$estado_convocatoria);
+		$res=$tsol->update($fsol_salida,$_POST['idsol']);
 	}
-if(gettype($res)=='string') 
-		print($res);
-else
-{
+		$log_actualizar->warning("RESULTADO ACT: ".$res);
+
 	if($res<=0) 
 	{
 	if($res==-1)	print('ERROR GUARDANDO DATOS: YA EXISTE UN USUARIO CON ESE NOMBRE DE USUARIO');
@@ -136,7 +134,7 @@ else
 		if($modo=="GRABAR SOLICITUD" and $rol=='alumno')
 			print($res);
 		else
-			print_r($sc->showSolicitud($res));
-	}
+			print($res);
+			//print_r($sc->showSolicitud($res));
 	}
 ?>

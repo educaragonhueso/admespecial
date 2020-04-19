@@ -151,7 +151,7 @@ else//accedemos como centro
 		########################################################################################
 		$tcentro->setFaseSorteo(2);
 		
-		$ct=$tsolicitud->copiaTablaProvisionalCentro($id_centro);	
+		$ct=$tsolicitud->copiaTablaCentro($id_centro,'alumnos_provisional_final');	
 		$log_listado_solicitudes->warning("RESULTADO COPIAR TABLA $ct ");
 		$fase_sorteo=2;
 		//Si hemos llegado al dia de las provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales

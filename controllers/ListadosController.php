@@ -6,23 +6,23 @@ class ListadosController extends ControladorBase{
     public $tabla; 
     public function __construct($tabla="matricula",$conexion=1) 
 		{
-        parent::__construct();
-        $this->tabla=$tabla;
-				require_once DIR_CLASES.'LOGGER.php';
-				require_once DIR_APP.'parametros.php';
-				if($conexion==1)
-				{
-        $this->conectar=new Conectar();
-        $this->adapter=$this->conectar->conexion();
-				}
-				$this->log_sorteo=new logWriter('log_sorteo',DIR_LOGS);
-				$this->log_listado_general=new logWriter('log_listados_generales',DIR_LOGS);
-				$this->log_listados_matricula=new logWriter('log_listados_matricula',DIR_LOGS);
-				$this->log_listados_provisionales=new logWriter('log_listados_provisionales',DIR_LOGS);
-				$this->log_listados_definitivos=new logWriter('log_listados_definitivos',DIR_LOGS);
-				$this->log_listados_solicitudes=new logWriter('log_listado_solicitudes',DIR_LOGS);
-				$this->log_gencsvs=new logWriter('log_gencsvs',DIR_LOGS);
-				$this->log_listados_solicitudes_fase2=new logWriter('log_listados_solicitudes_fase2',DIR_LOGS);
+        	parent::__construct();
+       		$this->tabla=$tabla;
+		require_once DIR_CLASES.'LOGGER.php';
+		require_once DIR_APP.'parametros.php';
+		if($conexion==1)
+		{
+        		$this->conectar=new Conectar();
+		        $this->adapter=$this->conectar->conexion();
+		}
+		$this->log_sorteo=new logWriter('log_sorteo',DIR_LOGS);
+		$this->log_listado_general=new logWriter('log_listados_generales',DIR_LOGS);
+		$this->log_listados_matricula=new logWriter('log_listados_matricula',DIR_LOGS);
+		$this->log_listados_provisionales=new logWriter('log_listados_provisionales',DIR_LOGS);
+		$this->log_listados_definitivos=new logWriter('log_listados_definitivos',DIR_LOGS);
+		$this->log_listados_solicitudes=new logWriter('log_listado_solicitudes',DIR_LOGS);
+		$this->log_gencsvs=new logWriter('log_gencsvs',DIR_LOGS);
+		$this->log_listados_solicitudes_fase2=new logWriter('log_listados_solicitudes_fase2',DIR_LOGS);
     }
     
     public function getConexion()
@@ -98,13 +98,6 @@ class ListadosController extends ControladorBase{
 		$solicitud=new Solicitud($this->adapter);
 		if($modo=='normal')// listados previos al sorteo
     		{
-			/*	
-	    		if($fase_sorteo==2 and $estado_convocatoria<30)
-				$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia,'alumnos_provisional');
-			elseif($estado_convocatoria>=30)
-				$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia,'alumnos_definitivo');
-			else
-			*/
 	    		$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia);
  		}
 		elseif($modo=='csv')
@@ -259,7 +252,6 @@ class ListadosController extends ControladorBase{
 	return $html;
 	}
   public function showSolicitudListado($sol,$datos,$provisional=0,$htmldatoscentros=''){
-	
 		$i=0;	
 		//los listados provisionales no permiten acceder a los datos de la solicitud
 		if($provisional>=1) $class='';
@@ -474,6 +466,31 @@ class ListadosController extends ControladorBase{
 		foreach($centros as $centro)
 		{
 		}
+	}
+  public function showTablaResumenFase2($a)
+	{
+	$tres='<button class="btn" data-toggle="collapse" data-target="#tablafase2" aria-expanded="false"><h2>VACANTES CENTROS</h2></button>';
+	#tabla para modo escritorio
+	$tres.='<table class="table table-dark table-striped desk collapse" id="tablafase2">
+    <thead>
+      <tr>
+        <th>Centro</th>
+        <th>Vacanes EBO</th>
+        <th>Vacantes TVA</th>
+      </tr>
+    </thead>
+    <tbody>';
+	 
+	foreach($a as $obj)
+		$tres.="<tr>
+		<td style='width: 16.66%'>".$obj->nombre_centro."</td>
+		<td>".$obj->vacantes_ebo."</td>
+		<td>".$obj->vacantes_tva."</td>
+		</tr>";
+	
+    	$tres.="</tbody> </table></div>";
+		
+	return $tres;
 	}
   public function showTablaResumenSolicitudes($a,$nombre_centro='',$id_centro)
 	{

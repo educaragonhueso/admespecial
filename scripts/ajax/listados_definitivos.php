@@ -36,26 +36,24 @@ $vacantes_tva=$dvacantes[1]->vacantes;
 $log_listados_definitivos->warning("ACTUALIZANDO DEFINITIVOS, DATOS:  ESTADO CENTRO/IDCENTRO $estado_centro/$estado_convocatoria");
 //La convocatoria esta en definitivo según el dia programado
 //si la convocatoria esta en definitivo, entramos una vez para copiar la tabla con los datos del centro
-/*
-if($estado_centro==2 and $estado_convocatoria==40)
-	{
-		$nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
-		$nsorteo=$tcentro->getNumeroSorteo();
-		$dsorteo=$tcentro->getVacantes($id_centro);
-		$vacantes_ebo=$dsorteo[0]->vacantes;
-		$vacantes_tva=$dsorteo[1]->vacantes;
-		$log_listados_definitivos->warning("ACTUALIZANDO DEFINITIVOS, DATOS:  NSOLICITUDES/IDCENTRO $nsorteo/$id_centro");
-		$tcentro->actualizaVacantes($vacantes_ebo,$vacantes_tva);
-		if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
+//si estamos en el periodo de provisionales actualizamos tablas de definitivos
+if($estado_convocatoria>=30 and $estado_convocatoria<=40)
+{
+	$nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
+	$nsorteo=$tcentro->getNumeroSorteo();
+	$dsorteo=$tcentro->getVacantes($id_centro);
+	$vacantes_ebo=$dsorteo[0]->vacantes;
+	$vacantes_tva=$dsorteo[1]->vacantes;
+	$log_listados_definitivos->warning("ACTUALIZANDO DATOS:  NSOLICITUDES/IDCENTRO/ESTADO CENTRO $nsorteo/$id_centro/$estado_centro");
+
+	if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva,2)==0) 
 			print("NO HAY VACANTES<br>");
-		//si se ha hecho el sorteo en el centro, copiamos la tabla a provisionales
-		$tsolicitud->copiaTabla('definitivo',$id_centro);	
-		########################################################################################
-		$log_listados_definitivos->warning("CREADA TABLA DEFINITIVOS, ESTADO: ".$tcentro->getEstado());
-		########################################################################################
-		if(!$tcentro->setFaseSorteo(3)) {print("ERROR PROVISIONALES"); exit();}
-	}
-*/
+	$ct=$tsolicitud->copiaTablaCentro($id_centro,'alumnos_definitiva_final');	
+	########################################################################################
+	$log_listados_definitivos->warning("ACTUALIZADA TABLA DEFINITIVOS $ct");
+	########################################################################################
+}
+
 $cabecera="campos_cabecera_".$subtipo_listado;
 $camposdatos="campos_bbdd_".$subtipo_listado;
 
@@ -66,9 +64,9 @@ $log_listados_definitivos->warning("OBTENIENDO LISTADOS DEFINITIVOS, CENTRO: ".$
 //actualizamos solicitudes para tener en cuenta las que hayan cambiado
 //Esto solo puede hacerse en el momento q finalice el plazo de provisionales!!!!!!!!
 $solicitud=new Solicitud($conexion);
-$solicitudes=$solicitud->genSolDefinitivas($id_centro,$vacantes_ebo,$vacantes_tva,2); 
+//$solicitudes=$solicitud->genSolDefinitivas($id_centro,$vacantes_ebo,$vacantes_tva,2); 
 //mostramos las solitudes completas sin incluir borrador
-$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo=0,$modo='definitivos',$subtipo_listado); 
+$solicitudes=$list->getSolicitudes($id_centro,2,$fase_sorteo=0,$modo='definitivos',$subtipo_listado); 
 
 ######################################################################################
 $log_listados_definitivos->warning("OBTENIENDO SOLICITUDES GENERALES, DATOS: ");

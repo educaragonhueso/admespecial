@@ -108,6 +108,25 @@ class Centro extends EntidadBase{
 			$this->id_centro=$centro;
 			return $this->getResumen($rol,$t);
 		}
+    public function getResumenFase2($rol) 
+		{
+			$resultSet=array();
+			if($rol=='admin') 
+				$sql="SELECT nombre_centro,IFNULL(vacantes_ebo,0) as vacantes_ebo,IFNULL(vacantes_tva,0) as vacantes_tva FROM centros WHERE clase_centro='especial'";
+	
+	
+			$this->log_matricula->warning("CONSULTA DATOS CENTROS RESUMEN FASE 2: ".$sql);
+	
+			$query=$this->conexion->query($sql);
+			if($query)
+    			{
+				while ($row = $query->fetch_object()) 
+				{
+					$resultSet[]=$row;
+				}
+			}
+      			return $resultSet;
+    		}
     public function getResumen($rol,$t) 
 		{
 			$resultSet=array();

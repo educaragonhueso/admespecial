@@ -32,12 +32,8 @@ var vidcentro=$('#id_centro').text();
 	  data: {asignar:'1',rol:vrol,subtipo:vsubtipo,estado_convocatoria:vestado_convocatoria,sorteo_fase2:vsorteo_fase2},
 	  url:'../scripts/ajax/listados_solicitudes_fase2.php',
 	      success: function(data) {
-			        $("#tresumen"+vidcentro).remove();
-                                $("#filtroscheck").remove();
-                                $("#nuevasolicitud").remove();
-                                $("#form_sorteo").remove();
-                                $("#sol_table").remove();
-				$("#l_matricula").html(data);
+				$("#sol_table").remove();
+				$("#listado_fase2").html(data);
                                 $("#num_sorteo").prop("disabled",false);
 		},error: function (request, status, error) {
         alert(error);
@@ -57,6 +53,7 @@ var vsolicitudes=$(this).attr("data-solicitudes");
 var vnum_sorteo=$('#num_sorteo').val();
 var vnum_solicitudes=$('#num_solicitudes').val();
 var isnum = /^\d+$/.test(vnum_sorteo);
+var vsubtipo=$(this).attr("data-subtipo");
 if (!isnum) {
     alert('No es un numero');
 return;
@@ -67,12 +64,11 @@ return;
 }
 	$.ajax({
 	  method: "POST",
-	  data: {asignar:'2',rol:vrol,nsorteo:parseInt(vnum_sorteo),estado_convocatoria:vestado_convocatoria},
+	  data: {asignar:'2',rol:vrol,nsorteo:parseInt(vnum_sorteo),estado_convocatoria:vestado_convocatoria,subtipo:vsubtipo},
 	  url:'../scripts/ajax/listados_solicitudes_fase2.php',
 	      success: function(data) {
-				console.log(data);
-				$("#l_matricula").html(data);
-				$("#tresumen").hide();
+				$("#sol_table").remove();
+				$("#listado_fase2").html(data);
 		},
 	      error: function() {
 		alert('Problemas listando solicitud!');

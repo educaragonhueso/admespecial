@@ -399,13 +399,14 @@ class SolicitudController extends ControladorBase{
 			{ 
 				$this->lastid=$solicitud->getLast();	
 				$nuevoid=$this->lastid+1;
-				$dsolicitud=$solicitud->getSol_pruebas($this->lastid,'nueva',$id_centro);
+				$dsolicitud=$solicitud->getSolData($this->lastid,'nueva',$id_centro);
 				
 				$this->procesarFormularioNuevo($nuevoid,$dsolicitud,$rol);
 			}
 			//modificacion solicitud
 			else
 			{
+				/*
 				if($fase_sorteo==2 and $estado_convocatoria>=2 and $estado_convocatoria<30)
 					$dsolicitud=$solicitud->getSol_pruebas($id,'existente',0,'alumnos_provisional');
 				elseif($estado_convocatoria>=2 and $estado_convocatoria<30)
@@ -414,7 +415,8 @@ class SolicitudController extends ControladorBase{
 					$dsolicitud=$solicitud->getSol_pruebas($id,'existente',0,'alumnos_definitivo');
 				else
 					$dsolicitud=$solicitud->getSol_pruebas($id,'existente',0,'alumnos');
-				
+				*/	
+				$dsolicitud=$solicitud->getSolData($id,'existente',0,'alumnos');
 				$this->log_editar->warning("DATOS SOLICITUD A EDITAR");
 				$this->log_editar->warning(print_r($dsolicitud,true));
 				
