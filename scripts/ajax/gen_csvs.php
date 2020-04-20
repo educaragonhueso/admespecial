@@ -15,18 +15,22 @@ require_once DIR_APP.'parametros.php';
 #####VARIABLES#############################################################################
 
 $id_centro=$_POST['id_centro'];
-$tipo=$_POST['tipolistado'];
+$subtipo_original=$_POST['subtipo'];
+$subtipo=substr($subtipo_original,4);
+
+$estado_convocatoria=$_POST['estado_convocatoria'];
+
 $rol=$_POST['rol'];
 //si son servicio sprovinciales quitamos los dos caracteres
 if(strpos($_POST['rol'],'sp')) $provincia=substr($_POST['rol'],2);
 else $provincia='todas';
 
-$subtipo_csv=$_POST['tipolistado'];//dentro de cada tipo, el subtipo de listado
-$cabecera="campos_cabecera_".$subtipo_csv;
-$camposdatos="campos_bbdd_".$subtipo_csv;
+$subtipo_csv=$subtipo;//dentro de cada tipo, el subtipo de listado
+$cabecera="campos_cabecera_csv_".$subtipo_csv;
+$camposdatos="campos_bbdd_csv_".$subtipo_csv;
 
-
-$tiposol=0;
+if($subtipo=='fase2') $tipo=3;
+else $tipo=0;
 $fase_sorteo=0;
 $modo='csv';
 
@@ -39,28 +43,18 @@ $log_gencsvs->warning("DATOS POST PARA CSV");
 $log_gencsvs->warning(print_r($_POST,true));
 ##################################################################################
 
+$solicitudes=$list->getSolicitudes($id_centro,$tipo,$fase_sorteo,$modo,$subtipo,$provincia,$estado_convocatoria); 
+$log_gencsvs->warning("SOLICITUDES  CSV SUBTIPO: $subtipo CAMPOS DATOS: ");
+$log_gencsvs->warning(print_r($$camposdatos,true));
+
 //si es para datos de matricula, con rol de admin
-if($tipo=='csv_mat_admin' && $rol=='admin')
+if($subtipo_original=='csv_mat_admin' && $rol=='admin')
 {
 	$centros_data=$centros_cont->getCentrosData('matricula'); 
 }
 
-//si es para datos de solicitudes
-if($tipo=='csv_sol')
-{
-	$solicitudes=$list->getSolicitudes($id_centro,$tiposol,$fase_sorteo,$modo,'',$provincia); 
-	$log_gencsvs->warning("SOLICITUDES  CSV, ROL:  ".$rol);
-}
-//solicitudes duplicadas
-if($tipo=='csv_dup')
-{
-	$solicitudes=$list->getSolicitudes($id_centro,$tiposol,$fase_sorteo,$modo,'dup'); 
-	
-	$log_gencsvs->warning("SOLICITUDES DUPLICADAS CSV: ");
-	$log_gencsvs->warning(print_r($solicitudes,true));
-}
 //si es para matricula de alumnos que promocionan
-if($tipo=='csv_pro')
+if($subtipo_original=='csv_pro')
 {
 	$solicitudes=$list->getMatriculas($id_centro,$tiposol,$fase_sorteo,$modo); 
 	
@@ -68,22 +62,16 @@ if($tipo=='csv_pro')
 	$log_gencsvs->warning(print_r($solicitudes,true));
 }
 //si es para datos de matricula
-if($tipo=='csv_mat')
+if($subtipo_original=='csv_mat')
 {
 	$solicitudes=$list->getResumenMatriculaCentro($rol='centro',$id_centro,$tiposol,$modo); 
 }
 
-##################################################################################
-	$log_gencsvs->warning("OBTENIENDO RESUMEN MATRICULA CSV");
-	$log_gencsvs->warning(print_r($solicitudes,true));
-##################################################################################
+$fcsv=$list->genCsv($solicitudes,$id_centro,$subtipo_original,$$cabecera,$$camposdatos,DIR_CSVS);
 
-
-$fcsv=$list->genCsv($solicitudes,$id_centro,$tipo,$$cabecera,$$camposdatos,DIR_CSVS);
-
-$log_gencsvs->warning("SOLICITUDES  CSVi GENERADAS ");
+$log_gencsvs->warning("SOLICITUDES  CSV GENERADAS ");
 $log_gencsvs->warning("EN: ".DIR_CSVS);
-$log_gencsvs->warning("EN: ".DIR_CSVS_WEB);
+$log_gencsvs->warning("EN: ".DIR_CSVS_WEB."FICHERO: $fcsv");
 
 if($fcsv) 
 {

@@ -9,7 +9,7 @@ if (!answer) {
    console.log("op cancelada");
     }
 var vrol=$('#rol').attr("value");
-var vestado_convocatoria=$('#estado_convocatoria').text();
+var vestado_convocatoria=$('#estado_convocatoria').val();
 var vidcentro=$('#id_centro').text();
 	$.ajax({
 	  method: "POST",
@@ -1627,15 +1627,17 @@ $('body').on('change', 'input[type=checkbox][id*=oponenautorizar]', function(e){
 
 $('body').on('click', '.exportcsv', function(e)
 {
-  var vrol=$('#rol').attr("value");
-var vid=$(this).attr("id");
-var vidcentro=$('#id_centro').text();
-var vsubtipo=$(this).attr("data-subtipo");
+	var vrol=$('#rol').attr("value");
+	var vid=$(this).attr("id");
+	var vidcentro=$('#id_centro').text();
+	var vsubtipo=$(this).attr("data-subtipo");
+	var vestado_convocatoria=$('#estado_convocatoria').val();
 	$.ajax({
 	method: "POST",
-	data: {id_centro:vidcentro,tipolistado:vsubtipo,rol:vrol},
+	data: {id_centro:vidcentro,subtipo:vsubtipo,rol:vrol,estado_convocatoria:vestado_convocatoria},
 	url:'../scripts/ajax/gen_csvs.php',
 	success: function(data) {
+			console.log(data);
 			window.open(data,'_blank');
 	},
 	error: function() {

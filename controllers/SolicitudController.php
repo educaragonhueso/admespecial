@@ -406,16 +406,6 @@ class SolicitudController extends ControladorBase{
 			//modificacion solicitud
 			else
 			{
-				/*
-				if($fase_sorteo==2 and $estado_convocatoria>=2 and $estado_convocatoria<30)
-					$dsolicitud=$solicitud->getSol_pruebas($id,'existente',0,'alumnos_provisional');
-				elseif($estado_convocatoria>=2 and $estado_convocatoria<30)
-					$dsolicitud=$solicitud->getSol_pruebas($id,'existente',0,'alumnos_provisional');
-				elseif($estado_convocatoria>=30)
-					$dsolicitud=$solicitud->getSol_pruebas($id,'existente',0,'alumnos_definitivo');
-				else
-					$dsolicitud=$solicitud->getSol_pruebas($id,'existente',0,'alumnos');
-				*/	
 				$dsolicitud=$solicitud->getSolData($id,'existente',0,'alumnos');
 				$this->log_editar->warning("DATOS SOLICITUD A EDITAR");
 				$this->log_editar->warning(print_r($dsolicitud,true));

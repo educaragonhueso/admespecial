@@ -113,9 +113,9 @@ $('body').on('click', '.cdefinitivo', function(e){
   var vcdefinitivo=vacdefinitivo.split(':')[0];
   var vvacdefinitivo=vacdefinitivo.split(':')[1];
 
-
   var vidcdefinitivo=$("#selectcentro"+vid+" option:selected").attr("class");
   vidcdefinitivo=vidcdefinitivo.replace("vacantesebo","");
+  vidcdefinitivo=vidcdefinitivo.replace("vacantestva","");
   var vtipoestudios=$(this).attr("data-tipo");
   var vcactual=$("#centro_definitivo"+vid).text();
   
@@ -161,6 +161,10 @@ $.ajax({
 		$("."+vclasdefinitivo).text(vcdefinitivo+':'+vacantesfinales_def);
 		$("."+vclasdefinitivo).attr("value",vcdefinitivo+':'+vacantesfinales_def);
 
+		//modificamos vacantes en el listado
+		$("#"+vtipoestudios+vidcdefinitivo).text(vacantesfinales_def);
+		$("#"+vtipoestudios+vidcactual).text(vacantesfinales_act);
+		
 		$("."+vclasactual).text(vcactual+':'+vacantesfinales_act);
 		$("."+vclasactual).attr("value",vcactual+':'+vacantesfinales_act);
 

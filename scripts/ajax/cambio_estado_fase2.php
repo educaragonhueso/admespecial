@@ -15,7 +15,7 @@ $id_centroactual=$_POST['idcentroactual'];
 $centroelegido=$_POST['centrodefinitivo'];
 $id_centroelegido=$_POST['idcentrodefinitivo'];
 $vacantes_centroelegido=$_POST['vacdefinitivo'];
-$tipoestudios=$_POST['vtipoestudios'];
+$tipoestudios=$_POST['tipoestudios'];
 
 $centro_origen->setId($id_centroactual);
 $centro_destino->setId($id_centroelegido);
@@ -27,7 +27,7 @@ if($_POST['tipoestudios']=='ebo') $tipo=1;
 else $tipo=2;
 //decrementamos vacantes en centro destino
 $vacantesd=$centro_destino->actualizaVacantes(0,0,$tipo,'-');
-if($_POST['centroorigen']!='nocentro')
+if(strtoupper($_POST['centroactual'])!='NOCENTRO')
 {
 //incrementamos vacantes en centro original
 $vacanteso=$centro_origen->actualizaVacantes(0,0,$tipo,'+');

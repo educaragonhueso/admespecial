@@ -33,7 +33,12 @@
 				<?php 	if($_SESSION['rol']=='centro'){ echo '<a class="exportpdf dropdown-item" href="#" id="pdf_mat" data-tipo="pdf" data-subtipo="pdf_mat">Listado vacantes (pdf) </a>';}?>
 				<a class="exportcsv dropdown-item" href="#" id="csv_sol" data-tipo="csv" data-subtipo="csv_sol">Listado solicitudes (csv)</a>
 				<a class="exportcsv dropdown-item" href="#" id="csv_pro" data-tipo="csv" data-subtipo="csv_pro">Listado alumnos promocionan (csv)</a>
-				<?php 	if($_SESSION['provincia']!='aragon' or $_SESSION['rol']=='admin'){ echo '<a class="exportcsv dropdown-item" href="#" id="csv_dup" data-tipo="csv" data-subtipo="csv_dup">Listado duplicados (csv) </a>';}?>
+				<?php 	if($_SESSION['provincia']!='todas' or $_SESSION['rol']=='admin')
+					{ 
+					echo '<a class="exportcsv dropdown-item" href="#" id="csv_dup" data-tipo="csv" data-subtipo="csv_dup">Listado duplicados (csv) </a>';
+					echo '<a class="exportcsv dropdown-item" href="#" id="csv_dup" data-tipo="csv" data-subtipo="csv_fase2">Listado Fase 2 (csv) </a>';
+					}
+				?>
 				 </div>
                             </li>
                             <li class="nav-item active msuperior">

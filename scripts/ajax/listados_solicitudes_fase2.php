@@ -28,7 +28,7 @@ else $nsorteo=0;
 $tipo_listado='solicitudes_fase2';
 
 if(isset($_POST['subtipo']))
-	$subtipo_listado=$_POST['subtipo'];//dentro de cada tipo, el subtipo de listado
+	$subtipo_listado=$_POST['subtipo'];//dentro de cada tipo, el subtipo de listado, para ebo o tva
 
 $filtro_datos='<input type="text" class="form-control" id="filtrosol"  placeholder="Introduce datos del alumno"><small id="emailHelp" class="form-text text-muted"></small>';
 $list=new ListadosController('alumnos');
@@ -72,7 +72,6 @@ $solicitudes=$list->getSolicitudes(1,0,0,$modo='fase2',$subtipo_listado,'todas',
 ######################################################################################
 $log_listados_solicitudes_fase2->warning("OBTENIDAS $nsolicitudes SOLICITUDES FASE II:");
 ######################################################################################
-print_r($_POST);
 //Si es el listado normal, no hay sorteo
 if($_POST['asignar']==0)
 	{
@@ -83,6 +82,6 @@ if($_POST['asignar']==0)
 	print($filtro_datos);
 	print("<div id='listado_fase2' style='text-align:center'><h1>LISTADO LISTADO SOLICITUDES COMPLETO</h1></div>");
 	}
-print($list->showListado($solicitudes,$_POST['rol'],$$cabecera,$$camposdatos,$provisional=1));
+print($list->showListado($solicitudes,$_POST['rol'],$$cabecera,$$camposdatos,$provisional=1,$subtipo_listado));
 print($script);
 ?>

@@ -265,3 +265,16 @@
 [18-Apr-2020 19:24:06] : [WARNING] - ASIGNANDO NUMERO DESPUES DE SORTEO UPDATE alumnos_fase2 a set nordensorteo=37+nasignado-4+1 where nasignado<4 -- UPDATE alumnos_fase2 a set nordensorteo=nasignado-4+1 where nasignado>=4
 [18-Apr-2020 19:24:16] : [WARNING] - ASIGNANDO NUMERO DESPUES DE SORTEO UPDATE alumnos_fase2 a set nordensorteo=37+nasignado-5+1 where nasignado<5 -- UPDATE alumnos_fase2 a set nordensorteo=nasignado-5+1 where nasignado>=5
 [18-Apr-2020 19:24:47] : [WARNING] - ASIGNANDO NUMERO DESPUES DE SORTEO UPDATE alumnos_fase2 a set nordensorteo=37+nasignado-2+1 where nasignado<2 -- UPDATE alumnos_fase2 a set nordensorteo=nasignado-2+1 where nasignado>=2
+[20-Apr-2020 09:41:05] : [WARNING] - ASIGNANDO NUMERO SORTEO
+[20-Apr-2020 09:41:05] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado =0
+[20-Apr-2020 09:41:05] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado = (@r := @r + 1) ORDER BY  RAND()
+[20-Apr-2020 09:41:05] : [WARNING] - OK ASIGNANDO NUM SORTEO EN FASE2
+[20-Apr-2020 09:41:27] : [WARNING] - ASIGNANDO NUMERO DESPUES DE SORTEO UPDATE alumnos_fase2 a set nordensorteo=37+nasignado-5+1 where nasignado<5 -- UPDATE alumnos_fase2 a set nordensorteo=nasignado-5+1 where nasignado>=5
+[20-Apr-2020 09:41:31] : [WARNING] - ASIGNANDO NUMERO SORTEO
+[20-Apr-2020 09:41:31] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado =0
+[20-Apr-2020 09:41:31] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado = (@r := @r + 1) ORDER BY  RAND()
+[20-Apr-2020 09:41:31] : [WARNING] - OK ASIGNANDO NUM SORTEO EN FASE2
+[20-Apr-2020 09:41:33] : [WARNING] - ASIGNANDO NUMERO DESPUES DE SORTEO UPDATE alumnos_fase2 a set nordensorteo=37+nasignado-5+1 where nasignado<5 -- UPDATE alumnos_fase2 a set nordensorteo=nasignado-5+1 where nasignado>=5
+[20-Apr-2020 09:41:41] : [WARNING] - ASIGNANDO NUMERO DESPUES DE SORTEO UPDATE alumnos_fase2 a set nordensorteo=37+nasignado-5+1 where nasignado<5 -- UPDATE alumnos_fase2 a set nordensorteo=nasignado-5+1 where nasignado>=5
+[20-Apr-2020 09:41:49] : [WARNING] - ASIGNANDO NUMERO DESPUES DE SORTEO UPDATE alumnos_fase2 a set nordensorteo=37+nasignado-5+1 where nasignado<5 -- UPDATE alumnos_fase2 a set nordensorteo=nasignado-5+1 where nasignado>=5
+[20-Apr-2020 09:41:52] : [WARNING] - ASIGNANDO NUMERO DESPUES DE SORTEO UPDATE alumnos_fase2 a set nordensorteo=37+nasignado-5+1 where nasignado<5 -- UPDATE alumnos_fase2 a set nordensorteo=nasignado-5+1 where nasignado>=5

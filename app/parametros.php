@@ -21,12 +21,11 @@ $campos_cabecera_sor_det=array('Primer apellido','Segundo apellido','Nombre','Pr
 $campos_bbdd_sor_det=array('apellido1','apellido2','nombre','proximidad_domicilio','tutores_centro','renta_inferior','discapacidad','tipo_familia','hermanos_centro');
 
 //DATOS PARA EXPORTAR DATOS CSVS
+$campos_cabecera_csv_fase2=array('Ap1','Ap2','Nombre','Loc','Calle','Cen.Origen','Cen.Pref','Cen.Alt1','Cen.Alt2','Cen.Alt3','Cen.Alt4','Cen.Alt5','Cen.Alt6','Baremo','Prioridad','Estado','Cen.Adj','NSorteo','Centros','Reserva');
+$campos_bbdd_csv_fase2=array('apellido1','apellido2','nombre','localidad','calle_dfamiliar','centro_origen','nombre_centro','centro1','centro2','centro3','centro4','centro5','centro6','puntos_validados','transporte','estado_solicitud','centro_definitivo','nasignado','centrosdisponibles','centro_origen');
+
 $campos_cabecera_csv_mat=array('Centro','Grupos EBO','Puestos EBO','Plazas Ocupadas EBO','Vacantes_EBO','Grupos TVA','Puestos TVA','Plazas Ocupadas TVA','Vacantes_TVA');
 $campos_bbdd_csv_mat=array('nombre_centro','gruposebo','puestosebo','plazasactualesebo','vacantesebo','grupostva','puestostva','plazasactualestva','vacantestva');
-
-//DATOS PARA EXPORTAR DATOS PDF
-$campos_cabecera_pdf_mat=array('Centro','Grupos EBO','Puestos EBO','Plazas Ocupadas EBO','Vacantes_EBO','Grupos TVA','Puestos TVA','Plazas Ocupadas TVA','Vacantes_TVA');
-$campos_bbdd_pdf_mat=array('nombre_centro','gruposebo','puestosebo','plazasactualesebo','vacantesebo','grupostva','puestostva','plazasactualestva','vacantestva');
 
 $campos_cabecera_csv_sol=array('Centro','Primer apellido','Segundo apellido','Nombre','Enseñanza','Centro de procedencia','Criterios prioritarios','Localidad domicilio familiar','Fase','Estado');
 $campos_bbdd_csv_sol=array('nombre_centro','apellido1','apellido2','nombre','tipoestudios','nombre_centro_origen','transporte','loc_dfamiliar','fase_solicitud','estado_solicitud');
@@ -38,6 +37,10 @@ $campos_bbdd_csv_pro=array('nombre_centro','apellidos','nombre','tipo_alumno_act
 //listado de alumnos duplicados
 $campos_cabecera_csv_dup=array('Centro','Primer apellido','Segundo apellido','Nombre','Enseñanza','Fecha Nacimiento','DNI Tutor');
 $campos_bbdd_csv_dup=array('nombre_centro','apellido1','apellido2','nombre','tipoestudios','fnac','dni_tutor1');
+
+//DATOS PARA EXPORTAR DATOS PDF
+$campos_cabecera_pdf_mat=array('Centro','Grupos EBO','Puestos EBO','Plazas Ocupadas EBO','Vacantes_EBO','Grupos TVA','Puestos TVA','Plazas Ocupadas TVA','Vacantes_TVA');
+$campos_bbdd_pdf_mat=array('nombre_centro','gruposebo','puestosebo','plazasactualesebo','vacantesebo','grupostva','puestostva','plazasactualestva','vacantestva');
 
 //DATOS PARA LISTADOS PROVISIONALES
 $campos_cabecera_admitidos_prov=array('Tipo','Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Criterios prioritarios','Puntos Baremo');
