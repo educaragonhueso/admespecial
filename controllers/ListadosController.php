@@ -289,6 +289,10 @@ class ListadosController extends ControladorBase{
 				$select.='<button data-tipo="'.$sol->tipoestudios.'" data-idcentro="'.$sol->$d.'"  id="'.$sol->id_alumno.'"  class="cdefinitivo" value="Cambiar">Cambiar</button> ';
 				$li.="<td id='".$d.$sol->id_alumno."'>".$select."</td>";
 				}
+				elseif($d=='centro_origen')
+				{
+					$li.="<td id='".$d.$sol->id_alumno."' data-reserva='reserva".$sol->reserva."' data-idcorigen='idcorigen".$sol->id_centro_origen."'>".$sol->$d."</td>";
+				}
 				else
 					$li.="<td id='".$d.$sol->id_alumno."' class='".$d."'>".$sol->$d."</td>";
 			$i++;
@@ -470,26 +474,32 @@ class ListadosController extends ControladorBase{
 		{
 		}
 	}
-  public function showTablaResumenFase2($a)
+  public function showTablaResumenFase2($a,$col=1)
 	{
 	$tres='<button class="btn" data-toggle="collapse" data-target="#tablafase2" aria-expanded="false"><h2>VACANTES CENTROS</h2></button>';
 	#tabla para modo escritorio
 	$tres.='<table class="table table-dark table-striped desk collapse" id="tablafase2">
-    <thead>
-      <tr>
-        <th>Centro</th>
-        <th >Vacanes EBO</th>
-        <th>Vacantes TVA</th>
-      </tr>
-    </thead>
-    <tbody>';
+	    <thead>
+	      <tr>
+		<th class="tf2centro">Centro</th>
+		<th >Vacanes EBO</th>
+		<th>Vacantes TVA</th>
+		<th class="tf2centro">Centro</th>
+		<th >Vacanes EBO</th>
+		<th>Vacantes TVA</th>
+		<th class="tf2centro">Centro</th>
+		<th >Vacanes EBO</th>
+		<th>Vacantes TVA</th>
+	      </tr>
+	    </thead>
+	    <tbody>';
+	$i=0;
 	foreach($a as $obj)
 		{
-		$tres.="<tr>
-		<td style='width: 16.66%'>".$obj->nombre_centro."</td>
-		<td id='ebo$obj->id_centro'>".$obj->vacantes_ebo."</td>
-		<td id='tva$obj->id_centro'>".$obj->vacantes_tva."</td>
-		</tr>";
+		if($i%3==0){ $tres.="<tr>";$j=1;}
+		$tres.="<td style='width: 16.66%'>".$obj->nombre_centro."</td><td id='ebo$obj->id_centro'>".$obj->vacantes_ebo."</td><td id='tva$obj->id_centro'>".$obj->vacantes_tva."</td>";
+		if($j%3==0) $tres.="</tr>";
+		$i++;$j++;
 		}
     	$tres.="</tbody> </table></div>";
 		

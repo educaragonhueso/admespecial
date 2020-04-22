@@ -24,25 +24,34 @@ $talumnos_fase2=new Alumno($con,'alumnos_fase2');
 
 $tcentros_fase2=new Centro($con,'','no',0);
 //$centros_fase2=$tcentros_fase2->getCentrosFase2();
-
+$post=1;
 $utils=new UtilidadesAdmision($ccentros->conectar->conexion(),'',$tcentros_fase2);
-
-//asignar vacantetes de cada centro
-do{
-$alumnos_fase2=$talumnos_fase2->getAll();
-$centros_fase2=$tcentros_fase2->getCentrosFase2();
-$avac=$utils->asignarVacantesCentros($centros_fase2,$alumnos_fase2);
-}while($avac==-2);
+if(isset($_POST['subtipo']))
+	$tipoestudios=str_replace('lfase2_sol_','',$_POST['subtipo']);
+else
+	{
+	$post=0;
+	$tipoestudios='ebo';
+	}
+//asignar vacantetes de cada centro a centro elegido en primera opcion (oopcion 0)
+for($i=0;$i<=6;$i++)
+{
+	if(!$post) print("EMPEZANDO CENTRO $i".PHP_EOL);
+	do{
+	$alumnos_fase2=$talumnos_fase2->getAll();
+	$centros_fase2=$tcentros_fase2->getCentrosFase2();
+	$avac=$utils->asignarVacantesCentros($centros_fase2,$alumnos_fase2,$i,$tipoestudios,$post);
+	}while($avac==-2);
+}
 
 if($avac==1)
 {
 	echo PHP_EOL."Asignadas vacantes centros para fase 2 a las ".date('H:m')." del dia ".date('d-M-Y').PHP_EOL;	
-	
+	return;	
 }
 elseif($avac=="NO CENTRO") print(PHP_EOL."Error asignando vacantes centros fase2, NO CENTRO");
 elseif($avac==-1) print("Array de alumnos o de centros vacio");
 elseif($avac==-2) print("Alumnos libera reserva");
-print($avac);
 
 
 exit();

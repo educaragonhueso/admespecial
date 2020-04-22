@@ -75,6 +75,24 @@ return;
 	      }
 	});
 });
+//REALIZAR ASIGNACION VACANTES
+
+$('body').on('click', '#boton_asignar_plazas_fase2', function(e){
+
+var vsubtipo=$(this).attr("data-subtipo");
+
+	$.ajax({
+	  method: "POST",
+	  data: {subtipo:vsubtipo},
+	  url:'../scripts/servidor/sc_asignavacantes_fase2.php',
+	      success: function(data) {
+				alert(data);
+		},
+	      error: function() {
+		alert('Problemas listando solicitud!');
+	      }
+	});
+});
 
 var cen_options = 
 	{
@@ -122,13 +140,24 @@ $('body').on('click', '.cdefinitivo', function(e){
   var vidcactual=$("#centro_definitivo"+vid).attr("data-idcactual");
   vidcactual=vidcactual.replace("idcactual","");
   
+  var vidcorigen=$("#centro_origen"+vid).attr("data-idcorigen");
+  vidcorigen=vidcorigen.replace("idcorigen","");
+  
   var vclasdefinitivo=$("#selectcentro"+vid+" option:selected").attr("class");
   var vclasactual=$(".vacantes"+vtipoestudios+vidcactual).attr("class");
   //vacantes ccentro actual
   var vvaccactual=$(".vacantes"+vtipoestudios+vidcactual).attr("value").split(':')[1];
+
+  //datos centro de estudios origen, si lo hay  
+  var vcorigen=$("#centro_origen"+vid).text();
+  var vvaccorigen=$(".vacantes"+vtipoestudios+vidcorigen).attr("value").split(':')[1];
+  var vreserva=$("#centro_origen"+vid).attr("data-reserva");
+  var vclasorigen=$(".vacantes"+vtipoestudios+vidcorigen).attr("class");
 			
  vacantesfinales_def=+vvacdefinitivo-1;
  vacantesfinales_act=+vvaccactual+1;
+ 
+ vacantesfinales_corigen=+vvaccorigen+1;
  
 console.log("Centro definitivo: "+vcdefinitivo);
 console.log("id centro definitivo: "+vidcdefinitivo);
@@ -141,6 +170,18 @@ console.log("class centro actual: "+vclasactual);
 console.log("Vacantes centro actual: "+vvaccactual);
 console.log("vacantes finales actual: "+vacantesfinales_act);
 
+console.log("CENTRO ESTUDIOS ORIGEN: "+vidcorigen);
+console.log("vacantes finales CORIGEN: "+vacantesfinales_corigen);
+console.log("Reserva CORIGEN: "+vreserva);
+
+if(vidcorigen==vidcdefinitivo)
+{
+		$.alert({
+			title: 'TIENE RESERVA EN ESE CENTRO',
+			content: 'CONTINUAR'
+			});
+		return;
+}
 
 if(vidcactual==vidcdefinitivo)
 {
@@ -156,6 +197,7 @@ $.ajax({
   url:'../scripts/ajax/cambio_estado_fase2.php',
    	success: function(data) 
 	{
+	//console.log(data);return;
 	if(data.indexOf("OK")!=-1)
 
 		$("."+vclasdefinitivo).text(vcdefinitivo+':'+vacantesfinales_def);
@@ -167,7 +209,16 @@ $.ajax({
 		
 		$("."+vclasactual).text(vcactual+':'+vacantesfinales_act);
 		$("."+vclasactual).attr("value",vcactual+':'+vacantesfinales_act);
-
+		//modificamos vacantes en el centro de estudios origen si lo hay y si no se ha liberado la reserva, o sea es la primera veza
+		console.log(vidcorigen+":::"+vreserva);
+		if(vidcorigen!=0 & vreserva=='reserva1')
+		{
+		console.log("modificando vacantes en centro de reserva");
+		$("."+vclasorigen).text(vcorigen+':'+vacantesfinales_corigen);
+		$("."+vclasorigen).attr("value",vcorigen+':'+vacantesfinales_corigen);
+		$("#centro_origen"+vid).attr("data-reserva","reserva0");
+		$("#"+vtipoestudios+vidcorigen).text(vacantesfinales_corigen);
+		}
 		$("#centro_definitivo"+vid).attr("data-idcactual","idcactual"+vidcdefinitivo);
 		$("#centro_definitivo"+vid).text(vcdefinitivo);
 		$.alert({

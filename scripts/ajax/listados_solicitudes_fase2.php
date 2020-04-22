@@ -55,6 +55,7 @@ $camposdatos="campos_bbdd_".$subtipo_listado;
 $utils->setFase2Sorteo(1);
 $fase2_sorteo=1;
 
+
 $form_sorteo_fase2='<div id="form_sorteo" class="input-group mb-3">
 		<div class="input-group-append">
 			<button class="btn btn-success" type="submit" id="boton_asignar_numero_fase2" data-subtipo="'.$subtipo_listado.'">Asignar numero</button>
@@ -65,6 +66,11 @@ $form_sorteo_fase2='<div id="form_sorteo" class="input-group mb-3">
 		<input type="text" id="num_sorteo" name="num_sorteo" value="" placeholder="NUMERO OBTENIDO" disabled>
 		<input type="hidden" id="num_solicitudes" name="num_solicitudes" value="'.$nsolicitudes.'" placeholder="NUMERO OBTENIDO" disabled>
 	</div>';
+$boton_asignar_automatica='<div id="form_asignarfase2" class="input-group mb-3">
+				<div class="input-group-append">
+				<button class="btn btn-success" type="submit" id="boton_asignar_plazas_fase2" data-subtipo="'.$subtipo_listado.'">Asignar Vacantes</button>
+				</div>
+		          </div>';
 
 //mostramos las solitudes completas sin incluir borrador
 $solicitudes=$list->getSolicitudes(1,0,0,$modo='fase2',$subtipo_listado,'todas',3); 
@@ -77,11 +83,12 @@ if($_POST['asignar']==0)
 	{
 	print($form_sorteo_fase2); //mostramos formulario sorteo solo si no se ha hecho ya
 	$tablaresumen=$tcentro->getResumenFase2($_POST['rol']);
-	print($list->showTablaResumenFase2($tablaresumen));
+	print($list->showTablaResumenFase2($tablaresumen,$ncol=1));
 	print($list->showFiltrosTipo());
 	print($filtro_datos);
 	print("<div id='listado_fase2' style='text-align:center'><h1>LISTADO LISTADO SOLICITUDES COMPLETO</h1></div>");
 	}
+print($boton_asignar_automatica); //mostramos formulario sorteo solo si no se ha hecho ya
 print($list->showListado($solicitudes,$_POST['rol'],$$cabecera,$$camposdatos,$provisional=1,$subtipo_listado));
 print($script);
 ?>
