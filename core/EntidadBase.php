@@ -28,7 +28,7 @@ class EntidadBase{
 	if($c==1)
 	{
 		if($this->table=='alumnos_fase2') 
-			$sql='select id_alumno,id_centro1,id_centro,nombre_centro,centro_definitivo,tipoestudios,transporte,puntos_validados,nordensorteo from alumnos_fase2 order by transporte desc,puntos_validados desc,nordensorteo asc';
+			$sql='select id_alumno,nombre,id_centro1,id_centro2,id_centro3,id_centro4,id_centro5,id_centro6,id_centro,nombre_centro,centro_definitivo,tipoestudios,transporte,puntos_validados,nordensorteo from alumnos_fase2 where estado_solicitud="apta" order by transporte desc,puntos_validados desc,nordensorteo asc';
 		else $sql="SELECT * FROM $this->table";
 		$query=$this->db->query($sql);
 	}

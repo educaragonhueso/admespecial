@@ -53,6 +53,7 @@ class UtilidadesAdmision{
 			$sql="UPDATE centros set vacantes_$t=vacantes_$t+1 where id_centro=$idc";
 		else
 			$sql="UPDATE centros set vacantes_$t=$v where id_centro=$idc";
+		$this->log_fase2->warning("ACTUALIZANDO VACANTES CENTROS, VACANTES: $v, INC: $inc CONSULTA: ".$sql);
 		if(!$this->con->query($sql)) return $this->con->error;
 		else return 1;
 	}
@@ -88,11 +89,22 @@ class UtilidadesAdmision{
 	{
 		if(sizeof($centros_fase2)==0 or sizeof($alumnos_fase2)==0) return -1;
 		if(!$post) print("ASIGNANDO VACANTES FASE2 CENTRO ALT: $centro_alternativo TIPOESTUDIOS: $tipoestudios".PHP_EOL);
+		$this->log_fase2->warning("INCIANDO ASIGNACION RONDA: $centro_alternativo FECHAHORA: ".date("Y-m-d h:i:sa"));
 		$this->log_fase2->warning("ASIGNANDO VACANTES FASE2 CENTRO ALT: $centro_alternativo TIPOESTUDIOS: $tipoestudios");
 		if($centro_alternativo==0)
 			$indicecentro='id_centro';
 		else
 			$indicecentro='id_centro'.$centro_alternativo;
+
+		/*
+		$centro_alternativo=1;
+		$indicecentro='id_centro'.$centro_alternativo;
+		print("IDCENTRO: ".$indicecentro.PHP_EOL);
+		$indicecentro='id_centro1';
+		print("IDCENTRO: ".$indicecentro.PHP_EOL);
+
+		$indicecentro='id_centro'.$centro_alternativo;
+		*/
 		//empezamos con las ebo
 		foreach($centros_fase2 as $centro)
 			{			
@@ -113,24 +125,26 @@ class UtilidadesAdmision{
 			$vasignada=1;
 			while($vacantes>0 and $vasignada==1)
 				{
+				if(!$post) print("HAY VACANTES, COMPROBANDO ALUMNOS");
+
 				$vasignada=0;
 				//revisar cada alumno (hay q considerar el orden de elección del alumno, el sorteo etc.) y si ha solicitado plaza en primera opción
 				foreach($alumnos_fase2 as $alumno)
 					{
+					if(!$post) print("ALUMNO: ".$alumno->nombre);
+					if(!$post) print("ENTRANDO ALUMNO, centro: ".strtoupper($alumno->centro_definitivo)." ".$alumno->tipoestudios." ".$tipoestudios);
+					$this->log_fase2->warning("ENTRANDO ALUMNO, centro: ".strtoupper($alumno->centro_definitivo)." ".$alumno->tipoestudios." ".$tipoestudios);
 					if(strtoupper($alumno->centro_definitivo)!='NOCENTRO' || $alumno->tipoestudios!=$tipoestudios)
 					{
-					/*
-					print("ya hay centro def, continuamos");
-					print_r($alumno->centro_definitivo);
-					print_r($alumno->tipoestudios);
-					print_r($tipoestudios);
-					print("FIN");
-					*/
+					if(!$post) print("SALIENDO, centro alumno: ".strtoupper($alumno->centro_definitivo)." ".$alumno->tipoestudios." ".$tipoestudios);
+					$this->log_fase2->warning("SALIENDO, centro alumno: ".strtoupper($alumno->centro_definitivo)." ".$alumno->tipoestudios." ".$tipoestudios);
 					 continue;
 					}
-					$indicecentro='id_centro'.$centro_alternativo;
-					$this->log_fase2->warning("ALUMNO EN PROCESO: ".$alumno->id_alumno);
-					if(!$post) print("ALUMNO ID: $alumno->$indicecentro  CENTRO DE ALUMNO: $alumno->$indicecentro CENTRO DEFINITIVO: $alumno->centro_definitivo".PHP_EOL);	
+					
+					if(!$post) print("INDICE CENTRO: $indicecentro ALUMNO CENTRO ALT:".$alumno->{$indicecentro}." CENTRO DEFINITIVO: $alumno->centro_definitivo".PHP_EOL);	
+					$this->log_fase2->warning("ID ALUMNO EN PROCESO: ".$alumno->id_alumno." NOMBRE ALUMNO: ".$alumno->nombre);
+					$this->log_fase2->warning("CENTRO ACTUAL: $nombrecentro $idcentro CENTRO PEDIDO ALUMNO: ".$alumno->{$indicecentro}." NOMBRE ALUMNO: ".$alumno->nombre);
+					if(!$post) print("ALUMNO ID:".$alumno->id_alumno."  CENTRO DE ALUMNO: ".$alumno->$indicecentro." CENTRO DEFINITIVO: $alumno->centro_definitivo".PHP_EOL);	
 					if($alumno->$indicecentro==$idcentro)
 					{ 
 						$this->setAlumnoCentroFase2($alumno->id_alumno,$centro['id_centro'],$nombrecentro);
@@ -157,9 +171,9 @@ class UtilidadesAdmision{
 					//si se acaban las vacantes del centro
 					if($vacantes==0)
 						{ 
+						$this->log_fase2->warning("TERMINADO CENTRO: $nombrecentro");
 						if($this->setVacantesCentroFase2($centro['id_centro'],$vacantes,'ebo')!=1) return 0;
 						if(!$post) print(PHP_EOL."Terminado centro: $nombrecentro".PHP_EOL);
-						$this->log_fase2->warning("Terminado centro: $nombrecentro");
 						break;
 						}
 					}
@@ -207,7 +221,7 @@ class UtilidadesAdmision{
 		
 		$res=$this->con->query($sql);
 		if(!$res) return $this->con->error;
-		$sqlfase2="SELECT t1.id_alumno,t1.nombre,t1.apellido1,t1.apellido2,t1.localidad,t1.calle_dfamiliar,t1.nombre_centro,t1.tipoestudios,t1.fase_solicitud,t1.estado_solicitud,t1.transporte,'0' as nordensorteo,'0' as nasignado,t1.puntos_validados,t1.id_centro,t2.centro1,t2.id_centro1,t3.centro2,t3.id_centro2,t4.centro3,t4.id_centro3,t5.centro4,t5.id_centro4,t6.centro5,t6.id_centro5,t7.centro6,t7.id_centro6, 'nocentro ' as centro_definitivo, '0' as id_centro_definitivo,t1.id_centro_estudios_origen as id_centro_origen,t8.centro_origen,'automatica' as tipo_modificacion FROM 
+		$sqlfase2="SELECT t1.id_alumno,t1.nombre,t1.apellido1,t1.apellido2,t1.localidad,t1.calle_dfamiliar,t1.nombre_centro,t1.tipoestudios,t1.fase_solicitud,t1.estado_solicitud,t1.transporte,'0' as nordensorteo,'0' as nasignado,t1.puntos_validados,t1.id_centro,t2.centro1,t2.id_centro1,t3.centro2,t3.id_centro2,t4.centro3,t4.id_centro3,t5.centro4,t5.id_centro4,t6.centro5,t6.id_centro5,t7.centro6,t7.id_centro6, 'nocentro' as centro_definitivo, '0' as id_centro_definitivo,t1.id_centro_estudios_origen as id_centro_origen,t8.centro_origen,IF(t1.id_centro_estudios_origen=0,0,1),'automatica' as tipo_modificacion FROM 
 	(SELECT a.id_alumno, a.nombre, a.apellido1, a.apellido2,a.loc_dfamiliar as localidad,a.calle_dfamiliar,c.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro_destino as id_centro,a.id_centro_estudios_origen,a.est_desp_sorteo FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno 
 	left join centros c on a.id_centro_destino=c.id_centro  order by c.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc)
 	as t1 
