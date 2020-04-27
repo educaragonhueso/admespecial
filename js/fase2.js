@@ -197,7 +197,6 @@ $.ajax({
   url:'../scripts/ajax/cambio_estado_fase2.php',
    	success: function(data) 
 	{
-	//console.log(data);return;
 	if(data.indexOf("OK")!=-1)
 
 		$("."+vclasdefinitivo).text(vcdefinitivo+':'+vacantesfinales_def);

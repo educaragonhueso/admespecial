@@ -2,17 +2,67 @@
 class UtilidadesAdmision{
     private $con;
      
-    public function __construct($adapter='',$centros_controller='',$centro='') 
+    public function __construct($adapter='',$centros_controller='',$centro='',$post=0) 
 		{
 		$this->con=$adapter;	
 		$this->centros=$centros_controller;	
 		$this->centro=$centro;	
+		$this->post=$post;	
 		require_once DIR_CLASES.'LOGGER.php';
 		require_once DIR_APP.'parametros.php';
 			
 		$this->log_fase2=new logWriter('log_fase2',DIR_LOGS);
 		$this->log_sorteo_fase2=new logWriter('log_sorteo_fase2',DIR_LOGS);
     		}
+  public function getDistancia($origen,$destino){
+		    $url = "http://maps.googleapis.com/maps/api/directions/json?origin=".str_replace(' ', '+', $origen)."&destination=".str_replace(' ', '+', $destino)."&sensor=false";
+	            $ch = curl_init();
+			print($url);exit();	
+	            curl_setopt($ch, CURLOPT_URL, $url);
+	            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	            curl_setopt($ch, CURLOPT_PROXYPORT, 3128);
+	            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+	            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+	            $response = curl_exec($ch);
+	            curl_close($ch);
+	            $response_all = json_decode($response);
+	            // print_r($response);
+	            $distance = $response_all->routes[0]->legs[0]->distance->text;
+	}
+  public function getDistancia_geo($addressFrom,$addressTo){
+
+		 //Change address format
+		    $formattedAddrFrom = str_replace(' ','+',$addressFrom);
+		    $formattedAddrTo = str_replace(' ','+',$addressTo);
+		    
+		    //Send request and receive json data
+		    $geocodeFrom = file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$formattedAddrFrom.'&sensor=false');
+		    $outputFrom = json_decode($geocodeFrom);
+		    $geocodeTo = file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$formattedAddrTo.'&sensor=false');
+		    $outputTo = json_decode($geocodeTo);
+		    
+		    //Get latitude and longitude from geo data
+		    $latitudeFrom = $outputFrom->results[0]->geometry->location->lat;
+		    $longitudeFrom = $outputFrom->results[0]->geometry->location->lng;
+		    $latitudeTo = $outputTo->results[0]->geometry->location->lat;
+		    $longitudeTo = $outputTo->results[0]->geometry->location->lng;
+		    
+		    //Calculate distance from latitude and longitude
+		    $theta = $longitudeFrom - $longitudeTo;
+		    $dist = sin(deg2rad($latitudeFrom)) * sin(deg2rad($latitudeTo)) +  cos(deg2rad($latitudeFrom)) * cos(deg2rad($latitudeTo)) * cos(deg2rad($theta));
+		    $dist = acos($dist);
+		    $dist = rad2deg($dist);
+		    $miles = $dist * 60 * 1.1515;
+		    $unit = strtoupper($unit);
+		    if ($unit == "K") {
+			return ($miles * 1.609344).' km';
+		    } else if ($unit == "N") {
+			return ($miles * 0.8684).' nm';
+		    } else {
+			return $miles.' mi';
+		    }
+
+	}
   public function asignarNumSorteoFase2(){
 		$this->log_sorteo_fase2->warning("ASIGNANDO NUMERO SORTEO");
 		$sql="SET @r := 0";
@@ -47,13 +97,17 @@ class UtilidadesAdmision{
 		if(!$this->con->query($sql1) or !$this->con->query($sql2)) return $this->con->error;
 		else return 1;
 	}
- 	public function setFase2Sorteo($f){return 1;}
  	public function setVacantesCentroFase2($idc,$v,$t,$inc=0){
 		if($inc==1) //si inc es 1 se incrementan/decrementan las vacantes
-			$sql="UPDATE centros set vacantes_$t=vacantes_$t+1 where id_centro=$idc";
+		{
+			$voriginal="vacantes_$t"."_original";
+			$sql="UPDATE centros set vacantes_$t=vacantes_$t+1,$voriginal=$voriginal+1 where id_centro=$idc";
+			
+		}
 		else
 			$sql="UPDATE centros set vacantes_$t=$v where id_centro=$idc";
 		$this->log_fase2->warning("ACTUALIZANDO VACANTES CENTROS, VACANTES: $v, INC: $inc CONSULTA: ".$sql);
+		if(!$this->post) print(PHP_EOL."ACTUALIZANDO VACANTES CENTROS, VACANTES: $v, INC: $inc CONSULTA: ".$sql);
 		if(!$this->con->query($sql)) return $this->con->error;
 		else return 1;
 	}
@@ -65,9 +119,11 @@ class UtilidadesAdmision{
 	}
  	public function liberaReserva($ida){
 		//modificamos el centro en a tabla de alumnos_fase2
-		$sql="UPDATE alumnos_fase2 set reserva=0 where id_alumno=$ida";
-		if(!$this->con->query($sql)) return $this->con->error;
-		else return 1;
+		$sql1="UPDATE alumnos_fase2 set reserva=0 where id_alumno=$ida";
+		$sql2="UPDATE alumnos_fase2_tmp set reserva=0 where id_alumno=$ida";
+		if(!$this->con->query($sql1)) return $this->con->error;
+		if(!$this->con->query($sql2)) return $this->con->error;
+		return 1;
 	}
  	public function checkReservaPlaza($ida){
 		//comprobamos si ell alumno tiene una reserva para el tipo determinado
@@ -77,10 +133,16 @@ class UtilidadesAdmision{
 		if($res) return $res->fetch_row();
 		else return $this->con->error;
 	}
+	public function restaurarVacantesCentroFase2(){
+		$sql="UPDATE centros SET vacantes_ebo=vacantes_ebo_original, vacantes_tva=vacantes_tva_original";
+		$this->log_fase2->warning("RESTAURANDO VACANTES CENTROS, CONSULTA: $sql");
+		if(!$this->con->query($sql)) return $this->con->error;
+		else return 1;
+	}
  	public function getReservaPlaza($ida,$tipo=''){
 		//comprobamos si ell alumno tiene una reserva para el tipo determinado
 		//si la tiene devolvemos el id del centro origen, siempre q sea de tipo especial
-		$sql="SELECT id_centro_origen FROM alumnos_fase2 where id_alumno=$ida"; 
+		$sql="SELECT id_centro_origen,reserva FROM alumnos_fase2 where id_alumno=$ida"; 
 		$res=$this->con->query($sql);
 		if($res) return $res->fetch_row();
 		else return $this->con->error;
@@ -88,23 +150,17 @@ class UtilidadesAdmision{
  	public function asignarVacantesCentros($centros_fase2=array(),$alumnos_fase2=array(),$centro_alternativo=0,$tipoestudios,$post=0)
 	{
 		if(sizeof($centros_fase2)==0 or sizeof($alumnos_fase2)==0) return -1;
-		if(!$post) print("ASIGNANDO VACANTES FASE2 CENTRO ALT: $centro_alternativo TIPOESTUDIOS: $tipoestudios".PHP_EOL);
-		$this->log_fase2->warning("INCIANDO ASIGNACION RONDA: $centro_alternativo FECHAHORA: ".date("Y-m-d h:i:sa"));
+
+		if(!$post) print(PHP_EOL."ASIGNANDO VACANTES FASE2 CENTRO ALT: $centro_alternativo TIPOESTUDIOS: $tipoestudios".PHP_EOL);
 		$this->log_fase2->warning("ASIGNANDO VACANTES FASE2 CENTRO ALT: $centro_alternativo TIPOESTUDIOS: $tipoestudios");
+		if(!$post) print(PHP_EOL."INCIANDO ASIGNACION RONDA: $centro_alternativo FECHAHORA: ".date("Y-m-d h:i:sa").PHP_EOL);
+		$this->log_fase2->warning("INCIANDO ASIGNACION RONDA: $centro_alternativo FECHAHORA: ".date("Y-m-d h:i:sa"));
+
 		if($centro_alternativo==0)
 			$indicecentro='id_centro';
 		else
 			$indicecentro='id_centro'.$centro_alternativo;
 
-		/*
-		$centro_alternativo=1;
-		$indicecentro='id_centro'.$centro_alternativo;
-		print("IDCENTRO: ".$indicecentro.PHP_EOL);
-		$indicecentro='id_centro1';
-		print("IDCENTRO: ".$indicecentro.PHP_EOL);
-
-		$indicecentro='id_centro'.$centro_alternativo;
-		*/
 		//empezamos con las ebo
 		foreach($centros_fase2 as $centro)
 			{			
@@ -119,8 +175,10 @@ class UtilidadesAdmision{
 			if($vacantes<=0) continue;
 
 			$vasignadaebo=1;
+
 			$this->log_fase2->warning("ENTRANDO CENTRO $nombrecentro FASE2 $tipoestudios, plazas: $vacantes");
-			if(!$post) print("ENTRANDO CENTRO $nombrecentro, idcentro ".$centro['id_centro']." FASE2 $tipoestudios, plazas: $vacantes".PHP_EOL);
+			if(!$post) print(PHP_EOL."ENTRANDO CENTRO $nombrecentro, idcentro ".$centro['id_centro']." FASE2 $tipoestudios, plazas: $vacantes".PHP_EOL);
+
 			$idcentro=$centro['id_centro'];
 			$vasignada=1;
 			while($vacantes>0 and $vasignada==1)
@@ -131,40 +189,63 @@ class UtilidadesAdmision{
 				//revisar cada alumno (hay q considerar el orden de elección del alumno, el sorteo etc.) y si ha solicitado plaza en primera opción
 				foreach($alumnos_fase2 as $alumno)
 					{
-					if(!$post) print("ALUMNO: ".$alumno->nombre);
-					if(!$post) print("ENTRANDO ALUMNO, centro: ".strtoupper($alumno->centro_definitivo)." ".$alumno->tipoestudios." ".$tipoestudios);
+					
+					if(!$post) print(PHP_EOL."ENTRANDO ALUMNO, centro: ".strtoupper($alumno->centro_definitivo)." ".$alumno->tipoestudios." ".$tipoestudios.PHP_EOL);
 					$this->log_fase2->warning("ENTRANDO ALUMNO, centro: ".strtoupper($alumno->centro_definitivo)." ".$alumno->tipoestudios." ".$tipoestudios);
-					if(strtoupper($alumno->centro_definitivo)!='NOCENTRO' || $alumno->tipoestudios!=$tipoestudios)
+					
+					if($alumno->tipoestudios!=$tipoestudios)
 					{
-					if(!$post) print("SALIENDO, centro alumno: ".strtoupper($alumno->centro_definitivo)." ".$alumno->tipoestudios." ".$tipoestudios);
+					
+					if(!$post) print(PHP_EOL."SALIENDO, centro alumno: ".strtoupper($alumno->centro_definitivo)." ".$alumno->tipoestudios." ".$tipoestudios);
 					$this->log_fase2->warning("SALIENDO, centro alumno: ".strtoupper($alumno->centro_definitivo)." ".$alumno->tipoestudios." ".$tipoestudios);
-					 continue;
+					
+					continue;
 					}
 					
-					if(!$post) print("INDICE CENTRO: $indicecentro ALUMNO CENTRO ALT:".$alumno->{$indicecentro}." CENTRO DEFINITIVO: $alumno->centro_definitivo".PHP_EOL);	
 					$this->log_fase2->warning("ID ALUMNO EN PROCESO: ".$alumno->id_alumno." NOMBRE ALUMNO: ".$alumno->nombre);
+					if(!$post) print(PHP_EOL."ID ALUMNO EN PROCESO: ".$alumno->id_alumno." NOMBRE ALUMNO: ".$alumno->nombre.PHP_EOL);
 					$this->log_fase2->warning("CENTRO ACTUAL: $nombrecentro $idcentro CENTRO PEDIDO ALUMNO: ".$alumno->{$indicecentro}." NOMBRE ALUMNO: ".$alumno->nombre);
-					if(!$post) print("ALUMNO ID:".$alumno->id_alumno."  CENTRO DE ALUMNO: ".$alumno->$indicecentro." CENTRO DEFINITIVO: $alumno->centro_definitivo".PHP_EOL);	
-					if($alumno->$indicecentro==$idcentro)
+					if(!$post) print("CENTRO ACTUAL: $nombrecentro $idcentro CENTRO PEDIDO ALUMNO: ".$alumno->{$indicecentro}." NOMBRE ALUMNO: ".$alumno->nombre);
+				
+					//solo asignamos plaza a alumnos sin centro definitivo	
+					if($alumno->$indicecentro==$idcentro and strtoupper($alumno->centro_definitivo)=='NOCENTRO')
 					{ 
+						//comprobamos si tenía reserva de plaza, en caso afirmativo, se genera nueva plaza
+						$reserva=$this->getReservaPlaza($alumno->id_alumno,$tipoestudios);
+						
 						$this->setAlumnoCentroFase2($alumno->id_alumno,$centro['id_centro'],$nombrecentro);
 						$asignada=1;
 						$vacantes--;
+					
 						if(!$post) print(PHP_EOL."COINCIDENCIA: $alumno->id_alumno CENTRO: $nombrecentro".PHP_EOL);
 						$this->log_fase2->warning("COINCIDENCIA: $alumno->id_alumno CENTRO: $nombrecentro");
-						//comprobamos si tenía reserva de plaza, en caso afirmativo, se genera nueva plaza
-						$reserva=$this->getReservaPlaza($alumno->id_alumno,$tipoestudios);
+					
+							
 						if(!$post) print(PHP_EOL."ENTREGADA PLAZA DEL CENTRO $nombrecentro A: ".$alumno->id_alumno.PHP_EOL);
 						$this->log_fase2->warning("ENTREGADA PLAZA DEL CENTRO $nombrecentro A: $alumno->id_alumno");
-						//si habia reserva de plaza tenemos que actualizar las vacantes para ese centro y volver a procesarlo
+						//si habia reserva de plaza tenemos que actualizar las vacantes para ese centro y volver a procesarlo,reserva[0] es el id centro y reserva[1] el q dice si se ha liberado ya o no
 						if(!$post) print(PHP_EOL."COMPROBANDO RESERVA DE PLAZA $reserva[0]".PHP_EOL);
 						$this->log_fase2->warning("COMPROBANDO RESERVA DE PLAZA $reserva[0]");
-						if($reserva[0]!=0 and $alumno->$indicecentro!=$reserva[0])
+					
+						if($reserva[0]!=0 and $reserva[1]==1 and $alumno->$indicecentro!=$reserva[0])
 						{
-							if($this->setVacantesCentroFase2($reserva[0],0,'ebo',1)!=1) return 0;
-							if(!$post) print("LIBERADA RESERVA CENTRO $reserva[0] ALUMNO: ".$alumno->id_alumno);
+							//se ha liberado vacante con lo q hay q restaurar las vacantes de nuevo incrementando una
+
+							if($this->restaurarVacantesCentroFase2()!=1) return 0;
+							
+							$this->log_fase2->warning("REINICIANDO PROCESO, RESTAURADAS VACANTES");
+							if(!$post) print(PHP_EOL."REINICIANDO PROCESO, RESTAURADAS VACANTES");
+							
+							
+							//añadimos la q se ha liberado y marcamos al alumno como q la ha liberado para no voolver a tenrla en cuenta
+							if($this->setVacantesCentroFase2($reserva[0],0,$tipoestudios,1)!=1) return 0;
+						
+							//marcamos la reserva q deja el alumno, como reserva liberada, en las dos tablas de alumnos	
+							if($this->liberaReserva($alumno->id_alumno)!=1) return 0;
+
+							if(!$post) print(PHP_EOL."LIBERADA RESERVA CENTRO $reserva[0] ALUMNO: ".$alumno->id_alumno);
 							$this->log_fase2->warning("LIBERADA RESERVA CENTRO $reserva[0] ALUMNO: ".$alumno->id_alumno);
-							if($this->setVacantesCentroFase2($idcentro,$vacantes,'ebo')!=1) return 0;
+	
 							return -2;
 						}
 					}
@@ -172,18 +253,64 @@ class UtilidadesAdmision{
 					if($vacantes==0)
 						{ 
 						$this->log_fase2->warning("TERMINADO CENTRO: $nombrecentro");
-						if($this->setVacantesCentroFase2($centro['id_centro'],$vacantes,'ebo')!=1) return 0;
+						if($this->setVacantesCentroFase2($centro['id_centro'],$vacantes,$tipoestudios)!=1) return 0;
 						if(!$post) print(PHP_EOL."Terminado centro: $nombrecentro".PHP_EOL);
 						break;
 						}
 					}
-				
 				}
 			//actualizamos las vacantes en el centro cuyas plazas se han procesado
-			if($this->setVacantesCentroFase2($centro['id_centro'],$vacantes,'ebo')!=1) return 0;
+			if($this->setVacantesCentroFase2($centro['id_centro'],$vacantes,$tipoestudios)!=1) return 0;
 			}
 		//print("FIN asignaciones $tipoestudios".PHP_EOL);
 		return 1;
+	}
+    	public function getAlumnosReserva()
+	{
+		$resultSet=array();
+		$sql="SELECT id_alumno,nombre,id_centro_estudios_origen,tipoestudios FROM alumnos where est_desp_sorteo='admitida' or (est_desp_sorteo='noadmitida' and reserva=1)";
+		$query=$this->con->query($sql);
+		if($query)
+		while ($row = $query->fetch_object()) {
+		   $resultSet[]=$row;
+		}
+		
+		return $resultSet;
+    }
+    	public function getAlumnosFase2($t='tmp')
+	{
+		$resultSet=array();
+		if($t=='tmp') $tabla='alumnos_fase2_tmp';
+		else $tabla='alumnos_fase2';
+		$sql="SELECT id_alumno,nombre,id_centro1,id_centro2,id_centro3,id_centro4,id_centro5,id_centro6,id_centro,nombre_centro,centro_definitivo,tipoestudios,transporte,puntos_validados,nordensorteo FROM $tabla where estado_solicitud='apta' order by transporte desc,puntos_validados desc,nordensorteo asc";
+
+		$query=$this->con->query($sql);
+
+		if($query)
+		while ($row = $query->fetch_object()) {
+		   $resultSet[]=$row;
+		}
+		
+		return $resultSet;
+    }
+  public function liberaVacantesAlumnos()
+	{
+		$alumnosreserva=$this->getAlumnosReserva();
+		$alumnosreserva=(array)$alumnosreserva;
+		foreach($alumnosreserva as $a)
+		{
+			$a=(array)$a;
+			print_r($a);
+			$corigen=$a['id_centro_estudios_origen'];
+			$tipoestudios=$a['tipoestudios'];
+			//comporbar cada alumno y si itiene reserva actualizar plaza en el centro de origen
+			if($corigen!=0)
+			{
+			//print_r($a);exit();
+			if($this->setVacantesCentroFase2($corigen,0,$tipoestudios,1)!=1) return 0;
+			}
+		}
+	return 1;
 	}
   public function actualizaVacantesCentros($centro=0)
 	{
@@ -193,8 +320,10 @@ class UtilidadesAdmision{
 		foreach($acentros as $centro)
 		{
 			$this->centro->setId($centro['id_centro']);
+
+			//completamos el campo de cada centro para incluir las vacantes definitivas
 			$vacantes=$this->centro->getVacantes();
-			$sql="UPDATE centros set vacantes_ebo=".$vacantes[0]->vacantes.",vacantes_tva=".$vacantes[1]->vacantes." where id_centro=".$centro['id_centro'];
+			$sql="UPDATE centros set vacantes_ebo_original=".$vacantes[0]->vacantes.",vacantes_ebo=".$vacantes[0]->vacantes.", vacantes_tva_original=".$vacantes[1]->vacantes.",vacantes_tva=".$vacantes[1]->vacantes." where id_centro=".$centro['id_centro'];
 			if(!$this->con->query($sql)) return $this->con->error;
 		}
 	return 1;
@@ -221,8 +350,8 @@ class UtilidadesAdmision{
 		
 		$res=$this->con->query($sql);
 		if(!$res) return $this->con->error;
-		$sqlfase2="SELECT t1.id_alumno,t1.nombre,t1.apellido1,t1.apellido2,t1.localidad,t1.calle_dfamiliar,t1.nombre_centro,t1.tipoestudios,t1.fase_solicitud,t1.estado_solicitud,t1.transporte,'0' as nordensorteo,'0' as nasignado,t1.puntos_validados,t1.id_centro,t2.centro1,t2.id_centro1,t3.centro2,t3.id_centro2,t4.centro3,t4.id_centro3,t5.centro4,t5.id_centro4,t6.centro5,t6.id_centro5,t7.centro6,t7.id_centro6, 'nocentro' as centro_definitivo, '0' as id_centro_definitivo,t1.id_centro_estudios_origen as id_centro_origen,t8.centro_origen,IF(t1.id_centro_estudios_origen=0,0,1),'automatica' as tipo_modificacion FROM 
-	(SELECT a.id_alumno, a.nombre, a.apellido1, a.apellido2,a.loc_dfamiliar as localidad,a.calle_dfamiliar,c.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro_destino as id_centro,a.id_centro_estudios_origen,a.est_desp_sorteo FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno 
+		$sqlfase2="SELECT t1.id_alumno,t1.nombre,t1.apellido1,t1.apellido2,t1.localidad,t1.calle_dfamiliar,t1.nombre_centro,t1.tipoestudios,t1.fase_solicitud,t1.estado_solicitud,t1.transporte,'0' as nordensorteo,'0' as nasignado,t1.puntos_validados,t1.id_centro,t2.centro1,t2.id_centro1,t3.centro2,t3.id_centro2,t4.centro3,t4.id_centro3,t5.centro4,t5.id_centro4,t6.centro5,t6.id_centro5,t7.centro6,t7.id_centro6, 'nocentro' as centro_definitivo, '0' as id_centro_definitivo,t1.id_centro_estudios_origen as id_centro_origen,t8.centro_origen,t1.reserva,'automatica' as tipo_modificacion,'0' as activado_fase3 FROM 
+	(SELECT a.id_alumno, a.nombre, a.apellido1, a.apellido2,a.loc_dfamiliar as localidad,a.calle_dfamiliar,c.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro_destino as id_centro,a.id_centro_estudios_origen,a.est_desp_sorteo,a.reserva FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno 
 	left join centros c on a.id_centro_destino=c.id_centro  order by c.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc)
 	as t1 
 	left join 

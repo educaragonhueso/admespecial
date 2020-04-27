@@ -47,13 +47,15 @@ if($_POST['asignar']=='1')
 if($_POST['asignar']=='2')
 	{
 	if($utils->actualizarSolSorteoFase2(1,$nsorteo,$nsolicitudes)!=1){ print("Error realizando el sorteo");exit();}
-//	$subtipo_listado="lfase2_sol";//si es para el sorteo el subtipo es lfase2_sol
+	$fsfase2 = fopen(DIR_BASE."/scripts/datos/sorteofase2.txt", "w") or die("Unable to open file!");
+	fwrite($fsfase2,$nsorteo);
+	fclose($fsfase2);
 	}
 $cabecera="campos_cabecera_".$subtipo_listado;
 $camposdatos="campos_bbdd_".$subtipo_listado;
 //actualizamos el estado del sorteo. 0:no realizado, 1.numero asignado, 2. realizado
-$utils->setFase2Sorteo(1);
-$fase2_sorteo=1;
+//$utils->setFase2Sorteo(1);
+//$fase2_sorteo=1;
 
 
 $form_sorteo_fase2='<div id="form_sorteo" class="input-group mb-3">
@@ -81,12 +83,12 @@ $log_listados_solicitudes_fase2->warning("OBTENIDAS $nsolicitudes SOLICITUDES FA
 //Si es el listado normal, no hay sorteo
 if($_POST['asignar']==0)
 	{
-	print($form_sorteo_fase2); //mostramos formulario sorteo solo si no se ha hecho ya
-	$tablaresumen=$tcentro->getResumenFase2($_POST['rol']);
-	print($list->showTablaResumenFase2($tablaresumen,$ncol=1));
-	print($list->showFiltrosTipo());
-	print($filtro_datos);
-	print("<div id='listado_fase2' style='text-align:center'><h1>LISTADO LISTADO SOLICITUDES COMPLETO</h1></div>");
+		print($form_sorteo_fase2); //mostramos formulario sorteo solo si no se ha hecho ya
+		$tablaresumen=$tcentro->getResumenFase2($_POST['rol']);
+		print($list->showTablaResumenFase2($tablaresumen,$ncol=1));
+		print($list->showFiltrosTipo());
+		print($filtro_datos);
+		print("<div id='listado_fase2' style='text-align:center'><h1>LISTADO LISTADO SOLICITUDES COMPLETO</h1></div>");
 	}
 print($boton_asignar_automatica); //mostramos formulario sorteo solo si no se ha hecho ya
 print($list->showListado($solicitudes,$_POST['rol'],$$cabecera,$$camposdatos,$provisional=1,$subtipo_listado));

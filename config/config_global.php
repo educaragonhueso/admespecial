@@ -37,4 +37,6 @@ define("DIA_DEFINITIVOS",'2020/04/18');
 
 define("DIA_SORTEO_FASE2",'2020/04/18');
 
+define("DIA_FASE3",'2020/04/19');
+
 ?>

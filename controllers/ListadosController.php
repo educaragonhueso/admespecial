@@ -115,7 +115,7 @@ class ListadosController extends ControladorBase{
 			$this->log_listados_definitivos->warning('OBTENIENDO DEFINITIVOS');
 		    	$allsolicitudes=$solicitud->getAllSolListados($id_centro,2,$subtipo_listado,$fase_sorteo,$estado_convocatoria);
 		}
-		elseif($modo=='fase2')
+		elseif($modo=='fase2' || $modo=='fase3')
 		{
 			$this->log_listados_solicitudes_fase2->warning("Funcion: getSolicitudes FASE II:");
 		    	$allsolicitudes=$solicitud->getAllSolListados($id_centro,3,$subtipo_listado,$fase_sorteo,$estado_convocatoria);
@@ -251,7 +251,7 @@ class ListadosController extends ControladorBase{
 
 	return $html;
 	}
-  public function showSolicitudListado($sol,$datos,$provisional=0,$htmldatoscentros=''){
+  public function showSolicitudListado($sol,$datos,$provisional=0,$htmldatoscentros='',$fase=2){
 		$i=0;	
 		//los listados provisionales no permiten acceder a los datos de la solicitud
 		if($provisional>=1) $class='';
@@ -285,8 +285,15 @@ class ListadosController extends ControladorBase{
 				}
 				elseif($d=='centrosdisponibles')
 				{
-				$select="<div id='".$d.$sol->id_alumno."' class='listacentros'><select id='selectcentro".$sol->id_alumno."'>".$htmldatoscentros."</select></div>";
-				$select.='<button data-tipo="'.$sol->tipoestudios.'" data-idcentro="'.$sol->$d.'"  id="'.$sol->id_alumno.'"  class="cdefinitivo" value="Cambiar">Cambiar</button> ';
+				$select='';
+				//Para la fase 2 incluimos centros disponibles
+				if($fase==2){
+					$select.="<div id='".$d.$sol->id_alumno."' class='listacentros'><select id='selectcentro".$sol->id_alumno."'>".$htmldatoscentros."</select></div>";
+					$select.='<button data-tipo="'.$sol->tipoestudios.'" data-idcentro="'.$sol->$d.'"  id="'.$sol->id_alumno.'"  class="cdefinitivo" value="Cambiar">Cambiar</button> ';
+				}
+				elseif($fase==3){
+					$select.='<button data-tipo="'.$sol->tipoestudios.'" data-idcentro="'.$sol->$d.'"  id="'.$sol->id_alumno.'"  class="activarfase3" value="activar">Activar</button> ';
+				}
 				$li.="<td id='".$d.$sol->id_alumno."'>".$select."</td>";
 				}
 				elseif($d=='centro_origen')
@@ -304,7 +311,7 @@ class ListadosController extends ControladorBase{
 	{
 		$centros=$this->getCentrosNombreVacantes();
 		$htmlcentros="";
-	
+		$fase=2;
 		//preparamos desplegable con centros y vacantes 
 		if($subtipo=='lfase2_sol_ebo')
 		foreach($centros as $centro)
@@ -320,6 +327,12 @@ class ListadosController extends ControladorBase{
 			$cdata_completo=$centro['nombre_centro'].":".$centro['vacantes_tva'];
   			$htmlcentros.="<option class='vacantestva".$centro['id_centro']."' value='$cdata_completo'>".$cdata_parcial."</option>";
 			}
+		//preparamos boton para activar o desactivar dupllicado o sol irregular
+		if($subtipo=='lfase3_sol_ebo' or $subtipo=='lfase3_sol_tva')
+		{
+			$fase=3;
+		}
+	
 	$centroanterior='';
 	$centroactual='';
 
@@ -359,7 +372,7 @@ class ListadosController extends ControladorBase{
 			$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
 			$cab=1;
 		}
-		$html.=$this->showSolicitudListado($sol,$camposdatos,$provisional,$htmlcentros);	
+		$html.=$this->showSolicitudListado($sol,$camposdatos,$provisional,$htmlcentros,$fase);	
 	}
 	$html.="</tbody>";
 	$html.='</table>';
@@ -659,6 +672,8 @@ class ListadosController extends ControladorBase{
 				{
 					$linea[$k]=utf8_decode($sol[$k]);
 				}
+			$this->log_gencsvs->warning("LINEA: ".PHP_EOL);
+			$this->log_gencsvs->warning(print_r($linea,true));
 				
 				fputcsv($fp,$linea,';');
 			}

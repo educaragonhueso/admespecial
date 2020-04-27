@@ -29,7 +29,7 @@ $subtipo_csv=$subtipo;//dentro de cada tipo, el subtipo de listado
 $cabecera="campos_cabecera_csv_".$subtipo_csv;
 $camposdatos="campos_bbdd_csv_".$subtipo_csv;
 
-if($subtipo=='fase2') $tipo=3;
+if($subtipo=='fase2' or $subtipo=='fase3') $tipo=3;
 else $tipo=0;
 $fase_sorteo=0;
 $modo='csv';

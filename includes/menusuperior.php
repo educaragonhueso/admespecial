@@ -37,6 +37,7 @@
 					{ 
 					echo '<a class="exportcsv dropdown-item" href="#" id="csv_dup" data-tipo="csv" data-subtipo="csv_dup">Listado duplicados (csv) </a>';
 					echo '<a class="exportcsv dropdown-item" href="#" id="csv_dup" data-tipo="csv" data-subtipo="csv_fase2">Listado Fase 2 (csv) </a>';
+					echo '<a class="exportcsv dropdown-item" href="#" id="csv_dup" data-tipo="csv" data-subtipo="csv_fase3">Listado Fase 3 (csv) </a>';
 					}
 				?>
 				 </div>
@@ -84,6 +85,13 @@
 		                 <div class="dropdown-menu">
 				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_ebo">Listado Solicitudes fase2 EBO</a>
 				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_tva">Listado Solicitudes fase2 TVA</a>
+				 </div>
+                            </li>
+                            <li class="nav-item active msuperior dropdown" id="mdefinitivo">
+                                 <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASEIII</a>
+		                 <div class="dropdown-menu">
+				 <a class="lfase3 dropdown-item" href="#" data-subtipo="lfase3_sol_ebo">Listado Solicitudes fase3 EBO</a>
+				 <a class="lfase3 dropdown-item" href="#" data-subtipo="lfase3_sol_tva">Listado Solicitudes fase3 TVA</a>
 				 </div>
                             </li>
 		<?php }?>

@@ -12052,3 +12052,190 @@
 [25-Apr-2020 03:27:01] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
 [25-Apr-2020 03:31:36] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
 [25-Apr-2020 03:54:14] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[25-Apr-2020 16:02:24] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[26-Apr-2020 00:32:46] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[26-Apr-2020 00:45:46] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[26-Apr-2020 09:05:17] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[26-Apr-2020 17:54:38] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[26-Apr-2020 18:32:01] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 07:43:18] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 08:29:49] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 08:30:04] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 08:36:46] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 08:36:46] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 08:36:46] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 08:36:46] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 08:36:46] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 08:37:20] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 08:37:20] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 08:37:20] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 08:37:20] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 08:37:20] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 08:37:28] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 08:37:28] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 08:37:28] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 08:37:28] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 08:37:28] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 08:37:36] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 08:37:36] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 08:37:36] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 08:37:36] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 08:37:36] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 08:38:15] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 08:38:15] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 08:38:15] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 08:38:15] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 08:38:15] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 08:38:48] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 08:38:48] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 08:38:48] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 08:38:48] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 08:38:48] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 08:39:15] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 08:39:15] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 08:39:15] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 08:39:15] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 08:39:15] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 08:39:23] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 08:39:23] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 08:39:23] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 08:39:23] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 08:39:23] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 08:47:10] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 08:47:33] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 09:04:30] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 09:04:47] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 09:31:43] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 09:32:34] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 09:33:23] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:14:33] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:14:35] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:17:42] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:17:44] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:21:35] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:21:36] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:22:22] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:22:24] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:24:32] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:24:33] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:24:36] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:29:01] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:39:18] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:39:27] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:41:30] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:41:45] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:41:50] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:41:57] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:43:04] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:43:06] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:43:09] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:43:19] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:43:23] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:43:49] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:44:36] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:44:38] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:48:26] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:48:31] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:48:36] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:48:45] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:49:40] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:49:43] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:49:55] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:50:12] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:52:28] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:52:42] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 10:59:43] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 11:06:22] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 11:06:38] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 11:07:19] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 11:07:19] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 11:07:19] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 11:07:19] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 11:07:19] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 11:07:47] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 11:08:37] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 11:08:37] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 11:08:37] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 11:08:37] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 11:08:37] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 11:09:24] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 11:09:44] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 18:03:55] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 18:04:23] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 18:04:23] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 18:04:23] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 18:04:56] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 18:04:56] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 18:04:56] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 18:05:09] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 18:05:15] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 18:05:15] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 18:05:15] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 18:05:15] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 18:05:15] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 18:06:34] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 18:09:34] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 18:09:34] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 18:09:34] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 18:09:34] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 18:09:34] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 18:10:18] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 18:10:53] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 18:11:05] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 18:11:05] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 18:11:05] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 18:11:05] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 18:11:05] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 18:12:05] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 18:25:51] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 18:25:55] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 18:25:55] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 18:25:55] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 18:25:55] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50019408 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 18:25:55] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 18:26:12] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 18:26:17] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 18:26:53] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 18:27:07] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 18:27:07] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 18:27:07] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 18:27:07] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 18:27:07] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 18:27:56] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 18:27:56] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 18:27:56] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 18:27:56] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 18:27:56] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 18:28:04] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 18:29:43] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 18:29:43] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 18:29:43] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 18:29:43] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 18:29:43] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 18:30:13] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 18:30:13] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 18:30:13] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 18:30:13] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 18:30:13] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 18:30:57] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 18:30:57] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 18:30:57] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 18:30:57] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 18:30:57] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 18:31:08] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 18:31:08] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 18:31:08] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 18:31:08] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 18:31:08] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 18:35:15] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[27-Apr-2020 18:35:15] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 50
+[27-Apr-2020 18:35:15] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 18:35:15] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 18:35:15] : [WARNING] - OBTENIENDO SOLICITUDES, : FASE SORTEO: 2 DIA SORTEO: 0
+[27-Apr-2020 18:37:09] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[27-Apr-2020 18:37:09] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[27-Apr-2020 18:37:09] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 21:31:42] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 21:34:21] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 21:34:23] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[27-Apr-2020 21:34:27] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
