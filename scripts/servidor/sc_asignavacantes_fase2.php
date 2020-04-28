@@ -25,8 +25,8 @@ $talumnos_fase2=new Alumno($con,'alumnos_fase2');
 
 $tcentros_fase2=new Centro($con,'','no',0);
 //$centros_fase2=$tcentros_fase2->getCentrosFase2();
-$post=1;
-$utils=new UtilidadesAdmision($ccentros->conectar->conexion(),'',$tcentros_fase2,0);
+$post=0;
+$utils=new UtilidadesAdmision($ccentros->conectar->conexion(),'',$tcentros_fase2,1);
 if(isset($_POST['subtipo']))
 	$tipoestudios=str_replace('lfase2_sol_','',$_POST['subtipo']);
 else
@@ -38,24 +38,29 @@ else
 $avac=10;
 
 $j=0;
+$post=0;
 //asignar vacantetes de cada centro a centro elegido en primera opcion (oopcion 0)
 do{
-	if(!$post) print("INICIANDO EL PROCESO POR $j VECES".PHP_EOL);
+	if(!$post) print("INICIANDO PROCESO POR $j VECES".PHP_EOL);
 	if($avac==0) break;
+	//si venimos de una reserva de plaza, liberacion tenemos q volver a empezar tomando los alumnos de la tabla original
+	
 	for($i=0;$i<=6;$i++)
 	{
 		if(!$post) print("EMPEZANDO CENTRO $i, AVAC: $avac".PHP_EOL);
 		$log_fase2->warning("INCIIO FOR, AVAC: $avac");
 		
-		//si venimos de una reserva de plaza, liberacion tenemos q volver a empezar tomando los alumnos de la tabla original
-		if($avac==-2) $alumnos_fase2=$utils->getAlumnosFase2('tmp');
-		else $alumnos_fase2=$utils->getAlumnosFase2('actual');
-		
+		$alumnos_fase2=$utils->getAlumnosFase2('actual');
 		$centros_fase2=$tcentros_fase2->getCentrosFase2();
-		$avac=$utils->asignarVacantesCentros($centros_fase2,$alumnos_fase2,$i,$tipoestudios,$post);
+		
+		$avac=$utils->asignarVacantesCentros($centros_fase2,$alumnos_fase2,$i,$tipoestudios,0);
 		
 		if($avac==0) break;
-		if($avac==-2){$j++; break;}
+		if($avac==-2){
+			$reset=$utils->resetAlumnosFase2();
+			$j++; 
+			break;
+			}
 	}
 }while($avac==-2);//mientras se este liberando una reserva hay q volver a empezar
 

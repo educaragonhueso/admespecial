@@ -114,6 +114,7 @@ class UtilidadesAdmision{
  	public function setAlumnoCentroFase2($ida,$idc,$nc){
 		//modificamos el centro en a tabla de alumnos_fase2
 		$sql="UPDATE alumnos_fase2 set id_centro_definitivo=$idc,centro_definitivo='$nc' where id_alumno=$ida";
+		if(!$this->post) print("CONSULTA ASIGNACION PLAZA: $sql");
 		if(!$this->con->query($sql)) return $this->con->error;
 		else return 1;
 	}
@@ -147,9 +148,18 @@ class UtilidadesAdmision{
 		if($res) return $res->fetch_row();
 		else return $this->con->error;
 	}
+ 	public function resetAlumnosFase2(){
+		//recargamos tabla de alumnso con los valores originales
+		$sql1="DELETE FROM alumnos_fase2";
+		$sql2="INSERT INTO alumnos_fase2 SELECT * FROM alumnos_fase2_tmp"; 
+		$res1=$this->con->query($sql1);
+		$res2=$this->con->query($sql2);
+		if($res1 and $res2) return 1;
+		else return 0;
+	}
  	public function asignarVacantesCentros($centros_fase2=array(),$alumnos_fase2=array(),$centro_alternativo=0,$tipoestudios,$post=0)
 	{
-		if(sizeof($centros_fase2)==0 or sizeof($alumnos_fase2)==0) return -1;
+		if(sizeof($centros_fase2)==0 or sizeof($alumnos_fase2)==0){print("ARRAY VACIO"); return -1;}
 
 		if(!$post) print(PHP_EOL."ASIGNANDO VACANTES FASE2 CENTRO ALT: $centro_alternativo TIPOESTUDIOS: $tipoestudios".PHP_EOL);
 		$this->log_fase2->warning("ASIGNANDO VACANTES FASE2 CENTRO ALT: $centro_alternativo TIPOESTUDIOS: $tipoestudios");
@@ -205,7 +215,7 @@ class UtilidadesAdmision{
 					$this->log_fase2->warning("ID ALUMNO EN PROCESO: ".$alumno->id_alumno." NOMBRE ALUMNO: ".$alumno->nombre);
 					if(!$post) print(PHP_EOL."ID ALUMNO EN PROCESO: ".$alumno->id_alumno." NOMBRE ALUMNO: ".$alumno->nombre.PHP_EOL);
 					$this->log_fase2->warning("CENTRO ACTUAL: $nombrecentro $idcentro CENTRO PEDIDO ALUMNO: ".$alumno->{$indicecentro}." NOMBRE ALUMNO: ".$alumno->nombre);
-					if(!$post) print("CENTRO ACTUAL: $nombrecentro $idcentro CENTRO PEDIDO ALUMNO: ".$alumno->{$indicecentro}." NOMBRE ALUMNO: ".$alumno->nombre);
+					if(!$post) print("CENTRO ACTUAL: $nombrecentro $idcentro CENTRO PEDIDO ALUMNO: ".$alumno->{$indicecentro}." NOMBRE ALUMNO: ".$alumno->nombre." CENTRO DEFINITIVO ALUMNO: ".$alumno->centro_definitivo.PHP_EOL);
 				
 					//solo asignamos plaza a alumnos sin centro definitivo	
 					if($alumno->$indicecentro==$idcentro and strtoupper($alumno->centro_definitivo)=='NOCENTRO')
@@ -230,12 +240,10 @@ class UtilidadesAdmision{
 						if($reserva[0]!=0 and $reserva[1]==1 and $alumno->$indicecentro!=$reserva[0])
 						{
 							//se ha liberado vacante con lo q hay q restaurar las vacantes de nuevo incrementando una
-
 							if($this->restaurarVacantesCentroFase2()!=1) return 0;
 							
 							$this->log_fase2->warning("REINICIANDO PROCESO, RESTAURADAS VACANTES");
 							if(!$post) print(PHP_EOL."REINICIANDO PROCESO, RESTAURADAS VACANTES");
-							
 							
 							//añadimos la q se ha liberado y marcamos al alumno como q la ha liberado para no voolver a tenrla en cuenta
 							if($this->setVacantesCentroFase2($reserva[0],0,$tipoestudios,1)!=1) return 0;
@@ -350,7 +358,7 @@ class UtilidadesAdmision{
 		
 		$res=$this->con->query($sql);
 		if(!$res) return $this->con->error;
-		$sqlfase2="SELECT t1.id_alumno,t1.nombre,t1.apellido1,t1.apellido2,t1.localidad,t1.calle_dfamiliar,t1.nombre_centro,t1.tipoestudios,t1.fase_solicitud,t1.estado_solicitud,t1.transporte,'0' as nordensorteo,'0' as nasignado,t1.puntos_validados,t1.id_centro,t2.centro1,t2.id_centro1,t3.centro2,t3.id_centro2,t4.centro3,t4.id_centro3,t5.centro4,t5.id_centro4,t6.centro5,t6.id_centro5,t7.centro6,t7.id_centro6, 'nocentro' as centro_definitivo, '0' as id_centro_definitivo,t1.id_centro_estudios_origen as id_centro_origen,t8.centro_origen,t1.reserva,'automatica' as tipo_modificacion,'0' as activado_fase3 FROM 
+		$sqlfase2="SELECT t1.id_alumno,t1.nombre,t1.apellido1,t1.apellido2,t1.localidad,t1.calle_dfamiliar,t1.nombre_centro,t1.tipoestudios,t1.fase_solicitud,t1.estado_solicitud,t1.transporte,'0' as nordensorteo,'0' as nasignado,t1.puntos_validados,t1.id_centro,t2.centro1,t2.id_centro1,t3.centro2,t3.id_centro2,t4.centro3,t4.id_centro3,t5.centro4,t5.id_centro4,t6.centro5,t6.id_centro5,t7.centro6,t7.id_centro6, 'nocentro' as centro_definitivo, '0' as id_centro_definitivo,t1.id_centro_estudios_origen as id_centro_origen,t8.centro_origen,t1.reserva,t1.reserva as reserva_original,'automatica' as tipo_modificacion,'0' as activado_fase3 FROM 
 	(SELECT a.id_alumno, a.nombre, a.apellido1, a.apellido2,a.loc_dfamiliar as localidad,a.calle_dfamiliar,c.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro_destino as id_centro,a.id_centro_estudios_origen,a.est_desp_sorteo,a.reserva FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno 
 	left join centros c on a.id_centro_destino=c.id_centro  order by c.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc)
 	as t1 
