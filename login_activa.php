@@ -12,6 +12,7 @@ $_SESSION['fin_inscripcion_centros']=0;
 $_SESSION['inicio_prorroga']=0;
 $_SESSION['version']=VERSION;
 $_SESSION['sorteo_fase2'] =0;      
+$_SESSION['id_centro'] =-10;      
 
 $_SESSION['fin_sol_alumno']=-1;
 
@@ -205,7 +206,7 @@ input[type=text], input[type=password] {
             <h2>ADMISIÓN CENTROS EDUCACIÓN ESPECIAL CURSO 2020/2021</h2>
 	<button type="button" class="btn btn-primary" id="csolicitud">Crear solicitud</button>
 
-	<?php if(IPREMOTA==$_SERVER['HTTP_X_FORWARDED_FOR'] || DIA_INICIO<=$hoy) { ?>
+	<?php if(IPREMOTA==$_SERVER['HTTP_X_FORWARDED_FOR'] || DIA_INICIO_INSCRIPCION<=$hoy) { ?>
             <p>Introduce tu nombre de  usuario y contraseña</p>
             <form action="" method="post">
                 <div class="form-group <?php echo (!empty($nombre_usuario_err)) ? 'has-error' : ''; ?>">

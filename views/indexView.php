@@ -1,5 +1,6 @@
 <?php
 session_start();
+if(!isset($_SESSION)) exit(); 
 include('includes/head.php');
 ?>
 <html>
@@ -46,15 +47,15 @@ Ello implica:
 		if($_SESSION['version']=='PRE')	print_r($_SESSION);
 	?>
 
-	<?php echo "<b><i> AVISO IMPORTANTE: Si se va a imprimir la solicitud se recomienda el uso de cualquier navegador distinto de Mozilla-Firefox ya que puede dar problemas al imprimirla</i></b><br>";?>
+	<?php echo "<br><b><i> AVISO IMPORTANTE: Si se va a imprimir la solicitud se recomienda el uso de cualquier navegador distinto de Mozilla-Firefox ya que puede dar problemas al imprimirla</i></b><br>";?>
 	  <span type="hidden" id="rol" name="rol" value="<?php echo $_SESSION['rol']; ?>"><b>ROL: </b><?php echo $_SESSION['rol'];?></b></span> 
 		<?php if($_SESSION['rol']=='centro') if($_SESSION['num_sorteo']!=0) echo "<br><b>Numero sorteo:</b> ".$_SESSION['num_sorteo'];else echo "<br><b>Sorteo No realizado</b> ";?>
 		
-		<?php if($_SESSION['rol']=='centro' or $_SESSION['rol']=='admin' or $_SESSION['rol']=='sp')
+		<?php if($_SESSION['rol']=='centro' or $_SESSION['rol']=='admin' or $_SESSION['rol']=='sp' or $_SESSION['rol']=='alumno')
 		{
 			if($_SESSION['rol']=='sp')
 	  			echo '<span type="hidden" id="provincia" name="provincia" value='.$_SESSION["provincia"].'><b>PROVINCIA: </b>'.$_SESSION["provincia"].'</b></span>'; 
-		 include('includes/menusuperior.php');
+		 	include('includes/menusuperior.php');
 		}
 		?>
 		<?php /*usamos metodo del controlador de centros activo echo $this->showTimeline('centro',$_SESSION['id_centro'],'matricula');*/?>
@@ -64,18 +65,18 @@ Ello implica:
 		<?php if($_SESSION['rol']=='admin') echo $this->showTablas($_SESSION['rol'],$_SESSION['id_centro'],'matricula','todas');?>
 		<?php if($_SESSION['provincia']!='todas'){echo "sprovincial"; echo $this->showTablas($_SESSION['rol'],$_SESSION['id_centro'],'matricula',$_SESSION['provincia']);}?>
 		<?php 
-		//print_r($_SESSION);
 		if($_SESSION['rol']=='alumno' && $_SESSION['dia_inicio_inscripcion']==1)
 		{
 			if(isset($_SESSION['clave']))
 	  			echo '<input type="hidden" id="pin" name="pin" value="'.$_SESSION['clave'].'" ></input> ';
-			echo '<a href="'.URL_BASE.'"><button class="btn btn-outline-info" id="inicio" type="button">INICIO</button></a>';
+			//echo '<a href="'.URL_BASE.'"><button class="btn btn-outline-info" id="inicio" type="button">INICIO</button></a>';
 			echo '<br>';
 			if($_SESSION['nombre_usuario']=='nousuario' and $_SESSION['fin_sol_alumno']!=2 and $_SESSION['fin_sol_alumno']!=-1)//usuario no autenticado
 				{
 				if($_SESSION['fin_sol_alumno']=='1')
 					echo '<h2 style="padding-left:100px">ULTIMO DIA PARA INSCRIBIRSE!!!</h2>';
-				echo '<p style="padding-left:100px"><button class="btn btn-outline-info" id="nuevasolicitud" type="button">Nueva solicitud</button></p>';
+				//echo '<p style="padding-left:100px"><button class="btn btn-outline-info" id="nuevasolicitud" type="button">Nueva solicitud</button></p>';
+				echo '<p style="padding-left:100px"><div id="nuevasolicitud"></div></p>';
 				}
 			elseif($_SESSION['nombre_usuario']=='nousuario' and $_SESSION['fin_sol_alumno']<'2') //fin inscripcion para ciudadano
 				{

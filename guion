@@ -1,5 +1,7 @@
 PRUEBAS PREVIO REINICIO 
 
+FASE0- Crear solicitudes periodo ordinario
+
 0. Usuario alumno
 
 	Crear solicitud
@@ -8,17 +10,32 @@ PRUEBAS PREVIO REINICIO
 		Ultimo dia
 		Despues plazo
 
+	Imprimir solicitud
+
 1. Usuario centro
 
 	Crear solicitud
 	Modificar solicitud
-		periodo normal
-		en provisionales
+	Imprimir solicitud
 
 2. Usuario sp
 
-
 3. Usuario admin
+
+FASE0- Ver solicitudes
+
+0. Usuario alumno
+
+	Mostrar solicitud sin poder modificar
+	No puede Imprimir solicitud
+
+1. Usuario centro
+
+	Modificar solicitud
+	Imprimir solicitud
+
+2. Usuario sp
+
 
 4. Reponer integridad referencial:
 	id_centro_Destino a centros

@@ -12,37 +12,7 @@ require_once DIR_BASE.'models/Solicitud.php';
 ########################################################################################
 $log_listado_solicitudes=new logWriter('log_listado_solicitudes',DIR_LOGS);
 ########################################################################################
-
-//VARIABLES
-$menu_provisionales=''; //añadirlo si se ha realizado el sorteo
-$dia_sorteo=0;
-$modo='presorteo';
-$id_centro=$_POST['id_centro'];
-$estado_convocatoria=$_POST['estado_convocatoria'];
-
-$filtro_solicitudes='<input type="text" class="form-control" id="filtrosol"  placeholder="Introduce datos del alumno o centro"><small id="emailHelp" class="form-text text-muted"></small>';
-$list=new ListadosController('alumnos');
-$conexion=$list->getConexion();
-$tcentro=new Centro($conexion,$_POST['id_centro'],'ajax');
-
-$provincia='todas';
-if(isset($_POST['provincia']))
-	$provincia=$_POST['provincia'];
-
-$tsolicitud=new Solicitud($conexion);
-
-$tcentro->setNombre();
-$nombre_centro=$tcentro->getNombre();
-$nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
-
-//variable para controlar si se actualiza el sorteo en la tabla de centros
-if($_POST['rol']=='centro') $fase_sorteo=$tcentro->getFaseSorteo();//0: no realizado, 1: se han asignado los numeros aleatorios, 2: se ha realizado sorteo
-else $fase_sorteo=2;
-$hoy = date("Y/m/d");
-$form_nuevasolicitud='<div class="input-group-append" id="cab_fnuevasolicitud"><button class="btn btn-outline-info" id="nuevasolicitud" type="button">Nueva solicitud</button></div>';
-
-$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES CON ROL: ".$_POST['rol']);
-
+/*
 //si hay sorteo mostraremos la opción de provisionales
 $menu_provisionales='
 	    <li class="nav-item active msuperior dropdown" id="provisional">
@@ -63,105 +33,94 @@ $menu_definitivos='
 		 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="excluidos_def">Excluidos definitivo</a>
 																 </div>
 	    </li>::';		
+*/
 
+//VARIABLES
+$menu_provisionales=''; //añadirlo si se ha realizado el sorteo
+$modo='presorteo';
+$id_centro=$_POST['id_centro'];
+$estado_convocatoria=$_POST['estado_convocatoria'];
+
+$hoy = date("Y/m/d");
+$form_nuevasolicitud='<div class="input-group-append" id="cab_fnuevasolicitud"><button class="btn btn-outline-info" id="nuevasolicitud" type="button">Nueva solicitud</button></div>';
+$filtro_solicitudes='<input type="text" class="form-control" id="filtrosol"  placeholder="Introduce datos del alumno o centro"><small id="emailHelp" class="form-text text-muted"></small>';
+$list=new ListadosController('alumnos');
+$conexion=$list->getConexion();
+$tcentro=new Centro($conexion,$_POST['id_centro'],'ajax');
+
+$provincia='todas';
+if(isset($_POST['provincia']))
+	$provincia=$_POST['provincia'];
+
+$tsolicitud=new Solicitud($conexion);
+
+$tcentro->setNombre();
+$nombre_centro=$tcentro->getNombre();
+$fase_sorteo=$tcentro->getFaseSorteo();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
+$nsolicitudes=$tcentro->getNumSolicitudes($id_centro,$fase_sorteo);
+//Segun el estado del sorteo deshabilitamos el sorteo
+if($fase_sorteo==1) $disabled='';
+else $disabled='disabled';
+
+$form_sorteo_parcial='<div id="form_sorteo_parcial" class="input-group mb-3">
+	<div class="input-group-append">
+	</div>
+	<div class="input-group-append">
+		<button class="btn" type="submit" id="boton_realizar_sorteo">Realizar sorteo</button>
+	</div>
+	<input type="text" id="num_sorteo" name="num_sorteo" value="" style="width:400px;" placeholder="NUMERO OBTENIDO, DEBE ESTAR ENTRE 1 y '.$nsolicitudes.'" '.$disabled.'>
+	<input type="hidden" id="num_solicitudes" name="num_solicitudes" value="'.$nsolicitudes.'" placeholder="NUMERO OBTENIDO" '.$disabled.'>
+</div>';
+$form_sorteo_completo='<div id="form_sorteo" class="input-group mb-3">
+	<div class="input-group-append">
+		<button class="btn btn-success" type="submit" id="boton_asignar_numero">Asignar numero</button>
+	</div>
+	<div class="input-group-append">
+		<button class="btn btn-success" type="submit" id="boton_realizar_sorteo">Realizar sorteo</button>
+	</div>
+	<input type="text" id="num_sorteo" name="num_sorteo" value="" placeholder="NUMERO OBTENIDO" disabled>
+	<input type="hidden" id="num_solicitudes" name="num_solicitudes" value="'.$nsolicitudes.'" placeholder="NUMERO OBTENIDO" disabled>
+</div>';
+
+//variable para controlar si se actualiza el sorteo en la tabla de centros
+//if($_POST['rol']=='centro') $fase_sorteo=$tcentro->getFaseSorteo();//0: no realizado, 1: se han asignado los numeros aleatorios, 2: se ha realizado sorteo
+//else $fase_sorteo=2;
+
+$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES CON ROL: ".$_POST['rol']);
 //Para el caso de acceso del administrador o servicios provinciales
 if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 {
-			$centros=$list->getCentrosIds($provincia);	
-			foreach($centros as $centro)
-			{
-			########################################################################################
-			$log_listado_solicitudes->warning("OBTENIENDO NOMBRE CENTRO para".$_POST['rol']);
-			$log_listado_solicitudes->warning(print_r($centro,true));
-			########################################################################################
-			
-			$tcentro->setId($centro->id_centro);
-			$tcentro->setNombre();
-			$nombre_centro=$tcentro->getNombre();
-			$tablaresumen=$tcentro->getResumen('centro','alumnos');
-			
-			########################################################################################
-			$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: ".$_POST['rol']);
-			$log_listado_solicitudes->warning($nombre_centro);
-			$log_listado_solicitudes->warning(print_r($tablaresumen,true));
-			########################################################################################
-			
-			print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$centro->id_centro));
-			print('<br>');
-			}
+	if($fase_sorteo==1) print($form_sorteo_completo);
+        if($fase_sorteo==2) print($form_sorteo_parcial); //mostramos formulario para hacer el sorteo, ya se han hecjo las asignaciones
+	$centros=$list->getCentrosIds($provincia);	
+	foreach($centros as $centro)
+	{
+	########################################################################################
+	$log_listado_solicitudes->warning("OBTENIENDO NOMBRE CENTRO para".$_POST['rol']);
+	$log_listado_solicitudes->warning(print_r($centro,true));
+	########################################################################################
+	
+	$tcentro->setId($centro->id_centro);
+	$tcentro->setNombre();
+	$nombre_centro=$tcentro->getNombre();
+	$tablaresumen=$tcentro->getResumen('centro','alumnos');
+	
+	########################################################################################
+	$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: ".$_POST['rol']);
+	$log_listado_solicitudes->warning($nombre_centro);
+	$log_listado_solicitudes->warning(print_r($tablaresumen,true));
+	########################################################################################
+	
+	print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$centro->id_centro));
+	print('<br>');
+	}
 }
 else//accedemos como centro
 {
-	//Si se ha asignado el nuemro de sorteo habilitamos la casilla para introducir el número
-	if($fase_sorteo==1) $disabled='';
-	else $disabled='disabled';
-
-	$form_sorteo_parcial='<div id="form_sorteo_parcial" class="input-group mb-3">
-		<div class="input-group-append">
-		</div>
-		<div class="input-group-append">
-			<button class="btn btn-success" type="submit" id="boton_realizar_sorteo">Realizar sorteo</button>
-		</div>
-		<input type="text" id="num_sorteo" name="num_sorteo" value="" style="width:400px;" placeholder="NUMERO OBTENIDO, DEBE ESTAR ENTRE 1 y '.$nsolicitudes.'" '.$disabled.'>
-		<input type="hidden" id="num_solicitudes" name="num_solicitudes" value="'.$nsolicitudes.'" placeholder="NUMERO OBTENIDO" '.$disabled.'>
-	</div>';
-	$form_sorteo_completo='<div id="form_sorteo" class="input-group mb-3">
-		<div class="input-group-append">
-			<button class="btn btn-success" type="submit" id="boton_asignar_numero">Asignar numero</button>
-		</div>
-		<div class="input-group-append">
-			<button class="btn btn-success" type="submit" id="boton_realizar_sorteo">Realizar sorteo</button>
-		</div>
-		<input type="text" id="num_sorteo" name="num_sorteo" value="" placeholder="NUMERO OBTENIDO" disabled>
-		<input type="hidden" id="num_solicitudes" name="num_solicitudes" value="'.$nsolicitudes.'" placeholder="NUMERO OBTENIDO" disabled>
-	</div>';
-
-	//si se ha pulsado en el boton de asignar numero de sorteo
-	if(isset($_POST['asignar'])) 
-	{
-		########################################################################################
-		$log_listado_solicitudes->warning("NUMERO DE SORTEO ASIGNADO");
-		########################################################################################
-		if($list->asignarNumSol($id_centro)!=1){ print("Error asignando numero para el sorteo");exit();}
-		//actualizamos el centro para marcar la fase del sorteo
-		$tcentro->setFaseSorteo(1);
-		$fase_sorteo=1;
-	}
-	//si se ha enviado el numero de sorteo
-	if(isset($_POST['nsorteo']))
-	{
-		########################################################################################
-		$log_listado_solicitudes->warning("SORTEO REALIZADO");
-		########################################################################################
-		$modo='sorteo';
-		$nsorteo=$_POST['nsorteo'];
-		//Actualizamos el numero de sorteo para el centro
-		if($tcentro->setSorteo($nsorteo,$id_centro)==0) {print("ERROR SORTEO"); exit();}
-		
-		$dsorteo=$tcentro->getVacantes($id_centro);
-		$vacantes_ebo=$dsorteo[0]->vacantes;
-		$vacantes_tva=$dsorteo[1]->vacantes;
-			
-		if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
-			print("NO HAY VACANTES<br>");
-		else
-		{
-		########################################################################################
-		$log_listado_solicitudes->warning("COPIANDO TABLA IDCENTRO: ".$id_centro);
-		########################################################################################
-		$tcentro->setFaseSorteo(2);
-		
-		$ct=$tsolicitud->copiaTablaCentro($id_centro,'alumnos_provisional_final');	
-		$log_listado_solicitudes->warning("RESULTADO COPIAR TABLA $ct ");
-		$fase_sorteo=2;
-		//Si hemos llegado al dia de las provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
-		}	
-	}
 	//SECCION OBTENCION DATOS
 	########################################################################################
 	$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES, FASE: ".$fase_sorteo." ESTADO CONVOCATORIA: $estado_convocatoria");
 	########################################################################################
-	if($hoy==DIA_SORTEO) {$dia_sorteo=1;}
 	
 	/*
 	//si ya se ha realizado el sorteo o el estado es provisional (30) mostramos las solicitudes correspondientes
@@ -200,10 +159,9 @@ else//accedemos como centro
 	#Mostramos formulario para el sorteo si es el dia correcto
         $fase_sorteo=$tcentro->getFaseSorteo();
 	#Mostramos formulario para el sorteo si es el dia correcto
-	$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES, : FASE SORTEO: ".$fase_sorteo." DIA SORTEO: ".$dia_sorteo);
+	$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES, : FASE SORTEO: ".$fase_sorteo);
 	if($fase_sorteo==0)
 	{
-			if($dia_sorteo==1) print($form_sorteo_completo);
 			if($_POST['id_centro']!='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
 			print($form_nuevasolicitud);
 			print('<br>');
@@ -214,7 +172,6 @@ else//accedemos como centro
 	elseif($fase_sorteo==1)
         {
                         if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
-                        if($dia_sorteo==1) print($form_sorteo_parcial); //mostramos formulario sorteo solo si no se ha hecho ya
                         print($form_nuevasolicitud);
                         print('<br>');
                         print($list->showFiltrosCheck());

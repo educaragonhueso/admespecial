@@ -400,7 +400,7 @@ class SolicitudController extends ControladorBase{
 				$this->lastid=$solicitud->getLast();	
 				$nuevoid=$this->lastid+1;
 				$dsolicitud=$solicitud->getSolData($this->lastid,'nueva',$id_centro);
-				
+					
 				$this->procesarFormularioNuevo($nuevoid,$dsolicitud,$rol);
 			}
 			//modificacion solicitud

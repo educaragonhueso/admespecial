@@ -40,6 +40,12 @@ border-radius: 5px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+#imprimir,#inicio{
+background-color: black;
+
+color: white;
+}
+
 .navbar-btn {
     box-shadow: none;
     outline: none !important;
@@ -76,7 +82,8 @@ background-color:#051c33!important;
 
 #fnuevasolicitud
 {
-width:1500px;
+//width:1500px;
+width:100%;
 }
 .container
 {
@@ -251,8 +258,38 @@ table-dark td, .table-dark th, .table-dark thead th {
 thead{
 background-color: black;
 }
+.send 
+{
+font-size:12px!important;
+background-color:black!important;
+}
+#form_sorteo{
+padding-left: 17px;
+padding-top: 10px;
+}
+
+#boton_realizar_sorteo,#boton_asignar_numero{
+background-color:#114880;
+
+}
+.text-md-left{
+padding:9px;
+}
+.form-control 
+{
+font-size:12px!important;
+display:block;margin:10px;
+text-align: left!important;
+padding-left: 24px;
+border-top: black!important;
+border-right: aqua!important;
+}
+.form-control:valid {
+    border-color: black!important;
+}
 .bform 
 {
+font-size:12px!important;
     background-color: #505a65 !important;
     width: 100%;
     display:block;margin:10px;

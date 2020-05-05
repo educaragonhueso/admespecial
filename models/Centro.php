@@ -45,20 +45,25 @@ class Centro extends EntidadBase{
 			return $sol_fase2;
 		}
    //devolvemos las vacantes en cada tpo de estudios 
-    public function getNumSolicitudes($c=1,$fasecentro=1)
+    public function getNumSolicitudes($c=1,$fase_sorteo=0)
 		{
-		if($fasecentro==2) $tabla='alumnos_provisional';
-		else $tabla='alumnos';
-			if($c==1)
-				$sql="SELECT count(*) as nsolicitudes FROM alumnos_fase2";
+		$where='';
+		if($fase_sorteo>=1) $where=" WHERE fase_solicitud!='borrador' ";
+		
+		if($c==1)
+			$sql="SELECT count(*) as nsolicitudes FROM alumnos $where";
+		else
+			if($fase_sorteo==0)
+				$sql="SELECT count(*) as nsolicitudes FROM $tabla WHEREid_centro_destino=$c";
 			else
 				$sql="SELECT count(*) as nsolicitudes FROM $tabla where fase_solicitud!='borrador' and id_centro_destino=$c";
-			$this->log_sorteo->warning("OBTENIENDO NUMERO DE SOLICITUDES");
-			$this->log_sorteo->warning($sql);
 
-			$query=$this->conexion->query($sql);
-			if($query) {$row = $query->fetch_object();return $row->nsolicitudes;}
-			else return 0;
+		$this->log_sorteo->warning("OBTENIENDO NUMERO DE SOLICITUDES");
+		$this->log_sorteo->warning($sql);
+
+		$query=$this->conexion->query($sql);
+		if($query) {$row = $query->fetch_object();return $row->nsolicitudes;}
+		else return 0;
 		}
     public function getNumeroSorteo()
 	{
@@ -88,8 +93,11 @@ class Centro extends EntidadBase{
 		}
     public function getVacantes($rol='centro',$tipo='')
 		{
-			$sql="select ifnull(IF(t3.plazas-t2.np<0,0,t3.plazas-t2.np),t3.plazas) as vacantes from          (select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=".$this->id_centro." ) as t3          left join          (select  tipo_alumno_actual as tf, ifnull(count(*),0) as np from matricula where id_centro=".$this->id_centro." and estado='continua' group by tipo_alumno_actual ) as t2  on t3.ta=t2.tf;
+			if($rol=='centro')
+				$sql="select ifnull(IF(t3.plazas-t2.np<0,0,t3.plazas-t2.np),t3.plazas) as vacantes from          (select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=".$this->id_centro." ) as t3          left join          (select  tipo_alumno_actual as tf, ifnull(count(*),0) as np from matricula where id_centro=".$this->id_centro." and estado='continua' group by tipo_alumno_actual ) as t2  on t3.ta=t2.tf;
 ";
+			else
+				$sql="select ifnull(IF(t3.plazas-t2.np<0,0,t3.plazas-t2.np),t3.plazas) as vacantes from (select tipo_alumno ta,sum(plazas) as plazas from centros_grupos ce group by ta ) as t3 left join (select  tipo_alumno_actual as tf, ifnull(count(*),0) as np from matricula where estado='continua' group by tipo_alumno_actual ) as t2  on t3.ta=t2.tf";		
 			$query=$this->conexion->query($sql);
 
 			$this->log_matricula->warning('CONSULTA OBTENCION VACANTES: '.$sql);
@@ -267,7 +275,7 @@ class Centro extends EntidadBase{
     }
     public function getFaseSorteo() 
     {
-			$sql="select fase_sorteo from centros where id_centro=$this->id_centro";
+			$sql="SELECT fase_sorteo FROM centros WHERE id_centro=$this->id_centro";
 			$query=$this->conexion->query($sql);
 
 			$this->log_sorteo->warning("OBTENIENDO FASE SORTEO");

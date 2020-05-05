@@ -14,15 +14,12 @@ var vidcentro=$('#id_centro').text();
 	$.ajax({
 	  method: "POST",
 	  data: {asignar:'1',id_centro:vidcentro,rol:vrol,estado_convocatoria:vestado_convocatoria},
-	  url:'../scripts/ajax/listados_solicitudes.php',
+	  url:'../scripts/ajax/realizar_sorteo.php',
 	      success: function(data) {
-			        $("#tresumen"+vidcentro).remove();
-                                $("#filtroscheck").remove();
-                                $("#nuevasolicitud").remove();
-                                $("#form_sorteo").remove();
-                                $("#sol_table").remove();
-                                $("#filtrosol").after(data);
-                                $("#num_sorteo").prop("disabled",false);
+				$.alert({
+					title: data
+					});
+				$('#num_sorteo').prop('disabled', false);
 		},error: function (request, status, error) {
         alert(error);
     }
@@ -52,7 +49,7 @@ return;
 	$.ajax({
 	  method: "POST",
 	  data: {id_centro:vidcentro,nsorteo:parseInt(vnum_sorteo),rol:vrol,estado_convocatoria:vestadoconvocatoria},
-	  url:'../scripts/ajax/listados_solicitudes.php',
+	  url:'../scripts/ajax/realizar_sorteo.php',
 	      success: function(data) {
 				if(data.indexOf('NO HAY VACANTES')!=-1)
 				{
@@ -63,15 +60,10 @@ return;
 				}
 				else
 				{
-				var prov=data.split('::')[0];
-				var data=data.split('::')[1];
-				if(document.getElementById("mprovisional")== null)
-				{
-					$("#msorteo").after(prov);
-				}
-				$("#l_matricula").html(data);
-				$("#tresumen").hide();
-				$("#form_sorteo_parcial").hide();
+					$.alert({
+						title: data
+						});
+					$('#num_sorteo').prop('disabled', true);
 				}
 		},
 	      error: function() {
@@ -498,15 +490,14 @@ return 1;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
-//CHECKS FILTRO SOLICITUDES
+//CHECKS FILTRO SOLICITUDES USANDO CHECKS
 $('body').on('click', '.filtrosol,.filtrosoltodas', function(e)
 {
-		var expression = false;
-    var nombre = $(this).attr("id");
-    var tipo = $(this).attr("data-tipo");
+	var expression = false;
+	var nombre = $(this).attr("id");
+	var tipo = $(this).attr("data-tipo");
 
-		filtrar_solicitudes(tipo,nombre);
-
+	filtrar_solicitudes(tipo,nombre);
 });
 
 function filtrar_solicitudes(t,n)

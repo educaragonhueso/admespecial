@@ -9,7 +9,7 @@
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
                             <li class="nav-item  msuperior">
-            			<a style='color:white!important;float:left!important'  href='<?php echo $_SESSION['url_base'];?>'>INICIO</a>
+            			<a style='color:white!important;float:left!important;padding-top:9px'  href='<?php echo $_SESSION['url_base'];?>'>INICIO</a>
                             </li>
                             <li class="nav-item active msuperior dropdown">
                                 <a class="nav-link dropdown-toggle desplegable" id="navbardrop" data-toggle="dropdown">Documentación</a>
@@ -26,11 +26,19 @@
     </div>
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
+	<?php 	if($_SESSION['rol']!='alumno'){?>
                             <li class="nav-item msuperior dropdown">
                                 <a class="show_provisionales nav-link dropdown-toggle desplegable" id="navbardrop" data-toggle="dropdown" href="#">Exportar datos</a>
 				 <div class="dropdown-menu">
-				<?php 	if($_SESSION['provincia']!='aragon' or $_SESSION['rol']=='admin'){ echo '<a class="exportcsv dropdown-item" href="#" id="csv_mat" data-tipo="csv" data-subtipo="csv_mat">Listado vacantes (csv)  </a>';}?>
-				<?php 	if($_SESSION['rol']=='centro'){ echo '<a class="exportpdf dropdown-item" href="#" id="pdf_mat" data-tipo="pdf" data-subtipo="pdf_mat">Listado vacantes (pdf) </a>';}?>
+				<?php 	if($_SESSION['rol']=='admin')
+					{ 
+					echo '<a class="exportcsv dropdown-item" href="#" id="csv_mat" data-tipo="csv" data-subtipo="csv_mat">Listado vacantes (csv)  </a>';
+					}?>
+				<?php 	if($_SESSION['rol']=='centro')
+					{ 
+					echo '<a class="exportpdf dropdown-item" href="#" id="pdf_mat" data-tipo="pdf" data-subtipo="pdf_mat">Listado vacantes (pdf) </a>';
+					}
+				?>
 				<a class="exportcsv dropdown-item" href="#" id="csv_sol" data-tipo="csv" data-subtipo="csv_sol">Listado solicitudes (csv)</a>
 				<a class="exportcsv dropdown-item" href="#" id="csv_pro" data-tipo="csv" data-subtipo="csv_pro">Listado alumnos promocionan (csv)</a>
 				<?php 	if($_SESSION['provincia']!='todas' or $_SESSION['rol']=='admin')
@@ -59,7 +67,7 @@
 				 </div>
 				<?php }?>
                             </li>
-		<?php if(($_SESSION['estado_convocatoria']<30 and $_SESSION['estado_convocatoria']>=2)  or $_SESSION['fase_sorteo']==2) {?>
+		<?php if(($_SESSION['estado_convocatoria']<30 and $_SESSION['estado_convocatoria']>=1)  or $_SESSION['fase_sorteo']==2) {?>
                             <li class="nav-item active msuperior dropdown" id="mprovisional">
                                  <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
 				 <div class="dropdown-menu">
@@ -79,7 +87,7 @@
 				 </div>
                             </li>
 		<?php }?>
-		<?php if($_SESSION['rol']=='admin' or $_SESSION['rol']=='sp'){?>
+		<?php if(($_SESSION['rol']=='admin' or $_SESSION['rol']=='sp') and $_SESSION['estado_convocatoria']>=30) {?>
                             <li class="nav-item active msuperior dropdown" id="mdefinitivo">
                                  <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASEII</a>
 		                 <div class="dropdown-menu">
@@ -96,10 +104,11 @@
                             </li>
 		<?php }?>
 		<?php }?>
+	<?php }?>
         </ul>
     </div>
 </nav>
 <?php 
-if($_SESSION['id_centro']<=1) 
-echo '<input class="form-control" id="fcentrosadminzgz" placeholder="Introduce datos del centro" type="text">';
+if($_SESSION['id_centro']<=1 and $_SESSION['id_centro']>=-2) 
+echo '<input class="form-control" id="fcentrosadminzgz" placeholder="Introduce datos del centro a suplantar" type="text">';
 ?>

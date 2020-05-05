@@ -24,7 +24,6 @@ $estado_convocatoria=$_POST['estado_convocatoria'];
 
 $_POST['id_centro_estudios_origen']=trim($_POST['id_centro_estudios_origen'],'*');
 $fsol_entrada=$_POST['fsol'];
-print_r($_POST);
 ######################################################################################
 $log_actualizar->warning("POST RECIBIDO ACTUALIZANDO:");
 $log_actualizar->warning(print_r($fsol_entrada,true));
@@ -44,9 +43,10 @@ $fsol_entrada.="&baremo_ptstotal=".$_POST['ptsbaremo'];
 parse_str($fsol_entrada, $fsol_salida);
 if($rol=='alumno')
 	{
-	$estado_sol=$tsol->getEstadoSol($_POST['idsol']);
-	if($estado_sol=='apta') return 'ERROR, NO SE PUEDE MODIFICAR UNA SOLICITUD APTA';
-	$log_nueva->warning("SOLICITUD NO ESTA EN ESTADO APTA, ESTADO: ".$estado_sol);
+	$fase_sol=$tsol->getFaseSol($_POST['idsol']);
+	$log_nueva->warning("OBTENIDA FASE SOLICITUD: ".$fase_sol);
+	if($fase_sol=='validada') return 'ERROR, NO SE PUEDE MODIFICAR UNA SOLICITUD APTA';
+	$log_nueva->warning("SOLICITUD NO ESTA EN ESTADO VALIDADA, ESTADO: ".$estado_sol);
 	$id_centro_destino=$tsol->getCentroId($_POST['id_centro_destino'],'especial');
 	if($id_centro_destino==0) 
 		{
@@ -104,8 +104,6 @@ if($modo=="GRABAR SOLICITUD")
 		$log_nueva->warning("GRABANDO NUEVA SOLICITUD...");
 		$log_nueva->warning(print_r($fsol_salida,true));
 		$res=$tsol->save($fsol_salida,$_POST['idsol'],$rol);
-		if(gettype($res)=='string')
-			$log_nueva->warning($res);
 	}
 else 
 	{
@@ -120,21 +118,19 @@ else
 		//modificamos solicitud teniendo en cuenta la fase en la q esta el centro y el estado de la convocatoria
 		$res=$tsol->update($fsol_salida,$_POST['idsol']);
 	}
-		$log_actualizar->warning("RESULTADO ACT: ".$res);
-
-	if($res<=0) 
-	{
+$log_actualizar->warning("RESULTADO ACT: ".$res);
+if($res<=0) 
+{
 	if($res==-1)	print('ERROR GUARDANDO DATOS: YA EXISTE UN USUARIO CON ESE NOMBRE DE USUARIO');
 	if($res==-2)	print('ERROR GUARDANDO DATOS: YA EXISTE UN ALUMNO CON ESOS DATOS');
 	if($res==0)	print('ERROR GUARDANDO DATOS: CONTACTA CON EL AMDINISTRADOR, lhueso@aragon.es');
-	}
+}
+else
+{ 
+	//si es nueva y anonima se devuelve la clave para acceder despues
+	if($modo=="GRABAR SOLICITUD" and $rol=='alumno')
+		print($res);
 	else
-	{ 
-		//si es nueva y anonima se devuelve la clave para acceder despues
-		if($modo=="GRABAR SOLICITUD" and $rol=='alumno')
-			print($res);
-		else
-			print($res);
-			//print_r($sc->showSolicitud($res));
-	}
+		print($res);
+}
 ?>

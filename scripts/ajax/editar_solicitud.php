@@ -24,21 +24,23 @@ $conexion=$scontroller->getConexion();
 $tsol=new Solicitud($conexion);
 $tcentro=new Centro($conexion,$_POST['id_centro'],'ajax');
 
-if(isset($_POST['id_centro'])){
-$id_centro=$_POST['id_centro'];
-$fase_sorteo=$tsol->getFaseCentro($id_centro);
-$log_editar_solicitud->warning("FASE SORTEO CENTRO: $id_centro , FASE: $fase_sorteo");
+if(isset($_POST['id_centro']))
+{
+	if($_POST['id_centro']=='')
+		$id_centro=1;
+	else $id_centro=$_POST['id_centro'];
 }
-else $id_centro=0;
+else 
+		$id_centro=1;
+
+$fase_sorteo=$tsol->getFaseCentro($id_centro);
 
 $estado_convocatoria=$_POST['estado_convocatoria'];
-print_r($_POST);
 $estado_sol='irregular';
 $solo_lectura=0;
 
 $log_editar_solicitud->warning("DATOS ALUMNO RECIBID");
 $log_editar_solicitud->warning(print_r($_POST,true));
-$log_editar_solicitud->warning("DATOSS FASE SORTEO:".$fase_sorteo);
 #si es un ciudadano obtenemos el id usando el pin proporcionado
 if($rol=='alumno')
 {
@@ -46,8 +48,8 @@ if($rol=='alumno')
 	$id=$scontroller->getIdAlumnoPin($pin);
 //obtenemos el estado de la solicitud
 	$log_editar_solicitud->warning("idalumno-pin: ".$id.'-'.$pin);
-	$estado_sol=$tsol->getEstadoSol($id);
-	if($estado_sol=='apta') $solo_lectura=1;
+	$fase_sol=$tsol->getEstadoSol($id);
+	if($fase_sol=='validada') $solo_lectura=1;
 }
 
 if(isset($_POST['codigo_centro'])) $id_centro=$_POST['codigo_centro'];

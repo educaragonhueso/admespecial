@@ -48,12 +48,20 @@ class ListadosController extends ControladorBase{
 	}
   public function asignarNumSol($id_centro)
 	{
-		$this->log_sorteo->warning("ASIGNANDO NUMERO SORTEO");
 		$sql="SET @r := 0";
 		$this->adapter->query($sql);
 		//ponemos todas a cero para evitar inconsistencias
-		$sql1="UPDATE  alumnos SET nasignado =0 WHERE id_centro_destino=$id_centro";
-		$sql2="UPDATE  alumnos SET nasignado = (@r := @r + 1) where id_centro_destino=$id_centro and fase_solicitud!='borrador' ORDER BY  RAND()";
+		if($id_centro!=1)
+		{
+			$sql1="UPDATE  alumnos SET nasignado =0 WHERE id_centro_destino=$id_centro";
+			$sql2="UPDATE  alumnos SET nasignado = (@r := @r + 1) where id_centro_destino=$id_centro and fase_solicitud!='borrador' ORDER BY  RAND()";
+		}
+		else
+		{
+			$sql1="UPDATE  alumnos SET nasignado =0";
+			$sql2="UPDATE  alumnos SET nasignado = (@r := @r + 1) where fase_solicitud!='borrador' ORDER BY  RAND()";
+		}
+		
 		$this->log_sorteo->warning($sql1);
 		$this->log_sorteo->warning($sql2);
 		if($this->adapter->query($sql1) and $this->adapter->query($sql2))

@@ -39,7 +39,11 @@ class Solicitud extends EntidadBase{
 			$dsql='DELETE from '.$tabla_destino.' WHERE id_centro_destino='.$centro;
 			$isql='INSERT IGNORE INTO '.$tabla_destino.' '.$sql.' and id_centro_destino='.$centro;
 			}
-		else return 0;
+		else
+			{
+			$dsql='DELETE from '.$tabla_destino;
+			$isql='INSERT IGNORE INTO '.$tabla_destino.' '.$sql;
+			}
 		$this->log_sorteo->warning("BORRANDO DE TABLA $tabla_destino ".$dsql);
 		$this->log_sorteo->warning("CARGANDO TABLA $tabla_destino ".$isql);
 		
@@ -70,7 +74,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 	return 1;
 	}
 
-  public function getFaseCentro($id_centro){
+  public function getFaseCentro($id_centro=1){
 	$query="SELECT fase_sorteo FROM centros WHERE id_centro=$id_centro";	
 	$this->log_nueva_solicitud->warning("CONSULTA FASE CENTRO: ".$query);
 	$r=$this->db()->query($query);
@@ -818,6 +822,8 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		$nombre_centro=$this->getNombre($id_centro);
 		$sol_completa['nombre_centro_destino']=$nombre_centro;
 		$this->log_nueva_solicitud->warning("NUEVA SOLICITUD,id centro/nombre centro: ".$id_centro.'/'.$nombre_centro);
+		$this->log_nueva_solicitud->warning("DATOS SOLICITUD A MOSTRAR");
+		$this->log_nueva_solicitud->warning(print_r($sol_completa,true));
 		}
 	else
 		{
@@ -888,11 +894,18 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		$tabla='alumnos';
 		$resultSet=array();
 		//ponemos todas llas solicitudes a noadmitidos por si ya ha habido otro sorteo
-		$sql_excluida="update $tabla set est_desp_sorteo='noadmitida' where id_centro_destino=$c";
-		
-		$sql1="UPDATE $tabla a set nordensorteo=$solicitudes+nasignado-$numero+1 where nasignado<$numero and id_centro_destino='$c' and fase_solicitud!='borrador' ";
-		$sql2="UPDATE $tabla a set nordensorteo=nasignado-$numero+1 where nasignado>=$numero and id_centro_destino='$c' and fase_solicitud!='borrador' ";
-
+		if($c!=1)
+		{
+			$sql_excluida="update $tabla set est_desp_sorteo='noadmitida' where id_centro_destino=$c";
+			$sql1="UPDATE $tabla a set nordensorteo=$solicitudes+nasignado-$numero+1 where nasignado<$numero and id_centro_destino='$c' and fase_solicitud!='borrador' ";
+			$sql2="UPDATE $tabla a set nordensorteo=nasignado-$numero+1 where nasignado>=$numero and id_centro_destino='$c' and fase_solicitud!='borrador' ";
+		}
+		else
+		{
+			$sql_excluida="update $tabla set est_desp_sorteo='noadmitida'";
+			$sql1="UPDATE $tabla a set nordensorteo=$solicitudes+nasignado-$numero+1 where nasignado<$numero and fase_solicitud!='borrador' ";
+			$sql2="UPDATE $tabla a set nordensorteo=nasignado-$numero+1 where nasignado>=$numero and fase_solicitud!='borrador' ";
+		}
 		$this->log_sorteo->warning("OBTENIENDO IDS SOLICITUDES FASE CENTRO: $fasecentro, CENTRO: $c, CONSULTA: $sql1");
 		//obtenemos los ids de solicitudes admitidas según ls criterios del baremo
 		$ids=$this->getSolAdmitidas($nvebo,$nvtva,$c,$fasecentro);
@@ -913,12 +926,22 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 			$idstva=rtrim($idstva,',');	
 		$sql_actestebo='';
 		$sql_actesttva='';
+		if($c!=1)
+		{
 		//actualizamos campo de estado de la solicid despues del sorteo para marcar las sol admitidas, siempre excluyendo las borrador
 		if(strlen($idsebo)>0)
 			$sql_actestebo="update $tabla set est_desp_sorteo='admitida' where tipoestudios='ebo' and id_centro_destino=$c and fase_solicitud!='borrador' and id_alumno in(".$idsebo.")";
 		if(strlen($idstva)>0)
 			$sql_actesttva="update $tabla set est_desp_sorteo='admitida' where tipoestudios='tva' and id_centro_destino=$c and fase_solicitud!='borrador' and id_alumno in(".$idstva.")";
-	
+		}
+		else
+		{
+		//actualizamos campo de estado de la solicid despues del sorteo para marcar las sol admitidas, siempre excluyendo las borrador
+		if(strlen($idsebo)>0)
+			$sql_actestebo="update $tabla set est_desp_sorteo='admitida' where tipoestudios='ebo' and  fase_solicitud!='borrador' and id_alumno in(".$idsebo.")";
+		if(strlen($idstva)>0)
+			$sql_actesttva="update $tabla set est_desp_sorteo='admitida' where tipoestudios='tva' and fase_solicitud!='borrador' and id_alumno in(".$idstva.")";
+		}
 		$this->log_sorteo->warning("ACTUALIZANDO SORTEO");
 		$this->log_sorteo->warning(print_r($sql1,true));
 		$this->log_sorteo->warning(print_r($sql2,true));
@@ -960,23 +983,30 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		foreach($ids['tva'] as $id)
 			$idstva.=$id->id_alumno.",";
 		$idstva=rtrim($idstva,',');	
-		if($c!=1)
+		if($c==1)
+		{
+			//ponemos todas llas solicitudes a noadmitidas
+			$sql_noadmitida="update alumnos set est_desp_sorteo='noadmitida'";
+			$sqlebo="UPDATE alumnos a set est_desp_sorteo='admitida' where fase_solicitud!='borrador' and tipoestudios='ebo' and estado_solicitud='apta' and a.id_alumno in(".$idsebo.")";
+			$sqltva="UPDATE alumnos a set est_desp_sorteo='admitida' where fase_solicitud!='borrador' and tipoestudios='tva' and estado_solicitud='apta' and a.id_alumno in(".$idstva.")";
+		}
+		elseif($c!=1)
 		{
 			//ponemos todas llas solicitudes a noadmitidas
 			$sql_noadmitida="update alumnos set est_desp_sorteo='noadmitida' where id_centro_destino=$c";
 			$sqlebo="UPDATE alumnos a set est_desp_sorteo='admitida' where fase_solicitud!='borrador' and tipoestudios='ebo' and id_centro_destino=$c and estado_solicitud='apta' and a.id_alumno in(".$idsebo.")";
 			$sqltva="UPDATE alumnos a set est_desp_sorteo='admitida' where fase_solicitud!='borrador' and tipoestudios='tva' and id_centro_destino=$c and estado_solicitud='apta' and a.id_alumno in(".$idstva.")";
 
-			$this->log_listados_definitivos->warning($sql_noadmitida);
-			$this->log_listados_definitivos->warning($sqlebo);
-			$this->log_listados_definitivos->warning($sqltva);
-			$noad=$this->db->query($sql_noadmitida);
-			$qebo=$this->db->query($sqlebo);
-			$qtva=$this->db->query($sqltva);
-        if($qebo and $qtva and $noad)
-					return 1;
-				else return 0;
 		}
+		$this->log_listados_definitivos->warning($sql_noadmitida);
+		$this->log_listados_definitivos->warning($sqlebo);
+		$this->log_listados_definitivos->warning($sqltva);
+		$noad=$this->db->query($sql_noadmitida);
+		$qebo=$this->db->query($sqlebo);
+		$qtva=$this->db->query($sqltva);
+		if($qebo and $qtva and $noad)
+			return 1;
+		else return 0;
 
 	}
 	public function getAllSolSorteo($c=1,$tipo=0,$fase_sorteo=0,$subtipo_listado='',$provincia='todas',$tabla_alumnos='alumnos') {
@@ -1146,7 +1176,23 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 	  	if($row = $soldata->fetch_object()) 
 		{
    	 	$solSet=$row;
-		$this->log_actualizar_solicitud->warning("OK estado sol: ".$solSet->estado_solicitud);
+		$this->log_actualizar_solicitud->warning("ESTADO SOLICITUD: ".$solSet->estado_solicitud);
+		return $solSet->estado_solicitud;
+    		}
+		else return 'noapta';
+    	}
+	public function getFaseSol($idsol) 
+	{
+		$query="select fase_solicitud from alumnos where id_alumno='".$idsol."'";
+
+		$this->log_actualizar_solicitud->warning("CONSULTA FASE DE SOLICITUD: ");
+		$this->log_actualizar_solicitud->warning($query);
+		$soldata=$this->db()->query($query);
+	  	if($soldata->num_rows==0) return 'noapta';
+	  	if($row = $soldata->fetch_object()) 
+		{
+   	 	$solSet=$row;
+		$this->log_actualizar_solicitud->warning("OK fase sol: ".$solSet->estado_solicitud);
 		return $solSet->estado_solicitud;
     		}
 		else return 'noapta';
