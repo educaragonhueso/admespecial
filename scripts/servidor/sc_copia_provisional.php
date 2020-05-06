@@ -11,20 +11,51 @@ require_once 'UtilidadesAdmision.php';
 require_once DIR_BASE.'controllers/CentrosController.php';
 require_once DIR_BASE.'controllers/ListadosController.php';
 
-$log_provisional_fase2=new logWriter('log_provisional_fase2',DIR_LOGS);
+$log_fase_provisional=new logWriter('log_fase_provisional',DIR_LOGS);
 
 $tipo='provisional';
 
 $list=new ListadosController('alumnos');
 $conexion=$list->adapter;
 $ccentros=new CentrosController(0,$conexion);
-//$centro=new Centro($ccentros->conectar->conexion(),'','no',0);
 $centro=new Centro($conexion,'','no',0);
-//$utils=new UtilidadesAdmision($ccentros->conectar->conexion(),$ccentros,$centro);
 $utils=new UtilidadesAdmision($conexion,$ccentros,$centro);
-//$tsolicitud=new Solicitud($ccentros->conectar->conexion());
 $tsolicitud=new Solicitud($conexion);
+$ct=$tsolicitud->copiaTablaCentro(0,'alumnos_provisional_final');	
 
+$acentros=array();
+$centros=$ccentros->getAllCentros('todas','especial');
+$ccentros=new CentrosController(0,$conexion);
+while($row = $centros->fetch_assoc()) { $acentros[]=$row;}
+
+foreach($acentros as $dcentro)
+{
+	$id_centro=$dcentro['id_centro'];
+	########################################################################################
+	$log_fase_provisional->warning("INICIANDO GESTION CENTRO");
+	########################################################################################
+	$centrotmp=new Centro($conexion,$dcentro['id_centro'],'no',0);
+	$centrotmp->setId($dcentro['id_centro']);
+	$centrotmp->setNombre();
+	$id_centro=$dcentro['id_centro'];
+	$nsolicitudescentro=$centrotmp->getNumSolicitudes($dcentro['id_centro'],1);
+	if($nsolicitudescentro==0) continue;
+	$nombrecentro=$centrotmp->getNombre();
+	$log_fase_provisional->warning("NOMBRE: ".$nombrecentro.PHP_EOL);
+	$log_fase_provisional->warning("FASE: ".$centrotmp->getFaseSorteo().PHP_EOL);
+	$log_fase_provisional->warning("NSOLICITUDES: ".$nsolicitudescentro.PHP_EOL);
+	$log_fase_provisional->warning("ENTRANDO SORTEO TABLA CENTRO: $nombrecentro");
+
+	$dsorteo=$centrotmp->getVacantes($id_centro);
+	$vacantes_ebo=$dsorteo[0]->vacantes;
+	$vacantes_tva=$dsorteo[1]->vacantes;
+	if($tsolicitud->setSolicitudesSorteo($id_centro,$nsolicitudescentro,$vacantes_ebo,$vacantes_tva)==0) 
+		print("NO HAY VACANTES<br>");
+}	
+//copiamos todos los datos a tabla de provisionales	
+$ct=$tsolicitud->copiaTablaCentro(1,'alumnos_provisional_final');	
+$log_fase_provisional->warning("RESULTADO COPIAR TABLA $ct ");
+/*
 ########################################################################################
 ########################################################################################
 //Si hemos llegado al dia d elas provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
@@ -71,7 +102,7 @@ $centros=$ccentros->getAllCentros('todas','especial');
 			print("NO HAY VACANTES<br>");
 		$ct=$tsolicitud->copiaTablaCentro($id_centro,'alumnos_provisional_final');	
 		}
-exit();
+*/
 
 echo PHP_EOL."Copia tabla solicitudes provisionales realizada corectamente a las ".date('H:m')." del dia ".date('d-M-Y').PHP_EOL;	
 ?>

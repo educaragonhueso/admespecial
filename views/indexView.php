@@ -78,9 +78,9 @@ Ello implica:
 				//echo '<p style="padding-left:100px"><button class="btn btn-outline-info" id="nuevasolicitud" type="button">Nueva solicitud</button></p>';
 				echo '<p style="padding-left:100px"><div id="nuevasolicitud"></div></p>';
 				}
-			elseif($_SESSION['nombre_usuario']=='nousuario' and $_SESSION['fin_sol_alumno']<'2') //fin inscripcion para ciudadano
+			elseif($_SESSION['nombre_usuario']=='nousuario' and $_SESSION['fin_sol_alumno']=='2') //fin inscripcion para ciudadano
 				{
-				echo '<h1>FINALIZADO PROCESO DE ADMISIÓN<br></h1>';
+				echo '<h1>FINALIZADO PROCESO DE ADMISIÓN ONLINE<br></h1>';
 				if($_SESSION['fin_inscripcion_centros']==1) echo '<h1>DIRIGETE AL CENTRO PARA COMPLETAR LA INSCRIPCIÓN</h1>';
 				}
 			elseif($_SESSION['fin_sol_alumno']<2 and $_SESSION['nombre_usuario']!='nousuario')//autenticado en perirodo de inscripcion  alumno

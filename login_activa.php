@@ -14,6 +14,7 @@ $_SESSION['version']=VERSION;
 $_SESSION['sorteo_fase2'] =0;      
 $_SESSION['id_centro'] =-10;      
 
+//finaiza plazo inscripcion alumno
 $_SESSION['fin_sol_alumno']=-1;
 
 if($hoy>=DIA_INICIO_PRORROGA)

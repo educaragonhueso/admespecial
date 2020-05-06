@@ -209,7 +209,11 @@ class Centro extends EntidadBase{
 
     public function setSorteo($ns=0,$c=1) 
 		{
-			$sql="update centros set num_sorteo=$ns";
+			if($c!=1)
+				$sql="update centros set num_sorteo=$ns WHERE id_centro=$c";
+			else
+				$sql="update centros set num_sorteo=$ns";
+
 			$this->log_sorteo->warning("CONSULTA ACTUALIZACION VALORES CENTROS: ");
 			$this->log_sorteo->warning($sql);
 		

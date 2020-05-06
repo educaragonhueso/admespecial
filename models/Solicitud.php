@@ -25,6 +25,7 @@ class Solicitud extends EntidadBase{
 			$this->log_solpdf=new logWriter('log_solpdf',DIR_LOGS);
 			$this->log_gencsvs=new logWriter('log_gencsvs',DIR_LOGS);
 			$this->log_listados_provisionales=new logWriter('log_listados_provisionales',DIR_LOGS);
+			$this->log_fase_provisional=new logWriter('log_fase_provisional',DIR_LOGS);
 			$this->log_listados_solicitudes_fase2=new logWriter('log_listados_solicitudes_fase2',DIR_LOGS);
     }
      
@@ -33,8 +34,8 @@ class Solicitud extends EntidadBase{
 		$tabla_destino=$tipo;
 		$sql="SELECT a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.est_desp_sorteo,c.nombre_centro,b.*,a.id_centro_destino as id_centro_destino FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador'";
 	//volcamos la tabla con los datos de solicitudes y los del baremo tal como aparecen en el listado de provisionales o definitivosa
-		$this->log_sorteo->warning("ENTRANDO EN COPIAR TABLA CENTRO: $centro");
-		if($centro!=0)
+		$this->log_fase_provisional->warning("ENTRANDO EN COPIAR TABLA CENTRO: $centro");
+		if($centro!=1)
 			{
 			$dsql='DELETE from '.$tabla_destino.' WHERE id_centro_destino='.$centro;
 			$isql='INSERT IGNORE INTO '.$tabla_destino.' '.$sql.' and id_centro_destino='.$centro;
@@ -45,7 +46,7 @@ class Solicitud extends EntidadBase{
 			$isql='INSERT IGNORE INTO '.$tabla_destino.' '.$sql;
 			}
 		$this->log_sorteo->warning("BORRANDO DE TABLA $tabla_destino ".$dsql);
-		$this->log_sorteo->warning("CARGANDO TABLA $tabla_destino ".$isql);
+		$this->log_sorteo->warning("CARGANDO TABLA DESPUES DE SORTEO $tabla_destino ".$isql);
 		
 		if($this->db()->query($dsql))
 			if($this->db()->query($isql)) return 1;
@@ -887,26 +888,12 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 	else return $resultSet;
 				
 	}
-	public function actualizaSolSorteo($c=1,$numero=0,$solicitudes=0,$nvebo=0,$nvtva=0,$fasecentro=1) 
+	public function setSolicitudesSorteo($c=1,$solicitudes=0,$nvebo=0,$nvtva=0,$fasecentro=1) 
 	{
-		//if($fasecentro==2) $tabla='alumnos_provisional';
-		//else 
 		$tabla='alumnos';
 		$resultSet=array();
 		//ponemos todas llas solicitudes a noadmitidos por si ya ha habido otro sorteo
-		if($c!=1)
-		{
-			$sql_excluida="update $tabla set est_desp_sorteo='noadmitida' where id_centro_destino=$c";
-			$sql1="UPDATE $tabla a set nordensorteo=$solicitudes+nasignado-$numero+1 where nasignado<$numero and id_centro_destino='$c' and fase_solicitud!='borrador' ";
-			$sql2="UPDATE $tabla a set nordensorteo=nasignado-$numero+1 where nasignado>=$numero and id_centro_destino='$c' and fase_solicitud!='borrador' ";
-		}
-		else
-		{
-			$sql_excluida="update $tabla set est_desp_sorteo='noadmitida'";
-			$sql1="UPDATE $tabla a set nordensorteo=$solicitudes+nasignado-$numero+1 where nasignado<$numero and fase_solicitud!='borrador' ";
-			$sql2="UPDATE $tabla a set nordensorteo=nasignado-$numero+1 where nasignado>=$numero and fase_solicitud!='borrador' ";
-		}
-		$this->log_sorteo->warning("OBTENIENDO IDS SOLICITUDES FASE CENTRO: $fasecentro, CENTRO: $c, CONSULTA: $sql1");
+		$this->log_sorteo->warning("OBTENIENDO IDS SOLICITUDES FASE CENTRO: $fasecentro, CENTRO: $c");
 		//obtenemos los ids de solicitudes admitidas según ls criterios del baremo
 		$ids=$this->getSolAdmitidas($nvebo,$nvtva,$c,$fasecentro);
 		$this->log_sorteo->warning("RESPUESTA IDS:");
@@ -943,17 +930,10 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 			$sql_actesttva="update $tabla set est_desp_sorteo='admitida' where tipoestudios='tva' and fase_solicitud!='borrador' and id_alumno in(".$idstva.")";
 		}
 		$this->log_sorteo->warning("ACTUALIZANDO SORTEO");
-		$this->log_sorteo->warning(print_r($sql1,true));
-		$this->log_sorteo->warning(print_r($sql2,true));
-		$this->log_sorteo->warning(print_r($sql_excluida,true));
 		$this->log_sorteo->warning("ACTUALIZANDO SORTEO EBO");
 		$this->log_sorteo->warning(print_r($sql_actestebo,true));
 		$this->log_sorteo->warning(print_r($sql_actesttva,true));
 
-		$query0=$this->db->query($sql_excluida);
-		$query1=$this->db->query($sql1);
-		$query2=$this->db->query($sql2);
-		$this->log_sorteo->warning("ACT EST EBO");
 		if(strlen($idsebo)>0)
 			$query3=$this->db->query($sql_actestebo);
 		else $query3=1;
@@ -962,11 +942,41 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 			$query4=$this->db->query($sql_actesttva);
 		else $query4=1;
 
-		if($query0 and $query1 and $query2 and $query3 and $query4)
+		if($query3 and $query4)
 			return 1;
 		else 
 		{
-			$this->log_sorteo->warning("ERROR ACTUALIZANDO SOLICITUDES SORTEO");
+			$this->log_sorteo->warning("ERROR ACTUALIZANDO ESTADO SOLICITUDES");
+			return 0;
+		}
+	}
+	public function setNordensorteo($c=1,$numero=0,$solicitudes=0,$nvebo=0,$nvtva=0,$fasecentro=1) 
+	{
+		$tabla='alumnos';
+		$resultSet=array();
+		//ponemos todas llas solicitudes a noadmitidos por si ya ha habido otro sorteo
+		if($c!=1)
+		{
+			$sql_excluida="update $tabla set est_desp_sorteo='noadmitida' where id_centro_destino=$c";
+			$sql1="UPDATE $tabla a set nordensorteo=$solicitudes+nasignado-$numero+1 where nasignado<$numero and id_centro_destino='$c' and fase_solicitud!='borrador' ";
+			$sql2="UPDATE $tabla a set nordensorteo=nasignado-$numero+1 where nasignado>=$numero and id_centro_destino='$c' and fase_solicitud!='borrador' ";
+		}
+		else
+		{
+			$sql_excluida="update $tabla set est_desp_sorteo='noadmitida'";
+			$sql1="UPDATE $tabla a set nordensorteo=$solicitudes+nasignado-$numero+1 where nasignado<$numero and fase_solicitud!='borrador' ";
+			$sql2="UPDATE $tabla a set nordensorteo=nasignado-$numero+1 where nasignado>=$numero and fase_solicitud!='borrador' ";
+		}
+
+		$query0=$this->db->query($sql_excluida);
+		$query1=$this->db->query($sql1);
+		$query2=$this->db->query($sql2);
+		$this->log_sorteo->warning("ACTUALIZADO NORDEN SORTEO");
+		if($query0 and $query1 and $query2)
+			return 1;
+		else 
+		{
+			$this->log_sorteo->warning("ERROR ACTUALIZANDO NORDEN SOLICITUDES SORTEO");
 			return 0;
 		}
 	}

@@ -38,21 +38,20 @@ $centros=$ccentros->getAllCentros();
 		$centrotmp->setId($dcentro['id_centro']);
 		$centrotmp->setNombre();
 		$id_centro=$dcentro['id_centro'];
-		//if($id_centro!=50019408) continue;
-		//if($id_centro!=50017369) continue;
 		$fase=$centrotmp->getFaseSorteo();
 		print(PHP_EOL."CENTRO: ".$dcentro['id_centro'].PHP_EOL." FASE: ".$fase.PHP_EOL);
-		$nsolicitudes=$centrotmp->getNumSolicitudes($dcentro['id_centro']);
+		$nsolicitudescentro=$centrotmp->getNumSolicitudes($dcentro['id_centro']);
 		$nombrecentro=$centrotmp->getNombre();
 		print("NOMBRE: ".$centrotmp->getNombre().PHP_EOL);
 		print("FASE: ".$centrotmp->getFaseSorteo().PHP_EOL);
 		print("NSOLICITUDES: ".$nsolicitudes.PHP_EOL);
 		
-		$nsorteo=$centrotmp->getNumeroSorteo();
+		//$nsorteo=$centrotmp->getNumeroSorteo();
 		$dsorteo=$centrotmp->getVacantes($id_centro);
 		$vacantes_ebo=$dsorteo[0]->vacantes;
 		$vacantes_tva=$dsorteo[1]->vacantes;
-		if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
+		if($tsolicitud->setSolicitudesSorteo($id_centro,$nsolicitudescentro,$vacantes_ebo,$vacantes_tva)==0) 
+		//if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
 			print("NO HAY VACANTES<br>");
 		$ct=$tsolicitud->copiaTablaCentro($id_centro,'alumnos_definitiva_final');	
 		}
