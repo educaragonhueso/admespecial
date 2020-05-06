@@ -656,7 +656,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 					}
 					else	$this->log_nueva_solicitud->warning("NO DATOS TRIBUTANTE");
 				if($rol=='alumno') return $clave;
-				else	return $this->getSol($id_alumno);
+				else return $this->getSol($id_alumno);
 				}
 				else
 				{
@@ -1055,12 +1055,12 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 			if($c<=1)
 			{
 				if($subtipo_listado=='dup') //solicitudes duplicadas
-					$sql="select a.apellido1,a.apellido2,a.tipoestudios,a.fnac,a.dni_tutor1,a.nombre,a.id_alumno,c.nombre_centro from alumnos a join (select apellido1,nombre from alumnos group by apellido1,nombre having count(*)>1) dup on a.apellido1=dup.apellido1 and dup.nombre=a.nombre join centros c on c.id_centro=a.id_centro_destino join baremo b on b.id_alumno=a.id_alumno order by c.id_centro,a.tipoestudios, b.puntos_validados desc";
+					$sql="select a.apellido1,a.apellido2,a.tipoestudios,a.fnac,a.dni_tutor1,a.nombre,a.id_alumno,a.reserva,c.nombre_centro FROM alumnos a join (select apellido1,nombre FROM alumnos group by apellido1,nombre having count(*)>1) dup on a.apellido1=dup.apellido1 and dup.nombre=a.nombre join centros c on c.id_centro=a.id_centro_destino join baremo b on b.id_alumno=a.id_alumno order by c.id_centro,a.tipoestudios, b.puntos_validados desc";
 				else  //solicitudes normales
-					$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.loc_dfamiliar,a.nordensorteo,a.nasignado as nasignado,b.*,c.nombre_centro,c.provincia,c2.nombre_centro as nombre_centro_origen FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro left join centros c2 on c2.id_centro=a.id_centro_estudios_origen  order by c.id_centro desc,a.tipoestudios asc, b.puntos_validados desc";
+					$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.loc_dfamiliar,a.nordensorteo,a.nasignado as nasignado,a.reserva,b.*,c.nombre_centro,c.provincia,c2.nombre_centro as nombre_centro_origen FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro left join centros c2 on c2.id_centro=a.id_centro_estudios_origen  order by c.id_centro desc,a.tipoestudios asc, b.puntos_validados desc";
 			}
 			else
-				$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.*,c.nombre_centro,c.provincia,c2.nombre_centro as nombre_centro_origen FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro left join centros c2 on c2.id_centro=a.id_centro_estudios_origen  where c.id_centro=$c order by c.id_centro,a.tipoestudios asc, b.puntos_validados desc";
+				$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.reserva,b.*,c.nombre_centro,c.provincia,c2.nombre_centro as nombre_centro_origen FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro left join centros c2 on c2.id_centro=a.id_centro_estudios_origen  where c.id_centro=$c order by c.id_centro,a.tipoestudios asc, b.puntos_validados desc";
 				
 				$this->log_gencsvs->warning("CONSULTA SOLICITUDES CSV");
 				$this->log_gencsvs->warning($sql);
@@ -1137,23 +1137,22 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
         return $resultSet;
 	}
 
-	/*
-	public function getSol($id) {
-				$sol_completa=array();
-				$query="SELECT a.*,IFNULL(b.puntos_validados,0) as puntos_validados FROM alumnos a, baremo b  where a.id_alumno=b.id_alumno and b.id_alumno=$id";
-				$this->log_nueva_solicitud->warning("CONSULTA SOLICITUD CREADA: ".$query);
-				$soldata=$this->db()->query($query);
-        if($row = $soldata->fetch_object()) 
-				{
-           $solSet=$row;
-        }
+	//datos de la solicitud para mostrar en la web despues de crear una nueva solicitud
+	public function getSol($id) 
+	{
+		$sol_completa=array();
+		$query="SELECT a.*,IFNULL(b.puntos_validados,0) as puntos_validados FROM alumnos a, baremo b  where a.id_alumno=b.id_alumno and b.id_alumno=$id";
+		$this->log_nueva_solicitud->warning("CONSULTA SOLICITUD CREADA: ".$query);
+		$soldata=$this->db()->query($query);
+        	if($row = $soldata->fetch_object()) 
+		{
+           		$solSet=$row;
+        	}
 		//convertimos objeto en array
-				foreach($solSet as $k=>$vsol)
-					$sol_completa[$k]=$vsol;
-        
+		foreach($solSet as $k=>$vsol)
+			$sol_completa[$k]=$vsol;
 		return $sol_completa;
-    }
-    	*/
+    	}
 	public function getTipoCentro($idcentro) 
 	{
 		//averiguamos si es de ed especial

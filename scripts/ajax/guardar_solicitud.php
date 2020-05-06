@@ -22,7 +22,11 @@ $modo=$_POST['modo'];
 $rol=$_POST['rol'];
 $estado_convocatoria=$_POST['estado_convocatoria'];
 
-$_POST['id_centro_estudios_origen']=trim($_POST['id_centro_estudios_origen'],'*');
+if(isset($_POST['id_centro_estudios_origen']))
+	$_POST['id_centro_estudios_origen']=trim($_POST['id_centro_estudios_origen'],'*');
+else $_POST['id_centro_estudios_origen']='';
+
+
 $fsol_entrada=$_POST['fsol'];
 ######################################################################################
 $log_actualizar->warning("POST RECIBIDO ACTUALIZANDO:");
@@ -104,6 +108,8 @@ if($modo=="GRABAR SOLICITUD")
 		$log_nueva->warning("GRABANDO NUEVA SOLICITUD...");
 		$log_nueva->warning(print_r($fsol_salida,true));
 		$res=$tsol->save($fsol_salida,$_POST['idsol'],$rol);
+		$log_nueva->warning("RESULTADO ACT: ".$res);
+		$log_nueva->warning(print_r($res,true));
 	}
 else 
 	{
@@ -118,7 +124,6 @@ else
 		//modificamos solicitud teniendo en cuenta la fase en la q esta el centro y el estado de la convocatoria
 		$res=$tsol->update($fsol_salida,$_POST['idsol']);
 	}
-$log_actualizar->warning("RESULTADO ACT: ".$res);
 if($res<=0) 
 {
 	if($res==-1)	print('ERROR GUARDANDO DATOS: YA EXISTE UN USUARIO CON ESE NOMBRE DE USUARIO');
@@ -131,6 +136,6 @@ else
 	if($modo=="GRABAR SOLICITUD" and $rol=='alumno')
 		print($res);
 	else
-		print($res);
+ 		print_r($sc->showSolicitud($res));
 }
 ?>

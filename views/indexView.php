@@ -86,7 +86,7 @@ Ello implica:
 			elseif($_SESSION['fin_sol_alumno']<2 and $_SESSION['nombre_usuario']!='nousuario')//autenticado en perirodo de inscripcion  alumno
 				{
 				echo '<button class="btn btn-outline-info calumno" id="versolicitud" type="button">Ver solicitud</button>';
-				echo '<a id="imprimir" target="_blank"><input class="btn btn-primary imprimirsolicitud" style="background-color:brown;padding-left:20px" type="button" value="Vista Previa Impresion Documento"/></a>';
+				echo '<a id="imprimir" target="_blank"><input class="btn btn-primary imprimirsolicitud"  type="button" value="Vista Previa Impresion Documento"/></a>';
 				}
 		}
 		elseif($_SESSION['dia_inicio_inscripcion']==0)
@@ -123,6 +123,7 @@ Ello implica:
 			$( document ).ready(function() {
 			 $( "#nuevasolicitud" ).trigger( "click" );
 			 $( "#versolicitud" ).trigger( "click" );
+			 $( "#versolicitud" ).remove();
  			});
 
 			$( "#imprimir" ).click(function() {

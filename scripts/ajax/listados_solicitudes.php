@@ -59,7 +59,7 @@ $nombre_centro=$tcentro->getNombre();
 $fase_sorteo=$tcentro->getFaseSorteo();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
 $nsolicitudes=$tcentro->getNumSolicitudes($id_centro,$fase_sorteo);
 //Segun el estado del sorteo deshabilitamos el sorteo
-if($fase_sorteo==1) $disabled='';
+if($fase_sorteo<=2) $disabled='';
 else $disabled='disabled';
 
 $form_sorteo_parcial='<div id="form_sorteo_parcial" class="input-group mb-3">

@@ -40,11 +40,26 @@ border-radius: 5px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-#imprimir,#inicio{
-background-color: black;
-
-color: white;
+#inicio{
+	background-color: black!important;
+	color: white;
 }
+.imprimirsolicitud{
+	background-color: black!important;
+	color: white;
+	margin-left:986px;
+}
+#imprimir:hover{
+background-color: white!important;
+border-radius: 5px;
+ transition: all 0.3s;
+}
+#bimprimir{
+	background-color: grey!important;
+	color: white;
+
+}
+
 
 .navbar-btn {
     box-shadow: none;

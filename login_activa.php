@@ -150,7 +150,7 @@ header('Content-Type: text/html; charset=UTF-8');
 else
 {
                         // Display an error message if username doesn't exist
-                        $nombre_usuario_err = 'No existe una cuenta para este usuario'.$username.$hashed_password;
+                        $nombre_usuario_err = 'No existe una cuenta para este usuario'.$nombre_usuario.$hashed_clave;
                     }
                 }else{echo "Algo falló, prueba otra vez más tarde o habla con el administrador: lhueso@aragon.es";}
             $stmt->close();

@@ -1,5 +1,4 @@
 <?php
-//define("DIA_SORTEO",'2020-02-14');
 define("DIR_CSVS",DIR_BASE.'/scripts/datossalida/listadoscsv/');
 define("DIR_PROV",DIR_BASE.'/scripts/datossalida/pdflistados/provisionales/');
 define("DIR_PROV_WEB",'/scripts/datossalida/pdflistados/provisionales/');
@@ -30,8 +29,8 @@ $campos_bbdd_csv_fase3=array('tipoestudios','apellido1','apellido2','nombre','lo
 $campos_cabecera_csv_mat=array('Centro','Grupos EBO','Puestos EBO','Plazas Ocupadas EBO','Vacantes_EBO','Grupos TVA','Puestos TVA','Plazas Ocupadas TVA','Vacantes_TVA');
 $campos_bbdd_csv_mat=array('nombre_centro','gruposebo','puestosebo','plazasactualesebo','vacantesebo','grupostva','puestostva','plazasactualestva','vacantestva');
 
-$campos_cabecera_csv_sol=array('Centro','Primer apellido','Segundo apellido','Nombre','Enseñanza','Centro de procedencia','Criterios prioritarios','Localidad domicilio familiar','Fase','Estado');
-$campos_bbdd_csv_sol=array('nombre_centro','apellido1','apellido2','nombre','tipoestudios','nombre_centro_origen','transporte','loc_dfamiliar','fase_solicitud','estado_solicitud');
+$campos_cabecera_csv_sol=array('Centro','Primer apellido','Segundo apellido','Nombre','Enseñanza','Criterios prioritarios','Localidad domicilio familiar','Fase','Estado','Puntos validados','Numero sorteo asignado','Centro Origen','Reserva de Plaza');
+$campos_bbdd_csv_sol=array('nombre_centro','apellido1','apellido2','nombre','tipoestudios','transporte','loc_dfamiliar','fase_solicitud','estado_solicitud','puntos_validados','nasignado','nombre_centro_origen','reserva');
 
 //listado de alumnos que promocionan, la matricula
 $campos_cabecera_csv_pro=array('Centro','Apellidos','Nombre','Enseñanza','Fecha Nacimiento','estado');

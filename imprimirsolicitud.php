@@ -24,7 +24,7 @@ include('includes/head.php');
     <div class="wrapper">
 	    <div id="content">
 			<a href="<?php echo URL_BASE ?>"><button class="btn btn-outline-info" id="inicio" type="button">INICIO</button></a>
-			<button class="btn btn-primary" id="imprimir">IMPRIMIR</button>
+			<button class="btn btn-primary" id="bimprimir">IMPRIMIR</button>
 	  	<span type="hidden" id="estado_convocatoria" name="estado_convocatoria" value="<?php echo $_SESSION['estado_convocatoria']; ?>"></span>
 	  	<span type="hidden" id="rol" name="rol" value="<?php echo $_SESSION['rol']; ?>"></span> 
 				<?php 

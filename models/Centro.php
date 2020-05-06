@@ -54,9 +54,9 @@ class Centro extends EntidadBase{
 			$sql="SELECT count(*) as nsolicitudes FROM alumnos $where";
 		else
 			if($fase_sorteo==0)
-				$sql="SELECT count(*) as nsolicitudes FROM $tabla WHEREid_centro_destino=$c";
+				$sql="SELECT count(*) as nsolicitudes FROM alumnos WHERE id_centro_destino=$c";
 			else
-				$sql="SELECT count(*) as nsolicitudes FROM $tabla where fase_solicitud!='borrador' and id_centro_destino=$c";
+				$sql="SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=$c";
 
 		$this->log_sorteo->warning("OBTENIENDO NUMERO DE SOLICITUDES");
 		$this->log_sorteo->warning($sql);
@@ -209,8 +209,7 @@ class Centro extends EntidadBase{
 
     public function setSorteo($ns=0,$c=1) 
 		{
-			$sql="update centros set num_sorteo=$ns where id_centro=$c";
-		
+			$sql="update centros set num_sorteo=$ns";
 			$this->log_sorteo->warning("CONSULTA ACTUALIZACION VALORES CENTROS: ");
 			$this->log_sorteo->warning($sql);
 		

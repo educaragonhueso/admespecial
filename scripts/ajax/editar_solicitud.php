@@ -57,7 +57,7 @@ if(isset($_POST['codigo_centro'])) $id_centro=$_POST['codigo_centro'];
 //obtenemos formulario con los datos
 $sform=$scontroller->showFormSolicitud($id,$id_centro,$rol,1,$solo_lectura,$fase_sorteo,$estado_convocatoria);
 
-$botonimp='<a href="imprimirsolicitud.php?id='.$id.'" target="_blank"><input class="btn btn-primary imprimirsolicitud" style="background-color:brown;padding-left:20px" type="button" value="Vista Previa Impresion Documento"/></a>';
+$botonimp='<a href="imprimirsolicitud.php?id='.$id.'" target="_blank"><input class="btn btn-primary imprimirsolicitud"  type="button" value="Vista Previa Impresion Documento"/></a>';
 //Si el id es cero obentemos el nuevo id
 if($id==0) $id=$scontroller->lastid+1;
 

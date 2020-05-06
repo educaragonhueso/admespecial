@@ -61,7 +61,7 @@ return;
 				else
 				{
 					$.alert({
-						title: data
+						title: "SORTEO REALIZADO CON ÉXITO"
 						});
 					$('#num_sorteo').prop('disabled', true);
 				}
@@ -787,8 +787,8 @@ $('body').on('click', '.send', function(e){
 				else
 				{
 				$.alert({
-					title: 'SOLICITUD GUARDADA CORRECTAMENTE.<br> PARA MODIFICARLA ACCEDE A LA PÁGINA PRINCIPAL CON EL NIF DE TU TUTOR Y LA CLAVE<br><br><b> '+data+'</b>',
-					content: ''
+					title: 'SOLICITUD GUARDADA CORRECTAMENTE.<br> Para modificarla accede con el NIF de tu tutor y al clave:<br><br><b> '+data+'</b>',
+					content: 'OK'
 					});
 					//añadimos boton para imprimir
 					var bimp= $('<a href="imprimirsolicitud.php?id='+vid+'"><input class="btn btn-primary imprimirsolicitud" style="background-color:brown;padding-left:20px" type="button" value="Vista Previa Impresion Documento"/></a>');
@@ -1045,6 +1045,7 @@ $.ajax({
 
 $('body').on('click', '#nuevasolicitud', function(e)
 {
+var vestado_convocatoria=$('#estado_convocatoria').val();
 var vcentro=$('#id_centro').text();
 var vrol=$('#rol').attr("value");
 var vmodo='nueva';
@@ -1056,7 +1057,7 @@ if($('#fnuevasolicitud').length)
 	$.ajax({
 	  method: "POST",
 	  url: "../scripts/ajax/editar_solicitud.php",
-	  data: {codigo_centro:vcentro,id_alumno:'0',modo:vmodo,rol:vrol},
+	  data: {id_centro:vcentro,id_alumno:'0',modo:vmodo,rol:vrol,estado_convocatoria:vestado_convocatoria},
 	      success: function(data) {
 				if(vrol.indexOf("alumno")!=-1)
 					{
@@ -1632,7 +1633,7 @@ $('body').on('click', '.exportcsv', function(e)
 			window.open(data,'_blank');
 	},
 	error: function() {
-	alert('Problemas imprimiendo solicitud!');
+	alert('Problemas generando csv!');
 	}
 	});
 
