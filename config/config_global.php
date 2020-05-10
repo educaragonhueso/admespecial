@@ -22,7 +22,7 @@ define("URL_BASE",'http://preadmespecial.aragon.es/');
 define("VERSION",'PRE');
 
 define("DIA_INICIO_PRORROGA",'2020/05/01');
-define("DIA_INICIO_INSCRIPCION",'2020/05/11');
+define("DIA_INICIO_INSCRIPCION",'2020/05/10');
 define("DIA_MAX_SOL_ALUMNO",'2020/05/14');
 define("DIA_FIN_INSCRIPCION",'2020/05/15');
 

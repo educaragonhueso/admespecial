@@ -3335,3 +3335,5 @@
 [09-May-2020 17:43:42] : [WARNING] - select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='50019408' limit 1
 [09-May-2020 17:43:42] : [WARNING] - devolviendo nombre de centro
 [09-May-2020 17:43:42] : [WARNING] - select concat(nombre_centro,'*') as nombre_centro from centros c where c.id_centro='50019408' limit 1
+[10-May-2020 08:22:17] : [WARNING] - CONSULTA ESTADO DE SOLICITUD: 
+[10-May-2020 08:22:17] : [WARNING] - select estado_solicitud from alumnos where id_alumno='0'

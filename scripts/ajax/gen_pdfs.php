@@ -44,15 +44,19 @@ $log_genpdfs->warning(print_r($_POST,true));
 //si es para datos de matricula
 if($tipo=='pdf_mat')
 {
+   $titulo="LISTADO COMPLETO DE VACANTES";
 	//mostramos las solitudes completas sin incluir borrador
 	$datoslistado=$list->getResumenMatriculaCentro($rol='centro',$id_centro,$tiposol,$modo); 
 	$log_genpdfs->warning("PREOBTENIENDO RESUMEN MATRICULA PDF");
+   $cab=$$cabecera;
 }
 elseif($tipo=='pdf_usu')
 {
+   $titulo="LISTADO COMPLETO DE USUARIOS";
 	//mostramos las solitudes completas sin incluir borrador
 	$datoslistado=$list->getUsuarios($rol='centro',$id_centro); 
 
+   $cab=array('CENTRO','NOMBRE','USUARIO','TEL','DNI ALUMNO','CLAVE');
 	$log_genpdfs->warning("OBTENIENDO RESUMEN USUARIOS PDF");
 }
 ###################################################################################
@@ -64,13 +68,13 @@ $log_genpdfs->warning(print_r($$camposdatos,true));
 $datos=array();
 $i=0;
 $pdf = new PDF();
-$cab=$$cabecera;
+//$cab=$$cabecera;
 $pdf->SetFont('Helvetica','',8);
 $pdf->Ln(20);
 $pdf->Ln(20);
 $pdf->setTitle('PROCESO DE ESCOLARIZACION DE ALUMNOS EN CENTROS SOSTENIDOS CON FONDOS PUBLICOS');
 //pagina en Landscape
-$pdf->AddPage('L','',0,'LISTADO COMPLETO VACANTES');
+$pdf->AddPage('L','',0,$titulo);
 $pdf->BasicTable($cab,(array)$datoslistado,0,$tam=29,'normal',$primera_celda=50);
 $pdf->Ln(20);
  // Arial italic 8

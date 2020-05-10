@@ -768,6 +768,8 @@ class ListadosController extends ControladorBase{
 						$ausuarioscentros[$i]['nombre_centro']=str_replace(',','',$centro->getNombre());
 						$ausuarioscentros[$i]['alumno']=$u->nombre;
 						$ausuarioscentros[$i]['nombreusuario']=$u->nombre_usuario;
+						$ausuarioscentros[$i]['telefono']=$u->tel_dfamiliar1;
+						$ausuarioscentros[$i]['dni']=$u->dni_alumno;
 						$ausuarioscentros[$i]['clave']=$u->clave_original;
 						$i++;
 					}
