@@ -1,3 +1,3 @@
 
 
-Can't create log_sorteo!
+Can't create log_listados_definitivos!

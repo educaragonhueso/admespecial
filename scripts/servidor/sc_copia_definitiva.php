@@ -13,7 +13,7 @@ require_once DIR_BASE.'controllers/ListadosController.php';
 
 $log_provisional_fase2=new logWriter('log_provisional_fase2',DIR_LOGS);
 
-$tipo='provisional';
+$tipo='definitiva';
 
 $list=new ListadosController('alumnos');
 $conexion=$list->adapter;
@@ -34,26 +34,26 @@ $centros=$ccentros->getAllCentros();
 		while($row = $centros->fetch_assoc()) { $acentros[]=$row;}
 		foreach($acentros as $dcentro)
 		{
+		$id_centrotmp=$dcentro['id_centro'];
 		$centrotmp=new Centro($conexion,$dcentro['id_centro'],'no',0);
 		$centrotmp->setId($dcentro['id_centro']);
 		$centrotmp->setNombre();
-		$id_centro=$dcentro['id_centro'];
-		$fase=$centrotmp->getFaseSorteo();
-		print(PHP_EOL."CENTRO: ".$dcentro['id_centro'].PHP_EOL." FASE: ".$fase.PHP_EOL);
-		$nsolicitudescentro=$centrotmp->getNumSolicitudes($dcentro['id_centro']);
+		print(PHP_EOL."CENTRO: ".$dcentro['id_centro'].PHP_EOL);
+		$nsolicitudescentro=$centrotmp->getNumSolicitudes($dcentro['id_centro'],1);
+		if($nsolicitudescentro==0) continue;
 		$nombrecentro=$centrotmp->getNombre();
 		print("NOMBRE: ".$centrotmp->getNombre().PHP_EOL);
 		print("FASE: ".$centrotmp->getFaseSorteo().PHP_EOL);
-		print("NSOLICITUDES: ".$nsolicitudes.PHP_EOL);
+		print("NSOLICITUDES: ".$nsolicitudescentro.PHP_EOL);
 		
 		//$nsorteo=$centrotmp->getNumeroSorteo();
-		$dsorteo=$centrotmp->getVacantes($id_centro);
+		$dsorteo=$centrotmp->getVacantes('centro');
 		$vacantes_ebo=$dsorteo[0]->vacantes;
 		$vacantes_tva=$dsorteo[1]->vacantes;
-		if($tsolicitud->setSolicitudesSorteo($id_centro,$nsolicitudescentro,$vacantes_ebo,$vacantes_tva)==0) 
+		if($tsolicitud->setSolicitudesSorteo($id_centrotmp,$nsolicitudescentro,$vacantes_ebo,$vacantes_tva)==0) 
 		//if($list->actualizaSolicitudesSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
 			print("NO HAY VACANTES<br>");
-		$ct=$tsolicitud->copiaTablaCentro($id_centro,'alumnos_definitiva_final');	
 		}
+		$ct=$tsolicitud->copiaTablaCentro(1,'alumnos_definitiva_final');	
 echo PHP_EOL."Copia tabla solicitudes definitiva. Realizada corectamente a las ".date('H:m')." del dia ".date('d-M-Y').PHP_EOL;	
 ?>

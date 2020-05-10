@@ -25,7 +25,6 @@ $conexion=$list->getConexion();
 $tcentro=new Centro($conexion,$_POST['id_centro'],'ajax');
 $solicitud=new Solicitud($conexion);
 $ccentros=new CentrosController(0,$conexion);
-
 $tcentro->setNombre();
 $tsolicitud=new Solicitud($conexion);
 $dvacantes=$tcentro->getVacantes($id_centro);
@@ -38,7 +37,7 @@ CENTRO/IDCENTRO $fase_sorteo/$estado_convocatoria");
 //La convocatoria esta en definitivo según el dia programado
 //si la convocatoria esta en definitivo, entramos una vez para copiar la tabla con los datos del centro
 //si estamos en el periodo de provisionales actualizamos tablas de definitivos
-if($estado_convocatoria>=30 and $estado_convocatoria<=40)
+if($estado_convocatoria>=30 and $estado_convocatoria<40)
 {
 	if($_POST['rol']=='centro')
 	{
@@ -64,8 +63,7 @@ NSOLICITUDES/IDCENTRO/ESTADO CENTRO $nsorteo/$id_centro/$fase_Sorteo");
 		//para cada centro calculamos solicitudes admitidas
 		//Si hemos llegado al dia d elas provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
 		$acentros=array();
-		$centros=$ccentros->getAllCentros('todas','especial');
-		$ccentros=new CentrosController(0,$conexion);
+		$centros=$ccentros->getAllCentros();
 		while($row = $centros->fetch_assoc()) { $acentros[]=$row;}
 		
 		foreach($acentros as $dcentro)
@@ -107,7 +105,7 @@ $log_listados_definitivos->warning("OBTENIENDO LISTADOS DEFINITIVOS, CENTRO: ".$
 //Esto solo puede hacerse en el momento q finalice el plazo de provisionales!!!!!!!!
 //$solicitudes=$solicitud->genSolDefinitivas($id_centro,$vacantes_ebo,$vacantes_tva,2); 
 //mostramos las solitudes completas sin incluir borrador
-$solicitudes=$list->getSolicitudes($id_centro,2,$fase_sorteo=0,$modo='definitivos',$subtipo_listado,$estado_convocatoria); 
+$solicitudes=$list->getSolicitudes($id_centro,2,$fase_sorteo=0,$modo='definitivos',$subtipo_listado,'estado',$estado_convocatoria); 
 
 ######################################################################################
 $log_listados_definitivos->warning("OBTENIENDO SOLICITUDES GENERALES, DATOS: ");

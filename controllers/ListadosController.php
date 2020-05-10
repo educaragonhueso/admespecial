@@ -120,7 +120,8 @@ class ListadosController extends ControladorBase{
 		}
 		elseif($modo=='definitivos')
 		{
-			$this->log_listados_definitivos->warning('OBTENIENDO DEFINITIVOS');
+			$this->log_listados_definitivos->warning('OBTENIENDO
+DEFINITIVOS ESTADO: '.$estado_convocatoria);
 		    	$allsolicitudes=$solicitud->getAllSolListados($id_centro,2,$subtipo_listado,$fase_sorteo,$estado_convocatoria);
 		}
 		elseif($modo=='fase2' || $modo=='fase3')
