@@ -146,6 +146,15 @@ else
 		$('#baremo_validar_tutores_centro'+vid).val('0');
 	}
 });
+//si pulsamos en 'ninguna' discapacidad no ponemos validacion
+$('body').on('change', 'input[type=radio][name*=baremo_discapacidad]', function(e){
+var vid=$(this).attr("name");
+var vid=vid.replace('baremo_discapacidad','');
+var bar_def=recalcular_baremo(vid);
+var val=$(this).attr("value");
+$("button[name=boton_baremo_validar_discapacidad"+vid+"]").text('Validar discapacidad')
+$('#baremo_validar_discapacidad'+vid).val('0');
+});
 
 
 $('body').on('change', 'input[type=checkbox][name*=baremo_renta_inferior]', function(e){
@@ -413,16 +422,20 @@ var texto=$(this).text();
 
 if(texto=='Validar discapacidad')
 {
-var val_def=recalcular_validacion(vid);
-
-if(val_def!=0)
-	{
-	$('#labelbaremo'+vid).removeClass('crojo');
-	$('#labelbaremo'+vid).addClass('cverde');
-	}
-//modificamos el campo oculto para el formulario
-$('#baremo_validar_discapacidad'+vid).val('1');
-$(this).text('Invalidar discapacidad');
+   var val_def=recalcular_validacion(vid);
+   if(val_def!=0)
+      {
+      $('#labelbaremo'+vid).removeClass('crojo');
+      $('#labelbaremo'+vid).addClass('cverde');
+      }
+   //modificamos el campo oculto para el formulario, solamente si no está
+   //marcada la útlima opción
+   var valor=$("input[name='baremo_discapacidad"+vid+"']:checked").val();
+   if(valor!='no')
+   {
+      $('#baremo_validar_discapacidad'+vid).val('1');
+      $(this).text('Invalidar discapacidad');
+   }
 }
 else
 	{
@@ -1095,6 +1108,7 @@ $.ajax({
 				}
 				else
 				{
+            console.log(data);
 				$(".tresumensol").remove();
 				$(".tresumenmat").hide();
 				$("#tresumen").hide();

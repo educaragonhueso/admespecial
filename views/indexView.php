@@ -97,9 +97,9 @@ Ello implica:
 				echo '<main role="main" class="container">
 
 			      <div class="starter-template">
-				<h1>INCICIO DE INSCRIPCION</h1>
-				<p class="lead">INSCRIPCIONES VIA WEB: DEL 11 al 16 de MARZO (inclusive)</p>
-				<p class="lead">INSCRIPCIONES EN LOS CENTROS: DEL 11 al 17 de MARZO (inclusive)</p>
+				<h1>INICIO INSCRIPCION</h1>
+				<p class="lead">INSCRIPCIONES VIA WEB: DEL 11 al 16 de MAYO (inclusive)</p>
+				<p class="lead">INSCRIPCIONES EN LOS CENTROS: DEL 11 al 17 de MAYO (inclusive)</p>
 				<p class="lead"><i>En cualquier caso los impresos hay que entregarlos en el centro firmados</i></p>
 				<a href="'.URL_BASE.'"><button class="btn btn-outline-info" id="inicio" type="button">VOLVER</button></a>    </div>
 

@@ -48,21 +48,22 @@ $campos_bbdd_pdf_mat=array('nombre_centro','gruposebo','puestosebo','plazasactua
 $campos_cabecera_admitidos_prov=array('Tipo','Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Criterios prioritarios','Puntos Baremo');
 $campos_bbdd_admitidos_prov=array('tipoestudios','nordensorteo','nasignado','apellido1','apellido2','nombre','transporte','puntos_validados');
 
-$campos_cabecera_noadmitidos_prov=array('Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Tipo','Criterios prioritarios','Puntos Baremo');
-$campos_bbdd_noadmitidos_prov=array('nordensorteo','nasignado','apellido1','apellido2','nombre','tipoestudios','transporte','puntos_validados');
+$campos_cabecera_noadmitidos_prov=array('Tipo','Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Tipo','Criterios prioritarios','Puntos Baremo');
+$campos_bbdd_noadmitidos_prov=array('tipoestudios','nordensorteo','nasignado','apellido1','apellido2','nombre','tipoestudios','transporte','puntos_validados');
 
-$campos_cabecera_excluidos_prov=array('NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
-$campos_bbdd_excluidos_prov=array('nasignado','apellido1','apellido2','nombre','puntos_validados');
+$campos_cabecera_excluidos_prov=array('Tipo','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
+$campos_bbdd_excluidos_prov=array('tipoestudios','nasignado','apellido1','apellido2','nombre','puntos_validados');
 
 //DATOS PARA LISTADOS DEFINITIVOS
-$campos_cabecera_admitidos_def=array('Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
-$campos_bbdd_admitidos_def=array('nordensorteo','nasignado','apellido1','apellido2','nombre','puntos_validados');
+$campos_cabecera_admitidos_def=array('Tipo','Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
+$campos_bbdd_admitidos_def=array('tipoestudios','nordensorteo','nasignado','apellido1','apellido2','nombre','puntos_validados');
 
-$campos_cabecera_noadmitidos_def=array('Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
-$campos_bbdd_noadmitidos_def=array('nordensorteo','nasignado','apellido1','apellido2','nombre','puntos_validados');
+$campos_cabecera_noadmitidos_def=array('Tipo','Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
+$campos_bbdd_noadmitidos_def=array('tipoestudios','nordensorteo','nasignado','apellido1','apellido2','nombre','puntos_validados');
 
-$campos_cabecera_excluidos_def=array('NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
-$campos_bbdd_excluidos_def=array('nasignado','apellido1','apellido2','nombre','puntos_validados');
+$campos_cabecera_excluidos_def=array('Tipo','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
+$campos_bbdd_excluidos_def=array('tipoestudios','nasignado','apellido1','apellido2','nombre','puntos_validados');
+
 //DATOS PARA LISTADOS SOLICITUDES FASE II
 $campos_cabecera_lfase2_sol_ebo=array('Ap1','Ap2','Nombre','Loc','Calle','Cen.Pref','Cen.Alt','Baremo','Prioridad','Estado','Cen.Adj','NSorteo','Centros','Cen.Origen','Reserva','nordsor');
 $campos_bbdd_lfase2_sol_ebo=array('apellido1','apellido2','nombre','localidad','calle_dfamiliar','nombre_centro','centro1','puntos_validados','transporte','estado_solicitud','centro_definitivo','nasignado','centrosdisponibles','centro_origen','reserva','nordensorteo');

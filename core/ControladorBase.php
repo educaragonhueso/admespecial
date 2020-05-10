@@ -32,4 +32,4 @@ class ControladorBase{
     //Métodos para los controladores
 
 }
-?>
+

@@ -67,18 +67,18 @@ function LoadData($file)
 }
 
 // Simple table
-function BasicTable($header, $data,$comp=0,$tam=30,$tipoinforme='normal')
+function BasicTable($header, $data,$comp=0,$tam=30,$tipoinforme='normal',$primera_celda=50)
 {
 	if($tipoinforme=='provisional') $margen=15;
 	else $margen=60;
 	$cc=0;
-    // Header
+	// Header
 	foreach($header as $col)
     	{
 		if($cc==0)
 		{
 		if($comp==0) $this->Cell($margen);
-    		$this->Cell(20,7,utf8_decode($col),1);
+    		$this->Cell($primera_celda,7,utf8_decode($col),1);
 		$cc++;
 		continue;
 		}
@@ -97,7 +97,7 @@ function BasicTable($header, $data,$comp=0,$tam=30,$tipoinforme='normal')
 		{
 			if(strlen($col)>30)
 				$col = substr(utf8_decode($col),0,25);
-			$this->Cell(20,7,utf8_decode($col),1);
+			$this->Cell($primera_celda,7,utf8_decode($col),1);
 			$cc++;
 			continue;
 		}

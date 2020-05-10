@@ -91,7 +91,7 @@ class Centro extends EntidadBase{
 		
 
 		}
-    public function getVacantes($rol='centro',$tipo='')
+    public function getVacantes($rol='centro')
 		{
 			if($rol=='centro')
 				$sql="select ifnull(IF(t3.plazas-t2.np<0,0,t3.plazas-t2.np),t3.plazas) as vacantes from          (select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=".$this->id_centro." ) as t3          left join          (select  tipo_alumno_actual as tf, ifnull(count(*),0) as np from matricula where id_centro=".$this->id_centro." and estado='continua' group by tipo_alumno_actual ) as t2  on t3.ta=t2.tf;
@@ -135,6 +135,32 @@ class Centro extends EntidadBase{
 			}
       			return $resultSet;
     		}
+    public function getUsuariosCentro($rol,$c) 
+		{
+			$resultSet=array();
+			if($rol=='admin') 
+			{
+				$sql="select nombre,nombre_usuario,clave_original FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario";
+			}
+			elseif($rol=='centro') 
+			{
+				$sql="select nombre,nombre_usuario,clave_original FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=$c";
+			}
+	
+	
+			$this->log_matricula->warning("CONSULTA DATOS RESUMEN MATRICULA: ".$sql);
+	
+			$query=$this->conexion->query($sql);
+			if($query)
+    			{
+				while ($row = $query->fetch_object()) 
+				{
+					$resultSet[]=$row;
+				}
+			}
+      			return $resultSet;
+    		}
+
     public function getResumen($rol,$t) 
 		{
 			$resultSet=array();

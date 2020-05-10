@@ -1,15 +1,15 @@
 <?php
 class ListadosController extends ControladorBase{
-    public $conectar;
-    public $adapter;
-    public $allalumnos; 
-    public $tabla; 
-    public function __construct($tabla="matricula",$conexion=1) 
-		{
-        	parent::__construct();
-       		$this->tabla=$tabla;
-		require_once DIR_CLASES.'LOGGER.php';
-		require_once DIR_APP.'parametros.php';
+   public $conectar;
+   public $adapter;
+   public $allalumnos; 
+   public $tabla; 
+   public function __construct($tabla="matricula", $conexion=1) 
+   {
+      parent::__construct();
+      $this->tabla=$tabla;
+      require_once DIR_CLASES.'LOGGER.php';
+      require_once DIR_APP.'parametros.php';
 		if($conexion==1)
 		{
         		$this->conectar=new Conectar();
@@ -370,6 +370,7 @@ class ListadosController extends ControladorBase{
 			}
 			if($centroactual!=$centroanterior)
 				{
+	         $cab=0;
 				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color:#141259;'><td colspan='".$ncolumnas."'><b>".$sol->nombre_centro."</b></td></tr>";
 				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
 				//$cabadmin=0;
@@ -748,6 +749,30 @@ class ListadosController extends ControladorBase{
 					$i++;
 				}
 			return $amatcentros;
+		
+		}
+    public function getUsuarios($rol,$id_centro=1)
+		{
+			$i=0;
+			$ausuarioscentros=array();	
+				$centros=$this->getCentrosIds();
+				foreach($centros as $c)
+				{
+					if($id_centro!=1)
+						if($c->id_centro!=$id_centro) continue;
+					$centro=new Centro($this->adapter,$c->id_centro,'no');
+					$centro->setNombre();
+					$usucentros=$centro->getUsuariosCentro($rol,$c->id_centro);
+					foreach($usucentros as $u)
+					{
+						$ausuarioscentros[$i]['nombre_centro']=str_replace(',','',$centro->getNombre());
+						$ausuarioscentros[$i]['alumno']=$u->nombre;
+						$ausuarioscentros[$i]['nombreusuario']=$u->nombre_usuario;
+						$ausuarioscentros[$i]['clave']=$u->clave_original;
+						$i++;
+					}
+				}
+			return $ausuarioscentros;
 		
 		}
     public function listado(){

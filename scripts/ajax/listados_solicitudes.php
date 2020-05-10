@@ -1,4 +1,5 @@
 <?php
+include_once '../../includes/autoload.php';
 require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/config/config_global.php";
 require_once DIR_CLASES.'LOGGER.php';
 require_once DIR_APP.'parametros.php';
@@ -7,34 +8,11 @@ require_once DIR_BASE.'core/EntidadBase.php';
 require_once DIR_BASE.'controllers/ListadosController.php';
 require_once DIR_BASE.'models/Centro.php';
 require_once DIR_BASE.'scripts/informes/pdf/fpdf/classpdf.php';
-require_once DIR_BASE.'models/Solicitud.php';
+//require_once DIR_BASE.'models/Solicitud.php';
 
 ########################################################################################
 $log_listado_solicitudes=new logWriter('log_listado_solicitudes',DIR_LOGS);
 ########################################################################################
-/*
-//si hay sorteo mostraremos la opción de provisionales
-$menu_provisionales='
-	    <li class="nav-item active msuperior dropdown" id="provisional">
-		 <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
-		 <div class="dropdown-menu">
-		 <a class="lprovisionales dropdown-item" href="#" data-subtipo="admitidos_prov">Admitidos provisional</a>
-		 <a class="lprovisionales dropdown-item" href="#" data-subtipo="noadmitidos_prov">No admitidos provisional</a>
-		 <a class="lprovisionales dropdown-item" href="#" data-subtipo="excluidos_prov">Excluidos provisional</a>
-																 </div>
-	    </li>::';		
-// opción de provisionales
-$menu_definitivos='
-	    <li class="nav-item active msuperior dropdown" id="definitivo">
-		 <a class="show_definitivos nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Definitivos</a>
-		 <div class="dropdown-menu">
-		 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="admitidos_def">Admitidos definitivo</a>
-		 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="noadmitidos_def">No admitidos definitivo</a>
-		 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="excluidos_def">Excluidos definitivo</a>
-																 </div>
-	    </li>::';		
-*/
-
 //VARIABLES
 $menu_provisionales=''; //añadirlo si se ha realizado el sorteo
 $modo='presorteo';
@@ -153,13 +131,10 @@ else//accedemos como centro
 	$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo); 
 	$tablaresumen=$tcentro->getResumen($_POST['rol'],'alumnos');
 	$nombre_centro=$tcentro->getNombre();
-
-
 	//SECCION MOSTAR DATOS
 	#Mostramos formulario para el sorteo si es el dia correcto
         $fase_sorteo=$tcentro->getFaseSorteo();
 	#Mostramos formulario para el sorteo si es el dia correcto
-	$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES, : FASE SORTEO: ".$fase_sorteo);
 	if($fase_sorteo==0)
 	{
 			if($_POST['id_centro']!='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
@@ -179,7 +154,7 @@ else//accedemos como centro
                         print($list->showSolicitudes($solicitudes,$_POST['rol']));
         }
 	//elseif($fase_sorteo==2 and $estado_convocatoria<30)
-	elseif($fase_sorteo==2)
+	elseif($fase_sorteo>=2)
 	{
 			//print($menu_provisionales);
                         if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));

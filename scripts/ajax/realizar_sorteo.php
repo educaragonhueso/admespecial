@@ -96,7 +96,7 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 			 $log_sorteo->warning("ERROR ACT FASE: $nombrecentro");
 			 return 0;
 			}
-			$dsorteo=$centrotmp->getVacantes($id_centro);
+			$dsorteo=$centrotmp->getVacantes('centro');
 			$vacantes_ebo=$dsorteo[0]->vacantes;
 			$vacantes_tva=$dsorteo[1]->vacantes;
 			if($tsolicitud->setSolicitudesSorteo($id_centro,$nsolicitudescentro,$vacantes_ebo,$vacantes_tva)==0) 

@@ -9,8 +9,6 @@ class AlumnosController extends ControladorBase{
         $this->conectar=new Conectar();
         $this->adapter=$this->conectar->conexion();
     }
-    
-    
     public function listadoMatriculados(){
 	//Creamos el objeto alumno
         $alumno=new Alumno($this->adapter);
@@ -22,10 +20,8 @@ class AlumnosController extends ControladorBase{
         $this->view("index",array(
             "allalumnos"=>$allalumnos,
             "resumencentros"=>$resumencentros
-        ));
-	
+        	));
 	}
- 
     public function formNuevoAlumno(){
 	//Creamos el objeto usuario
         $alumno=new Alumno($this->adapter);

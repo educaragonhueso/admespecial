@@ -31,8 +31,10 @@ while($row = $centros->fetch_assoc()) { $acentros[]=$row;}
 foreach($acentros as $dcentro)
 {
 	$id_centro=$dcentro['id_centro'];
+	if($id_centro<=1) continue;
 	########################################################################################
 	$log_fase_provisional->warning("INICIANDO GESTION CENTRO");
+	$log_fase_provisional->warning(print_r($dcentro,true));
 	########################################################################################
 	$centrotmp=new Centro($conexion,$dcentro['id_centro'],'no',0);
 	$centrotmp->setId($dcentro['id_centro']);
@@ -44,11 +46,11 @@ foreach($acentros as $dcentro)
 	$log_fase_provisional->warning("NOMBRE: ".$nombrecentro.PHP_EOL);
 	$log_fase_provisional->warning("FASE: ".$centrotmp->getFaseSorteo().PHP_EOL);
 	$log_fase_provisional->warning("NSOLICITUDES: ".$nsolicitudescentro.PHP_EOL);
-	$log_fase_provisional->warning("ENTRANDO SORTEO TABLA CENTRO: $nombrecentro");
 
-	$dsorteo=$centrotmp->getVacantes($id_centro);
+	$dsorteo=$centrotmp->getVacantes('centro');
 	$vacantes_ebo=$dsorteo[0]->vacantes;
 	$vacantes_tva=$dsorteo[1]->vacantes;
+	$log_fase_provisional->warning("VACANTES EBO: $vacantes_ebo".PHP_EOL);
 	if($tsolicitud->setSolicitudesSorteo($id_centro,$nsolicitudescentro,$vacantes_ebo,$vacantes_tva)==0) 
 		print("NO HAY VACANTES<br>");
 }	
