@@ -44,8 +44,11 @@ $log_gencsvs->warning(print_r($_POST,true));
 ##################################################################################
 
 $solicitudes=$list->getSolicitudes($id_centro,$tipo,$fase_sorteo,$modo,$subtipo,$provincia,$estado_convocatoria); 
+
+##################################################################################
 $log_gencsvs->warning("SOLICITUDES  CSV SUBTIPO: $subtipo CAMPOS DATOS: ");
 $log_gencsvs->warning(print_r($$camposdatos,true));
+##################################################################################
 
 //si es para datos de matricula, con rol de admin
 if($subtipo_original=='csv_mat_admin' && $rol=='admin')

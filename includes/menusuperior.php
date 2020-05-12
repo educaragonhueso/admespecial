@@ -42,6 +42,8 @@ target="_blank">Instrucciones Admisión Eduación Especial</a>';?>
                if($_SESSION['rol']=='admin')
                { 
                   echo '<a class="exportcsv dropdown-item" href="#" id="csv_mat" data-tipo="csv" data-subtipo="csv_mat">Listado vacantes (csv)  </a>';
+                  echo '<a class="exportcsv dropdown-item" href="#"
+id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  </a>';
                }
                if($_SESSION['rol']=='centro')
                { 

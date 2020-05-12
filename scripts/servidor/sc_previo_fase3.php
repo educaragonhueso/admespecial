@@ -9,6 +9,7 @@ require_once DIR_BASE.'core/EntidadBase.php';
 require_once DIR_BASE.'controllers/ListadosController.php';
 require_once DIR_BASE.'models/Centro.php';
 #operaciones antes de iniciar la fase2
+require_once 'UtilidadesGmaps.php';
 require_once 'UtilidadesAdmision.php';
 
 $tipo='fase2';
@@ -17,20 +18,31 @@ $res1=0;
 
 $ccentros=new CentrosController();
 $centro=new Centro($ccentros->conectar->conexion(),'','no',0);
-$utils=new UtilidadesAdmision($ccentros->conectar->conexion(),$ccentros,$centro);
+//$utils=new UtilidadesAdmision($ccentros->conectar->conexion(),$ccentros,$centro);
+$gmutils=new UtilidadesGmaps($ccentros->conectar->conexion());
+$admutils=new UtilidadesAdmision($ccentros->conectar->conexion());
 
-$dir1="Rafael esteve aragon 34 50018";
-$dir2="PAseo ruiseñores aragon 34 50018";
+$cor="41.68695659999999:-0.8752580999999999";
+$cdes="41.63635439999999:-0.8892253";
+
+$dlineal=$gmutils->getDistanciaLineal($cor,$cdes,"K");
+print($dlineal);exit();
+//PROCESMOS ALUMNOS Y CENTROs PARA ACTUALIZAR SUS COORDENADAS SEGUN SU DIRECCION
+$alumnos_fase2=$admutils->getAlumnosFase2('actual');
+
+foreach($alumnos_fase2 as $a)
+{
+   if($a->calle_dfamiliar!='nodata' and $a->localidad!='nodata')
+   {
+      $dir1=$a->calle_dfamiliar.",".$a->localidad;
+      $coord=$gmutils->getCoordenadas($dir1);
+      print_r($coord);
+      $scoord=$coord['lat'].":".$coord['lng'];
+      $admutils->setAlumnoCoordenadas($a->id_alumno,$scoord);
+   }
+}
 
 //actualizar vacantes de centros
-$res1=$utils->getDistancia($dir1,$dir2,"K");
-print($res1);
-
-if($res1==1)
-{
-	echo PHP_EOL."Distancia fase 2 a las ".date('H:m')." del dia ".date('d-M-Y').PHP_EOL;	
-	
-}
-else print("Error actualizando vacantes centros: ".$res1);
-//copiar tabla de solicitudes definitivas a la tabla de fase2
+//$res1=$utils->getDistancia($dir1,$dir2,"K");
+//$res1=$utils->getCoordenadas($dir1);
 ?>

@@ -1047,6 +1047,19 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
         }
         return $resultSet;
 	}
+	public function getAllTributantes($c=1,$tipo=0,$subtipo_listado='',$fase_sorteo=0,$estado_convocatoria=0,$provincia='todas') 
+   {
+		$sql="SELECT  t.* FROM alumnos a join tributantes t  on a.id_alumno=t.id_alumno";
+
+      $query=$this->db->query($sql);
+      if($query)
+      while ($row = $query->fetch_object()) 
+      {
+         $resultSet[]=$row;
+      }
+      return $resultSet;
+
+   }
 	public function getAllSolListados($c=1,$tipo=0,$subtipo_listado='',$fase_sorteo=0,$estado_convocatoria=0,$provincia='todas') 
 	{
       //si el estado de la convocatoria es previo a provisioonales la tabla del

@@ -14,55 +14,6 @@ class UtilidadesAdmision{
 		$this->log_fase2=new logWriter('log_fase2',DIR_LOGS);
 		$this->log_sorteo_fase2=new logWriter('log_sorteo_fase2',DIR_LOGS);
     		}
-  public function getDistancia($origen,$destino){
-		    $url = "http://maps.googleapis.com/maps/api/directions/json?origin=".str_replace(' ', '+', $origen)."&destination=".str_replace(' ', '+', $destino)."&sensor=false";
-	            $ch = curl_init();
-			print($url);exit();	
-	            curl_setopt($ch, CURLOPT_URL, $url);
-	            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	            curl_setopt($ch, CURLOPT_PROXYPORT, 3128);
-	            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-	            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	            $response = curl_exec($ch);
-	            curl_close($ch);
-	            $response_all = json_decode($response);
-	            // print_r($response);
-	            $distance = $response_all->routes[0]->legs[0]->distance->text;
-	}
-  public function getDistancia_geo($addressFrom,$addressTo){
-
-		 //Change address format
-		    $formattedAddrFrom = str_replace(' ','+',$addressFrom);
-		    $formattedAddrTo = str_replace(' ','+',$addressTo);
-		    
-		    //Send request and receive json data
-		    $geocodeFrom = file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$formattedAddrFrom.'&sensor=false');
-		    $outputFrom = json_decode($geocodeFrom);
-		    $geocodeTo = file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$formattedAddrTo.'&sensor=false');
-		    $outputTo = json_decode($geocodeTo);
-		    
-		    //Get latitude and longitude from geo data
-		    $latitudeFrom = $outputFrom->results[0]->geometry->location->lat;
-		    $longitudeFrom = $outputFrom->results[0]->geometry->location->lng;
-		    $latitudeTo = $outputTo->results[0]->geometry->location->lat;
-		    $longitudeTo = $outputTo->results[0]->geometry->location->lng;
-		    
-		    //Calculate distance from latitude and longitude
-		    $theta = $longitudeFrom - $longitudeTo;
-		    $dist = sin(deg2rad($latitudeFrom)) * sin(deg2rad($latitudeTo)) +  cos(deg2rad($latitudeFrom)) * cos(deg2rad($latitudeTo)) * cos(deg2rad($theta));
-		    $dist = acos($dist);
-		    $dist = rad2deg($dist);
-		    $miles = $dist * 60 * 1.1515;
-		    $unit = strtoupper($unit);
-		    if ($unit == "K") {
-			return ($miles * 1.609344).' km';
-		    } else if ($unit == "N") {
-			return ($miles * 0.8684).' nm';
-		    } else {
-			return $miles.' mi';
-		    }
-
-	}
   public function asignarNumSorteoFase2(){
 		$this->log_sorteo_fase2->warning("ASIGNANDO NUMERO SORTEO");
 		$sql="SET @r := 0";
@@ -115,6 +66,11 @@ class UtilidadesAdmision{
 		//modificamos el centro en a tabla de alumnos_fase2
 		$sql="UPDATE alumnos_fase2 set id_centro_definitivo=$idc,centro_definitivo='$nc' where id_alumno=$ida";
 		if(!$this->post) print("CONSULTA ASIGNACION PLAZA: $sql");
+		if(!$this->con->query($sql)) return $this->con->error;
+		else return 1;
+	}
+ 	public function setAlumnoCoordenadas($ida,$coord){
+		$sql="UPDATE alumnos_fase2 set coordenadas='$coord' WHERE id_alumno=$ida";
 		if(!$this->con->query($sql)) return $this->con->error;
 		else return 1;
 	}
@@ -290,7 +246,7 @@ class UtilidadesAdmision{
 		$resultSet=array();
 		if($t=='tmp') $tabla='alumnos_fase2_tmp';
 		else $tabla='alumnos_fase2';
-		$sql="SELECT id_alumno,nombre,id_centro1,id_centro2,id_centro3,id_centro4,id_centro5,id_centro6,id_centro,nombre_centro,centro_definitivo,tipoestudios,transporte,puntos_validados,nordensorteo FROM $tabla where estado_solicitud='apta' order by transporte desc,puntos_validados desc,nordensorteo asc";
+		$sql="SELECT calle_dfamiliar,localidad,id_alumno,nombre,id_centro1,id_centro2,id_centro3,id_centro4,id_centro5,id_centro6,id_centro,nombre_centro,centro_definitivo,tipoestudios,transporte,puntos_validados,nordensorteo FROM $tabla where estado_solicitud='apta' order by transporte desc,puntos_validados desc,nordensorteo asc";
 
 		$query=$this->con->query($sql);
 
@@ -308,7 +264,6 @@ class UtilidadesAdmision{
 		foreach($alumnosreserva as $a)
 		{
 			$a=(array)$a;
-			print_r($a);
 			$corigen=$a['id_centro_estudios_origen'];
 			$tipoestudios=$a['tipoestudios'];
 			//comporbar cada alumno y si itiene reserva actualizar plaza en el centro de origen
@@ -355,7 +310,6 @@ class UtilidadesAdmision{
 	{
 		$tabla="alumnos_".$tipo;
 		$sql='DELETE from '.$tabla;
-		
 		$res=$this->con->query($sql);
 		if(!$res) return $this->con->error;
 		$sqlfase2="SELECT t1.id_alumno,t1.nombre,t1.apellido1,t1.apellido2,t1.localidad,t1.calle_dfamiliar,t1.nombre_centro,t1.tipoestudios,t1.fase_solicitud,t1.estado_solicitud,t1.transporte,'0' as nordensorteo,'0' as nasignado,t1.puntos_validados,t1.id_centro,t2.centro1,t2.id_centro1,t3.centro2,t3.id_centro2,t4.centro3,t4.id_centro3,t5.centro4,t5.id_centro4,t6.centro5,t6.id_centro5,t7.centro6,t7.id_centro6, 'nocentro' as centro_definitivo, '0' as id_centro_definitivo,t1.id_centro_estudios_origen as id_centro_origen,t8.centro_origen,t1.reserva,t1.reserva as reserva_original,'automatica' as tipo_modificacion,'0' as activado_fase3 FROM 

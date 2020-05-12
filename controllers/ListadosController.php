@@ -110,8 +110,14 @@ class ListadosController extends ControladorBase{
  		}
 		elseif($modo=='csv')
 		{
-			$this->log_gencsvs->warning('OBTENIENDO SOL PARA CSV');
-		    	$allsolicitudes=$solicitud->getAllSolListados($id_centro,$tiposol,$subtipo_listado,0,$estado_convocatoria,$provincia);
+			$this->log_gencsvs->warning("OBTENIENDO DATOS CSV SUBTIPO:
+$subtipo_listado");
+         if($subtipo_listado=='tri'){ //para el caso de tributantes 
+		    	$allsolicitudes=$solicitud->getAllTributantes($id_centro,$tiposol,$subtipo_listado,0,$estado_convocatoria,$provincia);
+			   $this->log_gencsvs->warning("OBTENIDOS DATOS CSV.");
+         return $allsolicitudes;
+            }
+         else $allsolicitudes=$solicitud->getAllSolListados($id_centro,$tiposol,$subtipo_listado,0,$estado_convocatoria,$provincia);
 		}
 		elseif($modo=='provisionales')
 		{

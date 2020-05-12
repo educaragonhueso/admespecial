@@ -9,6 +9,9 @@ require_once DIR_BASE.'core/EntidadBase.php';
 require_once DIR_BASE.'controllers/ListadosController.php';
 require_once DIR_BASE.'models/Centro.php';
 #operaciones antes de iniciar la fase2
+#ACTUALIZAMOS LAS VACANTES DE TODOS LOS CENTROS TENIENDO EN CUENTA Q LAS
+//RESERVAS NO GENERAN VACANTES
+//LIBERAMOS LAS VACANTES DE ALUMNOS Q HAN OBTENIDO PLAZA EN EL PROCESO PREVIO  
 require_once 'UtilidadesAdmision.php';
 
 $tipo='fase2';
