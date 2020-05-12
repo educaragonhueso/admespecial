@@ -98,6 +98,10 @@ if(!isset($fsol_salida['num_hadmision']))
 	$fsol_salida['num_hadmision']=0;
 if(!isset($fsol_salida['num_hbaremo']))
 	$fsol_salida['num_hbaremo']=0;
+if(!isset($fsol_salida['cumplen']))
+	$fsol_salida['cumplen']=0;
+if(!isset($fsol_salida['oponenautorizar']))
+	$fsol_salida['oponenautorizar']=0;
 //Si es nueva solicitud
 if($modo=="GRABAR SOLICITUD")
 	{
