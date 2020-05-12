@@ -253,7 +253,8 @@ class SolicitudController extends ControladorBase{
 				$this->formulario=str_replace($origen,$destino,$this->formulario);
 					continue;
 					}
-				if($skey=='baremo_tutores_centro' or $skey=='baremo_renta_inferior')
+				if($skey=='baremo_tutores_centro' or $skey=='baremo_renta_inferior'
+or $skey=='oponenautorizar'or $skey=='cumplen')
 					{
 					if($sval==0) $check="";
 					else
