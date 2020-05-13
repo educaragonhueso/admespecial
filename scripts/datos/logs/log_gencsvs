@@ -36497,3 +36497,115 @@ tri
 [12-May-2020 16:15:31] : [WARNING] - SOLICITUDES  CSV GENERADAS 
 [12-May-2020 16:15:31] : [WARNING] - EN: /datos/www/preadmespecial.aragon.es/public_admespecial//scripts/datossalida/listadoscsv/
 [12-May-2020 16:15:31] : [WARNING] - EN: /scripts/datossalida/listadoscsv/FICHERO: csv_tri.csv
+[12-May-2020 16:42:32] : [WARNING] - DATOS POST PARA CSV
+[12-May-2020 16:42:32] : [WARNING] - Array
+(
+    [id_centro] => 1
+    [subtipo] => csv_tri
+    [rol] => admin
+    [estado_convocatoria] => 50
+)
+
+[12-May-2020 16:42:32] : [WARNING] - ENTRANDO EN GETSOLICITUDEs, MODO: csv
+[12-May-2020 16:42:32] : [WARNING] - OBTENIENDO DATOS CSV SUBTIPO:
+tri
+[12-May-2020 16:42:32] : [WARNING] - OBTENIDOS DATOS CSV.
+[12-May-2020 16:42:32] : [WARNING] - SOLICITUDES  CSV SUBTIPO: tri CAMPOS DATOS: 
+[12-May-2020 16:42:32] : [WARNING] - Array
+(
+    [0] => apellido1
+    [1] => apellido2
+    [2] => nombre
+    [3] => parentesco
+    [4] => dni
+)
+
+[12-May-2020 16:42:32] : [WARNING] - GENERANDO CSV FICHERO: /datos/www/preadmespecial.aragon.es/public_admespecial//scripts/datossalida/listadoscsv//csv_tri.csv
+[12-May-2020 16:42:32] : [WARNING] - GENERANDO CSV, CABECERA:
+[12-May-2020 16:42:32] : [WARNING] - Array
+(
+    [0] => apellido1
+    [1] => apellido2
+    [2] => nombre
+    [3] => parentesco
+    [4] => dni
+)
+
+[12-May-2020 16:42:32] : [WARNING] - GENERANDO CSV, CONTENIDO:
+[12-May-2020 16:42:32] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [id_alumno] => 8979
+            [id_tributante] => 2
+            [nombre] => nt1
+            [apellido1] => ap1t1
+            [apellido2] => ap2t1
+            [parentesco] => part1
+            [dni] => 11122233F
+        )
+
+    [1] => stdClass Object
+        (
+            [id_alumno] => 8980
+            [id_tributante] => 3
+            [nombre] => nt2
+            [apellido1] => ap1t2
+            [apellido2] => ap2t2
+            [parentesco] => part2
+            [dni] => 21122233F
+        )
+
+    [2] => stdClass Object
+        (
+            [id_alumno] => 8980
+            [id_tributante] => 4
+            [nombre] => nt3
+            [apellido1] => ap1t3
+            [apellido2] => ap2t3
+            [parentesco] => part3
+            [dni] => 21122234F
+        )
+
+)
+
+[12-May-2020 16:42:32] : [WARNING] - LINEA: 
+
+[12-May-2020 16:42:32] : [WARNING] - Array
+(
+    [apellido1] => ap1t1
+    [apellido2] => ap2t1
+    [nombre] => nt1
+    [parentesco] => part1
+    [dni] => 11122233F
+)
+
+[12-May-2020 16:42:32] : [WARNING] - LINEA: 
+
+[12-May-2020 16:42:32] : [WARNING] - Array
+(
+    [apellido1] => ap1t2
+    [apellido2] => ap2t2
+    [nombre] => nt2
+    [parentesco] => part2
+    [dni] => 21122233F
+)
+
+[12-May-2020 16:42:32] : [WARNING] - LINEA: 
+
+[12-May-2020 16:42:32] : [WARNING] - Array
+(
+    [apellido1] => ap1t3
+    [apellido2] => ap2t3
+    [nombre] => nt3
+    [parentesco] => part3
+    [dni] => 21122234F
+)
+
+[12-May-2020 16:42:32] : [WARNING] - SOLICITUDES  CSV GENERADAS 
+[12-May-2020 16:42:32] : [WARNING] - EN: /datos/www/preadmespecial.aragon.es/public_admespecial//scripts/datossalida/listadoscsv/
+[12-May-2020 16:42:32] : [WARNING] - EN: /scripts/datossalida/listadoscsv/FICHERO: csv_tri.csv
+[12-May-2020 16:43:37] : [WARNING] - ENTRANDO EN GETSOLICITUDEs, MODO: fase2
+[12-May-2020 16:45:12] : [WARNING] - ENTRANDO EN GETSOLICITUDEs, MODO: definitivos
+[12-May-2020 17:05:44] : [WARNING] - ENTRANDO EN GETSOLICITUDEs, MODO: definitivos
+[12-May-2020 21:04:06] : [WARNING] - ENTRANDO EN GETSOLICITUDEs, MODO: definitivos

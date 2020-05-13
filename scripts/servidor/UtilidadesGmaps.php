@@ -1,7 +1,6 @@
 <?php
 class UtilidadesGmaps{
     private $con;
-    private $key='AIzaSyDORxJ68R5GU5pNKhO0fT_icSShE9c94Ic';
      
    public function __construct($adapter='',$centros_controller='',$centro='',$post=0) 
 	{
@@ -43,22 +42,29 @@ cos(deg2rad($lat2)) * cos(deg2rad($theta));
     }
    }
 }
-   public function getDistancia($origen,$destino){
-		    $url =
-"https://maps.googleapis.com/maps/api/directions/json?origin=".str_replace(' ',
-'+', $origen)."&destination=".str_replace(' ', '+',
-$destino)."&sensor=false&key=$this->key";
-	            $ch = curl_init();
-	            curl_setopt($ch, CURLOPT_URL, $url);
-	            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	            curl_setopt($ch, CURLOPT_PROXYPORT, 3128);
-	            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-	            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	            $response = curl_exec($ch);
-	            curl_close($ch);
-	            $response_all = json_decode($response);
-	            //print_r($response);
-	            $distance = $response_all->routes[0]->legs[0]->distance->text;
+   public function getDistanciaGoogle($origen,$destino,$tipoapi='dir')
+   {
+	   $urldir =
+      "https://maps.googleapis.com/maps/api/directions/json?origin=".str_replace(' ',
+      '+', $origen)."&destination=".str_replace(' ', '+',
+      $destino)."&sensor=false&key=$this->key";
+      $urlgps ="https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=40.6655101,-73.89188969999998&destinations=40.6905615%2C-73.9976592&key=$this->key";
+      
+      if($tipoapi=='dir') $url=$urldir;
+      else $url=$urlgps;
+      print($url);
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL, $url);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+      curl_setopt($ch, CURLOPT_PROXYPORT, 3128);
+      curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+      $response = curl_exec($ch);
+      curl_close($ch);
+      $response_all = json_decode($response);
+      //print_r($response);
+      $distance = $response_all->routes[0]->legs[0]->distance->text;
+      $distance = $response_all->routes;
     return $distance;
 	}
   public function getDistancia_geo($addressFrom,$addressTo){

@@ -1,0 +1,587 @@
+
+
+https://maps.googleapis.com/maps/api/directions/json?origin=paseo+sagasta,+zaragoza&destination=paseo+rafael+esteve,+zaragoza&sensor=false&key=AIzaSyDORxJ68R5GU5pNKhO0fT_icSShE9c94IcArray
+(
+    [0] => stdClass Object
+        (
+            [bounds] => stdClass Object
+                (
+                    [northeast] => stdClass Object
+                        (
+                            [lat] => 41.6903384
+                            [lng] => -0.870394
+                        )
+
+                    [southwest] => stdClass Object
+                        (
+                            [lat] => 41.6430783
+                            [lng] => -0.893653
+                        )
+
+                )
+
+            [copyrights] => Map data ©2020 Inst. Geogr. Nacional
+            [legs] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [distance] => stdClass Object
+                                (
+                                    [text] => 7.5 km
+                                    [value] => 7540
+                                )
+
+                            [duration] => stdClass Object
+                                (
+                                    [text] => 17 mins
+                                    [value] => 1015
+                                )
+
+                            [end_address] => Paseo Rafael Esteve, 50018 Zaragoza, Spain
+                            [end_location] => stdClass Object
+                                (
+                                    [lat] => 41.687425
+                                    [lng] => -0.8756673
+                                )
+
+                            [start_address] => Paseo de Sagasta, Zaragoza, Spain
+                            [start_location] => stdClass Object
+                                (
+                                    [lat] => 41.6430783
+                                    [lng] => -0.8859273
+                                )
+
+                            [steps] => Array
+                                (
+                                    [0] => stdClass Object
+                                        (
+                                            [distance] => stdClass Object
+                                                (
+                                                    [text] => 0.4 km
+                                                    [value] => 427
+                                                )
+
+                                            [duration] => stdClass Object
+                                                (
+                                                    [text] => 2 mins
+                                                    [value] => 139
+                                                )
+
+                                            [end_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6468987
+                                                    [lng] => -0.8854511
+                                                )
+
+                                            [html_instructions] => Head <b>north</b> on <b>Paseo de Sagasta</b> toward <b>Calle Bolonia</b>
+                                            [polyline] => stdClass Object
+                                                (
+                                                    [points] => gld}F``lD[E}BOI?qCW_@GK?e@CeBO_BO}@IK@E?C?a@@w@?
+                                                )
+
+                                            [start_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6430783
+                                                    [lng] => -0.8859273
+                                                )
+
+                                            [travel_mode] => DRIVING
+                                        )
+
+                                    [1] => stdClass Object
+                                        (
+                                            [distance] => stdClass Object
+                                                (
+                                                    [text] => 1.0 km
+                                                    [value] => 1013
+                                                )
+
+                                            [duration] => stdClass Object
+                                                (
+                                                    [text] => 3 mins
+                                                    [value] => 192
+                                                )
+
+                                            [end_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6537332
+                                                    [lng] => -0.8928481
+                                                )
+
+                                            [html_instructions] => At the roundabout, take the <b>3rd</b> exit onto <b>N-232</b>/<wbr/><b>N-330</b>
+                                            [maneuver] => roundabout-right
+                                            [polyline] => stdClass Object
+                                                (
+                                                    [points] => cde}F`}kDAAAAACAAAAA?AAC?GAG@EBYPOJ_@VCBCBABADA@?@?BA@?@?@?@?BCTEPGHCBA@o@`@QV_Aj@KHqAp@eCxAOLSNe@z@Yn@Uj@w@fBa@`Ao@zA[r@w@jB[r@ILGJKNKLKJOLoBdBeCrBy@p@OAA??@EDi@f@i@d@
+                                                )
+
+                                            [start_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6468987
+                                                    [lng] => -0.8854511
+                                                )
+
+                                            [travel_mode] => DRIVING
+                                        )
+
+                                    [2] => stdClass Object
+                                        (
+                                            [distance] => stdClass Object
+                                                (
+                                                    [text] => 0.6 km
+                                                    [value] => 605
+                                                )
+
+                                            [duration] => stdClass Object
+                                                (
+                                                    [text] => 2 mins
+                                                    [value] => 106
+                                                )
+
+                                            [end_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6587993
+                                                    [lng] => -0.8922845
+                                                )
+
+                                            [html_instructions] => Continue straight onto <b>Paseo María Agustín</b> (signs for <b>Plaza del Pilar</b>)
+                                            [maneuver] => straight
+                                            [polyline] => stdClass Object
+                                                (
+                                                    [points] => ynf}FhkmDiA`Ac@Xc@NGBMDe@HOBQBu@Hm@Fy@Du@EQAQCsACk@Ie@KC?YImAc@}Ay@w@[KOICMIKGECIGEGCCIMQ[
+                                                )
+
+                                            [start_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6537332
+                                                    [lng] => -0.8928481
+                                                )
+
+                                            [travel_mode] => DRIVING
+                                        )
+
+                                    [3] => stdClass Object
+                                        (
+                                            [distance] => stdClass Object
+                                                (
+                                                    [text] => 0.8 km
+                                                    [value] => 835
+                                                )
+
+                                            [duration] => stdClass Object
+                                                (
+                                                    [text] => 2 mins
+                                                    [value] => 122
+                                                )
+
+                                            [end_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6648172
+                                                    [lng] => -0.8866032
+                                                )
+
+                                            [html_instructions] => At <b>Plaza de Europa</b>, take the <b>2nd</b> exit onto <b>Puente de La Almozara</b>/<wbr/><b>N-330</b><div style="font-size:0.9em">Continue to follow N-330</div>
+                                            [maneuver] => roundabout-right
+                                            [polyline] => stdClass Object
+                                                (
+                                                    [points] => ong}FvgmD?G?A?ECICGAEAEACCGEEEECCCCEECAIGKAI?M@MBe@EGAE?CAEAICGCEAECGEECEEGESSOOa@a@][[]iDgDkDeD_B_Be@a@q@q@sAqAu@w@[[]_@WY]c@[c@k@{@
+                                                )
+
+                                            [start_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6587993
+                                                    [lng] => -0.8922845
+                                                )
+
+                                            [travel_mode] => DRIVING
+                                        )
+
+                                    [4] => stdClass Object
+                                        (
+                                            [distance] => stdClass Object
+                                                (
+                                                    [text] => 0.4 km
+                                                    [value] => 427
+                                                )
+
+                                            [duration] => stdClass Object
+                                                (
+                                                    [text] => 1 min
+                                                    [value] => 86
+                                                )
+
+                                            [end_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6665015
+                                                    [lng] => -0.8820549
+                                                )
+
+                                            [html_instructions] => Keep <b>left</b> to continue on <b>Calle Valle de Broto</b>/<wbr/><b>N-330</b>
+                                            [maneuver] => keep-left
+                                            [polyline] => stdClass Object
+                                                (
+                                                    [points] => cth}FfdlDWc@KSu@wAk@qAYw@Oe@_@qAQq@Qw@Ow@Ow@Mu@Mw@Im@Ec@CWEe@Ec@
+                                                )
+
+                                            [start_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6648172
+                                                    [lng] => -0.8866032
+                                                )
+
+                                            [travel_mode] => DRIVING
+                                        )
+
+                                    [5] => stdClass Object
+                                        (
+                                            [distance] => stdClass Object
+                                                (
+                                                    [text] => 0.1 km
+                                                    [value] => 115
+                                                )
+
+                                            [duration] => stdClass Object
+                                                (
+                                                    [text] => 1 min
+                                                    [value] => 19
+                                                )
+
+                                            [end_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6659938
+                                                    [lng] => -0.8809027
+                                                )
+
+                                            [html_instructions] => Slight <b>right</b> toward <b>Av. los Pirineos</b>
+                                            [maneuver] => turn-slight-right
+                                            [polyline] => stdClass Object
+                                                (
+                                                    [points] => s~h}FxgkDL}@DUDQDOFOFM@A?A@UBABCBCBEBA?ABABCBCFIFK@C
+                                                )
+
+                                            [start_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6665015
+                                                    [lng] => -0.8820549
+                                                )
+
+                                            [travel_mode] => DRIVING
+                                        )
+
+                                    [6] => stdClass Object
+                                        (
+                                            [distance] => stdClass Object
+                                                (
+                                                    [text] => 41 m
+                                                    [value] => 41
+                                                )
+
+                                            [duration] => stdClass Object
+                                                (
+                                                    [text] => 1 min
+                                                    [value] => 9
+                                                )
+
+                                            [end_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.665838
+                                                    [lng] => -0.8804563
+                                                )
+
+                                            [html_instructions] => Keep <b>left</b> to continue toward <b>Av. los Pirineos</b>
+                                            [maneuver] => keep-left
+                                            [polyline] => stdClass Object
+                                                (
+                                                    [points] => m{h}Fr`kDHQFUDQ@MBO
+                                                )
+
+                                            [start_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6659938
+                                                    [lng] => -0.8809027
+                                                )
+
+                                            [travel_mode] => DRIVING
+                                        )
+
+                                    [7] => stdClass Object
+                                        (
+                                            [distance] => stdClass Object
+                                                (
+                                                    [text] => 1.5 km
+                                                    [value] => 1504
+                                                )
+
+                                            [duration] => stdClass Object
+                                                (
+                                                    [text] => 2 mins
+                                                    [value] => 104
+                                                )
+
+                                            [end_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6788248
+                                                    [lng] => -0.8783585
+                                                )
+
+                                            [html_instructions] => Turn <b>left</b> onto <b>Av. los Pirineos</b>
+                                            [maneuver] => turn-left
+                                            [polyline] => stdClass Object
+                                                (
+                                                    [points] => ozh}Fz}jDBW?SyCW[EyCK{@AS?s@A{@@k@@wAFcADyAF{AHmBHq@DkBHu@Dq@B_AF]Dc@BeADe@B]@m@@k@@m@Am@Ca@Ca@Cm@Ia@G_@Gm@Kg@MYIm@Qi@Si@SUM}@c@i@YYQa@Wg@[i@[{@k@uBsA
+                                                )
+
+                                            [start_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.665838
+                                                    [lng] => -0.8804563
+                                                )
+
+                                            [travel_mode] => DRIVING
+                                        )
+
+                                    [8] => stdClass Object
+                                        (
+                                            [distance] => stdClass Object
+                                                (
+                                                    [text] => 1.0 km
+                                                    [value] => 957
+                                                )
+
+                                            [duration] => stdClass Object
+                                                (
+                                                    [text] => 1 min
+                                                    [value] => 44
+                                                )
+
+                                            [end_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6864389
+                                                    [lng] => -0.8729821
+                                                )
+
+                                            [html_instructions] => Continue onto <b>N-330</b>
+                                            [polyline] => stdClass Object
+                                                (
+                                                    [points] => skk}FvpjDqBoAkCaBaOkJmAw@EE_TwM
+                                                )
+
+                                            [start_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6788248
+                                                    [lng] => -0.8783585
+                                                )
+
+                                            [travel_mode] => DRIVING
+                                        )
+
+                                    [9] => stdClass Object
+                                        (
+                                            [distance] => stdClass Object
+                                                (
+                                                    [text] => 0.3 km
+                                                    [value] => 336
+                                                )
+
+                                            [duration] => stdClass Object
+                                                (
+                                                    [text] => 1 min
+                                                    [value] => 24
+                                                )
+
+                                            [end_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6890709
+                                                    [lng] => -0.8710654
+                                                )
+
+                                            [html_instructions] => Take exit <b>504A</b> toward <b>Avd. Academia G. Militar</b>
+                                            [maneuver] => ramp-right
+                                            [polyline] => stdClass Object
+                                                (
+                                                    [points] => g{l}FboiDU_@ACu@e@q@a@s@a@eAo@yAu@}@a@m@YWMKIGGCEEGIMMQ
+                                                )
+
+                                            [start_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6864389
+                                                    [lng] => -0.8729821
+                                                )
+
+                                            [travel_mode] => DRIVING
+                                        )
+
+                                    [10] => stdClass Object
+                                        (
+                                            [distance] => stdClass Object
+                                                (
+                                                    [text] => 0.7 km
+                                                    [value] => 698
+                                                )
+
+                                            [duration] => stdClass Object
+                                                (
+                                                    [text] => 1 min
+                                                    [value] => 57
+                                                )
+
+                                            [end_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6901537
+                                                    [lng] => -0.8772417
+                                                )
+
+                                            [html_instructions] => At the roundabout, take the <b>3rd</b> exit
+                                            [maneuver] => roundabout-right
+                                            [polyline] => stdClass Object
+                                                (
+                                                    [points] => ukm}FdciD?A?A?A?A?A?A?A?GAGAGAIAGCGAGCGKSOOECKGSESASDC@OFONQ^EJCLCLAL?L?N@L@L@D@FBD@DBDBD@BDD?v@?L?LAJ]dCCJUdBEd@Ed@?FMdBC|AAhBL~CRfEBv@
+                                                )
+
+                                            [start_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6890709
+                                                    [lng] => -0.8710654
+                                                )
+
+                                            [travel_mode] => DRIVING
+                                        )
+
+                                    [11] => stdClass Object
+                                        (
+                                            [distance] => stdClass Object
+                                                (
+                                                    [text] => 0.3 km
+                                                    [value] => 273
+                                                )
+
+                                            [duration] => stdClass Object
+                                                (
+                                                    [text] => 1 min
+                                                    [value] => 33
+                                                )
+
+                                            [end_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6883772
+                                                    [lng] => -0.877719
+                                                )
+
+                                            [html_instructions] => At the roundabout, take the <b>2nd</b> exit onto <b>Calle la Fragua</b>
+                                            [maneuver] => roundabout-right
+                                            [polyline] => stdClass Object
+                                                (
+                                                    [points] => mrm}FvijDEBCBEDCDCDCDAFAF?F?F?F?FBNBD@DBDDDBBBB@?DBD@D?D?D?DABADCDC@A@CBEBEBE@EV?zCBF?H?vA?
+                                                )
+
+                                            [start_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6901537
+                                                    [lng] => -0.8772417
+                                                )
+
+                                            [travel_mode] => DRIVING
+                                        )
+
+                                    [12] => stdClass Object
+                                        (
+                                            [distance] => stdClass Object
+                                                (
+                                                    [text] => 0.2 km
+                                                    [value] => 221
+                                                )
+
+                                            [duration] => stdClass Object
+                                                (
+                                                    [text] => 1 min
+                                                    [value] => 56
+                                                )
+
+                                            [end_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6881694
+                                                    [lng] => -0.8758068
+                                                )
+
+                                            [html_instructions] => At the roundabout, take the <b>2nd</b> exit onto <b>Calle Julián Gallego</b>
+                                            [maneuver] => roundabout-right
+                                            [polyline] => stdClass Object
+                                                (
+                                                    [points] => kgm}FvljD@D@@@B@B@@BB@@B@@@B?@@B?@?B?B?@?BABA@A@ABA@C@A@C@C@C@C?C@C?C?E?C?C?CAEAE?CAAACACCAACAACAAAC?AAC?C?@wFB}@
+                                                )
+
+                                            [start_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6883772
+                                                    [lng] => -0.877719
+                                                )
+
+                                            [travel_mode] => DRIVING
+                                        )
+
+                                    [13] => stdClass Object
+                                        (
+                                            [distance] => stdClass Object
+                                                (
+                                                    [text] => 88 m
+                                                    [value] => 88
+                                                )
+
+                                            [duration] => stdClass Object
+                                                (
+                                                    [text] => 1 min
+                                                    [value] => 24
+                                                )
+
+                                            [end_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.687425
+                                                    [lng] => -0.8756673
+                                                )
+
+                                            [html_instructions] => <b>Calle Julián Gallego</b> turns <b>right</b> and becomes <b>Paseo Rafael Esteve</b>
+                                            [polyline] => stdClass Object
+                                                (
+                                                    [points] => afm}Fx`jDBMBCBCBCFCHAF?jBB
+                                                )
+
+                                            [start_location] => stdClass Object
+                                                (
+                                                    [lat] => 41.6881694
+                                                    [lng] => -0.8758068
+                                                )
+
+                                            [travel_mode] => DRIVING
+                                        )
+
+                                )
+
+                            [traffic_speed_entry] => Array
+                                (
+                                )
+
+                            [via_waypoint] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [overview_polyline] => stdClass Object
+                (
+                    [points] => gld}F``lDuHm@wD[}CYQ@e@@y@AGIOCMDi@\c@ZEFCLAFCXMZEDo@`@QVkAt@wEjCc@\e@z@Yn@mArCqA|CyB`Fk@t@_IxGQAEFsAlAiA`Ac@Xk@Rs@NeCXy@Du@Ec@EsACk@Ii@KgBm@uCuAUSYQYW[i@?II]MWSSMIUA[Dm@GYG[Og@c@kBkB{MoMwEwEoBaCcA_BaAkBeAiCo@wBc@iB_@oBk@_EI}@Ec@L}@Jg@L_@HO@WNO`@g@Pg@F_@Fg@?SyCWuDQoAAoB?cCHgJ`@eGXgEVcADyAB{AEcAGoAQmASaAWwAe@_Aa@gB}@mCaBoLqHuf@a[Wc@gBgAyBqAwCwAeAg@SQa@m@?EEi@K_@[c@QKg@GWF_@VWj@GZAZDp@JXDHDD?v@?Z_@pCYpBKjAMlBEfE`@fJBv@EBIHGJG\Bf@NVNJV@TKJQDKrDBP?vA?@DBDBDJHJ@LAJGFMDO?QCSIKIIMA@wFB}@FQFGPErBB
+                )
+
+            [summary] => N-330
+            [warnings] => Array
+                (
+                )
+
+            [waypoint_order] => Array
+                (
+                )
+
+        )
+
+)

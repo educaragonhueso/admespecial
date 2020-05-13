@@ -60,8 +60,12 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
                   echo '<a class="exportcsv dropdown-item" href="#" id="csv_dup" data-tipo="csv" data-subtipo="csv_fase2">Listado Fase 2 (csv) </a>';
                   echo '<a class="exportcsv dropdown-item" href="#" id="csv_dup" data-tipo="csv" data-subtipo="csv_fase3">Listado Fase 3 (csv) </a>';
                }
-            echo '</div>';
-         echo '</li>';
+         echo '</div>';
+      echo '</li>';
+      echo '<li class="nav-item msuperior">';
+         echo '<a class="show_mapacentros nav-link" href="mapacentros.php"
+target="_blank">Mapa Centros</a>';
+      echo '</li>';
       echo '<li class="nav-item active msuperior">';
          echo '<a class="show_matricula nav-link" href="#">Matricula</a>';
       echo '</li>';

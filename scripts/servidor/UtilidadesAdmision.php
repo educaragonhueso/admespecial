@@ -241,7 +241,7 @@ class UtilidadesAdmision{
 		
 		return $resultSet;
     }
-    	public function getAlumnosFase2($t='tmp')
+   public function getAlumnosFase2($t='tmp')
 	{
 		$resultSet=array();
 		if($t=='tmp') $tabla='alumnos_fase2_tmp';
@@ -275,18 +275,51 @@ class UtilidadesAdmision{
 		}
 	return 1;
 	}
-  public function actualizaVacantesCentros($centro=0)
+   public function getPlazasDefinitiva($idcentro)
 	{
+
+		$resultSet=array();
+      //Plazas ebo
+		$sqlebo="SELECT count(id_alumno) as plazas FROM alumnos_definitiva_final where
+id_centro_destino=$idcentro and est_desp_sorteo='admitida' and tipoestudios='ebo'";
+		$sqltva="SELECT count(id_alumno) as plazas FROM alumnos_definitiva_final where
+id_centro_destino=$idcentro and est_desp_sorteo='admitida' and tipoestudios='tva'";
+		$queryebo=$this->con->query($sqlebo);
+		$querytva=$this->con->query($sqltva);
+
+		if($queryebo and $querytva)
+		{   
+         $row=$queryebo->fetch_object(); 
+         $resultSet[]=$row->plazas;
+		   
+         $row=$querytva->fetch_object(); 
+         $resultSet[]=$row->plazas;
+      }
+   return $resultSet;
+   }
+  public function actualizaVacantesCentros($centro=0)
+  {
 		$acentros=array();
 		$centros=$this->centros->getAllCentros();
 		while($row = $centros->fetch_assoc()) { $acentros[]=$row;}
 		foreach($acentros as $centro)
 		{
+         //obtenemos las plazas ocupadas de la lista definitiva, en cada centro
+			$plazas=$this->getPlazasDefinitiva($centro['id_centro']);
 			$this->centro->setId($centro['id_centro']);
 
 			//completamos el campo de cada centro para incluir las vacantes definitivas
 			$vacantes=$this->centro->getVacantes();
-			$sql="UPDATE centros set vacantes_ebo_original=".$vacantes[0]->vacantes.",vacantes_ebo=".$vacantes[0]->vacantes.", vacantes_tva_original=".$vacantes[1]->vacantes.",vacantes_tva=".$vacantes[1]->vacantes." where id_centro=".$centro['id_centro'];
+
+         $vac_final_ebo=$vacantes[0]->vacantes-$plazas[0];
+         $vac_final_tva=$vacantes[1]->vacantes-$plazas[1];
+
+         if($vac_final_ebo<0 or $vac_final_tva<0){print("ERROR: VACANTES
+NEGATIVAS CENTRO: ".$centro['id_centro']); exit();}
+
+			$sql="UPDATE centros set
+vacantes_ebo_original=".$vac_final_ebo.",vacantes_ebo=".$vac_final_ebo.",
+vacantes_tva_original=".$vac_final_tva.",vacantes_tva=".$vac_final_tva." where id_centro=".$centro['id_centro'];
 			if(!$this->con->query($sql)) return $this->con->error;
 		}
 	return 1;
@@ -312,7 +345,9 @@ class UtilidadesAdmision{
 		$sql='DELETE from '.$tabla;
 		$res=$this->con->query($sql);
 		if(!$res) return $this->con->error;
-		$sqlfase2="SELECT t1.id_alumno,t1.nombre,t1.apellido1,t1.apellido2,t1.localidad,t1.calle_dfamiliar,t1.nombre_centro,t1.tipoestudios,t1.fase_solicitud,t1.estado_solicitud,t1.transporte,'0' as nordensorteo,'0' as nasignado,t1.puntos_validados,t1.id_centro,t2.centro1,t2.id_centro1,t3.centro2,t3.id_centro2,t4.centro3,t4.id_centro3,t5.centro4,t5.id_centro4,t6.centro5,t6.id_centro5,t7.centro6,t7.id_centro6, 'nocentro' as centro_definitivo, '0' as id_centro_definitivo,t1.id_centro_estudios_origen as id_centro_origen,t8.centro_origen,t1.reserva,t1.reserva as reserva_original,'automatica' as tipo_modificacion,'0' as activado_fase3 FROM 
+		$sqlfase2="SELECT
+t1.id_alumno,t1.nombre,t1.apellido1,t1.apellido2,t1.localidad,t1.calle_dfamiliar,'nodata'
+as coordenadas,t1.nombre_centro,t1.tipoestudios,t1.fase_solicitud,t1.estado_solicitud,t1.transporte,'0' as nordensorteo,'0' as nasignado,t1.puntos_validados,t1.id_centro,t2.centro1,t2.id_centro1,t3.centro2,t3.id_centro2,t4.centro3,t4.id_centro3,t5.centro4,t5.id_centro4,t6.centro5,t6.id_centro5,t7.centro6,t7.id_centro6, 'nocentro' as centro_definitivo, '0' as id_centro_definitivo,t1.id_centro_estudios_origen as id_centro_origen,t8.centro_origen,t1.reserva,t1.reserva as reserva_original,'automatica' as tipo_modificacion,'0' as activado_fase3 FROM 
 	(SELECT a.id_alumno, a.nombre, a.apellido1, a.apellido2,a.loc_dfamiliar as localidad,a.calle_dfamiliar,c.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,b.puntos_validados,a.id_centro_destino as id_centro,a.id_centro_estudios_origen,a.est_desp_sorteo,a.reserva FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno 
 	left join centros c on a.id_centro_destino=c.id_centro  order by c.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc)
 	as t1 
