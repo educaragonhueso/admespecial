@@ -917,3 +917,448 @@
 [12-May-2020 11:55:01] : [WARNING] - select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='50011537' limit 1
 [12-May-2020 11:55:01] : [WARNING] - devolviendo nombre de centro
 [12-May-2020 11:55:01] : [WARNING] - select concat(nombre_centro,'*') as nombre_centro from centros c where c.id_centro='50011537' limit 1
+[15-May-2020 18:00:36] : [WARNING] - AVERIGUANDO TIPO DE CENTRO
+[15-May-2020 18:00:36] : [WARNING] - select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='0' limit 1
+[15-May-2020 18:00:36] : [WARNING] - devolviendo nombre de centro
+[15-May-2020 18:00:36] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[15-May-2020 18:00:36] : [WARNING] - AVERIGUANDO TIPO DE CENTRO
+[15-May-2020 18:00:36] : [WARNING] - select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='50019408' limit 1
+[15-May-2020 18:00:36] : [WARNING] - devolviendo nombre de centro
+[15-May-2020 18:00:36] : [WARNING] - select concat(nombre_centro,'*') as nombre_centro from centros c where c.id_centro='50019408' limit 1
+[15-May-2020 18:00:36] : [WARNING] - AVERIGUANDO TIPO DE CENTRO
+[15-May-2020 18:00:36] : [WARNING] - select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='50011537' limit 1
+[15-May-2020 18:00:36] : [WARNING] - devolviendo nombre de centro
+[15-May-2020 18:00:36] : [WARNING] - select concat(nombre_centro,'*') as nombre_centro from centros c where c.id_centro='50011537' limit 1
+[15-May-2020 18:00:51] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[15-May-2020 18:00:51] : [WARNING] - fase_solicitud8966=validada&estado_solicitud8966=apta&apellido1=ap508&apellido2=ap508&nombre=n508&dni_alumno=nodata&fnac=2009-11-11&nacionalidad=Spain&datos_tutor1=ap508&dni_tutor1=21212121A&datos_tutor2=nodata&dni_tutor2=nodata&calle_dfamiliar=Goya&num_dfamiliar=3&piso_dfamiliar=nodata&cp_dfamiliar=nodata&loc_dfamiliar=Zaragoza&tel_dfamiliar1=976454545&tel_dfamiliar2=0&nuevaesc=1&id_centro_estudios_origen=NOCENTRO&loc_centro_origen=nodata&reserva8966=0&modalidad_origen=nodata&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_curso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_curso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_curso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SEGEDA*&loc_centro_destino=nodata&tipoestudios=EBO&id_centro_destino1=RINC%C3%93N+DE+GOYA*&id_centro_destino4=&id_centro_destino2=&id_centro_destino5=&id_centro_destino3=&id_centro_destino6=&baremo_puntos_totales=7&baremo_puntos_validados=7&baremo_proximidad_domicilio8966=dfamiliar&baremo_calle_dlaboral8966=&baremo_calle_dllimitrofe8966=&baremo_validar_proximidad_domicilio=1&baremo_validar_tutores_centro=0&baremo_renta_inferior=1&baremo_validar_renta_inferior=1&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_curso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_curso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_curso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad8966=no&baremo_tipo_familia8966=no&transporte8966=3&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=
+[15-May-2020 18:00:51] : [WARNING] - select id_centro from centros  where clase_centro='especial' and nombre_centro='SEGEDA'
+[15-May-2020 18:00:51] : [WARNING] - VALOR CENTRO ORIGEN DESPUES:
+[15-May-2020 18:00:51] : [WARNING] - NOCENTRO
+[15-May-2020 18:00:51] : [WARNING] - select id_centro from centros  where nombre_centro='NOCENTRO'
+[15-May-2020 18:00:51] : [WARNING] - select id_centro from centros  where nombre_centro='RINCÓN DE GOYA'
+[15-May-2020 18:00:51] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[15-May-2020 18:00:51] : [WARNING] - fase_solicitud8966=validada&estado_solicitud8966=apta&apellido1=ap508&apellido2=ap508&nombre=n508&dni_alumno=nodata&fnac=2009-11-11&nacionalidad=Spain&datos_tutor1=ap508&dni_tutor1=21212121A&datos_tutor2=nodata&dni_tutor2=nodata&calle_dfamiliar=Goya&num_dfamiliar=3&piso_dfamiliar=nodata&cp_dfamiliar=nodata&loc_dfamiliar=Zaragoza&tel_dfamiliar1=976454545&tel_dfamiliar2=0&nuevaesc=1&id_centro_estudios_origen=NOCENTRO&loc_centro_origen=nodata&reserva8966=0&modalidad_origen=nodata&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_curso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_curso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_curso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SEGEDA*&loc_centro_destino=nodata&tipoestudios=EBO&id_centro_destino1=RINC%C3%93N+DE+GOYA*&id_centro_destino4=&id_centro_destino2=&id_centro_destino5=&id_centro_destino3=&id_centro_destino6=&baremo_puntos_totales=7&baremo_puntos_validados=7&baremo_proximidad_domicilio8966=dfamiliar&baremo_calle_dlaboral8966=&baremo_calle_dllimitrofe8966=&baremo_validar_proximidad_domicilio=1&baremo_validar_tutores_centro=0&baremo_renta_inferior=1&baremo_validar_renta_inferior=1&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_curso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_curso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_curso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad8966=no&baremo_tipo_familia8966=no&transporte8966=3&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&baremo_ptstotal=
+[15-May-2020 18:00:51] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 1 
+[15-May-2020 18:00:51] : [WARNING] - {"fase_solicitud8966":"validada","estado_solicitud8966":"apta","apellido1":"ap508","apellido2":"ap508","nombre":"n508","dni_alumno":"nodata","fnac":"2009-11-11","nacionalidad":"Spain","datos_tutor1":"ap508","dni_tutor1":"21212121A","datos_tutor2":"nodata","dni_tutor2":"nodata","calle_dfamiliar":"Goya","num_dfamiliar":"3","piso_dfamiliar":"nodata","cp_dfamiliar":"nodata","loc_dfamiliar":"Zaragoza","tel_dfamiliar1":"976454545","tel_dfamiliar2":"0","nuevaesc":"1","id_centro_estudios_origen":"0","loc_centro_origen":"nodata","reserva8966":"0","modalidad_origen":"nodata","hermanos_datos_admision1":"","hermanos_id_registro_admision1":"","hermanos_fnacimiento_admision1":"","hermanos_curso_admision1":"","hermanos_nivel_educativo_admision1":"","hermanos_datos_admision2":"","hermanos_id_registro_admision2":"","hermanos_fnacimiento_admision2":"","hermanos_curso_admision2":"","hermanos_nivel_educativo_admision2":"","hermanos_datos_admision3":"","hermanos_id_registro_admision3":"","hermanos_fnacimiento_admision3":"","hermanos_curso_admision3":"","hermanos_nivel_educativo_admision3":"","id_centro_destino":"50019408","loc_centro_destino":"nodata","tipoestudios":"EBO","id_centro_destino1":"50011537","id_centro_destino4":"","id_centro_destino2":"","id_centro_destino5":"","id_centro_destino3":"","id_centro_destino6":"","baremo_puntos_totales":"7","baremo_puntos_validados":"7","baremo_proximidad_domicilio8966":"dfamiliar","baremo_calle_dlaboral8966":"","baremo_calle_dllimitrofe8966":"","baremo_validar_proximidad_domicilio":"1","baremo_validar_tutores_centro":"0","baremo_renta_inferior":"1","baremo_validar_renta_inferior":"1","hermanos_datos_baremo1":"","hermanos_id_registro_baremo1":"","hermanos_fnacimiento_baremo1":"","hermanos_curso_baremo1":"","hermanos_nivel_educativo_baremo1":"","hermanos_datos_baremo2":"","hermanos_id_registro_baremo2":"","hermanos_fnacimiento_baremo2":"","hermanos_curso_baremo2":"","hermanos_nivel_educativo_baremo2":"","hermanos_datos_baremo3":"","hermanos_id_registro_baremo3":"","hermanos_fnacimiento_baremo3":"","hermanos_curso_baremo3":"","hermanos_nivel_educativo_baremo3":"","baremo_validar_hnos_centro":"0","baremo_discapacidad8966":"no","baremo_tipo_familia8966":"no","transporte8966":"3","baremo_validar_discapacidad":"0","baremo_validar_tipo_familia":"0","tributantes_nombre1":"","tributantes_id_tributante1":"0","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","baremo_ptstotal":"","baremo_tutores_centro":0,"num_hadmision":0,"num_hbaremo":0,"cumplen":0,"oponenautorizar":0}
+[15-May-2020 18:00:51] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[15-May-2020 18:00:51] : [WARNING] - Array
+(
+    [fase_solicitud8966] => validada
+    [estado_solicitud8966] => apta
+    [apellido1] => ap508
+    [apellido2] => ap508
+    [nombre] => n508
+    [dni_alumno] => nodata
+    [fnac] => 2009-11-11
+    [nacionalidad] => Spain
+    [datos_tutor1] => ap508
+    [dni_tutor1] => 21212121A
+    [datos_tutor2] => nodata
+    [dni_tutor2] => nodata
+    [calle_dfamiliar] => Goya
+    [num_dfamiliar] => 3
+    [piso_dfamiliar] => nodata
+    [cp_dfamiliar] => nodata
+    [loc_dfamiliar] => Zaragoza
+    [tel_dfamiliar1] => 976454545
+    [tel_dfamiliar2] => 0
+    [nuevaesc] => 1
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [reserva8966] => 0
+    [modalidad_origen] => nodata
+    [hermanos_datos_admision1] => 
+    [hermanos_id_registro_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_curso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_curso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_curso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [id_centro_destino] => 50019408
+    [loc_centro_destino] => nodata
+    [tipoestudios] => EBO
+    [id_centro_destino1] => 50011537
+    [id_centro_destino4] => 
+    [id_centro_destino2] => 
+    [id_centro_destino5] => 
+    [id_centro_destino3] => 
+    [id_centro_destino6] => 
+    [baremo_puntos_totales] => 7
+    [baremo_puntos_validados] => 7
+    [baremo_proximidad_domicilio8966] => dfamiliar
+    [baremo_calle_dlaboral8966] => 
+    [baremo_calle_dllimitrofe8966] => 
+    [baremo_validar_proximidad_domicilio] => 1
+    [baremo_validar_tutores_centro] => 0
+    [baremo_renta_inferior] => 1
+    [baremo_validar_renta_inferior] => 1
+    [hermanos_datos_baremo1] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_curso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_curso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_curso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [baremo_validar_hnos_centro] => 0
+    [baremo_discapacidad8966] => no
+    [baremo_tipo_familia8966] => no
+    [transporte8966] => 3
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [tributantes_nombre1] => 
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [baremo_ptstotal] => 
+    [baremo_tutores_centro] => 0
+    [num_hadmision] => 0
+    [num_hbaremo] => 0
+    [cumplen] => 0
+    [oponenautorizar] => 0
+)
+
+[15-May-2020 18:00:51] : [WARNING] - ACTUALIZAR SOLICITUD: 
+[15-May-2020 18:00:51] : [WARNING] - ENTRANDO EN UPDATE
+[15-May-2020 18:00:51] : [WARNING] - CONSULTA ACTUALIZACION BAREMO
+[15-May-2020 18:00:51] : [WARNING] - UPDATE baremo set puntos_totales='7',puntos_validados='7',proximidad_domicilio='dfamiliar',validar_proximidad_domicilio='1',validar_tutores_centro='0',renta_inferior='1',validar_renta_inferior='1',validar_hnos_centro='0',discapacidad='no',tipo_familia='no',validar_discapacidad='0',validar_tipo_familia='0',tutores_centro='0' WHERE id_alumno=8966
+[15-May-2020 18:00:51] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[15-May-2020 18:00:51] : [WARNING] - UPDATE alumnos set fase_solicitud='validada',estado_solicitud='apta',apellido1='ap508',apellido2='ap508',nombre='n508',dni_alumno='nodata',fnac='2009-11-11',nacionalidad='Spain',datos_tutor1='ap508',dni_tutor1='21212121A',datos_tutor2='nodata',dni_tutor2='nodata',calle_dfamiliar='Goya',num_dfamiliar='3',piso_dfamiliar='nodata',cp_dfamiliar='nodata',loc_dfamiliar='Zaragoza',tel_dfamiliar1='976454545',tel_dfamiliar2='0',nuevaesc='1',id_centro_estudios_origen='0',loc_centro_origen='nodata',reserva='0',modalidad_origen='nodata',id_centro_destino='50019408',loc_centro_destino='nodata',tipoestudios='EBO',id_centro_destino1='50011537',transporte='3',num_hadmision='0',num_hbaremo='0',cumplen='0',oponenautorizar='0' WHERE id_alumno=8966
+[15-May-2020 18:00:51] : [WARNING] - DATOS ACTUALIZACION SOLICITUD HERMANOS: 
+[15-May-2020 18:00:51] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [curso] => 
+            [nivel_educativo] => 
+        )
+
+    [2] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [curso] => 
+            [nivel_educativo] => 
+        )
+
+    [3] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [curso] => 
+            [nivel_educativo] => 
+        )
+
+)
+
+[15-May-2020 18:00:51] : [WARNING] - BORRANDO HERMANOS ADMISION
+[15-May-2020 18:00:51] : [WARNING] - DELETE from hermanos where id_registro=
+[15-May-2020 18:00:51] : [WARNING] - BORRANDO HERMANOS ADMISION
+[15-May-2020 18:00:51] : [WARNING] - DELETE from hermanos where id_registro=
+[15-May-2020 18:00:51] : [WARNING] - BORRANDO HERMANOS ADMISION
+[15-May-2020 18:00:51] : [WARNING] - DELETE from hermanos where id_registro=
+[15-May-2020 18:00:51] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[15-May-2020 18:00:51] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[15-May-2020 18:15:31] : [WARNING] - AVERIGUANDO TIPO DE CENTRO
+[15-May-2020 18:15:31] : [WARNING] - select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='0' limit 1
+[15-May-2020 18:15:31] : [WARNING] - devolviendo nombre de centro
+[15-May-2020 18:15:31] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[15-May-2020 18:15:31] : [WARNING] - AVERIGUANDO TIPO DE CENTRO
+[15-May-2020 18:15:31] : [WARNING] - select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='50018131' limit 1
+[15-May-2020 18:15:31] : [WARNING] - devolviendo nombre de centro
+[15-May-2020 18:15:31] : [WARNING] - select concat(nombre_centro,'*') as nombre_centro from centros c where c.id_centro='50018131' limit 1
+[15-May-2020 18:15:39] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[15-May-2020 18:15:39] : [WARNING] - fase_solicitud895=baremada&estado_solicitud895=apta&apellido1=pape894&apellido2=sape894&nombre=nombre894&dni_alumno=nodata&fnac=2000-01-01&nacionalidad=nodata&datos_tutor1=nodata&dni_tutor1=35123894Z&datos_tutor2=nodata&dni_tutor2=nodata&calle_dfamiliar=nodata&num_dfamiliar=nda&piso_dfamiliar=nodata&cp_dfamiliar=nodata&loc_dfamiliar=nodata&tel_dfamiliar1=0&tel_dfamiliar2=0&id_centro_estudios_origen=NOCENTRO&loc_centro_origen=nodata&reserva895=0&modalidad_origen=nodata&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_curso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_curso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_curso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=JEAN+PIAGET*&loc_centro_destino=nodata&tipoestudios=EBO&id_centro_destino1=&id_centro_destino4=&id_centro_destino2=&id_centro_destino5=&id_centro_destino3=&id_centro_destino6=&baremo_puntos_totales=4&baremo_puntos_validados=4&baremo_calle_dlaboral895=&baremo_calle_dllimitrofe895=&baremo_proximidad_domicilio895=sindomicilio&baremo_validar_proximidad_domicilio=0&baremo_tutores_centro=1&baremo_validar_tutores_centro=1&baremo_validar_renta_inferior=0&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_curso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_curso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_curso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad895=no&baremo_tipo_familia895=no&transporte895=3&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=
+[15-May-2020 18:15:39] : [WARNING] - select id_centro from centros  where clase_centro='especial' and nombre_centro='JEAN PIAGET'
+[15-May-2020 18:15:39] : [WARNING] - VALOR CENTRO ORIGEN DESPUES:
+[15-May-2020 18:15:39] : [WARNING] - NOCENTRO
+[15-May-2020 18:15:39] : [WARNING] - select id_centro from centros  where nombre_centro='NOCENTRO'
+[15-May-2020 18:15:39] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[15-May-2020 18:15:39] : [WARNING] - fase_solicitud895=baremada&estado_solicitud895=apta&apellido1=pape894&apellido2=sape894&nombre=nombre894&dni_alumno=nodata&fnac=2000-01-01&nacionalidad=nodata&datos_tutor1=nodata&dni_tutor1=35123894Z&datos_tutor2=nodata&dni_tutor2=nodata&calle_dfamiliar=nodata&num_dfamiliar=nda&piso_dfamiliar=nodata&cp_dfamiliar=nodata&loc_dfamiliar=nodata&tel_dfamiliar1=0&tel_dfamiliar2=0&id_centro_estudios_origen=NOCENTRO&loc_centro_origen=nodata&reserva895=0&modalidad_origen=nodata&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_curso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_curso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_curso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=JEAN+PIAGET*&loc_centro_destino=nodata&tipoestudios=EBO&id_centro_destino1=&id_centro_destino4=&id_centro_destino2=&id_centro_destino5=&id_centro_destino3=&id_centro_destino6=&baremo_puntos_totales=4&baremo_puntos_validados=4&baremo_calle_dlaboral895=&baremo_calle_dllimitrofe895=&baremo_proximidad_domicilio895=sindomicilio&baremo_validar_proximidad_domicilio=0&baremo_tutores_centro=1&baremo_validar_tutores_centro=1&baremo_validar_renta_inferior=0&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_curso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_curso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_curso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad895=no&baremo_tipo_familia895=no&transporte895=3&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&baremo_ptstotal=
+[15-May-2020 18:15:39] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 2 
+[15-May-2020 18:15:39] : [WARNING] - {"fase_solicitud895":"baremada","estado_solicitud895":"apta","apellido1":"pape894","apellido2":"sape894","nombre":"nombre894","dni_alumno":"nodata","fnac":"2000-01-01","nacionalidad":"nodata","datos_tutor1":"nodata","dni_tutor1":"35123894Z","datos_tutor2":"nodata","dni_tutor2":"nodata","calle_dfamiliar":"nodata","num_dfamiliar":"nda","piso_dfamiliar":"nodata","cp_dfamiliar":"nodata","loc_dfamiliar":"nodata","tel_dfamiliar1":"0","tel_dfamiliar2":"0","id_centro_estudios_origen":"0","loc_centro_origen":"nodata","reserva895":"0","modalidad_origen":"nodata","hermanos_datos_admision1":"","hermanos_id_registro_admision1":"","hermanos_fnacimiento_admision1":"","hermanos_curso_admision1":"","hermanos_nivel_educativo_admision1":"","hermanos_datos_admision2":"","hermanos_id_registro_admision2":"","hermanos_fnacimiento_admision2":"","hermanos_curso_admision2":"","hermanos_nivel_educativo_admision2":"","hermanos_datos_admision3":"","hermanos_id_registro_admision3":"","hermanos_fnacimiento_admision3":"","hermanos_curso_admision3":"","hermanos_nivel_educativo_admision3":"","id_centro_destino":"50018131","loc_centro_destino":"nodata","tipoestudios":"EBO","id_centro_destino1":"","id_centro_destino4":"","id_centro_destino2":"","id_centro_destino5":"","id_centro_destino3":"","id_centro_destino6":"","baremo_puntos_totales":"4","baremo_puntos_validados":"4","baremo_calle_dlaboral895":"","baremo_calle_dllimitrofe895":"","baremo_proximidad_domicilio895":"sindomicilio","baremo_validar_proximidad_domicilio":"0","baremo_tutores_centro":"1","baremo_validar_tutores_centro":"1","baremo_validar_renta_inferior":"0","hermanos_datos_baremo1":"","hermanos_id_registro_baremo1":"","hermanos_fnacimiento_baremo1":"","hermanos_curso_baremo1":"","hermanos_nivel_educativo_baremo1":"","hermanos_datos_baremo2":"","hermanos_id_registro_baremo2":"","hermanos_fnacimiento_baremo2":"","hermanos_curso_baremo2":"","hermanos_nivel_educativo_baremo2":"","hermanos_datos_baremo3":"","hermanos_id_registro_baremo3":"","hermanos_fnacimiento_baremo3":"","hermanos_curso_baremo3":"","hermanos_nivel_educativo_baremo3":"","baremo_validar_hnos_centro":"0","baremo_discapacidad895":"no","baremo_tipo_familia895":"no","transporte895":"3","baremo_validar_discapacidad":"0","baremo_validar_tipo_familia":"0","tributantes_nombre1":"","tributantes_id_tributante1":"0","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","baremo_ptstotal":"","baremo_renta_inferior":0,"nuevaesc":0,"num_hadmision":0,"num_hbaremo":0,"cumplen":0,"oponenautorizar":0}
+[15-May-2020 18:15:39] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[15-May-2020 18:15:39] : [WARNING] - Array
+(
+    [fase_solicitud895] => baremada
+    [estado_solicitud895] => apta
+    [apellido1] => pape894
+    [apellido2] => sape894
+    [nombre] => nombre894
+    [dni_alumno] => nodata
+    [fnac] => 2000-01-01
+    [nacionalidad] => nodata
+    [datos_tutor1] => nodata
+    [dni_tutor1] => 35123894Z
+    [datos_tutor2] => nodata
+    [dni_tutor2] => nodata
+    [calle_dfamiliar] => nodata
+    [num_dfamiliar] => nda
+    [piso_dfamiliar] => nodata
+    [cp_dfamiliar] => nodata
+    [loc_dfamiliar] => nodata
+    [tel_dfamiliar1] => 0
+    [tel_dfamiliar2] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [reserva895] => 0
+    [modalidad_origen] => nodata
+    [hermanos_datos_admision1] => 
+    [hermanos_id_registro_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_curso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_curso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_curso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [id_centro_destino] => 50018131
+    [loc_centro_destino] => nodata
+    [tipoestudios] => EBO
+    [id_centro_destino1] => 
+    [id_centro_destino4] => 
+    [id_centro_destino2] => 
+    [id_centro_destino5] => 
+    [id_centro_destino3] => 
+    [id_centro_destino6] => 
+    [baremo_puntos_totales] => 4
+    [baremo_puntos_validados] => 4
+    [baremo_calle_dlaboral895] => 
+    [baremo_calle_dllimitrofe895] => 
+    [baremo_proximidad_domicilio895] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_tutores_centro] => 1
+    [baremo_validar_tutores_centro] => 1
+    [baremo_validar_renta_inferior] => 0
+    [hermanos_datos_baremo1] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_curso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_curso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_curso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [baremo_validar_hnos_centro] => 0
+    [baremo_discapacidad895] => no
+    [baremo_tipo_familia895] => no
+    [transporte895] => 3
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [tributantes_nombre1] => 
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [baremo_ptstotal] => 
+    [baremo_renta_inferior] => 0
+    [nuevaesc] => 0
+    [num_hadmision] => 0
+    [num_hbaremo] => 0
+    [cumplen] => 0
+    [oponenautorizar] => 0
+)
+
+[15-May-2020 18:15:39] : [WARNING] - ACTUALIZAR SOLICITUD: 
+[15-May-2020 18:15:39] : [WARNING] - ENTRANDO EN UPDATE
+[15-May-2020 18:15:39] : [WARNING] - CONSULTA ACTUALIZACION BAREMO
+[15-May-2020 18:15:39] : [WARNING] - UPDATE baremo set puntos_totales='4',puntos_validados='4',proximidad_domicilio='sindomicilio',validar_proximidad_domicilio='0',tutores_centro='1',validar_tutores_centro='1',validar_renta_inferior='0',validar_hnos_centro='0',discapacidad='no',tipo_familia='no',validar_discapacidad='0',validar_tipo_familia='0',renta_inferior='0' WHERE id_alumno=895
+[15-May-2020 18:15:39] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[15-May-2020 18:15:39] : [WARNING] - UPDATE alumnos set fase_solicitud='baremada',estado_solicitud='apta',apellido1='pape894',apellido2='sape894',nombre='nombre894',dni_alumno='nodata',fnac='2000-01-01',nacionalidad='nodata',datos_tutor1='nodata',dni_tutor1='35123894Z',datos_tutor2='nodata',dni_tutor2='nodata',calle_dfamiliar='nodata',num_dfamiliar='nda',piso_dfamiliar='nodata',cp_dfamiliar='nodata',loc_dfamiliar='nodata',tel_dfamiliar1='0',tel_dfamiliar2='0',id_centro_estudios_origen='0',loc_centro_origen='nodata',reserva='0',modalidad_origen='nodata',id_centro_destino='50018131',loc_centro_destino='nodata',tipoestudios='EBO',transporte='3',nuevaesc='0',num_hadmision='0',num_hbaremo='0',cumplen='0',oponenautorizar='0' WHERE id_alumno=895
+[15-May-2020 18:15:39] : [WARNING] - DATOS ACTUALIZACION SOLICITUD HERMANOS: 
+[15-May-2020 18:15:39] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [curso] => 
+            [nivel_educativo] => 
+        )
+
+    [2] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [curso] => 
+            [nivel_educativo] => 
+        )
+
+    [3] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [curso] => 
+            [nivel_educativo] => 
+        )
+
+)
+
+[15-May-2020 18:15:39] : [WARNING] - BORRANDO HERMANOS ADMISION
+[15-May-2020 18:15:39] : [WARNING] - DELETE from hermanos where id_registro=
+[15-May-2020 18:15:39] : [WARNING] - BORRANDO HERMANOS ADMISION
+[15-May-2020 18:15:39] : [WARNING] - DELETE from hermanos where id_registro=
+[15-May-2020 18:15:39] : [WARNING] - BORRANDO HERMANOS ADMISION
+[15-May-2020 18:15:39] : [WARNING] - DELETE from hermanos where id_registro=
+[15-May-2020 18:15:39] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[15-May-2020 18:15:39] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+

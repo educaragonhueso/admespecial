@@ -49,7 +49,7 @@ include('includes/head.php');
 			elseif($_SESSION['nombre_usuario']=='nousuario' and $_SESSION['fin_sol_alumno']=='2') //fin inscripcion para ciudadano
 				{
 				echo '<h1>FINALIZADO PROCESO DE ADMISIÓN ONLINE<br></h1>';
-				if($_SESSION['fin_inscripcion_centros']==1) echo '<h1>DIRIGETE AL CENTRO PARA COMPLETAR LA INSCRIPCIÓN</h1>';
+				//if($_SESSION['fin_inscripcion_centros']==1) echo '<h1>DIRIGETE AL CENTRO PARA COMPLETAR LA INSCRIPCIÓN</h1>';
 				}
 			elseif($_SESSION['fin_sol_alumno']<2 and $_SESSION['nombre_usuario']!='nousuario')//autenticado en perirodo de inscripcion  alumno
 				{

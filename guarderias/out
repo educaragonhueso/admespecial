@@ -1,0 +1,147 @@
+array(2) {
+  ["results"]=>
+  array(1) {
+    [0]=>
+    array(6) {
+      ["access_points"]=>
+      array(0) {
+      }
+      ["address_components"]=>
+      array(7) {
+        [0]=>
+        array(3) {
+          ["long_name"]=>
+          string(1) "4"
+          ["short_name"]=>
+          string(1) "4"
+          ["types"]=>
+          array(1) {
+            [0]=>
+            string(13) "street_number"
+          }
+        }
+        [1]=>
+        array(3) {
+          ["long_name"]=>
+          string(19) "Paseo Rafael Esteve"
+          ["short_name"]=>
+          string(19) "Paseo Rafael Esteve"
+          ["types"]=>
+          array(1) {
+            [0]=>
+            string(5) "route"
+          }
+        }
+        [2]=>
+        array(3) {
+          ["long_name"]=>
+          string(8) "Zaragoza"
+          ["short_name"]=>
+          string(8) "Zaragoza"
+          ["types"]=>
+          array(2) {
+            [0]=>
+            string(8) "locality"
+            [1]=>
+            string(9) "political"
+          }
+        }
+        [3]=>
+        array(3) {
+          ["long_name"]=>
+          string(8) "Zaragoza"
+          ["short_name"]=>
+          string(1) "Z"
+          ["types"]=>
+          array(2) {
+            [0]=>
+            string(27) "administrative_area_level_2"
+            [1]=>
+            string(9) "political"
+          }
+        }
+        [4]=>
+        array(3) {
+          ["long_name"]=>
+          string(7) "Aragón"
+          ["short_name"]=>
+          string(7) "Aragón"
+          ["types"]=>
+          array(2) {
+            [0]=>
+            string(27) "administrative_area_level_1"
+            [1]=>
+            string(9) "political"
+          }
+        }
+        [5]=>
+        array(3) {
+          ["long_name"]=>
+          string(5) "Spain"
+          ["short_name"]=>
+          string(2) "ES"
+          ["types"]=>
+          array(2) {
+            [0]=>
+            string(7) "country"
+            [1]=>
+            string(9) "political"
+          }
+        }
+        [6]=>
+        array(3) {
+          ["long_name"]=>
+          string(5) "50018"
+          ["short_name"]=>
+          string(5) "50018"
+          ["types"]=>
+          array(1) {
+            [0]=>
+            string(11) "postal_code"
+          }
+        }
+      }
+      ["formatted_address"]=>
+      string(45) "Paseo Rafael Esteve, 4, 50018 Zaragoza, Spain"
+      ["geometry"]=>
+      array(3) {
+        ["location"]=>
+        array(2) {
+          ["lat"]=>
+          float(41.6869566)
+          ["lng"]=>
+          float(-0.8752581)
+        }
+        ["location_type"]=>
+        string(18) "RANGE_INTERPOLATED"
+        ["viewport"]=>
+        array(2) {
+          ["northeast"]=>
+          array(2) {
+            ["lat"]=>
+            float(41.688305580291)
+            ["lng"]=>
+            float(-0.8739091197085)
+          }
+          ["southwest"]=>
+          array(2) {
+            ["lat"]=>
+            float(41.685607619708)
+            ["lng"]=>
+            float(-0.8766070802915)
+          }
+        }
+      }
+      ["place_id"]=>
+      string(100) "Ei1QYXNlbyBSYWZhZWwgRXN0ZXZlLCA0LCA1MDAxOCBaYXJhZ296YSwgU3BhaW4iGhIYChQKEgmF0VecehNZDRF-vltO1Ik2TRAE"
+      ["types"]=>
+      array(1) {
+        [0]=>
+        string(14) "street_address"
+      }
+    }
+  }
+  ["status"]=>
+  string(2) "OK"
+}
+Arrayresults
