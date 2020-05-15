@@ -31,7 +31,7 @@ if(isset($_POST['provincia']))
 	$provincia=$_POST['provincia'];
 
 $tsolicitud=new Solicitud($conexion);
-
+print("preadmes");
 $tcentro->setNombre();
 $nombre_centro=$tcentro->getNombre();
 $fase_sorteo=$tcentro->getFaseSorteo();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
@@ -100,33 +100,6 @@ else//accedemos como centro
 	$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES, FASE: ".$fase_sorteo." ESTADO CONVOCATORIA: $estado_convocatoria");
 	########################################################################################
 	
-	/*
-	//si ya se ha realizado el sorteo o el estado es provisional (30) mostramos las solicitudes correspondientes
-	if($fase_sorteo==2 || $estado_convocatoria>=2) 
-	{
-		//si se ha realizado el sorteo en el centro pero no estamos en provisionales todavía mostramos las solitudes completas sin incluir borrador
-		if($estado_convocatoria<30)
-			$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo,'normal','','todos',$estado_convocatoria); 
-		//si estamos en provisionales obtenemos solicitudes de la tabla  de definitivos
-		if($estado_convocatoria>=30){
-			$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo,'normal','','todos',$estado_convocatoria); 
-			print("LISTANDO SOLICITUDES NUMERO: ".sizeof($solicitudes)." FASE: ".$fase_sorteo." ESTADO: $estado_convocatoria");
-			}
-	}
-	elseif($fase_sorteo==0 or $fase_sorteo==1)
-	{
-			//mostramos las solitudes completas, incluyendo borrador
-			$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES NUMERO DE SORTEO NO ASIGNADO");
-			$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo); 
-	}
-	else
-	{
-			print("ENTRANDO PROV FASE SORTEO $fase_sorteo");
-			$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES NUMERO DE SORTEO ASIGNADO");
-			//mostramos solicitudes con el numero de sorteo asignado
-			$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo); 
-	}
-	*/
 	//obtenemos solicitudes normales
 	$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo); 
 	$tablaresumen=$tcentro->getResumen($_POST['rol'],'alumnos');

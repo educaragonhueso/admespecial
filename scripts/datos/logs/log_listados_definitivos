@@ -35021,3 +35021,64 @@ desc,a.tutores_centro desc,a.nordensorteo asc,a.nasignado desc
 
 )
 
+[15-May-2020 17:18:36] : [WARNING] - OBTENIENDO DATOS DEFINITIVOS POST:
+[15-May-2020 17:18:36] : [WARNING] - Array
+(
+    [id_centro] => 1
+    [rol] => admin
+    [subtipo] => admitidos_def
+    [pdf] => 1
+    [estado_convocatoria] => 50
+)
+
+[15-May-2020 17:18:36] : [WARNING] - ACTUALIZANDO DEFINITIVOS, DATOS:  ESTADO
+CENTRO/IDCENTRO 1/50
+[15-May-2020 17:18:36] : [WARNING] - OBTENIENDO LISTADOS DEFINITIVOS, CENTRO: 1
+[15-May-2020 17:18:36] : [WARNING] - OBTENIENDO
+DEFINITIVOS ESTADO: 50
+[15-May-2020 17:18:36] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_definitiva_final/2/a/50
+[15-May-2020 17:18:36] : [WARNING] - CONSULTA SOLICITUDES DEFINITIVOS SUBTIPO: admitidos_def
+[15-May-2020 17:18:36] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,c.nombre_centro,a.puntos_validados,a.id_centro_destino as id_centro FROM alumnos_definitiva_final a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta' and est_desp_sorteo='admitida'  order by c.id_centro,a.tipoestudios, a.transporte
+desc,a.puntos_validados desc,a.validar_hnos_centro
+desc,a.validar_tutores_centro desc,a.validar_proximidad_domicilio
+desc,FIELD(a.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),a.validar_renta_inferior
+desc,a.validar_discapacidad
+desc,FIELD(a.discapacidad,'alumno','hpadres','no'),a.validar_tipo_familia
+desc,FIELD(a.tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),a.hermanos_centro
+desc,a.tutores_centro desc,a.nordensorteo asc,a.nasignado desc
+[15-May-2020 17:18:36] : [WARNING] - OBTENIENDO SOLICITUDES GENERALES, DATOS: 
+[15-May-2020 17:18:36] : [WARNING] - Array
+(
+)
+
+[15-May-2020 17:19:37] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_fase2/3/b/3
+[15-May-2020 17:55:01] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_provisional_final/1/b/1
+[15-May-2020 17:55:37] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_provisional_final/1/b/1
+[15-May-2020 17:56:15] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos/0/b/1
+[15-May-2020 17:56:33] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_provisional_final/1/b/1
+[15-May-2020 17:58:00] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_provisional_final/1/b/1
+[15-May-2020 17:58:51] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_provisional_final/1/b/1
+[15-May-2020 18:00:58] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_provisional_final/1/b/1
+[15-May-2020 18:01:36] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_provisional_final/1/b/1
+[15-May-2020 18:06:20] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_provisional_final/1/b/1
+[15-May-2020 18:13:18] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_provisional_final/1/b/2
+[15-May-2020 18:13:43] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_provisional_final/1/b/2
+[15-May-2020 18:14:10] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_provisional_final/1/b/2
+[15-May-2020 18:15:02] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_provisional_final/1/b/2
+[15-May-2020 18:15:45] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_provisional_final/1/b/2

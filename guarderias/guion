@@ -1,0 +1,301 @@
+SECUENCIA ACTUACIÓN 
+
+FASE0: 
+
+   -Previo
+      carga centros
+      carga matricula
+
+   
+FASE I:
+
+   Al  finalizar admisión se podrá baremar generan listados provisionales
+
+   scripts:
+            sc_copia_provisional.php
+            sc_copia_definitiva.php
+
+FASE II
+
+FASE III
+
+   Previo recargar coordenadas de centros y alumnos
+   Previo recargar tabla de distancias de centros y alumnos
+
+   scripts:
+            sc_previo_fase3.php
+
+
+INCIDENCIAS ADMISION
+
+En el joaquin costa han introducido una persona con nif falso: 13052020-A
+Tienen q consultar a Mila
+
+
+PRUEBAS PREVIO REINICIO 
+
+FASE0- Crear solicitudes periodo ordinario
+
+0. Usuario alumno
+
+	Crear solicitud
+	Modificar solicitud
+		En perioro ordinario
+		Ultimo dia
+		Despues plazo
+
+	Imprimir solicitud
+
+1. Usuario centro
+
+	Crear solicitud
+	Modificar solicitud
+	Imprimir solicitud
+
+2. Usuario sp
+
+3. Usuario admin
+
+FASE0- Ver solicitudes
+
+0. Usuario alumno
+
+	Mostrar solicitud sin poder modificar
+	No puede Imprimir solicitud
+
+1. Usuario centro
+
+	Modificar solicitud
+	Imprimir solicitud
+
+2. Usuario sp
+
+
+4. Reponer integridad referencial:
+	id_centro_Destino a centros
+	centros a usuarios
+	id_Centro_destinoX a centros
+
+
+
+SECUENCIA PROCESO ADMISION
+
+1. FASE 0
+
+Los alumnos se inscriben mediante la web o a traves de los centros
+
+2. FASE I
+
+Finaliza la inscripción se procede a realizar el sorteo, previa asignación del número correspondiente a cada solicitud.
+
+Una vez realizado cada centro pasa a 'estado de sorteo' igual a 2 y sus solicitudes, automáticamnete se trasaladan a la tabla provisional
+A partir de ese momento las operaciones q haga el centro sobre dichas solicitudes serán sobre los datos de la tabla alumnos_provisional
+
+En la fecha indicada se pasarán los datos de todas las solicitudes no admitidas a la tabla provisional respetando las de los centros q hayan realiado el sorteo.
+
+En la fecha de pub de definitivos se pasarán, via crontab, todas las solicitudes de provisional a alumnos_definitivo
+
+En el momneto de iniciar la fase II se pasarán todas las solicitudes de las tablas 'alumnos_definitivo' a 'alumnos_fase2'
+
+
+3. FASE II
+
+En esta fase acceden únicamente los administradores generales y provinciales
+
+Verán un listado con los alumnos y sus datos incluyendo los centros disponibles a los q pueden ser enviados, con independencia de las vacantes.
+
+En el momento q se determine se permitirá realizar un nuevo sorteo para asignar a todos los alumnos que, en la fase anterior hayan quedado sin plaza.
+
+
+
+
+TAREAS FASE II
+
+-Dar de alta a dos alumno en matricula
+-Dar de alta dos solicitudes reservando plaza, como si fuera el alumno anterior
+-Realizar el proceso de admisión de forma q el alumno sea no admitido  y el otro sea admitido
+-En los listados provisionales poner el color rojo en el alumno admitido por no coincidir los datos de matricula y solicitud
+-Pasar a fase II y comprobar los datos en general
+
+Cuando la convocatoria pasa del estado definitiva:
+ 
+
+
+0. Actualizar las vacantes teniend en cuenta si alguien reserva plaza y se le ha concedido una en otro centro. Entonces se libera la reserva y el centro tiene una vacante más
+
+1. El admin o los servicios prov verán la opción de 'listados fase II' con los alumnos
+q quedan sin admitir, los centros elegidos y el centro destino posible, q podrá ser cualquiera, a elegir por parte del sp o admin (del estilo de continua/no continua)
+
+2. El dia señalado realizar sorteo igual q en faseI con un solo número para todos los alumnos y ordenarlos segun CP, B, S
+
+3. Realizar el reparto de plazas epezando por cada vacante y reiniciando si se libera alguna
+
+
+
+
+
+TAREAS PREVIAS PRODUCCION
+
+
+
+
+1. Todos los centros deben tener el campo primer conexion a 'no'
+
+
+
+
+
+CALENDARIO
+A	CONSIDERACIONES PREVIAS	1
+B	ACTUACIONES A DESARROLLAR POR LOS CENTROS	1
+1	DEL MIÉRCOLES 26 DE FEBRERO AL MIÉRCOLES 4 DE MARZO, AMBOS INCLUSIVE
+NOTIFICACIÓN DE LA OFERTA INICIAL DE VACANTES	2
+2	LUNES 9 DE MARZO, A PARTIR DE LAS 12 H.
+PUBLICACIÓN DE LA OFERTA INICIAL DE VACANTES DE ESCOLARIZACIÓN	4
+3	DEL MIÉRCOLES 11 AL MARTES 17 DE MARZO, AMBOS INCLUSIVE
+PRESENTACIÓN DE SOLICITUDES	5
+4	MIÉRCOLES 18 DE MARZO
+REVISIÓN DEL REGISTRO Y VALIDACIÓN DE SOLICITUDES	10
+5	JUEVES 19 DE MARZO, A LAS 12,30 H.
+ADJUDICACIÓN ALEATORIA DE NÚMERO Y SORTEO PÚBLICO PARA DIRIMIR EMPATES	10
+6	HASTA EL LUNES 23 DE MARZO, INCLUSIVE
+BAREMACIÓN DE LAS SOLICITUDES	11
+7	MARTES 24 DE MARZO, A PARTIR DE LAS 12 H.
+PUBLICACIÓN DE LISTADOS DE SOLICITUDES BAREMADAS 	12
+
+
+HACIENDA
+
+En http://portalempleado.aragon.es/portal/page?_pageid=193,4047503&_dad=portal&_schema=PORTAL  están las plantillas para hacer las peticiones por lotes y el procedimiento a seguir si quereis solicitar el alta de algun funcionario a estos servicios.
+
+
+TAREAS PENDIENTES
+
+
+-Añadir funcionalidad de sorteo realizado en listados de solicitudes
+$sorteo_realizado=$tcentro->sorteoRealizado($id_centro);//comprobar si se ha asignado el numero asignado
+
+-Los botones del sorteo se ocultan al pulsar, en ese momento se genera la tabla de provisiionales y se oculta forever el boton de nueva solicitud
+
+-Impedir guardar si no se han rellenado datos de tributantes cuando esta marcado renta_inferior
+-Una vez realizado el sorteo no pueden añadirse solicitudes, solo modificarse
+-En el listado de solicitudes baremadas incluir los datos de baremo de las opciones validadas
+
+-Si los datos de baremos total y validado son iguales debe aparecer en verde
+-Datos de centros de ed especial en los combos del formulario de solicitud
+-Recuprar, guardar y modificar datos tributarios
+-"EXPONE": en el caso de un niño de "nuevaescolarización", la casilla “centro de estudios actual” se mantiene en rojo. No escribimos centro pues no ha estado matriculado. (Esto posiblemente genera un error y por tanto sea la causa de que al final no nos la grabe, más adelante te lo indicamos). Debería ocurrir ,pensamos, que si el alumno como era el caso supuesto, tiene 3 años, y no viene de otro centro; al marcar el botón "nueva escolarización", la casilla del "centro de estudios actual " automáticamente se pusiera ok o verde y nos dejara avanzar.
+
+Sugerencia: poner la opción de "no ha estado escolarizado", entonces sí se activa el ok o verde. Pero lo hemos hecho a nuestra manera, quizá sea bueno sugerirlo en la lista de centro o desplegable.- En casos de alumnos que vienen de otro centro, todo bien, 
+SUGERENCIA: que ponga CEIP, CC, CEE...no solo el nombre del centro, y no solo ordinarios.
+
+En modalidad origen: sólo contempla combinada y EE. Pero hay aulas preferentes, y centro ordinario sin ser combinada, (es decir puede venir de un aula ordinaria de 3º de EI y el paso a primaria, cambiar modalidad a EE).
+
+-Añadir despues de la fase de pruebas la validación de los datos del formulario
+
+-crear pdf de inscripcion
+-Añadir botón para generar listados en pdf según loq haya en pantalla
+-Revisar el tema del nombre de usuario, ya que se pueden hacer las solicitudes q se quieran asi q habria q generar un codigo de acceso para cada una o algo asi
+		Posiblemente que se genere un pin para aacceder junto con el dni
+-Revisar el temna de codigo de solicitud
+-Tabla resumen solicitudes incluye el número en cada fase
+-Si una solicitud está validada, en cuanto a baremación, se marca autom. como BAREMADA. No ocurre lo contrario.
+-En el sorteo el centro introduce un número y se genera un número aleatorio por alumno o solicitud VALIDADA y un nuevo número, numero orden, por alumno en relación al número de sorteo
+-Despues del introducr el seorteo se pulsa un botón para generar el listado totalmente ordenado 
+-Revisar listados de centros de ed especial y el resto
+
+
+#########################################################################################################################################################################
+LISTADOS DE LISTADOS
+
+1. Listados nº aleatorio:  Apellidos y Nombre( Ordenados alfabeticamente) ------  Número Aleatorio Asignado
+
+TODAS, EBO Y TVA
+
+2. Listado de solicitudes baremadas: Apellidos y Nombre( Ordenados alfabeticamente) ------  Número Aleatorio Asignado ---- Puntuación Baremo(Total de puntos)
+
+TODAS, EBO Y TVA
+
+
+3. Listado admitidos Provisionalmente: Nº de orden ---  Número Aleatorio Asignado ---------Apellidos y Nombre ------  Criterios admisión(1,2,3) ---- Puntuación Baremo(Total de puntos)
+
+SEPARAR EBO Y TVA
+
+4. Listado no admitidos Provisionalmente:Nº de orden ---  Número Aleatorio Asignado ---------Apellidos y Nombre ------  Criterios admisión ---- Puntuación Baremo(Total de puntos)
+
+SEPARAR EBO Y TVA
+
+NO Admitidos son los q no son admitiods depsues del sorteo
+5. Listado excluidos Provisionalmente: Nº de orden ---  Número Aleatorio Asignado ---------Apellidos y Nombre ------  Criterios admisión ---- Puntuación Baremo(Total de puntos)
+
+SEPARAR EBO Y TVA
+
+Los exlcuidos son los irregulares y duplicados
+
+6. Listado Definitivos (Igual que provisionales) 
+
+SEPARAR EBO Y TVA
+#########################################################################################################################################################################
+
+
+1. FASE II
+
+Cuando finaliza el sorteo hay q actualizar las plazas vacantes de los centros, salvo las plazas que tienen reserva.
+Mostrar alumnos incluyendo los no admitidos/excluidos y sus centros de segunda opcion, tercera...
+Permitir a los administradores asignar al alumno a un centro siempre q queden plazas
+
+ASIGNACION AUTOMATICA
+Revisar los alumnos, primero los que tienen reserva de plazas
+Si pueden moverse a su primera opcion se liber ala plaza, actualizando vacantes en el centro original, sino se reasigna al centro inicial, sin actualizar vacantes, pues no se s contemplaba
+
+
+PRUEBAS CENTROS
+#########################################################################################################################################################################
+PRUEBAS INSCRIPCION CENTROS ED ESPECIAL
+
+
+1. Creación de solicitudes
+
+	Para cada centro crear:
+
+	-Tres Solicitudes como ciudadano anónimo (desde el botón 'Crear solicitud')
+	
+	-Un número de solicitudes como centro que exceda el número de vacantes para 
+	cada tipo de estudio (EBO y TVA). Si no hay vacantes generarlas desde la pestaña MATRICULA (usando los botones de 'CONTINUA'
+	
+	-Las solicitudes deben ser variadas, desde una que tenga los datos mínimos (nombre, apellidos y dni del tutor) hasta otra que
+	incluya todos los datos posibles, incluyendo nombre de hermanos, renta mínima etc...
+	
+2. Sorteo
+
+	-Al finalizar el proceso avisar para realizar el sorteo y generar listados del sorteo e iniciar la fase baremación.
+
+3. Inicio baremación
+
+	-Sobre cada una de las inscripciones realizar modificaciones en el baremo y marcarlas como baremadas (no necesariamente todas).
+	-Avisar para generar los listados baremados
+	
+4.	Publicación listados baremados
+
+	-Generar los listados y comprobar q son correctos (Con Mila)
+	
+5.	Listados provisionales
+
+	-Modificar algunas de las solicitudes baremadas y generar los nuevos listados provoisionales
+
+6.	Listados definitivos
+
+	-Modificar otras solicitudes y generar listados definitivos
+	-Comprobar q los listados provisionales no se han alterado
+	
+-----------------------------------------------------------------------------------------
+	Cuestiones a tener en cuenta
+	
+	-En cuanto se vea cualquier error avisar a Luis
+	-trabajar con los centros:
+		
+		RIVIERE: 
+				usuario y clave: 50017369
+		
+		-PIAGET:
+				usuario y clave: 50018131
