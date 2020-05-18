@@ -1,7 +1,7 @@
 
 
 
-Iniciando Copia tabla solicitudes definitiva a las 10:05 del dia 10-May-2020
+Iniciando Copia tabla solicitudes definitiva a las 19:05 del dia 17-May-2020
 
 CENTRO: 22002338
 
@@ -66,4 +66,4 @@ NOMBRE: SEGEDA
 FASE: 3
 NSOLICITUDES: 25
 
-Copia tabla solicitudes definitiva. Realizada corectamente a las 10:05 del dia 10-May-2020
+Copia tabla solicitudes definitiva. Realizada corectamente a las 19:05 del dia 17-May-2020

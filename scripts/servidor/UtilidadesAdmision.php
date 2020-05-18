@@ -253,13 +253,15 @@ id_centro=$idcentro";
     	public function getAlumnosReserva()
 	{
 		$resultSet=array();
-		$sql="SELECT id_alumno,nombre,id_centro_estudios_origen,tipoestudios FROM alumnos where est_desp_sorteo='admitida' or (est_desp_sorteo='noadmitida' and reserva=1)";
+		$sql="SELECT id_alumno,nombre,id_centro_estudios_origen,tipoestudios FROM
+alumnos where est_desp_sorteo='admitida' or (est_desp_sorteo='noadmitida' and
+reserva=0)";
 		$query=$this->con->query($sql);
 		if($query)
 		while ($row = $query->fetch_object()) {
 		   $resultSet[]=$row;
 		}
-		
+	   print($sql);	
 		return $resultSet;
     }
    public function getAlumnosFase2($t='tmp')
@@ -287,9 +289,12 @@ id_centro=$idcentro";
 			$a=(array)$a;
 			$corigen=$a['id_centro_estudios_origen'];
 			$tipoestudios=$a['tipoestudios'];
+			//$admitido=$a['est_desp_sorteo'];
 			//comporbar cada alumno y si itiene reserva actualizar plaza en el centro de origen
+			//if($a['id_alumno']=='8957') print_r($a);exit();
 			if($corigen!=0)
 			{
+         print_r($a);
 			//print_r($a);exit();
 			if($this->setVacantesCentroFase2($corigen,0,$tipoestudios,1)!=1) return 0;
 			}

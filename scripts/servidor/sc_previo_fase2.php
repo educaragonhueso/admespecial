@@ -21,8 +21,8 @@ $res1=0;
 $list=new ListadosController('alumnos');
 $conexion=$list->getConexion();
 $ccentros=new CentrosController(0,$conexion);
-$centro=new Centro($ccentros->conectar->conexion(),'','no',0);
-$utils=new UtilidadesAdmision($ccentros->conectar->conexion(),$ccentros,$centro);
+$centro=new Centro($conexion,'','no',0);
+$utils=new UtilidadesAdmision($conexion,$ccentros,$centro);
 
 //actualizar vacantes de centros
 $res1=$utils->actualizaVacantesCentros();
