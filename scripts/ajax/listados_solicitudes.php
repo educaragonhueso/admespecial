@@ -31,7 +31,6 @@ if(isset($_POST['provincia']))
 	$provincia=$_POST['provincia'];
 
 $tsolicitud=new Solicitud($conexion);
-print("preadmes");
 $tcentro->setNombre();
 $nombre_centro=$tcentro->getNombre();
 $fase_sorteo=$tcentro->getFaseSorteo();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
@@ -68,9 +67,12 @@ $log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES CON ROL: ".$_POST['rol
 //Para el caso de acceso del administrador o servicios provinciales
 if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 {
-	if($fase_sorteo==1) print($form_sorteo_completo);
-        if($fase_sorteo==2) print($form_sorteo_parcial); //mostramos formulario para hacer el sorteo, ya se han hecjo las asignaciones
-	$centros=$list->getCentrosIds($provincia);	
+   if($estado_convocatoria==1)
+   {
+	   if($fase_sorteo==1) print($form_sorteo_completo);
+      if($fase_sorteo==2) print($form_sorteo_parcial); //mostramos formulario para hacer el sorteo, ya se han hecjo las asignaciones
+	}
+   $centros=$list->getCentrosIds($provincia);	
 	foreach($centros as $centro)
 	{
 	########################################################################################
