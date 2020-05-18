@@ -6,14 +6,20 @@ FASE0:
       carga centros
       carga matricula
 
-   
 FASE I:
+   
+   Dia sorteo
+   Antes del dia del sorteo debe poenrse el centro o los cenrtos en fase 1
+
+      scripts:
+
+         sc_dia_sorteo_fase1.php 
 
    Al  finalizar admisión se podrá baremar generan listados provisionales
 
-   scripts:
-            sc_copia_provisional.php
-            sc_copia_definitiva.php
+      scripts:
+         sc_copia_provisional.php
+         sc_copia_definitiva.php
 
 FASE II
 

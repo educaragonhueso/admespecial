@@ -73,17 +73,21 @@ target="_blank">Mapa Centros</a>';
          echo '<a class="show_solicitudes nav-link" href="#">Solicitudes</a>';
       echo '</li>';
       }
-   if($_SESSION['estado_convocatoria']>=1){?>
-                            <li class="nav-item active msuperior dropdown" id="msorteo">
-				<?php if($_SESSION['sorteo']==1){?>
-                                <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Sorteo</a>
-				 <div class="dropdown-menu">
-				 <a class="lgenerales dropdown-item" href="#" id="sor_ale" data-subtipo="sor_ale" data-tipo="sorteo">Numero aleatorio </a>
-				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_bar">Solicitudes baremadas</a>
-				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_det">Detalle baremo</a>
-				 </div>
-				<?php }?>
-                            </li>
+   if($_SESSION['estado_convocatoria']>=1)
+   {?>
+            <li class="nav-item active msuperior dropdown" id="msorteo">
+               <?php if($_SESSION['sorteo']==1){?>
+                <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Sorteo</a>
+                <div class="dropdown-menu">
+                     <a class="lgenerales dropdown-item" href="#" id="sor_ale" data-subtipo="sor_ale" data-tipo="sorteo">Numero aleatorio </a>
+                  <?php if($_SESSION['rol']!='alumno'){?>
+                <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_bar">Solicitudes baremadas</a>
+                <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_det">Detalle baremo</a>
+                  <?php }?>
+                </div>
+               <?php }?>
+            </li>
+  <?php if($_SESSION['rol']!='alumno'){?>
 		<?php if(($_SESSION['estado_convocatoria']<=30 and $_SESSION['estado_convocatoria']>=1)  or $_SESSION['fase_sorteo']==2) {?>
                             <li class="nav-item active msuperior dropdown" id="mprovisional">
                                  <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
@@ -121,7 +125,8 @@ target="_blank">Mapa Centros</a>';
                             </li>
 		<?php }?>
 		<?php }?>
-	<?php }?>
+   <?php }?>
+<?php }?>
         </ul>
     </div>
 </nav>
