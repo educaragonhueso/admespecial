@@ -1061,6 +1061,34 @@ a.id_alumno=t.id_alumno join centros c on c.id_centro=a.id_centro_destino";
       return $resultSet;
 
    }
+   public function desmarcarValidados($c=1)
+   {
+   //desmarcamos los campos q no han sido validados en el baremo
+      if($c==1)
+      {
+         $sql1="UPDATE baremo SET proximidad_domicilio='sindomicilio' WHERE validar_proximidad_domicilio=0";
+         $sql2="UPDATE baremo SET tipo_familia='no' WHERE validar_tipo_familia=0";
+         $sql3="UPDATE baremo SET discapacidad='no' WHERE validar_discapacidad=0";
+      }
+      else
+      {
+         $sql1="UPDATE baremo SET proximidad_domicilio='sindomicilio' WHERE
+validar_proximidad_domicilio=0 and id_alumno in (select id_alumno from alumnos
+WHERE id_centro_destino=$c)";
+         $sql2="UPDATE baremo SET tipo_familia='no' WHERE validar_tipo_familia=0
+and id_alumno in (select id_alumno from alumnos WHERE id_centro_destino=$c)";
+         $sql3="UPDATE baremo SET discapacidad='no' WHERE validar_discapacidad=0
+and id_alumno in (select id_alumno from alumnos WHERE id_centro_destino=$c)";
+      }
+		$this->log_listados_provisionales->warning("ACTUALIZACION BAREMO:
+".$sql1.$sql2.$sql3);
+      $query1=$this->db->query($sql1);
+      $query2=$this->db->query($sql2);
+      $query3=$this->db->query($sql3);
+      if($query1 and $query2 and $query3) return 1;
+      else return 0;
+   }
+
 	public function getAllSolListados($c=1,$tipo=0,$subtipo_listado='',$fase_sorteo=0,$estado_convocatoria=0,$provincia='todas') 
 	{
       //si el estado de la convocatoria es previo a provisioonales la tabla del
