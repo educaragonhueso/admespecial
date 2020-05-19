@@ -48,6 +48,7 @@ $solicitudes=$list->getSolicitudes($id_centro,$tipo,$fase_sorteo,$modo,$subtipo,
 ##################################################################################
 $log_gencsvs->warning("SOLICITUDES  CSV SUBTIPO: $subtipo CAMPOS DATOS: ");
 $log_gencsvs->warning(print_r($$camposdatos,true));
+$log_gencsvs->warning(print_r($solicitudes,true));
 ##################################################################################
 
 //si es para datos de matricula, con rol de admin
