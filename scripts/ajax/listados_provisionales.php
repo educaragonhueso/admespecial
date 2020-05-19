@@ -42,7 +42,7 @@ $fase_sorteo=$tcentro->getFaseSorteo();
 //OPERACIONES ACTUALIZACION SOLICITUDES SEGUN ESTADO CONVOCATORIA
 //Si se ha realizado ya el sorteo en ese centro y aun no estamos en el estado de provisionales
 
-if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=2)
+if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=1)
 {
 	if($_POST['rol']=='centro')
 	{
@@ -53,6 +53,8 @@ if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=2)
 	
 		if($tsolicitud->setSolicitudesSorteo($id_centro,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
 				print("NO HAY VACANTES<br>");
+      if($tsolicitud->desmarcarValidados($id_centro)==0)
+         print("NO HAY VALIDADOS<br>");
 		$ct=$tsolicitud->copiaTablaCentro($id_centro,'alumnos_provisional_final');	
 	}
 	elseif($_POST['rol']=='admin' or $_POST['rol']=='sp')
@@ -89,6 +91,9 @@ if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=2)
 		}
 		//copiamos todos los datos a tabla de provisionales	
 		$ct=$tsolicitud->copiaTablaCentro(1,'alumnos_provisional_final');	
+      if($tsolicitud->desmarcarValidados(1)==0)
+         print("NO HAY VALIDADOS<br>");
+
 	}	
 ########################################################################################
 $log_listados_provisionales->warning("ACTUALIZADA TABLA PROVISIONALES $ct");
