@@ -28,30 +28,39 @@ class Solicitud extends EntidadBase{
 			$this->log_fase_provisional=new logWriter('log_fase_provisional',DIR_LOGS);
 			$this->log_fase_baremacion=new logWriter('log_fase_baremacion',DIR_LOGS);
 			$this->log_listados_solicitudes_fase2=new logWriter('log_listados_solicitudes_fase2',DIR_LOGS);
+			$this->log_listados_generales=new logWriter('log_listados_generales',DIR_LOGS);
     }
      
-  public function copiaTablaBaremacion($centro,$tipo='alumnos_baremacion_final')
+  public function copiaTablaBaremacion($centro,$tipoa='alumnos_baremacion_final',$tipob='baremo_baremacion_final')
 	{
-		$tabla_destino=$tipo;
-		$sql="SELECT * FROM alumnos";
+		$tabla_destino_alumnos=$tipoa;
+		$tabla_destino_baremo=$tipob;
+		$sqla="SELECT * FROM alumnos";
+		$sqlb="SELECT * FROM baremo";
 		$this->log_fase_baremacion->warning("ENTRANDO EN COPIAR TABLA CENTRO: $centro");
 		if($centro!=1)
 			{
-			$dsql='DELETE from '.$tabla_destino.' WHERE id_centro_destino='.$centro;
-			$isql='INSERT IGNORE INTO '.$tabla_destino.' '.$sql.' and id_centro_destino='.$centro;
+			$dsqla='DELETE from '.$tabla_destino_alumnos.' WHERE id_centro_destino='.$centro;
+			$isqla='INSERT IGNORE INTO '.$tabla_destino_alumnos.' '.$sqla.' and id_centro_destino='.$centro;
+			$dsqlb='DELETE from '.$tabla_destino_baremo.' WHERE id_centro_destino='.$centro;
+			$isqlb='INSERT IGNORE INTO '.$tabla_destino_baremo.' '.$sqlb.' and id_centro_destino='.$centro;
 			}
 		else
 			{
-			$dsql='DELETE from '.$tabla_destino;
-			$isql='INSERT IGNORE INTO '.$tabla_destino.' '.$sql;
+			$dsqla='DELETE from '.$tabla_destino_alumnos;
+			$isqla='INSERT IGNORE INTO '.$tabla_destino_alumnos.' '.$sqla;
+			$dsqlb='DELETE from '.$tabla_destino_baremo;
+			$isqlb='INSERT IGNORE INTO '.$tabla_destino_baremo.' '.$sqlb;
 			}
-		$this->log_fase_baremacion->warning("BORRANDO DE TABLA $tabla_destino ".$dsql);
-		$this->log_fase_baremacion->warning("CARGANDO TABLA DESPUES DE SORTEO $tabla_destino ".$isql);
+		$this->log_fase_baremacion->warning("BORRANDO DE TABLA
+$tabla_destino_alumnos ".$dsqlb);
+		$this->log_fase_baremacion->warning("CARGANDO TABLA DESPUES DE SORTEO
+$tabla_destino_baremo ".$isqlb);
 		
-		if($this->db()->query($dsql))
-			if($this->db()->query($isql)) return 1;
-			else return $this->db()->error;
-		else return $this->db()->error;
+		if($this->db()->query($dsqla) and $this->db()->query($dsqlb) and $this->db()->query($isqla) and $this->db()->query($isqlb))
+	      return 1;	
+      else 
+         return $this->db()->error;
 
 	}
   public function copiaTablaCentro($centro,$tipo)
@@ -1043,27 +1052,43 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		else return 0;
 
 	}
-	public function getAllSolSorteo($c=1,$tipo=0,$fase_sorteo=0,$subtipo_listado='',$provincia='todas',$tabla_alumnos='alumnos') {
+	public function
+getAllSolSorteo($c=1,$tipo=0,$fase_sorteo=0,$subtipo_listado='',$provincia='todas',$tabla_alumnos='alumnos',$tabla_baremo='baremo') {
         $resultSet=array();
 				$centro='id_centro_destino';
 				//si no son para actualizar el sorteo, listado normal completo.Antes de asignar el numero de sorteo
 				if($fase_sorteo==0)
 				{
 					if($c!=1)
-						$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno where $centro=".$c." order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc";
+						$sql="SELECT
+a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado,
+b.puntos_validados FROM $tabla_alumnos a left join $tabla_baremo b on b.id_alumno=a.id_alumno where $centro=".$c." order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc";
 					else
-						$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios, nasignado, b.puntos_validados FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno where order by a.id_centro_destino,a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc";
+						$sql="SELECT
+a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,
+nasignado, b.puntos_validados FROM $tabla_alumnos a left join $tabla_baremo b on b.id_alumno=a.id_alumno where order by a.id_centro_destino,a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc";
 				}
 				else //En cualquier otro caso mostramos todas menos las q están en fase de borrador
 				{
 					if($c!=1)
-						$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno where $centro=".$c." and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc";
+						$sql="SELECT
+a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado
+as nasignado,
+b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro
+FROM $tabla_alumnos a left join $tabla_baremo b on b.id_alumno=a.id_alumno where $centro=".$c." and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc";
 					else
-						$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,a.id_centro_destino as id_centro,c.nombre_centro as nombre_centro FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' order by c.id_centro,a.tipoestudios, a.apellido1,a.nombre,c.id_centro, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc";
+						$sql="SELECT
+a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado
+as nasignado,
+b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,a.id_centro_destino
+as id_centro,c.nombre_centro as nombre_centro FROM $tabla_alumnos a left join
+$tabla_baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' order by c.id_centro,a.tipoestudios, a.apellido1,a.nombre,c.id_centro, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc";
 				}
 
 				$this->log_listado_solicitudes->warning("CONSULTA SOLICITUDES SORTEO");
 				$this->log_listado_solicitudes->warning($sql);
+				$this->log_listados_generales->warning("CONSULTA GENERALES:");
+				$this->log_listados_generales->warning($sql);
 				$query=$this->db->query($sql);
         if($query)
 				while ($row = $query->fetch_object()) 

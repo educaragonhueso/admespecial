@@ -40,7 +40,8 @@ $log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, CENTRO: ".$i
 ######################################################################################
 if($estado_convocatoria>=22 and $subtipo_listado=='sor_bar')
 {
-   print("EN BAREMACION");
+   $log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES EN
+BAREMACION substipo: $subtipo_listado estado $estado_convocatoria");
    $solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo=3,'normal',$subtipo_listado,'todas',$estado_convocatoria); 
    #$solicitudes=$list->getSolicitudes($id_centro,0,$estado_convocatoria=$estado_convocatoria); 
 }

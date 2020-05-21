@@ -21,6 +21,7 @@ class ListadosController extends ControladorBase{
 		$this->log_listados_provisionales=new logWriter('log_listados_provisionales',DIR_LOGS);
 		$this->log_listados_definitivos=new logWriter('log_listados_definitivos',DIR_LOGS);
 		$this->log_listados_solicitudes=new logWriter('log_listado_solicitudes',DIR_LOGS);
+		$this->log_listados_generales=new logWriter('log_listados_generales',DIR_LOGS);
 		$this->log_gencsvs=new logWriter('log_gencsvs',DIR_LOGS);
 		$this->log_listados_solicitudes_fase2=new logWriter('log_listados_solicitudes_fase2',DIR_LOGS);
     }
@@ -102,13 +103,20 @@ class ListadosController extends ControladorBase{
 	}
   public function getSolicitudes($id_centro=1,$tiposol=0,$fase_sorteo=0,$modo='normal',$subtipo_listado='',$provincia='todas',$estado_convocatoria=0)
 	{
+		      $this->log_listados_generales->warning("ENTRANDO EN
+GETSOLICITUDEs,BAREMACION subtipo: $subtipo_listado estado: $estado_convocatoria
+modo $modo");
 		$solicitud=new Solicitud($this->adapter);
 		if($modo=='normal')// listados previos al sorteo
     	{
             //si estamos en pub de baremacion
          if($subtipo_listado=='sor_bar' and $estado_convocatoria>=22)
-	    		$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia,'alumnos_baremacion_final');
-	    	else	
+         {
+		      $this->log_listados_generales->warning('ENTRANDO EN
+GETSOLICITUDEs,BAREMACION SOR_BAR');
+	    		$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia,'alumnos_baremacion_final','baremo_baremacion_final');
+	    	}
+         else	
             $allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia);
  		}
 		elseif($modo=='csv')
