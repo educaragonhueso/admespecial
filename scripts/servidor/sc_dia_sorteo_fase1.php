@@ -16,7 +16,7 @@ $res1=0;
 $ccentros=new CentrosController();
 $centro=new Centro($ccentros->conectar->conexion(),1,'no',0);
 
-//actualizar vacantes de centros
+//actualizar estado de sorteo en centros
 $res1=$centro->setFaseSorteo(1);
 
 if($res1==1)

@@ -895,7 +895,6 @@ if(d[0].indexOf('datos_tutor1')==0)
 if(d[0].indexOf('tributantes_dni1')==0)
 	{
 	var nomt1=$("input[name='tributantes_nombre1']").val();
-	console.log("nomt1: "+nomt1+" long: "+nomt1.length);
 	if(nomt1.length!=0) 
 		{
 		if(d[1].length!=9) 
@@ -948,37 +947,7 @@ if(d[0].indexOf('baremo_proximidad_domicilio')==0)
 		if(valor2.length<=2) return "Valor para el domicilio laboral en zona limitrofe";
 	}
 	}
-//		if(d[1]=='') return "Valor para el domicilio laboral";
-//	if($("input[value='dllimitrofe']").is(':checked')) 
-//		if(d[1]=='') return "Valor para el domicilio laboral en zona limítrofe";
-/*
-if(d[0].indexOf('calle_dfamiliar')==0)
-	{
-	if(d[1]=='') {return 'Datos del domicilio familiar-calle_dfamiliar';};
-	}
-if(d[0].indexOf('num_dfamiliar')==0)
-	{
-	if(d[1]==''|| d[1].length>3) {return 'Numero del domicilio familiar no superior a 3 dígitos-num_dfamiliar';};
-	}
-if(d[0].indexOf('piso_dfamiliar')==0)
-	{
-	if(d[1]=='') {return 'Piso del domicilio familiar-piso_dfamiliar';};
-	}
-if(d[0].indexOf('cp_dfamiliar')==0)
-	{
-	if(d[1]==''|| d[1].length>5) {return 'CP del domicilio familiar debe tener 5 dígitos-cp_dfamiliar';};
-	}
-if(d[0].indexOf('loc_dfamiliar')==0)
-	{
-	if(d[1]=='') {return 'Debes indicar una localidad-loc_dfamiliar';};
-	}
-if(d[0].indexOf('tel_dfamiliar1')==0)
-	{
-	if(d[1]==''|| d[1].length!=9) {return 'Debes indicar un teléfono habitual correcto-tel_dfamiliar1';};
-	}
-*/
 //comp datos sección expone
-
 if(d[0]=='id_centro_destino')
 	{
 	if(d[1]=='') {return 'Debes indicar un centro de destino';}
@@ -1128,10 +1097,11 @@ $(".lgenerales").click(function () {
   var vrol=$('#rol').attr("value");
   var vtipo=$(this).attr("data-tipo");
   var vsubtipo=$(this).attr("data-subtipo");
+  var vestado_convocatoria=$('#estado_convocatoria').val();
 $.ajax({
   method: "POST",
   url: "../scripts/ajax/listados_generales.php",
-  data: {id_centro:vid_centro,rol:vrol,tipo:vtipo,subtipo:vsubtipo,pdf:vpdf},
+  data: {id_centro:vid_centro,rol:vrol,tipo:vtipo,subtipo:vsubtipo,pdf:vpdf,estado_convocatoria:vestado_convocatoria},
       success: function(data) {
 
 				if(vrol=='centro')

@@ -76,6 +76,12 @@ class Centro extends EntidadBase{
 			return $query->fetch_object()->num_sorteo;
 			else return 0;
 	}
+ 	public function resetSorteoFase2(){
+		$sql=" update centros set asignado_num_fase2=0,num_sorteo_fase2=0";
+		$res=$this->conexion->query($sql);
+		if($res) return 1;
+      else return 0;
+	}
     public function getVacantesFase2($idcentro=1,$tipo='ebo'){
 			$tvacantes="vacantes_".$tipo;
 			if(!isset($id_centro)) $id_centro=$this->id_centro;

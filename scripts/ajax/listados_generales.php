@@ -18,6 +18,7 @@ $log_listados_generales->warning(print_r($_POST,true));
 
 $dir_pdf=DIR_BASE.'/scripts/datossalida/pdflistados/';
 $id_centro=$_POST['id_centro'];
+$estado_convocatoria=$_POST['estado_convocatoria'];
 $tipo_listado=$_POST['tipo'];//listados del sorteo, provisionales o definitivos
 $subtipo_listado=$_POST['subtipo'];//dentro de cada tipo, el subtipo de listado
 $filtro_datos='<input type="text" class="form-control" id="filtrosol"  placeholder="Introduce datos del alumno"><small id="emailHelp" class="form-text text-muted"></small>';
@@ -37,10 +38,17 @@ if($subtipo_listado=='sor_det') {$nombre_listado='LISTADO DETALLE BAREMO';$forma
 ######################################################################################
 $log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, CENTRO: ".$id_centro);
 ######################################################################################
-
-//mostramos las solitudes completas sin incluir borrador
-$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo=3); 
-
+if($estado_convocatoria>=22 and $subtipo_listado=='sor_bar')
+{
+   print("EN BAREMACION");
+   $solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo=3,'normal',$subtipo_listado,'todas',$estado_convocatoria); 
+   #$solicitudes=$list->getSolicitudes($id_centro,0,$estado_convocatoria=$estado_convocatoria); 
+}
+else
+{
+   //mostramos las solitudes completas sin incluir borrador
+   $solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo=3); 
+}
 ######################################################################################
 $log_listados_generales->warning("OBTENIDAS SOLICITUDES GENERALES");
 ######################################################################################
