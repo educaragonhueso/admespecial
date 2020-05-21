@@ -21,7 +21,7 @@ $ccentros=new CentrosController(0,$conexion);
 $centro=new Centro($conexion,'','no',0);
 $utils=new UtilidadesAdmision($conexion,$ccentros,$centro);
 $tsolicitud=new Solicitud($conexion);
-$ct=$tsolicitud->copiaTablaBaremacion(1,'alumnos_baremacion_final');	
+$ct=$tsolicitud->copiaTablaBaremacion(1,'alumnos_baremacion_final','baremo_baremacion_final');	
 
 $log_fase_baremacion->warning("RESULTADO COPIAR TABLA $ct ");
 
