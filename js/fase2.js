@@ -32,9 +32,11 @@ var vidcentro=$('#id_centro').text();
 	  data: {asignar:'1',rol:vrol,subtipo:vsubtipo,estado_convocatoria:vestado_convocatoria,sorteo_fase2:vsorteo_fase2},
 	  url:'../scripts/ajax/listados_solicitudes_fase2.php',
 	      success: function(data) {
+		      alert("NUMERO ALEATORIO ASIGNADO CORRECTAMENTE");
+            $("#boton_asignar_numero_fase2").remove();
 				$("#sol_table").remove();
 				$("#listado_fase2").html(data);
-                                $("#num_sorteo").prop("disabled",false);
+            $("#num_sorteo").prop("disabled",false);
 		},error: function (request, status, error) {
         alert(error);
     }
@@ -67,7 +69,10 @@ return;
 	  data: {asignar:'2',rol:vrol,nsorteo:parseInt(vnum_sorteo),estado_convocatoria:vestado_convocatoria,subtipo:vsubtipo},
 	  url:'../scripts/ajax/listados_solicitudes_fase2.php',
 	      success: function(data) {
+		      alert("SORTEO REALIZADO CORRECTAMENTE");
 				$("#sol_table").remove();
+            $("#boton_realizar_sorteo_fase2").remove();
+            $("#num_sorteo").remove();
 				$("#listado_fase2").html(data);
 		},
 	      error: function() {

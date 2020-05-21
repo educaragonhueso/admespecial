@@ -37,26 +37,23 @@ $utils=new UtilidadesAdmision($conexion);
 $tsolicitud=new Solicitud($conexion);
 $tcentro=new Centro($conexion,1,'ajax');
 $nsolicitudes=$tcentro->getNumSolicitudes();
-//si se ha pulsado el boton de asignar nuemro de sorteo
+
+if($utils->checkSorteoFase2()==0) $sorteo=0;
+else $sorteo=1;
+
+
 if($_POST['asignar']=='1')
 	{
-	if($utils->asignarNumSorteoFase2()!=1){ print("Error asignando numero para el sorteo");exit();}
+	if($utils->asignarNumSorteoFase2(1)!=1){ print("Error asignando numero para el sorteo");exit();}
 	//$subtipo_listado="lfase2_sol";//si es para el sorteo el subtipo es lfase2_sol
 	}
 //si se ha pulsado el boton de realizar sorteo
 if($_POST['asignar']=='2')
 	{
 	if($utils->actualizarSolSorteoFase2(1,$nsorteo,$nsolicitudes)!=1){ print("Error realizando el sorteo");exit();}
-	$fsfase2 = fopen(DIR_BASE."/scripts/datos/sorteofase2.txt", "w") or die("Unable to open file!");
-	fwrite($fsfase2,$nsorteo);
-	fclose($fsfase2);
 	}
 $cabecera="campos_cabecera_".$subtipo_listado;
 $camposdatos="campos_bbdd_".$subtipo_listado;
-//actualizamos el estado del sorteo. 0:no realizado, 1.numero asignado, 2. realizado
-//$utils->setFase2Sorteo(1);
-//$fase2_sorteo=1;
-
 
 $form_sorteo_fase2='<div id="form_sorteo" class="input-group mb-3">
 		<div class="input-group-append">
@@ -74,23 +71,56 @@ $boton_asignar_automatica='<div id="form_asignarfase2" class="input-group mb-3">
 				</div>
 		          </div>';
 
+$boton_descarga="<button type='button' class='btn btn-info' onclick='window.open(\"".DIR_SOR_WEB.$subtipo_listado.".pdf\",\"_blank\");'>Descarga listado</button>";
 //mostramos las solitudes completas sin incluir borrador
 $solicitudes=$list->getSolicitudes(1,0,0,$modo='fase2',$subtipo_listado,'todas',3); 
-
 ######################################################################################
 $log_listados_solicitudes_fase2->warning("OBTENIDAS $nsolicitudes SOLICITUDES FASE II:");
 ######################################################################################
 //Si es el listado normal, no hay sorteo
+
+if($_POST['pdf']==1 and $subtipo_listado='lfase2_sol_sor')
+{
+	$datos=array();
+	$i=0;
+	//extraemos los campos de datos q nos interesan
+	foreach($solicitudes as $sol)
+	{
+		$datos[$i] = new stdClass;
+		foreach($$camposdatos as $d)
+		{
+			$datos[$i]->$d=$sol->$d;
+		}
+	$i++;
+	}
+	$pdf = new PDF();
+	$cab=$$cabecera;
+	$pdf->SetFont('Helvetica','',8);
+	$pdf->AddPage('L','',0,$nombre_listado);
+	$pdf->BasicTable($cab,$datos,0,30,$formato);
+	$pdf->Ln(20);
+	 // Arial italic 8
+	$pdf->SetFont('Arial','I',8);
+	  // Page number
+	$pdf->Cell(40,10,'SELLO CENTRO',1,0,'C');
+	$pdf->Cell(140,10,'En ______________________ a ____de________ de 2020',0,0,'C');
+	$pdf->Cell(0,10,'Firmado:',0,0);
+	$pdf->Ln();
+	$pdf->Cell(220,10,'El Director/a',0,0,'R');
+	$pdf->Output(DIR_SOR.$subtipo_listado.'.pdf','F');
+}
+
 if($_POST['asignar']==0)
 	{
-		print($form_sorteo_fase2); //mostramos formulario sorteo solo si no se ha hecho ya
+      if($sorteo==0)		print($form_sorteo_fase2); //mostramos formulario sorteo solo si no se ha hecho ya
 		$tablaresumen=$tcentro->getResumenFase2($_POST['rol']);
 		print($list->showTablaResumenFase2($tablaresumen,$ncol=1));
-		print($list->showFiltrosTipo());
+		#print($list->showFiltrosTipo());
 		print($filtro_datos);
 		print("<div id='listado_fase2' style='text-align:center'><h1>LISTADO LISTADO SOLICITUDES COMPLETO</h1></div>");
 	}
-print($boton_asignar_automatica); //mostramos formulario sorteo solo si no se ha hecho ya
+if($subtipo_listado='lfase2_sol_sor') print($boton_descarga); //mostramos formulario sorteo solo si no se ha hecho ya
+if($subtipo_listado!='lfase2_sol_sor') print($boton_asignar_automatica); //mostramos formulario sorteo solo si no se ha hecho ya
 print($list->showListado($solicitudes,$_POST['rol'],$$cabecera,$$camposdatos,$provisional=1,$subtipo_listado));
 print($script);
 ?>

@@ -15,6 +15,16 @@ FASE I:
 
          sc_dia_sorteo_fase1.php 
 
+   Fase baremacion
+
+   Hasta el dia de publicacion de baremacion (12:00) se veran los listados de
+solicitudes normales. A partir de ese momento, de publicacion se activara la
+tabla alumnos_baremacion_final q será copia de la original.
+
+      scripts:
+         a ejecutar en el momento de publicacion de la baremacion 
+         sc_copia_baremacion.php
+
    Al  finalizar admisión se podrá baremar generan listados provisionales
 
       scripts:
@@ -23,8 +33,16 @@ FASE I:
 
 FASE II
 
-   REcalculamos plazas vacantes teniendo en cuenta posibilidad e liberar plazas
+   Recalculamos plazas vacantes teniendo en cuenta posibilidad e liberar plazas
             sc_previo_fase2.php
+
+   Asignamos numero aleatorio
+   Realizamos sorteo, se guarda en el fichero sorteofase2.txt
+      
+        script:   
+         listado_solicitudes_fase2.php
+
+   
 FASE III
 
    Previo recargar coordenadas de centros y alumnos

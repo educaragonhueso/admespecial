@@ -80,8 +80,8 @@ target="_blank">Mapa Centros</a>';
                 <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Sorteo</a>
                 <div class="dropdown-menu">
                      <a class="lgenerales dropdown-item" href="#" id="sor_ale" data-subtipo="sor_ale" data-tipo="sorteo">Numero aleatorio </a>
-                  <?php if($_SESSION['rol']!='alumno'){?>
                 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_bar">Solicitudes baremadas</a>
+                  <?php if($_SESSION['rol']!='alumno'){?>
                 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_det">Detalle baremo</a>
                   <?php }?>
                 </div>
@@ -110,14 +110,15 @@ target="_blank">Mapa Centros</a>';
 		<?php }?>
 		<?php if(($_SESSION['rol']=='admin' or $_SESSION['rol']=='sp') and $_SESSION['estado_convocatoria']>30) {?>
                             <li class="nav-item active msuperior dropdown" id="mdefinitivo">
-                                 <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASEII</a>
+                                 <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASE II</a>
 		                 <div class="dropdown-menu">
+				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_sor">Listado Numero aleatorio fase2</a>
 				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_ebo">Listado Solicitudes fase2 EBO</a>
 				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_tva">Listado Solicitudes fase2 TVA</a>
 				 </div>
                             </li>
                             <li class="nav-item active msuperior dropdown" id="mdefinitivo">
-                                 <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASEIII</a>
+                                 <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASE III</a>
 		                 <div class="dropdown-menu">
 				 <a class="lfase3 dropdown-item" href="#" data-subtipo="lfase3_sol_ebo">Listado Solicitudes fase3 EBO</a>
 				 <a class="lfase3 dropdown-item" href="#" data-subtipo="lfase3_sol_tva">Listado Solicitudes fase3 TVA</a>

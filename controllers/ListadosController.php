@@ -102,14 +102,18 @@ class ListadosController extends ControladorBase{
 	}
   public function getSolicitudes($id_centro=1,$tiposol=0,$fase_sorteo=0,$modo='normal',$subtipo_listado='',$provincia='todas',$estado_convocatoria=0)
 	{
-		$this->log_gencsvs->warning('ENTRANDO EN GETSOLICITUDEs, MODO: '.$modo);
 		$solicitud=new Solicitud($this->adapter);
 		if($modo=='normal')// listados previos al sorteo
-    		{
-	    		$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia);
+    	{
+            //si estamos en pub de baremacion
+         if($subtipo_listado=='sor_bar' and $estado_convocatoria>=22)
+	    		$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia,'alumnos_baremacion_final');
+	    	else	
+            $allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia);
  		}
 		elseif($modo=='csv')
 		{
+		   $this->log_gencsvs->warning('ENTRANDO EN GETSOLICITUDEs, MODO: '.$modo);
 			$this->log_gencsvs->warning("OBTENIENDO DATOS CSV SUBTIPO:
 $subtipo_listado");
          if($subtipo_listado=='tri'){ //para el caso de tributantes 

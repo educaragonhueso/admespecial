@@ -14,16 +14,19 @@ class UtilidadesAdmision{
 		$this->log_fase2=new logWriter('log_fase2',DIR_LOGS);
 		$this->log_sorteo_fase2=new logWriter('log_sorteo_fase2',DIR_LOGS);
     		}
-  public function asignarNumSorteoFase2(){
+  public function asignarNumSorteoFase2($asig=0){
 		$this->log_sorteo_fase2->warning("ASIGNANDO NUMERO SORTEO");
 		$sql="SET @r := 0";
 		$this->con->query($sql);
 		//ponemos todas a cero para evitar inconsistencias
 		$sql1="UPDATE  alumnos_fase2 SET nasignado =0";
 		$sql2="UPDATE  alumnos_fase2 SET nasignado = (@r := @r + 1) ORDER BY  RAND()";
+		$sql3="UPDATE  centros SET asignado_num_fase2=$asig";
 		$this->log_sorteo_fase2->warning($sql1);
 		$this->log_sorteo_fase2->warning($sql2);
-		if($this->con->query($sql1) and $this->con->query($sql2))
+		$this->log_sorteo_fase2->warning($sql3);
+		if($this->con->query($sql1) and $this->con->query($sql2) and
+      $this->con->query($sql3))
 		{
 			$this->log_sorteo_fase2->warning("OK ASIGNANDO NUM SORTEO EN FASE2");
 			return 1;
@@ -32,7 +35,7 @@ class UtilidadesAdmision{
 			$this->log_sorteo_fase2->warning("ERROR ASIGNANDO NUM SORTEO FASE2: ");
 			$this->log_sorteo_fase2->warning($sql1);
 			$this->log_sorteo_fase2->warning($sql2);
-			$this->log_sorteo_fase2->warning($this->adapter->error);
+			$this->log_sorteo_fase2->warning($sql3);
 			return 0;
 		}
 		return 0;
@@ -43,10 +46,22 @@ class UtilidadesAdmision{
 		
 		$sql1="UPDATE alumnos_fase2 a set nordensorteo=$solicitudes+nasignado-$numero+1 where nasignado<$numero";
 		$sql2="UPDATE alumnos_fase2 a set nordensorteo=nasignado-$numero+1 where nasignado>=$numero";
+		$sql3="UPDATE  centros SET num_sorteo_fase2=$numero";
 
 		$this->log_sorteo_fase2->warning("ASIGNANDO NUMERO DESPUES DE SORTEO $sql1 -- $sql2");
-		if(!$this->con->query($sql1) or !$this->con->query($sql2)) return $this->con->error;
+		if(!$this->con->query($sql1) or !$this->con->query($sql2) or
+!$this->con->query($sql3)) return $this->con->error;
 		else return 1;
+	}
+ 	public function checkSorteoFase2(){
+		$sql="SELECT num_sorteo_fase2 as ns,asignado_num_fase2 as na FROM centros WHERE
+id_centro=1";
+		$res=$this->con->query($sql);
+		if($res) $row=$res->fetch_row();
+		$this->log_sorteo_fase2->warning("ESTADO SORTEO:");
+		$this->log_sorteo_fase2->warning(print_r($row,true));
+      if($row[0]!=0 and $row[1]!=0) return 1;
+      else return 0;
 	}
  	public function setVacantesCentroFase2($idc,$v,$t,$inc=0){
 		if($inc==1) //si inc es 1 se incrementan/decrementan las vacantes
