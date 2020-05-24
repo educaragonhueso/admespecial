@@ -20,8 +20,11 @@ $campos_cabecera_sor_det=array('Primer apellido','Segundo apellido','Nombre','Pr
 $campos_bbdd_sor_det=array('apellido1','apellido2','nombre','proximidad_domicilio','tutores_centro','renta_inferior','discapacidad','tipo_familia','hermanos_centro');
 
 //DATOS PARA EXPORTAR DATOS CSVS
-$campos_cabecera_csv_fase2=array('Tipo','Ap1','Ap2','Nombre','Loc','Calle','Reserva','Reserva Original','Centro origen','Cen.Pref','Cen.Alt1','Cen.Alt2','Cen.Alt3','Cen.Alt4','Cen.Alt5','Cen.Alt6','Baremo','Prioridad','Estado','Centro definitivo','Numero de sorteo asignado','Modificacion');
-$campos_bbdd_csv_fase2=array('tipoestudios','apellido1','apellido2','nombre','localidad','calle_dfamiliar','reserva','reserva_original','centro_origen','nombre_centro','centro1','centro2','centro3','centro4','centro5','centro6','puntos_validados','transporte','estado_solicitud','centro_definitivo','nasignado','tipo_modificacion');
+$campos_cabecera_csv_fase2=array('Tipo','Ap1','Ap2','Nombre','Loc','Calle','Reserva','Reserva
+Original','Centro
+origen','Cen.Pref','Cen.Alt1','Cen.Alt2','Cen.Alt3','Cen.Alt4','Cen.Alt5','Cen.Alt6','Baremo','Prioridad','Estado','Centro
+definitivo','Numero de orden despues del sorteo','Numero de sorteo asignado','Modificacion');
+$campos_bbdd_csv_fase2=array('tipoestudios','apellido1','apellido2','nombre','localidad','calle_dfamiliar','reserva','reserva_original','centro_origen','nombre_centro','centro1','centro2','centro3','centro4','centro5','centro6','puntos_validados','transporte','estado_solicitud','centro_definitivo','nordensorteo','nasignado','tipo_modificacion');
 
 $campos_cabecera_csv_fase3=array('Tipo','Ap1','Ap2','Nombre','Loc','Calle','Reserva','Cen.Pref','Cen.Alt1','Cen.Alt2','Cen.Alt3','Cen.Alt4','Cen.Alt5','Cen.Alt6','Baremo','Prioridad','Estado','Cen.Adj','NSorteo','Modificacion');
 $campos_bbdd_csv_fase3=array('tipoestudios','apellido1','apellido2','nombre','localidad','calle_dfamiliar','centro_origen','nombre_centro','centro1','centro2','centro3','centro4','centro5','centro6','puntos_validados','transporte','estado_solicitud','centro_definitivo','nasignado','tipo_modificacion');

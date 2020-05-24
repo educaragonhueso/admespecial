@@ -93,9 +93,6 @@ class Centro extends EntidadBase{
 			if($query)
 			return $query->fetch_object()->$tvacantes;
 			else return 0;
-		
-		
-
 		}
     public function getVacantes($rol='centro')
 		{
@@ -365,11 +362,12 @@ class Centro extends EntidadBase{
 
     public function actualizaVacantes($vebo,$vtva,$tipo=0,$inc) {
 			if($tipo==0)
-			$sql="update centros set vacantes_ebo=$vebo, vacantes_tva=$vtva where id_centro='$this->id_centro'";
+			$sql="update centros set vacantes_ebo=$vebo,
+vacantes_ebo_original=$vebo, vacantes_tva=$vtva, vacantes_tva_original=$vtva where id_centro='$this->id_centro'";
 			elseif($tipo==1)
-			$sql="update centros set vacantes_ebo=vacantes_ebo".$inc."1 where id_centro='$this->id_centro'";
+			$sql="update centros set vacantes_ebo_original=vacantes_ebo_original".$inc."1, vacantes_ebo=vacantes_ebo".$inc."1 where id_centro='$this->id_centro'";
 			elseif($tipo==2)
-			$sql="update centros set vacantes_tva=vacantes_tva".$inc."1 where id_centro='$this->id_centro'";
+			$sql="update centros set vacantes_tva_original=vacantes_tva_original".$inc."1, vacantes_tva=vacantes_tva".$inc."1 where id_centro='$this->id_centro'";
 
 			$this->log_fase2->warning("CONSULTA ACTUALIZANDO VACANTES: idcentro/ebo/tva: ".$this->id_centro."/".$vebo."/".$vtva);
 			$this->log_fase2->warning($sql);
