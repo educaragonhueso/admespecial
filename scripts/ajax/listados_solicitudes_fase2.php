@@ -45,12 +45,14 @@ else $sorteo=1;
 if($_POST['asignar']=='1')
 	{
 	if($utils->asignarNumSorteoFase2(1)!=1){ print("Error asignando numero para el sorteo");exit();}
+	if($utils->copiaTablaTmpFase2()!=1){ print("Error copiandko tabla tmp");exit();}
 	//$subtipo_listado="lfase2_sol";//si es para el sorteo el subtipo es lfase2_sol
 	}
 //si se ha pulsado el boton de realizar sorteo
 if($_POST['asignar']=='2')
 	{
 	if($utils->actualizarSolSorteoFase2(1,$nsorteo,$nsolicitudes)!=1){ print("Error realizando el sorteo");exit();}
+	if($utils->copiaTablaTmpFase2()!=1){ print("Error copiandko tabla tmp");exit();}
 	}
 $cabecera="campos_cabecera_".$subtipo_listado;
 $camposdatos="campos_bbdd_".$subtipo_listado;
@@ -65,7 +67,8 @@ $form_sorteo_fase2='<div id="form_sorteo" class="input-group mb-3">
 		<input type="text" id="num_sorteo" name="num_sorteo" value="" placeholder="NUMERO OBTENIDO" disabled>
 		<input type="hidden" id="num_solicitudes" name="num_solicitudes" value="'.$nsolicitudes.'" placeholder="NUMERO OBTENIDO" disabled>
 	</div>';
-$boton_asignar_automatica='<div id="form_asignarfase2" class="input-group mb-3">
+$boton_asignar_automatica='<div id="form_asignarfase2" class="input-group mb-3"
+style="margin-top:5px">
 				<div class="input-group-append">
 				<button class="btn btn-success" type="submit" id="boton_asignar_plazas_fase2" data-subtipo="'.$subtipo_listado.'">Asignar Vacantes</button>
 				</div>
@@ -79,7 +82,7 @@ $log_listados_solicitudes_fase2->warning("OBTENIDAS $nsolicitudes SOLICITUDES FA
 ######################################################################################
 //Si es el listado normal, no hay sorteo
 
-if($_POST['pdf']==1 and $subtipo_listado='lfase2_sol_sor')
+if($_POST['pdf']==1 and $subtipo_listado=='lfase2_sol_sor')
 {
 	$datos=array();
 	$i=0;
@@ -119,7 +122,7 @@ if($_POST['asignar']==0)
 		print($filtro_datos);
 		print("<div id='listado_fase2' style='text-align:center'><h1>LISTADO LISTADO SOLICITUDES COMPLETO</h1></div>");
 	}
-if($subtipo_listado='lfase2_sol_sor') print($boton_descarga); //mostramos formulario sorteo solo si no se ha hecho ya
+if($subtipo_listado!='lfase2_sol_sor') print($boton_descarga.'<br>'); //
 if($subtipo_listado!='lfase2_sol_sor') print($boton_asignar_automatica); //mostramos formulario sorteo solo si no se ha hecho ya
 print($list->showListado($solicitudes,$_POST['rol'],$$cabecera,$$camposdatos,$provisional=1,$subtipo_listado));
 print($script);

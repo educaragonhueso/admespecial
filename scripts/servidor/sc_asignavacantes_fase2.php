@@ -12,7 +12,7 @@ require_once DIR_BASE.'models/Alumno.php';
 #operaciones antes de iniciar la fase2
 require_once 'UtilidadesAdmision.php';
 
-$log_fase2=new logWriter('log_fase2',DIR_LOGS);
+$log_asigna_fase2=new logWriter('log_asignacion_fase2',DIR_LOGS);
 //tipo de fase
 $tipo='fase2';
 
@@ -20,7 +20,7 @@ $ccentros=new CentrosController();
 $con=$ccentros->conectar->conexion();
 
 //Obtenemos todos los alumnos y todos los centros con sus vacantes
-$talumnos_fase2=new Alumno($con,'alumnos_fase2');
+$talumnos_asignacion_fase2=new Alumno($con,'alumnos_fase2');
 //$alumnos_fase2=$talumnos_fase2->getAll();
 
 $tcentros_fase2=new Centro($con,'','no',0);
@@ -37,23 +37,34 @@ else
 
 $avac=10;
 
+$log_asigna_fase2->warning("DATOS RECIBIDOS ASINACION AUTOMATICA");
+$log_asigna_fase2->warning(print_r($_POST,true));
 $j=0;
-$post=0;
+$post=1;
+
+
+//ANTES DE EMPEZAR REPLCIAMOS LA TABAL DE ALUMNOS A LA TABAL TEMPORAL QUE
+//USAREMOS EN EL RESETEO
+if(!$utils->copiaTablaTmpFase2()) {
+      $log_asigna_fase2->warning("ERROR COPIANDO TABAL TMP FASE2");
+      exit();
+}
+
 //asignar vacantetes de cada centro a centro elegido en primera opcion (oopcion 0)
 do{
 	if(!$post) print("INICIANDO PROCESO POR $j VECES".PHP_EOL);
+   $log_asigna_fase2->warning("INICIANDO PROCESO POR $j VECES");
 	if($avac==0) break;
-	//si venimos de una reserva de plaza, liberacion tenemos q volver a empezar tomando los alumnos de la tabla original
 	
 	for($i=0;$i<=6;$i++)
 	{
+      $log_asigna_fase2->warning("EMPEZANDO CENTRO VACANTE NUMERO: $i");
 		if(!$post) print("EMPEZANDO CENTRO $i, AVAC: $avac".PHP_EOL);
-		$log_fase2->warning("INCIIO FOR, AVAC: $avac");
 		
 		$alumnos_fase2=$utils->getAlumnosFase2('actual');
 		$centros_fase2=$tcentros_fase2->getCentrosFase2();
 		
-		$avac=$utils->asignarVacantesCentros($centros_fase2,$alumnos_fase2,$i,$tipoestudios,0);
+		$avac=$utils->asignarVacantesCentros($centros_fase2,$alumnos_fase2,$i,$tipoestudios,$post);
 		
 		if($avac==0) break;
 		if($avac==-2){
@@ -66,6 +77,7 @@ do{
 
 if($avac==1)
 {
+   $log_asigna_fase2->warning("Asignadas vacantes centros para fase 2");
 	echo PHP_EOL."Asignadas vacantes centros para fase 2 a las ".date('H:m')." del dia ".date('d-M-Y').PHP_EOL;	
 	return;	
 }
@@ -73,7 +85,6 @@ elseif($avac=="NO CENTRO") print(PHP_EOL."Error asignando vacantes centros fase2
 elseif($avac==-1) print("Array de alumnos o de centros vacio");
 elseif($avac==-2) print("Alumnos libera reserva");
 elseif($avac==0) print("Error asignando");
-
 
 exit();
 ?>

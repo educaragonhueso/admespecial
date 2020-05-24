@@ -91,6 +91,7 @@ var vsubtipo=$(this).attr("data-subtipo");
 	  data: {subtipo:vsubtipo},
 	  url:'../scripts/servidor/sc_asignavacantes_fase2.php',
 	      success: function(data) {
+            console.log("plazas asignadas"+data);
 				alert(data);
 		},
 	      error: function() {

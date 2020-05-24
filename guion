@@ -9,7 +9,7 @@ FASE0:
 FASE I:
    
    Dia sorteo
-   Antes del dia del sorteo debe poenrse el centro o los cenrtos en fase 1
+   Antes del dia del sorteo debe ponerse el centro o los cenrtos en fase 1
 
       scripts:
 
@@ -37,12 +37,24 @@ FASE II
             sc_previo_fase2.php
 
    Asignamos numero aleatorio
-   Realizamos sorteo, se guarda en el fichero sorteofase2.txt
+   Realizamos sorteo
       
         script:   
          listado_solicitudes_fase2.php
 
-   
+   Si queremos hacer pruebas  podemos resetear
+      scripts:
+         
+         sc_reset_sorteo_fase2.php
+  
+   Hacemos asignacion manual
+   Hacemos copia de datos por si acaso, al menos de centros y alumnos_fase2
+   Hacemos asigncion automática
+
+      scripts:
+      
+        sc_asigna_vacantes_fase2.php
+  
 FASE III
 
    Previo recargar coordenadas de centros y alumnos
