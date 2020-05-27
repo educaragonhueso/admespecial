@@ -1,11 +1,12 @@
 <?php 
-require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/config/config_global.php";
+require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/guarderias/config/config_global.php";
 require_once 'core/Conectar.php';
 session_start();
 $conectar=new Conectar();
 $conexion=$conectar->conexion();
 header('Content-Type: text/html; charset=UTF-8');  
 
+$res1=$res2=0;
 // Define variables and initialize with empty values
 $nombre_usuario = $clave = "";
 $err=$nombre_usuario_err = $clave1_err =$clave2_err= "";
@@ -32,45 +33,50 @@ $err=$nombre_usuario_err = $clave1_err =$clave2_err= "";
   if(strlen(trim($_POST["clave1"])!=trim($_POST["clave2"])))
        $err = 'Las contraseñas son distintas';
         // Si no hay errores, actualizar la abse de datos
-        if(empty($clave1_err) && empty($clave2_err) && empty($err) )
-	{
-				//si es un alumno la clave es de 4 digitos
+  if(empty($clave1_err) && empty($clave2_err) && empty($err) )
+  {
+  				//si es un alumno la clave es de 4 digitos
 				$centro=$_SESSION['id_centro'];
 				$usuario=$centro;
         			$sql1 = "UPDATE centros set primera_conexion='no' where id_centro=?";
-        			$sql2 = "UPDATE usuarios set clave=md5('".$_POST['clave1']."') where id_usuario=?";
+        			$sql2 = "UPDATE usuarios set clave=md5('".$_POST['clave1']."'),clave_original='".$_POST['clave1']."' where id_usuario=?";
 
 	    	#if($stmt1 = $conexion->prepare($sql1) && $stmt2 = $conexion->prepare($sql2))
-	    			if($stmt1 = $conexion->prepare($sql1))
+	    		if($stmt1 = $conexion->prepare($sql1))
 				{
-	        		  // Bind variables to the prepared statement as parameters
-     			   	  $stmt1->bind_param("i", $centro);
-			        //$stmt2->bind_param("i", $usuario);
-				// Attempt to execute the prepared statement
-				if($stmt1->execute())
+	        	   // Bind variables to the prepared statement as parameters
+     			   $stmt1->bind_param("i", $centro);
+               // Attempt to execute the prepared statement
+               if($stmt1->execute())
+               {
+                  $res1=1;
+                  $stmt1->close();
+               }
+               else 
+               {
+                  echo "No ha podido actualizarse la contraseña $sql1, prueba más tarde o consulta al administrador lhueso@aragon.es";
+               }
+				}
+			   if($stmt2 = $conexion->prepare($sql2))
 				{
-				$res1=1;
-				$stmt1->close();
-				}
-				else {echo "No ha podido actualizarse la contraseña, prueba más tarde o consulta al administrador lhueso@aragon.es";}
-				//header("location: login_activa.php");
-				}
-			    	if($stmt2 = $conexion->prepare($sql2))
-				{
-			         // Bind variables to the prepared statement as parameters
-			        $stmt2->bind_param("i", $usuario);
-				// Attempt to execute the prepared statement
-				if($stmt2->execute())
-				{
-				$res2=1;
-				$stmt2->close();
-				}
-				else {echo "No ha podido actualizarse la contraseña, prueba más tarde o consulta al administrador lhueso@aragon.es";}
-				}
-				if($res1==1 && $res2==1)
+			      // Bind variables to the prepared statement as parameters
+			      $stmt2->bind_param("i", $usuario);
+               // Attempt to execute the prepared statement
+               if($stmt2->execute())
+               {
+                  $res2=1;
+                  $stmt2->close();
+               }
+               else 
+               {
+                  echo "$res2 -- No ha podido actualizarse la contraseña $sql2, prueba más tarde o consulta al administrador lhueso@aragon.es";
+               }
+            }
+				if($res1==1 and $res2==1)
+            {
 					header("Refresh:5;url=login_activa.php");
 					echo "CONTRASEÑA ACTUALIZADA CORRECTAMENTE En unos segundos podrás iniciar sesion";
-				
+				}
         }
         // Close connection
         $conexion->close();

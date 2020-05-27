@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/config/config_global.php";
+require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/guarderias/config/config_global.php";
 require_once DIR_BASE.'core/Conectar.php';
 require_once DIR_BASE.'core/ControladorBase.php';
 require_once DIR_BASE.'core/EntidadBase.php';

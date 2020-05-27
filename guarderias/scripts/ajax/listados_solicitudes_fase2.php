@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/config/config_global.php";
+require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/guarderias/config/config_global.php";
 require_once DIR_CLASES.'LOGGER.php';
 require_once DIR_APP.'parametros.php';
 require_once DIR_BASE.'core/ControladorBase.php';
@@ -84,7 +84,8 @@ $log_listados_solicitudes_fase2->warning("OBTENIDAS $nsolicitudes SOLICITUDES FA
 if($_POST['asignar']==0)
 	{
 		print($form_sorteo_fase2); //mostramos formulario sorteo solo si no se ha hecho ya
-		$tablaresumen=$tcentro->getResumenFase2($_POST['rol']);
+		//mostramso vacantes dde cada centro
+      $tablaresumen=$tcentro->getResumenFase2($_POST['rol']);
 		print($list->showTablaResumenFase2($tablaresumen,$ncol=1));
 		print($list->showFiltrosTipo());
 		print($filtro_datos);

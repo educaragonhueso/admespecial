@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/config/config_global.php";
+require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/guarderias/config/config_global.php";
 require_once DIR_CLASES.'LOGGER.php';
 require_once DIR_APP.'parametros.php';
 require_once DIR_BASE.'core/ControladorBase.php';
@@ -8,19 +8,10 @@ require_once DIR_BASE.'controllers/ListadosController.php';
 require_once DIR_BASE.'controllers/CentrosController.php';
 require_once DIR_BASE.'models/Centro.php';
 
-if($_POST['rol']=='admin' || $_POST['provincia']!='todas') 
-{
-	$cencont=new CentrosController();
-	print($cencont->showTablas($_POST['rol'],$_POST['id_centro'],'matricula',$_POST['provincia']));
-}
-else
-{
-	$list=new ListadosController('matricula',1);
-	$conexion=$list->getConexion();
-	$tcentro=new Centro($conexion,$_POST['id_centro'],'ajax');
-	$tcentro->setNombre();
-	$matriculas=$list->getAlumnosCentro($_POST['id_centro']);
-	$tablaresumen=$tcentro->getResumen('centro','matricula');
-	print($list->showMatriculados($matriculas,'centro',$_POST['id_centro']));
-}
+$list=new ListadosController('alumnos');
+$conexion=$list->getConexion();
+$tcentro=new Centro($conexion,1,'ajax');
+//mostramso vacantes dde cada centro
+$tablaresumen=$tcentro->getVacantesGuarderias($_POST['rol'],$_POST['id_centro']);
+print($list->showVacantesGuarderias($tablaresumen));
 ?>

@@ -148,6 +148,31 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 	return $allalumnos;
 	}
 
+  public function showVacantesGuarderias($a,$col=1)
+	{
+	$tres='<button class="btn" data-toggle="collapse" data-target="#tablafase2" aria-expanded="true"><h2>VACANTES GUARDERIAS</h2></button>';
+	#tabla para modo escritorio
+	$tres.='<table class="table table-dark table-striped desk" id="tablafase2">
+	    <thead>
+	      <tr>
+		<th class="tf2centro">Centro</th>
+		<th >Vacanes 1 año</th>
+		<th>Vacantes 2 años</th>
+		<th>Vacantes 3 años</th>
+	      </tr>
+	    </thead>
+	    <tbody>';
+	$i=0;
+	foreach($a as $obj)
+		{
+		$tres.="<tr>";
+		$tres.="<td style='width: 16.66%'>".$obj->nombre_centro."</td><td id='vuno$obj->id_centro'>".$obj->vuno."</td><td id='vdos$obj->id_centro'>".$obj->vdos."</td><td id='vtres$obj->id_centro'>".$obj->vtres."</td>";
+		$tres.="</tr>";
+		}
+    	$tres.="</tbody> </table></div>";
+		
+	return $tres;
+	}
   public function showFormulariosolicitud(){
 		require_once DIR_BASE.'/includes/form_solicitud.php';
 		return $formsol;

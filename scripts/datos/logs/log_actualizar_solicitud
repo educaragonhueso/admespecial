@@ -1,0 +1,24 @@
+[25-May-2020 08:37:57] : [WARNING] - AVERIGUANDO TIPO DE CENTRO
+[25-May-2020 08:37:57] : [WARNING] - select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='50018131' limit 1
+[25-May-2020 08:37:57] : [WARNING] - devolviendo nombre de centro
+[25-May-2020 08:37:57] : [WARNING] - select concat(nombre_centro,'*') as nombre_centro from centros c where c.id_centro='50018131' limit 1
+[25-May-2020 08:37:57] : [WARNING] - AVERIGUANDO TIPO DE CENTRO
+[25-May-2020 08:37:57] : [WARNING] - select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='50017369' limit 1
+[25-May-2020 08:37:57] : [WARNING] - devolviendo nombre de centro
+[25-May-2020 08:37:57] : [WARNING] - select concat(nombre_centro,'*') as nombre_centro from centros c where c.id_centro='50017369' limit 1
+[25-May-2020 08:37:57] : [WARNING] - AVERIGUANDO TIPO DE CENTRO
+[25-May-2020 08:37:57] : [WARNING] - select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='50011537' limit 1
+[25-May-2020 08:37:57] : [WARNING] - devolviendo nombre de centro
+[25-May-2020 08:37:57] : [WARNING] - select concat(nombre_centro,'*') as nombre_centro from centros c where c.id_centro='50011537' limit 1
+[25-May-2020 08:47:15] : [WARNING] - AVERIGUANDO TIPO DE CENTRO
+[25-May-2020 08:47:15] : [WARNING] - select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='50018131' limit 1
+[25-May-2020 08:47:15] : [WARNING] - devolviendo nombre de centro
+[25-May-2020 08:47:15] : [WARNING] - select concat(nombre_centro,'*') as nombre_centro from centros c where c.id_centro='50018131' limit 1
+[25-May-2020 08:47:15] : [WARNING] - AVERIGUANDO TIPO DE CENTRO
+[25-May-2020 08:47:15] : [WARNING] - select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='50017369' limit 1
+[25-May-2020 08:47:15] : [WARNING] - devolviendo nombre de centro
+[25-May-2020 08:47:15] : [WARNING] - select concat(nombre_centro,'*') as nombre_centro from centros c where c.id_centro='50017369' limit 1
+[25-May-2020 08:47:15] : [WARNING] - AVERIGUANDO TIPO DE CENTRO
+[25-May-2020 08:47:15] : [WARNING] - select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='50011537' limit 1
+[25-May-2020 08:47:15] : [WARNING] - devolviendo nombre de centro
+[25-May-2020 08:47:15] : [WARNING] - select concat(nombre_centro,'*') as nombre_centro from centros c where c.id_centro='50011537' limit 1

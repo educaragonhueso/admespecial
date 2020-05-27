@@ -166,6 +166,18 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 			$query_alumnos.="estado_solicitud"."='".$elto."',";	
 					continue;
 					} 
+		if(strpos($key,'tipoestudios')!==false){
+			$query_alumnos.="tipoestudios"."='".$elto."',";	
+					continue;
+					} 
+		if(strpos($key,'hore')!==false){
+			$query_alumnos.="hore"."='".$elto."',";	
+					continue;
+					} 
+		if(strpos($key,'hors')!==false){
+			$query_alumnos.="hors"."='".$elto."',";	
+					continue;
+					} 
 		//capturamos datos de alumnos
 		if(strpos($key,'hermanos')===false and strpos($key,'tributantes_')===false) 
 			{
@@ -339,9 +351,10 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 			if(strpos($key,'baremo_')===FALSE && strpos($key,'hermanos_')===FALSE)   $darray[$key]=$elto;
 			}
 		//determinamos el tipo de alumno, de momento ponemos ebo
-		$tipoestudios='ebo';
-		//asignamos un número para el sorteo, será el siguiente al último
-			$darray['nasignado']=$this->get_asignado($tipoestudios,$darray['id_centro_destino'])+1;
+		#$tipoestudios='ebo';
+		//asignamos un número para el sorteo, de momento 0
+			#$darray['nasignado']=$this->get_asignado($tipoestudios,$darray['id_centro_destino'])+1;
+			$darray['nasignado']=0;
 		}
 		elseif($tabla=='hermanos')
 		{
@@ -467,6 +480,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 			 if(strpos($key,'renta_inferior')!==FALSE and strpos($key,'validar')===FALSE)  $key='renta_inferior';
 			 if(strpos($key,'proximidad_domicilio')!==FALSE and strpos($key,'validar')===FALSE)  $key='proximidad_domicilio';
 			 if(strpos($key,'discapacidad')!==FALSE and strpos($key,'validar')===FALSE)  $key='discapacidad';
+			 if(strpos($key,'iprem')!==FALSE and strpos($key,'validar')===FALSE)  $key='iprem';
 			 if(strpos($key,'tipo_familia')!==FALSE and strpos($key,'validar')===FALSE)  $key='tipo_familia';
 			 if(strlen($elto)!=0) $query.=str_replace('baremo_','',$key).",";
 			 }
@@ -483,7 +497,9 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		
 		$savebaremo=$this->db()->query($query);
 
-		$this->log_nueva_solicitud->warning("CONSULTA INSERCION BAREMO:");
+		$this->log_nueva_solicitud->warning("CONSULTA INSERCION BAREMO, DATOS ENTRADA:");
+		$this->log_nueva_solicitud->warning(print_r($data,true));
+		$this->log_nueva_solicitud->warning("CONSULTA INSERCION BAREMO, QUERY:");
 		$this->log_nueva_solicitud->warning($query);
 
 		if($savebaremo) return 1;
@@ -823,8 +839,6 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		$nombre_centro=$this->getNombre($id_centro);
 		$sol_completa['nombre_centro_destino']=$nombre_centro;
 		$this->log_nueva_solicitud->warning("NUEVA SOLICITUD,id centro/nombre centro: ".$id_centro.'/'.$nombre_centro);
-		$this->log_nueva_solicitud->warning("DATOS SOLICITUD A MOSTRAR");
-		$this->log_nueva_solicitud->warning(print_r($sol_completa,true));
 		}
 	else
 		{

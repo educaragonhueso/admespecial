@@ -11,7 +11,7 @@ $formsol.=
 <p type="button" class="btn btn-primary bform" data-toggle="collapse" data-target="#estadosol">ESTADO<span> <i class="fas fa-angle-down"></i></span></p>
 <div id="estadosol" class="collapse">
 <!--INICIO FILA ESTADO-->
-                <div class="row">
+                <div class="row formrow">
                     <div class="col-md-6">
                         <div class="md-form mb-0">
 				<p>Fase solicitud</p>
@@ -50,7 +50,7 @@ $formsol.=
 <p type="button" class="btn btn-primary bform" data-toggle="collapse" data-target="#personales">DATOS PERSONALES<span> <i class="fas fa-angle-down"></i></span></p>
 <div id="personales" class="collapse">
 <!--INICIO FILA DATOS-->
-                <div class="row">
+                <div class="row formrow">
                     <div class="col-md-4">
                         <div class="md-form mb-0">
 			    Primer apellido*
@@ -73,10 +73,10 @@ $formsol.=
 <!--FIN FILA DATOS-->
 		<br>
 <!--INICIO FILA DATOS-->
-                <div class="row">
+                <div class="row formrow">
                     <div class="col-md-4">
                         <div class="md-form mb-0">
-                      	    DNI/NIE Alumno <i>(solo para mayores de 14 años)</i> 
+                      	    DNI/NIE Alumno 
                             <input type="text" id="dni_alumno" value="" name="dni_alumno" placeholder="DNI/NIE alumno" pattern="[a-zA-Z0-9]{9}" class="form-control" >
                         </div>
                     </div>
@@ -97,7 +97,7 @@ $formsol.=
 <!--FIN FILA DATOS-->
 		<br>
 <!--INICIO FILA DATOS-->
-                <div class="row">
+                <div class="row formrow">
                     <div class="col-md-8">
                         <div class="md-form mb-0">
 			    Nombre y apellidos madre/padre o tutor*
@@ -115,7 +115,7 @@ $formsol.=
 <!--FIN FILA DATOS-->
 		<br>
 <!--INICIO FILA DATOS-->
-                <div class="row">
+                <div class="row formrow">
                     <div class="col-md-8">
                         <div class="md-form mb-0">
 			    Nombre y apellidos madre/padre o tutor
@@ -133,7 +133,7 @@ $formsol.=
 		<br>
 <!--FIN FILA DATOS-->
 <!--INICIO FILA DATOS-->
-                <div class="row">
+                <div class="row formrow">
                     <div class="col-md-5">
                         <div class="md-form mb-0">
 			    Calle/Plaza/Avenida domicilio familiar*
@@ -163,23 +163,29 @@ $formsol.=
 		<br>
 <!--FIN FILA DATOS-->
 <!--INICIO FILA DATOS-->
-                <div class="row">
+                <div class="row formrow">
                     <div class="col-md-2">
                         <div class="md-form mb-0">
-			Localidad*
-			<input type="text" id="loc_dfamiliar" value="" name="loc_dfamiliar" placeholder="Localidad"   class="form-control">
+                           Localidad*
+                           <input type="text" id="loc_dfamiliar" value="" name="loc_dfamiliar" placeholder="Localidad"   class="form-control">
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-3">
                         <div class="md-form mb-0">
-			Telefono habitual*
-                        <input type="tel" id="tel_dfamiliar1" value="" name="tel_dfamiliar1" placeholder="Telefono 1" pattern="[0-9]{9}" class="form-control is-valid">
+                           Telefono madre/tutora*
+                           <input type="tel" id="tel_dfamiliar1" value="" name="tel_dfamiliar1" placeholder="Telefono 1" pattern="[0-9]{9}" class="form-control is-valid">
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-3">
                         <div class="md-form mb-0">
-			Telefono adicional
-			<input type="tel" id="tel_dfamiliar2" value="" name="tel_dfamiliar2"  placeholder="Telefono 2" pattern="[0-9]{9}" class="form-control">
+                           Teléfono padre/tutor
+                           <input type="tel" id="tel_dfamiliar2" value="" name="tel_dfamiliar2"  placeholder="Telefono 2" pattern="[0-9]{9}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="md-form mb-0">
+                           Correo electrónico
+                           <input type="email" id="email" value="" name="email"  placeholder="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -192,90 +198,7 @@ $formsol.=
 <div id="expone" class="collapse">
 		<br>
 <!--INICIO FILA DATOS-->
-                <div class="row">
-                    <div class="col-md-4">
-                            <input type="checkbox" class="nuevaesc" id="nuevaesc" value="0" name="nuevaesc" placeholder="" data-target="tnuevaesc" >
-			Nueva escolarización
-                    </div>
-                </div>
-<!--FIN FILA DATOS-->
-		<br>
-<!--INICIO FILA DATOS-->
-                <div class="row filanuevaesc">
-                    <div class="col-md-8">
-                        <div class="md-form mb-0">
-			Centro de estudios actual
-                            <input type="text"  id="id_centro_estudios_origen" value="" name="id_centro_estudios_origen" placeholder="Centro estudios actual" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="md-form mb-0">
-			Localidad
-			     <input type="text" id="loc_centro_origen" value="" name="loc_centro_origen" placeholder="Localidad centro"  class="form-control" required>
-                        </div>
-                    </div>
-			<i><b>* Centro de educación especial o con aulas de educación especial</b></i>
-                </div>
-<!--FIN FILA DATOS-->
-<!--INICIO FILA DATOS-->
-         <div class="row freserva" style="display:none">
-         	<div class="col-md-4">
-          	<div class="md-form mb-0">
-							<div class="radio">
-							<label><b>RESERVA</b></label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="reserva" value="1" data-reserva="1">RESERVA</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="reserva" value="0" data-reserva="0">NO RESERVA</label>
-							</div>
-						</div>
-					</div>
-				</div>
-<!--FIN FILA DATOS-->
-<!--INICIO FILA DATOS-->
-   <div class="row filanuevaesc" id="tnuevaesc">
-   	<div class="col-md-10">
-    	<div class="md-form mb-0">
-				<div class="form-group">
-		Modalidad origen
-					<select class="form-control" id="modalidad_origen" value="" name="modalidad_origen">
-					    <option value="nodata">Selecciona modalidad de origen</option>
-
-					    <option><b>MODALIDAD ESCOLARIZACION ORDINARIA</b></option>
-					    <optgroup label="2º CICLO INFANTIL"></optgroup>
-					    <option value="combinada-1infantil">1º INFANTIL</option>
-					    <option value="combinada-2infantil">2º INFANTIL</option>
-					    <option value="combinada-3infantil">3º INFANTIL</option>
-
-					    <optgroup label="PRIMARIA"></optgroup>
-					    <option value="combinada-1primaria">1º PRIMARIA</option>
-					    <option value="combinada-2primaria">2º PRIMARIA</option>
-					    <option value="combinada-3primaria">3º PRIMARIA</option>
-					    <option value="combinada-4primaria">4º PRIMARIA</option>
-					    <option value="combinada-5primaria">5º PRIMARIA</option>
-					    <option value="combinada-6primaria">6º PRIMARIA</option>
-
-					    <optgroup label="ESO"></optgroup>
-					    <option value="combinada-1eso">1º ESO</option>
-					    <option value="combinada-2eso">2º ESO</option>
-					    <option value="combinada-3eso">3º ESO</option>
-					    <option value="combinada-4eso">4º ESO</option>
-
-					    <option><b>MODALIDAD: EDUCACION ESPECIAL</option>
-					
-					    <optgroup label="TIPO"></optgroup>
-					    <option value="especial-1ebo">EBO</option>
-					    <option value="especial-1tva">TVA</option>
-					</select>
-				</div>
-      </div>
-    </div>
-   </div>
-<!--FIN FILA DATOS-->
-<!--INICIO FILA DATOS-->
-                <div class="row">
+                <div class="row formrow">
                     <div class="col-md-4">
                             <input type="checkbox" class="check_hadmision" id="hermanosadmision" value="0" name="num_hadmision" placeholder="" data-target="thermanosadmision" >Hermanos en el proceso de admisión
                     </div>
@@ -299,7 +222,7 @@ $formsol.=
                     </div>
                     <div class="col-md-2">
                         <div class="md-form mb-0">
-                            <input type="text" id="hermanos_curso_admision1" value="" name="hermanos_curso_admision1" placeholder="Curso actual" class="form-control">
+                            <input type="text" id="hermanos_curso_admision1" value="" name="hermanos_curso_admision1" placeholder="Curso solicitado" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -325,7 +248,7 @@ $formsol.=
                     </div>
                     <div class="col-md-2">
                         <div class="md-form mb-0">
-                            <input type="text" id="hermanos_curso_admision2" value="" name="hermanos_curso_admision2" placeholder="Curso actual" class="form-control">
+                            <input type="text" id="hermanos_curso_admision2" value="" name="hermanos_curso_admision2" placeholder="Curso solicitdado" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -351,7 +274,7 @@ $formsol.=
                     </div>
                     <div class="col-md-2">
                         <div class="md-form mb-0">
-                            <input type="text" id="hermanos_curso_admision3" value="" name="hermanos_curso_admision3" placeholder="Curso actual" class="form-control">
+                            <input type="text" id="hermanos_curso_admision3" value="" name="hermanos_curso_admision3" placeholder="Curso solicitdado" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -369,86 +292,112 @@ $formsol.=
 <p type="button" class="btn btn-primary bform" data-toggle="collapse" data-target="#solicita" aria-controls="solicita">SOLICITA<span> <i class="fas fa-angle-down"></i></span></p>
 <div id="solicita" class="collapse">
 <!--INICIO FILA DATOS-->
-                <div class="row">
-                    <div class="col-md-8">
+                <div class="row formrow">
+                    <div class="col-md-6">
                         <div class="md-form mb-0">
-			Centro Solicitado
+			                   Centro solicitado
                             <input type="text"  id="id_centro_destino" value="" name="id_centro_destino" placeholder="Centro estudios solicitado" class="form-control" required>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="md-form mb-0">
-			Localidad centro solicitado
-			<input type="text" id="loc_centro_destino" value="" name="loc_centro_destino" placeholder="Localidad centro"  class="form-control" required>
+			                  Localidad centro solicitado
+			                  <input type="text" id="loc_centro_destino" value="" name="loc_centro_destino" placeholder="Localidad centro"  class="form-control" >
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="md-form mb-0">
+                     		Provincia centro solicitado
+				               <div class="form-group">
+					               <select class="form-control" name="prov_centro_destino" id="prov_dentro_destino" value="">
+                                  <option>Zaragoza</option>
+                                  <option>Teruel</option>
+                                  <option>Huesca</option>
+                              </select>
+                           </div>
                         </div>
                     </div>
                 </div>
 <!--FIN FILA DATOS-->
-		<br>
 <!--INICIO FILA DATOS-->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-				<div class="form-group">
-					<select class="form-control" name="tipoestudios" id="tipoestudios" value="">
-					    <option>EBO</option>
-					    <option>TVA</option>
-					</select>
-				</div>
-                        </div>
-                    </div>
+                <div class="row formrow">
+                   <div class="col-md-12">
+                     <div class="md-form mb-0">
+                        <input type="checkbox" id="sol_plaza" value="0" name="sol_plaza"  >
+                           <label for="sol_plaza">Solicita una de las plazas a disposición para Alumnos/as con Necesidad Específica de Apoyo Educativo </label>
+                     </div>
+                   </div>
                 </div>
 <!--FIN FILA DATOS-->
-<div class="row">
-<p>Datos Centros alternativos en orden de prioridad</p><br>
+<!--INICIO FILA DATOS-->
+                <div class="row formrow">
+                   <div class="col-md-12">
+                     <div class="md-form mb-0">
+                        <input type="checkbox" id="sol_vacantes" value="0" name="sol_vacantes"  >
+                           <label for="sol_vacantes">En caso de no ser admitido/a, estoy interesado/a en obtener plaza en posibles vacantes de otro centro en el que no se hayan cubierto las plazas (art. Octavo.3) </label>
+                     </div>
+                   </div>
+                </div>
+<!--FIN FILA DATOS-->
+<br>
+<!--INICIO FILA DATOS-->
+                  <div class="row formrow">
+         	         <div class="col-md-5 offset-md-1">
+          	            <div class="md-form mb-0">
+                           <div class="radio">
+                           <label><b>CURSO/AÑOS</b></label>
+                           </div>
+                           <div class="radio">
+                              <label><input type="radio" name="tipoestudios" value="uno" >1 año (2019)</label>
+                           </div>
+                           <div class="radio">
+                              <label><input type="radio" name="tipoestudios" value="dos">2 años (2018)</label>
+                           </div>
+                           <div class="radio">
+                              <label><input type="radio" name="tipoestudios" value="tres">3 años (2017)</label>
+                           </div>
+				            </div>
+				         </div>
+         	         <div class="col-md-3">
+          	            <div class="md-form mb-0">
+                           <div class="radio">
+                           <label><b>HORARIO ENTRADA</b></label>
+                           </div>
+                           <div class="radio">
+                              <label><input type="radio" name="hore" value="7:45" >7:45</label>
+                           </div>
+                           <div class="radio">
+                              <label><input type="radio" name="hore" value="8:30">8:30</label>
+                           </div>
+                           <div class="radio">
+                              <label><input type="radio" name="hore" value="9:00">9:00</label>
+                           </div>
+                           <div class="radio">
+                              <label><input type="radio" name="hore" value="9:30">9:30</label>
+                           </div>
+				            </div>
+				         </div>
+         	         <div class="col-md-3">
+          	            <div class="md-form mb-0">
+                           <div class="radio">
+                           <label><b>HORARIO SALIDA</b></label>
+                           </div>
+                           <div class="radio">
+                              <label><input type="radio" name="hors" value="13:00" >13:00</label>
+                           </div>
+                           <div class="radio">
+                              <label><input type="radio" name="hors" value="16:00">16:00</label>
+                           </div>
+                           <div class="radio">
+                              <label><input type="radio" name="hors" value="17:00">17:00</label>
+                           </div>
+				            </div>
+				         </div>
+			         </div>
+<!--FIN FILA DATOS-->
+<br>
 </div>
 <!--INICIO FILA DATOS-->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="id_centro_destino1" value="" name="id_centro_destino1" placeholder="1 Nombre centro destino" class="form-control" >
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="id_centro_destino4" value="" name="id_centro_destino4" placeholder="4 Nombre centro destino" class="form-control" >
-                        </div>
-                    </div>
-                </div>
-<!--FIN FILA DATOS-->
-<br>
-<!--INICIO FILA DATOS-->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="id_centro_destino2" value="" name="id_centro_destino2" placeholder="2 Nombre centro destino" class="form-control" >
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="id_centro_destino5" value="" name="id_centro_destino5" placeholder="5 Nombre centro destino" class="form-control" >
-                        </div>
-                    </div>
-                </div>
-<!--FIN FILA DATOS-->
-<br>
-<!--INICIO FILA DATOS-->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="id_centro_destino3" value="" name="id_centro_destino3" placeholder="3 Nombre centro destino" class="form-control" >
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="id_centro_destino6" value="" name="id_centro_destino6" placeholder="6 Nombre centro destino" class="form-control" >
-                        </div>
-                    </div>
-                </div>
-<!--FIN FILA DATOS-->
-<br>
-<!--INICIO FILA DATOS-->
-</div>
 <!--FIN SECCION SOLICITA-->
 
 <!--INICIO SECCION DATOS: BAREMO-->
@@ -460,46 +409,23 @@ $formsol.=
 	<input type="hidden" name="baremo_puntos_validados" value="0" id="bvalidados" class="bhiden">
 <div id="baremo" class="collapse">
 <!--INICIO FILA DATOS-->
-	      <div class="row">
-  	      <div class="col-md-5">
-    	      <div class="md-form mb-0">
-							<p>Proximidad domicilio a efectos de baremo:</p>
-							<div class="radio">
-							<label><input type="radio" name="baremo_proximidad_domicilio" value="dfamiliar" data-baremo="6" class="proxdomi">Domicilio familiar en zona de escolarización</label>
-							</div>
-
-							<div class="radio">
-							<label><input type="radio" name="baremo_proximidad_domicilio" value="dlaboral" data-baremo="5" data-dom="laboral" class="proxdomi">Domicilio laboral en zona de escolarización</label>
-							</div>
-							<div id="calle_dlaboral" class="md-form mb-0" style="display:none">Calle/Plaza/Avenida domicilio laboral<input type="text" id="baremo_calle_dlaboral" name="baremo_calle_dlaboral" placeholder="Calle/Plaza/Avenida" class="form-control is-valid" required>
-							</div>
-	
-							<div class="radio">
-							<label><input type="radio" name="baremo_proximidad_domicilio" value="dflimitrofe" data-baremo="3" class="proxdomi">Domicilio familiar en zona limítrofe</label>
-							</div>
-							
-							<div class="radio">
-							<label><input type="radio" name="baremo_proximidad_domicilio" value="dllimitrofe" data-baremo="2" data-dom="limitrofe" class="proxdomi">Domicilio laboral en zona limítrofe</label>
-							</div>
-							<div id="calle_dllimitrofe" class="md-form mb-0" style="display:none">Calle/Plaza/Avenida domicilio laboral<input type="text" id="baremo_calle_dllimitrofe" name="baremo_calle_dllimitrofe" placeholder="Calle/Plaza/Avenida" class="form-control is-valid" required>
-							</div>
-							
-							<div class="radio">
-							<label><input type="radio" name="baremo_proximidad_domicilio" value="sindomicilio" data-baremo="0" class="proxdomi">Sin domicilio</label>
-							</div>
-							<input type="hidden" id="baremo_validar_proximidad_domicilio" value="0" name="baremo_validar_proximidad_domicilio">
-							<button name="boton_baremo_validar_proximidad_domicilio" type="button" class="btn btn-outline-dark validar">Validar domicilio</button>
-
-						</div>
-          </div>
-         	<div class="col-md-4">
-            <div class="md-form mb-0">
-            	<input type="checkbox" id="baremo_tutores_centro" value="0" name="baremo_tutores_centro" data-baremo="4" >
-      				<label  for="hermanos_baremo">Padre/madre/tutor trabaja en el centro</label>
+	      <div class="row formrow">
+            <div class="col-md-4">
+               <div class="md-form mb-0">
+                  <input type="checkbox" id="baremo_sitlaboral" value="0" name="baremo_sitlaboral" data-baremo="4" >
+                     <label  for="hermanos_baremo">Situación laboral en activo de todos los progenitores o tutores legales del alumno/a</label>
+               </div>
+                        <input type="hidden" id="baremo_validar_sitlaboral" value="0" name="baremo_validar_sitlaboral">
+                        <button name="boton_baremo_validar_sitlaboral" type="button" class="btn btn-outline-dark">Validar situación laboral</button>
             </div>
-							<input type="hidden" id="baremo_validar_tutores_centro" value="0" name="baremo_validar_tutores_centro">
-							<button name="boton_baremo_validar_tutores_centro" type="button" class="btn btn-outline-dark">Validar tutores trabajan centro</button>
-          </div>
+            <div class="col-md-4">
+               <div class="md-form mb-0">
+                  <input type="checkbox" id="baremo_tutores_centro" value="0" name="baremo_tutores_centro" data-baremo="1" >
+                     <label  for="hermanos_baremo">Padre/madre/tutor trabaja en el centro</label>
+               </div>
+                        <input type="hidden" id="baremo_validar_tutores_centro" value="0" name="baremo_validar_tutores_centro">
+                        <button name="boton_baremo_validar_tutores_centro" type="button" class="btn btn-outline-dark">Validar tutores trabajan centro</button>
+            </div>
           <div class="col-md-3">
           	<div class="md-form mb-0">
             	<input type="checkbox" id="baremo_renta_inferior" value="0" name="baremo_renta_inferior" data-baremo="1" >
@@ -507,12 +433,18 @@ $formsol.=
             </div>
 						<input type="hidden" id="baremo_validar_renta_inferior" value="0" name="baremo_validar_renta_inferior">
 						<button name="boton_baremo_validar_renta_inferior" type="button" class="btn btn-outline-dark">Validar renta</button>
+							<div class="radio">
+								<label><input type="radio" name="baremo_iprem" value="menor" data-baremo="1.5">Menor o igual que IPREM</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="baremo_iprem" value="mayor" data-baremo="1">Mayor que IPREM</label>
+							</div>
           </div>
         </div>
 <!--FIN FILA DATOS-->
 <hr>
 <!--INICIO FILA DATOS-->
-        <div class="row">
+        <div class="row formrow">
         	<div class="col-md-12">
           	<div class="md-form mb-0">
             	<input type="checkbox" id="num_hbaremo" value="0" name="num_hbaremo" class="num_hbaremo" >
@@ -538,7 +470,7 @@ $formsol.=
 					<br>
           <div class="col-md-2">
           	<div class="md-form mb-0">
-            	<input type="text" id="hermanos_curso_baremo1" value="" name="hermanos_curso_baremo1" placeholder="Curso actual" class="form-control">
+            	<input type="text" id="hermanos_curso_baremo1" value="" name="hermanos_curso_baremo1" placeholder="Curso solicitado" class="form-control">
             </div>
           </div>
 					<br>
@@ -566,7 +498,7 @@ $formsol.=
           </div>
           <div class="col-md-2">
           	<div class="md-form mb-0">
-            	<input type="text" id="hermanos_curso_baremo2" value="" name="hermanos_curso_baremo2" placeholder="Curso actual" class="form-control">
+            	<input type="text" id="hermanos_curso_baremo2" value="" name="hermanos_curso_baremo2" placeholder="Curso solicitado" class="form-control">
             </div>
           </div>
           <div class="col-md-3">
@@ -592,7 +524,7 @@ $formsol.=
           </div>
           <div class="col-md-2">
           	<div class="md-form mb-0">
-            	<input type="text" id="hermanos_curso_baremo3" value="" name="hermanos_curso_baremo3" placeholder="Curso actual" class="form-control">
+            	<input type="text" id="hermanos_curso_baremo3" value="" name="hermanos_curso_baremo3" placeholder="Curso solicitado" class="form-control">
             </div>
           </div>
           <div class="col-md-3">
@@ -614,9 +546,9 @@ $formsol.=
                 </div>
 <!--FIN FILA DATOS-->
 <!--INICIO FILA DATOS-->
-         <div class="row">
-         	<div class="col-md-4">
-          	<div class="md-form mb-0">
+         <div class="row formrow">
+         	<div class="col-md-4 offset-md-4">
+          	   <div class="md-form mb-0">
 							<div class="radio">
 							<label><b>DISCAPACIDAD</b></label>
 							</div>
@@ -624,13 +556,13 @@ $formsol.=
 								<label><input type="radio" name="baremo_discapacidad" value="alumno" data-baremo="1">Del alumno</label>
 							</div>
 							<div class="radio">
-								<label><input type="radio" name="baremo_discapacidad" value="hpadres" data-baremo="0.75">De padres/hermanos</label>
+								<label><input type="radio" name="baremo_discapacidad" value="hpadres" data-baremo="1">De padres/hermanos</label>
 							</div>
 							<div class="radio">
 								<label><input type="radio" name="baremo_discapacidad" value="no" data-baremo="0">Ninguna</label>
 							</div>
-						</div>
-					</div>
+				   </div>
+				</div>
 
           <div class="col-md-4">
 						<div class="md-form mb-0">
@@ -659,36 +591,12 @@ $formsol.=
 								<label><input type="radio" name="baremo_tipo_familia" value="monoparental_especial" data-baremo="2">Especial</label>
 							</div>
 						</div>
-					</div>';
-          
-if($rol!='alumno')
-{
-$formsol.='
-					<div class="col-md-4">
-						<div class="md-form mb-0">
-							<div class="radio">
-
-								<label><b>CRITERIOS DE PRIORIDAD</b></label>
-							</div>
-						</div>
-							<div class="radio">
-								<label><input type="radio" name="transporte" value="3">Con Ruta de Transporte</label>
-							</div>
-								<label><i style="font-size:14px">Nueva escolarización de localidades con ruta de transporte (art39) Decreto 30/2016 de 22 mayo</i></label>
-							<div class="radio">
-								<label><input type="radio" name="transporte" value="2">Nueva Escolarización</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="transporte" value="1">Cambio de centro</label>
-							</div>
-					</div>';
-}
-$formsol.='
+					</div>
 </div>
 <!--FIN FILA DATOS-->
 <!--INICIO FILA DATOS-->
-        <div class="row">
-        	<div class="col-md-4">
+        <div class="row formrow">
+        	<div class="col-md-4 offset-md-4">
           	<div class="md-form mb-0">
 							<input type="hidden" id="baremo_validar_discapacidad" value="0" name="baremo_validar_discapacidad">
 							<button name="boton_baremo_validar_discapacidad" type="button" class="btn btn-outline-dark validar">Validar discapacidad</button>
@@ -706,9 +614,9 @@ $formsol.='
 <!--FIN SECCION BAREMO-->
 <!--INICIO SECCION DATOS: TRIBUTO-->
 <p type="button" class="btn btn-primary bform" id="labeltributo" style="display:none" data-toggle="collapse" data-target="#tributo" >DATOS TRIBUTARIOS<span> <i class="fas fa-angle-down"></i></span></p>
-<div id="tributo" style="display:none" class="collapse">
+<div id="tributo"  class="collapse">
 <!--INICIO FILA DATOS-->
-                <div class="row">
+                <div class="row formrow">
                     <div class="col-md-12">
                             <input type="checkbox" id="oponenautorizar" value="0" name="oponenautorizar" class="oponenautorizar" placeholder=""  >Los abajo firmantes se oponen a autorizar expresamente al Departamento de Educación, Cultura y Deporte para que recabe, de la Agencia Estatal de Administración Tributaria (AEAT), la información de carácter tributario del ejercicio fiscal 2017, y aportan certificación expedida por la AEAT de cada uno de los miembros de la unidad familiar, correspondiente al ejercicio fiscal 2017. Se hará constar los miembros computables de la familia a 31 de diciembre de 2017.
                     </div>
@@ -716,7 +624,7 @@ $formsol.='
 <!--FIN FILA DATOS-->
 <br>
 <!--INICIO FILA DATOS-->
-                <div class="row">
+                <div class="row formrow">
                     <div class="col-md-12">
                             <input type="checkbox" id="cumplen" value="0" name="cumplen" class="cumplen" placeholder="" >
 Los abajo firmantes declaran responsablemente que cumplen con sus obligaciones tributarias, así como que autorizan expresamente al Departamento de Educación, Cultura y Deporte para que recabe de la AEAT, la información de carácter tributario del ejercicio fiscal 2017.
@@ -724,7 +632,7 @@ Los abajo firmantes declaran responsablemente que cumplen con sus obligaciones t
                 </div>
 <!--FIN FILA DATOS-->
 <!--INICIO FILA DATOS-->
-                <div class="row">
+                <div class="row formrow">
                     <div class="col-md-2">
                         <div class="md-form mb-0">
                             <input type="text" id="tributantes_nombre1" value="" name="tributantes_nombre1" placeholder="Nombre" class="form-control" >
@@ -754,7 +662,7 @@ Los abajo firmantes declaran responsablemente que cumplen con sus obligaciones t
                 </div>
 <!--FIN FILA DATOS-->
 <!--INICIO FILA DATOS-->
-                <div class="row">
+                <div class="row formrow">
                     <div class="col-md-2">
                         <div class="md-form mb-0">
                             <input type="text" id="tributantes_nombre2" value="" name="tributantes_nombre2" placeholder="Nombre" class="form-control" >
@@ -784,7 +692,7 @@ Los abajo firmantes declaran responsablemente que cumplen con sus obligaciones t
                 </div>
 <!--FIN FILA DATOS-->
 <!--INICIO FILA DATOS-->
-                <div class="row">
+                <div class="row formrow">
                     <div class="col-md-2">
                         <div class="md-form mb-0">
                             <input type="text" id="tributantes_nombre3" value="" name="tributantes_nombre3" placeholder="Nombre" class="form-control" >
@@ -814,7 +722,7 @@ Los abajo firmantes declaran responsablemente que cumplen con sus obligaciones t
                 </div>
 <!--FIN FILA DATOS-->
 <!--INICIO FILA DATOS-->
-                <div class="row">
+                <div class="row formrow">
                     <div class="col-md-2">
                         <div class="md-form mb-0">
                             <input type="text" id="tributantes_nombre4" value="" name="tributantes_nombre4" placeholder="Nombre" class="form-control" >

@@ -302,10 +302,14 @@ border-right: aqua!important;
 .form-control:valid {
     border-color: black!important;
 }
+.formrow
+{
+margin-left: 15px!important;
+}
 .bform 
 {
 font-size:12px!important;
-    background-color: #505a65 !important;
+    background-color: #283960 !important;
     width: 100%;
     display:block;margin:10px;
 text-align: left!important;
@@ -353,12 +357,12 @@ cursor: pointer;
 
 .crojo
 {
-	background: red!important;
+	background:#4f3636 !important;
 }
 
 .cverde
 {
-	background: green!important;
+	background: #364d36 !important;
 }
 /* ---------------------------------------------------
     MEDIAQUERIES

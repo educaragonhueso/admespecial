@@ -19,6 +19,7 @@ class Centro extends EntidadBase{
 			$this->log_sorteo=new logWriter('log_sorteo',DIR_LOGS);
 			$this->log_matricula=new logWriter('log_matricula',DIR_LOGS);
 			$this->log_fase2=new logWriter('log_fase2',DIR_LOGS);
+			$this->log_fase1=new logWriter('log_fase1',DIR_LOGS);
     		}
     public function getIdNombre($n) {
 	$query="select id_centro from centros where nombre_centro='".$n."' and clase_centro='especial' limit 1";
@@ -33,6 +34,26 @@ class Centro extends EntidadBase{
 	}
 	else return 0;
     }
+    public function getVacantesGuarderias($rol,$idcentro=1) 
+	   {
+			$resultSet=array();
+			if($rol=='admin') 
+				$sql="SELECT nombre_centro,vuno,vdos,vtres,id_centro FROM centros";
+	      else
+				$sql="SELECT nombre_centro,vuno,vdos,vtres,id_centro FROM centros WHERE id_centro=$idcentro";
+	
+			$this->log_matricula->warning("CONSULTA DATOS GUARDERIAS : ".$sql);
+	
+			$query=$this->conexion->query($sql);
+			if($query)
+    			{
+				while ($row = $query->fetch_object()) 
+				{
+					$resultSet[]=$row;
+				}
+			}
+      			return $resultSet;
+    		}
    //devolvemos los datos de centros y vancantes definitivas para asignar plazas fase2
     public function getCentrosFase2($c=1)
 		{
@@ -348,7 +369,9 @@ class Centro extends EntidadBase{
 	if($this->id_centro<0) $this->nombre_centro='sp';
 	else
 	{
-	$nombre_centro = $this->conexion->query("SELECT nombre_centro FROM centros WHERE id_centro =".$this->id_centro)->fetch_object()->nombre_centro; 
+	$query="SELECT nombre_centro FROM centros WHERE id_centro =".$this->id_centro; 
+	$this->log_fase1->warning("CONSULTA CENTRO  $query");
+	$nombre_centro = $this->conexion->query($query)->fetch_object()->nombre_centro; 
 	$this->nombre_centro = $nombre_centro;
 	}
     }

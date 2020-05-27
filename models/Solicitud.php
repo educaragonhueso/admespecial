@@ -857,8 +857,6 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		$nombre_centro=$this->getNombre($id_centro);
 		$sol_completa['nombre_centro_destino']=$nombre_centro;
 		$this->log_nueva_solicitud->warning("NUEVA SOLICITUD,id centro/nombre centro: ".$id_centro.'/'.$nombre_centro);
-		$this->log_nueva_solicitud->warning("DATOS SOLICITUD A MOSTRAR");
-		$this->log_nueva_solicitud->warning(print_r($sol_completa,true));
 		}
 	else
 		{

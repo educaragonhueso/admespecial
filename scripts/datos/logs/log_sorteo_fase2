@@ -1,0 +1,44 @@
+[24-May-2020 22:06:36] : [WARNING] - ESTADO SORTEO:
+[24-May-2020 22:06:36] : [WARNING] - Array
+(
+    [0] => 22
+    [1] => 1
+)
+
+[25-May-2020 11:31:36] : [WARNING] - ESTADO SORTEO:
+[25-May-2020 11:31:36] : [WARNING] - Array
+(
+    [0] => 22
+    [1] => 1
+)
+
+[26-May-2020 09:21:01] : [WARNING] - ESTADO SORTEO:
+[26-May-2020 09:21:01] : [WARNING] - Array
+(
+    [0] => 0
+    [1] => 0
+)
+
+[26-May-2020 09:22:13] : [WARNING] - ESTADO SORTEO:
+[26-May-2020 09:22:13] : [WARNING] - Array
+(
+    [0] => 0
+    [1] => 0
+)
+
+[26-May-2020 09:22:13] : [WARNING] - ASIGNANDO NUMERO SORTEO
+[26-May-2020 09:22:13] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado =0
+[26-May-2020 09:22:13] : [WARNING] - UPDATE  alumnos_fase2 SET nasignado = (@r := @r + 1) ORDER BY  RAND()
+[26-May-2020 09:22:13] : [WARNING] - UPDATE  centros SET asignado_num_fase2=1
+[26-May-2020 09:22:13] : [WARNING] - OK ASIGNANDO NUM SORTEO EN FASE2
+[26-May-2020 09:22:13] : [WARNING] - OK COPIANDO TABLA TMP
+[26-May-2020 09:22:35] : [WARNING] - ESTADO SORTEO:
+[26-May-2020 09:22:35] : [WARNING] - Array
+(
+    [0] => 0
+    [1] => 1
+)
+
+[26-May-2020 09:22:35] : [WARNING] - ASIGNANDO NUMERO DESPUES DE SORTEO UPDATE alumnos_fase2 a set nordensorteo=699+nasignado-2+1 where nasignado<2 -- UPDATE alumnos_fase2 a set nordensorteo=nasignado-2+1 where nasignado>=2
+[26-May-2020 09:22:35] : [WARNING] - OK COPIANDO TABLA TMP
+[26-May-2020 09:29:46] : [WARNING] - OK COPIANDO TABLA TMP

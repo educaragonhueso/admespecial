@@ -1,9 +1,8 @@
 <?php
-
 ######################
 # script para modificar/editar y crear solicitudes
 ######################
-require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/config/config_global.php";
+require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/guarderias/config/config_global.php";
 require_once DIR_BASE.'core/ControladorBase.php';
 require_once DIR_BASE.'core/EntidadBase.php';
 require_once DIR_BASE.'controllers/SolicitudController.php';
@@ -13,6 +12,10 @@ require_once DIR_APP.'parametros.php';
 
 $log_nueva=new logWriter('log_nueva_solicitud',DIR_LOGS);
 $log_actualizar=new logWriter('log_actualizar_solicitud',DIR_LOGS);
+######################################################################################
+$log_nueva->warning("SOLICITUD RECIBIDA, DATOS POST:");
+$log_nueva->warning(print_r($_POST,true));
+######################################################################################
 
 $sc=new SolicitudController();
 $conexion=$sc->getConexion();
@@ -22,16 +25,23 @@ $modo=$_POST['modo'];
 $rol=$_POST['rol'];
 $estado_convocatoria=$_POST['estado_convocatoria'];
 
-if(isset($_POST['id_centro_estudios_origen']))
-	$_POST['id_centro_estudios_origen']=trim($_POST['id_centro_estudios_origen'],'*');
-else $_POST['id_centro_estudios_origen']='';
-
 
 $fsol_entrada=$_POST['fsol'];
+if($modo=="GRABAR SOLICITUD")
+{
+######################################################################################
+$log_nueva->warning("SOLICITUD RECIBIDA, DATOS:");
+$log_nueva->warning(print_r($fsol_entrada,true));
+######################################################################################
+}
+else
+{
 ######################################################################################
 $log_actualizar->warning("POST RECIBIDO ACTUALIZANDO:");
 $log_actualizar->warning(print_r($fsol_entrada,true));
 ######################################################################################
+}
+
 if($rol!='alumno')
 	{
 	if($rol=='centro')
@@ -46,7 +56,7 @@ $fsol_entrada.="&baremo_ptstotal=".$_POST['ptsbaremo'];
 
 parse_str($fsol_entrada, $fsol_salida);
 if($rol=='alumno')
-	{
+{
 	$fase_sol=$tsol->getFaseSol($_POST['idsol']);
 	$log_nueva->warning("OBTENIDA FASE SOLICITUD: ".$fase_sol);
 	if($fase_sol=='validada') return 'ERROR, NO SE PUEDE MODIFICAR UNA SOLICITUD APTA';
@@ -60,32 +70,10 @@ if($rol=='alumno')
 	$fsol_salida['id_centro_destino']=$id_centro_destino;
 	$log_nueva->warning("SOLICITUD NUEVA DE ALUMNO, NOMBRE CENTRO: ".$_POST['id_centro_destino']);
 	$log_nueva->warning("SOLICITUD NUEVA DE ALUMNO, ID CENTRO: ".$fsol_salida['id_centro_destino']);
-	}
+}
 if(!isset($fsol_salida['id_centro_destino']) or $fsol_Salida['id_centro_destino']<=1)
 	$fsol_salida['id_centro_destino']=$id_centro_destino;
 
-
-$fsol_salida['id_centro_estudios_origen']=trim($fsol_salida['id_centro_estudios_origen'],'*');
-
-######################################################################################
-$log_actualizar->warning("VALOR CENTRO ORIGEN DESPUES:");
-$log_actualizar->warning($fsol_salida['id_centro_estudios_origen']);
-######################################################################################
-
-//obtenemos los ids de los centros de origen según los ids recibidos
-$fsol_salida['id_centro_estudios_origen']=$tsol->getCentroId($fsol_salida['id_centro_estudios_origen']);
-
-//if($fsol_salida['id_centro_estudios_origen']==$fsol_salida['id_centro_destino']){ print("10 ERROR GUARDANDO: Centro origen y destino iguales"); exit();}
-
-for($i=1;$i<7;$i++)
-	{
-	$indice="id_centro_destino".$i;
-	if($fsol_salida[$indice]!='') 
-		{
-		$valor=$tsol->getCentroId(trim($fsol_salida[$indice],'*'));
-		if($valor!=0) $fsol_salida[$indice]=$valor;
-		}
-	}
 //comprobamos los campos tipo check: padres trabajan en el cenntro y renta inferior
 if(!isset($fsol_salida['baremo_tutores_centro']))
 	$fsol_salida['baremo_tutores_centro']=0;

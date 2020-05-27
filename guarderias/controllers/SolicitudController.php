@@ -186,7 +186,7 @@ class SolicitudController extends ControladorBase{
 					continue;
 					}
 				//controles de formulario tipo radio
-				if($skey=='baremo_proximidad_domicilio' or $skey=='baremo_discapacidad' or $skey=='baremo_tipo_familia' or $skey=='transporte' or $skey=='fase_solicitud' or $skey=='estado_solicitud' or $skey=='reserva')
+				if($skey=='baremo_proximidad_domicilio' or $skey=='baremo_discapacidad' or $skey=='baremo_tipo_familia' or $skey=='transporte' or $skey=='fase_solicitud' or $skey=='estado_solicitud' or $skey=='reserva' or $skey=='tipoestudios' or $skey=='hore' or $skey=='hors' or $skey=='baremo_iprem')
 					{
 					$this->log_editar->warning("DATOS CAMPOS RESERVA O SIMILAR: clave- ".$skey." valor- ".$sval);
 					
@@ -253,19 +253,21 @@ class SolicitudController extends ControladorBase{
 				$this->formulario=str_replace($origen,$destino,$this->formulario);
 					continue;
 					}
-				if($skey=='baremo_tutores_centro' or $skey=='baremo_renta_inferior'
-or $skey=='oponenautorizar'or $skey=='cumplen')
+				if($skey=='baremo_tutores_centro' or $skey=='baremo_sitlaboral' or $skey=='baremo_renta_inferior' or $skey=='oponenautorizar' or $skey=='cumplen' or $skey=='sol_vacantes' or $skey=='sol_plaza')
 					{
 					if($sval==0) $check="";
 					else
 					{ 
 						$check="checked";
-						if($skey=='baremo_renta_inferior')
-						{		
+               	if($skey=='baremo_renta_inferior')
+						{	
+               	
+					   /*
 									$soriginal='id="tributo" style="display:none"';
 									$sdestino='id="tributo" style="display:inline-block"';
 									$this->formulario=str_replace($soriginal,$sdestino,$this->formulario);
 									
+					   */
 									$soriginal='id="labeltributo'.$id.'" style="display:none"';
 									$sdestino='id="labeltributo'.$id.'" style="display:inline-block"';
 									$this->formulario=str_replace($soriginal,$sdestino,$this->formulario);
@@ -321,8 +323,10 @@ or $skey=='oponenautorizar'or $skey=='cumplen')
 			$this->formulario=str_replace('name="baremo_proximidad_domicilio"','name="baremo_proximidad_domicilio'.$nuevoid.'"',$this->formulario);
 			//$this->formulario=str_replace('name="baremo_tutores_centro"','name="baremo_tutores_centro'.$nuevoid.'"',$this->formulario);
 			//$this->formulario=str_replace('name="baremo_renta_inferior"','name="baremo_renta_inferior'.$nuevoid.'"',$this->formulario);
+			$this->formulario=str_replace('id="baremo_sitlaboral"','id="baremo_sitlaboral'.$nuevoid.'"',$this->formulario);
 			$this->formulario=str_replace('id="baremo_tutores_centro"','id="baremo_tutores_centro'.$nuevoid.'"',$this->formulario);
 			$this->formulario=str_replace('id="baremo_renta_inferior"','id="baremo_renta_inferior'.$nuevoid.'"',$this->formulario);
+			$this->formulario=str_replace('name="baremo_iprem"','name="baremo_iprem'.$nuevoid.'"',$this->formulario);
 			$this->formulario=str_replace('name="baremo_discapacidad"','name="baremo_discapacidad'.$nuevoid.'"',$this->formulario);
 			$this->formulario=str_replace('name="baremo_tipo_familia"','name="baremo_tipo_familia'.$nuevoid.'"',$this->formulario);
 			$this->formulario=str_replace('name="transporte"','name="transporte'.$nuevoid.'"',$this->formulario);
@@ -343,7 +347,10 @@ or $skey=='oponenautorizar'or $skey=='cumplen')
 			$this->formulario=str_replace('id="baremo_calle_dlaboral"','id="baremo_calle_dlaboral'.$nuevoid.'" value=""',$this->formulario);
 			$this->formulario=str_replace('id="baremo_calle_dllimitrofe"','id="baremo_calle_dllimitrofe'.$nuevoid.'" value=""',$this->formulario);
 			
-			$this->formulario=str_replace('name="boton_baremo_validar_tutores_centro"','name="boton_baremo_validar_tutores_centro'.$nuevoid.'"',$this->formulario);
+			$this->formulario=str_replace('name="boton_baremo_validar_sitlaboral"','name="boton_baremo_validar_sitlaboral'.$nuevoid.'"',$this->formulario);
+			$this->formulario=str_replace('id="baremo_validar_sitlaboral"','id="baremo_validar_sitlaboral'.$nuevoid.'"',$this->formulario);
+			
+         $this->formulario=str_replace('name="boton_baremo_validar_tutores_centro"','name="boton_baremo_validar_tutores_centro'.$nuevoid.'"',$this->formulario);
 			$this->formulario=str_replace('id="baremo_validar_tutores_centro"','id="baremo_validar_tutores_centro'.$nuevoid.'"',$this->formulario);
 			
 			$this->formulario=str_replace('name="boton_baremo_validar_renta_inferior"','name="boton_baremo_validar_renta_inferior'.$nuevoid.'"',$this->formulario);

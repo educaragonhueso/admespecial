@@ -111,7 +111,6 @@ else//accedemos como centro
 	{
 			if($_POST['id_centro']!='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
 			print($form_nuevasolicitud);
-			print('<br>kkkkkkkkkkkkkkkkkk');
 			print($list->showFiltrosCheck());
 			print($filtro_solicitudes);
 			print($list->showSolicitudes($solicitudes,$_POST['rol']));

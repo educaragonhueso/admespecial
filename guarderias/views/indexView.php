@@ -2,6 +2,7 @@
 session_start();
 if(!isset($_SESSION)) exit(); 
 include('includes/head.php');
+print("DIR BASE:".DIR_BASE);
 ?>
 <html>
 <body>
@@ -29,9 +30,19 @@ include('includes/head.php');
 		<?php /*usamos metodo del controlador de centros activo echo $this->showTimeline('centro',$_SESSION['id_centro'],'matricula');*/?>
 		<div class="row ">
 		<div id="t_matricula" style="width:100%"></div>
-		<?php /*usamos metodo del controlador de centros activo*/if($_SESSION['rol']=='centro') echo $this->showTabla('centro',$_SESSION['id_centro'],'matricula');?>
-		<?php if($_SESSION['rol']=='admin') echo $this->showTablas($_SESSION['rol'],$_SESSION['id_centro'],'matricula','todas');?>
-		<?php if($_SESSION['provincia']!='todas'){echo "sprovincial"; echo $this->showTablas($_SESSION['rol'],$_SESSION['id_centro'],'matricula',$_SESSION['provincia']);}?>
+		<?php /*usamos metodo del controlador de centros activo*/
+      //      if($_SESSION['rol']=='centro') 
+        //       echo $this->showTabla('centro',$_SESSION['id_centro'],'matricula');
+      ?>
+		<?php if($_SESSION['rol']=='admin') 
+               echo $this->showTablas($_SESSION['rol'],$_SESSION['id_centro'],'matricula','todas');
+      ?>
+		<?php if($_SESSION['provincia']!='todas')
+            {
+               echo "sprovincial"; 
+               echo $this->showTablas($_SESSION['rol'],$_SESSION['id_centro'],'matricula',$_SESSION['provincia']);
+            }
+      ?>
 		<?php 
 		if($_SESSION['rol']=='alumno' && $_SESSION['dia_inicio_inscripcion']==1)
 		{
@@ -89,6 +100,7 @@ include('includes/head.php');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 		<script>
 			$( document ).ready(function() {
+			 $( ".show_matricula" ).trigger( "click" );
 			 $( "#nuevasolicitud" ).trigger( "click" );
 			 $( "#versolicitud" ).trigger( "click" );
 			 $( "#versolicitud" ).remove();

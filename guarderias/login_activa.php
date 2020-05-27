@@ -14,8 +14,6 @@ $_SESSION['inicio_prorroga']=0;
 $_SESSION['version']=VERSION;
 $_SESSION['sorteo_fase2'] =0;      
 $_SESSION['id_centro'] =-10;      
-print(DIR_CORE);
-print(DIR_BASE);
 //finaiza plazo inscripcion alumno
 $_SESSION['fin_sol_alumno']=-1;
 

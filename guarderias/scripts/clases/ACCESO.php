@@ -96,25 +96,57 @@ class ACCESO
 
   public function generar_usuario($t,$cod)
 	{
-		$usu=0;
-		$sql="SELECT codigo_centro FROM ".$t." WHERE codigo_centro=".$cod;
-		$res = mysqli_query($this->c,$sql);
-		if(!$res) die("ERROR SELECT");
-		if(mysqli_num_rows($res)>0) 
-		{
-			$usu=1; 
-		}
-		else
-		{
 			//die(PHP_EOL."Error genrando: ".mysqli_error($this->c));
-			$sql="INSERT IGNORE INTO usuarios values($cod,md5($cod),'$cod','centro')";
+			$sql="INSERT IGNORE INTO usuarios values($cod,$cod,'centro',md5($cod),'$cod')";
 			$resusu = mysqli_query($this->c,$sql);
-			if(!$resusu) die("ERROR INSERT");
+			if(!$resusu) die("ERROR INSERTANDO USUARIO");
 			else $usu=1;
-		}
 	return $usu;
 
 	}
+  public function carga_guarderias() 
+	{
+	$total_filas=0;
+	$total_filas_insertadas=0;
+	$total_filas_fallidas=0;
+	if (($gestor = fopen($this->csv_file, "r")) !== FALSE) 
+	{
+		while (($datos = fgetcsv($gestor, 0, "\n")) !== FALSE) 
+		{  
+         $centros = explode(";",$datos[0]);
+         //preparando datos
+         $total_filas++;		
+         $c_ce=$centros[0];	
+         $c_den_centro=$centros[1];	
+         $c_codcentro=$centros[2];	
+         $c_nombre_centro=$centros[3];	
+         $c_domicilio=$centros[4];
+         $c_cp=$centros[5];
+         $c_ensenanza=$centros[6];
+         $c_loc=$centros[7];
+         $c_vuno=$centros[8];
+         $c_vdos=$centros[9];
+         $c_vtres=$centros[10];
+         
+         $id_usuario=$this->generar_usuario('centros',$c_codcentro);
+         if($id_usuario!=0)
+         {
+            $sql="insert IGNORE  into centros(id_usuario,localidad,provincia,direccion,nombre_centro,id_centro,vuno,vuno_original,vdos,vdos_original,vtres,vtres_original) values($c_codcentro,'$c_loc','zaragoza','$c_domicilio','$c_nombre_centro','$c_codcentro','$c_vuno','$c_vuno','$c_vdos','$c_vdos','$c_vtres','$c_vtres')";
+
+            print($sql);
+            if(!$result = mysqli_query($this->c, $sql)) 
+            {
+               die(PHP_EOL."Error insertando: ".mysqli_error($this->c));
+               $total_filas_fallidas++;
+            }
+            else	
+               $total_filas_insertadas++;
+          }
+		 }
+ 	fclose($gestor);
+   }
+	return $total_filas_insertadas;
+	} 
   public function carga_centros_grupos() 
 	{
 	$total_filas=0;

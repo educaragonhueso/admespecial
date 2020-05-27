@@ -1,0 +1,43 @@
+[24-May-2020 22:06:36] : [WARNING] - ENTRANDO EN
+GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3
+modo fase2
+[25-May-2020 08:37:55] : [WARNING] - ENTRANDO EN
+GETSOLICITUDEs,BAREMACION subtipo:  estado: 0
+modo normal
+[25-May-2020 08:37:55] : [WARNING] - CONSULTA GENERALES:
+[25-May-2020 08:37:55] : [WARNING] - SELECT
+a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado
+as nasignado,
+b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro
+FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[25-May-2020 08:47:14] : [WARNING] - ENTRANDO EN
+GETSOLICITUDEs,BAREMACION subtipo:  estado: 0
+modo normal
+[25-May-2020 08:47:14] : [WARNING] - CONSULTA GENERALES:
+[25-May-2020 08:47:14] : [WARNING] - SELECT
+a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado,
+b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50017369 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[25-May-2020 09:02:20] : [WARNING] - ENTRANDO EN
+GETSOLICITUDEs,BAREMACION subtipo: fase2 estado: 50
+modo csv
+[25-May-2020 11:31:36] : [WARNING] - ENTRANDO EN
+GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3
+modo fase2
+[26-May-2020 09:21:01] : [WARNING] - ENTRANDO EN
+GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3
+modo fase2
+[26-May-2020 09:22:13] : [WARNING] - ENTRANDO EN
+GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3
+modo fase2
+[26-May-2020 09:22:35] : [WARNING] - ENTRANDO EN
+GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3
+modo fase2
+[26-May-2020 09:27:56] : [WARNING] - ENTRANDO EN
+GETSOLICITUDEs,BAREMACION subtipo: fase2 estado: 50
+modo csv
+[26-May-2020 09:29:56] : [WARNING] - ENTRANDO EN
+GETSOLICITUDEs,BAREMACION subtipo: fase2 estado: 50
+modo csv
+[26-May-2020 09:54:19] : [WARNING] - ENTRANDO EN
+GETSOLICITUDEs,BAREMACION subtipo: fase2 estado: 50
+modo csv

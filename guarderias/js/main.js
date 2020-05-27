@@ -131,6 +131,22 @@ $('#calle_dllimitrofe').hide('slow');
 }
 });
 
+$('body').on('change', 'input[type=checkbox][name*=baremo_sitlaboral]', function(e){
+var vid=$(this).attr("id");
+var vid=vid.replace('baremo_sitlaboral','');
+
+var bar_def=recalcular_baremo(vid);
+var val=$(this).attr("value");
+if(val=='0')
+		$(this).attr('value','1');
+else
+	{
+		$(this).attr('value','0');
+		$("button[name=boton_baremo_validar_sitlaboral"+vid+"]").text('Validar situación laboral')
+		$('#baremo_validar_sitlaboral'+vid).val('0');
+	}
+});
+
 $('body').on('change', 'input[type=checkbox][name*=baremo_tutores_centro]', function(e){
 var vid=$(this).attr("id");
 var vid=vid.replace('baremo_tutores_centro','');
@@ -156,11 +172,23 @@ $("button[name=boton_baremo_validar_discapacidad"+vid+"]").text('Validar discapa
 $('#baremo_validar_discapacidad'+vid).val('0');
 });
 
+$('body').on('change', 'input[type=checkbox][name*=sol_plaza],input[type=checkbox][name*=sol_vacantes]', function(e){
+var vid=$(this).attr("id");
+var vid=vid.replace('sol_plaza','');
+
+var val=$(this).attr("value");
+
+if(val=='0')
+	$(this).attr('value','1');
+else
+	{
+	$(this).attr('value','0');
+	}
+});
 
 $('body').on('change', 'input[type=checkbox][name*=baremo_renta_inferior]', function(e){
 var vid=$(this).attr("id");
 var vid=vid.replace('baremo_renta_inferior','');
-
 var bar_def=recalcular_baremo(vid);
 var val=$(this).attr("value");
 
@@ -173,10 +201,10 @@ else
 	$(this).attr('value','0');
 	$("button[name=boton_baremo_validar_renta_inferior"+vid+"]").text('Validar renta')
 	$('#baremo_validar_renta_inferior'+vid).val('0');
+    $("[name=baremo_iprem"+vid+"]").prop("checked", false);
+   bar_def=recalcular_baremo(vid);
 	}
-});
-
-
+});  
 $('body').on('change', 'input[id*=hermanos_datos_baremo]', function(e){
 
 var vid=$(this).attr("id");
@@ -193,6 +221,14 @@ $('body').on('change', 'input[type=radio][name*=baremo_discapacidad]', function(
 	var vid=$(this).attr("name");
 	var vid=vid.replace('baremo_discapacidad','');
 	var bar_def=recalcular_baremo(vid);
+
+});
+$('body').on('change', 'input[type=radio][name*=baremo_iprem]', function(e)
+{
+	var vid=$(this).attr("name");
+	var vid=vid.replace('baremo_iprem','');
+   if($("input[id=baremo_renta_inferior"+vid+"]").val()=='1')
+	   var bar_def=recalcular_baremo(vid);
 
 });
 
@@ -218,9 +254,9 @@ function recalcular_baremo(id){
 	var baremo2=$('input[id=baremo_tutores_centro'+id+']:checked').attr("data-baremo");
 	var baremo2_validado=$('#baremo_validar_tutores_centro'+id).val();
 
-	var baremo3=$('input[id=baremo_renta_inferior'+id+']:checked').attr("data-baremo");
+	var baremo3=$('input[name=baremo_iprem'+id+']:checked').attr("data-baremo");
 	var baremo3_validado=$('#baremo_validar_renta_inferior'+id).val();
-
+console.log("IPREM:"+baremo3)
 	var baremo4=$('input[name=baremo_discapacidad'+id+']:checked').attr("data-baremo");
 	var baremo4_validado=$('#baremo_validar_discapacidad'+id).val();
 
@@ -231,7 +267,9 @@ function recalcular_baremo(id){
 	var baremo_h2=$('#hermanos_datos_baremo2'+id).val();
 	var baremo_h3=$('#hermanos_datos_baremo3'+id).val();
 	var baremo6_validado=$('#baremo_validar_hnos_centro'+id).val();
-
+	
+   var baremo7=$('input[id=baremo_sitlaboral'+id+']:checked').attr("data-baremo");
+	var baremo7_validado=$('#baremo_validar_sitlaboral'+id).val();
 	if(baremo1)
 		{
 		totalbaremo=totalbaremo+parseInt(baremo1);
@@ -244,8 +282,8 @@ function recalcular_baremo(id){
 		}
 	if(baremo3)
 		{
-		totalbaremo=totalbaremo+parseInt(baremo3);
-		if(baremo3_validado==1) 	total_baremo_validado=total_baremo_validado+parseInt(baremo3);
+		totalbaremo=totalbaremo+parseFloat(baremo3);
+		if(baremo3_validado==1) 	total_baremo_validado=total_baremo_validado+parseFloat(baremo3);
 		}
 	if(baremo4)
 		{
@@ -257,12 +295,17 @@ function recalcular_baremo(id){
 		totalbaremo=totalbaremo+parseFloat(baremo5);
 		if(baremo5_validado==1) 	total_baremo_validado=total_baremo_validado+parseFloat(baremo5);
 		}
+	if(baremo7)
+		{
+		totalbaremo=totalbaremo+parseFloat(baremo7);
+		if(baremo7_validado==1) 	total_baremo_validado=total_baremo_validado+parseFloat(baremo7);
+		}
 	//calculo baremo de hermanos en el centro
 	if($('#num_hbaremo'+id).is(':checked'))
 	{
 	if(baremo_h1.length>=3) 
 		{
-		total_hbaremo=total_hbaremo+8;
+		total_hbaremo=total_hbaremo+2;
 		}
 	if(baremo_h2.length>=3) 
 		{
@@ -277,10 +320,11 @@ function recalcular_baremo(id){
 				}
 	}
 	else
-		{ 
+	{ 
 		total_hbaremo=0;
-		}
+	}
 	totalbaremo=totalbaremo+total_hbaremo;
+   console.log("recalculando baremo, valor sitlaboral: "+totalbaremo);
 
 	$("#id_puntos_baremo_totales"+id).text(totalbaremo);
 	$("#id_puntos_baremo_validados"+id).text(total_baremo_validado);
@@ -324,35 +368,65 @@ var rb=recalcular_baremo(vid);
 });
 
 
+$('body').on('click', 'button[name*=boton_baremo_validar_sitlaboral]', function(e){
+   var vid=$(this).attr("name");
+   vid=vid.replace('boton_baremo_validar_sitlaboral','');
+   var texto=$(this).text();
+
+   if(texto=='Validar situación laboral')
+   {
+   var val_def=recalcular_validacion(vid);
+
+   if(val_def!=0)
+      {
+      $('#labelbaremo'+vid).removeClass('crojo');
+      $('#labelbaremo'+vid).addClass('cverde');
+      }
+
+   if($("input[id=baremo_sitlaboral"+vid+"]").val()=='1')
+   {
+      $('#baremo_validar_sitlaboral'+vid).val('1');
+      $(this).text('Invalidar situación laboral');
+   }
+   }
+   else
+      {
+      $(this).text('Validar situación laboral');
+      $('#baremo_validar_sitlaboral'+vid).val('0');
+      $('#labelbaremo'+vid).removeClass('cverde');
+      $('#labelbaremo'+vid).addClass('crojo');
+      }
+   var bar_def=recalcular_baremo(vid);
+});
 $('body').on('click', 'button[name*=boton_baremo_validar_tutores_centro]', function(e){
-var vid=$(this).attr("name");
-vid=vid.replace('boton_baremo_validar_tutores_centro','');
-var texto=$(this).text();
+   var vid=$(this).attr("name");
+   vid=vid.replace('boton_baremo_validar_tutores_centro','');
+   var texto=$(this).text();
 
-if(texto=='Validar tutores trabajan centro')
-{
-var val_def=recalcular_validacion(vid);
+   if(texto=='Validar tutores trabajan centro')
+   {
+   var val_def=recalcular_validacion(vid);
 
-if(val_def!=0)
-	{
-	$('#labelbaremo'+vid).removeClass('crojo');
-	$('#labelbaremo'+vid).addClass('cverde');
-	}
+   if(val_def!=0)
+      {
+      $('#labelbaremo'+vid).removeClass('crojo');
+      $('#labelbaremo'+vid).addClass('cverde');
+      }
 
-if($("input[id=baremo_tutores_centro"+vid+"]").val()=='1')
-{
-	$('#baremo_validar_tutores_centro'+vid).val('1');
-	$(this).text('Invalidar tutores trabajan centro');
-}
-}
-else
-	{
-	$(this).text('Validar tutores trabajan centro');
-	$('#baremo_validar_tutores_centro'+vid).val('0');
-	$('#labelbaremo'+vid).removeClass('cverde');
-	$('#labelbaremo'+vid).addClass('crojo');
-	}
-var bar_def=recalcular_baremo(vid);
+   if($("input[id=baremo_tutores_centro"+vid+"]").val()=='1')
+   {
+      $('#baremo_validar_tutores_centro'+vid).val('1');
+      $(this).text('Invalidar tutores trabajan centro');
+   }
+   }
+   else
+      {
+      $(this).text('Validar tutores trabajan centro');
+      $('#baremo_validar_tutores_centro'+vid).val('0');
+      $('#labelbaremo'+vid).removeClass('cverde');
+      $('#labelbaremo'+vid).addClass('crojo');
+      }
+   var bar_def=recalcular_baremo(vid);
 });
 
 $('body').on('click', 'button[name*=boton_baremo_validar_renta_inferior]', function(e){
@@ -768,7 +842,6 @@ $('body').on('click', '.send', function(e){
 	  data: { fsol:fsolicitud,idsol:vid,modo:tipo,id_centro_destino:vid_centro,ptsbaremo:vptsbaremo,rol:vrol,estado_convocatoria:vestado_convocatoria},
 	  url:'../guarderias/scripts/ajax/guardar_solicitud.php',
 	 	success: function(data) {
-		console.log(data);
 		if(data.indexOf('1062')!=-1) 
 		{
 			error='El dni del tutor ya existe';
@@ -862,16 +935,24 @@ function validarFormulario(fd,id)
 var valido='1';
 var res = fd.split("&");
 
+
+var botontrib=0;
+var ntrib1=0;
 var renta=0;
+ if ($('input[name*="tipoestudios"]:checked').length == 0) {
+         return 'Curso-tipoestudios'; } 
+ if ($('input[name*="hore"]:checked').length == 0) {
+         return 'Horario entrada-hore'; } 
+ if ($('input[name*="hors"]:checked').length == 0) {
+         return 'Horario salida-hors'; } 
+
+console.log("DATOS FORMULARIO: "+res);
 for (let i = 0; i < res.length; i++)
 {
 	d=res[i].split("=");
 	if(d[0].indexOf('fnac')==0)
 	{
 	if(d[1]=='') {return 'Fecha nacimiento-fnac';};
-	//comprobar edad alumno
-	if(calcEdad(d[1])>=14) return 'fnac';
-	if(calcEdad(d[1])<=2) return 'Edad mayor';
 	}
 //comp datos identificadores
 if(d[0].indexOf('apellido1')==0)
@@ -886,6 +967,10 @@ if(d[0].indexOf('nombre')==0)
 if(d[0].indexOf('dni_tutor1')==0)
 	{
 	if(comprobar_nifnie(d[1])==0) {return 'DNI/NIE TUTOR VÁLIDO-dni_tutor1';};
+	}
+if(d[0].indexOf('email')==0)
+	{
+	if(comprobarEmail(d[1])==false) {return 'EMAIL CORRECTO-email';};
 	}
 //comp datos sección datos personales
 if(d[0].indexOf('datos_tutor1')==0)
@@ -948,35 +1033,6 @@ if(d[0].indexOf('baremo_proximidad_domicilio')==0)
 		if(valor2.length<=2) return "Valor para el domicilio laboral en zona limitrofe";
 	}
 	}
-//		if(d[1]=='') return "Valor para el domicilio laboral";
-//	if($("input[value='dllimitrofe']").is(':checked')) 
-//		if(d[1]=='') return "Valor para el domicilio laboral en zona limítrofe";
-/*
-if(d[0].indexOf('calle_dfamiliar')==0)
-	{
-	if(d[1]=='') {return 'Datos del domicilio familiar-calle_dfamiliar';};
-	}
-if(d[0].indexOf('num_dfamiliar')==0)
-	{
-	if(d[1]==''|| d[1].length>3) {return 'Numero del domicilio familiar no superior a 3 dígitos-num_dfamiliar';};
-	}
-if(d[0].indexOf('piso_dfamiliar')==0)
-	{
-	if(d[1]=='') {return 'Piso del domicilio familiar-piso_dfamiliar';};
-	}
-if(d[0].indexOf('cp_dfamiliar')==0)
-	{
-	if(d[1]==''|| d[1].length>5) {return 'CP del domicilio familiar debe tener 5 dígitos-cp_dfamiliar';};
-	}
-if(d[0].indexOf('loc_dfamiliar')==0)
-	{
-	if(d[1]=='') {return 'Debes indicar una localidad-loc_dfamiliar';};
-	}
-if(d[0].indexOf('tel_dfamiliar1')==0)
-	{
-	if(d[1]==''|| d[1].length!=9) {return 'Debes indicar un teléfono habitual correcto-tel_dfamiliar1';};
-	}
-*/
 //comp datos sección expone
 
 if(d[0]=='id_centro_destino')
@@ -990,17 +1046,19 @@ if(d[0]=='baremo_renta_inferior')
 	}
 if(d[0]=='oponenautorizar' || d[0]=='cumplen')
 	{
-	if(d[1]=='1') {var botontrib=1;}
+	if(d[1]=='1') { botontrib=1;}
 	}
 if(d[0]=='tributantes_nombre1')
 	{
-	if(d[1]!='') {var ntrib1=1;}
+	if(d[1]!='') {ntrib1=1;}
 	}
 }
 //Comprobamos que se haya completado la info tributaria
+console.log("Comporbando info renta renta inf"+renta);
 if(renta=='1')
 	{
-		if(botontrib=='0' || ntrib1=='0') return 'Debes completar la información de la renta';
+console.log("renta inf/btontrib/ntrib"+renta+'/'+botontrib+'/'+ntrib1);
+		if(botontrib=='0' || ntrib1=='0') return 'Información de la renta';
 	}
 return valido;
 };
@@ -1042,7 +1100,6 @@ $.ajax({
 			else	$("#l_matricula").after(data);
 		}
       	$("#"+idappend).after(data);
-	console.log(data);
 	if(vestado_convocatoria=='3') {disableForm($('#fsolicitud'+vid)) ;}
       	},
       	error: function() {
@@ -1109,7 +1166,6 @@ $.ajax({
 				}
 				else
 				{
-            console.log(data);
 				$(".tresumensol").remove();
 				$(".tresumenmat").hide();
 				$("#tresumen").hide();
@@ -1644,7 +1700,6 @@ $('body').on('click', '.exportcsv', function(e)
 	data: {id_centro:vidcentro,subtipo:vsubtipo,rol:vrol,estado_convocatoria:vestado_convocatoria},
 	url:'../guarderias/scripts/ajax/gen_csvs.php',
 	success: function(data) {
-			console.log(data);
 			window.open(data,'_blank');
 	},
 	error: function() {
@@ -1705,7 +1760,14 @@ console.log(dstring);
   var actual =dt.getYear()+1900;
    return actual-fnac;
  }
-
+function comprobarEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*%40\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+  {
+    return (true)
+  }
+    return (false)
+}
 function comprobar_nifnie(dni)
 	{
 	var numero;

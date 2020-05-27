@@ -1,5 +1,5 @@
 <?php if(isset($_SESSION['provincia'])) {$provincia=$_SESSION['provincia'];} else $provincia='ARAGON';?>            
-<h2 style='text-align:center;'>ADMISION ALUMNOS EDUCACION ESPECIAL <?php echo strtoupper($provincia);?></h2>
+<h2 style='text-align:center;'>ADMISION ALUMNOS GUARDERIAS Curso 2020/2021 </h2>
 		 <p hidden id='id_centro'><?php echo $_SESSION['id_centro'];?></p> 
 		 <p hidden id='estado_convocatoria'><?php echo $_SESSION['estado_convocatoria'];?></p> 
 		 <p hidden id='id_sorteo'><?php echo $_SESSION['sorteo'];?></p> 
