@@ -86,29 +86,19 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 	}
   public function update($sol,$id){
 	//si el centro esta en estado de baremacion, ya se ha hecho el sorteo, pasamos a la tabal de provisionales
+	$this->log_actualizar_solicitud->warning("ENTRANDO EN UPDATE: ".$sol['id_centro_destino']);
 	$fase=0;
 	if(isset($sol['id_centro_destino']))
 	{
 		$fase=$this->getFaseCentro($sol['id_centro_destino']);
 		if($fase==-1) return 0;
 	}
-	$this->log_actualizar_solicitud->warning("ACTUALIZAR SOLICITUD: ".$query);
-	/*
-	if($fase==2 and $estado_convocatoria>=2 and $estado_convocatoria <30) //fase posterior al sorteo pero anterior a definitivos
-		$tabla_alumnos='alumnos_provisional';
-	elseif($estado_convocatoria>=2 and $estado_convocatoria <30) //fase posterior al sorteo pero anterior a definitivos
-		$tabla_alumnos='alumnos_provisional';
-	elseif($estado_convocatoria>=30) //fase posterior a provisionales. Las modificaciones se harán en definitivos
-		$tabla_alumnos='alumnos_definitivo';
-	else
-		$tabla_alumnos='alumnos';
-	*/
+	$this->log_actualizar_solicitud->warning("ENTRANDO EN UPDATE DESPUES DE OBTENER FASE");
 	$tabla_alumnos='alumnos';
   	$query_alumnos="UPDATE $tabla_alumnos set ";
   	$query_hermanos="UPDATE hermanos set ";
   	$query_baremo="UPDATE baremo set ";
   	$query_tributantes="UPDATE tributantes set ";
-		$this->log_actualizar_solicitud->warning("ENTRANDO EN UPDATE");
 		//creamos la consulta para la tabla de alumnos
 		//controlamos si hay algun cambio en los datos
 		$dalumno=0;
@@ -1051,7 +1041,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 						$sql="SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,a.id_centro_destino as id_centro,c.nombre_centro as nombre_centro FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' order by c.id_centro,a.tipoestudios, a.apellido1,a.nombre,c.id_centro, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc";
 				}
 
-				$this->log_listado_solicitudes->warning("CONSULTA SOLICITUDES SORTEO");
+				$this->log_listado_solicitudes->warning("CONSULTA SOLICITUDES");
 				$this->log_listado_solicitudes->warning($sql);
 				$query=$this->db->query($sql);
         if($query)
@@ -1221,8 +1211,6 @@ as nasignado,c.nombre_centro, a.puntos_validados FROM $tabla_alumnos a left join
 	{
 		//averiguamos si es de ed especial
 		$query="select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='".$idcentro."' limit 1";
-		$this->log_actualizar_solicitud->warning("AVERIGUANDO TIPO DE CENTRO");
-		$this->log_actualizar_solicitud->warning($query);
 		$soldata=$this->db()->query($query);
     if($soldata->num_rows==0) return 0;
 		else return 1;
@@ -1260,17 +1248,20 @@ as nasignado,c.nombre_centro, a.puntos_validados FROM $tabla_alumnos a left join
     		}
 		else return 'noapta';
     	}
-	public function getCentroNombre($idcentro) 
+	public function getCentroNombre($idcentro,$tipoadmision='guarderias') 
 	{
+      if($tipoadmision=='especial')
+      {
 		//averiguamos si es de ed especial
 		if($this->getTipoCentro($idcentro)==1)
-			//$query="select concat(nombre_centro,'*') as nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='".$idcentro."' limit 1";
 			$query="select concat(nombre_centro,'*') as nombre_centro from centros c where c.id_centro='".$idcentro."' limit 1";
-		else
-			//$query="select nombre_centro from centros c,centros_grupos cg where c.id_centro=cg.id_centro and c.id_centro='".$idcentro."'";
+      else
+			$query="select nombre_centro from centros c where c.id_centro='".$idcentro."'";
+	   }	
+      else
 			$query="select nombre_centro from centros c where c.id_centro='".$idcentro."'";
 
-		$this->log_actualizar_solicitud->warning("devolviendo nombre de centro");
+		$this->log_actualizar_solicitud->warning("DEVOLVIENDO NOMBRE DE CENTRO");
 		$this->log_actualizar_solicitud->warning($query);
 		$soldata=$this->db()->query($query);
 	  if($soldata->num_rows==0);

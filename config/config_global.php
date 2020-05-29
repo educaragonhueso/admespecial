@@ -6,8 +6,8 @@ if(isset($_SERVER['CONTEXT_DOCUMENT_ROOT']))
 	define("DIR_BASE",$_SERVER['CONTEXT_DOCUMENT_ROOT']."/");
 else
 	define("DIR_BASE","/datos/www/preadmespecial.aragon.es/public_admespecial/");
+
 define("DIR_CORE",DIR_BASE."/core");
-#define("IPREMOTA","172.27.0.56");
 define("IPREMOTA","90.94.107.29");
 //parametros propios de la aplicacion
 define("DIR_APP",DIR_BASE."/app/");
@@ -31,10 +31,10 @@ define("DIA_SORTEO",'2020/05/12');
 define("DIA_BAREMACION",'2020/05/15');
 define("DIA_PUBLICACION_BAREMACION",'2020/05/17');
 
-define("DIA_PROVISIONALES",'2020/05/18');
-define("DIA_DEFINITIVOS",'2020/05/19');
+define("DIA_PROVISIONALES",'2020/05/29');
+define("DIA_DEFINITIVOS",'2020/05/30');
 
-define("DIA_SORTEO_FASE2",'2020/05/20');
+define("DIA_SORTEO_FASE2",'2020/06/20');
 
 define("DIA_FASE3",'2020/06/26');
 

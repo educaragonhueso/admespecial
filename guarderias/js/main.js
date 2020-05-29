@@ -6,7 +6,6 @@ $('body').on('click', '#boton_asignar_numero', function(e){
 
 var answer = window.confirm("Estas seguro? Esta operacion solo se puede realizar una vez")
 if (!answer) {
-   console.log("op cancelada");
     }
 var vrol=$('#rol').attr("value");
 var vestado_convocatoria=$('#estado_convocatoria').val();
@@ -256,7 +255,6 @@ function recalcular_baremo(id){
 
 	var baremo3=$('input[name=baremo_iprem'+id+']:checked').attr("data-baremo");
 	var baremo3_validado=$('#baremo_validar_renta_inferior'+id).val();
-console.log("IPREM:"+baremo3)
 	var baremo4=$('input[name=baremo_discapacidad'+id+']:checked').attr("data-baremo");
 	var baremo4_validado=$('#baremo_validar_discapacidad'+id).val();
 
@@ -324,7 +322,6 @@ console.log("IPREM:"+baremo3)
 		total_hbaremo=0;
 	}
 	totalbaremo=totalbaremo+total_hbaremo;
-   console.log("recalculando baremo, valor sitlaboral: "+totalbaremo);
 
 	$("#id_puntos_baremo_totales"+id).text(totalbaremo);
 	$("#id_puntos_baremo_validados"+id).text(total_baremo_validado);
@@ -946,7 +943,6 @@ var renta=0;
  if ($('input[name*="hors"]:checked').length == 0) {
          return 'Horario salida-hors'; } 
 
-console.log("DATOS FORMULARIO: "+res);
 for (let i = 0; i < res.length; i++)
 {
 	d=res[i].split("=");
@@ -980,7 +976,6 @@ if(d[0].indexOf('datos_tutor1')==0)
 if(d[0].indexOf('tributantes_dni1')==0)
 	{
 	var nomt1=$("input[name='tributantes_nombre1']").val();
-	console.log("nomt1: "+nomt1+" long: "+nomt1.length);
 	if(nomt1.length!=0) 
 		{
 		if(d[1].length!=9) 
@@ -1024,12 +1019,10 @@ if(d[0].indexOf('baremo_proximidad_domicilio')==0)
 	var valor2=$("input[id='baremo_calle_dllimitrofe"+id+"']").val();
 	if($("input[value='dlaboral']").is(':checked'))
 	{
-		console.log("domicilio laboral check"+d);
 		if(valor1.length<=2) return "Valor para el domicilio laboral";
 	}
 	if($("input[value='dllimitrofe']").is(':checked'))
 	{
-		console.log("CHECKED: "+valor2.length+" valor");
 		if(valor2.length<=2) return "Valor para el domicilio laboral en zona limitrofe";
 	}
 	}
@@ -1054,10 +1047,8 @@ if(d[0]=='tributantes_nombre1')
 	}
 }
 //Comprobamos que se haya completado la info tributaria
-console.log("Comporbando info renta renta inf"+renta);
 if(renta=='1')
 	{
-console.log("renta inf/btontrib/ntrib"+renta+'/'+botontrib+'/'+ntrib1);
 		if(botontrib=='0' || ntrib1=='0') return 'Información de la renta';
 	}
 return valido;
@@ -1081,6 +1072,7 @@ $('body').on('click', '.calumno', function(e){
 	$('#fsolicitud'+vid).toggle();
 	return;
 	}
+   console.log("id de alumno:"+vid);
 $.ajax({
   method: "POST",
   data: {id_alumno:vid,modo:vmodo,pin:vpin,rol:vrol,id_centro:vidcentro,estado_convocatoria:vestado_convocatoria},
@@ -1148,7 +1140,6 @@ if($('#fnuevasolicitud').length)
 
 //LISTADO SOLICITUDES BRUTO
 $(".show_solicitudes").click(function () {  
-  console.log("mostrando sol");
   var vid_centro=$('#id_centro').text();
   var vrol=$('#rol').attr("value");
   var vprovincia=$('#provincia').attr("value");
@@ -1310,7 +1301,6 @@ $.ajax({
 			{
 				if(vrol.indexOf('admin')!=-1 || vrol.indexOf('sp')!=-1)
 				{
-				console.log("en matricula");
 				if($('#mat_table'+vid_centro).length) $('#mat_table'+vid_centro).toggle();
 				else $('#table'+vid_centro).after(data).show('slow');
 	
@@ -1340,8 +1330,12 @@ $.ajax({
 			{
 				if(vrol.indexOf('admin')!=-1 || vrol.indexOf('sp')!=-1)
 				{
-				if($('#sol_table').length) $('#sol_table').hide();
-				$('#sol_table').remove();
+				if($('#sol_table').length) 
+            {
+            $('#sol_table').remove();
+            return;
+            }
+				//$('#sol_table').remove();
 				$('#table'+vid_centro).after(data);
 	
 				}
@@ -1410,8 +1404,6 @@ $.ajax({
    	var  npo_tva=$('#vacantesmat_tva_desk'+vidcentro).prev().text();
 	if(vestado_pulsado.indexOf('EBO')!=-1)
 	{
-		console.log("pulsado ebo");
-		console.log(ots.parent('td').parent('tr').parent('tbody').parent('table').attr('id'));
 		//$(this).closest('#vacantesmat_ebo_desk').prev().html(+npo_ebo+1);
 		$('#vacantesmat_ebo_desk'+vidcentro).prev().html(+npo_ebo+1);
 		$('#vacantesmat_tva_desk'+vidcentro).prev().html(+npo_tva-1);
@@ -1458,8 +1450,6 @@ $.ajax({
 	 var vacantes_tva =data.split(":")[1];
 	  //cambiarboton(ots);
 	  cambiarestado(id,est);
-		console.log(vidcentro);
-   	  console.log($('#vacantesmat_ebo_desk'+vidcentro).html());
 	  vtipoalumno=vtipoalumno.toLowerCase();
    	  $('#vacantesmat_ebo_desk'+vidcentro).html(vacantes_ebo);
    	  $('#vacantesmat_tva_desk'+vidcentro).html(vacantes_tva);
@@ -1567,39 +1557,11 @@ $("#localidad").easyAutocomplete(loc_options);
 $("#localidad_origen").easyAutocomplete(loc_options);
 $('input[id*=loc_dfamiliar]').easyAutocomplete(loc_options);
 
-var cen_options_zaragoza = 
-	{
-	url: "../guarderias/datosweb/centros_especial_zaragoza.json",
-	getValue:"nombre_centro",
-		list: 
-		{
-			onSelectItemEvent: function() {
-			var nombre = $("#fcentrosadminzgz").getSelectedItemData().nombre_centro;
-			var idcentro = $("#fcentrosadminzgz").getSelectedItemData().id_centro;
-			$("#id_centro").text(idcentro);
-			$("#id_centro").attr("value",idcentro);
-			$("#rol").text('centro');
-			$("#rol").attr("value","centro");
-			},
-			maxNumberOfElements: 10,
-			match: 
-			{
-			enabled: true
-			},
-			onKeyEnterEvent: function() 
-			{
-			},
-			onClickEvent: function() 
-			{
-			}
-		}
-	};
-$("#fcentrosadminzgz").easyAutocomplete(cen_options_zaragoza);
 
 var cen_options = 
 	{
-	url: "../guarderias/datosweb/centros_especial.json",
-	getValue:"nombre_centro",
+	url: "../guarderias/datosweb/localidades1.json",
+	getValue:"name",
 		list: 
 		{
 			onSelectItemEvent: function() {
@@ -1628,6 +1590,7 @@ var cen_options =
 $("#buscar_centros").easyAutocomplete(cen_options);
 $("#fcentrosadmin").easyAutocomplete(cen_options);
 $("#admin_centros").easyAutocomplete(cen_options);
+$('input[id*=id_centro_destino]').easyAutocomplete(cen_options);
 
 var nac_options = 
 	{
@@ -1654,8 +1617,8 @@ $("#nacionalidad").easyAutocomplete(nac_options);
 
 var cen_estudios_options = 
 	{
-	url: "../guarderias/datosweb/centros_general.json",
-	getValue: "centros",
+	url: "../guarderias/datosweb/guarderias.json",
+	getValue: "nombre_centro",
 		list: 
 		{
 			maxNumberOfElements: 20,
@@ -1754,7 +1717,6 @@ vid=vid.replace("print",'');
 //////////////////////////////////////////////
 //FUCNIONES DE AYUDA
 function calcEdad(dstring) { // birthday is a date
-console.log(dstring);
  var dt = new Date();
   var fnac = dstring.split('/')[2];
   var actual =dt.getYear()+1900;

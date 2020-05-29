@@ -41,3 +41,26 @@ modo csv
 [26-May-2020 09:54:19] : [WARNING] - ENTRANDO EN
 GETSOLICITUDEs,BAREMACION subtipo: fase2 estado: 50
 modo csv
+[29-May-2020 09:38:55] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: admitidos_prov estado: 30 modo provisionales
+[29-May-2020 09:39:12] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo:  estado: 0 modo normal
+[29-May-2020 09:39:12] : [WARNING] - CONSULTA GENERALES:
+[29-May-2020 09:39:12] : [WARNING] - SELECT
+a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado,
+b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=22003835 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[29-May-2020 09:39:32] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: admitidos_prov estado: 30 modo provisionales
+[29-May-2020 09:41:16] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo:  estado: 0 modo normal
+[29-May-2020 09:41:16] : [WARNING] - CONSULTA GENERALES:
+[29-May-2020 09:41:16] : [WARNING] - SELECT
+a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado,
+b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=22003835 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[29-May-2020 09:42:33] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo:  estado: 0 modo normal
+[29-May-2020 09:42:33] : [WARNING] - CONSULTA GENERALES:
+[29-May-2020 09:42:33] : [WARNING] - SELECT
+a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado,
+b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=22003835 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[29-May-2020 09:43:04] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo:  estado: 0 modo normal
+[29-May-2020 09:43:04] : [WARNING] - CONSULTA GENERALES:
+[29-May-2020 09:43:04] : [WARNING] - SELECT
+a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado,
+b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=22003835 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[29-May-2020 09:45:06] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: admitidos_prov estado: 30 modo provisionales

@@ -244,3 +244,879 @@
     [type] => 0
 )
 
+[28-May-2020 08:25:49] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 08:25:49] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[28-May-2020 08:25:49] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 08:25:49] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[28-May-2020 10:16:45] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 10:16:45] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[28-May-2020 10:16:45] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 10:16:45] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[28-May-2020 10:18:21] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 10:18:21] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[28-May-2020 10:18:21] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 10:18:21] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[28-May-2020 11:31:30] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 11:31:30] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)
+[28-May-2020 11:31:30] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 11:31:30] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[28-May-2020 11:36:29] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 11:36:29] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)
+[28-May-2020 11:36:29] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 11:36:29] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[28-May-2020 11:36:46] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 11:36:46] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)
+[28-May-2020 11:36:46] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 11:36:46] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[28-May-2020 12:12:24] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 12:12:24] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)
+[28-May-2020 12:12:24] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 12:12:24] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[28-May-2020 12:17:08] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 12:17:08] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)
+[28-May-2020 12:17:08] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 12:17:08] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[28-May-2020 15:00:18] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 15:00:18] : [WARNING] - SELECT id_centro FROM centros where id_centro>1
+[28-May-2020 15:00:18] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 15:00:18] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 11
+    [type] => 0
+)
+
+[28-May-2020 15:00:18] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[28-May-2020 15:00:18] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:18] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[28-May-2020 15:00:18] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:18] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[28-May-2020 15:00:18] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:18] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[28-May-2020 15:00:18] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:18] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[28-May-2020 15:00:18] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:18] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[28-May-2020 15:00:18] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:18] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[28-May-2020 15:00:18] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:18] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[28-May-2020 15:00:18] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:18] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[28-May-2020 15:00:18] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:18] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[28-May-2020 15:00:18] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:18] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[28-May-2020 15:00:18] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:43] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 15:00:43] : [WARNING] - SELECT id_centro FROM centros where id_centro>1
+[28-May-2020 15:00:43] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 15:00:43] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 11
+    [type] => 0
+)
+
+[28-May-2020 15:00:43] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[28-May-2020 15:00:43] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:43] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[28-May-2020 15:00:43] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:43] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[28-May-2020 15:00:43] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:43] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[28-May-2020 15:00:43] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:43] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[28-May-2020 15:00:43] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:43] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[28-May-2020 15:00:43] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:43] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[28-May-2020 15:00:43] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:43] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[28-May-2020 15:00:43] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:43] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[28-May-2020 15:00:43] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:43] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[28-May-2020 15:00:43] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:00:43] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[28-May-2020 15:00:43] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:42] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 15:03:42] : [WARNING] - SELECT id_centro FROM centros where id_centro>1
+[28-May-2020 15:03:42] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 15:03:42] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 11
+    [type] => 0
+)
+
+[28-May-2020 15:03:42] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[28-May-2020 15:03:42] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:42] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[28-May-2020 15:03:42] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:42] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[28-May-2020 15:03:42] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:42] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[28-May-2020 15:03:42] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:42] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[28-May-2020 15:03:42] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:42] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[28-May-2020 15:03:42] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:42] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[28-May-2020 15:03:42] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:42] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[28-May-2020 15:03:42] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:42] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[28-May-2020 15:03:43] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:43] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[28-May-2020 15:03:43] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:43] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[28-May-2020 15:03:43] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:54] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 15:03:54] : [WARNING] - SELECT id_centro FROM centros where id_centro>1
+[28-May-2020 15:03:54] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 15:03:54] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 11
+    [type] => 0
+)
+
+[28-May-2020 15:03:54] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[28-May-2020 15:03:54] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:54] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[28-May-2020 15:03:54] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:54] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[28-May-2020 15:03:54] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:54] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[28-May-2020 15:03:54] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:54] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[28-May-2020 15:03:54] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:54] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[28-May-2020 15:03:54] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:54] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[28-May-2020 15:03:54] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:54] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[28-May-2020 15:03:54] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:54] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[28-May-2020 15:03:54] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:54] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[28-May-2020 15:03:54] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:03:54] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[28-May-2020 15:03:54] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:19:12] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 15:19:12] : [WARNING] - SELECT id_centro FROM centros where id_centro>1
+[28-May-2020 15:19:12] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 15:19:12] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 11
+    [type] => 0
+)
+
+[28-May-2020 15:19:12] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[28-May-2020 15:19:12] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:19:12] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[28-May-2020 15:19:12] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:19:12] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[28-May-2020 15:19:12] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:19:12] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[28-May-2020 15:19:12] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:19:12] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[28-May-2020 15:19:12] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:19:12] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[28-May-2020 15:19:12] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:19:12] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[28-May-2020 15:19:12] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:19:12] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[28-May-2020 15:19:12] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:19:12] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[28-May-2020 15:19:12] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:19:12] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[28-May-2020 15:19:12] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:19:12] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[28-May-2020 15:19:12] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:20:11] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 15:20:11] : [WARNING] - SELECT id_centro FROM centros where id_centro>1
+[28-May-2020 15:20:11] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 15:20:11] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 11
+    [type] => 0
+)
+
+[28-May-2020 15:20:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[28-May-2020 15:20:11] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:20:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[28-May-2020 15:20:11] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:20:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[28-May-2020 15:20:11] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:20:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[28-May-2020 15:20:11] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:20:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[28-May-2020 15:20:11] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:20:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[28-May-2020 15:20:11] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:20:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[28-May-2020 15:20:11] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:20:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[28-May-2020 15:20:11] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:20:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[28-May-2020 15:20:11] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:20:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[28-May-2020 15:20:11] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:20:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[28-May-2020 15:20:11] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:23] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 15:21:23] : [WARNING] - SELECT id_centro FROM centros where id_centro>1
+[28-May-2020 15:21:23] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 15:21:23] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 11
+    [type] => 0
+)
+
+[28-May-2020 15:21:23] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[28-May-2020 15:21:23] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:23] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[28-May-2020 15:21:23] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:23] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[28-May-2020 15:21:23] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:23] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[28-May-2020 15:21:23] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:23] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[28-May-2020 15:21:23] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:23] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[28-May-2020 15:21:23] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:23] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[28-May-2020 15:21:23] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:23] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[28-May-2020 15:21:23] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:23] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[28-May-2020 15:21:23] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:23] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[28-May-2020 15:21:23] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:23] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[28-May-2020 15:21:23] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:53] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 15:21:53] : [WARNING] - SELECT id_centro FROM centros where id_centro>1
+[28-May-2020 15:21:53] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 15:21:53] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 11
+    [type] => 0
+)
+
+[28-May-2020 15:21:53] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[28-May-2020 15:21:53] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:53] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[28-May-2020 15:21:53] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:53] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[28-May-2020 15:21:53] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:53] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[28-May-2020 15:21:53] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:53] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[28-May-2020 15:21:53] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:53] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[28-May-2020 15:21:53] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:53] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[28-May-2020 15:21:53] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:53] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[28-May-2020 15:21:53] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:53] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[28-May-2020 15:21:53] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:53] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[28-May-2020 15:21:53] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:21:53] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[28-May-2020 15:21:53] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:14] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 15:22:14] : [WARNING] - SELECT id_centro FROM centros where id_centro>1
+[28-May-2020 15:22:14] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 15:22:14] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 11
+    [type] => 0
+)
+
+[28-May-2020 15:22:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[28-May-2020 15:22:14] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[28-May-2020 15:22:14] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[28-May-2020 15:22:14] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[28-May-2020 15:22:14] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[28-May-2020 15:22:14] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[28-May-2020 15:22:14] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[28-May-2020 15:22:14] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[28-May-2020 15:22:14] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[28-May-2020 15:22:14] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[28-May-2020 15:22:14] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[28-May-2020 15:22:14] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:40] : [WARNING] - CONSULTA CENTROS
+[28-May-2020 15:22:40] : [WARNING] - SELECT id_centro FROM centros where id_centro>1
+[28-May-2020 15:22:40] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-May-2020 15:22:40] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 11
+    [type] => 0
+)
+
+[28-May-2020 15:22:40] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[28-May-2020 15:22:40] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:40] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[28-May-2020 15:22:40] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:40] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[28-May-2020 15:22:40] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:40] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[28-May-2020 15:22:40] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:40] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[28-May-2020 15:22:40] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:40] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[28-May-2020 15:22:40] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:40] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[28-May-2020 15:22:40] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:40] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[28-May-2020 15:22:40] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:40] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[28-May-2020 15:22:40] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:40] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[28-May-2020 15:22:40] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[28-May-2020 15:22:40] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[28-May-2020 15:22:40] : [WARNING] - CABECERA EN SHOWTABLAS: no

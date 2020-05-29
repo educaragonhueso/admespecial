@@ -1,4 +1,5 @@
 <?php 
+session_destroy();
 session_start();
 $_SESSION=array();
 require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/guarderias/config/config_global.php";
@@ -239,9 +240,9 @@ input[type=text], input[type=password] {
     <body>
         <div class="wrapper">
             <h2>ADMISIÓN GUARDERÍAS CURSO 2020/2021</h2>
+	<?php if(IPREMOTA==$_SERVER['HTTP_X_FORWARDED_FOR'] || PAGINA_ACTIVA==1) { $_SESSION['anonimo']='1'; ?>
 	<button type="button" class="btn btn-primary" id="csolicitud">Crear solicitud</button>
 
-	<?php if(IPREMOTA==$_SERVER['HTTP_X_FORWARDED_FOR'] || DIA_INICIO_INSCRIPCION<=$hoy) { ?>
             <p>Introduce tu nombre de  usuario y contraseña</p>
             <form action="" method="post">
                 <div class="form-group <?php echo (!empty($nombre_usuario_err)) ? 'has-error' : ''; ?>">

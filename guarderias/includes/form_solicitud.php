@@ -348,13 +348,13 @@ $formsol.=
                            <label><b>CURSO/AÑOS</b></label>
                            </div>
                            <div class="radio">
-                              <label><input type="radio" name="tipoestudios" value="uno" >1 año (2019)</label>
+                              <label><input type="radio" name="tipoestudios" value="2020" >0 (2020)</label>
                            </div>
                            <div class="radio">
-                              <label><input type="radio" name="tipoestudios" value="dos">2 años (2018)</label>
+                              <label><input type="radio" name="tipoestudios" value="2019">1 (2019)</label>
                            </div>
                            <div class="radio">
-                              <label><input type="radio" name="tipoestudios" value="tres">3 años (2017)</label>
+                              <label><input type="radio" name="tipoestudios" value="2018">2 (2018)</label>
                            </div>
 				            </div>
 				         </div>

@@ -49,7 +49,7 @@ if($rol!='alumno')
 	if($rol=='admin')
 		{
 		parse_str($fsol_entrada, $fsol_tmp);
-		$id_centro_destino=$tsol->getCentroId($fsol_tmp['id_centro_destino'],'especial');
+		$id_centro_destino=$tsol->getCentroId($fsol_tmp['id_centro_destino'],'normal');
 		}
 	}
 $fsol_entrada.="&baremo_ptstotal=".$_POST['ptsbaremo'];
@@ -61,7 +61,7 @@ if($rol=='alumno')
 	$log_nueva->warning("OBTENIDA FASE SOLICITUD: ".$fase_sol);
 	if($fase_sol=='validada') return 'ERROR, NO SE PUEDE MODIFICAR UNA SOLICITUD APTA';
 	$log_nueva->warning("SOLICITUD NO ESTA EN ESTADO VALIDADA, ESTADO: ".$estado_sol);
-	$id_centro_destino=$tsol->getCentroId($_POST['id_centro_destino'],'especial');
+	$id_centro_destino=$tsol->getCentroId($_POST['id_centro_destino'],'normal');
 	if($id_centro_destino==0) 
 		{
 		print('ERROR GUARDANDO DATOS: EL CENTRO SOLICITADO NO EXISTE');

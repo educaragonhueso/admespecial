@@ -142,10 +142,7 @@ class Centro extends EntidadBase{
 			$resultSet=array();
 			if($rol=='admin') 
 				$sql="SELECT nombre_centro,IFNULL(vacantes_ebo,0) as vacantes_ebo,IFNULL(vacantes_tva,0) as vacantes_tva ,id_centro FROM centros WHERE clase_centro='especial'";
-	
-	
 			$this->log_matricula->warning("CONSULTA DATOS CENTROS RESUMEN FASE 2: ".$sql);
-	
 			$query=$this->conexion->query($sql);
 			if($query)
     			{

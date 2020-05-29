@@ -231,7 +231,7 @@ class SolicitudController extends ControladorBase{
 					continue;
 					}
 				//controles de validacion de baremo tipo check
-				if($skey=='baremo_validar_tutores_centro' or $skey=='baremo_validar_renta_inferior' or $skey=='baremo_validar_hnos_centro')
+				if($skey=='baremo_validar_tutores_centro' or $skey=='baremo_validar_renta_inferior' or $skey=='baremo_validar_sitlaboral' or $skey=='baremo_validar_hnos_centro')
 					{
 						$this->log_editar->warning("DATOS CAMPO VALIDACION CHECK: ");
 						$soriginal='<input type="hidden" id="'.$skey.'" value="0" name="'.$skey.'">';
@@ -261,13 +261,6 @@ class SolicitudController extends ControladorBase{
 						$check="checked";
                	if($skey=='baremo_renta_inferior')
 						{	
-               	
-					   /*
-									$soriginal='id="tributo" style="display:none"';
-									$sdestino='id="tributo" style="display:inline-block"';
-									$this->formulario=str_replace($soriginal,$sdestino,$this->formulario);
-									
-					   */
 									$soriginal='id="labeltributo'.$id.'" style="display:none"';
 									$sdestino='id="labeltributo'.$id.'" style="display:inline-block"';
 									$this->formulario=str_replace($soriginal,$sdestino,$this->formulario);

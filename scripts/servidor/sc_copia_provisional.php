@@ -43,9 +43,12 @@ foreach($acentros as $dcentro)
 	$nsolicitudescentro=$centrotmp->getNumSolicitudes($dcentro['id_centro'],1);
 	if($nsolicitudescentro==0) continue;
 	$nombrecentro=$centrotmp->getNombre();
+   
+   ########################################################################################
 	$log_fase_provisional->warning("NOMBRE: ".$nombrecentro.PHP_EOL);
 	$log_fase_provisional->warning("FASE: ".$centrotmp->getFaseSorteo().PHP_EOL);
 	$log_fase_provisional->warning("NSOLICITUDES: ".$nsolicitudescentro.PHP_EOL);
+   ########################################################################################
 
 	$dsorteo=$centrotmp->getVacantes('centro');
 	$vacantes_ebo=$dsorteo[0]->vacantes;
@@ -54,6 +57,8 @@ foreach($acentros as $dcentro)
 	if($tsolicitud->setSolicitudesSorteo($id_centro,$nsolicitudescentro,$vacantes_ebo,$vacantes_tva)==0) 
 		print("NO HAY VACANTES<br>");
 }	
+if($tsolicitud->desmarcarValidados(1)==0)
+  print("NO HAY VALIDADOS<br>");
 //copiamos todos los datos a tabla de provisionales	
 $ct=$tsolicitud->copiaTablaCentro(1,'alumnos_provisional_final');	
 $log_fase_provisional->warning("RESULTADO COPIAR TABLA $ct ");

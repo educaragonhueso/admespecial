@@ -11,7 +11,8 @@ else
 define("DIR_BASE","/datos/www/preadmespecial.aragon.es/public_admespecial/guarderias/");
 define("DIR_CORE",DIR_BASE."/core");
 #define("IPREMOTA","172.27.0.56");
-define("IPREMOTA","90.94.107.29");
+define("IPREMOTA","15.16.149.60");
+define("PAGINA_ACTIVA","1");
 //parametros propios de la aplicacion
 define("DIR_APP",DIR_BASE."/app/");
 define("DIR_CONF",DIR_BASE."config/");
@@ -25,13 +26,13 @@ define("URL_BASE",'http://preadmespecial.aragon.es/guarderias/');
 define("VERSION",'PRE');
 
 define("DIA_INICIO_INSCRIPCION",'2020/05/26');
-define("DIA_MAX_SOL_ALUMNO",'2020/05/29');
-define("DIA_FIN_INSCRIPCION",'2020/05/30');
+define("DIA_MAX_SOL_ALUMNO",'2020/05/28');
+define("DIA_FIN_INSCRIPCION",'2020/05/28');
 
-define("DIA_SORTEO",'2020/06/23');
+define("DIA_BAREMACION",'2020/05/28');
+define("DIA_PUBLICACION_BAREMACION",'2020/05/029');
 
-define("DIA_BAREMACION",'2020/06/25');
-define("DIA_PUBLICACION_BAREMACION",'2020/06/026');
+define("DIA_SORTEO",'2020/06/30');
 
 define("DIA_PROVISIONALES",'2020/06/28');
 define("DIA_DEFINITIVOS",'2020/06/30');

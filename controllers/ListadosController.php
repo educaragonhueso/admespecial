@@ -103,9 +103,7 @@ class ListadosController extends ControladorBase{
 	}
   public function getSolicitudes($id_centro=1,$tiposol=0,$fase_sorteo=0,$modo='normal',$subtipo_listado='',$provincia='todas',$estado_convocatoria=0)
 	{
-		      $this->log_listados_generales->warning("ENTRANDO EN
-GETSOLICITUDEs,BAREMACION subtipo: $subtipo_listado estado: $estado_convocatoria
-modo $modo");
+		      $this->log_listados_generales->warning("ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: $subtipo_listado estado: $estado_convocatoria modo $modo");
 		$solicitud=new Solicitud($this->adapter);
 		if($modo=='normal')// listados previos al sorteo
     	{

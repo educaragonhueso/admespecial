@@ -69,19 +69,24 @@ if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=1)
 		foreach($acentros as $dcentro)
 		{
 			$id_centrotmp=$dcentro['id_centro'];
-			########################################################################################
+			
+         ########################################################################################
 			$log_baremacion->warning("INICIANDO GESTION CENTRO");
 			########################################################################################
-			$centrotmp=new Centro($conexion,$dcentro['id_centro'],'no',0);
+			
+         $centrotmp=new Centro($conexion,$dcentro['id_centro'],'no',0);
 			$centrotmp->setId($dcentro['id_centro']);
 			$centrotmp->setNombre();
 			$nsolicitudescentro=$centrotmp->getNumSolicitudes($dcentro['id_centro'],1);
 			if($nsolicitudescentro==0) continue;
 			$nombrecentro=$centrotmp->getNombre();
+			
+         ########################################################################################
 			$log_baremacion->warning("NOMBRE: ".$nombrecentro.PHP_EOL);
 			$log_baremacion->warning("FASE: ".$centrotmp->getFaseSorteo().PHP_EOL);
 			$log_baremacion->warning("NSOLICITUDES: ".$nsolicitudescentro.PHP_EOL);
 			$log_baremacion->warning("ENTRANDO SORTEO TABLA CENTRO: $nombrecentro");
+			########################################################################################
 		
 			$dsorteo=$centrotmp->getVacantes('centro');
 			$vacantes_ebo=$dsorteo[0]->vacantes;
@@ -93,7 +98,6 @@ if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=1)
 		$ct=$tsolicitud->copiaTablaCentro(1,'alumnos_provisional_final');	
       if($tsolicitud->desmarcarValidados(1)==0)
          print("NO HAY VALIDADOS<br>");
-
 	}	
 ########################################################################################
 $log_listados_provisionales->warning("ACTUALIZADA TABLA PROVISIONALES $ct");
@@ -101,6 +105,7 @@ $log_listados_provisionales->warning("ACTUALIZADA TABLA PROVISIONALES $ct");
 }
 $cabecera="campos_cabecera_".$subtipo_listado;
 $camposdatos="campos_bbdd_".$subtipo_listado;
+
 ######################################################################################
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CABECERA: ".$cabecera);
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CENTRO:ESTADO ".$id_centro.":".$estado_centro);

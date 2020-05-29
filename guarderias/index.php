@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!$_SESSION) 
+if(!$_SESSION['anonimo']) 
 header("location: login_activa.php");
 /*
 if(!isset($_SESSION['nombre_usuario']) || empty($_SESSION['nombre_usuario']))

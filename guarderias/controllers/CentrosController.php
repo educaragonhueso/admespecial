@@ -50,18 +50,24 @@ coordenadas!='nodata'");
      //    $r[]=$row; 
     return $r;
     }
-   public function getAllCentros($provincia='todas',$clase='todos')
+   public function getAllCentros($provincia='todas',$clase='todos',$tipoadmision='guarderias')
    {
-      if($clase=='todos')
+      if($tipoadmision=='especial')
       {
-         if($provincia=='todas')	$sql="SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)";
-         else	$sql="SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia='$provincia'";
+         if($clase=='todos')
+         {
+            if($provincia=='todas')	$sql="SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)";
+            else	$sql="SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia='$provincia'";
+         }
+         elseif($clase=='especial')
+         {
+            if($provincia=='todas')	$sql="SELECT id_centro FROM centros where id_centro>1 and clase_centro='especial' and id_centro in(select id_centro from matricula)";
+            else	$sql="SELECT id_centro FROM centros where id_centro>1 and clase_centro='especial' and id_centro in(select id_centro from matricula) and provincia='$provincia'";
+         }
       }
-      elseif($clase=='especial')
-      {
-         if($provincia=='todas')	$sql="SELECT id_centro FROM centros where id_centro>1 and clase_centro='especial' and id_centro in(select id_centro from matricula)";
-         else	$sql="SELECT id_centro FROM centros where id_centro>1 and clase_centro='especial' and id_centro in(select id_centro from matricula) and provincia='$provincia'";
-      }
+      else
+           $sql="SELECT id_centro FROM centros where id_centro>1";
+
       $this->log_listadoscentros->warning("CONSULTA CENTROS");
       $this->log_listadoscentros->warning($sql);
       $query=$this->adapter->query($sql);

@@ -105,7 +105,7 @@ class ListadosController extends ControladorBase{
 		$this->log_gencsvs->warning('ENTRANDO EN GETSOLICITUDEs, MODO: '.$modo);
 		$solicitud=new Solicitud($this->adapter);
 		if($modo=='normal')// listados previos al sorteo
-    		{
+    	{
 	    		$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia);
  		}
 		elseif($modo=='csv')
@@ -184,7 +184,6 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 		$cabecera="<div class='filasol' id='cab_solicitudes'>";
 		if($rol=='admin') $cabecera.="<span><b>CENTRO</b></span>";
                 $cabecera.="<span class='cab_class dalumnofirst' data-idal=''><b>ALUMNO</b></span>";
-                $cabecera.="<span class='cab_class dalumno' data-idal=''><b>CRITERIOS DE PRIORIDAD</b></span>";
                 $cabecera.="<span class='cab_class dalumno' data-idal=''><b>NORDEN</b></span>";
                 $cabecera.="<span class='cab_class dalumno' data-idal=''><b>BAREMO</b></span>";
                 $cabecera.='<div class="right" id=""><span><b>CAMBIO ESTADO</b></span></div>&nbsp';
@@ -194,7 +193,6 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
     $i= $user->id_alumno;
 		$li.="<div class='filasol' id='filasol".$user->id_alumno."'>";
                 $li.="<span class='calumno dalumnofirst' data-idal='".$i."'>".$user->id_alumno."-".strtoupper($user->apellido1).",".strtoupper($user->apellido2);
-                $li.="<span class='trans_cole dalumno' data-idal='".$i."'>".$user->trans_cole."</span";
                 $li.="<span class='trans_cole dalumno' data-idal='".$i."'>".$user->numero_sorteo."</span";
                 $li.="<span class='trans_cole dalumno' data-idal='".$i."'>".$user->ptstotal."</span";
                 $li.='<span><div class="right" id="'.$user->estado.'"><a  class="btn btn-danger estado" id="'.$i.'" >BORRADOR</a></div>&nbsp
@@ -257,7 +255,6 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 		$li.="<td id='fase".$sol->id_alumno."' class='fase'>".$sol->fase_solicitud."</td>";
 		$li.="<td id='estado".$sol->id_alumno."' class='estado'>".$sol->estado_solicitud."</td>";
 		$li.="<td id='tipoens".$sol->id_alumno."' class='estado'>".$sol->tipoestudios."</td>";
-		$li.="<td id='transporte".$sol->id_alumno."'>".$sol->transporte."</td>";
 		$li.="<td id='pvalidados".$sol->id_alumno."'>".$sol->puntos_validados."</td>";
 		$li.="<td id='nordsorteo".$sol->id_alumno."'>".$sol->nordensorteo."</td>";
 		$li.="<td id='nasignado".$sol->id_alumno."'>".$sol->nasignado."</td>";
@@ -275,7 +272,6 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
         <th>FASE</th>
         <th>ESTADO</th>
         <th>TIPO</th>
-        <th>CRITERIOS DE PRIORIDAD</th>
         <th>BAREMO</th>
         <th>NORDEN</th>
         <th>NALEATORIO</th>
@@ -375,7 +371,9 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 	
 	$centroanterior='';
 	$centroactual='';
-
+	$tipoanterior='';
+	$tipoactualactual='';
+   $ncentro=0;
 	$ncolumnas=sizeof($cabecera);
 	$colspan=$ncolumnas-1;
 	$html='<table class="table table-striped" id="sol_table" style="color:white">';
@@ -392,27 +390,29 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 
 	foreach($a as $sol) 
 	{
+		$tipoanterior=$tipoactual;
+		$tipoactual=$sol->tipoestudios;
 		if($rol=='admin' || $rol=='sp')
 		{
 			$centroanterior=$centroactual;
 			$centroactual=$sol->id_centro;
-			if($sol->tipoestudios=='tva' and $cabadmin==0)
-			{
-				$cabadmin=1;
-			}
 			if($centroactual!=$centroanterior)
 				{
+            $ncentro=1;
 	         $cab=0;
 				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color:#141259;'><td colspan='".$ncolumnas."'><b>".$sol->nombre_centro."</b></td></tr>";
-				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
-				//$cabadmin=0;
 				}
+         else $ncentro=0;
+			if($tipoactual!=$tipoanterior or $ncentro==1)
+				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
 		}
+      /*
 		if($sol->tipoestudios=='tva' and $cab==0)
 		{
 			$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
 			$cab=1;
 		}
+      */
 		$html.=$this->showSolicitudListado($sol,$camposdatos,$provisional,$htmlcentros,$fase);	
 	}
 	$html.="</tbody>";
@@ -732,9 +732,9 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
     public function getCentrosNombreVacantes($provincia='todas')
 		{
 			if($provincia!='todas')
-				$sql="SELECT  id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros c, centros c where clase_centro='especial' and c.id_centro=cg.id_centro and provincia='$provincia'";
+				$sql="SELECT  id_centro,nombre_centro,vuno,vdos,vtres from centros c where provincia='$provincia'";
 			else
-				$sql="SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'";
+				$sql="SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros";
 			$this->log_listados_solicitudes->warning("CONSULTA LISTADO SOLICITUDES: ".$sql);
 			$r=$this->adapter->query($sql);
 			 while ($obj = $r->fetch_object()) 
@@ -747,9 +747,9 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
     public function getCentrosIds($provincia='todas')
 		{
 			if($provincia!='todas')
-				$sql="SELECT distinct(cg.id_centro) from centros_grupos cg, centros c where c.id_centro=cg.id_centro and provincia='$provincia'";
+				$sql="SELECT distinct(id_centro) from centros c where  provincia='$provincia'";
 			else
-				$sql="SELECT distinct(id_centro) from centros_grupos";
+				$sql="SELECT distinct(id_centro) from centros where id_centro not in(-3,-2,-1,1)";
 			$this->log_listados_solicitudes->warning("CONSULTA LISTADO SOLICITUDES: ".$sql);
 			$r=$this->adapter->query($sql);
 			 while ($obj = $r->fetch_object()) 

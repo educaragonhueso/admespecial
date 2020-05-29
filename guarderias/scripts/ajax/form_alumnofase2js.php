@@ -2,7 +2,7 @@
 $script="<script>
 var cen_options = 
 	{
-	url: '../datosweb/centros_especial.json',
+	url: '../datosweb/guarderias.json',
 	getValue:'nombre_centro',
 		list: 
 		{

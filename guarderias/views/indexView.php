@@ -35,7 +35,7 @@ print("DIR BASE:".DIR_BASE);
         //       echo $this->showTabla('centro',$_SESSION['id_centro'],'matricula');
       ?>
 		<?php if($_SESSION['rol']=='admin') 
-               echo $this->showTablas($_SESSION['rol'],$_SESSION['id_centro'],'matricula','todas');
+               #echo $this->showTablas($_SESSION['rol'],$_SESSION['id_centro'],'matricula','todas');
       ?>
 		<?php if($_SESSION['provincia']!='todas')
             {
