@@ -112,25 +112,25 @@ else//accedemos como centro
 	{
 			if($_POST['id_centro']!='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
 			print($form_nuevasolicitud);
-			print($list->showFiltrosCheck());
+			//print($list->showFiltrosCheck());
 			print($filtro_solicitudes);
 			print($list->showSolicitudes($solicitudes,$_POST['rol']));
 	}
 	elseif($fase_sorteo==1)
-        {
-                        if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
-                        print($form_nuevasolicitud);
-                        print('<br>');
-                        print($list->showFiltrosCheck());
-                        print($filtro_solicitudes);
-                        print($list->showSolicitudes($solicitudes,$_POST['rol']));
-        }
+   {
+         if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
+         print($form_nuevasolicitud);
+         print('<br>');
+         //print($list->showFiltrosCheck());
+         print($filtro_solicitudes);
+         print($list->showSolicitudes($solicitudes,$_POST['rol']));
+   }
 	//elseif($fase_sorteo==2 and $estado_convocatoria<30)
 	elseif($fase_sorteo>=2)
 	{
 			//print($menu_provisionales);
-                        if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
-                        if($estado_convocatoria<=30) print($form_nuevasolicitud);
+         if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
+         if($estado_convocatoria<=30) print($form_nuevasolicitud);
 			print($list->showSolicitudes($solicitudes,$_POST['rol']));
 	}
 }

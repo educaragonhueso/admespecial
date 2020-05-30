@@ -15,9 +15,12 @@
                                 <a class="nav-link dropdown-toggle desplegable" id="navbardrop" data-toggle="dropdown">Documentación</a>
 				 <div class="dropdown-menu">
 				 <a class="dropdown-item" href="documentacion/a4modsol.pdf" id="doca4" target="_blank">Modelo solicitud autorrellenable (anexoIV)</a>
-				 <?php if($_SESSION['rol']!='alumno') echo '<a class="dropdown-item"
-href="documentacion/InstruccionesEEspecial.pdf" id="docinst"
-target="_blank">Instrucciones Admisión Eduación Especial</a>';?>
+             <a class="dropdown-item" href="documentacion/InstruccionesEEspecial.pdf" id="docinst" target="_blank">Instrucciones Admisión Eduación Especial</a>;
+             <a class="dropdown-item" href="documentacion/caladmespecial.pdf"  target="_blank">Calendario Admisión Eduación Especial</a>;
+				 <?php if($_SESSION['rol']!='alumno'){ 
+                  echo '<a class="dropdown-item" href="documentacion/InstruccionesEEspecial.pdf" id="docinst" target="_blank">Instrucciones Admisión Eduación Especial</a>';
+
+              }?>
       
 				 </div>
                             </li>
@@ -87,7 +90,6 @@ target="_blank">Mapa Centros</a>';
                 </div>
                <?php }?>
             </li>
-  <?php if($_SESSION['rol']!='alumno'){?>
 		<?php if(($_SESSION['estado_convocatoria']<=30 and $_SESSION['estado_convocatoria']>=1)  or $_SESSION['fase_sorteo']==2) {?>
                             <li class="nav-item active msuperior dropdown" id="mprovisional">
                                  <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
@@ -99,6 +101,7 @@ target="_blank">Mapa Centros</a>';
                             </li>
 			<?php }?>
 		<?php if($_SESSION['estado_convocatoria']>=30){?>
+		   <?php if(($_SESSION['estado_convocatoria']>=40 and $_SESSION['rol']=='alumno') or $_SESSION['rol']!='alumno'){?>
                             <li class="nav-item active msuperior dropdown" id="mdefinitivo">
                                  <a class="show_definitivos nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Definitivos</a>
 		                 <div class="dropdown-menu">
@@ -107,7 +110,9 @@ target="_blank">Mapa Centros</a>';
 				 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="excluidos_def">Excluidos definitivo</a>
 				 </div>
                             </li>
+		   <?php }?>
 		<?php }?>
+  <?php if($_SESSION['rol']!='alumno'){?>
 		<?php if(($_SESSION['rol']=='admin' or $_SESSION['rol']=='sp') and $_SESSION['estado_convocatoria']>30) {?>
                             <li class="nav-item active msuperior dropdown" id="mdefinitivo">
                                  <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASE II</a>

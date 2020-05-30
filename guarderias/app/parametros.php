@@ -16,8 +16,8 @@ $campos_cabecera_sor_bar=array('Primer apellido','Segundo apellido','Nombre','Nu
 $campos_bbdd_sor_bar=array('apellido1','apellido2','nombre','nasignado','puntos_validados');
 
 //DETALLE BAREMO
-$campos_cabecera_sor_det=array('Primer apellido','Segundo apellido','Nombre','Proximidad dom.','Tutor en centro','Renta inferior','Discapacidad','Familia','Hermanos');
-$campos_bbdd_sor_det=array('apellido1','apellido2','nombre','proximidad_domicilio','tutores_centro','renta_inferior','discapacidad','tipo_familia','hermanos_centro');
+$campos_cabecera_sor_det=array('Primer apellido','Segundo apellido','Nombre','Sit Laboral','Tutor en centro','Renta inferior','Discapacidad','Familia','Hermanos');
+$campos_bbdd_sor_det=array('apellido1','apellido2','nombre','sitlaboral','tutores_centro','renta_inferior','discapacidad','tipo_familia','hermanos_centro');
 
 //DATOS PARA EXPORTAR DATOS CSVS
 $campos_cabecera_csv_fase2=array('Tipo','Ap1','Ap2','Nombre','Loc','Calle','Reserva','Reserva Original','Centro origen','Cen.Pref','Cen.Alt1','Cen.Alt2','Cen.Alt3','Cen.Alt4','Cen.Alt5','Cen.Alt6','Baremo','Prioridad','Estado','Centro definitivo','Numero de sorteo asignado','Modificacion');

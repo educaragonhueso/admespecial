@@ -19,6 +19,7 @@ var vidcentro=$('#id_centro').text();
 					title: data
 					});
 				$('#num_sorteo').prop('disabled', false);
+            $('#boton_asignar_numero').remove();
 		},error: function (request, status, error) {
         alert(error);
     }
@@ -63,6 +64,8 @@ return;
 						title: "SORTEO REALIZADO CON ÉXITO"
 						});
 					$('#num_sorteo').prop('disabled', true);
+               $('#boton_realizar_sorteo').remove();
+               $('#num_sorteo').remove();
 				}
 		},
 	      error: function() {

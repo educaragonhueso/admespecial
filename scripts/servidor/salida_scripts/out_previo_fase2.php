@@ -139,7 +139,7 @@ ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set 
 )
 
 ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_tva=vacantes_tva+1,vacantes_tva_original=vacantes_tva_original+1 where id_centro=22000056
-Actualizadas vacantes centros para fase 2 a las 08:05 del dia 29-May-2020
+Actualizadas vacantes centros para fase 2 a las 08:05 del dia 30-May-2020
 Copiando tabla fase2....
 
 INSERT IGNORE INTO alumnos_fase2 SELECT
@@ -199,4 +199,4 @@ left join
 	(SELECT a.id_alumno,c.id_centro as id_centro_origen, c.nombre_centro as centro_origen from alumnos a, centros c where c.id_centro=a.id_centro_estudios_origen) 
 	as t8 on t1.id_alumno=t8.id_alumno WHERE t1.fase_solicitud!='borrador' and t1.est_desp_sorteo='noadmitida'
 
-1Copia tabla solicitudesfase2 realizada corectamente a las 08:05 del dia 29-May-2020
+1Copia tabla solicitudesfase2 realizada corectamente a las 08:05 del dia 30-May-2020

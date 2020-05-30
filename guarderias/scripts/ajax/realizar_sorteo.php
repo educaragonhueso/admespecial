@@ -54,13 +54,14 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 		$nsorteo=$_POST['nsorteo'];
 		//Actualizamos el numero de sorteo para el centro
 		if($tcentro->setSorteo($nsorteo,1)==0) {print("ERROR SORTEO"); exit();}
-		
-		$dsorteo=$tcentro->getVacantes('admin','');
-		$vacantes_ebo=$dsorteo[0]->vacantes;
-		$vacantes_tva=$dsorteo[1]->vacantes;
-		
+	/*	
+		$dsorteo=$tcentro->getVacantesGuarderias('admin','');
+		$vuno=$dsorteo[0]->vuno;
+		$vdos=$dsorteo[0]->vdos;
+		$vtres=$dsorteo[0]->vtres;
+	*/	
 		//asignamos numero de orden a las solicitudes segun el numero de sorteo	
-		if($tsolicitud->setNordenSorteo($id_centro,$nsorteo,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
+		if($tsolicitud->setNordenSorteoGuarderias($id_centro,$nsorteo,$nsolicitudes)==0) 
 			print("NO HAY VACANTES<br>");
 		$tcentro->setFaseSorteo(3);
 
@@ -96,11 +97,17 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 			 $log_sorteo->warning("ERROR ACT FASE: $nombrecentro");
 			 return 0;
 			}
-			$dsorteo=$centrotmp->getVacantes('centro');
-			$vacantes_ebo=$dsorteo[0]->vacantes;
-			$vacantes_tva=$dsorteo[1]->vacantes;
-			if($tsolicitud->setSolicitudesSorteo($id_centro,$nsolicitudescentro,$vacantes_ebo,$vacantes_tva)==0) 
-				print("NO HAY VACANTES<br>");
+			$log_sorteo->warning("OBTENIENDO VACANTES CENTRO: $nombrecentro");
+			$dsorteo=$centrotmp->getVacantesGuarderias('centro');
+			$log_sorteo->warning(print_r($dsorteo,true));
+			$vuno=$dsorteo[0]->vuno;
+			$vdos=$dsorteo[0]->vdos;
+			$vtres=$dsorteo[0]->vtres;
+			if($tsolicitud->setSolicitudesSorteoGuarderias($id_centro,$nsolicitudescentro,$vuno,$vdos,$vtres)==0) 
+		   {
+      		print("NO HAY VACANTES<br>");
+            exit();
+         }
 		}	
 		//copiamos todos los datos a tabla de provisionales	
 		$ct=$tsolicitud->copiaTablaCentro(1,'alumnos_provisional_final');	

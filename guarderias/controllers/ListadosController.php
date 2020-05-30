@@ -385,8 +385,6 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
   $html.="</tr></thead><tbody>";
 	$cabadmin=0;
 	$cab=0;
-	if($rol=='centro')
-			$html.="<tr class='filasol' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>EBO</b></td></tr>";
 
 	foreach($a as $sol) 
 	{
@@ -406,13 +404,11 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 			if($tipoactual!=$tipoanterior or $ncentro==1)
 				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
 		}
-      /*
-		if($sol->tipoestudios=='tva' and $cab==0)
+		elseif($rol=='centro')
 		{
-			$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
-			$cab=1;
+			if($tipoactual!=$tipoanterior)
+				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
 		}
-      */
 		$html.=$this->showSolicitudListado($sol,$camposdatos,$provisional,$htmlcentros,$fase);	
 	}
 	$html.="</tbody>";
