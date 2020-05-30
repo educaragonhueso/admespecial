@@ -15,7 +15,6 @@
                                 <a class="nav-link dropdown-toggle desplegable" id="navbardrop" data-toggle="dropdown">Documentación</a>
 				 <div class="dropdown-menu">
 				 <a class="dropdown-item" href="documentacion/a4modsol.pdf" id="doca4" target="_blank">Modelo solicitud autorrellenable (anexoIV)</a>
-             <a class="dropdown-item" href="documentacion/InstruccionesEEspecial.pdf" id="docinst" target="_blank">Instrucciones Admisión Eduación Especial</a>;
              <a class="dropdown-item" href="documentacion/caladmespecial.pdf"  target="_blank">Calendario Admisión Eduación Especial</a>;
 				 <?php if($_SESSION['rol']!='alumno'){ 
                   echo '<a class="dropdown-item" href="documentacion/InstruccionesEEspecial.pdf" id="docinst" target="_blank">Instrucciones Admisión Eduación Especial</a>';
@@ -23,7 +22,7 @@
               }?>
       
 				 </div>
-                            </li>
+               </li>
         </ul>
     </div>
 <!--elementos a la derecha-->
