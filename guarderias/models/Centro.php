@@ -57,10 +57,15 @@ class Centro extends EntidadBase{
       			return $resultSet;
     		}
    //devolvemos los datos de centros y vancantes definitivas para asignar plazas fase2
-    public function getCentrosFase2($c=1)
+    public function getCentrosFase2($c=1,$clase='especial')
 		{
+      if($clase=='especial')
 			$sql="SELECT * FROM centros where clase_centro='especial'";
-			$sol_fase2=array();
+		else
+			$sql="SELECT * FROM centros";
+
+      print($sql);
+         $sol_fase2=array();
 			$query=$this->conexion->query($sql);
 			if(!$query) return $sol_fase2;
 			while($row = $query->fetch_assoc())

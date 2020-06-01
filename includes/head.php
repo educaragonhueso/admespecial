@@ -13,6 +13,10 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDORxJ68R5GU5pNKhO0fT_icSShE9c94Ic&callback=initMap">
+</script>
+
     <link href="../css/easy-autocomplete.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
    	<link rel="stylesheet" href="css/tline.css">
@@ -35,5 +39,6 @@
 	}
 ?>
     <script src="../js/main.js"></script>
+    <script src="../js/gmap.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
 </head>

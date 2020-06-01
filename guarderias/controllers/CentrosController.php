@@ -39,9 +39,7 @@ class CentrosController extends ControladorBase{
    }
     public function getDatosMapa() {
       $r=array();
-	$ec = $this->adapter->query("SELECT
-nombre_centro,coordenadas,vacantes_ebo,vacantes_tva FROM centros WHERE
-coordenadas!='nodata'");
+	$ec = $this->adapter->query("SELECT nombre_centro,coordenadas,vuno,vdos,vtres FROM centros WHERE coordenadas!='nodata'");
       while ($row = $ec->fetch_object()) 
       {
          $r[]=$row;

@@ -1,7 +1,7 @@
 $(document).ready(function(){
 var botoncontrol="<button id='' type='button' class='btn btn-outline-dark'>Validar baremo</button>";
 //METODOS DE CALCULO DE SORTEO
-
+$("#map-canvas").hide();
 $('body').on('click', '#boton_asignar_numero', function(e){
 
 var answer = window.confirm("Estas seguro? Esta operacion solo se puede realizar una vez")
@@ -1154,6 +1154,9 @@ $.ajax({
       success: function(data) {
 				if(vrol=='admin' || vrol=='sp')
 				{
+            $(".row").show(); 
+            $("#map-canvas").hide();
+            $("#mapcontrol").hide(); 
 				$(".tresumensol").remove();
 				$(".tresumenmat").remove();
 				$("#l_matricula").html(data);

@@ -12,17 +12,16 @@
             			<a
 style='color:white!important;float:left!important;padding-top:9px'  href='<?php
 echo $_SESSION['url_base'];?>'>INICIO</a>
-                            </li>
-                            <li class="nav-item active msuperior dropdown">
-                                <a class="nav-link dropdown-toggle desplegable" id="navbardrop" data-toggle="dropdown">Documentación</a>
-				 <div class="dropdown-menu">
-				 <a class="dropdown-item" href="documentacion/a4modsol.pdf" id="doca4" target="_blank">Modelo solicitud autorrellenable (anexoIV)</a>
-				 <?php if($_SESSION['rol']!='alumno') echo '<a class="dropdown-item"
-href="documentacion/InstruccionesEEspecial.pdf" id="docinst"
-target="_blank">Instrucciones Admisión Eduación Especial</a>';?>
+            </li>
+            <li class="nav-item active msuperior dropdown">
+               <a class="nav-link dropdown-toggle desplegable" id="navbardrop" data-toggle="dropdown">Documentación</a>
+				   <div class="dropdown-menu">
+				   <a class="dropdown-item" href="documentacion/a4modsol.pdf" id="doca4" target="_blank">Modelo solicitud autorrellenable (anexoIV)</a>
+				 <?php if($_SESSION['rol']!='alumno') echo '<a class="dropdown-item" href="documentacion/InstruccionesEEspecial.pdf" id="docinst" target="_blank">Instrucciones Admisión Educación Especial</a>';?>
+				 <?php if($_SESSION['rol']!='alumno') echo '<a class="dropdown-item" href="documentacion/plantilla_matriculaguarderias.csv" id="docinst" target="_blank">Plantilla matrícula guarderías (csv)</a>';?>
       
 				 </div>
-                            </li>
+            </li>
         </ul>
     </div>
 <!--elementos a la derecha-->
@@ -65,8 +64,7 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
          echo '</div>';
       echo '</li>';
       echo '<li class="nav-item msuperior">';
-         echo '<a class="show_mapacentros nav-link" href="mapacentros.php"
-target="_blank">Mapa Centros</a>';
+         echo '<a class="nav-link" href="#" id="show_mapacentros">Mapa Centros</a>';
       echo '</li>';
       echo '<li class="nav-item active msuperior">';
          echo '<a class="show_matricula nav-link" href="#">Matricula</a>';

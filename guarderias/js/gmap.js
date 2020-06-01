@@ -1,45 +1,37 @@
-<head>
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDORxJ68R5GU5pNKhO0fT_icSShE9c94Ic&callback=initMap">
-</script>
-</head>
-
-<body onload="initialize()">
-        <div>
-          <input id="address" type="text" value="Aragón">
-          <input type="button" value="Geocode" onclick="codeAddress()">
-        </div>
-        <div id="map-canvas" style="height:90%;top:30px"></div>
- </body>
- <script>
-
- var geocoder;
+$(document).ready(function(){
+var geocoder;
  var map;
+
+$('body').on('click', '#show_mapacentros', function(e){
+$("#map-canvas").show();
+   $("#mapcontrol").show(); 
+   initialize();
+});
+
  function initialize() {
     geocoder = new google.maps.Geocoder();
     var latlng = new google.maps.LatLng(41.6520184,-0.8806809);
     var mapOptions = {
-      zoom: 6,
+      zoom: 12,
       center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
-    map = new google.maps.Map(document.getElementById('map-canvas'),
-          mapOptions);
+    map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
 
     $.ajax({
          method: "POST",
          data: {},
          dataType: 'json',
-         url:'../scripts/ajax/get_coord_centros.php',
+         url:'../guarderias/scripts/ajax/get_coord_centros.php',
          success: function(data) {
+         $(".row").hide(); 
          data.forEach(function(elto) {
-               { 
+               {
                   latitud=elto.coordenadas.split(":")[0]; 
                   longitud=elto.coordenadas.split(":")[1]; 
                   var latlong = {lat: parseFloat(latitud), lng:
 parseFloat(longitud)};
-                  var vacantes ="CENTRO: "+elto.nombre_centro+"\nVacantesEBO:"+elto.vacantes_ebo+"\nVacantes TVA:"+elto.vacantes_tva;
+                  var vacantes ="CENTRO: "+elto.nombre_centro+"\nVacantes 2020:"+elto.vuno+"\nVacantes 2019:"+elto.vdos+"\nVacantes 2018:"+elto.vtres;
                   var marker = new google.maps.Marker({
                   map: map,
                   position: latlong,
@@ -76,4 +68,4 @@ title: results[0].formatted_address
          }
          });
 }
-</script>
+});

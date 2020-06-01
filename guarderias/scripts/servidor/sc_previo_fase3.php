@@ -46,13 +46,13 @@ print_r($dlineal);
 exit();
 */
 //PROCESMOS ALUMNOS Y CENTROs PARA ACTUALIZAR SUS COORDENADAS SEGUN SU DIRECCION
-$centros_fase2=$tcentros_fase2->getCentrosFase2();
+$centros_fase2=$tcentros_fase2->getCentrosFase2(1,'guarderias');
 $alumnos_fase2=$admutils->getAlumnosFase2('actual');
 
 foreach($centros_fase2 as $c)
 {
-   if($c['coordenadas']=='nodata' and $c['localidad']!='nodata' and
-$c['direccion']!='nodata')
+   print_r($c);
+   if($c['coordenadas']=='nodata' and $c['localidad']!='nodata' and $c['direccion']!='nodata')
    {
       $dir1=$c['direccion'].",".$c['localidad'];
       $coord=$gmutils->getCoordenadas($dir1);
@@ -60,6 +60,8 @@ $c['direccion']!='nodata')
       $admutils->setCoordenadas($c['id_centro'],$scoord,'centro');
    }
 }
+
+/*
 foreach($alumnos_fase2 as $a)
 {
    if($a->calle_dfamiliar!='nodata' and $a->localidad!='nodata' and $a->coordenadas=='nodata')
@@ -116,6 +118,7 @@ foreach($centros_fase2 as $c)
       }
    }
 }
+*/
 print_r("OK"); exit();
 //actualizar vacantes de centros
 //$res1=$utils->getDistancia($dir1,$dir2,"K");

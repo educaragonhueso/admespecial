@@ -27,6 +27,11 @@ include('includes/head.php');
 		}
 		?>
 		<?php /*usamos metodo del controlador de centros activo echo $this->showTimeline('centro',$_SESSION['id_centro'],'matricula');*/?>
+        <div id="mapcontrol" style='display:none' >
+          <input id="address" type="text" value="Aragón">
+          <input type="button" value="Geocode"  onclick="codeAddress()">
+        </div>
+      <div id="map-canvas" style="height:90%;top:30px"></div>
 		<div class="row ">
 		<div id="t_matricula" style="width:100%"></div>
 		<?php /*usamos metodo del controlador de centros activo*/if($_SESSION['rol']=='centro') echo $this->showTabla('centro',$_SESSION['id_centro'],'matricula');?>

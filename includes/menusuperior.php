@@ -65,8 +65,7 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
          echo '</div>';
       echo '</li>';
       echo '<li class="nav-item msuperior">';
-         echo '<a class="show_mapacentros nav-link" href="mapacentros.php"
-target="_blank">Mapa Centros</a>';
+         echo '<a class="nav-link" href="#" id="show_mapacentros">Mapa Centros</a>';
       echo '</li>';
       echo '<li class="nav-item active msuperior">';
          echo '<a class="show_matricula nav-link" href="#">Matricula</a>';

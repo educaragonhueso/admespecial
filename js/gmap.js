@@ -1,31 +1,21 @@
-<head>
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDORxJ68R5GU5pNKhO0fT_icSShE9c94Ic&callback=initMap">
-</script>
-</head>
-
-<body onload="initialize()">
-        <div>
-          <input id="address" type="text" value="Aragón">
-          <input type="button" value="Geocode" onclick="codeAddress()">
-        </div>
-        <div id="map-canvas" style="height:90%;top:30px"></div>
- </body>
- <script>
-
- var geocoder;
+$(document).ready(function(){
+var geocoder;
  var map;
+
+$('body').on('click', '#show_mapacentros', function(e){
+   $("#mapcontrol").show(); 
+   initialize();
+});
+
  function initialize() {
     geocoder = new google.maps.Geocoder();
     var latlng = new google.maps.LatLng(41.6520184,-0.8806809);
     var mapOptions = {
-      zoom: 6,
+      zoom: 12,
       center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
-    map = new google.maps.Map(document.getElementById('map-canvas'),
-          mapOptions);
+    map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
 
     $.ajax({
          method: "POST",
@@ -33,6 +23,7 @@
          dataType: 'json',
          url:'../scripts/ajax/get_coord_centros.php',
          success: function(data) {
+         $(".row").remove(); 
          data.forEach(function(elto) {
                { 
                   latitud=elto.coordenadas.split(":")[0]; 
@@ -76,4 +67,4 @@ title: results[0].formatted_address
          }
          });
 }
-</script>
+});
