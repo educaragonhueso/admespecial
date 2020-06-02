@@ -1,6 +1,5 @@
 <?php 
 session_start();
-$_SESSION=array();
 require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/config/config_global.php";
 require_once DIR_CORE.'/Conectar.php';
 date_default_timezone_set('Europe/Madrid');

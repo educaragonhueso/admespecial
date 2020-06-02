@@ -235,7 +235,7 @@ margin: 11px;
 */
 width: 90%;
 padding: 20px;
-    padding-left: 107px;
+padding-left: 107px;
 min-height: 100vh;
 transition: all 0.3s;
 top: 0;
@@ -381,6 +381,8 @@ cursor: pointer;
     }
     #content {
         width: 100%;
+      padding-left: 10px;
+    padding-right: 30px;
     }
     #content.active {
         width: calc(100% - 250px);
@@ -391,4 +393,7 @@ cursor: pointer;
     .desk {
         display: none;
     }
+.navbar-nav {
+padding-left:0px!important;
+}
 }

@@ -36,6 +36,7 @@ define("DIA_SORTEO",'2020/06/30');
 
 define("DIA_PROVISIONALES",'2020/06/28');
 define("DIA_DEFINITIVOS",'2020/06/30');
+define("DIA_MATRICULA",'2020/06/30');
 
 define("DIA_SORTEO_FASE2",'2020/06/12');
 

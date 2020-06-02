@@ -60,6 +60,8 @@ NSOLICITUDES/IDCENTRO/ESTADO CENTRO $nsorteo/$id_centro/$fase_Sorteo");
    }
 	elseif($_POST['rol']=='admin' or $_POST['rol']=='sp')
 	{
+      if($tsolicitud->desmarcarValidados(1)==0)
+         print("NO HAY VALIDADOS<br>");
 		//para cada centro calculamos solicitudes admitidas
 		//Si hemos llegado al dia d elas provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
 		$acentros=array();

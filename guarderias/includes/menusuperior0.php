@@ -6,6 +6,7 @@
 		 <p hidden id='sorteo_fase2'><?php echo $_SESSION['sorteo_fase2'];?></p> 
 <!--elementos a la izda-->
 <nav id='navgir' class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
                             <li class="nav-item  msuperior">
             			<a
@@ -22,8 +23,13 @@ echo $_SESSION['url_base'];?>'>INICIO</a>
 				 </div>
             </li>
         </ul>
+    </div>
 <!--elementos a la derecha-->
-   <ul class="navbar-nav">
+    <div class="mx-auto order-0">
+    <!--espacio para el centro-->
+    </div>
+ <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+   <ul class="navbar-nav ml-auto">
 <?php 
    if($_SESSION['usuario_autenticado'])
    {
@@ -60,13 +66,9 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
       echo '<li class="nav-item msuperior">';
          echo '<a class="nav-link" href="#" id="show_mapacentros">Mapa Centros</a>';
       echo '</li>';
-      
-   if($_SESSION['matricula']==1)
-   {
       echo '<li class="nav-item active msuperior">';
          echo '<a class="show_matricula nav-link" href="#">Matricula</a>';
       echo '</li>';
-   }
       echo '<li class="nav-item active msuperior">';
          echo '<a class="show_solicitudes nav-link" href="#">Solicitudes</a>';
       echo '</li>';
@@ -121,6 +123,7 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
 		<?php }?>
 	<?php }?>
         </ul>
+    </div>
 </nav>
 <?php 
 if($_SESSION['id_centro']<=1 and $_SESSION['id_centro']>=-2) 

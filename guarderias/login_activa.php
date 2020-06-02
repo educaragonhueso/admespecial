@@ -1,7 +1,5 @@
 <?php 
-session_destroy();
 session_start();
-$_SESSION=array();
 require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/guarderias/config/config_global.php";
 require_once DIR_CORE.'/Conectar.php';
 date_default_timezone_set('Europe/Madrid');
@@ -15,6 +13,8 @@ $_SESSION['inicio_prorroga']=0;
 $_SESSION['version']=VERSION;
 $_SESSION['sorteo_fase2'] =0;      
 $_SESSION['id_centro'] =-10;      
+//variable para controlar el acceso para mantenimiento
+$_SESSION['anonimo']=0; 
 //finaiza plazo inscripcion alumno
 $_SESSION['fin_sol_alumno']=-1;
 
@@ -57,11 +57,12 @@ elseif($_SESSION['fecha_actual']>=DIA_SORTEO_FASE2) //jueves 16 abril
 elseif($_SESSION['fecha_actual']>=DIA_FASE3) //jueves 16 abril
  		$_SESSION['estado_convocatoria'] =60;//0. inicio inscripciones, 1. dia de sorteo, 2. baremacion, 3. Provisionales, 4. Definitivos      
 
+if($_SESSION['fecha_actual']<=date(DIA_MATRICULA)) //JUEVES 19 marzo) //BAREMACION: hasta 23 marzo inclusive
+ 		$_SESSION['matricula'] =0;//0. inicio inscripciones, 1. dia de sorteo, 2. baremacion, 3. Provisionales, 4. Definitivos      
 $_SESSION['fecha_inscripcion'] = date("2020/11/01");      
 $_SESSION['fecha_iniccioprovisionales'] = date("2019/11/01");      
 $_SESSION['fecha_inicciodefinitivas'] = date("2019/11/01");      
 $_SESSION['url_base'] =URL_BASE;    
-print_r($_SESSION);      
 
 $conectar=new Conectar();
 $conexion=$conectar->conexion();
@@ -70,26 +71,27 @@ header('Content-Type: text/html; charset=UTF-8');
 $nombre_usuario = $clave = "";
 $nombre_usuario_err = $clave_err = "";
 // Processing form data when form is submitted
+print("ENTRANDO");
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-     // Check if username is empty
-     if(empty(trim($_POST["nombre_usuario"])))
-{
-         $nombre_usuario_err = 'Intro nombre de usuario';
-} 
-else
-{
-         $nombre_usuario = trim($_POST["nombre_usuario"]);
-}
-// Check if password is empty
-if(empty(trim($_POST['clave'])))
-{
-   $clave_err = 'Intro clave';
-} 
-else
-{
-   $clave = trim($_POST['clave']);
-}
+        // Check if username is empty
+        if(empty(trim($_POST["nombre_usuario"])))
+   {
+            $nombre_usuario_err = 'Intro nombre de usuario';
+   } 
+   else
+   {
+            $nombre_usuario = trim($_POST["nombre_usuario"]);
+   }
+   // Check if password is empty
+   if(empty(trim($_POST['clave'])))
+   {
+      $clave_err = 'Intro clave';
+   } 
+   else
+   {
+      $clave = trim($_POST['clave']);
+   }
    if(empty($nombre_usuario_err) && empty($clave_err))
    {
       $sql = "SELECT nombre_usuario, clave,rol,nombre_centro,id_centro,primera_conexion,num_sorteo,fase_sorteo FROM usuarios u left join centros c  ON u.id_usuario=c.id_usuario WHERE  u.nombre_usuario = ? and u.clave= ?";
@@ -155,18 +157,17 @@ else
                            header("location: login_pconexion.php");
                         else
                            { 
-                           if($_SESSION['fecha_actual']>=$_SESSION['fecha_inscripcion']) $_SESSION['estado']='inicioinscripcion';
-                           else $_SESSION['estado']='inicioinscripcion';
-                           //para usuarios del servicio provincial
-                           if(strpos($_SESSION['rol'],'sp')!==FALSE) 
-                           {	
-                              $_SESSION['provincia']=substr($_SESSION['rol'],2);
-                              $_SESSION['rol']='sp';
-                              $_SESSION['sorteo_fase2']=1;
-                           }
-                           if($_SESSION['rol']=='admin') 
-                              $_SESSION['sorteo_fase2']=1;
-                           header("location: index.php");
+                              if($_SESSION['fecha_actual']>=$_SESSION['fecha_inscripcion']) $_SESSION['estado']='inicioinscripcion';
+                              else $_SESSION['estado']='inicioinscripcion';
+                              //para usuarios del servicio provincial
+                              if(strpos($_SESSION['rol'],'sp')!==FALSE) 
+                              {	
+                                 $_SESSION['provincia']=substr($_SESSION['rol'],2);
+                                 $_SESSION['rol']='sp';
+                                 $_SESSION['sorteo_fase2']=1;
+                              }
+                              if($_SESSION['rol']=='admin')  $_SESSION['sorteo_fase2']=1;
+                              header("location: index.php");
                            }
                      } 
                   else
@@ -240,9 +241,13 @@ input[type=text], input[type=password] {
     <body>
         <div class="wrapper">
             <h2>ADMISIÓN GUARDERÍAS CURSO 2020/2021</h2>
-	<?php if(IPREMOTA==$_SERVER['HTTP_X_FORWARDED_FOR'] || PAGINA_ACTIVA==1) { $_SESSION['anonimo']='1'; ?>
-	<button type="button" class="btn btn-primary" id="csolicitud">Crear solicitud</button>
+	<?php if(IPREMOTA==$_SERVER['HTTP_X_FORWARDED_FOR'] || PAGINA_ACTIVA==1) 
+         {
+          $_SESSION['anonimo']=1; 
+         if(VERSION=='PRE') print_r($_SESSION);      
 
+   ?>
+	      <button type="button" class="btn btn-primary" id="csolicitud">Crear solicitud</button>
             <p>Introduce tu nombre de  usuario y contraseña</p>
             <form action="" method="post">
                 <div class="form-group <?php echo (!empty($nombre_usuario_err)) ? 'has-error' : ''; ?>">

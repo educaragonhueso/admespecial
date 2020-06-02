@@ -93,7 +93,9 @@ width:110px;
 
 .dropdown-menu{
 background-color:#051c33!important; 
-font-size:10px!important;
+}
+.dropdown-item{
+font-size:10px; 
 }
 
 #fnuevasolicitud
@@ -235,7 +237,7 @@ margin: 11px;
 */
 width: 90%;
 padding: 20px;
-padding-left: 107px;
+    padding-left: 107px;
 min-height: 100vh;
 transition: all 0.3s;
 top: 0;
@@ -284,7 +286,7 @@ padding-left: 17px;
 padding-top: 10px;
 }
 
-#boton_realizar_sorteo,#boton_asignar_numero{
+#boton_realizar_sorteo,#boton_asignar_numero,#boton_asignar_numero_fase2,#boton_asignar_plazas_fase2,#boton_realizar_sorteo_fase2{
 background-color:#114880;
 
 }
@@ -303,14 +305,10 @@ border-right: aqua!important;
 .form-control:valid {
     border-color: black!important;
 }
-.formrow
-{
-margin-left: 15px!important;
-}
 .bform 
 {
 font-size:12px!important;
-    background-color: #283960 !important;
+    background-color: #505a65 !important;
     width: 100%;
     display:block;margin:10px;
 text-align: left!important;
@@ -358,12 +356,12 @@ cursor: pointer;
 
 .crojo
 {
-	background:#4f3636 !important;
+	background: red!important;
 }
 
 .cverde
 {
-	background: #364d36 !important;
+	background: green!important;
 }
 /* ---------------------------------------------------
     MEDIAQUERIES
@@ -381,8 +379,6 @@ cursor: pointer;
     }
     #content {
         width: 100%;
-      padding-left: 10px;
-    padding-right: 30px;
     }
     #content.active {
         width: calc(100% - 250px);
@@ -393,7 +389,4 @@ cursor: pointer;
     .desk {
         display: none;
     }
-.navbar-nav {
-padding-left:0px!important;
-}
 }

@@ -5199,3 +5199,21 @@
 )
 
 [31-May-2020 23:59:22] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[01-Jun-2020 08:03:02] : [WARNING] - CONSULTA CENTROS
+[01-Jun-2020 08:03:02] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)
+[02-Jun-2020 08:03:01] : [WARNING] - CONSULTA CENTROS
+[02-Jun-2020 08:03:01] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)
+[02-Jun-2020 11:34:11] : [WARNING] - CABECERA EN SHOWTABLAS: si
+[02-Jun-2020 11:34:16] : [WARNING] - CONSULTA CENTROS
+[02-Jun-2020 11:34:16] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[02-Jun-2020 11:34:16] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[02-Jun-2020 11:34:16] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[02-Jun-2020 11:35:00] : [WARNING] - CABECERA EN SHOWTABLAS: si

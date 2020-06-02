@@ -6,7 +6,6 @@
 		 <p hidden id='sorteo_fase2'><?php echo $_SESSION['sorteo_fase2'];?></p> 
 <!--elementos a la izda-->
 <nav id='navgir' class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
                             <li class="nav-item  msuperior">
             			<a style='color:white!important;float:left!important;padding-top:9px'  href='<?php echo $_SESSION['url_base'];?>'>INICIO</a>
@@ -24,12 +23,7 @@
 				 </div>
                </li>
         </ul>
-    </div>
 <!--elementos a la derecha-->
-    <div class="mx-auto order-0">
-    <!--espacio para el centro-->
-    </div>
- <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
    <ul class="navbar-nav ml-auto">
 <?php 
    if($_SESSION['usuario_autenticado'])
@@ -132,7 +126,6 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
    <?php }?>
 <?php }?>
         </ul>
-    </div>
 </nav>
 <?php 
 if($_SESSION['id_centro']<=1 and $_SESSION['id_centro']>=-2) 

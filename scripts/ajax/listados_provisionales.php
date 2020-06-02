@@ -59,6 +59,8 @@ if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=1)
 	}
 	elseif($_POST['rol']=='admin' or $_POST['rol']=='sp')
 	{
+      if($tsolicitud->desmarcarValidados(1)==0)
+         print("NO HAY VALIDADOS<br>");
 		//para cada centro calculamos solicitudes admitidas
 		//Si hemos llegado al dia d elas provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
 		$acentros=array();
@@ -96,8 +98,6 @@ if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=1)
 		}
 		//copiamos todos los datos a tabla de provisionales	
 		$ct=$tsolicitud->copiaTablaCentro(1,'alumnos_provisional_final');	
-      if($tsolicitud->desmarcarValidados(1)==0)
-         print("NO HAY VALIDADOS<br>");
 	}	
 ########################################################################################
 $log_listados_provisionales->warning("ACTUALIZADA TABLA PROVISIONALES $ct");

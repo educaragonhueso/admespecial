@@ -1,8 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION)) exit(); 
+//if(!isset($_SESSION)) exit(); 
 include('includes/head.php');
-print("DIR BASE:".DIR_BASE);
 ?>
 <html>
 <body>
@@ -12,9 +11,6 @@ print("DIR BASE:".DIR_BASE);
 	  <span type="hidden" id="provincia" name="provincia" value="<?php echo $_SESSION['provincia'];?>"></span>
 	  <span type="hidden" id="estado" name="estado" value="<?php echo $_SESSION['estado']; ?>"></span>
 
-	<?php 
-		if($_SESSION['version']=='PRE')	print_r($_SESSION);
-	?>
 
 	<?php echo "<br><b><i> AVISO IMPORTANTE: Si se va a imprimir la solicitud se recomienda el uso de cualquier navegador distinto de Mozilla-Firefox ya que puede dar problemas al imprimirla</i></b><br>";?>
 	  <span type="hidden" id="rol" name="rol" value="<?php echo $_SESSION['rol']; ?>"><b>ROL: </b><?php echo $_SESSION['rol'];?></b></span> 
@@ -85,7 +81,7 @@ print("DIR BASE:".DIR_BASE);
 
 			      <div class="starter-template">
 				<h1>INICIO INSCRIPCION</h1>
-				<p class="lead">INSCRIPCIONES VIA WEB: DEL 11 al 16 de MAYO (inclusive)</p>
+				<p class="lead">INSCRIPCIONE VIA WEB: DEL 11 al 16 de MAYO (inclusive)</p>
 				<p class="lead">INSCRIPCIONES EN LOS CENTROS: DEL 11 al 17 de MAYO (inclusive)</p>
 				<p class="lead"><i>En cualquier caso los impresos hay que entregarlos en el centro firmados</i></p>
 				<a href="'.URL_BASE.'"><button class="btn btn-outline-info" id="inicio" type="button">VOLVER</button></a>    </div>
@@ -108,7 +104,7 @@ print("DIR BASE:".DIR_BASE);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 		<script>
 			$( document ).ready(function() {
-			 $( ".show_matricula" ).trigger( "click" );
+			 $( ".show_solicitudes" ).trigger( "click" );
 			 $( "#nuevasolicitud" ).trigger( "click" );
 			 $( "#versolicitud" ).trigger( "click" );
 			 $( "#versolicitud" ).remove();

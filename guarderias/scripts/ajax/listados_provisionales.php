@@ -52,7 +52,7 @@ if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=2)
 		$vacantes_tva=$dsorteo[1]->vacantes;
 	
 		if($tsolicitud->setSolicitudesSorteo($id_centro,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
-				print("NO HAY VACANTES<br>");
+            $log_listados_provisionales->warning("NO VACANTES $id_centro");
 		$ct=$tsolicitud->copiaTablaCentro($id_centro,'alumnos_provisional_final');	
 	}
 	elseif($_POST['rol']=='admin' or $_POST['rol']=='sp')
@@ -85,7 +85,7 @@ if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=2)
 			$vacantes_ebo=$dsorteo[0]->vacantes;
 			$vacantes_tva=$dsorteo[1]->vacantes;
 			if($tsolicitud->setSolicitudesSorteo($id_centrotmp,$nsolicitudescentro,$vacantes_ebo,$vacantes_tva)==0) 
-				print("NO HAY VACANTES<br>");
+            $log_listados_provisionales->warning("NO VACANTES $id_centrotmp");
 		}
 		//copiamos todos los datos a tabla de provisionales	
 		$ct=$tsolicitud->copiaTablaCentro(1,'alumnos_provisional_final');	
@@ -151,7 +151,7 @@ print("TITULO: ".$titulo_listado);
 print("IDCENTRO: ".$id_centro);
 print("NOMBRE CENTRO: ".str_replace(' ','',$tcentro->getNombre()));
 */
-print($list->showFiltrosTipo());
+//print($list->showFiltrosTipo());
 print($filtro_datos);
 print("<div style='text-align:center'><h1>LISTADO ".$titulo_listado."</h1></div>");
 print($list->showListado($solicitudes,$_POST['rol'],$$cabecera,$$camposdatos,$provisional=1));

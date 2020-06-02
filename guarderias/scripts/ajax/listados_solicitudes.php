@@ -67,9 +67,11 @@ $log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES CON ROL: ".$_POST['rol
 //Para el caso de acceso del administrador o servicios provinciales
 if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 {
-	if($fase_sorteo==1) print($form_sorteo_completo);
-   if($fase_sorteo==2) print($form_sorteo_parcial); //mostramos formulario para hacer el sorteo, ya se han hecjo las asignaciones
-
+   if($_POST['rol']=='admin')
+   {
+	   if($fase_sorteo==1) print($form_sorteo_completo);
+      if($fase_sorteo==2) print($form_sorteo_parcial); //mostramos formulario para hacer el sorteo, ya se han hecjo las asignaciones
+   }
 	$centros=$list->getCentrosIds($provincia);	
 	foreach($centros as $centro)
 	{
