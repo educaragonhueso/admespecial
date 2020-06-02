@@ -139,6 +139,11 @@ class Centro extends EntidadBase{
 			}
       		return $resultSet;
 		} 
+    public function getDatosVacantesGuarderia($rol,$centro)
+		{
+			$this->id_centro=$centro;
+			return $this->getResumenGuarderia($rol,$centro);
+		}
     public function getDatosMatriculaCentro($rol,$t,$centro)
 		{
 			$this->id_centro=$centro;
@@ -186,6 +191,26 @@ class Centro extends EntidadBase{
       			return $resultSet;
     		}
 
+    public function getResumenGuarderia($rol,$c) 
+		{
+			$resultSet=array();
+			if($rol=='admin') 
+			{
+					$sql="select * FROM centros";
+			}
+         else
+					$sql="select * FROM centros WHERE id_centro='$c'";
+
+			$query=$this->conexion->query($sql);
+			if($query)
+    			{
+				while ($row = $query->fetch_object()) 
+				{
+					$resultSet[]=$row;
+				}
+			}
+      			return $resultSet;
+    		}
     public function getResumen($rol,$t) 
 		{
 			$resultSet=array();

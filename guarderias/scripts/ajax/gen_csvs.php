@@ -43,7 +43,7 @@ $log_gencsvs->warning("DATOS POST PARA CSV");
 $log_gencsvs->warning(print_r($_POST,true));
 ##################################################################################
 
-$solicitudes=$list->getSolicitudes($id_centro,$tipo,$fase_sorteo,$modo,$subtipo,$provincia,$estado_convocatoria); 
+//$solicitudes=$list->getSolicitudes($id_centro,$tipo,$fase_sorteo,$modo,$subtipo,$provincia,$estado_convocatoria); 
 
 ##################################################################################
 $log_gencsvs->warning("SOLICITUDES  CSV SUBTIPO: $subtipo CAMPOS DATOS: ");
@@ -67,9 +67,10 @@ if($subtipo_original=='csv_pro')
 //si es para datos de matricula
 if($subtipo_original=='csv_mat')
 {
-	$solicitudes=$list->getResumenMatriculaCentro($rol='centro',$id_centro,$tiposol,$modo); 
+	$solicitudes=$list->getResumenVacantesGuarderia($rol='centro',$id_centro); 
+	$log_gencsvs->warning("DATOS GUARDERIAS PARA CSV: ");
+	$log_gencsvs->warning(print_r($solicitudes,true));
 }
-
 $fcsv=$list->genCsv($solicitudes,$id_centro,$subtipo_original,$$cabecera,$$camposdatos,DIR_CSVS);
 
 $log_gencsvs->warning("SOLICITUDES  CSV GENERADAS ");

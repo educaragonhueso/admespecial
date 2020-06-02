@@ -24,7 +24,7 @@
                </li>
         </ul>
 <!--elementos a la derecha-->
-   <ul class="navbar-nav ml-auto">
+   <ul class="navbar-nav">
 <?php 
    if($_SESSION['usuario_autenticado'])
    {

@@ -8,8 +8,7 @@
 <nav id='navgir' class="navbar navbar-expand-md navbar-dark bg-dark">
         <ul class="navbar-nav mr-auto">
                             <li class="nav-item  msuperior">
-            			<a
-style='color:white!important;float:left!important;padding-top:9px'  href='<?php
+            			<a style='color:white!important;float:left!important;padding-top:9px'  href='<?php
 echo $_SESSION['url_base'];?>'>INICIO</a>
             </li>
             <li class="nav-item active msuperior dropdown">

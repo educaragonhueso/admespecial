@@ -1,10 +1,10 @@
 <?php
 define("DIR_CSVS",DIR_BASE.'/scripts/datossalida/listadoscsv/');
 define("DIR_PROV",DIR_BASE.'/scripts/datossalida/pdflistados/provisionales/');
-define("DIR_PROV_WEB",'/scripts/datossalida/pdflistados/provisionales/');
-define("DIR_CSVS_WEB",'/scripts/datossalida/listadoscsv/');
-define("DIR_SOR",DIR_BASE.'/scripts/datossalida/pdflistados/sorteo/');
-define("DIR_SOR_WEB",'/scripts/datossalida/pdflistados/sorteo/');
+define("DIR_PROV_WEB",'/guarderias/scripts/datossalida/pdflistados/provisionales/');
+define("DIR_CSVS_WEB",'/guarderias/scripts/datossalida/listadoscsv/');
+define("DIR_SOR",DIR_BASE.'/guarderias/scripts/datossalida/pdflistados/sorteo/');
+define("DIR_SOR_WEB",'/guarderias/scripts/datossalida/pdflistados/sorteo/');
 
 //Arrays de campos cabecera para los listados
 //NUMERO ASIGNADO DE SORTEO
@@ -26,8 +26,8 @@ $campos_bbdd_csv_fase2=array('tipoestudios','apellido1','apellido2','nombre','lo
 $campos_cabecera_csv_fase3=array('Tipo','Ap1','Ap2','Nombre','Loc','Calle','Reserva','Cen.Pref','Cen.Alt1','Cen.Alt2','Cen.Alt3','Cen.Alt4','Cen.Alt5','Cen.Alt6','Baremo','Prioridad','Estado','Cen.Adj','NSorteo','Modificacion');
 $campos_bbdd_csv_fase3=array('tipoestudios','apellido1','apellido2','nombre','localidad','calle_dfamiliar','centro_origen','nombre_centro','centro1','centro2','centro3','centro4','centro5','centro6','puntos_validados','transporte','estado_solicitud','centro_definitivo','nasignado','tipo_modificacion');
 
-$campos_cabecera_csv_mat=array('Centro','Grupos EBO','Puestos EBO','Plazas Ocupadas EBO','Vacantes_EBO','Grupos TVA','Puestos TVA','Plazas Ocupadas TVA','Vacantes_TVA');
-$campos_bbdd_csv_mat=array('nombre_centro','gruposebo','puestosebo','plazasactualesebo','vacantesebo','grupostva','puestostva','plazasactualestva','vacantestva');
+$campos_cabecera_csv_mat=array('Centro','Vacantets 2020','Vacantes 2019','Vacantes 2018');
+$campos_bbdd_csv_mat=array('nombre_centro','vuno','vdos','vtres');
 
 $campos_cabecera_csv_sol=array('Centro','Primer apellido','Segundo apellido','Nombre','Enseñanza','Criterios prioritarios','Localidad domicilio familiar','Fase','Estado','Puntos validados','Numero sorteo asignado','Centro Origen','Reserva de Plaza');
 $campos_bbdd_csv_sol=array('nombre_centro','apellido1','apellido2','nombre','tipoestudios','transporte','loc_dfamiliar','fase_solicitud','estado_solicitud','puntos_validados','nasignado','nombre_centro_origen','reserva');

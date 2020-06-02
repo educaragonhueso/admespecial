@@ -6320,3 +6320,500 @@
 [02-Jun-2020 10:41:43] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50600142
 [02-Jun-2020 10:41:43] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50600154
 [02-Jun-2020 10:41:43] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50600166
+[02-Jun-2020 11:40:53] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:40:53] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 11:40:53] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:40:53] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 
+[02-Jun-2020 11:40:57] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=22600060
+[02-Jun-2020 11:40:57] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=22600072
+[02-Jun-2020 11:40:57] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=22600084
+[02-Jun-2020 11:40:57] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=44600021
+[02-Jun-2020 11:40:57] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50600105
+[02-Jun-2020 11:40:57] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50600117
+[02-Jun-2020 11:40:57] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50600129
+[02-Jun-2020 11:40:57] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50600130
+[02-Jun-2020 11:40:57] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50600142
+[02-Jun-2020 11:40:57] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50600154
+[02-Jun-2020 11:40:57] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50600166
+[02-Jun-2020 11:45:16] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:45:16] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 11:45:16] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:45:16] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 
+[02-Jun-2020 11:45:29] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:45:29] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 11:45:29] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:45:29] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 
+[02-Jun-2020 11:47:29] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:47:29] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=50600154
+[02-Jun-2020 11:47:29] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:47:29] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600154
+[02-Jun-2020 11:47:29] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:47:29] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=50600154
+[02-Jun-2020 11:48:30] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:48:30] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 11:48:30] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:48:30] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 
+[02-Jun-2020 11:48:32] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:48:32] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 11:48:32] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:48:32] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 
+[02-Jun-2020 11:48:36] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:48:36] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 11:48:36] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:48:36] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos 
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=22600060
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=22600060
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO IDS SOLICITUDES CENTRO: 22600060
+[02-Jun-2020 11:49:42] : [WARNING] - CONSULTA SOLICITUDES ADMITIDAS
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=22600060  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=22600060  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:49:42] : [WARNING] - RESPUESTA IDS:
+[02-Jun-2020 11:49:42] : [WARNING] - 0
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=22600072
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=22600072
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO IDS SOLICITUDES CENTRO: 22600072
+[02-Jun-2020 11:49:42] : [WARNING] - CONSULTA SOLICITUDES ADMITIDAS
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=22600072  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=22600072  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:49:42] : [WARNING] - RESPUESTA IDS:
+[02-Jun-2020 11:49:42] : [WARNING] - 0
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=22600084
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=44600021
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=44600021
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO IDS SOLICITUDES CENTRO: 44600021
+[02-Jun-2020 11:49:42] : [WARNING] - CONSULTA SOLICITUDES ADMITIDAS
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=44600021  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=44600021  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:49:42] : [WARNING] - RESPUESTA IDS:
+[02-Jun-2020 11:49:42] : [WARNING] - 0
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600105
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600117
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600129
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=50600129
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO IDS SOLICITUDES CENTRO: 50600129
+[02-Jun-2020 11:49:42] : [WARNING] - CONSULTA SOLICITUDES ADMITIDAS
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600129  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600129  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:49:42] : [WARNING] - RESPUESTA IDS:
+[02-Jun-2020 11:49:42] : [WARNING] - 0
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600130
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=50600130
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO IDS SOLICITUDES CENTRO: 50600130
+[02-Jun-2020 11:49:42] : [WARNING] - CONSULTA SOLICITUDES ADMITIDAS
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600130  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600130  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:49:42] : [WARNING] - RESPUESTA IDS:
+[02-Jun-2020 11:49:42] : [WARNING] - 0
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600142
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600154
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=50600154
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO IDS SOLICITUDES CENTRO: 50600154
+[02-Jun-2020 11:49:42] : [WARNING] - CONSULTA SOLICITUDES ADMITIDAS
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600154  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600154  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:49:42] : [WARNING] - RESPUESTA IDS:
+[02-Jun-2020 11:49:42] : [WARNING] - 0
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600166
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=50600166
+[02-Jun-2020 11:49:42] : [WARNING] - OBTENIENDO IDS SOLICITUDES CENTRO: 50600166
+[02-Jun-2020 11:49:42] : [WARNING] - CONSULTA SOLICITUDES ADMITIDAS
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600166  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:49:42] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600166  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:49:42] : [WARNING] - RESPUESTA IDS:
+[02-Jun-2020 11:49:42] : [WARNING] - 0
+[02-Jun-2020 11:49:42] : [WARNING] - BORRANDO DE TABLA alumnos_provisional_final DELETE from alumnos_provisional_final
+[02-Jun-2020 11:49:42] : [WARNING] - CARGANDO TABLA DESPUES DE SORTEO alumnos_provisional_final INSERT IGNORE INTO alumnos_provisional_final SELECT a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.est_desp_sorteo,c.nombre_centro,b.*,a.id_centro_destino as id_centro_destino FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador'
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos 
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=22600060
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=22600060
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO IDS SOLICITUDES CENTRO: 22600060
+[02-Jun-2020 11:50:38] : [WARNING] - CONSULTA SOLICITUDES ADMITIDAS
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=22600060  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=22600060  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:50:38] : [WARNING] - RESPUESTA IDS:
+[02-Jun-2020 11:50:38] : [WARNING] - 0
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=22600072
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=22600072
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO IDS SOLICITUDES CENTRO: 22600072
+[02-Jun-2020 11:50:38] : [WARNING] - CONSULTA SOLICITUDES ADMITIDAS
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=22600072  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=22600072  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:50:38] : [WARNING] - RESPUESTA IDS:
+[02-Jun-2020 11:50:38] : [WARNING] - 0
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=22600084
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=44600021
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=44600021
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO IDS SOLICITUDES CENTRO: 44600021
+[02-Jun-2020 11:50:38] : [WARNING] - CONSULTA SOLICITUDES ADMITIDAS
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=44600021  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=44600021  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:50:38] : [WARNING] - RESPUESTA IDS:
+[02-Jun-2020 11:50:38] : [WARNING] - 0
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600105
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600117
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600129
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=50600129
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO IDS SOLICITUDES CENTRO: 50600129
+[02-Jun-2020 11:50:38] : [WARNING] - CONSULTA SOLICITUDES ADMITIDAS
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600129  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600129  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:50:38] : [WARNING] - RESPUESTA IDS:
+[02-Jun-2020 11:50:38] : [WARNING] - 0
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600130
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=50600130
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO IDS SOLICITUDES CENTRO: 50600130
+[02-Jun-2020 11:50:38] : [WARNING] - CONSULTA SOLICITUDES ADMITIDAS
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600130  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600130  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:50:38] : [WARNING] - RESPUESTA IDS:
+[02-Jun-2020 11:50:38] : [WARNING] - 0
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600142
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600154
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=50600154
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO IDS SOLICITUDES CENTRO: 50600154
+[02-Jun-2020 11:50:38] : [WARNING] - CONSULTA SOLICITUDES ADMITIDAS
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600154  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600154  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:50:38] : [WARNING] - RESPUESTA IDS:
+[02-Jun-2020 11:50:38] : [WARNING] - 0
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50600166
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=50600166
+[02-Jun-2020 11:50:38] : [WARNING] - OBTENIENDO IDS SOLICITUDES CENTRO: 50600166
+[02-Jun-2020 11:50:38] : [WARNING] - CONSULTA SOLICITUDES ADMITIDAS
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='ebo' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600166  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:50:38] : [WARNING] - SELECT a.id_alumno FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where a.tipoestudios='tva' and  fase_solicitud!='borrador' and estado_solicitud not in('irregular','duplicada') and a.id_centro_destino=50600166  order by c.id_centro,a.tipoestudios,
+			 a.transporte desc,
+			b.puntos_validados desc,
+			b.validar_hnos_centro desc,
+			b.validar_tutores_centro desc,
+			b.validar_proximidad_domicilio desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),
+			b.validar_renta_inferior desc,
+			b.validar_discapacidad desc,FIELD(discapacidad,'alumno','hpadres','no'),
+			b.validar_tipo_familia desc,FIELD(tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),
+			b.hermanos_centro desc,b.tutores_centro desc,a.nordensorteo asc,a.nasignado desc LIMIT 
+[02-Jun-2020 11:50:38] : [WARNING] - RESPUESTA IDS:
+[02-Jun-2020 11:50:38] : [WARNING] - 0
+[02-Jun-2020 11:50:38] : [WARNING] - BORRANDO DE TABLA alumnos_provisional_final DELETE from alumnos_provisional_final
+[02-Jun-2020 11:50:38] : [WARNING] - CARGANDO TABLA DESPUES DE SORTEO alumnos_provisional_final INSERT IGNORE INTO alumnos_provisional_final SELECT a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.est_desp_sorteo,c.nombre_centro,b.*,a.id_centro_destino as id_centro_destino FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador'
+[02-Jun-2020 11:59:00] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 11:59:00] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 11:59:00] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 11:59:00] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 
+[02-Jun-2020 12:00:43] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 12:00:43] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 12:00:43] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 12:00:43] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 
+[02-Jun-2020 12:01:27] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 12:01:27] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 12:01:27] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 12:01:27] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 
+[02-Jun-2020 12:03:59] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 12:03:59] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 12:03:59] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 12:03:59] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 
+[02-Jun-2020 12:04:42] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 12:04:42] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 12:04:42] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 12:04:42] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 
+[02-Jun-2020 12:06:07] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 12:06:07] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 12:06:07] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 12:06:07] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 
+[02-Jun-2020 12:08:40] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 12:08:40] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 12:08:40] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 12:08:40] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 
+[02-Jun-2020 12:10:22] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 12:10:22] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 12:10:22] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 12:10:22] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 
+[02-Jun-2020 12:14:38] : [WARNING] - OBTENIENDO FASE SORTEO
+[02-Jun-2020 12:14:38] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[02-Jun-2020 12:14:38] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[02-Jun-2020 12:14:38] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 

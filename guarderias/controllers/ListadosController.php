@@ -754,6 +754,26 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
     				}				
 			return $ares;
 		}
+    public function getResumenVacantesGuarderia($rol,$id_centro=1)
+		{
+
+			$i=0;
+			$amatcentros=array();	
+				$centros=$this->getCentrosIds();
+				foreach($centros as $c)
+				{
+					$centro=new Centro($this->adapter,$c->id_centro,'no');
+					$centro->setNombre();
+					$matcentros=$centro->getDatosVacantesGuarderia($rol,$c->id_centro);
+					$amatcentros[$i]['nombre_centro']=str_replace(',','',$centro->getNombre());
+					$amatcentros[$i]['vuno']=$matcentros[0]->vuno;
+					$amatcentros[$i]['vdos']=$matcentros[0]->vdos;
+					$amatcentros[$i]['vtres']=$matcentros[0]->vtres;
+					$i++;
+				}
+			return $amatcentros;
+		
+		}
     public function getResumenMatriculaCentro($rol,$id_centro=1,$tiposol=0,$modo='csv')
 		{
 
