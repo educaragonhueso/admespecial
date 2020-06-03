@@ -23,7 +23,6 @@ $scontroller=new SolicitudController($rol);
 $conexion=$scontroller->getConexion();
 $tsol=new Solicitud($conexion);
 $tcentro=new Centro($conexion,$_POST['id_centro'],'ajax');
-
 if(isset($_POST['id_centro']))
 {
 	if($_POST['id_centro']=='')
@@ -54,6 +53,7 @@ if($rol=='alumno')
 
 if(isset($_POST['codigo_centro'])) $id_centro=$_POST['codigo_centro'];
 
+$log_editar_solicitud->warning("DATOS CENTRO: ".$id_centro);
 //obtenemos formulario con los datos
 $sform=$scontroller->showFormSolicitud($id,$id_centro,$rol,1,$solo_lectura,$fase_sorteo,$estado_convocatoria);
 

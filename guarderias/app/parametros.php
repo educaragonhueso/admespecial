@@ -3,8 +3,8 @@ define("DIR_CSVS",DIR_BASE.'/scripts/datossalida/listadoscsv/');
 define("DIR_PROV",DIR_BASE.'/scripts/datossalida/pdflistados/provisionales/');
 define("DIR_PROV_WEB",'/guarderias/scripts/datossalida/pdflistados/provisionales/');
 define("DIR_CSVS_WEB",'/guarderias/scripts/datossalida/listadoscsv/');
-define("DIR_SOR",DIR_BASE.'/guarderias/scripts/datossalida/pdflistados/sorteo/');
-define("DIR_SOR_WEB",'/guarderias/scripts/datossalida/pdflistados/sorteo/');
+define("DIR_SOR",DIR_BASE.'/scripts/datossalida/pdflistados/sorteo/');
+define("DIR_SOR_WEB",'/scripts/datossalida/pdflistados/sorteo/');
 
 //Arrays de campos cabecera para los listados
 //NUMERO ASIGNADO DE SORTEO
@@ -44,8 +44,10 @@ $campos_cabecera_csv_dup=array('Centro','Primer apellido','Segundo apellido','No
 $campos_bbdd_csv_dup=array('nombre_centro','apellido1','apellido2','nombre','tipoestudios','fnac','dni_tutor1');
 
 //DATOS PARA EXPORTAR DATOS PDF
-$campos_cabecera_pdf_mat=array('Centro','Grupos EBO','Puestos EBO','Plazas Ocupadas EBO','Vacantes_EBO','Grupos TVA','Puestos TVA','Plazas Ocupadas TVA','Vacantes_TVA');
-$campos_bbdd_pdf_mat=array('nombre_centro','gruposebo','puestosebo','plazasactualesebo','vacantesebo','grupostva','puestostva','plazasactualestva','vacantestva');
+
+//vacantes para centros e pdf
+$campos_cabecera_pdf_mat=array('Centro','2020','2019','2018');
+$campos_bbdd_pdf_mat=array('nombre_centro','vuno','vdos','vtres');
 
 //DATOS PARA LISTADOS PROVISIONALES
 $campos_cabecera_admitidos_prov=array('Tipo','Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Criterios prioritarios','Puntos Baremo');

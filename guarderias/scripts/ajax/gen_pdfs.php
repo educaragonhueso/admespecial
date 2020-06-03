@@ -46,7 +46,8 @@ if($tipo=='pdf_mat')
 {
    $titulo="LISTADO COMPLETO DE VACANTES";
 	//mostramos las solitudes completas sin incluir borrador
-	$datoslistado=$list->getResumenMatriculaCentro($rol='centro',$id_centro,$tiposol,$modo); 
+	$datoslistado=$list->getResumenVacantesGuarderia($rol='centro',$id_centro); 
+	//$datoslistado=$list->getResumenMatriculaCentro($rol='centro',$id_centro,$tiposol,$modo); 
 	$log_genpdfs->warning("PREOBTENIENDO RESUMEN MATRICULA PDF");
    $cab=$$cabecera;
 }

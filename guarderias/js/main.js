@@ -338,6 +338,37 @@ return totalbaremo;
 
 //METODOS VALIDACION DE BAREMO
 /////////////////////////////////////////////////////////////////////////////////////////////////
+$('body').on('click', 'input[name*="hors"]', function(e){
+var vid=$(this).attr("name");
+vid=vid.replace('hors','');
+
+ var hentrada=$('input[name="hore'+vid+'"]:checked').val();
+ var hsalida=$('input[name="hors'+vid+'"]:checked').val();
+//si los dos tienen una valo rselccionado comprobamos q no sean los extremos
+if(hsalida!=undefined & hentrada!=undefined)
+   if(hentrada=='7:45' & hsalida=='17:00')
+    		$.alert({
+        		title: 'El horario es incorrecto, los horarios de entrada/salida no pueden ser los mínimo/máximo',
+        		content: "Corregir"
+    			});
+});
+
+$('body').on('click', 'input[name*="hore"]', function(e){
+var vid=$(this).attr("name");
+vid=vid.replace('hore','');
+
+ var hentrada=$('input[name="hore'+vid+'"]:checked').val();
+ var hsalida=$('input[name="hors'+vid+'"]:checked').val();
+//si los dos tienen una valo rselccionado comprobamos q no sean los extremos
+if(hsalida!=undefined & hentrada!=undefined)
+   if(hentrada=='7:45' & hsalida=='17:00')
+    		$.alert({
+        		title: 'El horario es incorrecto, los horarios de entrada/salida no pueden ser los mínimo/máximo',
+        		content: "Corregir"
+    			});
+
+
+});
 
 $('body').on('click', 'button[name*=boton_baremo_validar_proximidad_domicilio]', function(e){
 var vid=$(this).attr("name");

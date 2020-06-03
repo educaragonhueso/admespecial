@@ -15,8 +15,16 @@ echo $_SESSION['url_base'];?>'>INICIO</a>
                <a class="nav-link dropdown-toggle desplegable" id="navbardrop" data-toggle="dropdown">Documentación</a>
 				   <div class="dropdown-menu">
 				   <a class="dropdown-item" href="documentacion/a4modsol.pdf" id="doca4" target="_blank">Modelo solicitud autorrellenable (anexoIV)</a>
-				 <?php if($_SESSION['rol']!='alumno') echo '<a class="dropdown-item" href="documentacion/InstruccionesEEspecial.pdf" id="docinst" target="_blank">Instrucciones Admisión Educación Especial</a>';?>
-				 <?php if($_SESSION['rol']!='alumno') echo '<a class="dropdown-item" href="documentacion/plantilla_matriculaguarderias.csv" id="docinst" target="_blank">Plantilla matrícula guarderías (csv)</a>';?>
+				 <?php if($_SESSION['rol']!='alumno')
+               {
+                     echo '<a class="dropdown-item" href="documentacion/InstruccionesEEspecial.pdf" id="docinst" target="_blank">Instrucciones Admisión Educación Especial</a>';
+                     echo '<a class="dropdown-item" href="documentacion/plantilla_matriculaguarderias.csv" id="docinst" target="_blank">Plantilla matrícula guarderías (csv)</a>';
+                     echo '<a class="dropdown-item" href="documentacion/a2_1c_sspp.pdf" id="doca21c" target="_blank">ANEXO II- Solicitud ingreso (pdf)</a>';
+                     echo '<a class="dropdown-item" href="documentacion/a3_1c.pdf" id="doca31c" target="_blank">ANEXO III- Baja o excedencia (pdf)</a>';
+                     echo '<a class="dropdown-item" href="documentacion/a4_1c20_21.pdf" id="doca41c" target="_blank">ANEXO IV- Renta familiares (pdf)</a>';
+                     echo '<a class="dropdown-item" href="documentacion/boa14f20201c.pdf" id="docboa1c" target="_blank">BOA 14 febrero (pdf)</a>';
+               } 
+            ?>
       
 				 </div>
             </li>

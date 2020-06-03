@@ -1,6 +1,7 @@
 <?php
 session_start();
 //if(!isset($_SESSION)) exit(); 
+if($_SESSION['version']=='PRE') print_r($_SESSION);
 include('includes/head.php');
 ?>
 <html>
@@ -10,7 +11,6 @@ include('includes/head.php');
 	  <input type="hidden" id="estado_convocatoria" name="estado_estado_convocatoria" value="<?php echo $_SESSION['estado_convocatoria']; ?>"></input>
 	  <span type="hidden" id="provincia" name="provincia" value="<?php echo $_SESSION['provincia'];?>"></span>
 	  <span type="hidden" id="estado" name="estado" value="<?php echo $_SESSION['estado']; ?>"></span>
-
 
 	<?php echo "<br><b><i> AVISO IMPORTANTE: Si se va a imprimir la solicitud se recomienda el uso de cualquier navegador distinto de Mozilla-Firefox ya que puede dar problemas al imprimirla</i></b><br>";?>
 	  <span type="hidden" id="rol" name="rol" value="<?php echo $_SESSION['rol']; ?>"><b>ROL: </b><?php echo $_SESSION['rol'];?></b></span> 
@@ -72,7 +72,7 @@ include('includes/head.php');
 				echo '<a id="imprimir" target="_blank"><input class="btn btn-primary imprimirsolicitud"  type="button" value="Vista Previa Impresion Documento"/></a>';
 				}
 		}
-		elseif($_SESSION['dia_inicio_inscripcion']==0)
+		elseif($_SESSION['dia_inicio_inscripcion']==0 and $_SESSION['rol']=='alumno')
 		{
 				echo '<row><div class="col-12"><p><h1></h1></p></div></row>';
 				echo '<row><p><h2></h2></p></row>';	

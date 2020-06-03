@@ -337,7 +337,12 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 			if(strpos($key,'transporte')!==FALSE){ $darray['transporte']=$elto;continue;}
 			if(strpos($key,'fase_solicitud')!==FALSE){ $darray['fase_solicitud']=$elto;continue;}
 			if(strpos($key,'estado_solicitud')!==FALSE){ $darray['estado_solicitud']=$elto;continue;}
-			if(strpos($key,'tributantes_')!==FALSE)  continue;
+			
+         if(strpos($key,'tipoestudios')!==FALSE){ $darray['tipoestudios']=$elto;continue;}
+         if(strpos($key,'hore')!==FALSE){ $darray['hore']=$elto;continue;}
+         if(strpos($key,'hors')!==FALSE){ $darray['hors']=$elto;continue;}
+			
+         if(strpos($key,'tributantes_')!==FALSE)  continue;
 			if(strpos($key,'baremo_')===FALSE && strpos($key,'hermanos_')===FALSE)   $darray[$key]=$elto;
 			}
 		//determinamos el tipo de alumno, de momento ponemos ebo
@@ -750,6 +755,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		$r3=array('nombre3'=>'','apellido13'=>'','apellido23'=>'','parentesco3'=>'','dni3'=>'');
 		
 			if($query->num_rows==0)		{	$resultSet=array_merge($r1,$r2,$r3);}
+			//if($query->num_rows==0)		{	$resultSet=array();}
 			if($query->num_rows==1)		{	$resultSet=array_merge($resultSet,$r2,$r3);}
 			if($query->num_rows==2)		{	$resultSet=array_merge($resultSet,$r3);}
 		}
@@ -774,6 +780,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 		$r3=array('hermanos_id_registro_'.$sufijo.'3'=>'','hermanos_datos_'.$sufijo.'3'=>'','hermanos_fnacimiento_'.$sufijo.'3'=>'','hermanos_curso_'.$sufijo.'3'=>'','hermanos_nivel_educativo_'.$sufijo.'3'=>'');
     
 		if($query->num_rows==0)		{	$resultSet=array_merge($r1,$r2,$r3);}
+		//if($query->num_rows==0)		{	$resultSet=array();}
     if($query->num_rows==1)		{	$resultSet=array_merge($resultSet,$r2,$r3);}
     if($query->num_rows==2)		{	$resultSet=array_merge($resultSet,$r3);}
    	$this->log_mostrar_solicitud->warning("HERMANOS: "); 
@@ -784,6 +791,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
   
 	public function getSolData($id,$tiposol='nueva',$id_centro,$tabla_alumnos='alumnos') 
 	{
+   $solSet_alumno=array();
 	$datos_baremo=array();
 	$datos_alumno=array();
 	$datos_tributantes=array();
@@ -801,19 +809,22 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 	$this->log_mostrar_solicitud->warning(print_r($datos_baremo,true));
 
 	}	
-
 	$query_alumno="select * from $tabla_alumnos a where a.id_alumno=".$id;
+	$this->log_mostrar_solicitud->warning("CONSULTA ALUMNO: ".$query_alumno);
 	$soldata=$this->db()->query($query_alumno);
         if($row = $soldata->fetch_object()) {
            $solSet_alumno=$row;
         }
-
 	$datos_alumno = json_decode(json_encode($solSet_alumno), True);
 
 	$hermanos_admision=$this->getHermanos('admision',$id);
 	$hermanos_baremo=$this->getHermanos('baremo',$id);
 	$tributantes=$this->getHermanos('tributantes',$id);
 
+	$this->log_mostrar_solicitud->warning("HERMANOS ADMISION");
+	$this->log_mostrar_solicitud->warning(print_r(count($hermanos_admision)));
+	$this->log_mostrar_solicitud->warning("HERMANOS BAREMO");
+	$this->log_mostrar_solicitud->warning(print_r(sizeof($hermanos_baremo)));
 	if(sizeof($datos_alumno)!=0)	$sol_completa=$datos_alumno;
 	if(sizeof($datos_baremo)!=0)	$sol_completa=array_merge($datos_alumno,$datos_baremo);
 	if(sizeof($hermanos_admision)!=0)	$sol_completa=array_merge($sol_completa,$hermanos_admision);
@@ -827,7 +838,10 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 			$sol_completa[$k]='';
 		//Obtenemos nombre del centro a partir dle id
 		$nombre_centro=$this->getNombre($id_centro);
-		$sol_completa['nombre_centro_destino']=$nombre_centro;
+      //si la sol está vacia, primera solicitud
+		if(!isset($sol_completa['id_centro_destino'])) 
+         $sol_completa['id_centro_destino']=$id_centro;
+      $sol_completa['nombre_centro_destino']=$nombre_centro;
 		$this->log_nueva_solicitud->warning("NUEVA SOLICITUD,id centro/nombre centro: ".$id_centro.'/'.$nombre_centro);
 		}
 	else

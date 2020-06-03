@@ -313,6 +313,9 @@ class SolicitudController extends ControladorBase{
 			
 			//tipo radio, no tiene id sino name
 
+			$this->formulario=str_replace('name="tipoestudios"','name="tipoestudios'.$nuevoid.'"',$this->formulario);
+			$this->formulario=str_replace('name="hore"','name="hore'.$nuevoid.'"',$this->formulario);
+			$this->formulario=str_replace('name="hors"','name="hors'.$nuevoid.'"',$this->formulario);
 			$this->formulario=str_replace('name="baremo_proximidad_domicilio"','name="baremo_proximidad_domicilio'.$nuevoid.'"',$this->formulario);
 			//$this->formulario=str_replace('name="baremo_tutores_centro"','name="baremo_tutores_centro'.$nuevoid.'"',$this->formulario);
 			//$this->formulario=str_replace('name="baremo_renta_inferior"','name="baremo_renta_inferior'.$nuevoid.'"',$this->formulario);

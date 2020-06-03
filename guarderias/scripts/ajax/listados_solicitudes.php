@@ -34,6 +34,7 @@ $tsolicitud=new Solicitud($conexion);
 $tcentro->setNombre();
 $nombre_centro=$tcentro->getNombre();
 $fase_sorteo=$tcentro->getFaseSorteo();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
+$numero_sorteo=$tcentro->getNumeroSorteo();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
 $nsolicitudes=$tcentro->getNumSolicitudes($id_centro,$fase_sorteo);
 //Segun el estado del sorteo deshabilitamos el sorteo
 if($fase_sorteo<=2) $disabled='';
@@ -62,11 +63,12 @@ $form_sorteo_completo='<div id="form_sorteo" class="input-group mb-3">
 //variable para controlar si se actualiza el sorteo en la tabla de centros
 //if($_POST['rol']=='centro') $fase_sorteo=$tcentro->getFaseSorteo();//0: no realizado, 1: se han asignado los numeros aleatorios, 2: se ha realizado sorteo
 //else $fase_sorteo=2;
-
 $log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES CON ROL: ".$_POST['rol']);
 //Para el caso de acceso del administrador o servicios provinciales
 if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 {
+   if($numero_sorteo==0) print("<h2  style='text-align:end'>SORTEO NO REALIZADO</h2>");
+   else   print("<h2 style='text-align:end'>NUMERO DE SORTEO: $numero_sorteo</h2>");
    if($_POST['rol']=='admin')
    {
 	   if($fase_sorteo==1) print($form_sorteo_completo);
@@ -110,6 +112,8 @@ else//accedemos como centro
 	#Mostramos formulario para el sorteo si es el dia correcto
         $fase_sorteo=$tcentro->getFaseSorteo();
 	#Mostramos formulario para el sorteo si es el dia correcto
+
+
 	if($fase_sorteo==0)
 	{
 			if($_POST['id_centro']!='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));

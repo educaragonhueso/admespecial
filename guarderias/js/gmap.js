@@ -12,7 +12,7 @@ $("#map-canvas").show();
     geocoder = new google.maps.Geocoder();
     var latlng = new google.maps.LatLng(41.6520184,-0.8806809);
     var mapOptions = {
-      zoom: 12,
+      zoom: 8,
       center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
@@ -31,7 +31,7 @@ $("#map-canvas").show();
                   longitud=elto.coordenadas.split(":")[1]; 
                   var latlong = {lat: parseFloat(latitud), lng:
 parseFloat(longitud)};
-                  var vacantes ="CENTRO: "+elto.nombre_centro+"\nVacantes 2020:"+elto.vuno+"\nVacantes 2019:"+elto.vdos+"\nVacantes 2018:"+elto.vtres;
+                  var vacantes ="CENTRO: "+elto.nombre_centro+"<br>Vacantes 2020:"+elto.vuno+"<br>Vacantes 2019:"+elto.vdos+"<br>Vacantes 2018:"+elto.vtres;
                   var marker = new google.maps.Marker({
                   map: map,
                   position: latlong,

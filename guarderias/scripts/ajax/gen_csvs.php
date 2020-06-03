@@ -71,6 +71,13 @@ if($subtipo_original=='csv_mat')
 	$log_gencsvs->warning("DATOS GUARDERIAS PARA CSV: ");
 	$log_gencsvs->warning(print_r($solicitudes,true));
 }
+//si es para datos solicitudes
+if($subtipo_original=='csv_sol')
+{
+   $solicitudes=$list->getSolicitudes($id_centro,$tipo,$fase_sorteo,$modo,$subtipo,$provincia,$estado_convocatoria); 
+	$log_gencsvs->warning("DATOS GUARDERIAS PARA CSV LISTADO SOLICITUDES: ");
+	$log_gencsvs->warning(print_r($solicitudes,true));
+}
 $fcsv=$list->genCsv($solicitudes,$id_centro,$subtipo_original,$$cabecera,$$camposdatos,DIR_CSVS);
 
 $log_gencsvs->warning("SOLICITUDES  CSV GENERADAS ");

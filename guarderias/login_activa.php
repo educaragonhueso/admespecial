@@ -1,8 +1,11 @@
 <?php 
+session_destroy();
 session_start();
 require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/guarderias/config/config_global.php";
 require_once DIR_CORE.'/Conectar.php';
 date_default_timezone_set('Europe/Madrid');
+         
+$_SESSION['version']=VERSION;
 $hoy=date("Y/m/d");      
 $_SESSION['estado']='inicioinscripcion';
 $_SESSION['rol'] = 'alumno';      
@@ -71,7 +74,6 @@ header('Content-Type: text/html; charset=UTF-8');
 $nombre_usuario = $clave = "";
 $nombre_usuario_err = $clave_err = "";
 // Processing form data when form is submitted
-print("ENTRANDO");
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
         // Check if username is empty

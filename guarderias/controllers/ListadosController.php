@@ -557,7 +557,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 	}
   public function showTablaResumenSolicitudes($a,$nombre_centro='',$id_centro)
 	{
-	$tres='<div id="tresumen'.$id_centro.'" class="container tresumensol"><h2>SOLICITUDES <span class="cabcensol" id="cabcensol'.$id_centro.'">'.strtoupper($nombre_centro).'</span></h2>';
+	$tres='<div id="tresumen'.$id_centro.'" class="container tresumensol"><h2>Solicitudes centro:  <span class="cabcensol" id="cabcensol'.$id_centro.'">'.strtoupper($nombre_centro).'</span></h2>';
 	$movil=array();
 	if(sizeof($a)>0)
 	{
