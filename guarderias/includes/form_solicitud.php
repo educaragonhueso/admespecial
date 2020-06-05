@@ -222,7 +222,7 @@ $formsol.=
                     </div>
                     <div class="col-md-2">
                         <div class="md-form mb-0">
-                            <input type="text" id="hermanos_curso_admision1" value="" name="hermanos_curso_admision1" placeholder="Curso solicitado" class="form-control">
+                            <input type="text" id="hermanos_hcurso_admision1" value="" name="hermanos_hcurso_admision1" placeholder="Curso solicitado" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -248,7 +248,7 @@ $formsol.=
                     </div>
                     <div class="col-md-2">
                         <div class="md-form mb-0">
-                            <input type="text" id="hermanos_curso_admision2" value="" name="hermanos_curso_admision2" placeholder="Curso solicitdado" class="form-control">
+                            <input type="text" id="hermanos_hcurso_admision2" value="" name="hermanos_hcurso_admision2" placeholder="Curso solicitdado" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -274,7 +274,7 @@ $formsol.=
                     </div>
                     <div class="col-md-2">
                         <div class="md-form mb-0">
-                            <input type="text" id="hermanos_curso_admision3" value="" name="hermanos_curso_admision3" placeholder="Curso solicitdado" class="form-control">
+                            <input type="text" id="hermanos_hcurso_admision3" value="" name="hermanos_hcurso_admision3" placeholder="Curso solicitdado" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -470,7 +470,7 @@ $formsol.=
 					<br>
           <div class="col-md-2">
           	<div class="md-form mb-0">
-            	<input type="text" id="hermanos_curso_baremo1" value="" name="hermanos_curso_baremo1" placeholder="Curso solicitado" class="form-control">
+            	<input type="text" id="hermanos_hcurso_baremo1" value="" name="hermanos_hcurso_baremo1" placeholder="Curso solicitado" class="form-control">
             </div>
           </div>
 					<br>
@@ -498,7 +498,7 @@ $formsol.=
           </div>
           <div class="col-md-2">
           	<div class="md-form mb-0">
-            	<input type="text" id="hermanos_curso_baremo2" value="" name="hermanos_curso_baremo2" placeholder="Curso solicitado" class="form-control">
+            	<input type="text" id="hermanos_hcurso_baremo2" value="" name="hermanos_hcurso_baremo2" placeholder="Curso solicitado" class="form-control">
             </div>
           </div>
           <div class="col-md-3">
@@ -524,7 +524,7 @@ $formsol.=
           </div>
           <div class="col-md-2">
           	<div class="md-form mb-0">
-            	<input type="text" id="hermanos_curso_baremo3" value="" name="hermanos_curso_baremo3" placeholder="Curso solicitado" class="form-control">
+            	<input type="text" id="hermanos_hcurso_baremo3" value="" name="hermanos_hcurso_baremo3" placeholder="Curso solicitado" class="form-control">
             </div>
           </div>
           <div class="col-md-3">

@@ -11,7 +11,7 @@ else
 define("DIR_BASE","/datos/www/preadmespecial.aragon.es/public_admespecial/guarderias/");
 define("DIR_CORE",DIR_BASE."/core");
 #define("IPREMOTA","172.27.0.56");
-define("IPREMOTA","15.16.149.60");
+define("IPREMOTA","95.16.149.60");
 define("PAGINA_ACTIVA","1");
 //parametros propios de la aplicacion
 define("DIR_APP",DIR_BASE."/app/");

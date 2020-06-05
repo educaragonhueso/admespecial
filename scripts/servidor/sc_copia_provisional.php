@@ -26,6 +26,8 @@ $ct=$tsolicitud->copiaTablaCentro(0,'alumnos_provisional_final');
 $acentros=array();
 $centros=$ccentros->getAllCentros('todas','especial');
 $ccentros=new CentrosController(0,$conexion);
+if($tsolicitud->desmarcarValidados(1)==0)
+  print("NO HAY VALIDADOS<br>");
 while($row = $centros->fetch_assoc()) { $acentros[]=$row;}
 
 foreach($acentros as $dcentro)
@@ -57,8 +59,6 @@ foreach($acentros as $dcentro)
 	if($tsolicitud->setSolicitudesSorteo($id_centro,$nsolicitudescentro,$vacantes_ebo,$vacantes_tva)==0) 
 		print("NO HAY VACANTES<br>");
 }	
-if($tsolicitud->desmarcarValidados(1)==0)
-  print("NO HAY VALIDADOS<br>");
 //copiamos todos los datos a tabla de provisionales	
 $ct=$tsolicitud->copiaTablaCentro(1,'alumnos_provisional_final');	
 $log_fase_provisional->warning("RESULTADO COPIAR TABLA $ct ");

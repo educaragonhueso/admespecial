@@ -17,10 +17,11 @@ echo $_SESSION['url_base'];?>'>INICIO</a>
 				 <?php if($_SESSION['rol']!='alumno')
                {
                      echo '<a class="dropdown-item" href="documentacion/plantilla_matriculaguarderias.csv" id="docinst" target="_blank">Plantilla matrícula guarderías (csv)</a>';
-                     echo '<a class="dropdown-item" href="documentacion/a2_1c_sspp.pdf" id="doca21c" target="_blank">ANEXO II- Solicitud ingreso (pdf)</a>';
+                     echo '<a class="dropdown-item" href="documentacion/a2_1c_2021.pdf" id="doca21c" target="_blank">ANEXO II- Solicitud ingreso (pdf)</a>';
                      echo '<a class="dropdown-item" href="documentacion/a3_1c.pdf" id="doca31c" target="_blank">ANEXO III- Baja o excedencia (pdf)</a>';
-                     echo '<a class="dropdown-item" href="documentacion/a4_1c20_21c.pdf" id="doca31c" target="_blank">ANEXO IV- Renta familiares (pdf)</a>';
+                     echo '<a class="dropdown-item" href="documentacion/a4_1c.pdf" id="doca31c" target="_blank">ANEXO IV- Renta familiares (pdf)</a>';
                      echo '<a class="dropdown-item" href="documentacion/boa14f20201c.pdf" id="docboa1c" target="_blank">BOA 14 febrero (pdf)</a>';
+                     echo '<a class="dropdown-item" href="documentacion/res_guarderias_anexos_29052020.pdf" id="docresboa1c" target="_blank">Resolución BOA 29 Mayo (pdf)</a>';
                } 
             ?>
       
@@ -51,8 +52,7 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
                }
                echo '<a class="exportcsv dropdown-item" href="#" id="csv_sol"
                      data-tipo="csv" data-subtipo="csv_sol">Listado solicitudes (csv)</a>';
-               echo '<a class="exportcsv dropdown-item" href="#" id="csv_pro"
-                     data-tipo="csv" data-subtipo="csv_pro">Listado alumnos promocionan (csv)</a>';
+               //echo '<a class="exportcsv dropdown-item" href="#" id="csv_pro" data-tipo="csv" data-subtipo="csv_pro">Listado alumnos promocionan (csv)</a>';
             
                if($_SESSION['provincia']!='todas' or $_SESSION['rol']=='admin')
                { 

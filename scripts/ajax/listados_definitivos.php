@@ -41,6 +41,8 @@ if($estado_convocatoria>=30 and $estado_convocatoria<40)
 {
 	if($_POST['rol']=='centro')
 	{
+      if($tsolicitud->desmarcarValidados($id_centro)==0)
+         print("NO HAY VALIDADOS<br>");
       $nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
       $nsorteo=$tcentro->getNumeroSorteo();
       $dsorteo=$tcentro->getVacantes('centro');

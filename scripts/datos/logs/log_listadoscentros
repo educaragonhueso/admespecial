@@ -6311,3 +6311,5 @@
 [02-Jun-2020 21:01:38] : [WARNING] - CABECERA EN SHOWTABLAS: no
 [03-Jun-2020 08:03:03] : [WARNING] - CONSULTA CENTROS
 [03-Jun-2020 08:03:03] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)
+[04-Jun-2020 08:03:01] : [WARNING] - CONSULTA CENTROS
+[04-Jun-2020 08:03:01] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula)

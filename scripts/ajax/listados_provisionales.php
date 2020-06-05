@@ -46,6 +46,8 @@ if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=1)
 {
 	if($_POST['rol']=='centro')
 	{
+      if($tsolicitud->desmarcarValidados($id_centro)==0)
+         print("NO HAY VALIDADOS<br>");
 		$nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
 		$dsorteo=$tcentro->getVacantes('centro');
 		$vacantes_ebo=$dsorteo[0]->vacantes;
@@ -53,8 +55,6 @@ if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=1)
 	
 		if($tsolicitud->setSolicitudesSorteo($id_centro,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
 				print("NO HAY VACANTES<br>");
-      if($tsolicitud->desmarcarValidados($id_centro)==0)
-         print("NO HAY VALIDADOS<br>");
 		$ct=$tsolicitud->copiaTablaCentro($id_centro,'alumnos_provisional_final');	
 	}
 	elseif($_POST['rol']=='admin' or $_POST['rol']=='sp')

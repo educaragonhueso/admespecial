@@ -24,6 +24,8 @@ $centro=new Centro($conexion,'','no',0);
 $utils=new UtilidadesAdmision($conexion,$ccentros,$centro);
 //$tsolicitud=new Solicitud($ccentros->conectar->conexion());
 $tsolicitud=new Solicitud($conexion);
+if($tsolicitud->desmarcarValidados(1)==0)
+  print("NO HAY VALIDADOS<br>");
 
 ########################################################################################
 ########################################################################################
