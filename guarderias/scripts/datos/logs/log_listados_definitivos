@@ -10,3 +10,34 @@ TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos/0/b/0
 TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos/0/b/0
 [04-Jun-2020 11:25:58] : [WARNING] - CCONSULTA SOLICITUDES
 TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos/0/b/0
+[08-Jun-2020 20:57:24] : [WARNING] - OBTENIENDO DATOS DEFINITIVOS POST:
+[08-Jun-2020 20:57:24] : [WARNING] - Array
+(
+    [id_centro] => 1
+    [rol] => admin
+    [subtipo] => admitidos_def
+    [pdf] => 1
+    [estado_convocatoria] => 40
+)
+
+[08-Jun-2020 20:57:24] : [WARNING] - ACTUALIZANDO DEFINITIVOS, DATOS:  ESTADO
+CENTRO/IDCENTRO 0/40
+[08-Jun-2020 20:57:24] : [WARNING] - OBTENIENDO LISTADOS DEFINITIVOS, CENTRO: 1
+[08-Jun-2020 20:57:24] : [WARNING] - OBTENIENDO
+DEFINITIVOS ESTADO: 40
+[08-Jun-2020 20:57:24] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_definitiva_final/2/a/40
+[08-Jun-2020 20:57:24] : [WARNING] - CONSULTA SOLICITUDES DEFINITIVOS SUBTIPO: admitidos_def
+[08-Jun-2020 20:57:24] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.sol_plaza,a.num_hadmision,a.sol_vacantes,a.nordensorteo,a.nasignado as nasignado,c.nombre_centro,a.puntos_validados,a.id_centro_destino as id_centro FROM alumnos_definitiva_final a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta' and est_desp_sorteo='admitida'  order by c.id_centro,a.tipoestudios, a.transporte
+desc,a.puntos_validados desc,a.validar_hnos_centro
+desc,a.validar_tutores_centro desc,a.validar_proximidad_domicilio
+desc,FIELD(a.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),a.validar_renta_inferior
+desc,a.validar_discapacidad
+desc,FIELD(a.discapacidad,'alumno','hpadres','no'),a.validar_tipo_familia
+desc,FIELD(a.tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),a.hermanos_centro
+desc,a.tutores_centro desc,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 20:57:24] : [WARNING] - OBTENIENDO SOLICITUDES GENERALES, DATOS: 
+[08-Jun-2020 20:57:24] : [WARNING] - Array
+(
+)
+

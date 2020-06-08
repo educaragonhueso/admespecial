@@ -67,9 +67,10 @@ function LoadData($file)
 }
 
 // Simple table
-function BasicTable($header, $data,$comp=0,$tam=30,$tipoinforme='normal',$primera_celda=50)
+function BasicTable($header,
+$data,$comp=0,$tam=20,$tipoinforme='normal',$primera_celda=40)
 {
-	if($tipoinforme=='provisional') $margen=15;
+	if($tipoinforme=='provisional' or $tipoinforme=='definitivo') $margen=1;
 	else $margen=60;
 	$cc=0;
 	// Header

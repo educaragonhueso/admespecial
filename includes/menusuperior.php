@@ -13,6 +13,7 @@
                             <li class="nav-item active msuperior dropdown">
                                 <a class="nav-link dropdown-toggle desplegable" id="navbardrop" data-toggle="dropdown">Documentación</a>
 				 <div class="dropdown-menu">
+				 <a class="dropdown-item" href="documentacion/vacespecial.png" id="vacesp" target="_blank">Vacantes Educación Especial FaseII</a>
 				 <a class="dropdown-item" href="documentacion/a4modsol.pdf" id="doca4" target="_blank">Modelo solicitud autorrellenable (anexoIV)</a>
              <a class="dropdown-item" href="documentacion/caladmespecial.pdf"  target="_blank">Calendario Admisión Eduación Especial</a>;
 				 <?php if($_SESSION['rol']!='alumno'){ 
@@ -58,9 +59,9 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
                }
          echo '</div>';
       echo '</li>';
-      echo '<li class="nav-item msuperior">';
-         echo '<a class="nav-link" href="#" id="show_mapacentros">Mapa Centros</a>';
-      echo '</li>';
+      //echo '<li class="nav-item msuperior">';
+      //   echo '<a class="nav-link" href="#" id="show_mapacentros">Mapa Centros</a>';
+      //echo '</li>';
       echo '<li class="nav-item active msuperior">';
          echo '<a class="show_matricula nav-link" href="#">Matricula</a>';
       echo '</li>';
@@ -82,7 +83,7 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
                 </div>
                <?php }?>
             </li>
-		<?php if(($_SESSION['estado_convocatoria']<=30 and $_SESSION['estado_convocatoria']>=1)  or $_SESSION['fase_sorteo']==2) {?>
+		<?php if(($_SESSION['estado_convocatoria']<=30 and $_SESSION['estado_convocatoria']>=1) or $_SESSION['rol']!='alumno'  or $_SESSION['fase_sorteo']==2) {?>
                             <li class="nav-item active msuperior dropdown" id="mprovisional">
                                  <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
 				 <div class="dropdown-menu">

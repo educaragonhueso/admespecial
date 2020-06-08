@@ -97,8 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
    if(empty($nombre_usuario_err) && empty($clave_err))
    {
       $sql = "SELECT nombre_usuario, clave,rol,nombre_centro,id_centro,primera_conexion,num_sorteo,fase_sorteo FROM usuarios u left join centros c  ON u.id_usuario=c.id_usuario WHERE  u.nombre_usuario = ? and u.clave= ?";
-      $sql_alumno = "SELECT id_centro_destino FROM usuarios u  join alumnos a on
-   u.id_usuario=a.id_usuario where u.nombre_usuario= ?";
+      $sql_alumno = "SELECT id_centro_destino FROM usuarios u  join alumnos a on  u.id_usuario=a.id_usuario where u.nombre_usuario= ? and u.clave";
       if($stmt = $conexion->prepare($sql))
       {
       // Bind variables to the prepared statement as parameters
@@ -130,9 +129,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                            if($stmt_alumno = $conexion->prepare($sql_alumno))
                            {
                            // Bind variables to the prepared statement as parameters
-                              $stmt_alumno->bind_param("s", $param_usuario);
+                              $stmt_alumno->bind_param("ss", $param_usuario,$param_clave);
                               // Set parameters
                               $param_usuario = $nombre_usuario;
+                              $param_clave = md5($clave);
                               // Attempt to execute the prepared statement
                               if($stmt_alumno->execute())
                               {
@@ -145,8 +145,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                                        $stmt_alumno->bind_result($id_centro_destino);
                                        if($stmt_alumno->fetch())
                                        {
-                                          $_SESSION['id_centro'] =
-                                          $id_centro_destino;      
+                                          $_SESSION['id_centro'] =$id_centro_destino;      
+                                          $_SESSION['id_alumno'] =$id_alumno;      
                                        }
                                     }
                               }

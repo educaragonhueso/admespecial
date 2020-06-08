@@ -3,8 +3,8 @@ var geocoder;
  var map;
 
 $('body').on('click', '#show_mapacentros', function(e){
-$("#map-canvas").show();
-   $("#mapcontrol").show(); 
+$("#map-canvas").toggle();
+   $("#mapcontrol").toggle(); 
    initialize();
 });
 
@@ -24,7 +24,7 @@ $("#map-canvas").show();
          dataType: 'json',
          url:'../guarderias/scripts/ajax/get_coord_centros.php',
          success: function(data) {
-         $(".row").hide(); 
+         $(".row").toggle(); 
          data.forEach(function(elto) {
                {
                   latitud=elto.coordenadas.split(":")[0]; 

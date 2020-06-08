@@ -4,7 +4,7 @@ return array(
     "host"      =>"localhost",
     "user"      =>"preadmespecial",
     "pass"      =>"preadmespecial",
-    "database"  =>"preadmespecial",
+    "database"  =>"preadmespecial_produccion",
     "charset"   =>"utf8"
 ); 
 ?>

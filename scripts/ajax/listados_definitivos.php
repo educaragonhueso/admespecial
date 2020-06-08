@@ -154,7 +154,7 @@ if($subtipo_listado=='excluidos_def') $subtipo='EXCLUIDOS DEFINITIVO';
 
 print("<button type='button' class='btn btn-info' onclick='window.open(\"".DIR_PROV_WEB.$subtipo_listado.".pdf\",\"_blank\");'>Descarga listado</button>");
 print($list->showFiltrosTipo());
-print($filtro_datos);
+#print($filtro_datos);
 print("<div style='text-align:center'><h1>LISTADO ".strtoupper($tipo_listado)." ".strtoupper($subtipo)."</h1></div>");
 print($list->showListado($solicitudes,$_POST['rol'],$$cabecera,$$camposdatos,$provisional=1));
 

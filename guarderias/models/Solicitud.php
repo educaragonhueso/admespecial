@@ -579,18 +579,20 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 	$this->log_nueva_solicitud->warning("DATOS DE ALUMNOS");
 	$this->log_nueva_solicitud->warning(json_encode($sol));
 
-	$clave=rand(1000,9999);
+	$clave=rand(1000,99999);
 	while($this->existeCuenta($clave,$sol['dni_tutor1'])==0)	
-		$clave=rand(1000,9999);
+		$clave=rand(1000,99999);
 
 	if(strlen($sol['dni_tutor1'])==0) return 0; 
 	
 	$this->log_nueva_solicitud->warning("CONSULTA INSERCION USUARIO:");
   	$query="INSERT INTO usuarios(nombre_usuario,rol,clave,clave_original) VALUES('".$sol['dni_tutor1']."','alumno',md5('".$clave."'),$clave)";
 	$this->log_nueva_solicitud->warning($query);
-	
-	$saveusuario=$this->db()->query($query);
 
+   //deshabilitamos autocommit
+   $this->db()->autocommit(FALSE);	
+
+	$saveusuario=$this->db()->query($query);
 
 	//PROCESANDO ALUMNO
 	if($saveusuario)
@@ -666,7 +668,15 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 						return 0;
 						}
 					}
-					else	$this->log_nueva_solicitud->warning("NO DATOS TRIBUTANTE");
+					else	
+                  $this->log_nueva_solicitud->warning("NO DATOS TRIBUTANTE");
+            //si hemos llegado a insetar usuario, alumno y baremo hacemos commit
+            if(!$this->db()->commit()) {
+                  $this->log_nueva_solicitud->warning("FALLO EL COMMIT");
+                  //deshabilitamos autocommit
+                  $this->db()->autocommit(TRUE);	
+               return 0;
+               }
 				if($rol=='alumno') return $clave;
 				else return $this->getSol($id_alumno);
 				}

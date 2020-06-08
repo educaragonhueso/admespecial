@@ -5,9 +5,23 @@ INCIDENCIAS GUARDERIAS
 
 -cambiar campo curso de hermanos por hcurso en la base de datos
 -sincronizar ficheros de formulario, solicitud y probar antes de acivr web
-
+-reviasr el resumen de los centros, numero de baremadas, etc...
+-revisar ñ en listados pdf (tb para ed especial)
+-en los listados de usuarios no aparecen alumnos q tienen hermanos
+-Habría que actualizar el anexo IV al del 2018.
+- Habría que actualizar el anexo IV al del 2018.
+Estaría bien poner la opción de los miembros computables para poder calcular luego la renta por capita, y por tanto la cuota.
+-Modificar la funcion getidalumno del controlador de solicitudes para tener en cuent atb el id de alumno, q quede como en PRO
+-Modificar el login activa, q quede como en pro
+-No guarda provincia del formulario, arreglado en PRO
 
 #################################################################################################################
+MEJORAS PROXIMA VERSION
+
+-Concurrencia, la creacion de solicitudes debe ser atomica.
+
+
+
 PREVIO ADMESPECIAL
 
 Carga datos directorio

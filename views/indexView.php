@@ -24,18 +24,24 @@ include('includes/head.php');
 			if($_SESSION['rol']=='sp')
 	  			echo '<span type="hidden" id="provincia" name="provincia" value='.$_SESSION["provincia"].'><b>PROVINCIA: </b>'.$_SESSION["provincia"].'</b></span>'; 
 		 	include('includes/menusuperior.php');
-		}
+      }
 		?>
-		<?php /*usamos metodo del controlador de centros activo echo $this->showTimeline('centro',$_SESSION['id_centro'],'matricula');*/?>
-        <div id="mapcontrol" style='display:none' >
-          <input id="address" type="text" value="Aragón">
-          <input type="button" value="Geocode"  onclick="codeAddress()">
-        </div>
+		<?php 
+            if($_SESSION['rol']=='admin')
+            { 
+            echo $this->showTablas($_SESSION['rol'],$_SESSION['id_centro'],'matricula','todas');
+            }
+      ?>
+      <div id="mapcontrol" style='display:none' >
+         <input id="address" type="text" value="Aragón">
+         <input type="button" value="Geocode"  onclick="codeAddress()">
+      </div>
       <div id="map-canvas" style="height:90%;top:30px"></div>
-		<div class="row ">
-		<div id="t_matricula" style="width:100%"></div>
+   <div class="row" style="width:100%">
+      <div id="t_matricula" style="width:100%"></div>
+		<div class="row" id="rmatricula" style="width:100%">
+		   <div id="t_matricula" style="width:100%"></div>
 		<?php /*usamos metodo del controlador de centros activo*/if($_SESSION['rol']=='centro') echo $this->showTabla('centro',$_SESSION['id_centro'],'matricula');?>
-		<?php if($_SESSION['rol']=='admin') echo $this->showTablas($_SESSION['rol'],$_SESSION['id_centro'],'matricula','todas');?>
 		<?php if($_SESSION['provincia']!='todas'){echo "sprovincial"; echo $this->showTablas($_SESSION['rol'],$_SESSION['id_centro'],'matricula',$_SESSION['provincia']);}?>
 		<?php 
 		if($_SESSION['rol']=='alumno' && $_SESSION['dia_inicio_inscripcion']==1)
@@ -80,7 +86,7 @@ include('includes/head.php');
 		}
 		?>
 		</div>
-		<div class="row ">
+		<div class="row" style='width:100%'>
 		<div id="l_matricula" style="width:100%"></div>
 		</div>
         </div>

@@ -4,6 +4,10 @@ var geocoder;
 
 $('body').on('click', '#show_mapacentros', function(e){
    $("#mapcontrol").show(); 
+   $("#map-canvas").show(); 
+				$(".tresumensol").remove();
+				$(".tresumenmat").remove();
+   console.log("mapa pulsado");
    initialize();
 });
 
@@ -23,7 +27,8 @@ $('body').on('click', '#show_mapacentros', function(e){
          dataType: 'json',
          url:'../scripts/ajax/get_coord_centros.php',
          success: function(data) {
-         $(".row").remove(); 
+         $(".tresumenmat").remove(); 
+         $("#rmatricula").remove(); 
          data.forEach(function(elto) {
                { 
                   latitud=elto.coordenadas.split(":")[0]; 

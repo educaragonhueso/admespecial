@@ -746,3 +746,1719 @@
 					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='validada') t2 on t1.nc=t2.nc
 					join
 					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 07:42:45] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 07:42:45] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 07:42:45] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 07:42:45] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 07:42:45] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 07:42:45] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 07:42:45] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 07:42:45] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 07:42:45] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 07:42:45] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 07:42:45] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 11:01:10] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 12:01:46] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 12:01:58] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 12:30:18] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[05-Jun-2020 12:30:22] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[06-Jun-2020 16:30:46] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[06-Jun-2020 16:30:46] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[06-Jun-2020 16:30:46] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[06-Jun-2020 16:30:46] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[06-Jun-2020 16:30:46] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[06-Jun-2020 16:30:46] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[06-Jun-2020 16:30:46] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[06-Jun-2020 16:30:46] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[06-Jun-2020 16:30:46] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[06-Jun-2020 16:30:46] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[06-Jun-2020 16:30:46] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[06-Jun-2020 17:25:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600060) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600060 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600060 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600072) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600072 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600072 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600084) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600084 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600084 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=44600021) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=44600021 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=44600021 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600105) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600105 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600105 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600117) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600117 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600117 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600129) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600129 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600129 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600130) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600130 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600130 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600142) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600142 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600142 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600154) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600154 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600154 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600166) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600166 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600166 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:29] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600060) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600060 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600060 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:29] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600072) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600072 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600072 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:29] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600084) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600084 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600084 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:29] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=44600021) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=44600021 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=44600021 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:29] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600105) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600105 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600105 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:29] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600117) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600117 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600117 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:29] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600129) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600129 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600129 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:29] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600130) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600130 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600130 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:29] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600142) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600142 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600142 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:29] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600154) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600154 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600154 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[06-Jun-2020 17:25:29] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600166) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600166 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600166 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 11:43:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600060) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600060 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600060 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 11:43:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600072) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600072 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600072 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 11:43:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600084) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600084 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600084 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 11:43:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=44600021) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=44600021 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=44600021 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 11:43:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600105) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600105 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600105 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 11:43:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600117) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600117 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600117 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 11:43:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600129) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600129 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600129 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 11:43:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600130) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600130 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600130 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 11:43:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600142) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600142 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600142 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 11:43:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600154) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600154 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600154 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 11:43:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600166) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600166 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600166 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 11:43:28] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:43:28] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:43:28] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:43:28] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:43:28] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:43:28] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:43:28] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:43:28] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:43:28] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:43:28] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:43:28] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:44:14] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:44:14] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:44:14] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:44:14] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:44:14] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:44:14] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:44:14] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:44:14] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:44:14] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:44:14] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 11:44:14] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:03] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:11] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:24] : [WARNING] - CONSULTA OBTENCION VACANTES: select ifnull(IF(t3.plazas-t2.np<0,0,t3.plazas-t2.np),t3.plazas) as vacantes from (select tipo_alumno ta,sum(plazas) as plazas from centros_grupos ce group by ta ) as t3 left join (select  tipo_alumno_actual as tf, ifnull(count(*),0) as np from matricula where estado='continua' group by tipo_alumno_actual ) as t2  on t3.ta=t2.tf
+[08-Jun-2020 20:57:30] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:30] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:30] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:30] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:30] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:30] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:30] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:30] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:30] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:30] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 20:57:30] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 21:20:54] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600060) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600060 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600060 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:20:54] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600072) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600072 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600072 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:20:54] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600084) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600084 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600084 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:20:54] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=44600021) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=44600021 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=44600021 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:20:54] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600105) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600105 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600105 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:20:54] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600117) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600117 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600117 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:20:54] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600129) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600129 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600129 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:20:54] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600130) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600130 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600130 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:20:54] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600142) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600142 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600142 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:20:54] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600154) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600154 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600154 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:20:54] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600166) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600166 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600166 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:28:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600060) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600060 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600060 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:28:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600072) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600072 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600072 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:28:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600084) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600084 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600084 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:28:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=44600021) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=44600021 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=44600021 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:28:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600105) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600105 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600105 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:28:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600117) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600117 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600117 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:28:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600129) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600129 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600129 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:28:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600130) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600130 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600130 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:28:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600142) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600142 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600142 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:28:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600154) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600154 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600154 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 21:28:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600166) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600166 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600166 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:09:27] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:09:37] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:09:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600060) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600060 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600060 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:09:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600072) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600072 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600072 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:09:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600084) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600084 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600084 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:09:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=44600021) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=44600021 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=44600021 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:09:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600105) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600105 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600105 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:09:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600117) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600117 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600117 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:09:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600129) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600129 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600129 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:09:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600130) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600130 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600130 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:09:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600142) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600142 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600142 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:09:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600154) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600154 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600154 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:09:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600166) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600166 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600166 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:10:24] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:14:33] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:16:38] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:16:47] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:30:48] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:30:58] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:30:59] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:31:10] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600060) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600060 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600060 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:31:10] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600072) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600072 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600072 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:31:10] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=22600084) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=22600084 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=22600084 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:31:10] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=44600021) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=44600021 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=44600021 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:31:10] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600105) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600105 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600105 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:31:10] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600117) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600117 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600117 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:31:10] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600129) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600129 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600129 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:31:10] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600130) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600130 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600130 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:31:10] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600142) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600142 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600142 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:31:10] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600154) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600154 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600154 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:31:10] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+						select t1.ta,t3.ng as grupo,t3.plazas as puestos,IFNULL(t2.np,0) as plazasactuales,
+						IFNULL(IF(ifnull(t3.plazas,0)-ifnull(t2.np,0)<0,0,ifnull(t3.plazas,0)-ifnull(t2.np,0)),0
+						) 
+						as vacantes from 
+						(select tipo_alumno ta,num_grupos as ng,plazas from centros_grupos ce where ce.id_centro=50600166) as t3 
+						left join 
+						(select  tipo_alumno_actual as tf, count(*) as np from matricula where id_centro=50600166 and estado='continua' group by tipo_alumno_actual ) as t2  
+						on t3.ta=t2.tf 
+						left join 
+						(select  tipo_alumno_actual as ta, count(*) as np from matricula m,centros ce where m.id_centro=ce.id_centro and ce.id_centro=50600166 group by tipo_alumno_actual  ) as t1 
+						on t1.ta=t3.ta
+						
+[08-Jun-2020 22:31:19] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:31:57] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:31:59] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:32:06] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:32:53] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:32:55] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:33:31] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:33:34] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 22:33:37] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 23:13:17] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[08-Jun-2020 23:13:24] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc

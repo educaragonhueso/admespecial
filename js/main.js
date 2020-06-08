@@ -1071,6 +1071,8 @@ $.ajax({
       success: function(data) {
 				if(vrol=='admin' || vrol=='sp')
 				{
+				$("#mapcontrol").hide();
+				$("#map-canvas").hide();
 				$(".tresumensol").remove();
 				$(".tresumenmat").remove();
 				$("#l_matricula").html(data);
@@ -1078,6 +1080,8 @@ $.ajax({
 				else
 				{
             console.log(data);
+				$("#mapcontrol").hide();
+				$("#map-canvas").hide();
 				$(".tresumensol").remove();
 				$(".tresumenmat").hide();
 				$("#tresumen").hide();
@@ -1171,6 +1175,8 @@ $.ajax({
 				}
 				else
 				{
+				$("#mapcontrol").hide();
+				$("#map-canvas").hide();
 				$("#l_matricula").html(data);
 				$(".container").hide();
 				}
@@ -1194,10 +1200,14 @@ $.ajax({
 			{
 			if(vrol=='admin') 
 			{
+				$("#mapcontrol").hide();
+				$("#map-canvas").hide();
 					$("#l_matricula").html(data);
 			}
 			else
 			{
+				$("#mapcontrol").hide();
+				$("#map-canvas").hide();
 					$("#tresumen"+vid_centro).show();
 					$("#l_matricula").html(data);
 					$(".tresumenmat").show();

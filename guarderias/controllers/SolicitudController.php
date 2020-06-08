@@ -269,6 +269,13 @@ class SolicitudController extends ControladorBase{
 					$this->formulario=str_replace('id="'.$skey.'" value="0"','id="'.$skey.$id.'" value="'.$sval.'"'.$check,$this->formulario);
 					continue;	
 					}
+            //cambiamos valor de provincia en la lista de opciones
+				if($skey=='prov_centro_destino')
+            {
+               $soriginal="<option>".ucfirst($sval);
+               $sdestino="<option selected>".ucfirst($sval);
+					$this->formulario=str_replace($soriginal,$sdestino,$this->formulario);
+            } 
 
 				$this->formulario=str_replace('id="'.$skey.'" value=""','id="'.$skey.$id.'" value="'.$sval.'"',$this->formulario);
 				$this->formulario=str_replace('id="'.$skey.'" value="0"','id="'.$skey.$id.'" value="'.$sval.'"',$this->formulario);

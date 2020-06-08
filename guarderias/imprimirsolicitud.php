@@ -5,7 +5,7 @@ if(!isset($_SESSION['nombre_usuario']) || empty($_SESSION['nombre_usuario']))
 {
 header("location: login_activa.php");
 }
-require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/config/config_global.php";
+require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/guarderias/config/config_global.php";
 require_once DIR_CLASES.'LOGGER.php';
 require_once DIR_APP.'parametros.php';
 require_once DIR_BASE.'core/ControladorBase.php';
@@ -57,14 +57,14 @@ overflow: visible !important;
 </style>
 
 <script>
-$('#imprimir').click(function()
+$('#bimprimir').click(function()
 {
 	document.body.style.zoom = "80%"; 
 	$('#inicio').hide();
-	$('#imprimir').hide();
+	$('#bimprimir').hide();
 	window.print();
 	$('#inicio').show();
-	$('#imprimir').show();
+	$('#bimprimir').show();
 });
 </script>
 </body>

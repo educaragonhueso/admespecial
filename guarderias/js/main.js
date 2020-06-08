@@ -842,23 +842,12 @@ $('body').on('click', '.send', function(e){
 	var vptsbaremo=$("#id_puntos_baremo"+vid).text();
   var fsolicitud=$('#fsolicitud'+vid).serialize();
 	//Validacion formulario, de momento se omite
-	var valid='1';
 	var valid=validarFormulario(fsolicitud,vid);
 	var mensaje="Debes incluir un ";
-	
-	if(valid.indexOf('fnac')!=-1)
-	{
-		if(campo_dnisol(fsolicitud)==0)
-		{
-			mensaje="Debes incluir un DNI del alumno por ser mayor de 14 años";
-			$('input[name=dni_alumno]').focus();	
-		}
-		else valid='1';
-	}
 	if(valid!='1')
 	{
 		mensaje=mensaje+valid.split('-')[0];
-		if(valid=='Fecha nacimiento-fnac') mensaje="Debes incluir una fecha de nacimiento";
+		if(valid=='Fecha nacimiento-fnac') mensaje="Debes incluir una fecha de nacimiento valida";
 		$('input[name='+valid.split('-')[1]+']').focus();	
     		$.alert({
         		title: 'FORMULARIO INCOMPLETO',
@@ -982,7 +971,7 @@ for (let i = 0; i < res.length; i++)
 	d=res[i].split("=");
 	if(d[0].indexOf('fnac')==0)
 	{
-	if(d[1]=='') {return 'Fecha nacimiento-fnac';};
+   if(d[1].indexOf('-')==-1 || d[1].length=='0') {return 'Fecha nacimiento-fnac';};
 	}
 //comp datos identificadores
 if(d[0].indexOf('apellido1')==0)
@@ -1194,6 +1183,9 @@ $.ajax({
 				}
 				else
 				{
+            $(".row").show(); 
+            $("#map-canvas").hide();
+            $("#mapcontrol").hide(); 
 				$(".tresumensol").remove();
 				$(".tresumenmat").hide();
 				$("#tresumen").hide();

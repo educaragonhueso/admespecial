@@ -79,3 +79,320 @@
 [26-May-2020 09:29:56] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen, a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, a.tipo_modificacion,a.reserva,a.reserva_original  FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
 [26-May-2020 09:54:19] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: fase2
 [26-May-2020 09:54:19] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen, a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, a.tipo_modificacion,a.reserva,a.reserva_original  FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 11:23:21] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 11:23:21] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_sor
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 11:23:21] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 11:23:21] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_sor
+[08-Jun-2020 11:23:21] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen, a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, a.tipo_modificacion,a.reserva,a.reserva_original  FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 11:23:21] : [WARNING] - OBTENIDAS 700 SOLICITUDES FASE II:
+[08-Jun-2020 11:24:02] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 11:24:02] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_sor
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 11:24:02] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 11:24:02] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_sor
+[08-Jun-2020 11:24:02] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen, a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, a.tipo_modificacion,a.reserva,a.reserva_original  FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 11:24:02] : [WARNING] - OBTENIDAS 700 SOLICITUDES FASE II:
+[08-Jun-2020 11:25:12] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 11:25:12] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_sor
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 11:25:12] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 11:25:12] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_sor
+[08-Jun-2020 11:25:12] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen, a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, a.tipo_modificacion,a.reserva,a.reserva_original  FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 11:25:12] : [WARNING] - OBTENIDAS 700 SOLICITUDES FASE II:
+[08-Jun-2020 11:25:28] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 11:25:28] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_ebo
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 11:25:28] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 11:25:28] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_ebo
+[08-Jun-2020 11:25:28] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo'  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 11:25:28] : [WARNING] - OBTENIDAS 700 SOLICITUDES FASE II:
+[08-Jun-2020 11:25:36] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 11:25:36] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_sor
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 11:25:36] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 11:25:36] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_sor
+[08-Jun-2020 11:25:36] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen, a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, a.tipo_modificacion,a.reserva,a.reserva_original  FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 11:25:36] : [WARNING] - OBTENIDAS 700 SOLICITUDES FASE II:
+[08-Jun-2020 11:26:06] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 11:26:06] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_sor
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 11:26:06] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 11:26:06] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_sor
+[08-Jun-2020 11:26:06] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen, a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, a.tipo_modificacion,a.reserva,a.reserva_original  FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 11:26:06] : [WARNING] - OBTENIDAS 700 SOLICITUDES FASE II:
+[08-Jun-2020 11:26:10] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 11:26:10] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_ebo
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 11:26:10] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 11:26:10] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_ebo
+[08-Jun-2020 11:26:10] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo'  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 11:26:10] : [WARNING] - OBTENIDAS 700 SOLICITUDES FASE II:
+[08-Jun-2020 11:29:33] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 11:29:33] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_ebo
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 11:29:33] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 11:29:33] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_ebo
+[08-Jun-2020 11:29:33] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo'  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 11:29:33] : [WARNING] - OBTENIDAS 700 SOLICITUDES FASE II:
+[08-Jun-2020 11:31:42] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 11:31:42] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_ebo
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 11:31:42] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 11:31:42] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_ebo
+[08-Jun-2020 11:31:42] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo'  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 11:31:42] : [WARNING] - OBTENIDAS 700 SOLICITUDES FASE II:
+[08-Jun-2020 11:36:28] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 11:36:28] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_ebo
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 11:36:28] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 11:36:28] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_ebo
+[08-Jun-2020 11:36:28] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo'  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 11:36:28] : [WARNING] - OBTENIDAS 700 SOLICITUDES FASE II:
+[08-Jun-2020 12:20:29] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 12:20:29] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_ebo
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 12:20:29] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 12:20:29] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_ebo
+[08-Jun-2020 12:20:29] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo'  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 12:20:29] : [WARNING] - OBTENIDAS 700 SOLICITUDES FASE II:
+[08-Jun-2020 16:19:34] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 16:19:34] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_sor
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 16:19:34] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 16:19:34] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_sor
+[08-Jun-2020 16:19:34] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen, a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, a.tipo_modificacion,a.reserva,a.reserva_original  FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 16:19:34] : [WARNING] - OBTENIDAS 700 SOLICITUDES FASE II:
+[08-Jun-2020 16:20:47] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 16:20:47] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_sor
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 16:20:47] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 16:20:47] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_sor
+[08-Jun-2020 16:20:47] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen, a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, a.tipo_modificacion,a.reserva,a.reserva_original  FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 16:20:47] : [WARNING] - OBTENIDAS 88 SOLICITUDES FASE II:
+[08-Jun-2020 16:20:50] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 16:20:50] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_ebo
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 16:20:50] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 16:20:50] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_ebo
+[08-Jun-2020 16:20:50] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo'  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 16:20:50] : [WARNING] - OBTENIDAS 88 SOLICITUDES FASE II:
+[08-Jun-2020 16:21:25] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 16:21:25] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_sor
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 16:21:25] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 16:21:25] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_sor
+[08-Jun-2020 16:21:25] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen, a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, a.tipo_modificacion,a.reserva,a.reserva_original  FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 16:21:25] : [WARNING] - OBTENIDAS 88 SOLICITUDES FASE II:
+[08-Jun-2020 16:29:17] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 16:29:17] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_sor
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 16:29:17] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 16:29:17] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_sor
+[08-Jun-2020 16:29:17] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen, a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, a.tipo_modificacion,a.reserva,a.reserva_original  FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 16:29:17] : [WARNING] - OBTENIDAS 88 SOLICITUDES FASE II:
+[08-Jun-2020 16:50:17] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 16:50:17] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_ebo
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 16:50:17] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 16:50:17] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_ebo
+[08-Jun-2020 16:50:17] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo'  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 16:50:17] : [WARNING] - OBTENIDAS 88 SOLICITUDES FASE II:
+[08-Jun-2020 17:18:17] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 17:18:17] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_ebo
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 17:18:17] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 17:18:17] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_ebo
+[08-Jun-2020 17:18:17] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo'  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 17:18:17] : [WARNING] - OBTENIDAS 88 SOLICITUDES FASE II:
+[08-Jun-2020 17:19:41] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 17:19:41] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_ebo
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 17:19:41] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 17:19:41] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_ebo
+[08-Jun-2020 17:19:41] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo'  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 17:19:41] : [WARNING] - OBTENIDAS 88 SOLICITUDES FASE II:
+[08-Jun-2020 17:19:58] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: fase2
+[08-Jun-2020 17:19:58] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen, a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, a.tipo_modificacion,a.reserva,a.reserva_original  FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno order by a.id_centro desc, a.tipoestudios asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 17:46:44] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 17:46:44] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_ebo
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 17:46:44] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 17:46:44] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_ebo
+[08-Jun-2020 17:46:44] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo'  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 17:46:44] : [WARNING] - OBTENIDAS 88 SOLICITUDES FASE II:
+[08-Jun-2020 18:22:09] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[08-Jun-2020 18:22:09] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_ebo
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[08-Jun-2020 18:22:09] : [WARNING] - Funcion: getSolicitudes FASE II:
+[08-Jun-2020 18:22:09] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_ebo
+[08-Jun-2020 18:22:09] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo'  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc
+[08-Jun-2020 18:22:09] : [WARNING] - OBTENIDAS 88 SOLICITUDES FASE II:

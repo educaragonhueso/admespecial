@@ -1155,3 +1155,1658 @@
 [04-Jun-2020 11:25:54] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
 [04-Jun-2020 11:25:54] : [WARNING] - CONSULTA SOLICITUDES
 [04-Jun-2020 11:25:54] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=22600072 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: admin
+[05-Jun-2020 07:42:45] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT distinct(id_centro) from centros where id_centro not in(-3,-2,-1,1)
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[05-Jun-2020 07:42:45] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[05-Jun-2020 07:42:45] : [WARNING] - LA PAZ
+[05-Jun-2020 07:42:45] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LA PAZ
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[05-Jun-2020 07:42:45] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[05-Jun-2020 07:42:45] : [WARNING] - NUESTRA SEÑORA DE SAN LORENZO
+[05-Jun-2020 07:42:45] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE SAN LORENZO
+            [borrador] => 2
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[05-Jun-2020 07:42:45] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[05-Jun-2020 07:42:45] : [WARNING] - NUESTRA SEÑORA DE LA ALEGRÍA
+[05-Jun-2020 07:42:45] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE LA ALEGRÍA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[05-Jun-2020 07:42:45] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[05-Jun-2020 07:42:45] : [WARNING] - SANTO ÁNGEL CUSTODIO
+[05-Jun-2020 07:42:45] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTO ÁNGEL CUSTODIO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[05-Jun-2020 07:42:45] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[05-Jun-2020 07:42:45] : [WARNING] - NUESTRA SEÑORA DEL CARMEN
+[05-Jun-2020 07:42:45] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DEL CARMEN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[05-Jun-2020 07:42:45] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[05-Jun-2020 07:42:45] : [WARNING] - VIRGEN DE LA OLIVA
+[05-Jun-2020 07:42:45] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => VIRGEN DE LA OLIVA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[05-Jun-2020 07:42:45] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[05-Jun-2020 07:42:45] : [WARNING] - SAN ANTONIO DE PADUA
+[05-Jun-2020 07:42:45] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN ANTONIO DE PADUA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[05-Jun-2020 07:42:45] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[05-Jun-2020 07:42:45] : [WARNING] - ARAGÓN
+[05-Jun-2020 07:42:45] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ARAGÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[05-Jun-2020 07:42:45] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[05-Jun-2020 07:42:45] : [WARNING] - INMACULADA CONCEPCIÓN
+[05-Jun-2020 07:42:45] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => INMACULADA CONCEPCIÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[05-Jun-2020 07:42:45] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[05-Jun-2020 07:42:45] : [WARNING] - MONSALUD
+[05-Jun-2020 07:42:45] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MONSALUD
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[05-Jun-2020 07:42:45] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[05-Jun-2020 07:42:45] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[05-Jun-2020 07:42:45] : [WARNING] - SANTA MARÍA DEL PILAR
+[05-Jun-2020 07:42:45] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTA MARÍA DEL PILAR
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[05-Jun-2020 11:01:10] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[05-Jun-2020 11:01:10] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[05-Jun-2020 11:01:10] : [WARNING] - CONSULTA SOLICITUDES
+[05-Jun-2020 11:01:10] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[05-Jun-2020 12:01:46] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[05-Jun-2020 12:01:46] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[05-Jun-2020 12:01:46] : [WARNING] - CONSULTA SOLICITUDES
+[05-Jun-2020 12:01:46] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[05-Jun-2020 12:01:58] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[05-Jun-2020 12:01:58] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[05-Jun-2020 12:01:58] : [WARNING] - CONSULTA SOLICITUDES
+[05-Jun-2020 12:01:58] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[05-Jun-2020 12:30:18] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[05-Jun-2020 12:30:18] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[05-Jun-2020 12:30:18] : [WARNING] - CONSULTA SOLICITUDES
+[05-Jun-2020 12:30:18] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[05-Jun-2020 12:30:22] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[05-Jun-2020 12:30:22] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[05-Jun-2020 12:30:22] : [WARNING] - CONSULTA SOLICITUDES
+[05-Jun-2020 12:30:22] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: admin
+[06-Jun-2020 16:30:46] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT distinct(id_centro) from centros where id_centro not in(-3,-2,-1,1)
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[06-Jun-2020 16:30:46] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[06-Jun-2020 16:30:46] : [WARNING] - LA PAZ
+[06-Jun-2020 16:30:46] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LA PAZ
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[06-Jun-2020 16:30:46] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[06-Jun-2020 16:30:46] : [WARNING] - NUESTRA SEÑORA DE SAN LORENZO
+[06-Jun-2020 16:30:46] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE SAN LORENZO
+            [borrador] => 2
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[06-Jun-2020 16:30:46] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[06-Jun-2020 16:30:46] : [WARNING] - NUESTRA SEÑORA DE LA ALEGRÍA
+[06-Jun-2020 16:30:46] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE LA ALEGRÍA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[06-Jun-2020 16:30:46] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[06-Jun-2020 16:30:46] : [WARNING] - SANTO ÁNGEL CUSTODIO
+[06-Jun-2020 16:30:46] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTO ÁNGEL CUSTODIO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[06-Jun-2020 16:30:46] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[06-Jun-2020 16:30:46] : [WARNING] - NUESTRA SEÑORA DEL CARMEN
+[06-Jun-2020 16:30:46] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DEL CARMEN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[06-Jun-2020 16:30:46] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[06-Jun-2020 16:30:46] : [WARNING] - VIRGEN DE LA OLIVA
+[06-Jun-2020 16:30:46] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => VIRGEN DE LA OLIVA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[06-Jun-2020 16:30:46] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[06-Jun-2020 16:30:46] : [WARNING] - SAN ANTONIO DE PADUA
+[06-Jun-2020 16:30:46] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN ANTONIO DE PADUA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[06-Jun-2020 16:30:46] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[06-Jun-2020 16:30:46] : [WARNING] - ARAGÓN
+[06-Jun-2020 16:30:46] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ARAGÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[06-Jun-2020 16:30:46] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[06-Jun-2020 16:30:46] : [WARNING] - INMACULADA CONCEPCIÓN
+[06-Jun-2020 16:30:46] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => INMACULADA CONCEPCIÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[06-Jun-2020 16:30:46] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[06-Jun-2020 16:30:46] : [WARNING] - MONSALUD
+[06-Jun-2020 16:30:46] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MONSALUD
+            [borrador] => 0
+            [validada] => 1
+            [baremada] => 0
+        )
+
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[06-Jun-2020 16:30:46] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[06-Jun-2020 16:30:46] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[06-Jun-2020 16:30:46] : [WARNING] - SANTA MARÍA DEL PILAR
+[06-Jun-2020 16:30:46] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTA MARÍA DEL PILAR
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: admin
+[08-Jun-2020 11:43:28] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT distinct(id_centro) from centros where id_centro not in(-3,-2,-1,1)
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:43:28] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:43:28] : [WARNING] - LA PAZ
+[08-Jun-2020 11:43:28] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LA PAZ
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:43:28] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:43:28] : [WARNING] - NUESTRA SEÑORA DE SAN LORENZO
+[08-Jun-2020 11:43:28] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE SAN LORENZO
+            [borrador] => 2
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:43:28] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:43:28] : [WARNING] - NUESTRA SEÑORA DE LA ALEGRÍA
+[08-Jun-2020 11:43:28] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE LA ALEGRÍA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:43:28] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:43:28] : [WARNING] - SANTO ÁNGEL CUSTODIO
+[08-Jun-2020 11:43:28] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTO ÁNGEL CUSTODIO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:43:28] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:43:28] : [WARNING] - NUESTRA SEÑORA DEL CARMEN
+[08-Jun-2020 11:43:28] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DEL CARMEN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:43:28] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:43:28] : [WARNING] - VIRGEN DE LA OLIVA
+[08-Jun-2020 11:43:28] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => VIRGEN DE LA OLIVA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:43:28] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:43:28] : [WARNING] - SAN ANTONIO DE PADUA
+[08-Jun-2020 11:43:28] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN ANTONIO DE PADUA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:43:28] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:43:28] : [WARNING] - ARAGÓN
+[08-Jun-2020 11:43:28] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ARAGÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:43:28] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:43:28] : [WARNING] - INMACULADA CONCEPCIÓN
+[08-Jun-2020 11:43:28] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => INMACULADA CONCEPCIÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:43:28] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:43:28] : [WARNING] - MONSALUD
+[08-Jun-2020 11:43:28] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MONSALUD
+            [borrador] => 0
+            [validada] => 1
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:43:28] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[08-Jun-2020 11:43:28] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:43:28] : [WARNING] - SANTA MARÍA DEL PILAR
+[08-Jun-2020 11:43:28] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTA MARÍA DEL PILAR
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: admin
+[08-Jun-2020 11:44:14] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT distinct(id_centro) from centros where id_centro not in(-3,-2,-1,1)
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:44:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:44:14] : [WARNING] - LA PAZ
+[08-Jun-2020 11:44:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LA PAZ
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:44:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:44:14] : [WARNING] - NUESTRA SEÑORA DE SAN LORENZO
+[08-Jun-2020 11:44:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE SAN LORENZO
+            [borrador] => 2
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:44:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:44:14] : [WARNING] - NUESTRA SEÑORA DE LA ALEGRÍA
+[08-Jun-2020 11:44:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE LA ALEGRÍA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:44:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:44:14] : [WARNING] - SANTO ÁNGEL CUSTODIO
+[08-Jun-2020 11:44:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTO ÁNGEL CUSTODIO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:44:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:44:14] : [WARNING] - NUESTRA SEÑORA DEL CARMEN
+[08-Jun-2020 11:44:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DEL CARMEN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:44:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:44:14] : [WARNING] - VIRGEN DE LA OLIVA
+[08-Jun-2020 11:44:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => VIRGEN DE LA OLIVA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:44:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:44:14] : [WARNING] - SAN ANTONIO DE PADUA
+[08-Jun-2020 11:44:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN ANTONIO DE PADUA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:44:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:44:14] : [WARNING] - ARAGÓN
+[08-Jun-2020 11:44:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ARAGÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:44:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:44:14] : [WARNING] - INMACULADA CONCEPCIÓN
+[08-Jun-2020 11:44:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => INMACULADA CONCEPCIÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:44:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:44:14] : [WARNING] - MONSALUD
+[08-Jun-2020 11:44:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MONSALUD
+            [borrador] => 0
+            [validada] => 1
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 11:44:14] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[08-Jun-2020 11:44:14] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 11:44:14] : [WARNING] - SANTA MARÍA DEL PILAR
+[08-Jun-2020 11:44:14] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTA MARÍA DEL PILAR
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: admin
+[08-Jun-2020 20:57:03] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT distinct(id_centro) from centros where id_centro not in(-3,-2,-1,1)
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:03] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:03] : [WARNING] - LA PAZ
+[08-Jun-2020 20:57:03] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LA PAZ
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:03] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:03] : [WARNING] - NUESTRA SEÑORA DE SAN LORENZO
+[08-Jun-2020 20:57:03] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE SAN LORENZO
+            [borrador] => 2
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:03] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:03] : [WARNING] - NUESTRA SEÑORA DE LA ALEGRÍA
+[08-Jun-2020 20:57:03] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE LA ALEGRÍA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:03] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:03] : [WARNING] - SANTO ÁNGEL CUSTODIO
+[08-Jun-2020 20:57:03] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTO ÁNGEL CUSTODIO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:03] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:03] : [WARNING] - NUESTRA SEÑORA DEL CARMEN
+[08-Jun-2020 20:57:03] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DEL CARMEN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:03] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:03] : [WARNING] - VIRGEN DE LA OLIVA
+[08-Jun-2020 20:57:03] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => VIRGEN DE LA OLIVA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:03] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:03] : [WARNING] - SAN ANTONIO DE PADUA
+[08-Jun-2020 20:57:03] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN ANTONIO DE PADUA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:03] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:03] : [WARNING] - ARAGÓN
+[08-Jun-2020 20:57:03] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ARAGÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:03] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:03] : [WARNING] - INMACULADA CONCEPCIÓN
+[08-Jun-2020 20:57:03] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => INMACULADA CONCEPCIÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:03] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:03] : [WARNING] - MONSALUD
+[08-Jun-2020 20:57:03] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MONSALUD
+            [borrador] => 0
+            [validada] => 1
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:03] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[08-Jun-2020 20:57:03] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:03] : [WARNING] - SANTA MARÍA DEL PILAR
+[08-Jun-2020 20:57:03] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTA MARÍA DEL PILAR
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: admin
+[08-Jun-2020 20:57:11] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT distinct(id_centro) from centros where id_centro not in(-3,-2,-1,1)
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:11] : [WARNING] - LA PAZ
+[08-Jun-2020 20:57:11] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LA PAZ
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:11] : [WARNING] - NUESTRA SEÑORA DE SAN LORENZO
+[08-Jun-2020 20:57:11] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE SAN LORENZO
+            [borrador] => 2
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:11] : [WARNING] - NUESTRA SEÑORA DE LA ALEGRÍA
+[08-Jun-2020 20:57:11] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE LA ALEGRÍA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:11] : [WARNING] - SANTO ÁNGEL CUSTODIO
+[08-Jun-2020 20:57:11] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTO ÁNGEL CUSTODIO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:11] : [WARNING] - NUESTRA SEÑORA DEL CARMEN
+[08-Jun-2020 20:57:11] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DEL CARMEN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:11] : [WARNING] - VIRGEN DE LA OLIVA
+[08-Jun-2020 20:57:11] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => VIRGEN DE LA OLIVA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:11] : [WARNING] - SAN ANTONIO DE PADUA
+[08-Jun-2020 20:57:11] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN ANTONIO DE PADUA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:11] : [WARNING] - ARAGÓN
+[08-Jun-2020 20:57:11] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ARAGÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:11] : [WARNING] - INMACULADA CONCEPCIÓN
+[08-Jun-2020 20:57:11] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => INMACULADA CONCEPCIÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:11] : [WARNING] - MONSALUD
+[08-Jun-2020 20:57:11] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MONSALUD
+            [borrador] => 0
+            [validada] => 1
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:11] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[08-Jun-2020 20:57:11] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:11] : [WARNING] - SANTA MARÍA DEL PILAR
+[08-Jun-2020 20:57:11] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTA MARÍA DEL PILAR
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:24] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: admin
+[08-Jun-2020 20:57:30] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT distinct(id_centro) from centros where id_centro not in(-3,-2,-1,1)
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:30] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:30] : [WARNING] - LA PAZ
+[08-Jun-2020 20:57:30] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LA PAZ
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:30] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:30] : [WARNING] - NUESTRA SEÑORA DE SAN LORENZO
+[08-Jun-2020 20:57:30] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE SAN LORENZO
+            [borrador] => 2
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:30] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:30] : [WARNING] - NUESTRA SEÑORA DE LA ALEGRÍA
+[08-Jun-2020 20:57:30] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE LA ALEGRÍA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:30] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:30] : [WARNING] - SANTO ÁNGEL CUSTODIO
+[08-Jun-2020 20:57:30] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTO ÁNGEL CUSTODIO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:30] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:30] : [WARNING] - NUESTRA SEÑORA DEL CARMEN
+[08-Jun-2020 20:57:30] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DEL CARMEN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:30] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:30] : [WARNING] - VIRGEN DE LA OLIVA
+[08-Jun-2020 20:57:30] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => VIRGEN DE LA OLIVA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:30] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:30] : [WARNING] - SAN ANTONIO DE PADUA
+[08-Jun-2020 20:57:30] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN ANTONIO DE PADUA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:30] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:30] : [WARNING] - ARAGÓN
+[08-Jun-2020 20:57:30] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ARAGÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:30] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:30] : [WARNING] - INMACULADA CONCEPCIÓN
+[08-Jun-2020 20:57:30] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => INMACULADA CONCEPCIÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:30] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:30] : [WARNING] - MONSALUD
+[08-Jun-2020 20:57:30] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MONSALUD
+            [borrador] => 0
+            [validada] => 1
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[08-Jun-2020 20:57:30] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[08-Jun-2020 20:57:30] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[08-Jun-2020 20:57:30] : [WARNING] - SANTA MARÍA DEL PILAR
+[08-Jun-2020 20:57:30] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTA MARÍA DEL PILAR
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[08-Jun-2020 22:09:27] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:09:27] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:09:27] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:09:27] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:09:37] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:09:37] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:09:37] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:09:37] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:10:24] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:10:24] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:10:24] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:10:24] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:14:33] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:14:33] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:14:33] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:14:33] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:16:38] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:16:38] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:16:38] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:16:38] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:16:47] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:16:47] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:16:47] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:16:47] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:30:48] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:30:48] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:30:48] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:30:48] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:30:58] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:30:58] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:30:58] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:30:58] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:30:59] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:30:59] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:30:59] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:30:59] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:31:19] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:31:19] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:31:19] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:31:19] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:31:57] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:31:57] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:31:57] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:31:57] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:31:59] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:31:59] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:31:59] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:31:59] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:32:06] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:32:06] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:32:06] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:32:06] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:32:53] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:32:53] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:32:53] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:32:53] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:32:55] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:32:55] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:32:55] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:32:55] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:33:31] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:33:31] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:33:31] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:33:31] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:33:34] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:33:34] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:33:34] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:33:34] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 22:33:37] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 22:33:37] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 22:33:37] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 22:33:37] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 23:13:17] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 23:13:17] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 23:13:17] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 23:13:17] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 23:13:24] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 23:13:24] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 23:13:24] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 23:13:24] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc

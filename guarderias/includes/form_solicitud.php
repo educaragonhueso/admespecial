@@ -309,7 +309,7 @@ $formsol.=
                         <div class="md-form mb-0">
                      		Provincia centro solicitado
 				               <div class="form-group">
-					               <select class="form-control" name="prov_centro_destino" id="prov_dentro_destino" value="">
+					               <select class="form-control" name="prov_centro_destino" id="prov_centro_destino" value="">
                                   <option>Zaragoza</option>
                                   <option>Teruel</option>
                                   <option>Huesca</option>

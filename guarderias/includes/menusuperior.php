@@ -7,14 +7,13 @@
 <!--elementos a la izda-->
 <nav id='navgir' class="navbar navbar-expand-md navbar-dark bg-dark">
         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item  msuperior">
-            			<a style='color:white!important;float:left!important;padding-top:9px'  href='<?php
-echo $_SESSION['url_base'];?>'>INICIO</a>
-            </li>
-            <li class="nav-item active msuperior dropdown">
-               <a class="nav-link dropdown-toggle desplegable" id="navbardrop" data-toggle="dropdown">Documentación</a>
+         <li class="nav-item  msuperior">
+            <a style='color:white!important;float:left!important;padding-top:9px'  href='<?php echo $_SESSION['url_base'];?>'>INICIO</a>
+         </li>
+         <li class="nav-item active msuperior dropdown">
+            <a class="nav-link dropdown-toggle desplegable" id="navbardrop" data-toggle="dropdown">Documentación</a>
 				   <div class="dropdown-menu">
-				 <?php if($_SESSION['rol']!='alumno')
+				   <?php if($_SESSION['rol']!='alumno')
                {
                      echo '<a class="dropdown-item" href="documentacion/plantilla_matriculaguarderias.csv" id="docinst" target="_blank">Plantilla matrícula guarderías (csv)</a>';
                      echo '<a class="dropdown-item" href="documentacion/a2_1c_2021.pdf" id="doca21c" target="_blank">ANEXO II- Solicitud ingreso (pdf)</a>';
@@ -22,10 +21,10 @@ echo $_SESSION['url_base'];?>'>INICIO</a>
                      echo '<a class="dropdown-item" href="documentacion/a4_1c.pdf" id="doca31c" target="_blank">ANEXO IV- Renta familiares (pdf)</a>';
                      echo '<a class="dropdown-item" href="documentacion/boa14f20201c.pdf" id="docboa1c" target="_blank">BOA 14 febrero (pdf)</a>';
                      echo '<a class="dropdown-item" href="documentacion/res_guarderias_anexos_29052020.pdf" id="docresboa1c" target="_blank">Resolución BOA 29 Mayo (pdf)</a>';
-               } 
-            ?>
+               }
+               ?>
       
-				 </div>
+				   </div>
             </li>
         </ul>
 <!--elementos a la derecha-->
@@ -33,6 +32,9 @@ echo $_SESSION['url_base'];?>'>INICIO</a>
 <?php 
    if($_SESSION['usuario_autenticado'])
    {
+      echo '<li class="nav-item msuperior">';
+         echo '<a class="nav-link" href="#" id="show_mapacentros">Mapa Centros</a>';
+      echo '</li>';
       if($_SESSION['rol']!='alumno')
       {
       echo '<li class="nav-item msuperior dropdown">';
@@ -62,9 +64,6 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
                }
          echo '</div>';
       echo '</li>';
-      echo '<li class="nav-item msuperior">';
-         echo '<a class="nav-link" href="#" id="show_mapacentros">Mapa Centros</a>';
-      echo '</li>';
       
    if($_SESSION['matricula']==1)
    {
@@ -76,6 +75,7 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
          echo '<a class="show_solicitudes nav-link" href="#">Solicitudes</a>';
       echo '</li>';
       }
+
    if($_SESSION['estado_convocatoria']>=1){?>
                             <li class="nav-item active msuperior dropdown" id="msorteo">
 				<?php if($_SESSION['estado_convocatoria']>=21){?>

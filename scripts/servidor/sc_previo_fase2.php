@@ -39,7 +39,6 @@ else print("Error actualizando vacantes centros: ".$res1.$res2);
 print("Copiando tabla fase2....".PHP_EOL);
 $res=$utils->copiaTablaFase2('fase2',0);
 $res=$utils->copiaTablaFase2('fase2_tmp',0);
-print($res);
 if($res==1) echo "Copia tabla solicitudes".$tipo." realizada corectamente a las ".date('H:m')." del dia ".date('d-M-Y').PHP_EOL;	
 else "Error copiando tabla $tipo, ERROR: $res";
 ?>

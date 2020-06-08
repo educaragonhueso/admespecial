@@ -1,6 +1,9 @@
 $(document).ready(function(){
 //LISTADO SOLICITUDES FASEII
-$(".lfase2").click(function () {  
+$(".lfase2").click(function () {
+  
+				$("#mapcontrol").hide();
+				$("#map-canvas").hide();
   var vsorteo_fase2=$('#sorteo_fase2').text();
   var vpdf='1';
   var vrol=$('#rol').attr("value");
