@@ -4794,3 +4794,7 @@
 [09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50019408
 [09-Jun-2020 08:18:00] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
 [09-Jun-2020 08:18:00] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos 
+[09-Jun-2020 10:16:52] : [WARNING] - OBTENIENDO FASE SORTEO
+[09-Jun-2020 10:16:52] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[09-Jun-2020 10:16:52] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[09-Jun-2020 10:16:52] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos  WHERE fase_solicitud!='borrador' 

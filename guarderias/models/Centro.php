@@ -170,11 +170,11 @@ class Centro extends EntidadBase{
 			$resultSet=array();
 			if($rol=='admin') 
 			{
-				$sql="select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario";
+				$sql="select nombre,apellido1,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario";
 			}
 			elseif($rol=='centro') 
 			{
-				$sql="select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=$c";
+				$sql="select nombre,apellido1,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=$c";
 			}
 	
 	

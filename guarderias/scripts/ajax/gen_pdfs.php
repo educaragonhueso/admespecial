@@ -57,7 +57,7 @@ elseif($tipo=='pdf_usu')
 	//mostramos las solitudes completas sin incluir borrador
 	$datoslistado=$list->getUsuarios($rol='centro',$id_centro); 
 
-   $cab=array('CENTRO','NOMBRE','USUARIO','TEL','DNI ALUMNO','CLAVE');
+   $cab=array('CENTRO','NOMBRE','APELLIDO','USUARIO','TEL','DNI ALUMNO','CLAVE');
 	$log_genpdfs->warning("OBTENIENDO RESUMEN USUARIOS PDF");
 }
 ###################################################################################

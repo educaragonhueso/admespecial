@@ -815,6 +815,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 					{
 						$ausuarioscentros[$i]['nombre_centro']=str_replace(',','',$centro->getNombre());
 						$ausuarioscentros[$i]['alumno']=$u->nombre;
+						$ausuarioscentros[$i]['apellido']=$u->apellido1;
 						$ausuarioscentros[$i]['nombreusuario']=$u->nombre_usuario;
 						$ausuarioscentros[$i]['telefono']=$u->tel_dfamiliar1;
 						$ausuarioscentros[$i]['dni']=$u->dni_alumno;

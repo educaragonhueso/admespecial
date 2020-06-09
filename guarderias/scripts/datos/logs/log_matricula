@@ -2497,3 +2497,113 @@
 					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
 					join
 					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[09-Jun-2020 10:23:56] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[09-Jun-2020 10:23:56] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[09-Jun-2020 10:23:56] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[09-Jun-2020 10:23:56] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[09-Jun-2020 10:23:56] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[09-Jun-2020 10:23:56] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[09-Jun-2020 10:23:56] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[09-Jun-2020 10:23:56] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[09-Jun-2020 10:23:56] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[09-Jun-2020 10:23:56] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[09-Jun-2020 10:23:56] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[09-Jun-2020 10:24:47] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=22600060
+[09-Jun-2020 10:24:47] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=22600072
+[09-Jun-2020 10:24:47] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=22600084
+[09-Jun-2020 10:24:47] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=44600021
+[09-Jun-2020 10:24:47] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600105
+[09-Jun-2020 10:24:47] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600117
+[09-Jun-2020 10:24:47] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600129
+[09-Jun-2020 10:24:47] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600130
+[09-Jun-2020 10:24:47] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600142
+[09-Jun-2020 10:24:47] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600154
+[09-Jun-2020 10:24:47] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600166
+[09-Jun-2020 10:27:35] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=22600060
+[09-Jun-2020 10:27:35] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=22600072
+[09-Jun-2020 10:27:35] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=22600084
+[09-Jun-2020 10:27:35] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=44600021
+[09-Jun-2020 10:27:35] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600105
+[09-Jun-2020 10:27:35] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600117
+[09-Jun-2020 10:27:35] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600129
+[09-Jun-2020 10:27:35] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600130
+[09-Jun-2020 10:27:35] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600142
+[09-Jun-2020 10:27:35] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600154
+[09-Jun-2020 10:27:35] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600166
+[09-Jun-2020 10:36:51] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,apellido1,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=22600060
+[09-Jun-2020 10:36:51] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,apellido1,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=22600072
+[09-Jun-2020 10:36:51] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,apellido1,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=22600084
+[09-Jun-2020 10:36:51] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,apellido1,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=44600021
+[09-Jun-2020 10:36:51] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,apellido1,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600105
+[09-Jun-2020 10:36:51] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,apellido1,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600117
+[09-Jun-2020 10:36:51] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,apellido1,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600129
+[09-Jun-2020 10:36:51] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,apellido1,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600130
+[09-Jun-2020 10:36:51] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,apellido1,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600142
+[09-Jun-2020 10:36:51] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,apellido1,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600154
+[09-Jun-2020 10:36:51] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: select nombre,apellido1,nombre_usuario,clave_original,a.tel_dfamiliar1 FROM alumnos a, usuarios u WHERE a.id_usuario=u.id_usuario AND a.id_centro_destino=50600166
