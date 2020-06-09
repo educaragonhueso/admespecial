@@ -30,11 +30,11 @@
 <!--elementos a la derecha-->
    <ul class="navbar-nav">
 <?php 
-   if($_SESSION['usuario_autenticado'])
-   {
       echo '<li class="nav-item msuperior">';
          echo '<a class="nav-link" href="#" id="show_mapacentros">Mapa Centros</a>';
       echo '</li>';
+   if($_SESSION['usuario_autenticado'])
+   {
       if($_SESSION['rol']!='alumno')
       {
       echo '<li class="nav-item msuperior dropdown">';

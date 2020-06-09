@@ -27122,3 +27122,12 @@ b.puntos_validados FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno 
 [08-Jun-2020 17:39:23] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
 [08-Jun-2020 17:46:44] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
 [08-Jun-2020 18:22:09] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[09-Jun-2020 06:41:17] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[09-Jun-2020 06:41:17] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 3 ESTADO CONVOCATORIA: 40
+[09-Jun-2020 06:41:17] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[09-Jun-2020 06:41:17] : [WARNING] - SELECT
+a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado
+as nasignado,
+b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro
+FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[09-Jun-2020 08:18:00] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'

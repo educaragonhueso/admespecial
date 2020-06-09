@@ -4761,3 +4761,36 @@
 [08-Jun-2020 18:22:05] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50019408
 [08-Jun-2020 18:22:09] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
 [08-Jun-2020 18:22:09] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos 
+[09-Jun-2020 06:41:14] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50018131
+[09-Jun-2020 06:41:17] : [WARNING] - OBTENIENDO FASE SORTEO
+[09-Jun-2020 06:41:17] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=50018131
+[09-Jun-2020 06:41:17] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[09-Jun-2020 06:41:17] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos where fase_solicitud!='borrador' and id_centro_destino=50018131
+[09-Jun-2020 06:41:17] : [WARNING] - OBTENIENDO FASE SORTEO
+[09-Jun-2020 06:41:17] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=50018131
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=22002338
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=22002511
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=22003835
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=22004891
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=22005157
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=22010001
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=44003259
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=44004148
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50000850
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50004612
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50006049
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50006128
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50007376
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50007674
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50008630
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50008678
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50008915
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50009488
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50009646
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50010387
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50011537
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50017369
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50018131
+[09-Jun-2020 08:17:56] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50019408
+[09-Jun-2020 08:18:00] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[09-Jun-2020 08:18:00] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos 

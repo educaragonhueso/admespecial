@@ -97,7 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
    if(empty($nombre_usuario_err) && empty($clave_err))
    {
       $sql = "SELECT nombre_usuario, clave,rol,nombre_centro,id_centro,primera_conexion,num_sorteo,fase_sorteo FROM usuarios u left join centros c  ON u.id_usuario=c.id_usuario WHERE  u.nombre_usuario = ? and u.clave= ?";
-      $sql_alumno = "SELECT id_centro_destino FROM usuarios u  join alumnos a on  u.id_usuario=a.id_usuario where u.nombre_usuario= ? and u.clave";
+      $sql_alumno = "SELECT id_centro_destino,a.id_alumno as id_alumno FROM usuarios u  join alumnos a on  u.id_usuario=a.id_usuario where u.nombre_usuario= ? and u.clave= ?";
       if($stmt = $conexion->prepare($sql))
       {
       // Bind variables to the prepared statement as parameters
@@ -142,7 +142,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                                     if($stmt_alumno->num_rows == 1)
                                     {                    
                                        // Bind result variables
-                                       $stmt_alumno->bind_result($id_centro_destino);
+                                       $stmt_alumno->bind_result($id_centro_destino,$id_alumno);
                                        if($stmt_alumno->fetch())
                                        {
                                           $_SESSION['id_centro'] =$id_centro_destino;      

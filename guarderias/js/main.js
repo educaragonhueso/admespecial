@@ -1095,7 +1095,7 @@ $('body').on('click', '.calumno', function(e){
 	$('#fsolicitud'+vid).toggle();
 	return;
 	}
-   console.log("id de alumno:"+vid);
+   console.log("idd de alumno:"+vid);
 $.ajax({
   method: "POST",
   data: {id_alumno:vid,modo:vmodo,pin:vpin,rol:vrol,id_centro:vidcentro,estado_convocatoria:vestado_convocatoria},

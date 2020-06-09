@@ -68,7 +68,7 @@ include('includes/head.php');
 				}
 			elseif($_SESSION['fin_sol_alumno']<2 and $_SESSION['nombre_usuario']!='nousuario')//autenticado en perirodo de inscripcion  alumno
 				{
-				echo '<button class="btn btn-outline-info calumno" id="versolicitud" type="button">Ver solicitud</button>';
+				echo '<button class="btn btn-outline-info calumno" id="versolicitud" type="button" data-idal="'.$_SESSION['id_alumno'].'">Ver solicitud</button>';
 				echo '<a id="imprimir" target="_blank"><input class="btn btn-primary imprimirsolicitud"  type="button" value="Vista Previa Impresion Documento"/></a>';
 				}
 		}

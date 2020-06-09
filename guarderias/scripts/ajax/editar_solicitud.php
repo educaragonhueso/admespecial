@@ -44,7 +44,7 @@ $log_editar_solicitud->warning(print_r($_POST,true));
 if($rol=='alumno')
 {
 	$pin=$_POST['pin'];
-	$id=$scontroller->getIdAlumnoPin($pin);
+   if($id==0) 	$id=$scontroller->getIdAlumnoPin($pin);
 //obtenemos el estado de la solicitud
 	$log_editar_solicitud->warning("idalumno-pin: ".$id.'-'.$pin);
 	$fase_sol=$tsol->getEstadoSol($id);

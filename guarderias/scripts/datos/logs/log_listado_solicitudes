@@ -2810,3 +2810,23 @@
 [08-Jun-2020 23:13:24] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
 [08-Jun-2020 23:13:24] : [WARNING] - CONSULTA SOLICITUDES
 [08-Jun-2020 23:13:24] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 23:20:08] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 23:20:08] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 23:20:08] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 23:20:08] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 23:44:26] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 23:44:26] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 23:44:26] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 23:44:26] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[08-Jun-2020 23:47:34] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[08-Jun-2020 23:47:34] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[08-Jun-2020 23:47:34] : [WARNING] - CONSULTA SOLICITUDES
+[08-Jun-2020 23:47:34] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[09-Jun-2020 06:41:43] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[09-Jun-2020 06:41:43] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[09-Jun-2020 06:41:43] : [WARNING] - CONSULTA SOLICITUDES
+[09-Jun-2020 06:41:43] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[09-Jun-2020 09:26:47] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[09-Jun-2020 09:26:47] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 0 ESTADO CONVOCATORIA: 0
+[09-Jun-2020 09:26:47] : [WARNING] - CONSULTA SOLICITUDES
+[09-Jun-2020 09:26:47] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc

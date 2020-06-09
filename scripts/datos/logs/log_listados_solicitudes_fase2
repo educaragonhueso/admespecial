@@ -396,3 +396,18 @@
 [08-Jun-2020 18:22:09] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_ebo
 [08-Jun-2020 18:22:09] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo'  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc
 [08-Jun-2020 18:22:09] : [WARNING] - OBTENIDAS 88 SOLICITUDES FASE II:
+[09-Jun-2020 08:18:00] : [WARNING] - OBTENIENDO DATOS SOLICITUDES FASE II:
+[09-Jun-2020 08:18:00] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [subtipo] => lfase2_sol_ebo
+    [pdf] => 1
+    [estado_convocatoria] => 40
+    [sorteo_fase2] => 1
+)
+
+[09-Jun-2020 08:18:00] : [WARNING] - Funcion: getSolicitudes FASE II:
+[09-Jun-2020 08:18:00] : [WARNING] - CONSULTA SOLICITUDES FASE2 SUBTIPO: lfase2_sol_ebo
+[09-Jun-2020 08:18:00] : [WARNING] - SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM alumnos_fase2 a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo'  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc
+[09-Jun-2020 08:18:00] : [WARNING] - OBTENIDAS 88 SOLICITUDES FASE II:
