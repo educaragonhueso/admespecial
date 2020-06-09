@@ -13,14 +13,15 @@
          <li class="nav-item active msuperior dropdown">
             <a class="nav-link dropdown-toggle desplegable" id="navbardrop" data-toggle="dropdown">Documentación</a>
 				   <div class="dropdown-menu">
-				   <?php if($_SESSION['rol']!='alumno')
-               {
-                     echo '<a class="dropdown-item" href="documentacion/plantilla_matriculaguarderias.csv" id="docinst" target="_blank">Plantilla matrícula guarderías (csv)</a>';
+				   <?php 
                      echo '<a class="dropdown-item" href="documentacion/a2_1c_2021.pdf" id="doca21c" target="_blank">ANEXO II- Solicitud ingreso (pdf)</a>';
                      echo '<a class="dropdown-item" href="documentacion/a3_1c.pdf" id="doca31c" target="_blank">ANEXO III- Baja o excedencia (pdf)</a>';
                      echo '<a class="dropdown-item" href="documentacion/a4_1c.pdf" id="doca31c" target="_blank">ANEXO IV- Renta familiares (pdf)</a>';
                      echo '<a class="dropdown-item" href="documentacion/boa14f20201c.pdf" id="docboa1c" target="_blank">BOA 14 febrero (pdf)</a>';
                      echo '<a class="dropdown-item" href="documentacion/res_guarderias_anexos_29052020.pdf" id="docresboa1c" target="_blank">Resolución BOA 29 Mayo (pdf)</a>';
+               if($_SESSION['rol']!='alumno')
+               {
+                     echo '<a class="dropdown-item" href="documentacion/plantilla_matriculaguarderias.csv" id="docinst" target="_blank">Plantilla matrícula guarderías (csv)</a>';
                }
                ?>
       
