@@ -408,7 +408,8 @@ class SolicitudController extends ControladorBase{
 			//nueva solicitud
 			if($id==0)
 			{ 
-				$this->lastid=$solicitud->getLast();	
+				//$this->lastid=$solicitud->getLast();	
+				$this->lastid=$solicitud->getNuevoId();	
 				$nuevoid=$this->lastid+1;
 				$dsolicitud=$solicitud->getSolData($this->lastid,'nueva',$id_centro);
 					

@@ -108,9 +108,9 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
                             <li class="nav-item active msuperior dropdown" id="mdefinitivo">
                                  <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASE II</a>
 		                 <div class="dropdown-menu">
-				 <a class="lfase2 dropdown-item" href="guarderias/documentacion/vacantes_especial_fase2.JPG">VACANTES FASE2</a>
-  <?php if($_SESSION['rol']!='alumno'){?>
+				 <a class="lfase2 dropdown-item" href="documentacion/vacantes_especial_fase2.JPG">VACANTES FASE2</a>
 				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_sor">Listado Numero aleatorio fase2</a>
+  <?php if($_SESSION['rol']!='alumno'){?>
 				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_ebo">Listado Solicitudes fase2 EBO</a>
 				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_tva">Listado Solicitudes fase2 TVA</a>
 		<?php }?>

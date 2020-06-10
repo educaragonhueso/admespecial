@@ -14,6 +14,8 @@ $(".lfase2").click(function () {
 	  url: "../scripts/ajax/listados_solicitudes_fase2.php",
 	  data: {asignar:'0',rol:vrol,subtipo:vsubtipo,pdf:vpdf,estado_convocatoria:vestado_convocatoria,sorteo_fase2:vsorteo_fase2},
 	  success: function(data) {
+				$("#mapcontrol").hide();
+				$("#map-canvas").hide();
 					$("#l_matricula").html(data);
 					$(".container").hide();
 	      },

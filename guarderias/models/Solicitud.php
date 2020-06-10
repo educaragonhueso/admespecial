@@ -611,8 +611,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 				 if(strlen($elto)!=0) $query.=$key.",";
 				 }
 			$query=trim($query,',');
-			$query.=") VALUES(0,";
-			#$query.="'".$id."',";
+			$query.=") VALUES($id,";
 			//obtenemos los valores del alumno	
 			foreach($sol as $key=>$elto)
 				 {
@@ -712,6 +711,28 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 	if($r) return $this->db()->insert_id;
 	else return -1;
 	} 
+//obtenemos un nuevo id aunque solo para identificar el formulario ya q luego se inserta como autoincrementable
+  public function getNuevoId() 
+	{
+   $qlock="LOCK TABLES idsalumnos WRITE";
+   $qunlock="UNLOCK TABLES";
+	$query="select id_alumno from idsalumnos order by id_alumno desc limit 1";
+	$qinsert="INSERT INTO  idsalumnos VALUES(0)";
+	
+	$this->db()->query($qlock);
+	
+   $soldata=$this->db()->query($query);
+	$rinsert=$this->db()->query($qinsert);
+	
+   $this->db()->query($qunlock);
+	
+   if(!$soldata) return 0;
+   if($row = $soldata->fetch_object()) 
+   {
+      return $row->id_alumno;
+   }
+	else return 0;
+	}
   public function getLast($tipo='alumno',$clave='') 
 	{
 	if($tipo=='alumno')

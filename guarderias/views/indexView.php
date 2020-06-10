@@ -1,8 +1,8 @@
 <?php
 session_start();
 //if(!isset($_SESSION)) exit(); 
-if($_SESSION['version']=='PRE') print_r($_SESSION);
 include('includes/head.php');
+if($_SESSION['version']=='PRE') print_r($_SESSION);
 ?>
 <html>
 <body>

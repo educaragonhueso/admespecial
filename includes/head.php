@@ -32,11 +32,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 <?php 
-	if($_SESSION['sorteo_fase2']==1)
-	{
    	echo  '<script src="../js/fase2.js"></script>';
    	echo  '<script src="../js/fase3.js"></script>';
-	}
 ?>
     <script src="../js/main.js"></script>
     <script src="../js/gmap.js"></script>
