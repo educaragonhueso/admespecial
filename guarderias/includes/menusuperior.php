@@ -89,14 +89,17 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
 				<?php }?>
                             </li>
 		<?php if(($_SESSION['estado_convocatoria']<=30 and $_SESSION['estado_convocatoria']>22)  or $_SESSION['fase_sorteo']==2 or $_SESSION['rol']=='admin') {?>
-                            <li class="nav-item active msuperior dropdown" id="mprovisional">
-                                 <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
-				 <div class="dropdown-menu">
-				 <a class="lprovisionales dropdown-item" href="#" data-subtipo="admitidos_prov">Admitidos provisional</a>
-				 <a class="lprovisionales dropdown-item" href="#" data-subtipo="noadmitidos_prov">No admitidos provisional</a>
-				 <a class="lprovisionales dropdown-item" href="#" data-subtipo="excluidos_prov">Excluidos provisional</a>
-																		 </div>
-                            </li>
+             <li class="nav-item active msuperior dropdown" id="mtributantes">
+                <a class="show_tributantes nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdow" href="#">Datos Tributantes</a>
+            </li>
+             <li class="nav-item active msuperior dropdown" id="mprovisional">
+                <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
+                <div class="dropdown-menu">
+                   <a class="lprovisionales dropdown-item" href="#" data-subtipo="admitidos_prov">Admitidos provisional</a>
+                   <a class="lprovisionales dropdown-item" href="#" data-subtipo="noadmitidos_prov">No admitidos provisional</a>
+                   <a class="lprovisionales dropdown-item" href="#" data-subtipo="excluidos_prov">Excluidos provisional</a>
+                </div>
+            </li>
 			<?php }?>
 		<?php if($_SESSION['estado_convocatoria']>=30){?>
                             <li class="nav-item active msuperior dropdown" id="mdefinitivo">

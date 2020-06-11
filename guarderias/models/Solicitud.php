@@ -27,6 +27,7 @@ class Solicitud extends EntidadBase{
 			$this->log_listados_provisionales=new logWriter('log_listados_provisionales',DIR_LOGS);
 			$this->log_fase_provisional=new logWriter('log_fase_provisional',DIR_LOGS);
 			$this->log_listados_solicitudes_fase2=new logWriter('log_listados_solicitudes_fase2',DIR_LOGS);
+			$this->log_listados_tributantes=new logWriter('log_listados_tributantes',DIR_LOGS);
     }
      
   public function copiaTablaCentro($centro,$tipo)
@@ -1270,18 +1271,21 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
         }
         return $resultSet;
 	}
-	public function getAllTributantes($c=1,$tipo=0,$subtipo_listado='',$fase_sorteo=0,$estado_convocatoria=0,$provincia='todas') 
-   {
-		$sql="SELECT  t.* FROM alumnos a join tributantes t  on a.id_alumno=t.id_alumno";
+	public function getAllSolTributantes($c=1,$provincia='todas') 
+	{
+   if($c==1)
+      $sql="SELECT a.nombre as nombre_alumno,a.apellido1 as apellido1_alumno,a.dni_alumno as dni_alumno,b.nombre as nombre_tributante,b.dni as dni_tributante,c.nombre_centro FROM alumnos a, tributantes b,centros c WHERE a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino";
+    else
+      $sql="SELECT a.nombre as nombre_alumno,a.apellido1 as apellido1_alumno,a.dni_alumno as dni_alumno,b.nombre as nombre_tributante,b.dni as dni_tributante,c.nombre_centro FROM alumnos a, tributantes b,centros c WHERE a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino and provincia=$provincia";
 
+		$this->log_listados_tributantes->warning("CONSULTA TRIBUTANTES: $sql");
       $query=$this->db->query($sql);
       if($query)
-      while ($row = $query->fetch_object()) 
-      {
-         $resultSet[]=$row;
-      }
-      return $resultSet;
-
+         while ($row = $query->fetch_object()) 
+         {
+            $resultSet[]=$row;
+         }
+  return $resultSet;
    }
 	public function getAllSolListados($c=1,$tipo=0,$subtipo_listado='',$fase_sorteo=0,$estado_convocatoria=0,$provincia='todas') 
 	{

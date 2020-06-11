@@ -156,19 +156,30 @@ $('body').on('click', '.cdefinitivo', function(e){
   
   var vclasdefinitivo=$("#selectcentro"+vid+" option:selected").attr("class");
   var vclasactual=$(".vacantes"+vtipoestudios+vidcactual).attr("class");
-  //vacantes ccentro actual
+
+  //vacantes centro actual
   var vvaccactual=$(".vacantes"+vtipoestudios+vidcactual).attr("value").split(':')[1];
 
   //datos centro de estudios origen, si lo hay  
   var vcorigen=$("#centro_origen"+vid).text();
+  
+  console.log("CENTRO ORIGEN: "+vidcorigen); 
+  if(!$(".vacantes"+vtipoestudios+vidcorigen).length) 
+  {
+   var vvaccorigen=0;
+   console.log("centro no especial");
+  }
+  else
+  {
   var vvaccorigen=$(".vacantes"+vtipoestudios+vidcorigen).attr("value").split(':')[1];
+  }
   var vreserva=$("#centro_origen"+vid).attr("data-reserva");
   var vclasorigen=$(".vacantes"+vtipoestudios+vidcorigen).attr("class");
 			
  vacantesfinales_def=+vvacdefinitivo-1;
  vacantesfinales_act=+vvaccactual+1;
  
- vacantesfinales_corigen=+vvaccorigen+1;
+vacantesfinales_corigen=+vvaccorigen+1;
  
 console.log("Centro definitivo: "+vcdefinitivo);
 console.log("id centro definitivo: "+vidcdefinitivo);
@@ -219,7 +230,7 @@ $.ajax({
 		
 		$("."+vclasactual).text(vcactual+':'+vacantesfinales_act);
 		$("."+vclasactual).attr("value",vcactual+':'+vacantesfinales_act);
-		//modificamos vacantes en el centro de estudios origen si lo hay y si no se ha liberado la reserva, o sea es la primera veza
+		//modificamos vacantes en el centro de estudios origen si lo hay y si no se ha liberado la reserva, o sea es la primera vez
 		console.log(vidcorigen+":::"+vreserva);
 		if(vidcorigen!=0 & vreserva=='reserva1')
 		{
@@ -227,6 +238,7 @@ $.ajax({
 		$("."+vclasorigen).text(vcorigen+':'+vacantesfinales_corigen);
 		$("."+vclasorigen).attr("value",vcorigen+':'+vacantesfinales_corigen);
 		$("#centro_origen"+vid).attr("data-reserva","reserva0");
+		$("#reserva"+vid).html("0");
 		$("#"+vtipoestudios+vidcorigen).text(vacantesfinales_corigen);
 		}
 		$("#centro_definitivo"+vid).attr("data-idcactual","idcactual"+vidcdefinitivo);

@@ -275,7 +275,7 @@ ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set 
 )
 
 ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=22002338
-Actualizadas vacantes centros para fase 2 a las 08:06 del dia 10-Jun-2020
+Actualizadas vacantes centros para fase 2 a las 08:06 del dia 11-Jun-2020
 Copiando tabla fase2....
 
 INSERT IGNORE INTO alumnos_fase2 SELECT
@@ -335,4 +335,4 @@ left join
 	(SELECT a.id_alumno,c.id_centro as id_centro_origen, c.nombre_centro as centro_origen from alumnos a, centros c where c.id_centro=a.id_centro_estudios_origen) 
 	as t8 on t1.id_alumno=t8.id_alumno WHERE t1.fase_solicitud!='borrador' and t1.est_desp_sorteo='noadmitida'
 
-Copia tabla solicitudesfase2 realizada corectamente a las 08:06 del dia 10-Jun-2020
+Copia tabla solicitudesfase2 realizada corectamente a las 08:06 del dia 11-Jun-2020

@@ -23,6 +23,7 @@ class ListadosController extends ControladorBase{
 		$this->log_listados_solicitudes=new logWriter('log_listado_solicitudes',DIR_LOGS);
 		$this->log_gencsvs=new logWriter('log_gencsvs',DIR_LOGS);
 		$this->log_listados_solicitudes_fase2=new logWriter('log_listados_solicitudes_fase2',DIR_LOGS);
+		$this->log_listados_tributantes=new logWriter('log_listados_tributantes',DIR_LOGS);
     }
     
     public function getConexion()
@@ -113,7 +114,7 @@ class ListadosController extends ControladorBase{
 			$this->log_gencsvs->warning("OBTENIENDO DATOS CSV SUBTIPO:
 $subtipo_listado");
          if($subtipo_listado=='tri'){ //para el caso de tributantes 
-		    	$allsolicitudes=$solicitud->getAllTributantes($id_centro,$tiposol,$subtipo_listado,0,$estado_convocatoria,$provincia);
+		    	$allsolicitudes=$solicitud->getAllSolTributantes($id_centro,$provincia);
 			   $this->log_gencsvs->warning("OBTENIDOS DATOS CSV.");
          return $allsolicitudes;
             }
@@ -134,6 +135,11 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 		{
 			$this->log_listados_solicitudes_fase2->warning("Funcion: getSolicitudes FASE II:");
 		    	$allsolicitudes=$solicitud->getAllSolListados($id_centro,3,$subtipo_listado,$fase_sorteo,$estado_convocatoria);
+		}
+		elseif($modo=='tributantes') //listados de tributantes
+		{
+			$this->log_listados_tributantes->warning("Cargando datos de tributantes:");
+		    	$allsolicitudes=$solicitud->getAllSolTributantes($id_centro,$provincia);
 		}
 	return $allsolicitudes;
 	}

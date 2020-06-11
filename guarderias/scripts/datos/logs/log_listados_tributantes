@@ -1,0 +1,34 @@
+[11-Jun-2020 11:56:16] : [WARNING] - TRIBUTANTES: DATOS POST
+[11-Jun-2020 11:56:16] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [pdf] => 1
+    [estado_convocatoria] => 21
+)
+
+[11-Jun-2020 11:56:55] : [WARNING] - TRIBUTANTES: DATOS POST
+[11-Jun-2020 11:56:55] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [pdf] => 1
+    [estado_convocatoria] => 21
+)
+
+[11-Jun-2020 11:56:55] : [WARNING] - Cargando datos de tributantes:
+[11-Jun-2020 11:56:55] : [WARNING] - DATOS TRIBUTANTES::
+[11-Jun-2020 11:56:55] : [WARNING] - 
+[11-Jun-2020 12:02:16] : [WARNING] - TRIBUTANTES: DATOS POST
+[11-Jun-2020 12:02:16] : [WARNING] - Array
+(
+    [asignar] => 0
+    [rol] => admin
+    [pdf] => 1
+    [estado_convocatoria] => 21
+)
+
+[11-Jun-2020 12:02:16] : [WARNING] - Cargando datos de tributantes:
+[11-Jun-2020 12:02:16] : [WARNING] - CONSULTA TRIBUTANTES: SELECT a.nombre as nombre_alumno,a.apellido1 as apellido1_alumno,a.dni_alumno as dni_alumno,b.nombre as nombre_tributante,b.dni as dni_tributante,c.nombre_centro FROM alumnos a, tributantes t WHERE a.id_alumno=t.id_alumno
+[11-Jun-2020 12:02:16] : [WARNING] - DATOS TRIBUTANTES::
+[11-Jun-2020 12:02:16] : [WARNING] - 

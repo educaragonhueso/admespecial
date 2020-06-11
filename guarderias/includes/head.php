@@ -31,11 +31,9 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDORxJ68R5GU5pNKhO0fT_icSShE9c94Ic&callback=initMap">
 </script>
 <?php 
-	if($_SESSION['sorteo_fase2']==1)
-	{
    	echo  '<script src="../guarderias/js/fase2.js"></script>';
    	echo  '<script src="../guarderias/js/fase3.js"></script>';
-	}
+   	echo  '<script src="../guarderias/js/tributantes.js"></script>';
 ?>
     <script src="../guarderias/js/main.js"></script>
     <script src="../guarderias/js/gmap.js"></script>

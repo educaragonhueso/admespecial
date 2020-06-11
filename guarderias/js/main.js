@@ -893,7 +893,7 @@ $('body').on('click', '.send', function(e){
 				else
 				{
 				$.alert({
-					title: 'SOLICITUD GUARDADA CORRECTAMENTE.<br> Para modificarla accede con el NIF de tu tutor y al clave:<br><br><b> '+data+'</b>',
+					title: 'SOLICITUD GUARDADA CORRECTAMENTE.<br> Para modificarla accede con el NIF de tu tutor y al clave:<br><br><b> '+data+'</b><br><i>No olvides imprimir y entragar la solicitud en el centro elegido, previa cita previa por teléfono</i>',
 					content: 'OK'
 					});
 					//añadimos boton para imprimir

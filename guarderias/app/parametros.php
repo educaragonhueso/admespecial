@@ -42,6 +42,10 @@ $campos_bbdd_csv_pro=array('nombre_centro','apellidos','nombre','tipo_alumno_act
 $campos_cabecera_csv_dup=array('Centro','Primer apellido','Segundo apellido','Nombre','Enseñanza','Fecha Nacimiento','DNI Tutor');
 $campos_bbdd_csv_dup=array('nombre_centro','apellido1','apellido2','nombre','tipoestudios','fnac','dni_tutor1');
 
+//DATOS PARA LISTADO TRIBUTANTES
+$campos_cabecera_tributantes=array('Centro','Primer apellido alumno','Segundo apellido alumno','Nombre alumno','DNI alumno','Nombre Tributante','DNI Tributante');
+$campos_bbdd_tributantes=array('nombre_centro','apellido1_alumno','apellido2_alumno','noombre_alumno','dni_alumno','nombre_tributante','dni_tributante');
+
 //DATOS PARA EXPORTAR DATOS PDF
 
 //vacantes para centros e pdf
