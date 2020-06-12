@@ -293,7 +293,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 
 	return $html;
 	}
-  public function showSolicitudListado($sol,$datos,$provisional=0,$htmldatoscentros='',$fase=2){
+  public function showSolicitudListado($sol,$datos,$provisional=0,$htmldatoscentros='',$fase=2,$subtipo_listado=''){
 		$i=0;	
 		//los listados provisionales no permiten acceder a los datos de la solicitud
 		if($provisional>=1) $class='';
@@ -302,7 +302,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 		$li="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:black'>";
 		foreach($datos as $d)
 			{
-			if($i==0)
+			if($i==0 and $subtipo_listado!='tributantes')
 			{
   		  		$li.="<td class='".$class." dalumno ".$d."' data-idal='".$sol->id_alumno."'>".strtoupper($sol->$d)."</td>";
 					
@@ -343,7 +343,17 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 					$li.="<td id='".$d.$sol->id_alumno."' data-reserva='reserva".$sol->reserva."' data-idcorigen='idcorigen".$sol->id_centro_origen."'>".$sol->$d."</td>";
 				}
 				else
+            {
+              if($subtipo_listado=='tributantes')
+              {
+               if($d=='apellido1_alumno' or $d=='cuota' or $d=='importe_renta' or $d=='puntos_renta' or $d=='apellido1_alumno' or $d=='apellido2_alumno' or $d=='nombre_alumno' or $d=='dni_alumno')
+					   $li.="<td></td>";
+					else
+                  $li.="<td id='".$d.$sol->id_alumno."' class='".$d."'>".$sol->$d."</td>";
+               }
+              else 
 					$li.="<td id='".$d.$sol->id_alumno."' class='".$d."'>".$sol->$d."</td>";
+            }
 			$i++;
 			}
 		$li.="</tr>";
@@ -379,6 +389,9 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 	$centroactual='';
 	$tipoanterior='';
 	$tipoactualactual='';
+	$alumno_anterior='';
+	$alumno_actual='';
+
    $ncentro=0;
 	$ncolumnas=sizeof($cabecera);
 	$colspan=$ncolumnas-1;
@@ -394,7 +407,10 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 
 	foreach($a as $sol) 
 	{
-		$tipoanterior=$tipoactual;
+		$alumno_anterior=$alumno_actual;
+		$alumno_actual=$sol->id_alumno;
+		
+      $tipoanterior=$tipoactual;
 		$tipoactual=$sol->tipoestudios;
 		if($rol=='admin' || $rol=='sp')
 		{
@@ -407,15 +423,31 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color:#141259;'><td colspan='".$ncolumnas."'><b>".$sol->nombre_centro."</b></td></tr>";
 				}
          else $ncentro=0;
-			if($tipoactual!=$tipoanterior or $ncentro==1)
+			if(($tipoactual!=$tipoanterior or $ncentro<=1) and $subtipo!='tributantes')
 				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
-		}
+			if($alumno_actual!=$alumno_anterior)
+         {
+            $html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'>";
+				$html.="<td><b>".strtoupper($sol->apellido1_alumno)."</b></td>";
+				$html.="<td><b>".strtoupper($sol->apellido2_alumno)."</b></td>";
+				$html.="<td><b>".strtoupper($sol->nombre_alumno)."</b></td>";
+				$html.="<td><b>".strtoupper($sol->dni_alumno)."</b></td>";
+			   $html.="<td></td>";
+			   $html.="<td></td>";
+            //cuando el campo sea el importe de la renta, para el listado de tributantes, ponemos un input
+            $input="<input type='text' id='importe_renta".$sol->id_alumno."' value='".$sol->importe_renta."'></input>";
+			   $html.="<td>".$input."</td>";
+				$html.="<td id='puntos_renta".$sol->id_alumno."' value='".$sol->puntos_renta."'><b>".strtoupper($sol->puntos_renta)."</b></td>";
+				$html.="<td id='cuota".$sol->id_alumno."' value='".$sol->cuota."'>".strtoupper($sol->cuota)."</td>";
+            $html.="</tr>";
+		   }
+      }
 		elseif($rol=='centro')
 		{
 			if($tipoactual!=$tipoanterior)
 				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
 		}
-		$html.=$this->showSolicitudListado($sol,$camposdatos,$provisional,$htmlcentros,$fase);	
+		$html.=$this->showSolicitudListado($sol,$camposdatos,$provisional,$htmlcentros,$fase,$subtipo);	
 	}
 	$html.="</tbody>";
 	$html.='</table>';

@@ -163,7 +163,7 @@ $('body').on('click', '.cdefinitivo', function(e){
   //datos centro de estudios origen, si lo hay  
   var vcorigen=$("#centro_origen"+vid).text();
   
-  console.log("CENTRO ORIGEN: "+vidcorigen); 
+  console.log("ID CENTRO ORIGEN: "+vidcorigen.length); 
   if(!$(".vacantes"+vtipoestudios+vidcorigen).length) 
   {
    var vvaccorigen=0;
@@ -196,7 +196,7 @@ console.log("CENTRO ESTUDIOS ORIGEN: "+vidcorigen);
 console.log("vacantes finales CORIGEN: "+vacantesfinales_corigen);
 console.log("Reserva CORIGEN: "+vreserva);
 
-if(vidcorigen==vidcdefinitivo)
+if(vidcorigen==vidcdefinitivo & vidcorigen!=0)
 {
 		$.alert({
 			title: 'TIENE RESERVA EN ESE CENTRO',

@@ -43,8 +43,8 @@ $campos_cabecera_csv_dup=array('Centro','Primer apellido','Segundo apellido','No
 $campos_bbdd_csv_dup=array('nombre_centro','apellido1','apellido2','nombre','tipoestudios','fnac','dni_tutor1');
 
 //DATOS PARA LISTADO TRIBUTANTES
-$campos_cabecera_tributantes=array('Centro','Primer apellido alumno','Segundo apellido alumno','Nombre alumno','DNI alumno','Nombre Tributante','DNI Tributante');
-$campos_bbdd_tributantes=array('nombre_centro','apellido1_alumno','apellido2_alumno','nombre_alumno','dni_alumno','nombre_tributante','dni_tributante');
+$campos_cabecera_tributantes=array('Primer apellido alumno','Segundo apellido alumno','Nombre alumno','DNI alumno','Nombre Tributante','DNI Tributante','ImporteRenta','PuntosRenta','Cuota');
+$campos_bbdd_tributantes=array('apellido1_alumno','apellido2_alumno','nombre_alumno','dni_alumno','nombre_tributante','dni_tributante','importe_renta','puntos_renta','cuota');
 
 //DATOS PARA EXPORTAR DATOS PDF
 

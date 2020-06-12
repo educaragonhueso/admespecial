@@ -1274,9 +1274,9 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 	public function getAllSolTributantes($c=1,$provincia='todas') 
 	{
    if($c==1)
-      $sql="SELECT a.nombre as nombre_alumno,a.apellido1 as apellido1_alumno,a.apellido2 as apellido2_alumno,a.dni_alumno as dni_alumno,b.nombre as nombre_tributante,b.dni as dni_tributante,c.nombre_centro FROM alumnos a, tributantes b,centros c WHERE a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino";
+      $sql="SELECT a.id_alumno,c.id_centro,a.puntos_renta,a.importe_renta,a.cuota, a.nombre as nombre_alumno,a.apellido1 as apellido1_alumno,a.apellido2 as apellido2_alumno,a.dni_alumno as dni_alumno,b.nombre as nombre_tributante,b.dni as dni_tributante,c.nombre_centro FROM alumnos a, tributantes b,centros c WHERE a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino";
     else
-      $sql="SELECT a.nombre as nombre_alumno,a.apellido1 as apellido1_alumno,a.apellido2 as apellido2_alumno,a.dni_alumno as dni_alumno,b.nombre as nombre_tributante,b.dni as dni_tributante,c.nombre_centro FROM alumnos a, tributantes b,centros c WHERE a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino and provincia=$provincia";
+      $sql="SELECT a.id_alumno,c.id_centro,a.id_alumno, a.puntos_renta,a.importe_renta,a.cuota, a.nombre as nombre_alumno,a.apellido1 as apellido1_alumno,a.apellido2 as apellido2_alumno,a.dni_alumno as dni_alumno,b.nombre as nombre_tributante,b.dni as dni_tributante,c.nombre_centro FROM alumnos a, tributantes b,centros c WHERE a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino and provincia=$provincia";
 
 		$this->log_listados_tributantes->warning("CONSULTA TRIBUTANTES: $sql");
       $query=$this->db->query($sql);

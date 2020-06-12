@@ -4,21 +4,69 @@ SELECT id_alumno,nombre,id_centro_estudios_origen,tipoestudios FROM
 alumnos where est_desp_sorteo='admitida' or (est_desp_sorteo='noadmitida' and
 reserva=0)Array
 (
-    [id_alumno] => 8923
-    [nombre] => ANA YAMILETH
-    [id_centro_estudios_origen] => 50008587
+    [id_alumno] => 267
+    [nombre] => nombre266
+    [id_centro_estudios_origen] => 50008678
     [tipoestudios] => ebo
 )
 
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50008587Array
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50008678Array
 (
-    [id_alumno] => 8924
-    [nombre] => ANDRES
-    [id_centro_estudios_origen] => 50006128
+    [id_alumno] => 275
+    [nombre] => nombre274
+    [id_centro_estudios_origen] => 22000056
     [tipoestudios] => ebo
 )
 
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50006128Array
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=22000056Array
+(
+    [id_alumno] => 277
+    [nombre] => nombre276
+    [id_centro_estudios_origen] => 50008630
+    [tipoestudios] => ebo
+)
+
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50008630Array
+(
+    [id_alumno] => 405
+    [nombre] => nombre404
+    [id_centro_estudios_origen] => 50018131
+    [tipoestudios] => ebo
+)
+
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50018131Array
+(
+    [id_alumno] => 662
+    [nombre] => nombre661
+    [id_centro_estudios_origen] => 50011537
+    [tipoestudios] => tva
+)
+
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_tva=vacantes_tva+1,vacantes_tva_original=vacantes_tva_original+1 where id_centro=50011537Array
+(
+    [id_alumno] => 807
+    [nombre] => nombre806
+    [id_centro_estudios_origen] => 50018131
+    [tipoestudios] => tva
+)
+
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_tva=vacantes_tva+1,vacantes_tva_original=vacantes_tva_original+1 where id_centro=50018131Array
+(
+    [id_alumno] => 896
+    [nombre] => nombre895
+    [id_centro_estudios_origen] => 50018131
+    [tipoestudios] => tva
+)
+
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_tva=vacantes_tva+1,vacantes_tva_original=vacantes_tva_original+1 where id_centro=50018131Array
+(
+    [id_alumno] => 916
+    [nombre] => nombre915
+    [id_centro_estudios_origen] => 50011537
+    [tipoestudios] => tva
+)
+
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_tva=vacantes_tva+1,vacantes_tva_original=vacantes_tva_original+1 where id_centro=50011537Array
 (
     [id_alumno] => 8927
     [nombre] => SERGI
@@ -28,254 +76,70 @@ ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set 
 
 ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50008368Array
 (
-    [id_alumno] => 8929
-    [nombre] => ALEJANDRO
-    [id_centro_estudios_origen] => 50008587
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50008587Array
-(
-    [id_alumno] => 8933
-    [nombre] => RUTH
-    [id_centro_estudios_origen] => 50018121
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50018121Array
-(
-    [id_alumno] => 8934
-    [nombre] => ANGEL
+    [id_alumno] => 8932
+    [nombre] => n312
     [id_centro_estudios_origen] => 22000585
     [tipoestudios] => ebo
 )
 
 ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=22000585Array
 (
-    [id_alumno] => 8937
-    [nombre] => ALEJANDRO
-    [id_centro_estudios_origen] => 50009385
+    [id_alumno] => 8954
+    [nombre] => n502
+    [id_centro_estudios_origen] => 22000585
     [tipoestudios] => ebo
 )
 
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50009385Array
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=22000585Array
 (
-    [id_alumno] => 8938
-    [nombre] => JOSÉ ANDRÉS
-    [id_centro_estudios_origen] => 50010481
+    [id_alumno] => 8957
+    [nombre] => n503
+    [id_centro_estudios_origen] => 50018131
     [tipoestudios] => ebo
 )
 
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50010481Array
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50018131Array
 (
-    [id_alumno] => 8939
-    [nombre] => NORA
-    [id_centro_estudios_origen] => 50019299
+    [id_alumno] => 8960
+    [nombre] => n504
+    [id_centro_estudios_origen] => 50018131
     [tipoestudios] => ebo
 )
 
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50019299Array
-(
-    [id_alumno] => 8941
-    [nombre] => SONIA
-    [id_centro_estudios_origen] => 22010876
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=22010876Array
-(
-    [id_alumno] => 8943
-    [nombre] => CLARA BEATRIZ
-    [id_centro_estudios_origen] => 50010171
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50010171Array
-(
-    [id_alumno] => 8944
-    [nombre] => MOHAMED
-    [id_centro_estudios_origen] => 50010478
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50010478Array
-(
-    [id_alumno] => 8948
-    [nombre] => MARCOS
-    [id_centro_estudios_origen] => 50019299
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50019299Array
-(
-    [id_alumno] => 8953
-    [nombre] => VALERIA
-    [id_centro_estudios_origen] => 50017710
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50017710Array
-(
-    [id_alumno] => 8959
-    [nombre] => TONY
-    [id_centro_estudios_origen] => 50010171
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50010171Array
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50018131Array
 (
     [id_alumno] => 8961
-    [nombre] => FELIX
-    [id_centro_estudios_origen] => 50006128
+    [nombre] => n507
+    [id_centro_estudios_origen] => 22000585
     [tipoestudios] => ebo
 )
 
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50006128Array
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=22000585Array
 (
-    [id_alumno] => 8962
-    [nombre] => Malik
-    [id_centro_estudios_origen] => 50001088
+    [id_alumno] => 8963
+    [nombre] => n510
+    [id_centro_estudios_origen] => 22000056
     [tipoestudios] => ebo
 )
 
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50001088Array
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=22000056Array
 (
-    [id_alumno] => 8981
-    [nombre] => Sergio Bogdan 
-    [id_centro_estudios_origen] => 50011306
+    [id_alumno] => 8965
+    [nombre] => n5100
+    [id_centro_estudios_origen] => 22000056
     [tipoestudios] => ebo
 )
 
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50011306Array
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=22000056Array
 (
-    [id_alumno] => 8982
-    [nombre] => OUMAR
-    [id_centro_estudios_origen] => 50009208
-    [tipoestudios] => ebo
+    [id_alumno] => 8973
+    [nombre] => n616
+    [id_centro_estudios_origen] => 22000056
+    [tipoestudios] => tva
 )
 
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50009208Array
-(
-    [id_alumno] => 8984
-    [nombre] => Samir
-    [id_centro_estudios_origen] => 50006025
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50006025Array
-(
-    [id_alumno] => 8987
-    [nombre] => Mor
-    [id_centro_estudios_origen] => 50006207
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50006207Array
-(
-    [id_alumno] => 8988
-    [nombre] => GIORGI
-    [id_centro_estudios_origen] => 22002478
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=22002478Array
-(
-    [id_alumno] => 8991
-    [nombre] => David
-    [id_centro_estudios_origen] => 50004004
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50004004Array
-(
-    [id_alumno] => 8992
-    [nombre] => DAVID COSTIN
-    [id_centro_estudios_origen] => 50008371
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50008371Array
-(
-    [id_alumno] => 8995
-    [nombre] => GORKA
-    [id_centro_estudios_origen] => 50010399
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50010399Array
-(
-    [id_alumno] => 8999
-    [nombre] => Jaqueline
-    [id_centro_estudios_origen] => 50006207
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50006207Array
-(
-    [id_alumno] => 9001
-    [nombre] => EDUARD GABRIEL
-    [id_centro_estudios_origen] => 50008587
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50008587Array
-(
-    [id_alumno] => 9004
-    [nombre] => ROWAIDEH
-    [id_centro_estudios_origen] => 50017904
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50017904Array
-(
-    [id_alumno] => 9008
-    [nombre] => AITOR
-    [id_centro_estudios_origen] => 50017451
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50017451Array
-(
-    [id_alumno] => 9009
-    [nombre] => IGNACIO
-    [id_centro_estudios_origen] => 50017886
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50017886Array
-(
-    [id_alumno] => 9010
-    [nombre] => MARIAMA
-    [id_centro_estudios_origen] => 22005157
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=22005157Array
-(
-    [id_alumno] => 9013
-    [nombre] => NATALIA PAOLA
-    [id_centro_estudios_origen] => 50001763
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50001763Array
-(
-    [id_alumno] => 9016
-    [nombre] => MATEO
-    [id_centro_estudios_origen] => 22004633
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=22004633Array
-(
-    [id_alumno] => 9025
-    [nombre] => MARCOS
-    [id_centro_estudios_origen] => 22002338
-    [tipoestudios] => ebo
-)
-
-ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=22002338
-Actualizadas vacantes centros para fase 2 a las 08:06 del dia 11-Jun-2020
+ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_tva=vacantes_tva+1,vacantes_tva_original=vacantes_tva_original+1 where id_centro=22000056
+Actualizadas vacantes centros para fase 2 a las 08:06 del dia 12-Jun-2020
 Copiando tabla fase2....
 
 INSERT IGNORE INTO alumnos_fase2 SELECT
@@ -335,4 +199,4 @@ left join
 	(SELECT a.id_alumno,c.id_centro as id_centro_origen, c.nombre_centro as centro_origen from alumnos a, centros c where c.id_centro=a.id_centro_estudios_origen) 
 	as t8 on t1.id_alumno=t8.id_alumno WHERE t1.fase_solicitud!='borrador' and t1.est_desp_sorteo='noadmitida'
 
-Copia tabla solicitudesfase2 realizada corectamente a las 08:06 del dia 11-Jun-2020
+Copia tabla solicitudesfase2 realizada corectamente a las 08:06 del dia 12-Jun-2020
