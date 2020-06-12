@@ -1085,6 +1085,7 @@ $('body').on('click', '.calumno', function(e){
   var ots = $(this);
   var vmodo='normal';
   var vid=$(this).attr("data-idal");
+  var vfinsol=$(this).attr("data-finsol");//si ha expirado plazo de alumno permitimos ver, no modificar, la sol.
   var idappend="filasol"+vid;
   var vestado_convocatoria=$('#estado_convocatoria').val();
   var vpin=$('#pin').attr("value");
@@ -1098,7 +1099,7 @@ $('body').on('click', '.calumno', function(e){
    console.log("idd de alumno:"+vid);
 $.ajax({
   method: "POST",
-  data: {id_alumno:vid,modo:vmodo,pin:vpin,rol:vrol,id_centro:vidcentro,estado_convocatoria:vestado_convocatoria},
+  data: {id_alumno:vid,modo:vmodo,pin:vpin,rol:vrol,id_centro:vidcentro,estado_convocatoria:vestado_convocatoria,finsol:vfinsol},
   url:'../guarderias/scripts/ajax/editar_solicitud.php',
    	success: function(data) 
 	{

@@ -1,5 +1,4 @@
 <?php 
-session_destroy();
 session_start();
 require_once $_SERVER['CONTEXT_DOCUMENT_ROOT']."/guarderias/config/config_global.php";
 require_once DIR_CORE.'/Conectar.php';
@@ -16,6 +15,7 @@ $_SESSION['inicio_prorroga']=0;
 $_SESSION['version']=VERSION;
 $_SESSION['sorteo_fase2'] =0;      
 $_SESSION['id_centro'] =-10;      
+$_SESSION['matricula'] =0;//par amostrar o no la matrícula, en ppio no hay      
 //variable para controlar el acceso para mantenimiento
 $_SESSION['anonimo']=0; 
 //finaiza plazo inscripcion alumno

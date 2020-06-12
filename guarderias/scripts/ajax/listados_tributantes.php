@@ -43,9 +43,8 @@ $log_listados_tributantes->warning("DATOS TRIBUTANTES::");
 $log_listados_tributantes->warning(print_r($tributantes,true));
 ######################################################################################
 //Si es el listado normal, no hay sorteo
-$tablaresumen=$tcentro->getResumenFase2($_POST['rol']);
+#$tablaresumen=$tcentro->getResumenFase2($_POST['rol']);
 print($filtro_datos);
-print("<div id='listado_fase2' style='text-align:center'><h1>LISTADO LISTADO TRIBUTANTES COMPLETO</h1></div>");
-print($list->showListado($solicitudes,$_POST['rol'],$$cabecera,$$camposdatos,$provisional=1,$subtipo_listado));
-print($script);
+print("<div id='listado_tributantes' style='text-align:center'><h1>LISTADO LISTADO TRIBUTANTES COMPLETO</h1></div>");
+print($list->showListado($tributantes,$_POST['rol'],$$cabecera,$$camposdatos,$provisional=1,$subtipo_listado));
 ?>

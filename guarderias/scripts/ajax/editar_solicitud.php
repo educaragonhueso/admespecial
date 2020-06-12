@@ -11,6 +11,8 @@ require_once DIR_APP.'parametros.php';
 
 $log_editar_solicitud=new logWriter('log_editar_solicitud',DIR_LOGS);
 
+
+
 $consulta=$_POST['modo'];
 if(isset($_POST['id_alumno'])) $id=$_POST['id_alumno'];
 else $id=0;
@@ -43,12 +45,16 @@ $log_editar_solicitud->warning(print_r($_POST,true));
 #si es un ciudadano obtenemos el id usando el pin proporcionado
 if($rol=='alumno')
 {
+   print_r($_POST);
+   if(isset($_POST['finsol'])) $finsol=$_POST['finsol'];
+   else $finsol=0;
+
 	$pin=$_POST['pin'];
    if($id==0) 	$id=$scontroller->getIdAlumnoPin($pin);
 //obtenemos el estado de la solicitud
 	$log_editar_solicitud->warning("idalumno-pin: ".$id.'-'.$pin);
 	$fase_sol=$tsol->getEstadoSol($id);
-	if($fase_sol=='validada') $solo_lectura=1;
+	if($fase_sol=='validada' or $finsol!=0) $solo_lectura=1;
 }
 
 if(isset($_POST['codigo_centro'])) $id_centro=$_POST['codigo_centro'];
