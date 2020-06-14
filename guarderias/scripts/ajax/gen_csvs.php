@@ -22,9 +22,7 @@ $estado_convocatoria=$_POST['estado_convocatoria'];
 
 $rol=$_POST['rol'];
 //si son servicio sprovinciales quitamos los dos caracteres
-if(strpos($_POST['rol'],'sp')) $provincia=substr($_POST['rol'],2);
-else $provincia='todas';
-
+$provincia=$_POST['provincia'];
 $subtipo_csv=$subtipo;//dentro de cada tipo, el subtipo de listado
 $cabecera="campos_cabecera_csv_".$subtipo_csv;
 $camposdatos="campos_bbdd_csv_".$subtipo_csv;
@@ -78,10 +76,20 @@ if($subtipo_original=='csv_sol')
 	$log_gencsvs->warning("DATOS GUARDERIAS PARA CSV LISTADO SOLICITUDES: ");
 	$log_gencsvs->warning(print_r($solicitudes,true));
 }
-$fcsv=$list->genCsv($solicitudes,$id_centro,$subtipo_original,$$cabecera,$$camposdatos,DIR_CSVS);
+//si es para datos de tributantes
+if($subtipo_original=='csv_tri')
+{
+   $tributantes=$list->getSolicitudes($id_centro,0,0,'csv','tri',$provincia,3); 
+	$log_gencsvs->warning("DATOS CSSVS TRIBUTANTES GUARDERIAS: ");
+	$log_gencsvs->warning(print_r($tributantes,true));
+   $solicitudes=$tributantes;
+$fcsv=$list->genCsv($tributantes,$id_centro,$subtipo_original,$$cabecera,$$camposdatos,DIR_CSVS);
+}
+else
+   $fcsv=$list->genCsv($solicitudes,$id_centro,$subtipo_original,$$cabecera,$$camposdatos,DIR_CSVS);
 
 $log_gencsvs->warning("SOLICITUDES  CSV GENERADAS ");
-$log_gencsvs->warning("EN: ".DIR_CSVS);
+//$log_gencsvs->warning("EN: ".DIR_CSVS);
 $log_gencsvs->warning("EN: ".DIR_CSVS_WEB."FICHERO: $fcsv");
 
 if($fcsv) 

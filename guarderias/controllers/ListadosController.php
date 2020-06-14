@@ -111,8 +111,7 @@ class ListadosController extends ControladorBase{
  		}
 		elseif($modo=='csv')
 		{
-			$this->log_gencsvs->warning("OBTENIENDO DATOS CSV SUBTIPO:
-$subtipo_listado");
+			$this->log_gencsvs->warning("OBTENIENDO DATOS CSV SUBTIPO: $subtipo_listado");
          if($subtipo_listado=='tri'){ //para el caso de tributantes 
 		    	$allsolicitudes=$solicitud->getAllSolTributantes($id_centro,$provincia);
 			   $this->log_gencsvs->warning("OBTENIDOS DATOS CSV.");
@@ -136,7 +135,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 			$this->log_listados_solicitudes_fase2->warning("Funcion: getSolicitudes FASE II:");
 		    	$allsolicitudes=$solicitud->getAllSolListados($id_centro,3,$subtipo_listado,$fase_sorteo,$estado_convocatoria);
 		}
-		elseif($modo=='tributantes') //listados de tributantes
+		elseif($modo=='tributantes') //listados de tributantes para web
 		{
 			$this->log_listados_tributantes->warning("Cargando datos de tributantes:");
 		    	$allsolicitudes=$solicitud->getAllSolTributantes($id_centro,$provincia);
@@ -730,9 +729,10 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
     public function genCsv($solicitudes,$idcentro=1,$tipo,$cab=array(),$datos=array(),$dir)
 		{
 			$linea=array();
-			$nfichero=$dir.'/'.$tipo.'.csv';
-			$fp = fopen($nfichero, 'w'); 
-			$this->log_gencsvs->warning("GENERANDO CSV FICHERO: ".$nfichero);
+         $nfichero=$tipo.'q.csv';
+			$ncompletofichero=$dir.'/'.$nfichero;
+			$fp = fopen($ncompletofichero, 'w'); 
+			$this->log_gencsvs->warning("GENERANDO CSV FICHERO: ".$ncompletofichero);
 			$this->log_gencsvs->warning("GENERANDO CSV, CABECERA:");
 			$this->log_gencsvs->warning(print_r($datos,true));
 			$this->log_gencsvs->warning("GENERANDO CSV, CONTENIDO:");
@@ -753,7 +753,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 				fputcsv($fp,$linea,';');
 			}
 			fclose($fp);
-		return $tipo.'.csv';
+		return $nfichero;
     }
 
     public function getResumenMatriculaCentros()

@@ -1684,13 +1684,14 @@ $('body').on('change', 'input[type=checkbox][id*=oponenautorizar]', function(e){
 $('body').on('click', '.exportcsv', function(e)
 {
 	var vrol=$('#rol').attr("value");
+	var vprovincia=$('#provincia').attr("value");
 	var vid=$(this).attr("id");
 	var vidcentro=$('#id_centro').text();
 	var vsubtipo=$(this).attr("data-subtipo");
 	var vestado_convocatoria=$('#estado_convocatoria').val();
 	$.ajax({
 	method: "POST",
-	data: {id_centro:vidcentro,subtipo:vsubtipo,rol:vrol,estado_convocatoria:vestado_convocatoria},
+	data: {id_centro:vidcentro,subtipo:vsubtipo,rol:vrol,provincia:vprovincia,estado_convocatoria:vestado_convocatoria},
 	url:'../guarderias/scripts/ajax/gen_csvs.php',
 	success: function(data) {
 			window.open(data,'_blank');

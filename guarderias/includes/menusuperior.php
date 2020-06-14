@@ -43,7 +43,7 @@
                id="navbardrop" data-toggle="dropdown" href="#">Exportar datos</a>';
          echo '<div class="dropdown-menu">';
             echo '<a class="exportpdf dropdown-item" href="#" id="pdf_usu" data-tipo="pdf" data-subtipo="pdf_usu">Listado usuarios (pdf)  </a>';
-               if($_SESSION['rol']=='admin')
+               if($_SESSION['rol']=='admin' or $_SESSION['rol']=='sp')
                { 
                   echo '<a class="exportcsv dropdown-item" href="#" id="csv_mat" data-tipo="csv" data-subtipo="csv_mat">Listado vacantes (csv)  </a>';
                   echo '<a class="exportcsv dropdown-item" href="#"
