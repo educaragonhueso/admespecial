@@ -1,21 +1,36 @@
 $(document).ready(function(){
+
+function isFloat(n){
+    return Number(n) === n && n % 1 !== 0;
+}
+function isInt(n){
+    return Number(n) === n && n % 1 === 0;
+}
 //OBTENER VALORES RENTA
 $('body').on('change', 'input[id*=importe_renta]', function(e){
 
 var viprim=parseFloat('6454.03');
 
 vimporte_renta1=$(this).val();
-vimporte_renta=parseFloat($(this).val());
-console.log("renta: "+vimporte_renta);
-console.log("iprim: "+viprim);
+var reg = /^\d+$/;
+if(!reg.test(vimporte_renta1)){
+  alert("INTRODUCE VALOR NUMéRICO");
+  return;
+}
+vimporte_renta=parseFloat(vimporte_renta1);
 
 var vid=$(this).attr("id");
 vid=vid.replace('importe_renta','');
 if(vimporte_renta<viprim)
+   {
    $('#puntos_renta'+vid).text('1.5');
+   $('#puntos_renta'+vid).val('1.5');
+   }
 else
+   {
    $('#puntos_renta'+vid).text('1');
-   
+   $('#puntos_renta'+vid).val('1');
+   }
 var cuota=0;
 if(vimporte_renta>314 & vimporte_renta<=532) 
    cuota=59;
@@ -25,6 +40,7 @@ else cuota=118;
 
 console.log("cuota: "+cuota);
 $('#cuota'+vid).text(cuota);
+$('#cuota'+vid).val(cuota);
 return;
   vidcentro=$(this).parent('td').parent('tr').parent('tbody').parent('table').attr('id');
   vidcentro=vidcentro.replace('mat_table','');
@@ -67,6 +83,29 @@ $.ajax({
       }
 });
 
+});
+//GRABAMOS RENTA TRIBUTANTES
+$('body').on('click', '.setrenta', function(e){
+  var vrol=$('#rol').attr("value");
+  var vid=$(this).attr("id");
+  vid=vid.replace('setrenta','');
+  var vimporte_renta=$('#importe_renta'+vid).val();
+  var vpuntos_renta=$('#puntos_renta'+vid).val();
+  var vcuota=$('#cuota'+vid).val();
+
+  var vestado_convocatoria=$('#estado_convocatoria').val();
+	$.ajax({
+	  method: "POST",
+	  url: "../guarderias/scripts/ajax/asignacion_renta.php",
+	  data: {rol:vrol,estado_convocatoria:vestado_convocatoria,id_alumno:vid,importe_renta:vimporte_renta,puntos_renta:vpuntos_renta,cuota:vcuota},
+	  success: function(data) {
+	   console.log(data);
+   	alert('Grabada Renta ALumno');
+	      },
+	      error: function() {
+		alert('Error LISTANDO solicitudes: ');
+	      }
+	});
 });
 //LISTADO SOLICITUDES FASEII
 $(".show_tributantes").click(function () {  

@@ -68,3 +68,42 @@ TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos/0/b/22
 TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos/0/b/22
 [15-Jun-2020 15:16:15] : [WARNING] - CCONSULTA SOLICITUDES
 TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos/0/b/22
+[15-Jun-2020 17:22:46] : [WARNING] - OBTENIENDO DATOS PROVISIONALES POST:
+[15-Jun-2020 17:22:46] : [WARNING] - Array
+(
+    [id_centro] => 1
+    [rol] => admin
+    [subtipo] => admitidos_prov
+    [pdf] => 1
+    [estado_convocatoria] => 22
+)
+
+[15-Jun-2020 17:22:46] : [WARNING] - Array
+(
+    [id_centro] => 1
+    [rol] => admin
+    [subtipo] => admitidos_prov
+    [pdf] => 1
+    [estado_convocatoria] => 22
+)
+
+[15-Jun-2020 17:22:46] : [WARNING] - OBTENIENDO SOLICITUDES PROVISIONALES, CABECERA: campos_cabecera_admitidos_prov
+[15-Jun-2020 17:22:46] : [WARNING] - OBTENIENDO SOLICITUDES PROVISIONALES, CENTRO:ESTADO 1:
+[15-Jun-2020 17:22:46] : [WARNING] - OBTENIENDO SOLICITUDES PROVISIONALES, ESTADO CONVOCATORIA:  22
+[15-Jun-2020 17:22:46] : [WARNING] - OBTENIENDO PROVISIONALES GETALLSOLLISTADOS
+[15-Jun-2020 17:22:46] : [WARNING] - CCONSULTA SOLICITUDES
+TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:alumnos_provisional_final/1/b/22
+[15-Jun-2020 17:22:46] : [WARNING] - CONSULTA SOLICITUDES PROVISIONALES SUBTIPO: admitidos_prov
+[15-Jun-2020 17:22:46] : [WARNING] - SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.sol_plaza,a.num_hadmision,a.sol_vacantes,a.nordensorteo,a.nasignado as nasignado,c.nombre_centro,a.puntos_validados,a.id_centro_destino as id_centro FROM alumnos_provisional_final a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro where fase_solicitud!='borrador' and estado_solicitud='apta' and est_desp_sorteo='admitida'  order by c.id_centro,a.tipoestudios, a.transporte
+desc,b.puntos_validados desc,b.validar_hnos_centro
+desc,b.validar_tutores_centro desc,b.validar_proximidad_domicilio
+desc,FIELD(b.proximidad_domicilio,'dfamiliar','dlaboral','dflimitrofe','dllimitrofe','sindomicilio'),b.validar_renta_inferior
+desc,b.validar_discapacidad
+desc,FIELD(b.discapacidad,'alumno','hpadres','no'),b.validar_tipo_familia
+desc,FIELD(b.tipo_familia,'numerosa_especial','monoparental_especial','numerosa_general','monoparental_especial','no'),b.hermanos_centro
+desc,a.tutores_centro desc,a.nordensorteo asc,a.nasignado desc
+[15-Jun-2020 17:22:46] : [WARNING] - OBTENIENDO SOLICITUDES PROVISIONALES, DATOS: 
+[15-Jun-2020 17:22:46] : [WARNING] - Array
+(
+)
+

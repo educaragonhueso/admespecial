@@ -274,3 +274,43 @@ b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.di
 FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50018131 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
 [15-Jun-2020 15:01:38] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: dup estado: 40 modo csv
 [15-Jun-2020 15:03:40] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: sol estado: 40 modo csv
+[15-Jun-2020 21:01:54] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 21:04:50] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 21:09:21] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 21:10:26] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 21:12:25] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo:  estado: 3 modo fase2
+[15-Jun-2020 21:12:37] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_sor estado: 3 modo fase2
+[15-Jun-2020 21:13:13] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: fase2 estado: 40 modo csv
+[15-Jun-2020 21:14:40] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 21:15:52] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 21:16:37] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_tva estado: 3 modo fase2
+[15-Jun-2020 21:17:06] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_tva estado: 3 modo fase2
+[15-Jun-2020 21:17:34] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_tva estado: 3 modo fase2
+[15-Jun-2020 21:18:01] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 21:18:18] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 22:14:36] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 22:15:07] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 22:16:19] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 22:19:21] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 22:23:29] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 22:23:53] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 22:24:34] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 22:29:54] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 22:43:32] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 22:49:06] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 22:50:42] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 22:58:34] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 22:59:48] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 23:02:42] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 23:07:24] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 23:07:53] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 23:09:10] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 23:10:28] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 23:15:19] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 23:15:52] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[15-Jun-2020 23:15:54] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo:  estado: 3 modo fase2
+[15-Jun-2020 23:20:54] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo:  estado: 3 modo fase2
+[15-Jun-2020 23:28:08] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo:  estado: 3 modo fase2
+[15-Jun-2020 23:33:36] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo:  estado: 3 modo fase2
+[15-Jun-2020 23:33:39] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo:  estado: 3 modo fase2
+[15-Jun-2020 23:34:56] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo:  estado: 3 modo fase2

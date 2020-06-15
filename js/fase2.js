@@ -2,17 +2,19 @@ $(document).ready(function(){
 //LISTADO SOLICITUDES FASEII
 $(".lfase2").click(function () {
   
-				$("#mapcontrol").hide();
-				$("#map-canvas").hide();
+  $("#mapcontrol").hide();
+  $("#map-canvas").hide();
   var vsorteo_fase2=$('#sorteo_fase2').text();
   var vpdf='1';
   var vrol=$('#rol').attr("value");
+  var vidcentro=$('#id_centro').html();
+  var vprovincia=$('#provincia').attr("value");
   var vsubtipo=$(this).attr("data-subtipo");
   var vestado_convocatoria=$('#estado_convocatoria').val();
 	$.ajax({
 	  method: "POST",
 	  url: "../scripts/ajax/listados_solicitudes_fase2.php",
-	  data: {asignar:'0',rol:vrol,subtipo:vsubtipo,pdf:vpdf,estado_convocatoria:vestado_convocatoria,sorteo_fase2:vsorteo_fase2},
+	  data: {asignar:'0',rol:vrol,subtipo:vsubtipo,pdf:vpdf,estado_convocatoria:vestado_convocatoria,sorteo_fase2:vsorteo_fase2,provincia:vprovincia,id_centro:vidcentro},
 	  success: function(data) {
 				$("#mapcontrol").hide();
 				$("#map-canvas").hide();

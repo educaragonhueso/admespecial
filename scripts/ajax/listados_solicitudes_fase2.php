@@ -26,9 +26,13 @@ else $sorteo_fase2=0;
 if(isset($_POST['nsorteo'])) $nsorteo=$_POST['nsorteo'];
 else $nsorteo=0;
 $tipo_listado='solicitudes_fase2';
+$provincia=$_POST['provincia'];
+$idcentro=$_POST['id_centro'];
 
 if(isset($_POST['subtipo']))
 	$subtipo_listado=$_POST['subtipo'];//dentro de cada tipo, el subtipo de listado, para ebo o tva
+
+if($subtipo_listado=='lfase2_sol_ebo') $nombre_listado='LISTADO DEFINITIVO FASE II EBO';
 
 $filtro_datos='<input type="text" class="form-control" id="filtrosol"  placeholder="Introduce datos del alumno"><small id="emailHelp" class="form-text text-muted"></small>';
 $list=new ListadosController('alumnos');
@@ -76,15 +80,21 @@ style="margin-top:5px">
 
 $boton_descarga="<button type='button' class='btn btn-info' onclick='window.open(\"".DIR_SOR_WEB.$subtipo_listado.".pdf\",\"_blank\");'>Descarga listado</button>";
 //mostramos las solitudes completas sin incluir borrador
-$solicitudes=$list->getSolicitudes(1,0,0,$modo='fase2',$subtipo_listado,'todas',3); 
+$solicitudes=$list->getSolicitudes($idcentro,0,0,$modo='fase2',$subtipo_listado,$provincia,3); 
 ######################################################################################
 $log_listados_solicitudes_fase2->warning("OBTENIDAS $nsolicitudes SOLICITUDES FASE II:");
+$log_listados_solicitudes_fase2->warning(print_r($solicitudes,true));
 ######################################################################################
 //Si es el listado normal, no hay sorteo
-if($_POST['rol']=='admin')
+if($_POST['rol']=='admin' or $_POST['rol']=='sp' or $_POST['rol']=='centro')
 {
-   if($_POST['pdf']==1 and $subtipo_listado=='lfase2_sol_sor')
+   if($_POST['pdf']==1)
    {
+      if($_POST['rol']=='sp')
+         $nombrefichero=$subtipo_listado.'_'.$provincia;
+      elseif($_POST['rol']=='centro')
+         $nombrefichero=$subtipo_listado.'_'.$idcentro;
+         
       $datos=array();
       $i=0;
       //extraemos los campos de datos q nos interesan
@@ -111,7 +121,7 @@ if($_POST['rol']=='admin')
       $pdf->Cell(0,10,'Firmado:',0,0);
       $pdf->Ln();
       $pdf->Cell(220,10,'El Director/a',0,0,'R');
-      $pdf->Output(DIR_SOR.$subtipo_listado.'.pdf','F');
+      $pdf->Output(DIR_SOR.$nombrefichero.'.pdf','F');
    }
 
    if($_POST['asignar']==0)
@@ -124,7 +134,7 @@ if($_POST['rol']=='admin')
          print("<div id='listado_fase2' style='text-align:center'><h1>LISTADO LISTADO SOLICITUDES COMPLETO</h1></div>");
       }
 if($subtipo_listado!='lfase2_sol_sor') print($boton_descarga.'<br>'); //
-if($subtipo_listado!='lfase2_sol_sor') print($boton_asignar_automatica); //mostramos formulario sorteo solo si no se ha hecho ya
+//if($subtipo_listado!='lfase2_sol_sor') print($boton_asignar_automatica); //mostramos formulario sorteo solo si no se ha hecho ya
 }
 print($list->showListado($solicitudes,$_POST['rol'],$$cabecera,$$camposdatos,$provisional=1,$subtipo_listado));
 print($script);

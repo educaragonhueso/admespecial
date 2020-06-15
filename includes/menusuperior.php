@@ -1,4 +1,9 @@
-<?php if(isset($_SESSION['provincia'])) {$provincia=$_SESSION['provincia'];} else $provincia='ARAGON';?>            
+<?php if(isset($_SESSION['provincia'])) {$provincia=$_SESSION['provincia'];} else $provincia='todas';
+$file='scripts/datossalida/pdflistados/sorteo/lfase2_sol_ebo_'.$_SESSION['id_centro'].'.pdf';
+if (file_exists($file))
+   $listado=$file;
+else $listado='';
+?>            
 <h2 style='text-align:center;'>ADMISION ALUMNOS EDUCACION ESPECIAL <?php echo strtoupper($provincia);?></h2>
 		 <p hidden id='id_centro'><?php echo $_SESSION['id_centro'];?></p> 
 		 <p hidden id='estado_convocatoria'><?php echo $_SESSION['estado_convocatoria'];?></p> 
@@ -104,28 +109,37 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
                             </li>
 		   <?php }?>
 		<?php }?>
-		<?php if(($_SESSION['rol']=='alumno' or $_SESSION['rol']=='admin' or $_SESSION['rol']=='sp') and $_SESSION['estado_convocatoria']>30) {?>
-                            <li class="nav-item active msuperior dropdown" id="mdefinitivo">
-                                 <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASE II</a>
-		                 <div class="dropdown-menu">
-				 <a class="lfase2 dropdown-item" href="documentacion/vacantes_especial_fase2.JPG">VACANTES FASE2</a>
-				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_sor">Listado Numero aleatorio fase2</a>
-  <?php if($_SESSION['rol']!='alumno'){?>
-				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_ebo">Listado Solicitudes fase2 EBO</a>
-				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_tva">Listado Solicitudes fase2 TVA</a>
-		<?php }?>
-				 </div>
-                            </li>
-                            <li class="nav-item active msuperior dropdown" id="mdefinitivo">
-                                 <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASE III</a>
-		                 <div class="dropdown-menu">
-				 <a class="lfase3 dropdown-item" href="#" data-subtipo="lfase3_sol_ebo">Listado Solicitudes fase3 EBO</a>
-				 <a class="lfase3 dropdown-item" href="#" data-subtipo="lfase3_sol_tva">Listado Solicitudes fase3 TVA</a>
-				 </div>
-                            </li>
-		<?php }?>
-   <?php }?>
-<?php }?>
+		<?php if(($_SESSION['rol']=='centro' or $_SESSION['rol']=='alumno' or $_SESSION['rol']=='admin' or $_SESSION['rol']=='sp') and $_SESSION['estado_convocatoria']>30) 
+            {
+             echo '<li class="nav-item active msuperior dropdown" id="mdefinitivo">';
+             echo '<a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASE II</a>';
+		       echo '<div class="dropdown-menu">';
+         if($_SESSION['estado_convocatoria']<40){
+				 echo '<a class="lfase2 dropdown-item" href="documentacion/vacantes_especial_fase2.JPG">VACANTES FASE2</a>';
+				 echo '<a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_sor">Listado Numero aleatorio fase2</a>';
+            }
+             if($listado=='')
+				   echo '<a class="lfase2 dropdown-item" target="_blank" href="'.$listado.'">Listado Definitivo FaseII EBO NO DISPONIBLE</a>';
+             else
+				   echo '<a class="lfase2 dropdown-item" target="_blank" href="'.$listado.'">Listado Definitivo FaseII EBO</a>';
+
+      if($_SESSION['rol']!='alumno'){
+				 echo '<a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_ebo">Listado Solicitudes fase2 EBO</a>';
+				 echo '<a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_tva">Listado Solicitudes fase2 TVA</a>';
+				 echo '</div>';
+             echo           '</li>';
+             echo             '<li class="nav-item active msuperior dropdown" id="mdefinitivo">';
+             echo   '<a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASE III</a>';
+		       echo    '         <div class="dropdown-menu">';
+				 echo '<a class="lfase3 dropdown-item" href="#" data-subtipo="lfase3_sol_ebo">Listado Solicitudes fase3 EBO</a>';
+				 echo '<a class="lfase3 dropdown-item" href="#" data-subtipo="lfase3_sol_tva">Listado Solicitudes fase3 TVA</a>';
+				 echo '</div>';
+             echo '              </li>';
+		      }
+               
+		      }
+         }
+      }?>
         </ul>
 </nav>
 <?php 

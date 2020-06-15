@@ -435,6 +435,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 			   $html.="<td></td>";
             //cuando el campo sea el importe de la renta, para el listado de tributantes, ponemos un input
             $input="<input type='text' id='importe_renta".$sol->id_alumno."' value='".$sol->importe_renta."'></input>";
+				$input.='<button  id="setrenta'.$sol->id_alumno.'"  class="setrenta" value="grabar">Grabar</button> ';
 			   $html.="<td>".$input."</td>";
 				$html.="<td id='puntos_renta".$sol->id_alumno."' value='".$sol->puntos_renta."'><b>".strtoupper($sol->puntos_renta)."</b></td>";
 				$html.="<td id='cuota".$sol->id_alumno."' value='".$sol->cuota."'>".strtoupper($sol->cuota)."</td>";
