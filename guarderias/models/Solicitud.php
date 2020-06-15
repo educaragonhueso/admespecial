@@ -1324,7 +1324,7 @@ TABLA/TIPO/TABLABAREMO/ESTADO CONVOCATORIA:".$tabla_alumnos."/".$tipo."/".$tabla
 			if($c<=1)
 			{
 				if($subtipo_listado=='dup') //solicitudes duplicadas
-					$sql="select a.est_desp_sorteo, a.apellido1,a.apellido2,a.tipoestudios,a.fnac,a.dni_tutor1,a.nombre,a.id_alumno,a.sol_plaza,a.num_hadmision,a.sol_vacantes,c.nombre_centro FROM alumnos a join (select apellido1,nombre FROM alumnos group by apellido1,nombre having count(*)>1) dup on a.apellido1=dup.apellido1 and dup.nombre=a.nombre join centros c on c.id_centro=a.id_centro_destino join baremo b on b.id_alumno=a.id_alumno order by c.id_centro,a.tipoestudios, b.puntos_validados desc";
+					$sql="select a.est_desp_sorteo, a.apellido1,a.apellido2,a.tipoestudios,a.fnac,a.dni_tutor1,a.nombre,a.id_alumno,a.sol_plaza,a.num_hadmision,a.sol_vacantes,c.nombre_centro FROM alumnos a join (select apellido1,nombre FROM alumnos group by apellido1,nombre having count(*)>1) dup on a.apellido1=dup.apellido1 and dup.nombre=a.nombre join centros c on c.id_centro=a.id_centro_destino join baremo b on b.id_alumno=a.id_alumno order by apellido1,apellido2,nombre, a.tipoestudios, b.puntos_validados desc";
 				else  //solicitudes normales
 					$sql="SELECT a.est_desp_sorteo, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.sol_plaza,a.num_hadmision,a.sol_vacantes,a.loc_dfamiliar,a.nordensorteo,a.nasignado as nasignado,a.reserva,b.*,c.nombre_centro,c.provincia,c2.nombre_centro as nombre_centro_origen FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on a.id_centro_destino=c.id_centro left join centros c2 on c2.id_centro=a.id_centro_estudios_origen  order by c.id_centro desc,a.tipoestudios asc, b.puntos_validados desc";
 			}

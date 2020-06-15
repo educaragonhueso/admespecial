@@ -1131,3 +1131,13 @@
 [15-Jun-2020 08:03:01] : [WARNING] - ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=50001763
 [15-Jun-2020 08:03:01] : [WARNING] - ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=22004633
 [15-Jun-2020 08:03:01] : [WARNING] - ACTUALIZANDO VACANTES CENTROS, VACANTES: 0, INC: 1 CONSULTA: UPDATE centros set vacantes_ebo=vacantes_ebo+1,vacantes_ebo_original=vacantes_ebo_original+1 where id_centro=22002338
+[15-Jun-2020 10:14:44] : [WARNING] - CONSULTA ACTUALIZANDO VACANTES: idcentro/ebo/tva: 50007376/0/0
+[15-Jun-2020 10:14:44] : [WARNING] - update centros set vacantes_ebo_original=vacantes_ebo_original+1, vacantes_ebo=vacantes_ebo+1 where id_centro='50007376'
+[15-Jun-2020 10:14:44] : [WARNING] - CONSULTA ACTUALIZANDO VACANTES: idcentro/ebo/tva: 22002511/0/0
+[15-Jun-2020 10:14:44] : [WARNING] - update centros set vacantes_ebo_original=vacantes_ebo_original-1, vacantes_ebo=vacantes_ebo-1 where id_centro='22002511'
+[15-Jun-2020 10:14:47] : [WARNING] - CONSULTA ACTUALIZANDO VACANTES: idcentro/ebo/tva: 50009646/0/0
+[15-Jun-2020 10:14:47] : [WARNING] - update centros set vacantes_ebo_original=vacantes_ebo_original+1, vacantes_ebo=vacantes_ebo+1 where id_centro='50009646'
+[15-Jun-2020 10:14:47] : [WARNING] - CONSULTA ACTUALIZANDO VACANTES: idcentro/ebo/tva: 22002338/0/0
+[15-Jun-2020 10:14:47] : [WARNING] - update centros set vacantes_ebo_original=vacantes_ebo_original-1, vacantes_ebo=vacantes_ebo-1 where id_centro='22002338'
+[15-Jun-2020 10:14:59] : [WARNING] - CONSULTA ACTUALIZANDO VACANTES: idcentro/ebo/tva: 22002338/0/0
+[15-Jun-2020 10:14:59] : [WARNING] - update centros set vacantes_ebo_original=vacantes_ebo_original-1, vacantes_ebo=vacantes_ebo-1 where id_centro='22002338'
