@@ -68,9 +68,10 @@ if($_SESSION['version']=='PRE') print_r($_SESSION);
 				}
 			elseif($_SESSION['nombre_usuario']!='nousuario' and $_SESSION['fin_sol_alumno']>0)//autenticado en perirodo de inscripcion  alumno
 				{
-				echo '<button class="btn btn-outline-info calumno" id="versolicitud" type="button" data-finsol="'.$_SESSION['fin_sol_alumno'].'" data-idal="'.$_SESSION['id_alumno'].'">Ver solicitud</button>';
-				echo '<a id="imprimir" target="_blank"><input class="btn btn-primary imprimirsolicitud"  type="button" value="Vista Previa Impresion Documento"/></a>';
-			   echo '<b>La solicitud no se puede modificar en la web, deberás dirigrte al centro para ello</b>';
+				echo '<h1>FINALIZADO PROCESO DE ENTREGA DE SOLICITUDES<br></h1>';
+				//echo '<button class="btn btn-outline-info calumno" id="versolicitud" type="button" data-finsol="'.$_SESSION['fin_sol_alumno'].'" data-idal="'.$_SESSION['id_alumno'].'">Ver solicitud</button>';
+				//echo '<a id="imprimir" target="_blank"><input class="btn btn-primary imprimirsolicitud"  type="button" value="Vista Previa Impresion Documento"/></a>';
+			   //echo '<b>La solicitud no se puede modificar en la web, deberás dirigrte al centro para ello</b>';
          	}
 		}
 		elseif($_SESSION['dia_inicio_inscripcion']==0 and $_SESSION['rol']=='alumno')

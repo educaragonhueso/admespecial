@@ -32,8 +32,8 @@ $campos_bbdd_csv_mat=array('nombre_centro','vuno','vdos','vtres');
 $campos_cabecera_csv_sol=array('Centro','Primer apellido','Segundo apellido','Nombre','Enseñanza','Plaza ACNEAE','Vacante','Hermanos admision');
 $campos_bbdd_csv_sol=array('nombre_centro','apellido1','apellido2','nombre','tipoestudios','sol_plaza','sol_vacantes','num_hadmision');
 
-$campos_cabecera_csv_tri=array('Nombre Centro','Primer apellido Alumno','Segundo apellido Alumno','Nombre Alumno','Parentesco','Nombre tributante','DNI Tributante');
-$campos_bbdd_csv_tri=array('nombre_centro','apellido1_alumno','apellido2_alumno','nombre_alumno','parentesco','nombre_tributante','dni_tributante');
+$campos_cabecera_csv_tri=array('Nombre Centro','Primer apellido Alumno','Segundo apellido Alumno','Nombre Alumno','Parentesco','Primer apellido tributante','Segundo apellido tributante','Nombre tributante','DNI Tributante');
+$campos_bbdd_csv_tri=array('nombre_centro','apellido1_alumno','apellido2_alumno','nombre_alumno','parentesco','apellido1_tributante','apellido2_tributante','nombre_tributante','dni_tributante');
 //listado de alumnos que promocionan, la matricula
 $campos_cabecera_csv_pro=array('Centro','Apellidos','Nombre','Enseñanza','Fecha Nacimiento','estado');
 $campos_bbdd_csv_pro=array('nombre_centro','apellidos','nombre','tipo_alumno_actual','fnac','estado');
