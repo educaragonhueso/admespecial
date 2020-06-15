@@ -29,8 +29,8 @@ $campos_bbdd_csv_fase3=array('tipoestudios','apellido1','apellido2','nombre','lo
 $campos_cabecera_csv_mat=array('Centro','Vacantets 2020','Vacantes 2019','Vacantes 2018');
 $campos_bbdd_csv_mat=array('nombre_centro','vuno','vdos','vtres');
 
-$campos_cabecera_csv_sol=array('Centro','Primer apellido','Segundo apellido','Nombre','Localidad Domicilio','Enseñanza','Fase','Estado','Puntos Validados','Plaza ACNEAE','Vacante','Hermanos admision');
-$campos_bbdd_csv_sol=array('nombre_centro','apellido1','apellido2','nombre','loc_dfamiliar','tipoestudios','fase_solicitud','estado_solicitud','puntos_validados','sol_plaza','sol_vacantes','num_hadmision');
+$campos_cabecera_csv_sol=array('Centro','Primer apellido','Segundo apellido','Nombre','Localidad Domicilio','Enseñanza','Fase','Estado','Puntos Validados','Plaza ACNEAE','Vacante','Hermanos admision','Admitido','Numero aleatorio');
+$campos_bbdd_csv_sol=array('nombre_centro','apellido1','apellido2','nombre','loc_dfamiliar','tipoestudios','fase_solicitud','estado_solicitud','puntos_validados','sol_plaza','sol_vacantes','num_hadmision','est_desp_sorteo','nasignado');
 
 $campos_cabecera_csv_tri=array('Nombre Centro','Primer apellido Alumno','Segundo apellido Alumno','Nombre Alumno','Parentesco','Primer apellido tributante','Segundo apellido tributante','Nombre tributante','DNI Tributante');
 $campos_bbdd_csv_tri=array('nombre_centro','apellido1_alumno','apellido2_alumno','nombre_alumno','parentesco','apellido1_tributante','apellido2_tributante','nombre_tributante','dni_tributante');
