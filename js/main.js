@@ -1255,6 +1255,7 @@ $('body').on('click', '.cabcensol', function(e){
   vid_centro=vid_centro.replace('cabcensol','');
   var vrol=$('#rol').attr("value");
   var vprovincia=$('#provincia').attr("value");
+if(vrol=='centro') return;
 $.ajax({
   method: "POST",
   url: "../scripts/ajax/mostrar_solicitudes.php",

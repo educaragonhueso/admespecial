@@ -39,8 +39,8 @@ $campos_cabecera_csv_pro=array('Centro','Apellidos','Nombre','Enseñanza','Fecha
 $campos_bbdd_csv_pro=array('nombre_centro','apellidos','nombre','tipo_alumno_actual','fnac','estado');
 
 //listado de alumnos duplicados
-$campos_cabecera_csv_dup=array('Primer apellido','Segundo apellido','Nombre','Centro','Enseñanza','Fecha Nacimiento','DNI Tutor');
-$campos_bbdd_csv_dup=array('apellido1','apellido2','nombre','nombre_centro','tipoestudios','fnac','dni_tutor1');
+$campos_cabecera_csv_dup=array('Primer apellido','Segundo apellido','Nombre','Centro','Enseñanza','Fecha Nacimiento','DNI Tutor','Fase Solicitud','Estado Solicitud');
+$campos_bbdd_csv_dup=array('apellido1','apellido2','nombre','nombre_centro','tipoestudios','fnac','dni_tutor1','fase_solicitud','estado_solicitud');
 
 //DATOS PARA LISTADO TRIBUTANTES
 $campos_cabecera_tributantes=array('Primer apellido alumno','Segundo apellido alumno','Nombre alumno','DNI alumno','Nombre Tributante','DNI Tributante','ImporteRenta','PuntosRenta','Cuota');

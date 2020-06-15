@@ -196,6 +196,7 @@ console.log("CENTRO ESTUDIOS ORIGEN: "+vidcorigen);
 console.log("vacantes finales CORIGEN: "+vacantesfinales_corigen);
 console.log("Reserva CORIGEN: "+vreserva);
 
+/*
 if(vidcorigen==vidcdefinitivo & vidcorigen!=0)
 {
 		$.alert({
@@ -204,7 +205,7 @@ if(vidcorigen==vidcdefinitivo & vidcorigen!=0)
 			});
 		return;
 }
-
+*/
 if(vidcactual==vidcdefinitivo)
 {
 		$.alert({
