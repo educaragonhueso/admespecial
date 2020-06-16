@@ -1235,10 +1235,12 @@ as nasignado,c.nombre_centro, a.puntos_validados,a.id_centro_destino as id_centr
 				}
 				elseif($tipo==3) //fase2 o fase3
 				{
+               /*
 					if($c<=1) //permitimos todos los centros
                   $wherecentro='';
                else
                   $wherecentro="and a.id_centro=$c";
+               */
 					if($subtipo_listado=='lfase2_sol_ebo')
 							$sql="SELECT 'centrosdisponibles' as centrosdisponibles, a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.localidad,a.calle_dfamiliar,a.centro_origen,a.id_centro_origen,a.nombre_centro,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.puntos_validados,a.id_centro,a.centro1,a.centro2,a.centro3,a.centro4,a.centro5,a.centro6,a.centro_definitivo,a.id_centro_definitivo, tipo_modificacion,reserva FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno where a.tipoestudios='ebo' ".$wherecentro."  order by a.id_centro desc, a.tipoestudios asc,a.nordensorteo asc,a.transporte desc, b.puntos_validados desc";
 						elseif($subtipo_listado=='lfase2_sol_tva')

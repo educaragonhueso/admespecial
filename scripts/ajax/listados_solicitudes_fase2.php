@@ -78,7 +78,6 @@ style="margin-top:5px">
 				</div>
 		          </div>';
 
-$boton_descarga="<button type='button' class='btn btn-info' onclick='window.open(\"".DIR_SOR_WEB.$subtipo_listado.".pdf\",\"_blank\");'>Descarga listado</button>";
 //mostramos las solitudes completas sin incluir borrador
 $solicitudes=$list->getSolicitudes($idcentro,0,0,$modo='fase2',$subtipo_listado,$provincia,3); 
 ######################################################################################
@@ -94,6 +93,9 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp' or $_POST['rol']=='centro')
          $nombrefichero=$subtipo_listado.'_'.$provincia;
       elseif($_POST['rol']=='centro')
          $nombrefichero=$subtipo_listado.'_'.$idcentro;
+      elseif($_POST['rol']=='admin')
+         $nombrefichero=$subtipo_listado.'_admin';
+$log_listados_solicitudes_fase2->warning("GFENERANDO FICHERO $nombrefichero");
          
       $datos=array();
       $i=0;
@@ -133,6 +135,7 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp' or $_POST['rol']=='centro')
          print($filtro_datos);
          print("<div id='listado_fase2' style='text-align:center'><h1>LISTADO LISTADO SOLICITUDES COMPLETO</h1></div>");
       }
+$boton_descarga="<button type='button' class='btn btn-info' onclick='window.open(\"".DIR_SOR_WEB.$nombrefichero.".pdf\",\"_blank\");'>Descarga listado</button>";
 if($subtipo_listado!='lfase2_sol_sor') print($boton_descarga.'<br>'); //
 //if($subtipo_listado!='lfase2_sol_sor') print($boton_asignar_automatica); //mostramos formulario sorteo solo si no se ha hecho ya
 }

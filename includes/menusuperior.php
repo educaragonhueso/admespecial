@@ -1,8 +1,16 @@
 <?php if(isset($_SESSION['provincia'])) {$provincia=$_SESSION['provincia'];} else $provincia='todas';
-$file='scripts/datossalida/pdflistados/sorteo/lfase2_sol_ebo_'.$_SESSION['id_centro'].'.pdf';
-if (file_exists($file))
-   $listado=$file;
-else $listado='';
+
+$listado='disponible';
+/*
+$ficheroebo='scripts/datossalida/pdflistados/sorteo/lfase2_sol_ebo.pdf';
+if($_SESSION['rol']=='centro' or $_SESSION['rol']=='alumno')
+   $ficheroebo='scripts/datossalida/pdflistados/sorteo/lfase2_sol_ebo_'.$_SESSION['id_centro'].'.pdf';
+if($_SESSION['rol']=='admin')
+*/
+$ficheroebo='scripts/datossalida/pdflistados/sorteo/lfase2_sol_ebo_admin.pdf';
+
+if (!file_exists($ficheroebo))
+   $listado='';
 ?>            
 <h2 style='text-align:center;'>ADMISION ALUMNOS EDUCACION ESPECIAL <?php echo strtoupper($provincia);?></h2>
 		 <p hidden id='id_centro'><?php echo $_SESSION['id_centro'];?></p> 
@@ -119,9 +127,9 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
 				 echo '<a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_sor">Listado Numero aleatorio fase2</a>';
             }
              if($listado=='')
-				   echo '<a class="lfase2 dropdown-item" target="_blank" href="'.$listado.'">Listado Definitivo FaseII EBO NO DISPONIBLE</a>';
+				   echo '<a class="lfase2 dropdown-item" target="_blank" href="#">Listado Definitivo FaseII EBO NO DISPONIBLE</a>';
              else
-				   echo '<a class="lfase2 dropdown-item" target="_blank" href="'.$listado.'">Listado Definitivo FaseII EBO</a>';
+				   echo '<a class="lfase2 dropdown-item" target="_blank" href="'.$ficheroebo.'">Listado Definitivo FaseII EBO</a>';
 
       if($_SESSION['rol']!='alumno'){
 				 echo '<a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_ebo">Listado Solicitudes fase2 EBO</a>';
