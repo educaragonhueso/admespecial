@@ -111,11 +111,14 @@ $('body').on('click', '.setrenta', function(e){
 $(".show_tributantes").click(function () {  
   var vpdf='1';
   var vrol=$('#rol').attr("value");
+  var vidcentro=$('#id_centro').text();
+   console.log("idcentro: "+vidcentro);
+  var vprovincia=$('#provincia').attr("value");
   var vestado_convocatoria=$('#estado_convocatoria').val();
 	$.ajax({
 	  method: "POST",
 	  url: "../guarderias/scripts/ajax/listados_tributantes.php",
-	  data: {asignar:'0',rol:vrol,pdf:vpdf,estado_convocatoria:vestado_convocatoria},
+	  data: {asignar:'0',rol:vrol,pdf:vpdf,estado_convocatoria:vestado_convocatoria,id_centro:vidcentro,provincia:vprovincia},
 	  success: function(data) {
 					$("#l_matricula").html(data);
 					$(".container").hide();

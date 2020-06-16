@@ -137,7 +137,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 		}
 		elseif($modo=='tributantes') //listados de tributantes para web
 		{
-			$this->log_listados_tributantes->warning("Cargando datos de tributantes:");
+			$this->log_listados_tributantes->warning("Cargando datos de tributantes , centro/provinciia: $id_centro/$provincia");
 		    	$allsolicitudes=$solicitud->getAllSolTributantes($id_centro,$provincia);
 		}
 	return $allsolicitudes;
@@ -424,7 +424,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
          else $ncentro=0;
 			if(($tipoactual!=$tipoanterior or $ncentro<=1) and $subtipo!='tributantes')
 				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
-			if($alumno_actual!=$alumno_anterior and $subtipo=='sol_tri')
+			if($alumno_actual!=$alumno_anterior and $subtipo=='tributantes')
          {
             $html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'>";
 				$html.="<td><b>".strtoupper($sol->apellido1_alumno)."</b></td>";

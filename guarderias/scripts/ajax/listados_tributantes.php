@@ -18,6 +18,8 @@ $log_listados_tributantes->warning(print_r($_POST,true));
 //VARIABLES
 $dir_pdf=DIR_BASE.'/scripts/datossalida/pdflistados/tributantes/';
 $estado_convocatoria=$_POST['estado_convocatoria'];
+$provincia=$_POST['provincia'];
+$idcentro=$_POST['id_centro'];
 //comprobamos si es el dia de sorteo para la fase 2
 
 //$tipo_listado='solicitudes_fase2';
@@ -36,7 +38,7 @@ $camposdatos="campos_bbdd_".$subtipo_listado;
 //actualizamos el estado del sorteo. 0:no realizado, 1.numero asignado, 2. realizado
 
 //mostramos las solitudes completas sin incluir borrador
-$tributantes=$list->getSolicitudes(1,0,0,$modo='tributantes',$subtipo_listado,'todas',3); 
+$tributantes=$list->getSolicitudes($idcentro,0,0,$modo='tributantes',$subtipo_listado,$provincia,3); 
 
 ######################################################################################
 $log_listados_tributantes->warning("DATOS TRIBUTANTES::");
