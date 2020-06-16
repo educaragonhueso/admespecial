@@ -256,9 +256,18 @@ function recalcular_baremo(id){
 	var baremo2=$('input[id=baremo_tutores_centro'+id+']:checked').attr("data-baremo");
 	var baremo2_validado=$('#baremo_validar_tutores_centro'+id).val();
 
-	var baremo3=$('input[name=baremo_iprem'+id+']:checked').attr("data-baremo");
+	var baremo3=$('input[id=baremo_renta_inferior'+id+']:checked').attr("data-baremo");
+   console.log("baremo3 inicial:"+baremo3);
+   if(baremo3)
+      {
+	   var baremo31=$('input[name=baremo_iprem'+id+']:checked').attr("data-baremo");
+      if(baremo31) 
+         baremo3=parseFloat(baremo31);
+      else baremo3=0;
+      }
 	var baremo3_validado=$('#baremo_validar_renta_inferior'+id).val();
-	var baremo4=$('input[name=baremo_discapacidad'+id+']:checked').attr("data-baremo");
+	
+   var baremo4=$('input[name=baremo_discapacidad'+id+']:checked').attr("data-baremo");
 	var baremo4_validado=$('#baremo_validar_discapacidad'+id).val();
 
 	var baremo5=$('input[name=baremo_tipo_familia'+id+']:checked').attr("data-baremo");
