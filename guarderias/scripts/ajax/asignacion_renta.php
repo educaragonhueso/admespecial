@@ -13,7 +13,7 @@ $result=$conexion->query($sql);
 $conexion->close();
 echo "Consulta".$sql;
 if ($result)
-	print("OK GRABANDO RENTA");
+	print("OK GRABANDO RENTA".$sql);
 	else     
 	echo "No results".$sql;
 

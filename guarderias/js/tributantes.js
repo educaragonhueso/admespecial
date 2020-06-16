@@ -1,5 +1,7 @@
 $(document).ready(function(){
-
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
 function isFloat(n){
     return Number(n) === n && n % 1 !== 0;
 }
@@ -12,11 +14,32 @@ $('body').on('change', 'input[id*=importe_renta]', function(e){
 var viprim=parseFloat('6454.03');
 
 vimporte_renta1=$(this).val();
-var reg = /^\d+$/;
-if(!reg.test(vimporte_renta1)){
+if(!isNumber(vimporte_renta1))
+{
+   alert("INTRODUCE VALOR NUMéRICO");
+  return;
+}
+vimporte_renta1=parseFloat(vimporte_renta1);
+/*
+if(!isFloat(vimporte_renta1))
+{
+   alert("INTRODUCE VALOR NUMéRICO");
+  return;
+}
+
+var reg1 = /^\d+$/;
+var reg2 = /^\d+\.+\d+$/;
+if(!reg2.test(vimporte_renta1)){
   alert("INTRODUCE VALOR NUMéRICO");
   return;
 }
+*/  
+/*
+if(!reg1.test(vimporte_renta1) & !reg2.test(vimporte_renta1)){
+  alert("INTRODUCE VALOR NUMéRICO");
+  return;
+}
+*/
 vimporte_renta=parseFloat(vimporte_renta1);
 
 var vid=$(this).attr("id");
@@ -42,6 +65,8 @@ console.log("cuota: "+cuota);
 $('#cuota'+vid).text(cuota);
 $('#cuota'+vid).val(cuota);
 return;
+});
+/*
   vidcentro=$(this).parent('td').parent('tr').parent('tbody').parent('table').attr('id');
   vidcentro=vidcentro.replace('mat_table','');
   var ots = $(this);
@@ -82,8 +107,7 @@ $.ajax({
         alert('Problemas cambiando de estado!');
       }
 });
-
-});
+*/
 //GRABAMOS RENTA TRIBUTANTES
 $('body').on('click', '.setrenta', function(e){
   var vrol=$('#rol').attr("value");
@@ -93,6 +117,20 @@ $('body').on('click', '.setrenta', function(e){
   var vpuntos_renta=$('#puntos_renta'+vid).val();
   var vcuota=$('#cuota'+vid).val();
 
+if(!isNumber(vimporte_renta1))
+{
+   alert("INTRODUCE VALOR NUMéRICO");
+  return;
+}
+vimporte_renta1=parseFloat(vimporte_renta1);
+      
+/*
+  if(!isFloat(vimporte_renta) | !isFloat(vpuntos_renta) | !isFloat(vcuota))
+   {
+   alert("DEBES INTRODUCIR VALORES NUMERICOS");
+   return;
+   }
+*/
   var vestado_convocatoria=$('#estado_convocatoria').val();
 	$.ajax({
 	  method: "POST",
@@ -103,7 +141,7 @@ $('body').on('click', '.setrenta', function(e){
    	alert('Grabada Renta ALumno');
 	      },
 	      error: function() {
-		alert('Error LISTANDO solicitudes: ');
+		   alert('Error LISTANDO solicitudes: ');
 	      }
 	});
 });

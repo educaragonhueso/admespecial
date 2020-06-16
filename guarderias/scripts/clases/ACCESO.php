@@ -12,18 +12,40 @@ class ACCESO
 	{
 		$this->bd=$bd;
 		$this->c =$this->dbconnect($bd['host'],$bd['user'],$bd['pass']);
+      $this->c->autocommit(FALSE);
 		mysqli_select_db($this->c,$bd['database']);
 		$this->c->set_charset("utf8");
 		$q="SET NAMES 'UTF8'";
 		$this->c->query($q);
 		$this->csv_file=$f;
+      //print($f);exit();
 	}
+  public function insertar_usuario($nusuario)
+  {
+		$clave=rand(1000,99999);
+		$sql="INSERT INTO usuarios values(0,'$nusuario','alumno',md5($clave),$clave)";
+      print($sql);
+      if (mysqli_query($this->c, $sql)) {
+         $id_usuario = mysqli_insert_id($this->c);
+         echo "New record created successfully. Last inserted ID is: " . $id_usuario;
+         } 
+       else 
+       {
+         echo "Error: " . $sql . "<br>" . mysqli_error($this->c);
+       }		
+       if(!$this->c->commit()) 
+       {
+         echo "Commit de insercion usuario fallo";
+         exit();
+       }
+      else return $id_usuario; 
+   }
   public function generar_solicitudes($ns)
 	{
 		//generar usuarios
-		$clave=rand(1000,9999);
-		$nid=60019900;//ultimo usuario
-		$nidal=1;//ultimo alumno
+		$clave=rand(1000,99999);
+		$nid=600000000;//ultimo usuario
+		$nidal=60000;//ultimo alumno
 		$nsol=0;
 		$ndni=35123000;
 		
@@ -221,6 +243,60 @@ class ACCESO
  	fclose($gestor);
 	return $total_filas_insertadas;
 	} 
+  public function carga_alumnos_antiguos_guarderias() 
+	{
+	$total_filas=0;
+	$total_filas_insertadas=0;
+	$total_filas_fallidas=0;
+	if (($gestor = fopen($this->csv_file, "r")) !== FALSE) 
+	{
+		while (($datos = fgetcsv($gestor, 0, "\n")) !== FALSE) 
+		{
+		$matricula = explode(";",$datos[0]);
+		//preparando datos
+      if($matricula[0]=='centro') continue;  
+		$total_filas++;		
+      print_r($matricula);
+		$m_codcentro=utf8_encode($matricula[0]);	
+		$m_apellido1=$matricula[1];	
+		$m_apellido2=$matricula[2];	
+		$m_nombre=$matricula[3];	
+		$m_fnac=$matricula[4];
+		$m_acneae=$matricula[5];
+		$m_tipoestudios=$matricula[6];
+		$m_hore=$matricula[7];
+		$m_hors=$matricula[8];
+		$m_email=$matricula[9];
+	   if($m_email=='') {print("email vacio");return 0;}
+      else 
+      {   
+         $id_usuario=$this->insertar_usuario($m_email);  
+         if($id_usuario!=0)  
+		   {  
+            $sql="insert into alumnos(id_usuario,apellido1,apellido2,nombre,fnac,id_centro_destino,sol_plaza,tipoestudios,hore,hors,email,tipoalumno) values($id_usuario,'$m_apellido1','$m_apellido2','$m_nombre','$m_fnac','$m_codcentro','$m_acneae','$m_tipoestudios','$m_hore','$m_hors','$m_email','anterior')"; 
+         print($sql);
+            if(!$result = mysqli_query($this->c, $sql)) 
+            {
+               print($sql);
+               die(PHP_EOL."Error insertando: ".mysqli_error($this->c));
+            }
+            else	
+            {	
+            if (!$this->c->commit()) 
+               {
+            echo "Commit de insercion guarderia fallo";
+            exit();
+               }
+		      $total_filas_insertadas++;
+		      }	
+		      }
+            else print("error ins usuario");
+      }
+	}
+ 	fclose($gestor);
+	return 1;
+   }
+  } 
   public function carga_matricula() 
 	{
 	$edadtva=21;

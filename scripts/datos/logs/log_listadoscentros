@@ -32380,3 +32380,75 @@
     [type] => 0
 )
 
+[16-Jun-2020 19:04:51] : [WARNING] - CONSULTA CENTROS
+[16-Jun-2020 19:04:51] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[16-Jun-2020 19:04:51] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[16-Jun-2020 19:04:51] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[16-Jun-2020 19:55:07] : [WARNING] - CONSULTA CENTROS
+[16-Jun-2020 19:55:07] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[16-Jun-2020 19:55:07] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[16-Jun-2020 19:55:07] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[16-Jun-2020 19:56:59] : [WARNING] - CONSULTA CENTROS
+[16-Jun-2020 19:56:59] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[16-Jun-2020 19:56:59] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[16-Jun-2020 19:56:59] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[16-Jun-2020 20:22:07] : [WARNING] - CONSULTA CENTROS
+[16-Jun-2020 20:22:07] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[16-Jun-2020 20:22:07] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[16-Jun-2020 20:22:07] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[16-Jun-2020 20:24:43] : [WARNING] - CONSULTA CENTROS
+[16-Jun-2020 20:24:43] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[16-Jun-2020 20:24:43] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[16-Jun-2020 20:24:43] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[16-Jun-2020 20:29:57] : [WARNING] - CONSULTA CENTROS
+[16-Jun-2020 20:29:57] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[16-Jun-2020 20:29:57] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[16-Jun-2020 20:29:57] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
