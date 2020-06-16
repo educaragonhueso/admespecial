@@ -1234,3 +1234,8 @@
 [16-Jun-2020 08:29:18] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=1
 [16-Jun-2020 08:29:18] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
 [16-Jun-2020 08:29:18] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos 
+[16-Jun-2020 08:48:37] : [WARNING] - OBTENIENDO FASE SORTEO
+[16-Jun-2020 08:48:37] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[16-Jun-2020 08:48:37] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=1
+[16-Jun-2020 08:48:37] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[16-Jun-2020 08:48:37] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos 

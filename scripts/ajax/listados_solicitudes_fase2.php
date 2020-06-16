@@ -84,17 +84,20 @@ $solicitudes=$list->getSolicitudes($idcentro,0,0,$modo='fase2',$subtipo_listado,
 $log_listados_solicitudes_fase2->warning("OBTENIDAS $nsolicitudes SOLICITUDES FASE II:");
 $log_listados_solicitudes_fase2->warning(print_r($solicitudes,true));
 ######################################################################################
+     $nombrefichero=$subtipo_listado.'_admin';
 //Si es el listado normal, no hay sorteo
 if($_POST['rol']=='admin' or $_POST['rol']=='sp' or $_POST['rol']=='centro')
 {
    if($_POST['pdf']==1)
    {
+      /*
       if($_POST['rol']=='sp')
          $nombrefichero=$subtipo_listado.'_'.$provincia;
       elseif($_POST['rol']=='centro')
          $nombrefichero=$subtipo_listado.'_'.$idcentro;
       elseif($_POST['rol']=='admin')
          $nombrefichero=$subtipo_listado.'_admin';
+      */
 $log_listados_solicitudes_fase2->warning("GFENERANDO FICHERO $nombrefichero");
          
       $datos=array();

@@ -13582,3 +13582,80 @@
 					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='validada') t2 on t1.nc=t2.nc
 					join
 					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[16-Jun-2020 08:48:37] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600060 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[16-Jun-2020 08:48:37] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600072 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[16-Jun-2020 08:48:37] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=22600084 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[16-Jun-2020 08:48:37] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=44600021 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[16-Jun-2020 08:48:37] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600105 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[16-Jun-2020 08:48:37] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600117 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[16-Jun-2020 08:48:37] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600129 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[16-Jun-2020 08:48:37] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600130 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[16-Jun-2020 08:48:37] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600142 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[16-Jun-2020 08:48:37] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600154 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
+[16-Jun-2020 08:48:37] : [WARNING] - CONSULTA DATOS RESUMEN MATRICULA: 
+					select t1.nc centro,t1.nb borrador,t2.np validada, t3.nd baremada
+					from (select nombre_centro nc,count(*) as nb from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='borrador') t1 
+					join
+					(select nombre_centro nc,count(*) as np from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='validada') t2 on t1.nc=t2.nc
+					join
+					(select nombre_centro nc,count(*) as nd from centros c, alumnos a where a.id_centro_destino=c.id_centro and id_centro=50600166 and fase_solicitud='baremada') t3 on t2.nc=t3.nc
