@@ -77,7 +77,7 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
       echo '</li>';
       }
 
-   if($_SESSION['estado_convocatoria']>=1){?>
+   if($_SESSION['estado_convocatoria']>=1 and $_SESSION['rol']!='alumno'){?>
                             <li class="nav-item active msuperior dropdown" id="msorteo">
 				<?php if($_SESSION['estado_convocatoria']>=21){?>
                                 <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Sorteo</a>

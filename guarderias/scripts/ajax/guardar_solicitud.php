@@ -90,6 +90,10 @@ if(!isset($fsol_salida['cumplen']))
 	$fsol_salida['cumplen']=0;
 if(!isset($fsol_salida['oponenautorizar']))
 	$fsol_salida['oponenautorizar']=0;
+if(!isset($fsol_salida['sol_vacantes']))
+	$fsol_salida['sol_vacantes']=0;
+if(!isset($fsol_salida['sol_plaza']))
+	$fsol_salida['sol_plaza']=0;
 //Si es nueva solicitud
 if($modo=="GRABAR SOLICITUD")
 	{
