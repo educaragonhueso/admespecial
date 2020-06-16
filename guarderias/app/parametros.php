@@ -4,7 +4,7 @@ define("DIR_PROV",DIR_BASE.'/scripts/datossalida/pdflistados/provisionales/');
 define("DIR_PROV_WEB",'/guarderias/scripts/datossalida/pdflistados/provisionales/');
 define("DIR_CSVS_WEB",'/guarderias/scripts/datossalida/listadoscsv/');
 define("DIR_SOR",DIR_BASE.'/scripts/datossalida/pdflistados/sorteo/');
-define("DIR_SOR_WEB",'/scripts/datossalida/pdflistados/sorteo/');
+define("DIR_SOR_WEB",'/guarderias/scripts/datossalida/pdflistados/sorteo/');
 
 //Arrays de campos cabecera para los listados
 //NUMERO ASIGNADO DE SORTEO

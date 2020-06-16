@@ -422,7 +422,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color:#141259;'><td colspan='".$ncolumnas."'><b>".$sol->nombre_centro."</b></td></tr>";
 				}
          else $ncentro=0;
-			if(($tipoactual!=$tipoanterior or $ncentro<=1) and $subtipo!='tributantes')
+			if($tipoactual!=$tipoanterior and $subtipo!='tributantes')
 				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
 			if($alumno_actual!=$alumno_anterior and $subtipo=='tributantes')
          {
