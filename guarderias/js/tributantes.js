@@ -67,13 +67,6 @@ if(!isNumber(vimporte_renta1))
 }
 vimporte_renta1=parseFloat(vimporte_renta1);
       
-/*
-  if(!isFloat(vimporte_renta) | !isFloat(vpuntos_renta) | !isFloat(vcuota))
-   {
-   alert("DEBES INTRODUCIR VALORES NUMERICOS");
-   return;
-   }
-*/
   var vestado_convocatoria=$('#estado_convocatoria').val();
 	$.ajax({
 	  method: "POST",
