@@ -32452,3 +32452,27 @@
     [type] => 0
 )
 
+[17-Jun-2020 04:44:37] : [WARNING] - CONSULTA CENTROS
+[17-Jun-2020 04:44:37] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[17-Jun-2020 04:44:37] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[17-Jun-2020 04:44:37] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[17-Jun-2020 07:23:56] : [WARNING] - CONSULTA CENTROS
+[17-Jun-2020 07:23:56] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[17-Jun-2020 07:23:56] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[17-Jun-2020 07:23:56] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
