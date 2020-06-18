@@ -86,7 +86,6 @@ $(".show_tributantes").click(function () {
   var vpdf='1';
   var vrol=$('#rol').attr("value");
   var vidcentro=$('#id_centro').text();
-   console.log("idcentro: "+vidcentro);
   var vprovincia=$('#provincia').attr("value");
   var vestado_convocatoria=$('#estado_convocatoria').val();
 	$.ajax({

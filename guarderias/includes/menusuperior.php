@@ -88,7 +88,7 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
 				 </div>
 				<?php }?>
                             </li>
-		<?php if(($_SESSION['estado_convocatoria']<=30 and $_SESSION['estado_convocatoria']>22)  or $_SESSION['fase_sorteo']==2 or $_SESSION['rol']=='sp' or $_SESSION['rol']=='admin') {?>
+		<?php if(($_SESSION['estado_convocatoria']<=30 and $_SESSION['estado_convocatoria']>22)  or $_SESSION['fase_sorteo']==2 or $_SESSION['rol']=='sp' or $_SESSION['rol']=='centro' or $_SESSION['rol']=='admin') {?>
              <li class="nav-item active msuperior dropdown" id="mtributantes">
                 <a class="show_tributantes nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdow" href="#">Datos Tributantes</a>
             </li>

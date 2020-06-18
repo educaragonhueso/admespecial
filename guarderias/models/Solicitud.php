@@ -1275,10 +1275,12 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 	{
    if($c==1)
       $sql="SELECT a.id_alumno,c.id_centro,a.puntos_renta,a.importe_renta,a.cuota, a.nombre as nombre_alumno,a.apellido1 as apellido1_alumno,a.apellido2 as apellido2_alumno,a.dni_alumno as dni_alumno,b.nombre as nombre_tributante,b.apellido1 as apellido1_tributante,b.apellido2 as apellido2_tributante,b.dni as dni_tributante,b.parentesco,c.nombre_centro FROM alumnos a, tributantes b,centros c WHERE a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino";
+    elseif($provincia=='todas') //para tributantes de centros q no sean serv provinciales
+      $sql="SELECT a.id_alumno,c.id_centro,a.puntos_renta,a.importe_renta,a.cuota, a.nombre as nombre_alumno,a.apellido1 as apellido1_alumno,a.apellido2 as apellido2_alumno,a.dni_alumno as dni_alumno,b.nombre as nombre_tributante,b.apellido1 as apellido1_tributante,b.apellido2 as apellido2_tributante,b.dni as dni_tributante,b.parentesco,c.nombre_centro FROM alumnos a, tributantes b,centros c WHERE a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino and c.id_centro='$c'";
     else
       $sql="SELECT a.id_alumno,c.id_centro,a.puntos_renta,a.importe_renta,a.cuota, a.nombre as nombre_alumno,a.apellido1 as apellido1_alumno,a.apellido2 as apellido2_alumno,a.dni_alumno as dni_alumno,b.nombre as nombre_tributante,b.apellido1 as apellido1_tributante,b.apellido2 as apellido2_tributante,b.dni as dni_tributante,b.parentesco,c.nombre_centro FROM alumnos a, tributantes b,centros c WHERE a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino and provincia='$provincia' order by c.id_centro desc";
 
-		$this->log_listados_tributantes->warning("CONSULTA TRIBUTANTESS $provincia:  $sql");
+		$this->log_listados_tributantes->warning("CONSULTA TRIBUTANTESS $provincia:  $sql $c");
       $query=$this->db->query($sql);
       if($query)
          while ($row = $query->fetch_object()) 
