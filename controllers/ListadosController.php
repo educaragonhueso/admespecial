@@ -419,8 +419,8 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 					foreach($a as $user) 
 					{
 							$i= $user->id_alumno;
-	$li.="<div class='filasol' id='filasol".$user->id_alumno."'>";
-	$li.="<span id='estado".$user->id_alumno."'>".$user->estado."</span>";
+	                  $li.="<div class='filasol' id='filasol".$user->id_alumno."'>";
+                  	$li.="<span id='estado".$user->id_alumno."'>".$user->estado."</span>";
 							$li.="<span class='calumno dalumno' data-idal='".$i."'>".$user->id_alumno."-".strtoupper($user->apellido1).",";
 							$li.= strtoupper($user->apellido1);
 							$li.='<div class="right" id="'.$user->estado.'"><a  class="btn btn-danger estado" id="'.$i.'" >BORRADOR</a></div>&nbsp

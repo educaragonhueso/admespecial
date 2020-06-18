@@ -437,6 +437,14 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
           	if($rol=='centro') $input="<input type='text' id='importe_renta".$sol->id_alumno."' value='".$sol->importe_renta."' readonly></input>";
           	else $input="<input type='text' id='importe_renta".$sol->id_alumno."' value='".$sol->importe_renta."'></input>";
    			if($rol!='centro') $input.='<button  id="setrenta'.$sol->id_alumno.'"  class="setrenta" value="grabar">Grabar</button> ';
+   			if($rol!='centro') $input.='<label for="check1">No hay datos</label>';
+   			if($rol!='centro')
+            {
+               if($sol->nodatos==1)
+                  $input.='<input type="checkbox"  id="nodatos'.$sol->id_alumno.'"  class="nodatos" value="'.$sol->nodatos.'" checked="checked"> ';
+               else
+                  $input.='<input type="checkbox"  id="nodatos'.$sol->id_alumno.'"  class="nodatos" value="'.$sol->nodatos.'">';
+            }
 			   $html.="<td>".$input."</td>";
 				$html.="<td id='puntos_renta".$sol->id_alumno."' value='".$sol->puntos_renta."'><b>".strtoupper($sol->puntos_renta)."</b></td>";
 				$html.="<td id='cuota".$sol->id_alumno."' value='".$sol->cuota."'>".strtoupper($sol->cuota)."</td>";

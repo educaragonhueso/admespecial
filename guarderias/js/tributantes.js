@@ -58,23 +58,25 @@ $('body').on('click', '.setrenta', function(e){
   vid=vid.replace('setrenta','');
   var vimporte_renta=$('#importe_renta'+vid).val();
   var vpuntos_renta=$('#puntos_renta'+vid).val();
+  if($('#nodatos'+vid).prop("checked")) var vnodatos=1;
+  else var vnodatos=0;
   var vcuota=$('#cuota'+vid).val();
-
-if(!isNumber(vimporte_renta1))
+console.log("nodatos: "+vnodatos);
+if(!isNumber(vimporte_renta))
 {
    alert("INTRODUCE VALOR NUMéRICO");
   return;
 }
-vimporte_renta1=parseFloat(vimporte_renta1);
+vimporte_renta=parseFloat(vimporte_renta);
       
   var vestado_convocatoria=$('#estado_convocatoria').val();
 	$.ajax({
 	  method: "POST",
 	  url: "../guarderias/scripts/ajax/asignacion_renta.php",
-	  data: {rol:vrol,estado_convocatoria:vestado_convocatoria,id_alumno:vid,importe_renta:vimporte_renta,puntos_renta:vpuntos_renta,cuota:vcuota},
+	  data: {rol:vrol,estado_convocatoria:vestado_convocatoria,id_alumno:vid,importe_renta:vimporte_renta,puntos_renta:vpuntos_renta,cuota:vcuota,nodatos:vnodatos},
 	  success: function(data) {
 	   console.log(data);
-   	alert('Grabada Renta ALumno');
+   	alert('Grabados Datos Renta');
 	      },
 	      error: function() {
 		   alert('Error LISTANDO solicitudes: ');

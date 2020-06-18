@@ -8,7 +8,10 @@ $conectar=new Conectar();
 $conexion=$conectar->conexion();
 $centro=new Centro($conexion,$_POST['id_centro'],'ajax');
 
-$sql="UPDATE alumnos set importe_renta='".$_POST['importe_renta']."', cuota='".$_POST['cuota']."', puntos_renta='".$_POST['puntos_renta']."' where id_alumno=".$_POST['id_alumno'];
+if($_POST['nodatos']==1)
+$sql="UPDATE alumnos set nodatos='".$_POST['nodatos']."', importe_renta='0', cuota='0', puntos_renta='0' where id_alumno=".$_POST['id_alumno'];
+else
+$sql="UPDATE alumnos set nodatos='".$_POST['nodatos']."', importe_renta='".$_POST['importe_renta']."', cuota='".$_POST['cuota']."', puntos_renta='".$_POST['puntos_renta']."' where id_alumno=".$_POST['id_alumno'];
 $result=$conexion->query($sql);
 $conexion->close();
 echo "Consulta".$sql;

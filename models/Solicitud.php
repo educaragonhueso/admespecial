@@ -1097,8 +1097,7 @@ $tabla_baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.
 	}
 	public function getAllTributantes($c=1,$tipo=0,$subtipo_listado='',$fase_sorteo=0,$estado_convocatoria=0,$provincia='todas') 
    {
-		$sql="SELECT  t.*,c.nombre_centro FROM alumnos a join tributantes t  on
-a.id_alumno=t.id_alumno join centros c on c.id_centro=a.id_centro_destino";
+		$sql="SELECT  t.*,c.nombre_centro FROM alumnos a join tributantes t  on a.id_alumno=t.id_alumno join centros c on c.id_centro=a.id_centro_destino";
 
       $query=$this->db->query($sql);
       if($query)
