@@ -2,12 +2,6 @@
 define("CONTROLADOR_DEFECTO", "centros");
 define("ACCION_DEFECTO", "index");
 
-/*
-if(isset($_SERVER['CONTEXT_DOCUMENT_ROOT']))
-	define("DIR_BASE",$_SERVER['CONTEXT_DOCUMENT_ROOT']."/");
-else
-	define("DIR_BASE","/datos/www/preadmespecial.aragon.es/public_admespecial/guarderias/");
-*/
 define("DIR_BASE","/datos/www/preadmespecial.aragon.es/public_admespecial/guarderias/");
 define("DIR_CORE",DIR_BASE."/core");
 #define("IPREMOTA","172.27.0.56");

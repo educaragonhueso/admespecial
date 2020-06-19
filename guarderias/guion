@@ -1,5 +1,42 @@
+DOC ADMISION GUARDERIAS 
+
+SECUENCIA ACTUACIÓN 
+
+FASE0: 
+
+   -Previo
+      carga centros
+      carga matricula
+      carga alumnos cero en el centro 1 de admin, para q no de error en la primera insercion
+   
+FASE I:
+
+   Al  finalizar admisión se podrá baremar generan listados provisionales de baremacion
+   Se copia la info a las tablas de provisional/definitivo y se pasa la convocatoria a la fase 2 y 3 resp.
+
+   El dia correspondiente se copia la tabla a provisional, la fase pasará a 2
+   El dia cor. se asigna numero y copia la tabla definitiva, fase 3
+   A las pocas horas se hace el sorteo, pasamos fase4
+
+   scripts:
+            sc_copia_baremada_provisional.php
+            sc_copia_baremada_definitivo.php
+
+
+
+FASE II
+
+FASE III
+
+   Previo recargar coordenadas de centros y alumnos
+   Previo recargar tabla de distancias de centros y alumnos
+
+   scripts:
+            sc_previo_fase3.php
+
 
 PREVIO GUARDERIAS
+#################################################################################################################
 
 INCIDENCIAS GUARDERIAS
 
@@ -13,40 +50,24 @@ MEJORAS PROXIMA VERSION
 -Concurrencia, la creacion de solicitudes debe ser atomica.
 -Poner año nacimiento en el curso, la gente lo confunde con el curso actual
 
+#################################################################################################################
+CODIGO SQL
 
+Tablas baremadas
+
+CREATE TABLE alumnos_baremada_definitivo  SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' order by c.id_centro,a.tipoestudios, a.apellido1,a.nombre,c.id_centro, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc;
+
+
+Hermanos en el centro
+
+select a.id_centro_destino, a.id_alumno,a.nombre,a.apellido1,a.apellido1,b.apellido1,b.apellido2 from alumnos a, alumnos b where  a.apellido1=b.apellido1 and a.apellido2=b.apellido2 and a.fnac=b.fnac and a.id_alumno!=b.id_alumno and a.fase_solicitud!='borrador' and b.fase_solicitud!='borrador';
+
+
+#################################################################################################################
 PREVIO ADMESPECIAL
 
 Carga datos directorio
 /home/preadmpesecialdatos/
-
-
-SECUENCIA ACTUACIÓN 
-
-FASE0: 
-
-   -Previo
-      carga centros
-      carga matricula
-      carga alumnos cero en el centro 1 de admin, para q no de error en la primera insercion
-   
-FASE I:
-
-   Al  finalizar admisión se podrá baremar generan listados provisionales
-
-   scripts:
-            sc_copia_provisional.php
-            sc_copia_definitiva.php
-
-FASE II
-
-FASE III
-
-   Previo recargar coordenadas de centros y alumnos
-   Previo recargar tabla de distancias de centros y alumnos
-
-   scripts:
-            sc_previo_fase3.php
-
 
 INCIDENCIAS ADMISION
 

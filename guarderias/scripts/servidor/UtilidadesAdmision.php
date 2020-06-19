@@ -360,6 +360,16 @@ vacantes_tva_original=".$vac_final_tva.",vacantes_tva=".$vac_final_tva." where i
 		else return $this->con->error;
 
 	}
+  public function copiaTablaBaremada($tdestino,$fase)
+	{
+		//copiamos registros de centros que todavía no han realizado el sorteo o q están en fase menos q 2
+		$delete="delete from $tdestino";
+      $sql="INSERT into $tdestino SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' order by c.id_centro,a.tipoestudios, a.apellido1,a.nombre,c.id_centro, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc";
+		$fase="UPDATE centros set fase_sorteo='$fase'";
+      if($this->con->query($delete) and $this->con->query($sql) and $this->con->query($fase)) return 1;
+		else return $this->con->error;
+
+	}
   public function copiaTablaFase2($tipo,$centro=0)
 	{
 		$tabla="alumnos_".$tipo;

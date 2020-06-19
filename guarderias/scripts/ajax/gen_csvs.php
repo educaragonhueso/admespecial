@@ -83,7 +83,7 @@ if($subtipo_original=='csv_tri')
 	$log_gencsvs->warning("DATOS CSSVS TRIBUTANTES GUARDERIAS: ");
 	$log_gencsvs->warning(print_r($tributantes,true));
    $solicitudes=$tributantes;
-$fcsv=$list->genCsv($tributantes,$id_centro,$subtipo_original,$$cabecera,$$camposdatos,DIR_CSVS);
+   $fcsv=$list->genCsv($tributantes,$id_centro,$subtipo_original,$$cabecera,$$camposdatos,DIR_CSVS);
 }
 else
    $fcsv=$list->genCsv($solicitudes,$id_centro,$subtipo_original,$$cabecera,$$camposdatos,DIR_CSVS);

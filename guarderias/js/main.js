@@ -1215,10 +1215,11 @@ $(".lgenerales").click(function () {
   var vrol=$('#rol').attr("value");
   var vtipo=$(this).attr("data-tipo");
   var vsubtipo=$(this).attr("data-subtipo");
+  var vestado_convocatoria=$('#estado_convocatoria').val();
 $.ajax({
   method: "POST",
   url: "../guarderias/scripts/ajax/listados_generales.php",
-  data: {id_centro:vid_centro,rol:vrol,tipo:vtipo,subtipo:vsubtipo,pdf:vpdf},
+  data: {id_centro:vid_centro,rol:vrol,tipo:vtipo,subtipo:vsubtipo,pdf:vpdf,estado_convocatoria:vestado_convocatoria},
       success: function(data) {
 
 				if(vrol=='centro')

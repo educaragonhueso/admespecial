@@ -11,9 +11,12 @@ define("DIR_SOR_WEB",'/guarderias/scripts/datossalida/pdflistados/sorteo/');
 $campos_cabecera_sor_ale=array('Primer apellido','Segundo apellido','Nombre','Tipo enseñanza','Numero aleatorio');
 $campos_bbdd_sor_ale=array('apellido1','apellido2','nombre','tipoestudios','nasignado');
 
-//SOLICITUDES BAREMADAS
+//SOLICITUDES BAREMADAS PROVISIONALES
 $campos_cabecera_sor_bar=array('Primer apellido','Segundo apellido','Nombre','Numero aleatorio','Total baremo');
 $campos_bbdd_sor_bar=array('apellido1','apellido2','nombre','nasignado','puntos_validados');
+//SOLICITUDES BAREMADAS DEFINITIVAS
+$campos_cabecera_sor_bardef=array('Primer apellido','Segundo apellido','Nombre','Numero aleatorio','Total baremo');
+$campos_bbdd_sor_bardef=array('apellido1','apellido2','nombre','nasignado','puntos_validados');
 
 //DETALLE BAREMO
 $campos_cabecera_sor_det=array('Primer apellido','Segundo apellido','Nombre','Sit Laboral','Tutor en centro','Renta inferior','Discapacidad','Familia','Hermanos');
@@ -29,8 +32,8 @@ $campos_bbdd_csv_fase3=array('tipoestudios','apellido1','apellido2','nombre','lo
 $campos_cabecera_csv_mat=array('Centro','Vacantets 2020','Vacantes 2019','Vacantes 2018');
 $campos_bbdd_csv_mat=array('nombre_centro','vuno','vdos','vtres');
 
-$campos_cabecera_csv_sol=array('Centro','Primer apellido','Segundo apellido','Nombre','Localidad Domicilio','Enseñanza','Fase','Estado','Puntos Validados','Plaza ACNEAE','Vacante','Hermanos admision','Admitido','Numero aleatorio');
-$campos_bbdd_csv_sol=array('nombre_centro','apellido1','apellido2','nombre','loc_dfamiliar','tipoestudios','fase_solicitud','estado_solicitud','puntos_validados','sol_plaza','sol_vacantes','num_hadmision','est_desp_sorteo','nasignado');
+$campos_cabecera_csv_sol=array('Hermanos en admision','Fecha nacimiento','Centro','Primer apellido','Segundo apellido','Nombre','Localidad Domicilio','Enseñanza','Fase','Estado','Puntos Validados','Plaza ACNEAE','Vacante','Admitido','Numero aleatorio');
+$campos_bbdd_csv_sol=array('num_hadmision','fnac','nombre_centro','apellido1','apellido2','nombre','loc_dfamiliar','tipoestudios','fase_solicitud','estado_solicitud','puntos_validados','sol_plaza','sol_vacantes','est_desp_sorteo','nasignado');
 
 $campos_cabecera_csv_tri=array('Nombre Centro','Primer apellido Alumno','Segundo apellido Alumno','Nombre Alumno','Parentesco','Primer apellido tributante','Segundo apellido tributante','Nombre tributante','DNI Tributante');
 $campos_bbdd_csv_tri=array('nombre_centro','apellido1_alumno','apellido2_alumno','nombre_alumno','parentesco','apellido1_tributante','apellido2_tributante','nombre_tributante','dni_tributante');

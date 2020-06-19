@@ -340,7 +340,7 @@ class Centro extends EntidadBase{
 			
 			return  $resultSet;
     }
-    public function setFaseSorteo($f) 
+    public function setFase($f) 
     {
 			$sql="update centros set fase_sorteo='$f' where id_centro='$this->id_centro'";
 
@@ -352,7 +352,7 @@ class Centro extends EntidadBase{
 			return  1;
 			else return 0;
     }
-    public function getFaseSorteo() 
+    public function getFase() 
     {
 			$sql="SELECT fase_sorteo FROM centros WHERE id_centro=$this->id_centro";
 			$query=$this->conexion->query($sql);
@@ -363,7 +363,9 @@ class Centro extends EntidadBase{
 			$query=$this->conexion->query($sql);
 			if($query)
     			{
-			return  $query->fetch_object()->fase_sorteo;
+			$fase=$query->fetch_object()->fase_sorteo;
+			$this->log_sorteo->warning("VALOR OBTENIENDO FASE SORTEO: $fase ");
+			return $fase;
 			}
 			else return 0;
 			

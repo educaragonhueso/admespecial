@@ -83,7 +83,8 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
                                 <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Sorteo</a>
 				 <div class="dropdown-menu">
 				 <a class="lgenerales dropdown-item" href="#" id="sor_ale" data-subtipo="sor_ale" data-tipo="sorteo">Numero aleatorio </a>
-				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_bar">Solicitudes baremadas</a>
+				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_bar">Solicitudes baremadas provisional</a>
+				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_bardef">Solicitudes baremadas definitiva</a>
 				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_det">Detalle baremo</a>
 				 </div>
 				<?php }?>

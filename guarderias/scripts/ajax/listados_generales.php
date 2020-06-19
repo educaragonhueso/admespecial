@@ -20,26 +20,30 @@ $dir_pdf=DIR_BASE.'/scripts/datossalida/pdflistados/';
 $id_centro=$_POST['id_centro'];
 $tipo_listado=$_POST['tipo'];//listados del sorteo, provisionales o definitivos
 $subtipo_listado=$_POST['subtipo'];//dentro de cada tipo, el subtipo de listado
+$estado_convocatoria=$_POST['estado_convocatoria'];//dentro de cada tipo, el subtipo de listado
+
 $filtro_datos='<input type="text" class="form-control" id="filtrosol"  placeholder="Introduce datos del alumno"><small id="emailHelp" class="form-text text-muted"></small>';
 $list=new ListadosController('alumnos');
 $conexion=$list->getConexion();
 $tcentro=new Centro($conexion,$_POST['id_centro'],'ajax');
 $tcentro->setNombre();
-
+$fase=$tcentro->getFase();
 $cabecera="campos_cabecera_".$subtipo_listado;
 $camposdatos="campos_bbdd_".$subtipo_listado;
+$modo='baremadas';
 
 $formato=''; //formato listado en el pdf
 if($subtipo_listado=='sor_ale') $nombre_listado='LISTADO ALUMNOS SEGUN NUMERO ALEATORIO PARA SORTEO';
-if($subtipo_listado=='sor_bar') $nombre_listado='LISTADO SOLICITUDES BAREMADAS';
+if($subtipo_listado=='sor_bar') {$nombre_listado='LISTADO SOLICITUDES BAREMADAS';$modo='baremadas';}
+if($subtipo_listado=='sor_bardef') {$nombre_listado='LISTADO SOLICITUDES BAREMADAS';$modo='baremadasdef';}
 if($subtipo_listado=='sor_det') {$nombre_listado='LISTADO DETALLE BAREMO';$formato='provisional';}
 
 ######################################################################################
-$log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, CENTRO: ".$id_centro);
+$log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, FASE/CENTRO: $fase".$id_centro);
 ######################################################################################
 
 //mostramos las solitudes completas sin incluir borrador
-$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo=3); 
+$solicitudes=$list->getSolicitudes($id_centro,0,$fase,$modo,$subtipo_listado); 
 
 ######################################################################################
 $log_listados_generales->warning("OBTENIDAS SOLICITUDES GENERALES");

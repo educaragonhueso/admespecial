@@ -78,7 +78,29 @@ class ListadosController extends ControladorBase{
 			return 0;
 		}
 	}
-  public function actualizaSolicitudesSorteo($id_centro,$numero,$solicitudes,$nvebo=0,$nvtva=0,$fasecentro=1)
+  public function asignarNumeroHermanos()
+  {
+      $aidsalumnos=array();
+      $aidshermanos=array();
+    	$solicitud=new Solicitud($this->adapter);
+      $aidsalumnos=$solicitud->getAlumnosConHermanos(); 
+			
+      $this->log_sorteo->warning("DATOS HERMANOS:");
+      foreach($aidsalumnos as $al)
+      {
+		      $this->log_sorteo->warning("COMPROBANDO, idalumno: ".$al->id_alumno." ARRAY HERMANOS: ");
+		      $this->log_sorteo->warning(print_r($aidshermanos,true));
+         if(!in_array($al->id_alumno,$aidshermanos))
+         {
+            $this->log_sorteo->warning("DATOS ALUMNO:HERMANO".$al->id_alumno.'-'.$al->idhermano.'inarray: '.in_array($al->id_alumno,$alidshermanos));
+		      $this->log_sorteo->warning(print_r($al,true));
+            //$solicitud->setNumAsignado($al['id_alumno'],$al['nasignadohermano']);
+            array_push($aidshermanos,$al->idhermano);
+         }
+      } 
+
+   }
+   public function actualizaSolicitudesSorteo($id_centro,$numero,$solicitudes,$nvebo=0,$nvtva=0,$fasecentro=1)
 	{
 		//Creamos el objeto solicitud
     		$solicitud=new Solicitud($this->adapter);
@@ -103,9 +125,13 @@ class ListadosController extends ControladorBase{
 	}
   public function getSolicitudes($id_centro=1,$tiposol=0,$fase_sorteo=0,$modo='normal',$subtipo_listado='',$provincia='todas',$estado_convocatoria=0)
 	{
-		$this->log_gencsvs->warning('ENTRANDO EN GETSOLICITUDEs, MODO: '.$modo);
+		$this->log_listados_solicitudes->warning('ENTRANDO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO: '.$subtipo_listado.'/'.$fase_sorteo.'/'.$modo);
 		$solicitud=new Solicitud($this->adapter);
 		if($modo=='normal')// listados previos al sorteo
+    	{
+	    		$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia);
+ 		}
+		if($modo=='baremadas' or $modo=='baremadasdef')// listados previos al sorteo
     	{
 	    		$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia);
  		}

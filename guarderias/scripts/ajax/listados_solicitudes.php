@@ -33,11 +33,12 @@ $tsolicitud=new Solicitud($conexion);
 
 $tcentro->setNombre();
 $nombre_centro=$tcentro->getNombre();
-$fase_sorteo=$tcentro->getFaseSorteo();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
+$fase=$tcentro->getFase();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
 $numero_sorteo=$tcentro->getNumeroSorteo();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
-$nsolicitudes=$tcentro->getNumSolicitudes($id_centro,$fase_sorteo);
+$nsolicitudes=$tcentro->getNumSolicitudes($id_centro,$fase);
 //Segun el estado del sorteo deshabilitamos el sorteo
-if($fase_sorteo<=2) $disabled='';
+//fase 0 inicio, fase 1 inicio en baremacion provisional, fase2 publicadas listado baremacion, fase 3 pub list bar def.
+if($fase<=3) $disabled='';
 else $disabled='disabled';
 
 $form_sorteo_parcial='<div id="form_sorteo_parcial" class="input-group mb-3">
@@ -71,8 +72,8 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
    else   print("<h2 style='text-align:end'>NUMERO DE SORTEO: $numero_sorteo</h2>");
    if($_POST['rol']=='admin')
    {
-	   if($fase_sorteo==1) print($form_sorteo_completo);
-      if($fase_sorteo==2) print($form_sorteo_parcial); //mostramos formulario para hacer el sorteo, ya se han hecjo las asignaciones
+	   if($fase==2) print($form_sorteo_completo);
+      if($fase==3) print($form_sorteo_parcial); //mostramos formulario para hacer el sorteo, ya se han hecjo las asignaciones
    }
 	$centros=$list->getCentrosIds($provincia);	
 	foreach($centros as $centro)
@@ -101,20 +102,20 @@ else//accedemos como centro
 {
 	//SECCION OBTENCION DATOS
 	########################################################################################
-	$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES, FASE: ".$fase_sorteo." ESTADO CONVOCATORIA: $estado_convocatoria");
+	$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES, FASE: ".$fase." ESTADO CONVOCATORIA: $estado_convocatoria");
 	########################################################################################
 	
 	//obtenemos solicitudes normales
-	$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo); 
+	$solicitudes=$list->getSolicitudes($id_centro,0,$fase); 
 	$tablaresumen=$tcentro->getResumen($_POST['rol'],'alumnos');
 	$nombre_centro=$tcentro->getNombre();
 	//SECCION MOSTAR DATOS
 	#Mostramos formulario para el sorteo si es el dia correcto
-        $fase_sorteo=$tcentro->getFaseSorteo();
+        $fase=$tcentro->getFaseSorteo();
 	#Mostramos formulario para el sorteo si es el dia correcto
 
 
-	if($fase_sorteo==0)
+	if($fase==0)
 	{
 			if($_POST['id_centro']!='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
 	//		print($form_nuevasolicitud);
@@ -122,7 +123,7 @@ else//accedemos como centro
 			print($filtro_solicitudes);
 			print($list->showSolicitudes($solicitudes,$_POST['rol']));
 	}
-	elseif($fase_sorteo==1)
+	elseif($fase==1)
    {
          if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
     //     print($form_nuevasolicitud);
@@ -132,7 +133,7 @@ else//accedemos como centro
          print($list->showSolicitudes($solicitudes,$_POST['rol']));
    }
 	//elseif($fase_sorteo==2 and $estado_convocatoria<30)
-	elseif($fase_sorteo>=2)
+	elseif($fase>=2)
 	{
 			//print($menu_provisionales);
          if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));

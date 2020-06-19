@@ -8,6 +8,7 @@ require_once DIR_BASE.'controllers/ListadosController.php';
 require_once DIR_BASE.'controllers/CentrosController.php';
 require_once DIR_BASE.'models/Centro.php';
 require_once DIR_BASE.'scripts/informes/pdf/fpdf/classpdf.php';
+require_once DIR_BASE.'scripts/servidor/UtilidadesAdmision.php';
 require_once DIR_BASE.'models/Solicitud.php';
 
 ########################################################################################
@@ -25,9 +26,10 @@ $list=new ListadosController('alumnos');
 $conexion=$list->getConexion();
 $tcentro=new Centro($conexion,1,'ajax');
 $tsolicitud=new Solicitud($conexion);
-$fase_sorteo=$tcentro->getFaseSorteo();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
-$nsolicitudes=$tcentro->getNumSolicitudes($id_centro,$fase_sorteo);
+$fase=$tcentro->getFase();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
+$nsolicitudes=$tcentro->getNumSolicitudes($id_centro,$fase);
 $ccentros=new CentrosController(0,$conexion);
+$utils=new UtilidadesAdmision($conexion,$ccentros,$tcentro);
 
 //Para el caso de acceso del administrador o servicios provinciales
 if($_POST['rol']=='admin' or $_POST['rol']=='sp')
@@ -39,8 +41,14 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 		$log_sorteo->warning("NUMERO DE SORTEO ASIGNADO");
 		########################################################################################
 		if($list->asignarNumSol($id_centro)!=1){ print("Error asignando numero para el sorteo");exit();}
+		if($list->asignarNumeroHermanos()!=1){ print("Error asignando numero para el sorteo");exit();}
 		//actualizamos el centro para marcar la fase del sorteo
-		$tcentro->setFaseSorteo(2);
+		$tcentro->setFase(3);
+      //copiamos tabla a baremadas definitiva
+
+      //copiar tabla de solicitudes definitivas a la tabla de fase2
+      $res=$utils->copiaTablaBaremada('alumnos_baremada_definitivo','3');
+      
 
 		print("ASIGNACION REALIZADA");
 	}
