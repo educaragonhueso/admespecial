@@ -1176,7 +1176,21 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 			return 0;
 		}
 	}
-	public function setNordensorteo($c=1,$numero=0,$solicitudes=0,$nvebo=0,$nvtva=0,$fasecentro=1) 
+	public function setNumAsignado($al,$na) 
+	{
+		$sql="UPDATE alumnos a set nasignado=$na where id_Alumno=$al";
+
+		$query=$this->db->query($sql);
+		$this->log_sorteo->warning("ACTUALIZADO NASIGNADO ALUMNO $al, NUM: $na, CONSULTA: $sql");
+		if($query)
+			return 1;
+		else 
+		{
+			$this->log_sorteo->warning("ERROR ACTUALIZANDO NASINGADO");
+			return 0;
+		}
+	}
+	public function setNordensorteo($c=1,$numero=0,$solicitudes=0) 
 	{
 		$tabla='alumnos';
 		$resultSet=array();
@@ -1537,6 +1551,19 @@ as nasignado,c.nombre_centro, a.puntos_validados FROM $tabla_alumnos a left join
         $this->id_alumno = $id;
     }
      
+   public function getNumAlHer($idc) 
+   {
+	   $query="SELECT count(*) as nalh from alumnos a, alumnos b where  a.apellido1=b.apellido1 and a.apellido2=b.apellido2 and a.fnac=b.fnac and a.id_alumno!=b.id_alumno and a.fase_solicitud!='borrador' and b.fase_solicitud!='borrador'";
+	   $soldata=$this->db()->query($query);
+	if($soldata->num_rows==0) return 0;
+	if($row = $soldata->fetch_object()) 
+	{
+	 $solSet=$row;
+	return $solSet->nalh;
+	}
+	else return 0;
+    }
+ 
     public function getNombre($idc) {
 	$query="select nombre_centro from centros  where id_centro='".$idc."'";
 	$soldata=$this->db()->query($query);

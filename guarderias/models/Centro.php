@@ -36,7 +36,7 @@ class Centro extends EntidadBase{
     }
     public function getVacantesGuarderias($rol,$idcentro=1) 
 	   {
-			$this->log_matricula->warning("EN CACANTES GUARDERIAS : ");
+			$this->log_matricula->warning("EN vACANTES GUARDERIAS : ");
 			$resultSet=array();
 			if($rol=='admin') 
 				$sql="SELECT sum(vuno) as vuno,sum(vdos) as vdos,sum(vtres) as vtres FROM centros";

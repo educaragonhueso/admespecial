@@ -92,13 +92,13 @@ class ListadosController extends ControladorBase{
 		      $this->log_sorteo->warning(print_r($aidshermanos,true));
          if(!in_array($al->id_alumno,$aidshermanos))
          {
-            $this->log_sorteo->warning("DATOS ALUMNO:HERMANO".$al->id_alumno.'-'.$al->idhermano.'inarray: '.in_array($al->id_alumno,$alidshermanos));
+            $this->log_sorteo->warning("DATOS ALUMNO:HERMANO".$al->id_alumno.'-'.$al->idhermano);
 		      $this->log_sorteo->warning(print_r($al,true));
-            //$solicitud->setNumAsignado($al['id_alumno'],$al['nasignadohermano']);
+            if(!$solicitud->setNumAsignado($al->id_alumno,$al->nasignadohermano)) return 0;
             array_push($aidshermanos,$al->idhermano);
          }
       } 
-
+   return 1;
    }
    public function actualizaSolicitudesSorteo($id_centro,$numero,$solicitudes,$nvebo=0,$nvtva=0,$fasecentro=1)
 	{

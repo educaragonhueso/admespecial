@@ -22,7 +22,6 @@ class Centro extends EntidadBase{
     		}
     public function getIdNombre($n) {
 	$query="select id_centro from centros where nombre_centro='".$n."' and clase_centro='especial' limit 1";
-	$this->log_fase2->warning("CONSULTA IDCENTRO $query");
 	
 	$soldata=$this->conexion->query($query);
 	if($soldata->num_rows==0) return 0;
@@ -69,7 +68,6 @@ class Centro extends EntidadBase{
 	{
 			$sql="select num_sorteo from centros where id_centro=$this->id_centro";
 
-			$this->log_sorteo->warning('CONSULTA OBTENCION NUMERO DE SORTEO: '.$sql);
 
 			$query=$this->conexion->query($sql);
 			if($query)

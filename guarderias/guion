@@ -62,7 +62,8 @@ Hermanos en el centro
 
 select a.id_centro_destino, a.id_alumno,a.nombre,a.apellido1,a.apellido1,b.apellido1,b.apellido2 from alumnos a, alumnos b where  a.apellido1=b.apellido1 and a.apellido2=b.apellido2 and a.fnac=b.fnac and a.id_alumno!=b.id_alumno and a.fase_solicitud!='borrador' and b.fase_solicitud!='borrador';
 
-
+Tabla de alumnos con hermanos, para la asignacion de n aleatorio
+create table alumnos_conhermanos select a.nasignado, a.id_centro_destino, a.id_alumno,a.nombre,a.apellido1,b.nombre as nombrehermano,b.id_alumno as idhermano from alumnos a, alumnos b where  a.apellido1=b.apellido1 and a.apellido2=b.apellido2 and a.fnac=b.fnac and a.id_alumno!=b.id_alumno and a.fase_solicitud!='borrador' and b.fase_solicitud!='borrador';
 #################################################################################################################
 PREVIO ADMESPECIAL
 

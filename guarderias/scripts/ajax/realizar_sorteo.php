@@ -28,6 +28,10 @@ $tcentro=new Centro($conexion,1,'ajax');
 $tsolicitud=new Solicitud($conexion);
 $fase=$tcentro->getFase();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
 $nsolicitudes=$tcentro->getNumSolicitudes($id_centro,$fase);
+$nalumnosconhermanos=$tsolicitud->getNumAlHer($id_centro);
+
+$nsolicitudesneto=$nsolicitudes-$nalumnosconhermanos+1;
+
 $ccentros=new CentrosController(0,$conexion);
 $utils=new UtilidadesAdmision($conexion,$ccentros,$tcentro);
 
@@ -41,7 +45,7 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 		$log_sorteo->warning("NUMERO DE SORTEO ASIGNADO");
 		########################################################################################
 		if($list->asignarNumSol($id_centro)!=1){ print("Error asignando numero para el sorteo");exit();}
-		if($list->asignarNumeroHermanos()!=1){ print("Error asignando numero para el sorteo");exit();}
+		if($list->asignarNumeroHermanos()!=1){ print("Error asignando numero para hermanos del sorteo");exit();}
 		//actualizamos el centro para marcar la fase del sorteo
 		$tcentro->setFase(3);
       //copiamos tabla a baremadas definitiva
@@ -62,16 +66,11 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 		$nsorteo=$_POST['nsorteo'];
 		//Actualizamos el numero de sorteo para el centro
 		if($tcentro->setSorteo($nsorteo,1)==0) {print("ERROR SORTEO"); exit();}
-	/*	
-		$dsorteo=$tcentro->getVacantesGuarderias('admin','');
-		$vuno=$dsorteo[0]->vuno;
-		$vdos=$dsorteo[0]->vdos;
-		$vtres=$dsorteo[0]->vtres;
-	*/	
 		//asignamos numero de orden a las solicitudes segun el numero de sorteo	
-		if($tsolicitud->setNordenSorteoGuarderias($id_centro,$nsorteo,$nsolicitudes)==0) 
+		//if($tsolicitud->setNordenSorteoGuarderias($id_centro,$nsorteo,$nsolicitudes)==0) 
+		if($tsolicitud->setNordenSorteo($id_centro,$nsorteo,$nsolicitudesneto)==0) 
 			print("NO HAY VACANTES<br>");
-		$tcentro->setFaseSorteo(3);
+		$tcentro->setFase(4);
 
 		//para cada centro calculamos solicitudes admitidas
 		//Si hemos llegado al dia d elas provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
@@ -94,12 +93,12 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 			if($nsolicitudescentro==0) continue;
 			$nombrecentro=$centrotmp->getNombre();
 			$log_sorteo->warning("NOMBRE: ".$nombrecentro.PHP_EOL);
-			$log_sorteo->warning("FASE: ".$centrotmp->getFaseSorteo().PHP_EOL);
+			$log_sorteo->warning("FASE: ".$centrotmp->getFase().PHP_EOL);
 			$log_sorteo->warning("NSOLICITUDES: ".$nsolicitudescentro.PHP_EOL);
 			$log_sorteo->warning("ENTRANDO SORTEO TABLA CENTRO: $nombrecentro");
 		
 			if($centrotmp->setSorteo($nsorteo,$id_centro)==0) {print("ERROR SORTEO"); exit();}
-			if(!$centrotmp->setFaseSorteo(3))
+			if(!$centrotmp->setFase(4))
 			{
 
 			 $log_sorteo->warning("ERROR ACT FASE: $nombrecentro");
@@ -117,9 +116,9 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
             exit();
          }
 		}	
-		//copiamos todos los datos a tabla de provisionales	
-		$ct=$tsolicitud->copiaTablaCentro(1,'alumnos_provisional_final');	
-		$log_sorteo->warning("RESULTADO COPIAR TABLA $ct ");
+      //copiar tabla de solicitudes definitivas a la tabla de fase2
+      $res=$utils->copiaTablaBaremada('alumnos_baremada_definitivo','4');
+		$log_sorteo->warning("SORTEO REALIZADO CON EXISTO");
 	}
 }
 else//accedemos como centro
