@@ -45,6 +45,7 @@
             echo '<a class="exportpdf dropdown-item" href="#" id="pdf_usu" data-tipo="pdf" data-subtipo="pdf_usu">Listado usuarios (pdf)  </a>';
                if($_SESSION['rol']=='admin' or $_SESSION['rol']=='sp')
                { 
+                  echo '<a class="dropdown-item" href="/guarderias/documentacion/vac_prov_def.pdf" target="_blank" id="pdf_vacantes" data-tipo="pdf" data-subtipo="pdf_vac">Listado vacantes provisional y definitivo (pdf)  </a>';
                   echo '<a class="exportcsv dropdown-item" href="#" id="csv_mat" data-tipo="csv" data-subtipo="csv_mat">Listado vacantes (csv)  </a>';
                   echo '<a class="exportcsv dropdown-item" href="#"
 id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  </a>';
