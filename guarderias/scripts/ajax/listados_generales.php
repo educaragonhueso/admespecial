@@ -21,6 +21,7 @@ $id_centro=$_POST['id_centro'];
 $tipo_listado=$_POST['tipo'];//listados del sorteo, provisionales o definitivos
 $subtipo_listado=$_POST['subtipo'];//dentro de cada tipo, el subtipo de listado
 $estado_convocatoria=$_POST['estado_convocatoria'];//dentro de cada tipo, el subtipo de listado
+$provincia=$_POST['provincia'];//dentro de cada tipo, el subtipo de listado
 
 $filtro_datos='<input type="text" class="form-control" id="filtrosol"  placeholder="Introduce datos del alumno"><small id="emailHelp" class="form-text text-muted"></small>';
 $list=new ListadosController('alumnos');
@@ -39,11 +40,11 @@ if($subtipo_listado=='sor_bardef') {$nombre_listado='LISTADO SOLICITUDES BAREMAD
 if($subtipo_listado=='sor_det') {$nombre_listado='LISTADO DETALLE BAREMO';$formato='provisional';}
 
 ######################################################################################
-$log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, FASE/CENTRO: $fase".$id_centro);
+$log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, FASE/CENTRO7PROVINCIA: $fase - $id_centro - $provincia");
 ######################################################################################
 
 //mostramos las solitudes completas sin incluir borrador
-$solicitudes=$list->getSolicitudes($id_centro,0,$fase,$modo,$subtipo_listado); 
+$solicitudes=$list->getSolicitudes($id_centro,0,$fase,$modo,$subtipo_listado,$provincia,$estado_convocatoria); 
 
 ######################################################################################
 $log_listados_generales->warning("OBTENIDAS SOLICITUDES GENERALES");

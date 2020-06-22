@@ -30,7 +30,7 @@ $fase=$tcentro->getFase();// FASE0: no realizado, 1, dia sorteo pero asignacione
 $nsolicitudes=$tcentro->getNumSolicitudes($id_centro,$fase);
 $nalumnosconhermanos=$tsolicitud->getNumAlHer($id_centro);
 
-$nsolicitudesneto=$nsolicitudes-$nalumnosconhermanos/33;
+//$nsolicitudesneto=$nsolicitudes-$nalumnosconhermanos/33;
 
 $ccentros=new CentrosController(0,$conexion);
 $utils=new UtilidadesAdmision($conexion,$ccentros,$tcentro);
@@ -67,8 +67,7 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 		//Actualizamos el numero de sorteo para el centro
 		if($tcentro->setSorteo($nsorteo,1)==0) {print("ERROR SORTEO"); exit();}
 		//asignamos numero de orden a las solicitudes segun el numero de sorteo	
-		//if($tsolicitud->setNordenSorteoGuarderias($id_centro,$nsorteo,$nsolicitudes)==0) 
-		if($tsolicitud->setNordenSorteo($id_centro,$nsorteo,$nsolicitudesneto)==0) 
+		if($tsolicitud->setNordenSorteo($id_centro,$nsorteo,$nsolicitudes)==0) 
 			print("NO HAY VACANTES<br>");
 		$tcentro->setFase(4);
 

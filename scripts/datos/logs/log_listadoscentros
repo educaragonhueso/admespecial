@@ -32969,3 +32969,15 @@
 )
 
 [21-Jun-2020 16:44:03] : [WARNING] - CABECERA EN SHOWTABLAS: no
+[22-Jun-2020 11:31:50] : [WARNING] - CONSULTA CENTROS
+[22-Jun-2020 11:31:50] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[22-Jun-2020 11:31:50] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[22-Jun-2020 11:31:50] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+

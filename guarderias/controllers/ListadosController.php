@@ -125,7 +125,7 @@ class ListadosController extends ControladorBase{
 	}
   public function getSolicitudes($id_centro=1,$tiposol=0,$fase_sorteo=0,$modo='normal',$subtipo_listado='',$provincia='todas',$estado_convocatoria=0)
 	{
-		$this->log_listados_solicitudes->warning('ENTRANDO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO: '.$subtipo_listado.'/'.$fase_sorteo.'/'.$modo);
+		$this->log_listados_solicitudes->warning('ENTRANDO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: '.$subtipo_listado.'/'.$fase_sorteo.'/'.$modo.'/'.$provincia);
 		$solicitud=new Solicitud($this->adapter);
 		if($modo=='normal')// listados previos al sorteo
     	{

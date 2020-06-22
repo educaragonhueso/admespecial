@@ -38,7 +38,7 @@ $fase=$tcentro->getFase();// FASE0: no realizado, 1, dia sorteo pero asignacione
 $numero_sorteo=$tcentro->getNumeroSorteo();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
 $nsolicitudes=$tcentro->getNumSolicitudes($id_centro,$fase);
 
-$nsolicitudesneto=$nsolicitudes-$nalumnosconhermanos/2;
+//$nsolicitudesneto=$nsolicitudes-$nalumnosconhermanos/2;
 
 //Segun el estado del sorteo deshabilitamos el sorteo
 //fase 0 inicio, fase 1 inicio en baremacion provisional, fase2 publicadas listado baremacion, fase 3 pub list bar def.
@@ -51,7 +51,7 @@ $form_sorteo_parcial='<div id="form_sorteo_parcial" class="input-group mb-3">
 	<div class="input-group-append">
 		<button class="btn" type="submit" id="boton_realizar_sorteo">Realizar sorteo</button>
 	</div>
-	<input type="text" id="num_sorteo" name="num_sorteo" value="" style="width:400px;" placeholder="NUMERO OBTENIDO, DEBE ESTAR ENTRE 1 y '.$nsolicitudesneto.'" '.$disabled.'>
+	<input type="text" id="num_sorteo" name="num_sorteo" value="" style="width:400px;" placeholder="NUMERO OBTENIDO, DEBE ESTAR ENTRE 1 y '.$nsolicitudes.'" '.$disabled.'>
 	<input type="hidden" id="num_solicitudes" name="num_solicitudes" value="'.$nsolicitudes.'" placeholder="NUMERO OBTENIDO" '.$disabled.'>
 </div>';
 $form_sorteo_completo='<div id="form_sorteo" class="input-group mb-3">
@@ -61,7 +61,7 @@ $form_sorteo_completo='<div id="form_sorteo" class="input-group mb-3">
 	<div class="input-group-append">
 		<button class="btn btn-success" type="submit" id="boton_realizar_sorteo">Realizar sorteo</button>
 	</div>
-	<input type="text" id="num_sorteo" name="num_sorteo" value="" style="width:400px;" placeholder="NUMERO OBTENIDO, DEBE ESTAR ENTRE 1 y '.$nsolicitudesneto.'" disabled>
+	<input type="text" id="num_sorteo" name="num_sorteo" value="" style="width:400px;" placeholder="NUMERO OBTENIDO, DEBE ESTAR ENTRE 1 y '.$nsolicitudes.'" disabled>
 	<input type="hidden" id="num_solicitudes" name="num_solicitudes" value="'.$nsolicitudes.'" placeholder="NUMERO OBTENIDO" disabled>
 </div>';
 

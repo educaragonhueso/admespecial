@@ -1218,10 +1218,11 @@ $(".lgenerales").click(function () {
   var vtipo=$(this).attr("data-tipo");
   var vsubtipo=$(this).attr("data-subtipo");
   var vestado_convocatoria=$('#estado_convocatoria').val();
+  var vprovincia=$('#provincia').attr('value');
 $.ajax({
   method: "POST",
   url: "../guarderias/scripts/ajax/listados_generales.php",
-  data: {id_centro:vid_centro,rol:vrol,tipo:vtipo,subtipo:vsubtipo,pdf:vpdf,estado_convocatoria:vestado_convocatoria},
+  data: {id_centro:vid_centro,rol:vrol,tipo:vtipo,subtipo:vsubtipo,pdf:vpdf,estado_convocatoria:vestado_convocatoria,provincia:vprovincia},
       success: function(data) {
 
 				if(vrol=='centro')
