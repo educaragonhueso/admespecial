@@ -1099,6 +1099,8 @@ $('body').on('click', '.calumno', function(e){
   var vestado_convocatoria=$('#estado_convocatoria').val();
   var vpin=$('#pin').attr("value");
   var vrol=$('#rol').attr("value");
+
+  if(vrol=='alumno') return; 
   var vidcentro=$('#id_centro').text();
   if($('#fsolicitud'+vid).length) 
   	{
