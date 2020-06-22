@@ -1218,7 +1218,8 @@ $(".lgenerales").click(function () {
   var vtipo=$(this).attr("data-tipo");
   var vsubtipo=$(this).attr("data-subtipo");
   var vestado_convocatoria=$('#estado_convocatoria').val();
-  var vprovincia=$('#provincia').attr('value');
+  //provincia para el sp
+   var vprovincia=$('#provincia').attr('value');
 $.ajax({
   method: "POST",
   url: "../guarderias/scripts/ajax/listados_generales.php",
