@@ -8,21 +8,25 @@ FASE0:
       carga centros
       carga matricula
       carga alumnos cero en el centro 1 de admin, para q no de error en la primera insercion
+
+centros estan en fase 0
    
 FASE I:
+
+centros se ponen a fase 1
 
    Al  finalizar admisión se podrá baremar generan listados provisionales de baremacion
    Se copia la info a las tablas de provisional/definitivo y se pasa la convocatoria a la fase 2 y 3 resp.
 
-   El dia correspondiente se copia la tabla a provisional, la fase pasará a 2
-   El dia cor. se asigna numero y copia la tabla definitiva, fase 3
+   El dia correspondiente se copia la tabla a provisional, la fase de los centros pasará a 2
+   El dia cor. se asigna numero y copia la tabla definitiva, fase cnetros 3
    A las pocas horas se hace el sorteo, pasamos fase4
 
    scripts:
             sc_copia_baremada_provisional.php
             sc_copia_baremada_definitivo.php
 
-
+centros se ponen a fase 4
 
 FASE II
 

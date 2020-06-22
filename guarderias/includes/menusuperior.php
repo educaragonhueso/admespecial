@@ -78,15 +78,21 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
       echo '</li>';
       }
 
-   if($_SESSION['estado_convocatoria']>=1 and $_SESSION['rol']!='alumno'){?>
+   if($_SESSION['estado_convocatoria']>=1 and $_SESSION['usuario_autenticado']==1){?>
                             <li class="nav-item active msuperior dropdown" id="msorteo">
 				<?php if($_SESSION['estado_convocatoria']>=21){?>
-                                <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Sorteo</a>
+                                <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Listas baremadas</a>
 				 <div class="dropdown-menu">
+            
+				<?php if($_SESSION['rol']!='alumno'){?>
 				 <a class="lgenerales dropdown-item" href="#" id="sor_ale" data-subtipo="sor_ale" data-tipo="sorteo">Numero aleatorio </a>
 				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_bar">Solicitudes baremadas provisional</a>
 				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_bardef">Solicitudes baremadas definitiva</a>
 				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_det">Detalle baremo</a>
+				<?php }?>
+				<?php if($_SESSION['rol']=='alumno'){?>
+				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_bar">Solicitudes baremadas provisional</a>
+				<?php }?>
 				 </div>
 				<?php }?>
                             </li>
