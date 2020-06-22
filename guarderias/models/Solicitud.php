@@ -1265,12 +1265,19 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
          if($fase_sorteo>=3 and $subtipo_listado=='sor_bardef') $tabla_alumnos='alumnos_baremada_definitivo';
 				$centro='id_centro_destino';
 				//si no son para actualizar el sorteo, listado normal completo.Antes de asignar el numero de sorteo
-				if($fase_sorteo==0 or $fase_sorteo==1)
+				if($fase_sorteo==0)
 				{
 					if($c>1)//para acceso de centros
 						$sql="SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno where $centro=".$c." order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc";
 					else //para acceso de sp y admin
 						$sql="SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios, nasignado, b.puntos_validados, a.id_centro_destino as id_centro,c.nombre_centro as nombre_centro FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino WHERE c.id_centro>1 order by a.id_centro_destino,a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc";
+				}
+				else if($fase_sorteo=1)
+				{
+					if($c>1)//para acceso de centros
+						$sql="SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno where $centro=".$c." and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc";
+					else //para acceso de sp y admin
+						$sql="SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios, nasignado, b.puntos_validados, a.id_centro_destino as id_centro,c.nombre_centro as nombre_centro and fase_solicitud!='borrador' FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino WHERE c.id_centro>1 order by a.id_centro_destino,a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc";
 				}
 				else //En cualquier otro caso mostramos todas menos las q están en fase de borrador
 				{

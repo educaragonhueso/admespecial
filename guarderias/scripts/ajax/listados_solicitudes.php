@@ -38,7 +38,7 @@ $fase=$tcentro->getFase();// FASE0: no realizado, 1, dia sorteo pero asignacione
 $numero_sorteo=$tcentro->getNumeroSorteo();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
 $nsolicitudes=$tcentro->getNumSolicitudes($id_centro,$fase);
 
-$nsolicitudesneto=$nsolicitudes-$nalumnosconhermanos+1;
+$nsolicitudesneto=$nsolicitudes-$nalumnosconhermanos/2;
 
 //Segun el estado del sorteo deshabilitamos el sorteo
 //fase 0 inicio, fase 1 inicio en baremacion provisional, fase2 publicadas listado baremacion, fase 3 pub list bar def.
@@ -115,7 +115,7 @@ else//accedemos como centro
 	$nombre_centro=$tcentro->getNombre();
 	//SECCION MOSTAR DATOS
 	#Mostramos formulario para el sorteo si es el dia correcto
-        $fase=$tcentro->getFaseSorteo();
+   $fase=$tcentro->getFase();
 	#Mostramos formulario para el sorteo si es el dia correcto
 
 

@@ -30,7 +30,7 @@ $fase=$tcentro->getFase();// FASE0: no realizado, 1, dia sorteo pero asignacione
 $nsolicitudes=$tcentro->getNumSolicitudes($id_centro,$fase);
 $nalumnosconhermanos=$tsolicitud->getNumAlHer($id_centro);
 
-$nsolicitudesneto=$nsolicitudes-$nalumnosconhermanos+1;
+$nsolicitudesneto=$nsolicitudes-$nalumnosconhermanos/33;
 
 $ccentros=new CentrosController(0,$conexion);
 $utils=new UtilidadesAdmision($conexion,$ccentros,$tcentro);
