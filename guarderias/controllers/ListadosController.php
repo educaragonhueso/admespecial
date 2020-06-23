@@ -413,7 +413,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 	$centroanterior='';
 	$centroactual='';
 	$tipoanterior='';
-	$tipoactualactual='';
+	$tipoactual='';
 	$alumno_anterior='';
 	$alumno_actual='';
 

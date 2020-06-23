@@ -80764,3 +80764,594 @@
 [23-Jun-2020 07:50:48] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 22600060, FASE: 2
 [23-Jun-2020 07:50:48] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=22600060 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
 [23-Jun-2020 07:50:48] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 08:02:38] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 22600060 - todas
+[23-Jun-2020 08:02:38] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=22600060
+[23-Jun-2020 08:02:38] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=22600060
+[23-Jun-2020 08:02:38] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_bardef/2/baremadasdef/todas
+[23-Jun-2020 08:02:38] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 22600060, FASE: 2, PRONVICIA: todas
+[23-Jun-2020 08:02:38] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 22600060, FASE: 2
+[23-Jun-2020 08:02:38] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=22600060 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 08:02:38] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 08:02:41] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 22600060 - todas
+[23-Jun-2020 08:02:41] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=22600060
+[23-Jun-2020 08:02:41] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=22600060
+[23-Jun-2020 08:02:41] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_bar/2/baremadas/todas
+[23-Jun-2020 08:02:41] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 22600060, FASE: 2, PRONVICIA: todas
+[23-Jun-2020 08:02:41] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 22600060, FASE: 2
+[23-Jun-2020 08:02:41] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_provisional a where id_centro_destino=22600060 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 08:02:41] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 08:28:12] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 08:28:12] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 08:28:12] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 08:28:12] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 22600060, FASE: 2, PRONVICIA: todas
+[23-Jun-2020 08:28:12] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 22600060, FASE: 2
+[23-Jun-2020 08:28:12] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=22600060 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 08:57:48] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600166 - todas
+[23-Jun-2020 08:57:48] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600166
+[23-Jun-2020 08:57:48] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600166
+[23-Jun-2020 08:57:48] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_bar/2/baremadas/todas
+[23-Jun-2020 08:57:48] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas
+[23-Jun-2020 08:57:48] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 08:57:48] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_provisional a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 08:57:48] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 09:00:22] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600166 - todas
+[23-Jun-2020 09:00:22] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600166
+[23-Jun-2020 09:00:22] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600166
+[23-Jun-2020 09:00:22] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_bar/2/baremadas/todas
+[23-Jun-2020 09:00:22] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas
+[23-Jun-2020 09:00:22] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 09:00:22] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_provisional a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 09:00:22] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 09:42:57] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 1 - todas
+[23-Jun-2020 09:42:57] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo
+[23-Jun-2020 09:42:57] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador'
+[23-Jun-2020 09:42:57] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_bardef/2/baremadasdef/todas
+[23-Jun-2020 09:42:57] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 1, FASE: 2, PRONVICIA: todas
+[23-Jun-2020 09:42:57] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 1, FASE: 2
+[23-Jun-2020 09:42:57] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0)as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral,a.id_centro_destino as id_centro,c.nombre_centro as nombre_centro FROM alumnos_baremada_definitivo a left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' order by c.id_centro,a.tipoestudios, a.apellido1,a.nombre,c.id_centro, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 09:42:57] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: admin
+[23-Jun-2020 09:46:48] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT distinct(id_centro) from centros where id_centro not in(-3,-2,-1,1)
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 09:46:48] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600060
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 09:46:48] : [WARNING] - LA PAZ
+[23-Jun-2020 09:46:48] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LA PAZ
+            [borrador] => 5
+            [validada] => 3
+            [baremada] => 86
+        )
+
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 09:46:48] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600072
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 09:46:48] : [WARNING] - NUESTRA SEÑORA DE SAN LORENZO
+[23-Jun-2020 09:46:48] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE SAN LORENZO
+            [borrador] => 7
+            [validada] => 0
+            [baremada] => 142
+        )
+
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 09:46:48] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22600084
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 09:46:48] : [WARNING] - NUESTRA SEÑORA DE LA ALEGRÍA
+[23-Jun-2020 09:46:48] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DE LA ALEGRÍA
+            [borrador] => 2
+            [validada] => 0
+            [baremada] => 47
+        )
+
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 09:46:48] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44600021
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 09:46:48] : [WARNING] - SANTO ÁNGEL CUSTODIO
+[23-Jun-2020 09:46:48] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTO ÁNGEL CUSTODIO
+            [borrador] => 4
+            [validada] => 2
+            [baremada] => 118
+        )
+
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 09:46:48] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600105
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 09:46:48] : [WARNING] - NUESTRA SEÑORA DEL CARMEN
+[23-Jun-2020 09:46:48] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => NUESTRA SEÑORA DEL CARMEN
+            [borrador] => 4
+            [validada] => 0
+            [baremada] => 62
+        )
+
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 09:46:48] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600117
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 09:46:48] : [WARNING] - VIRGEN DE LA OLIVA
+[23-Jun-2020 09:46:48] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => VIRGEN DE LA OLIVA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 46
+        )
+
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 09:46:48] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600129
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 09:46:48] : [WARNING] - SAN ANTONIO DE PADUA
+[23-Jun-2020 09:46:48] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN ANTONIO DE PADUA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 9
+        )
+
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 09:46:48] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600130
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 09:46:48] : [WARNING] - ARAGÓN
+[23-Jun-2020 09:46:48] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ARAGÓN
+            [borrador] => 9
+            [validada] => 0
+            [baremada] => 96
+        )
+
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 09:46:48] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600142
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 09:46:48] : [WARNING] - INMACULADA CONCEPCIÓN
+[23-Jun-2020 09:46:48] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => INMACULADA CONCEPCIÓN
+            [borrador] => 17
+            [validada] => 0
+            [baremada] => 168
+        )
+
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 09:46:48] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600154
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 09:46:48] : [WARNING] - MONSALUD
+[23-Jun-2020 09:46:48] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MONSALUD
+            [borrador] => 9
+            [validada] => 2
+            [baremada] => 118
+        )
+
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 09:46:48] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50600166
+)
+
+[23-Jun-2020 09:46:48] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 09:46:48] : [WARNING] - SANTA MARÍA DEL PILAR
+[23-Jun-2020 09:46:48] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SANTA MARÍA DEL PILAR
+            [borrador] => 13
+            [validada] => 0
+            [baremada] => 130
+        )
+
+)
+
+[23-Jun-2020 09:46:49] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/0/normal/todas
+[23-Jun-2020 09:46:49] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 22600060, FASE: 0, PRONVICIA: todas
+[23-Jun-2020 09:46:49] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 22600060, FASE: 0
+[23-Jun-2020 09:46:49] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=22600060 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:24:12] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:24:12] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:24:12] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:24:12] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600142, FASE: 2, PRONVICIA: todas
+[23-Jun-2020 10:24:12] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600142, FASE: 2
+[23-Jun-2020 10:24:12] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600142 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:24:16] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600142 - todas
+[23-Jun-2020 10:24:16] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600142
+[23-Jun-2020 10:24:16] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600142
+[23-Jun-2020 10:24:16] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_det/2/baremadas/todas
+[23-Jun-2020 10:24:16] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600142, FASE: 2, PRONVICIA: todas
+[23-Jun-2020 10:24:16] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600142, FASE: 2
+[23-Jun-2020 10:24:16] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos a where id_centro_destino=50600142 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:24:16] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:25:10] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:25:10] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:25:10] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:25:10] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600142, FASE: 2, PRONVICIA: todas
+[23-Jun-2020 10:25:10] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600142, FASE: 2
+[23-Jun-2020 10:25:10] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600142 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:25:12] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600142 - todas
+[23-Jun-2020 10:25:12] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600142
+[23-Jun-2020 10:25:12] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600142
+[23-Jun-2020 10:25:12] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_det/2/baremadas/todas
+[23-Jun-2020 10:25:12] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600142, FASE: 2, PRONVICIA: todas
+[23-Jun-2020 10:25:12] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600142, FASE: 2
+[23-Jun-2020 10:25:12] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos a where id_centro_destino=50600142 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:25:12] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:31:48] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:31:48] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:31:48] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:31:48] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600142, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 10:31:48] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600142, FASE: 2
+[23-Jun-2020 10:31:48] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600142 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:31:49] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_det/2/baremadas/todas
+[23-Jun-2020 10:31:49] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600142, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_det
+[23-Jun-2020 10:31:49] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600142, FASE: 2
+[23-Jun-2020 10:31:49] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos a where id_centro_destino=50600142 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:31:49] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:33:51] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:33:51] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:33:51] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:33:51] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600142, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 10:33:51] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600142, FASE: 2
+[23-Jun-2020 10:33:51] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600142 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:33:53] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_det/2/baremadas/todas
+[23-Jun-2020 10:33:53] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600142, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_det
+[23-Jun-2020 10:33:53] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600142, FASE: 2
+[23-Jun-2020 10:33:53] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600142 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:33:53] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:48:44] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:48:44] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:48:44] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:48:44] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 10:48:44] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:48:44] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:48:48] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_bar/2/baremadas/todas
+[23-Jun-2020 10:48:48] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_bar
+[23-Jun-2020 10:48:48] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:48:48] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_provisional a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:48:48] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:51:22] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_det/2/baremadas/todas
+[23-Jun-2020 10:51:22] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_det
+[23-Jun-2020 10:51:22] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:51:22] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:51:22] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:52:53] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:52:53] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:52:53] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:52:53] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 10:52:53] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:52:53] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:52:55] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_bar/2/baremadas/todas
+[23-Jun-2020 10:52:55] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_bar
+[23-Jun-2020 10:52:55] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:52:55] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_provisional a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:52:55] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:53:03] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600166 - todas
+[23-Jun-2020 10:53:03] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600166
+[23-Jun-2020 10:53:03] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600166
+[23-Jun-2020 10:53:03] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_bardef/2/baremadasdef/todas
+[23-Jun-2020 10:53:03] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_bardef
+[23-Jun-2020 10:53:03] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:53:03] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:53:03] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:53:09] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:53:09] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:53:09] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:53:09] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 10:53:09] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:53:09] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:53:18] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:53:18] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:53:18] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:53:18] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 10:53:18] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:53:18] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:53:20] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_bar/2/baremadas/todas
+[23-Jun-2020 10:53:20] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_bar
+[23-Jun-2020 10:53:20] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:53:20] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_provisional a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:53:20] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:53:24] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600166 - todas
+[23-Jun-2020 10:53:24] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600166
+[23-Jun-2020 10:53:24] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600166
+[23-Jun-2020 10:53:24] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_bardef/2/baremadasdef/todas
+[23-Jun-2020 10:53:24] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_bardef
+[23-Jun-2020 10:53:24] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:53:24] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:53:24] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:53:27] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600166 - todas
+[23-Jun-2020 10:53:27] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600166
+[23-Jun-2020 10:53:27] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600166
+[23-Jun-2020 10:53:27] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_det/2/baremadas/todas
+[23-Jun-2020 10:53:27] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_det
+[23-Jun-2020 10:53:27] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:53:27] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:53:28] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:53:34] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:53:34] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:53:34] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:53:34] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 10:53:34] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:53:34] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:53:43] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:53:43] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:53:43] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:53:43] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 10:53:43] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:53:43] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:53:47] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600166 - todas
+[23-Jun-2020 10:53:47] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600166
+[23-Jun-2020 10:53:47] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600166
+[23-Jun-2020 10:53:47] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_bardef/2/baremadasdef/todas
+[23-Jun-2020 10:53:47] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_bardef
+[23-Jun-2020 10:53:47] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:53:47] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:53:47] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:53:50] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600166 - todas
+[23-Jun-2020 10:53:50] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600166
+[23-Jun-2020 10:53:50] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600166
+[23-Jun-2020 10:53:50] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_det/2/baremadas/todas
+[23-Jun-2020 10:53:50] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_det
+[23-Jun-2020 10:53:50] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:53:50] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:53:50] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:53:58] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:53:58] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:53:58] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:53:58] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 10:53:58] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:53:58] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:54:10] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600166 - todas
+[23-Jun-2020 10:54:10] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600166
+[23-Jun-2020 10:54:10] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600166
+[23-Jun-2020 10:54:10] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_bardef/2/baremadasdef/todas
+[23-Jun-2020 10:54:10] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_bardef
+[23-Jun-2020 10:54:10] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:54:10] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:54:10] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:54:12] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600166 - todas
+[23-Jun-2020 10:54:12] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600166
+[23-Jun-2020 10:54:12] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600166
+[23-Jun-2020 10:54:12] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_det/2/baremadas/todas
+[23-Jun-2020 10:54:12] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_det
+[23-Jun-2020 10:54:12] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:54:12] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:54:12] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:54:15] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:54:15] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:54:15] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:54:15] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 10:54:15] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:54:15] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:54:23] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:54:23] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:54:23] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:54:23] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 10:54:23] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:54:23] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:54:26] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600166 - todas
+[23-Jun-2020 10:54:26] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600166
+[23-Jun-2020 10:54:26] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600166
+[23-Jun-2020 10:54:26] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_det/2/baremadas/todas
+[23-Jun-2020 10:54:26] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_det
+[23-Jun-2020 10:54:26] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:54:26] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:54:26] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:54:41] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:54:41] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:54:41] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:54:41] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 10:54:41] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:54:41] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:57:32] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600166 - todas
+[23-Jun-2020 10:57:32] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600166
+[23-Jun-2020 10:57:32] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600166
+[23-Jun-2020 10:57:32] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_det/2/baremadas/todas
+[23-Jun-2020 10:57:32] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_det
+[23-Jun-2020 10:57:32] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:57:32] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:57:32] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:58:08] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:58:08] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:58:08] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:58:08] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 10:58:08] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:58:08] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:58:18] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 10:58:18] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 10:58:18] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 10:58:18] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 10:58:18] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:58:18] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:58:22] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600166 - todas
+[23-Jun-2020 10:58:22] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600166
+[23-Jun-2020 10:58:22] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600166
+[23-Jun-2020 10:58:22] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_det/2/baremadas/todas
+[23-Jun-2020 10:58:22] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_det
+[23-Jun-2020 10:58:22] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:58:22] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:58:22] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 10:58:25] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600166 - todas
+[23-Jun-2020 10:58:25] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600166
+[23-Jun-2020 10:58:25] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600166
+[23-Jun-2020 10:58:25] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_det/2/baremadas/todas
+[23-Jun-2020 10:58:25] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_det
+[23-Jun-2020 10:58:25] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 10:58:25] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600166 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 10:58:25] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 11:02:40] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 11:02:40] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 11:02:40] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 11:02:40] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 11:02:40] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 11:02:40] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 11:02:53] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 11:02:53] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 11:02:53] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 11:02:53] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 11:02:53] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 11:02:53] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 11:03:33] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 11:03:33] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 11:03:33] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 11:03:33] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 11:03:33] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 11:03:33] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 11:04:48] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 11:04:48] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 11:04:48] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 11:04:48] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 11:04:48] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 11:04:48] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 11:04:57] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 11:04:57] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 11:04:57] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 11:04:57] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 11:04:57] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 11:04:57] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 11:05:29] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 11:05:29] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 11:05:29] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 11:05:29] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 11:05:29] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 11:05:29] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 11:05:37] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 11:05:37] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 11:05:37] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 11:05:37] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600166, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 11:05:37] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600166, FASE: 2
+[23-Jun-2020 11:05:37] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600166 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 11:11:00] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 11:11:00] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 11:11:00] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 11:11:00] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600154, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 11:11:00] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600154, FASE: 2
+[23-Jun-2020 11:11:00] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 11:11:06] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600154 - todas
+[23-Jun-2020 11:11:06] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600154
+[23-Jun-2020 11:11:06] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600154
+[23-Jun-2020 11:11:06] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_det/2/baremadas/todas
+[23-Jun-2020 11:11:06] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600154, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_det
+[23-Jun-2020 11:11:06] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600154, FASE: 2
+[23-Jun-2020 11:11:06] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600154 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 11:11:06] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 11:11:12] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 11:11:12] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 11:11:12] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 11:11:12] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600154, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 11:11:12] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600154, FASE: 2
+[23-Jun-2020 11:11:12] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 11:11:24] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: centro
+[23-Jun-2020 11:11:24] : [WARNING] - OBTENIENDO SOLICITUDES, FASE: 2 ESTADO CONVOCATORIA: 22
+[23-Jun-2020 11:11:24] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: normal/2/normal/todas
+[23-Jun-2020 11:11:24] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600154, FASE: 2, PRONVICIA: todas, SUBTIPO: normal
+[23-Jun-2020 11:11:24] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600154, FASE: 2
+[23-Jun-2020 11:11:24] : [WARNING] - SELECT a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_destino=50600154 order by a.tipoestudios, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 11:11:28] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600154 - todas
+[23-Jun-2020 11:11:28] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600154
+[23-Jun-2020 11:11:28] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600154
+[23-Jun-2020 11:11:28] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_det/2/baremadas/todas
+[23-Jun-2020 11:11:28] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600154, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_det
+[23-Jun-2020 11:11:28] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600154, FASE: 2
+[23-Jun-2020 11:11:28] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600154 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 11:11:28] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 11:11:34] : [WARNING] - COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:alumnos_baremada_definitivo -  2 - 50600154 - todas
+[23-Jun-2020 11:11:34] : [WARNING] - CONSULTA BORRADO: delete from alumnos_baremada_definitivo where id_centro_destino=50600154
+[23-Jun-2020 11:11:34] : [WARNING] - CONSULTA INSERCION: INSERT into alumnos_baremada_definitivo SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=50600154
+[23-Jun-2020 11:11:34] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_bardef/2/baremadasdef/todas
+[23-Jun-2020 11:11:34] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600154, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_bardef
+[23-Jun-2020 11:11:34] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600154, FASE: 2
+[23-Jun-2020 11:11:34] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_definitivo a where id_centro_destino=50600154 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 11:11:34] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros
+[23-Jun-2020 11:11:37] : [WARNING] - ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: sor_bar/2/baremadas/todas
+[23-Jun-2020 11:11:37] : [WARNING] - LLEGANDOO A BAREMADAS CENTRO: 50600154, FASE: 2, PRONVICIA: todas, SUBTIPO: sor_bar
+[23-Jun-2020 11:11:37] : [WARNING] - CONSULTAA SOLICITUDES BAREMADAS CENTRO: 50600154, FASE: 2
+[23-Jun-2020 11:11:37] : [WARNING] - SELECT IF(a.num_hadmision>=1,1,0) as num_hadmision,a.fnac,a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado, a.puntos_validados,a.proximidad_domicilio,a.tutores_centro,a.renta_inferior,a.discapacidad,a.tipo_familia,a.hermanos_centro,a.sitlaboral FROM alumnos_baremada_provisional a where id_centro_destino=50600154 and fase_solicitud!='borrador' order by a.tipoestudios, a.apellido1,a.nombre, a.transporte desc,a.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 11:11:37] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vuno,vdos,vtres FROM centros

@@ -45,12 +45,15 @@ if($subtipo_listado=='sor_bardef') {$nombre_listado='LISTADO SOLICITUDES BAREMAD
 if($subtipo_listado=='sor_det') {$nombre_listado='LISTADO DETALLE BAREMO';$formato='provisional';}
 
 ######################################################################################
-$log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALESS, FASE/CENTRO/PROVINCIA: $fase - $id_centro - $provincia");
+$log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALESS, SUBTIPO/FASE/CENTRO/PROVINCIA: $subtipo_listado -  $fase - $id_centro - $provincia");
 ######################################################################################
 
-//copiamos tabla de defintivas baremadas para ese centro
-$res=$utils->copiaTablaBaremada('alumnos_baremada_definitivo','2',$id_centro,'todas');
-
+//copiamos tabla de defintivas baremadas para ese centro siempre q sea para definitivos o datos de detalle de baremo
+if($subtipo_listado=='sor_bardef' or $subtipo_listado=='sor_det')
+   {
+   $log_listados_generales->warning("COPIANDO TABLA DEIFNITIVO: $subtipo_listado -  $fase - $id_centro - $provincia");
+   $res=$utils->copiaTablaBaremada('alumnos_baremada_definitivo','2',$id_centro,'todas');
+   }
 //mostramos las solitudes completas sin incluir borrador
 $solicitudes=$list->getSolicitudes($id_centro,0,$fase,$modo,$subtipo_listado,$provincia,$estado_convocatoria); 
 
@@ -92,7 +95,7 @@ if($_POST['pdf']==1)
 
 if($subtipo_listado=='sor_ale') $subtipo='Nº ALEATORIO';
 if($subtipo_listado=='sor_bar') $subtipo='SOLICITUDES BAREMADAS';
-if($subtipo_listado=='sor_bar') $subtipo='SOLICITUDES DETALLE BAREMO';
+if($subtipo_listado=='sor_det') $subtipo='SOLICITUDES DETALLE BAREMO';
 
 print("<button type='button' class='btn btn-info' onclick='window.open(\"".DIR_SOR_WEB.$subtipo_listado.".pdf\",\"_blank\");'>Descarga listado</button>");
 print($filtro_datos);

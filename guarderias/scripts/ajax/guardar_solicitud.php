@@ -79,6 +79,8 @@ if(!isset($fsol_salida['baremo_tutores_centro']))
 	$fsol_salida['baremo_tutores_centro']=0;
 if(!isset($fsol_salida['baremo_renta_inferior']))
 	$fsol_salida['baremo_renta_inferior']=0;
+if(!isset($fsol_salida['baremo_sitlaboral']))
+	$fsol_salida['baremo_sitlaboral']=0;
 //comprobamos los campos tipo check: padres trabajan en el cenntro y renta inferior
 if(!isset($fsol_salida['nuevaesc']))
 	$fsol_salida['nuevaesc']=0;

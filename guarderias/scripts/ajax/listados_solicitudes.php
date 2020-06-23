@@ -98,6 +98,7 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 	$log_listado_solicitudes->warning(print_r($tablaresumen,true));
 	########################################################################################
 	
+print($filtro_solicitudes);
 	print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$centro->id_centro));
 	print('<br>');
 	}
@@ -142,6 +143,7 @@ else//accedemos como centro
 			//print($menu_provisionales);
          if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
        //  if($estado_convocatoria<=30) print($form_nuevasolicitud);
+print($filtro_solicitudes);
 			print($list->showSolicitudes($solicitudes,$_POST['rol']));
 	}
 }

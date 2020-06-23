@@ -1260,10 +1260,10 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
 
 	}
 	public function getAllSolSorteo($c=1,$tipo=0,$fase_sorteo=0,$subtipo_listado='normal',$provincia='todas',$tabla_alumnos='alumnos') {
-				$this->log_listado_solicitudes->warning("LLEGANDOO A BAREMADAS CENTRO: $c, FASE: $fase_sorteo, PRONVICIA: $provincia");
+				$this->log_listado_solicitudes->warning("LLEGANDOO A BAREMADAS CENTRO: $c, FASE: $fase_sorteo, PRONVICIA: $provincia, SUBTIPO: $subtipo_listado");
         $resultSet=array();
-         if($fase_sorteo>=2 and $subtipo_listado=='sor_bar') $tabla_alumnos='alumnos_baremada_provisional';
-         if($subtipo_listado=='sor_bardef') $tabla_alumnos='alumnos_baremada_definitivo';
+         if($fase_sorteo>=2 and ($subtipo_listado=='sor_bar' or $subtipo_listado=='sor_det')) $tabla_alumnos='alumnos_baremada_provisional';
+         if($subtipo_listado=='sor_bardef' or $subtipo_listado=='sor_det') $tabla_alumnos='alumnos_baremada_definitivo';
 				$centro='id_centro_destino';
 				//si no son para actualizar el sorteo o son las normales listado normal completo.Antes de asignar el numero de sorteo
 				if($fase_sorteo==0 or $subtipo_listado=='normal')

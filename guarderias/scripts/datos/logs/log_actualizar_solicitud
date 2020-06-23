@@ -4663,3 +4663,1985 @@
 [23-Jun-2020 06:59:03] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
 [23-Jun-2020 06:59:03] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
 [23-Jun-2020 06:59:03] : [WARNING] - select nombre_centro from centros c where c.id_centro='22600060'
+[23-Jun-2020 10:16:34] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 10:16:34] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 10:16:34] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 10:16:34] : [WARNING] - select nombre_centro from centros c where c.id_centro='22600060'
+[23-Jun-2020 10:53:13] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 10:53:13] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 10:53:13] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 10:53:13] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600166'
+[23-Jun-2020 10:53:17] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[23-Jun-2020 10:53:17] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=4&baremo_puntos_validados=0&baremo_sitlaboral=1&baremo_validar_sitlaboral=0&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=
+[23-Jun-2020 10:53:17] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[23-Jun-2020 10:53:17] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=4&baremo_puntos_validados=0&baremo_sitlaboral=1&baremo_validar_sitlaboral=0&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&baremo_ptstotal=
+[23-Jun-2020 10:53:17] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 22 
+[23-Jun-2020 10:53:17] : [WARNING] - {"fase_solicitud9816":"baremada","estado_solicitud9816":"apta","apellido1":"ADIEGO","apellido2":"FASIUS","nombre":"ALEJANDRO","dni_alumno":"nodata","fnac":"2019-03-29","nacionalidad":"ESPA\u00d1OLA","datos_tutor1":"JESUS ADIEGO BALLARIN","dni_tutor1":"72972627K","datos_tutor2":"NATALIA FASIUS BURGES","dni_tutor2":"76919983W","calle_dfamiliar":"C\/ SAN JOS\u00c9 DE CALASANZ","num_dfamiliar":"15","piso_dfamiliar":"3\u00ba IZD","cp_dfamiliar":"50008","loc_dfamiliar":"Zaragoza","tel_dfamiliar1":"649301271","tel_dfamiliar2":"669300106","email":"natifbi@hotmail.com","hermanos_datos_admision1":"","hermanos_id_registro_admision1":"","hermanos_fnacimiento_admision1":"","hermanos_hcurso_admision1":"","hermanos_nivel_educativo_admision1":"","hermanos_datos_admision2":"","hermanos_id_registro_admision2":"","hermanos_fnacimiento_admision2":"","hermanos_hcurso_admision2":"","hermanos_nivel_educativo_admision2":"","hermanos_datos_admision3":"","hermanos_id_registro_admision3":"","hermanos_fnacimiento_admision3":"","hermanos_hcurso_admision3":"","hermanos_nivel_educativo_admision3":"","id_centro_destino":"50600166","loc_centro_destino":"nodata","prov_centro_destino":"Zaragoza","tipoestudios9816":"2019","hore9816":"7:45","hors9816":"16:00","baremo_puntos_totales":"4","baremo_puntos_validados":"0","baremo_sitlaboral":"1","baremo_validar_sitlaboral":"0","baremo_validar_tutores_centro":"0","baremo_validar_renta_inferior":"0","baremo_iprem9816":"mayor","hermanos_datos_baremo1":"","hermanos_id_registro_baremo1":"","hermanos_fnacimiento_baremo1":"","hermanos_hcurso_baremo1":"","hermanos_nivel_educativo_baremo1":"","hermanos_datos_baremo2":"","hermanos_id_registro_baremo2":"","hermanos_fnacimiento_baremo2":"","hermanos_hcurso_baremo2":"","hermanos_nivel_educativo_baremo2":"","hermanos_datos_baremo3":"","hermanos_id_registro_baremo3":"","hermanos_fnacimiento_baremo3":"","hermanos_hcurso_baremo3":"","hermanos_nivel_educativo_baremo3":"","baremo_validar_hnos_centro":"0","baremo_discapacidad9816":"no","baremo_tipo_familia9816":"no","baremo_validar_discapacidad":"0","baremo_validar_tipo_familia":"0","tributantes_nombre1":"","tributantes_id_tributante1":"0","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","baremo_ptstotal":"","baremo_tutores_centro":0,"baremo_renta_inferior":0,"nuevaesc":0,"num_hadmision":0,"num_hbaremo":0,"cumplen":0,"oponenautorizar":0,"sol_vacantes":0,"sol_plaza":0}
+[23-Jun-2020 10:53:17] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[23-Jun-2020 10:53:17] : [WARNING] - Array
+(
+    [fase_solicitud9816] => baremada
+    [estado_solicitud9816] => apta
+    [apellido1] => ADIEGO
+    [apellido2] => FASIUS
+    [nombre] => ALEJANDRO
+    [dni_alumno] => nodata
+    [fnac] => 2019-03-29
+    [nacionalidad] => ESPAÑOLA
+    [datos_tutor1] => JESUS ADIEGO BALLARIN
+    [dni_tutor1] => 72972627K
+    [datos_tutor2] => NATALIA FASIUS BURGES
+    [dni_tutor2] => 76919983W
+    [calle_dfamiliar] => C/ SAN JOSÉ DE CALASANZ
+    [num_dfamiliar] => 15
+    [piso_dfamiliar] => 3º IZD
+    [cp_dfamiliar] => 50008
+    [loc_dfamiliar] => Zaragoza
+    [tel_dfamiliar1] => 649301271
+    [tel_dfamiliar2] => 669300106
+    [email] => natifbi@hotmail.com
+    [hermanos_datos_admision1] => 
+    [hermanos_id_registro_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [id_centro_destino] => 50600166
+    [loc_centro_destino] => nodata
+    [prov_centro_destino] => Zaragoza
+    [tipoestudios9816] => 2019
+    [hore9816] => 7:45
+    [hors9816] => 16:00
+    [baremo_puntos_totales] => 4
+    [baremo_puntos_validados] => 0
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_iprem9816] => mayor
+    [hermanos_datos_baremo1] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [baremo_validar_hnos_centro] => 0
+    [baremo_discapacidad9816] => no
+    [baremo_tipo_familia9816] => no
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [tributantes_nombre1] => 
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [baremo_ptstotal] => 
+    [baremo_tutores_centro] => 0
+    [baremo_renta_inferior] => 0
+    [nuevaesc] => 0
+    [num_hadmision] => 0
+    [num_hbaremo] => 0
+    [cumplen] => 0
+    [oponenautorizar] => 0
+    [sol_vacantes] => 0
+    [sol_plaza] => 0
+)
+
+[23-Jun-2020 10:53:17] : [WARNING] - ENTRANDO EN UPDATE: 50600166
+[23-Jun-2020 10:53:17] : [WARNING] - ENTRANDO EN UPDATE DESPUES DE OBTENER FASE
+[23-Jun-2020 10:53:17] : [WARNING] - CONSULTA ACTUALIZACION BAREMO
+[23-Jun-2020 10:53:17] : [WARNING] - UPDATE baremo set puntos_totales='4',puntos_validados='0',sitlaboral='1',validar_sitlaboral='0',validar_tutores_centro='0',validar_renta_inferior='0',iprem='mayor',validar_hnos_centro='0',discapacidad='no',tipo_familia='no',validar_discapacidad='0',validar_tipo_familia='0',tutores_centro='0',renta_inferior='0' WHERE id_alumno=9816
+[23-Jun-2020 10:53:17] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[23-Jun-2020 10:53:17] : [WARNING] - UPDATE alumnos set fase_solicitud='baremada',estado_solicitud='apta',apellido1='ADIEGO',apellido2='FASIUS',nombre='ALEJANDRO',dni_alumno='nodata',fnac='2019-03-29',nacionalidad='ESPAÑOLA',datos_tutor1='JESUS ADIEGO BALLARIN',dni_tutor1='72972627K',datos_tutor2='NATALIA FASIUS BURGES',dni_tutor2='76919983W',calle_dfamiliar='C/ SAN JOSÉ DE CALASANZ',num_dfamiliar='15',piso_dfamiliar='3º IZD',cp_dfamiliar='50008',loc_dfamiliar='Zaragoza',tel_dfamiliar1='649301271',tel_dfamiliar2='669300106',email='natifbi@hotmail.com',id_centro_destino='50600166',loc_centro_destino='nodata',prov_centro_destino='Zaragoza',tipoestudios='2019',hore='7:45',hors='16:00',nuevaesc='0',num_hadmision='0',num_hbaremo='0',cumplen='0',oponenautorizar='0',sol_vacantes='0',sol_plaza='0' WHERE id_alumno=9816
+[23-Jun-2020 10:53:17] : [WARNING] - DATOS ACTUALIZACION SOLICITUD HERMANOS: 
+[23-Jun-2020 10:53:17] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [2] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [3] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+)
+
+[23-Jun-2020 10:53:17] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 10:53:17] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 10:53:17] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 10:53:17] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 10:53:17] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 10:53:17] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 10:53:17] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:53:17] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[23-Jun-2020 10:53:17] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:53:17] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:53:17] : [WARNING] - INSERT INTO tributantes VALUES(9816,0,'','','','','')
+[23-Jun-2020 10:53:17] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:53:17] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:53:17] : [WARNING] - INSERT INTO tributantes VALUES(9816,0,'','','','','')
+[23-Jun-2020 10:53:17] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:53:17] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:53:17] : [WARNING] - INSERT INTO tributantes VALUES(9816,0,'','','','','')
+[23-Jun-2020 10:53:17] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:53:17] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:53:17] : [WARNING] - INSERT INTO tributantes VALUES(9816,0,'','','','','')
+[23-Jun-2020 10:53:40] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 10:53:40] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 10:53:40] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 10:53:40] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600166'
+[23-Jun-2020 10:53:43] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[23-Jun-2020 10:53:43] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=4&baremo_puntos_validados=4&baremo_sitlaboral=1&baremo_validar_sitlaboral=1&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=320&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=321&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=322&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=323&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=
+[23-Jun-2020 10:53:43] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[23-Jun-2020 10:53:43] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=4&baremo_puntos_validados=4&baremo_sitlaboral=1&baremo_validar_sitlaboral=1&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=320&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=321&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=322&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=323&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&baremo_ptstotal=
+[23-Jun-2020 10:53:43] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 22 
+[23-Jun-2020 10:53:43] : [WARNING] - {"fase_solicitud9816":"baremada","estado_solicitud9816":"apta","apellido1":"ADIEGO","apellido2":"FASIUS","nombre":"ALEJANDRO","dni_alumno":"nodata","fnac":"2019-03-29","nacionalidad":"ESPA\u00d1OLA","datos_tutor1":"JESUS ADIEGO BALLARIN","dni_tutor1":"72972627K","datos_tutor2":"NATALIA FASIUS BURGES","dni_tutor2":"76919983W","calle_dfamiliar":"C\/ SAN JOS\u00c9 DE CALASANZ","num_dfamiliar":"15","piso_dfamiliar":"3\u00ba IZD","cp_dfamiliar":"50008","loc_dfamiliar":"Zaragoza","tel_dfamiliar1":"649301271","tel_dfamiliar2":"669300106","email":"natifbi@hotmail.com","hermanos_datos_admision1":"","hermanos_id_registro_admision1":"","hermanos_fnacimiento_admision1":"","hermanos_hcurso_admision1":"","hermanos_nivel_educativo_admision1":"","hermanos_datos_admision2":"","hermanos_id_registro_admision2":"","hermanos_fnacimiento_admision2":"","hermanos_hcurso_admision2":"","hermanos_nivel_educativo_admision2":"","hermanos_datos_admision3":"","hermanos_id_registro_admision3":"","hermanos_fnacimiento_admision3":"","hermanos_hcurso_admision3":"","hermanos_nivel_educativo_admision3":"","id_centro_destino":"50600166","loc_centro_destino":"nodata","prov_centro_destino":"Zaragoza","tipoestudios9816":"2019","hore9816":"7:45","hors9816":"16:00","baremo_puntos_totales":"4","baremo_puntos_validados":"4","baremo_sitlaboral":"1","baremo_validar_sitlaboral":"1","baremo_validar_tutores_centro":"0","baremo_validar_renta_inferior":"0","baremo_iprem9816":"mayor","hermanos_datos_baremo1":"","hermanos_id_registro_baremo1":"","hermanos_fnacimiento_baremo1":"","hermanos_hcurso_baremo1":"","hermanos_nivel_educativo_baremo1":"","hermanos_datos_baremo2":"","hermanos_id_registro_baremo2":"","hermanos_fnacimiento_baremo2":"","hermanos_hcurso_baremo2":"","hermanos_nivel_educativo_baremo2":"","hermanos_datos_baremo3":"","hermanos_id_registro_baremo3":"","hermanos_fnacimiento_baremo3":"","hermanos_hcurso_baremo3":"","hermanos_nivel_educativo_baremo3":"","baremo_validar_hnos_centro":"0","baremo_discapacidad9816":"no","baremo_tipo_familia9816":"no","baremo_validar_discapacidad":"0","baremo_validar_tipo_familia":"0","tributantes_nombre1":"","tributantes_id_tributante1":"320","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"","tributantes_nombre2":"","tributantes_id_tributante2":"321","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"322","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"323","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","baremo_ptstotal":"","baremo_tutores_centro":0,"baremo_renta_inferior":0,"nuevaesc":0,"num_hadmision":0,"num_hbaremo":0,"cumplen":0,"oponenautorizar":0,"sol_vacantes":0,"sol_plaza":0}
+[23-Jun-2020 10:53:43] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[23-Jun-2020 10:53:43] : [WARNING] - Array
+(
+    [fase_solicitud9816] => baremada
+    [estado_solicitud9816] => apta
+    [apellido1] => ADIEGO
+    [apellido2] => FASIUS
+    [nombre] => ALEJANDRO
+    [dni_alumno] => nodata
+    [fnac] => 2019-03-29
+    [nacionalidad] => ESPAÑOLA
+    [datos_tutor1] => JESUS ADIEGO BALLARIN
+    [dni_tutor1] => 72972627K
+    [datos_tutor2] => NATALIA FASIUS BURGES
+    [dni_tutor2] => 76919983W
+    [calle_dfamiliar] => C/ SAN JOSÉ DE CALASANZ
+    [num_dfamiliar] => 15
+    [piso_dfamiliar] => 3º IZD
+    [cp_dfamiliar] => 50008
+    [loc_dfamiliar] => Zaragoza
+    [tel_dfamiliar1] => 649301271
+    [tel_dfamiliar2] => 669300106
+    [email] => natifbi@hotmail.com
+    [hermanos_datos_admision1] => 
+    [hermanos_id_registro_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [id_centro_destino] => 50600166
+    [loc_centro_destino] => nodata
+    [prov_centro_destino] => Zaragoza
+    [tipoestudios9816] => 2019
+    [hore9816] => 7:45
+    [hors9816] => 16:00
+    [baremo_puntos_totales] => 4
+    [baremo_puntos_validados] => 4
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_iprem9816] => mayor
+    [hermanos_datos_baremo1] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [baremo_validar_hnos_centro] => 0
+    [baremo_discapacidad9816] => no
+    [baremo_tipo_familia9816] => no
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [tributantes_nombre1] => 
+    [tributantes_id_tributante1] => 320
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 321
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 322
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 323
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [baremo_ptstotal] => 
+    [baremo_tutores_centro] => 0
+    [baremo_renta_inferior] => 0
+    [nuevaesc] => 0
+    [num_hadmision] => 0
+    [num_hbaremo] => 0
+    [cumplen] => 0
+    [oponenautorizar] => 0
+    [sol_vacantes] => 0
+    [sol_plaza] => 0
+)
+
+[23-Jun-2020 10:53:43] : [WARNING] - ENTRANDO EN UPDATE: 50600166
+[23-Jun-2020 10:53:43] : [WARNING] - ENTRANDO EN UPDATE DESPUES DE OBTENER FASE
+[23-Jun-2020 10:53:43] : [WARNING] - CONSULTA ACTUALIZACION BAREMO
+[23-Jun-2020 10:53:43] : [WARNING] - UPDATE baremo set puntos_totales='4',puntos_validados='4',sitlaboral='1',validar_sitlaboral='1',validar_tutores_centro='0',validar_renta_inferior='0',iprem='mayor',validar_hnos_centro='0',discapacidad='no',tipo_familia='no',validar_discapacidad='0',validar_tipo_familia='0',tutores_centro='0',renta_inferior='0' WHERE id_alumno=9816
+[23-Jun-2020 10:53:43] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[23-Jun-2020 10:53:43] : [WARNING] - UPDATE alumnos set fase_solicitud='baremada',estado_solicitud='apta',apellido1='ADIEGO',apellido2='FASIUS',nombre='ALEJANDRO',dni_alumno='nodata',fnac='2019-03-29',nacionalidad='ESPAÑOLA',datos_tutor1='JESUS ADIEGO BALLARIN',dni_tutor1='72972627K',datos_tutor2='NATALIA FASIUS BURGES',dni_tutor2='76919983W',calle_dfamiliar='C/ SAN JOSÉ DE CALASANZ',num_dfamiliar='15',piso_dfamiliar='3º IZD',cp_dfamiliar='50008',loc_dfamiliar='Zaragoza',tel_dfamiliar1='649301271',tel_dfamiliar2='669300106',email='natifbi@hotmail.com',id_centro_destino='50600166',loc_centro_destino='nodata',prov_centro_destino='Zaragoza',tipoestudios='2019',hore='7:45',hors='16:00',nuevaesc='0',num_hadmision='0',num_hbaremo='0',cumplen='0',oponenautorizar='0',sol_vacantes='0',sol_plaza='0' WHERE id_alumno=9816
+[23-Jun-2020 10:53:43] : [WARNING] - DATOS ACTUALIZACION SOLICITUD HERMANOS: 
+[23-Jun-2020 10:53:43] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [2] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [3] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+)
+
+[23-Jun-2020 10:53:43] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 10:53:43] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 10:53:43] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 10:53:43] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 10:53:43] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 10:53:43] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 10:53:43] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:53:43] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 320
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 321
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 322
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 323
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[23-Jun-2020 10:53:43] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:53:43] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:53:43] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='320'
+[23-Jun-2020 10:53:43] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:53:43] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:53:43] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='321'
+[23-Jun-2020 10:53:43] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:53:43] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:53:43] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='322'
+[23-Jun-2020 10:53:43] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:53:43] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:53:43] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='323'
+[23-Jun-2020 10:54:03] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 10:54:03] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 10:54:03] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 10:54:03] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600166'
+[23-Jun-2020 10:54:18] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 10:54:18] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 10:54:18] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 10:54:18] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600166'
+[23-Jun-2020 10:54:23] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[23-Jun-2020 10:54:23] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=4&baremo_puntos_validados=0&baremo_sitlaboral=1&baremo_validar_sitlaboral=0&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=320&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=321&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=322&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=323&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=
+[23-Jun-2020 10:54:23] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[23-Jun-2020 10:54:23] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=4&baremo_puntos_validados=0&baremo_sitlaboral=1&baremo_validar_sitlaboral=0&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=320&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=321&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=322&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=323&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&baremo_ptstotal=
+[23-Jun-2020 10:54:23] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 22 
+[23-Jun-2020 10:54:23] : [WARNING] - {"fase_solicitud9816":"baremada","estado_solicitud9816":"apta","apellido1":"ADIEGO","apellido2":"FASIUS","nombre":"ALEJANDRO","dni_alumno":"nodata","fnac":"2019-03-29","nacionalidad":"ESPA\u00d1OLA","datos_tutor1":"JESUS ADIEGO BALLARIN","dni_tutor1":"72972627K","datos_tutor2":"NATALIA FASIUS BURGES","dni_tutor2":"76919983W","calle_dfamiliar":"C\/ SAN JOS\u00c9 DE CALASANZ","num_dfamiliar":"15","piso_dfamiliar":"3\u00ba IZD","cp_dfamiliar":"50008","loc_dfamiliar":"Zaragoza","tel_dfamiliar1":"649301271","tel_dfamiliar2":"669300106","email":"natifbi@hotmail.com","hermanos_datos_admision1":"","hermanos_id_registro_admision1":"","hermanos_fnacimiento_admision1":"","hermanos_hcurso_admision1":"","hermanos_nivel_educativo_admision1":"","hermanos_datos_admision2":"","hermanos_id_registro_admision2":"","hermanos_fnacimiento_admision2":"","hermanos_hcurso_admision2":"","hermanos_nivel_educativo_admision2":"","hermanos_datos_admision3":"","hermanos_id_registro_admision3":"","hermanos_fnacimiento_admision3":"","hermanos_hcurso_admision3":"","hermanos_nivel_educativo_admision3":"","id_centro_destino":"50600166","loc_centro_destino":"nodata","prov_centro_destino":"Zaragoza","tipoestudios9816":"2019","hore9816":"7:45","hors9816":"16:00","baremo_puntos_totales":"4","baremo_puntos_validados":"0","baremo_sitlaboral":"1","baremo_validar_sitlaboral":"0","baremo_validar_tutores_centro":"0","baremo_validar_renta_inferior":"0","baremo_iprem9816":"mayor","hermanos_datos_baremo1":"","hermanos_id_registro_baremo1":"","hermanos_fnacimiento_baremo1":"","hermanos_hcurso_baremo1":"","hermanos_nivel_educativo_baremo1":"","hermanos_datos_baremo2":"","hermanos_id_registro_baremo2":"","hermanos_fnacimiento_baremo2":"","hermanos_hcurso_baremo2":"","hermanos_nivel_educativo_baremo2":"","hermanos_datos_baremo3":"","hermanos_id_registro_baremo3":"","hermanos_fnacimiento_baremo3":"","hermanos_hcurso_baremo3":"","hermanos_nivel_educativo_baremo3":"","baremo_validar_hnos_centro":"0","baremo_discapacidad9816":"no","baremo_tipo_familia9816":"no","baremo_validar_discapacidad":"0","baremo_validar_tipo_familia":"0","tributantes_nombre1":"","tributantes_id_tributante1":"320","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"","tributantes_nombre2":"","tributantes_id_tributante2":"321","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"322","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"323","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","baremo_ptstotal":"","baremo_tutores_centro":0,"baremo_renta_inferior":0,"nuevaesc":0,"num_hadmision":0,"num_hbaremo":0,"cumplen":0,"oponenautorizar":0,"sol_vacantes":0,"sol_plaza":0}
+[23-Jun-2020 10:54:23] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[23-Jun-2020 10:54:23] : [WARNING] - Array
+(
+    [fase_solicitud9816] => baremada
+    [estado_solicitud9816] => apta
+    [apellido1] => ADIEGO
+    [apellido2] => FASIUS
+    [nombre] => ALEJANDRO
+    [dni_alumno] => nodata
+    [fnac] => 2019-03-29
+    [nacionalidad] => ESPAÑOLA
+    [datos_tutor1] => JESUS ADIEGO BALLARIN
+    [dni_tutor1] => 72972627K
+    [datos_tutor2] => NATALIA FASIUS BURGES
+    [dni_tutor2] => 76919983W
+    [calle_dfamiliar] => C/ SAN JOSÉ DE CALASANZ
+    [num_dfamiliar] => 15
+    [piso_dfamiliar] => 3º IZD
+    [cp_dfamiliar] => 50008
+    [loc_dfamiliar] => Zaragoza
+    [tel_dfamiliar1] => 649301271
+    [tel_dfamiliar2] => 669300106
+    [email] => natifbi@hotmail.com
+    [hermanos_datos_admision1] => 
+    [hermanos_id_registro_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [id_centro_destino] => 50600166
+    [loc_centro_destino] => nodata
+    [prov_centro_destino] => Zaragoza
+    [tipoestudios9816] => 2019
+    [hore9816] => 7:45
+    [hors9816] => 16:00
+    [baremo_puntos_totales] => 4
+    [baremo_puntos_validados] => 0
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_iprem9816] => mayor
+    [hermanos_datos_baremo1] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [baremo_validar_hnos_centro] => 0
+    [baremo_discapacidad9816] => no
+    [baremo_tipo_familia9816] => no
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [tributantes_nombre1] => 
+    [tributantes_id_tributante1] => 320
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 321
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 322
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 323
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [baremo_ptstotal] => 
+    [baremo_tutores_centro] => 0
+    [baremo_renta_inferior] => 0
+    [nuevaesc] => 0
+    [num_hadmision] => 0
+    [num_hbaremo] => 0
+    [cumplen] => 0
+    [oponenautorizar] => 0
+    [sol_vacantes] => 0
+    [sol_plaza] => 0
+)
+
+[23-Jun-2020 10:54:23] : [WARNING] - ENTRANDO EN UPDATE: 50600166
+[23-Jun-2020 10:54:23] : [WARNING] - ENTRANDO EN UPDATE DESPUES DE OBTENER FASE
+[23-Jun-2020 10:54:23] : [WARNING] - CONSULTA ACTUALIZACION BAREMO
+[23-Jun-2020 10:54:23] : [WARNING] - UPDATE baremo set puntos_totales='4',puntos_validados='0',sitlaboral='1',validar_sitlaboral='0',validar_tutores_centro='0',validar_renta_inferior='0',iprem='mayor',validar_hnos_centro='0',discapacidad='no',tipo_familia='no',validar_discapacidad='0',validar_tipo_familia='0',tutores_centro='0',renta_inferior='0' WHERE id_alumno=9816
+[23-Jun-2020 10:54:23] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[23-Jun-2020 10:54:23] : [WARNING] - UPDATE alumnos set fase_solicitud='baremada',estado_solicitud='apta',apellido1='ADIEGO',apellido2='FASIUS',nombre='ALEJANDRO',dni_alumno='nodata',fnac='2019-03-29',nacionalidad='ESPAÑOLA',datos_tutor1='JESUS ADIEGO BALLARIN',dni_tutor1='72972627K',datos_tutor2='NATALIA FASIUS BURGES',dni_tutor2='76919983W',calle_dfamiliar='C/ SAN JOSÉ DE CALASANZ',num_dfamiliar='15',piso_dfamiliar='3º IZD',cp_dfamiliar='50008',loc_dfamiliar='Zaragoza',tel_dfamiliar1='649301271',tel_dfamiliar2='669300106',email='natifbi@hotmail.com',id_centro_destino='50600166',loc_centro_destino='nodata',prov_centro_destino='Zaragoza',tipoestudios='2019',hore='7:45',hors='16:00',nuevaesc='0',num_hadmision='0',num_hbaremo='0',cumplen='0',oponenautorizar='0',sol_vacantes='0',sol_plaza='0' WHERE id_alumno=9816
+[23-Jun-2020 10:54:23] : [WARNING] - DATOS ACTUALIZACION SOLICITUD HERMANOS: 
+[23-Jun-2020 10:54:23] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [2] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [3] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+)
+
+[23-Jun-2020 10:54:23] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 10:54:23] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 10:54:23] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 10:54:23] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 10:54:23] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 10:54:23] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 10:54:23] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:54:23] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 320
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 321
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 322
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 323
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[23-Jun-2020 10:54:23] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:54:23] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:54:23] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='320'
+[23-Jun-2020 10:54:23] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:54:23] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:54:23] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='321'
+[23-Jun-2020 10:54:23] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:54:23] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:54:23] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='322'
+[23-Jun-2020 10:54:23] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:54:23] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:54:23] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='323'
+[23-Jun-2020 10:54:47] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 10:54:47] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 10:54:47] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 10:54:47] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600166'
+[23-Jun-2020 10:58:12] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 10:58:12] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 10:58:12] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 10:58:12] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600166'
+[23-Jun-2020 10:58:17] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[23-Jun-2020 10:58:17] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=0&baremo_puntos_validados=0&baremo_validar_sitlaboral=0&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=320&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=321&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=322&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=323&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=
+[23-Jun-2020 10:58:17] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[23-Jun-2020 10:58:17] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=0&baremo_puntos_validados=0&baremo_validar_sitlaboral=0&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=320&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=321&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=322&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=323&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&baremo_ptstotal=
+[23-Jun-2020 10:58:17] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 22 
+[23-Jun-2020 10:58:17] : [WARNING] - {"fase_solicitud9816":"baremada","estado_solicitud9816":"apta","apellido1":"ADIEGO","apellido2":"FASIUS","nombre":"ALEJANDRO","dni_alumno":"nodata","fnac":"2019-03-29","nacionalidad":"ESPA\u00d1OLA","datos_tutor1":"JESUS ADIEGO BALLARIN","dni_tutor1":"72972627K","datos_tutor2":"NATALIA FASIUS BURGES","dni_tutor2":"76919983W","calle_dfamiliar":"C\/ SAN JOS\u00c9 DE CALASANZ","num_dfamiliar":"15","piso_dfamiliar":"3\u00ba IZD","cp_dfamiliar":"50008","loc_dfamiliar":"Zaragoza","tel_dfamiliar1":"649301271","tel_dfamiliar2":"669300106","email":"natifbi@hotmail.com","hermanos_datos_admision1":"","hermanos_id_registro_admision1":"","hermanos_fnacimiento_admision1":"","hermanos_hcurso_admision1":"","hermanos_nivel_educativo_admision1":"","hermanos_datos_admision2":"","hermanos_id_registro_admision2":"","hermanos_fnacimiento_admision2":"","hermanos_hcurso_admision2":"","hermanos_nivel_educativo_admision2":"","hermanos_datos_admision3":"","hermanos_id_registro_admision3":"","hermanos_fnacimiento_admision3":"","hermanos_hcurso_admision3":"","hermanos_nivel_educativo_admision3":"","id_centro_destino":"50600166","loc_centro_destino":"nodata","prov_centro_destino":"Zaragoza","tipoestudios9816":"2019","hore9816":"7:45","hors9816":"16:00","baremo_puntos_totales":"0","baremo_puntos_validados":"0","baremo_validar_sitlaboral":"0","baremo_validar_tutores_centro":"0","baremo_validar_renta_inferior":"0","baremo_iprem9816":"mayor","hermanos_datos_baremo1":"","hermanos_id_registro_baremo1":"","hermanos_fnacimiento_baremo1":"","hermanos_hcurso_baremo1":"","hermanos_nivel_educativo_baremo1":"","hermanos_datos_baremo2":"","hermanos_id_registro_baremo2":"","hermanos_fnacimiento_baremo2":"","hermanos_hcurso_baremo2":"","hermanos_nivel_educativo_baremo2":"","hermanos_datos_baremo3":"","hermanos_id_registro_baremo3":"","hermanos_fnacimiento_baremo3":"","hermanos_hcurso_baremo3":"","hermanos_nivel_educativo_baremo3":"","baremo_validar_hnos_centro":"0","baremo_discapacidad9816":"no","baremo_tipo_familia9816":"no","baremo_validar_discapacidad":"0","baremo_validar_tipo_familia":"0","tributantes_nombre1":"","tributantes_id_tributante1":"320","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"","tributantes_nombre2":"","tributantes_id_tributante2":"321","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"322","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"323","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","baremo_ptstotal":"","baremo_tutores_centro":0,"baremo_renta_inferior":0,"nuevaesc":0,"num_hadmision":0,"num_hbaremo":0,"cumplen":0,"oponenautorizar":0,"sol_vacantes":0,"sol_plaza":0}
+[23-Jun-2020 10:58:17] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[23-Jun-2020 10:58:17] : [WARNING] - Array
+(
+    [fase_solicitud9816] => baremada
+    [estado_solicitud9816] => apta
+    [apellido1] => ADIEGO
+    [apellido2] => FASIUS
+    [nombre] => ALEJANDRO
+    [dni_alumno] => nodata
+    [fnac] => 2019-03-29
+    [nacionalidad] => ESPAÑOLA
+    [datos_tutor1] => JESUS ADIEGO BALLARIN
+    [dni_tutor1] => 72972627K
+    [datos_tutor2] => NATALIA FASIUS BURGES
+    [dni_tutor2] => 76919983W
+    [calle_dfamiliar] => C/ SAN JOSÉ DE CALASANZ
+    [num_dfamiliar] => 15
+    [piso_dfamiliar] => 3º IZD
+    [cp_dfamiliar] => 50008
+    [loc_dfamiliar] => Zaragoza
+    [tel_dfamiliar1] => 649301271
+    [tel_dfamiliar2] => 669300106
+    [email] => natifbi@hotmail.com
+    [hermanos_datos_admision1] => 
+    [hermanos_id_registro_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [id_centro_destino] => 50600166
+    [loc_centro_destino] => nodata
+    [prov_centro_destino] => Zaragoza
+    [tipoestudios9816] => 2019
+    [hore9816] => 7:45
+    [hors9816] => 16:00
+    [baremo_puntos_totales] => 0
+    [baremo_puntos_validados] => 0
+    [baremo_validar_sitlaboral] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_iprem9816] => mayor
+    [hermanos_datos_baremo1] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [baremo_validar_hnos_centro] => 0
+    [baremo_discapacidad9816] => no
+    [baremo_tipo_familia9816] => no
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [tributantes_nombre1] => 
+    [tributantes_id_tributante1] => 320
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 321
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 322
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 323
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [baremo_ptstotal] => 
+    [baremo_tutores_centro] => 0
+    [baremo_renta_inferior] => 0
+    [nuevaesc] => 0
+    [num_hadmision] => 0
+    [num_hbaremo] => 0
+    [cumplen] => 0
+    [oponenautorizar] => 0
+    [sol_vacantes] => 0
+    [sol_plaza] => 0
+)
+
+[23-Jun-2020 10:58:17] : [WARNING] - ENTRANDO EN UPDATE: 50600166
+[23-Jun-2020 10:58:17] : [WARNING] - ENTRANDO EN UPDATE DESPUES DE OBTENER FASE
+[23-Jun-2020 10:58:17] : [WARNING] - CONSULTA ACTUALIZACION BAREMO
+[23-Jun-2020 10:58:17] : [WARNING] - UPDATE baremo set puntos_totales='0',puntos_validados='0',validar_sitlaboral='0',validar_tutores_centro='0',validar_renta_inferior='0',iprem='mayor',validar_hnos_centro='0',discapacidad='no',tipo_familia='no',validar_discapacidad='0',validar_tipo_familia='0',tutores_centro='0',renta_inferior='0' WHERE id_alumno=9816
+[23-Jun-2020 10:58:17] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[23-Jun-2020 10:58:17] : [WARNING] - UPDATE alumnos set fase_solicitud='baremada',estado_solicitud='apta',apellido1='ADIEGO',apellido2='FASIUS',nombre='ALEJANDRO',dni_alumno='nodata',fnac='2019-03-29',nacionalidad='ESPAÑOLA',datos_tutor1='JESUS ADIEGO BALLARIN',dni_tutor1='72972627K',datos_tutor2='NATALIA FASIUS BURGES',dni_tutor2='76919983W',calle_dfamiliar='C/ SAN JOSÉ DE CALASANZ',num_dfamiliar='15',piso_dfamiliar='3º IZD',cp_dfamiliar='50008',loc_dfamiliar='Zaragoza',tel_dfamiliar1='649301271',tel_dfamiliar2='669300106',email='natifbi@hotmail.com',id_centro_destino='50600166',loc_centro_destino='nodata',prov_centro_destino='Zaragoza',tipoestudios='2019',hore='7:45',hors='16:00',nuevaesc='0',num_hadmision='0',num_hbaremo='0',cumplen='0',oponenautorizar='0',sol_vacantes='0',sol_plaza='0' WHERE id_alumno=9816
+[23-Jun-2020 10:58:17] : [WARNING] - DATOS ACTUALIZACION SOLICITUD HERMANOS: 
+[23-Jun-2020 10:58:17] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [2] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [3] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+)
+
+[23-Jun-2020 10:58:17] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 10:58:17] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 10:58:17] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 10:58:17] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 10:58:17] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 10:58:17] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 10:58:17] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:58:17] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 320
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 321
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 322
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 323
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[23-Jun-2020 10:58:17] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:58:17] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:58:17] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='320'
+[23-Jun-2020 10:58:17] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:58:17] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:58:17] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='321'
+[23-Jun-2020 10:58:17] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:58:17] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:58:17] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='322'
+[23-Jun-2020 10:58:17] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 10:58:17] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 10:58:17] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='323'
+[23-Jun-2020 11:02:43] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:02:43] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 11:02:43] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:02:43] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600166'
+[23-Jun-2020 11:02:53] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[23-Jun-2020 11:02:53] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=0&baremo_puntos_validados=0&baremo_validar_sitlaboral=0&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=320&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=321&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=322&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=323&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=
+[23-Jun-2020 11:02:53] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[23-Jun-2020 11:02:53] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=0&baremo_puntos_validados=0&baremo_validar_sitlaboral=0&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=320&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=321&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=322&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=323&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&baremo_ptstotal=
+[23-Jun-2020 11:02:53] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 22 
+[23-Jun-2020 11:02:53] : [WARNING] - {"fase_solicitud9816":"baremada","estado_solicitud9816":"apta","apellido1":"ADIEGO","apellido2":"FASIUS","nombre":"ALEJANDRO","dni_alumno":"nodata","fnac":"2019-03-29","nacionalidad":"ESPA\u00d1OLA","datos_tutor1":"JESUS ADIEGO BALLARIN","dni_tutor1":"72972627K","datos_tutor2":"NATALIA FASIUS BURGES","dni_tutor2":"76919983W","calle_dfamiliar":"C\/ SAN JOS\u00c9 DE CALASANZ","num_dfamiliar":"15","piso_dfamiliar":"3\u00ba IZD","cp_dfamiliar":"50008","loc_dfamiliar":"Zaragoza","tel_dfamiliar1":"649301271","tel_dfamiliar2":"669300106","email":"natifbi@hotmail.com","hermanos_datos_admision1":"","hermanos_id_registro_admision1":"","hermanos_fnacimiento_admision1":"","hermanos_hcurso_admision1":"","hermanos_nivel_educativo_admision1":"","hermanos_datos_admision2":"","hermanos_id_registro_admision2":"","hermanos_fnacimiento_admision2":"","hermanos_hcurso_admision2":"","hermanos_nivel_educativo_admision2":"","hermanos_datos_admision3":"","hermanos_id_registro_admision3":"","hermanos_fnacimiento_admision3":"","hermanos_hcurso_admision3":"","hermanos_nivel_educativo_admision3":"","id_centro_destino":"50600166","loc_centro_destino":"nodata","prov_centro_destino":"Zaragoza","tipoestudios9816":"2019","hore9816":"7:45","hors9816":"16:00","baremo_puntos_totales":"0","baremo_puntos_validados":"0","baremo_validar_sitlaboral":"0","baremo_validar_tutores_centro":"0","baremo_validar_renta_inferior":"0","baremo_iprem9816":"mayor","hermanos_datos_baremo1":"","hermanos_id_registro_baremo1":"","hermanos_fnacimiento_baremo1":"","hermanos_hcurso_baremo1":"","hermanos_nivel_educativo_baremo1":"","hermanos_datos_baremo2":"","hermanos_id_registro_baremo2":"","hermanos_fnacimiento_baremo2":"","hermanos_hcurso_baremo2":"","hermanos_nivel_educativo_baremo2":"","hermanos_datos_baremo3":"","hermanos_id_registro_baremo3":"","hermanos_fnacimiento_baremo3":"","hermanos_hcurso_baremo3":"","hermanos_nivel_educativo_baremo3":"","baremo_validar_hnos_centro":"0","baremo_discapacidad9816":"no","baremo_tipo_familia9816":"no","baremo_validar_discapacidad":"0","baremo_validar_tipo_familia":"0","tributantes_nombre1":"","tributantes_id_tributante1":"320","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"","tributantes_nombre2":"","tributantes_id_tributante2":"321","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"322","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"323","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","baremo_ptstotal":"","baremo_tutores_centro":0,"baremo_renta_inferior":0,"nuevaesc":0,"num_hadmision":0,"num_hbaremo":0,"cumplen":0,"oponenautorizar":0,"sol_vacantes":0,"sol_plaza":0}
+[23-Jun-2020 11:02:53] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[23-Jun-2020 11:02:53] : [WARNING] - Array
+(
+    [fase_solicitud9816] => baremada
+    [estado_solicitud9816] => apta
+    [apellido1] => ADIEGO
+    [apellido2] => FASIUS
+    [nombre] => ALEJANDRO
+    [dni_alumno] => nodata
+    [fnac] => 2019-03-29
+    [nacionalidad] => ESPAÑOLA
+    [datos_tutor1] => JESUS ADIEGO BALLARIN
+    [dni_tutor1] => 72972627K
+    [datos_tutor2] => NATALIA FASIUS BURGES
+    [dni_tutor2] => 76919983W
+    [calle_dfamiliar] => C/ SAN JOSÉ DE CALASANZ
+    [num_dfamiliar] => 15
+    [piso_dfamiliar] => 3º IZD
+    [cp_dfamiliar] => 50008
+    [loc_dfamiliar] => Zaragoza
+    [tel_dfamiliar1] => 649301271
+    [tel_dfamiliar2] => 669300106
+    [email] => natifbi@hotmail.com
+    [hermanos_datos_admision1] => 
+    [hermanos_id_registro_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [id_centro_destino] => 50600166
+    [loc_centro_destino] => nodata
+    [prov_centro_destino] => Zaragoza
+    [tipoestudios9816] => 2019
+    [hore9816] => 7:45
+    [hors9816] => 16:00
+    [baremo_puntos_totales] => 0
+    [baremo_puntos_validados] => 0
+    [baremo_validar_sitlaboral] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_iprem9816] => mayor
+    [hermanos_datos_baremo1] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [baremo_validar_hnos_centro] => 0
+    [baremo_discapacidad9816] => no
+    [baremo_tipo_familia9816] => no
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [tributantes_nombre1] => 
+    [tributantes_id_tributante1] => 320
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 321
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 322
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 323
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [baremo_ptstotal] => 
+    [baremo_tutores_centro] => 0
+    [baremo_renta_inferior] => 0
+    [nuevaesc] => 0
+    [num_hadmision] => 0
+    [num_hbaremo] => 0
+    [cumplen] => 0
+    [oponenautorizar] => 0
+    [sol_vacantes] => 0
+    [sol_plaza] => 0
+)
+
+[23-Jun-2020 11:02:53] : [WARNING] - ENTRANDO EN UPDATE: 50600166
+[23-Jun-2020 11:02:53] : [WARNING] - ENTRANDO EN UPDATE DESPUES DE OBTENER FASE
+[23-Jun-2020 11:02:53] : [WARNING] - CONSULTA ACTUALIZACION BAREMO
+[23-Jun-2020 11:02:53] : [WARNING] - UPDATE baremo set puntos_totales='0',puntos_validados='0',validar_sitlaboral='0',validar_tutores_centro='0',validar_renta_inferior='0',iprem='mayor',validar_hnos_centro='0',discapacidad='no',tipo_familia='no',validar_discapacidad='0',validar_tipo_familia='0',tutores_centro='0',renta_inferior='0' WHERE id_alumno=9816
+[23-Jun-2020 11:02:53] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[23-Jun-2020 11:02:53] : [WARNING] - UPDATE alumnos set fase_solicitud='baremada',estado_solicitud='apta',apellido1='ADIEGO',apellido2='FASIUS',nombre='ALEJANDRO',dni_alumno='nodata',fnac='2019-03-29',nacionalidad='ESPAÑOLA',datos_tutor1='JESUS ADIEGO BALLARIN',dni_tutor1='72972627K',datos_tutor2='NATALIA FASIUS BURGES',dni_tutor2='76919983W',calle_dfamiliar='C/ SAN JOSÉ DE CALASANZ',num_dfamiliar='15',piso_dfamiliar='3º IZD',cp_dfamiliar='50008',loc_dfamiliar='Zaragoza',tel_dfamiliar1='649301271',tel_dfamiliar2='669300106',email='natifbi@hotmail.com',id_centro_destino='50600166',loc_centro_destino='nodata',prov_centro_destino='Zaragoza',tipoestudios='2019',hore='7:45',hors='16:00',nuevaesc='0',num_hadmision='0',num_hbaremo='0',cumplen='0',oponenautorizar='0',sol_vacantes='0',sol_plaza='0' WHERE id_alumno=9816
+[23-Jun-2020 11:02:53] : [WARNING] - DATOS ACTUALIZACION SOLICITUD HERMANOS: 
+[23-Jun-2020 11:02:53] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [2] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [3] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+)
+
+[23-Jun-2020 11:02:53] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:02:53] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:02:53] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:02:53] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:02:53] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:02:53] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:02:53] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:02:53] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 320
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 321
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 322
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 323
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[23-Jun-2020 11:02:53] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:02:53] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:02:53] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='320'
+[23-Jun-2020 11:02:53] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:02:53] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:02:53] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='321'
+[23-Jun-2020 11:02:53] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:02:53] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:02:53] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='322'
+[23-Jun-2020 11:02:53] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:02:53] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:02:53] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='323'
+[23-Jun-2020 11:02:57] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:02:57] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 11:02:57] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:02:57] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600166'
+[23-Jun-2020 11:03:32] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[23-Jun-2020 11:03:32] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=0&baremo_puntos_validados=0&baremo_validar_sitlaboral=0&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=320&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=321&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=322&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=323&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=
+[23-Jun-2020 11:03:32] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[23-Jun-2020 11:03:32] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=0&baremo_puntos_validados=0&baremo_validar_sitlaboral=0&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=320&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=321&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=322&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=323&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&baremo_ptstotal=
+[23-Jun-2020 11:03:32] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 22 
+[23-Jun-2020 11:03:32] : [WARNING] - {"fase_solicitud9816":"baremada","estado_solicitud9816":"apta","apellido1":"ADIEGO","apellido2":"FASIUS","nombre":"ALEJANDRO","dni_alumno":"nodata","fnac":"2019-03-29","nacionalidad":"ESPA\u00d1OLA","datos_tutor1":"JESUS ADIEGO BALLARIN","dni_tutor1":"72972627K","datos_tutor2":"NATALIA FASIUS BURGES","dni_tutor2":"76919983W","calle_dfamiliar":"C\/ SAN JOS\u00c9 DE CALASANZ","num_dfamiliar":"15","piso_dfamiliar":"3\u00ba IZD","cp_dfamiliar":"50008","loc_dfamiliar":"Zaragoza","tel_dfamiliar1":"649301271","tel_dfamiliar2":"669300106","email":"natifbi@hotmail.com","hermanos_datos_admision1":"","hermanos_id_registro_admision1":"","hermanos_fnacimiento_admision1":"","hermanos_hcurso_admision1":"","hermanos_nivel_educativo_admision1":"","hermanos_datos_admision2":"","hermanos_id_registro_admision2":"","hermanos_fnacimiento_admision2":"","hermanos_hcurso_admision2":"","hermanos_nivel_educativo_admision2":"","hermanos_datos_admision3":"","hermanos_id_registro_admision3":"","hermanos_fnacimiento_admision3":"","hermanos_hcurso_admision3":"","hermanos_nivel_educativo_admision3":"","id_centro_destino":"50600166","loc_centro_destino":"nodata","prov_centro_destino":"Zaragoza","tipoestudios9816":"2019","hore9816":"7:45","hors9816":"16:00","baremo_puntos_totales":"0","baremo_puntos_validados":"0","baremo_validar_sitlaboral":"0","baremo_validar_tutores_centro":"0","baremo_validar_renta_inferior":"0","baremo_iprem9816":"mayor","hermanos_datos_baremo1":"","hermanos_id_registro_baremo1":"","hermanos_fnacimiento_baremo1":"","hermanos_hcurso_baremo1":"","hermanos_nivel_educativo_baremo1":"","hermanos_datos_baremo2":"","hermanos_id_registro_baremo2":"","hermanos_fnacimiento_baremo2":"","hermanos_hcurso_baremo2":"","hermanos_nivel_educativo_baremo2":"","hermanos_datos_baremo3":"","hermanos_id_registro_baremo3":"","hermanos_fnacimiento_baremo3":"","hermanos_hcurso_baremo3":"","hermanos_nivel_educativo_baremo3":"","baremo_validar_hnos_centro":"0","baremo_discapacidad9816":"no","baremo_tipo_familia9816":"no","baremo_validar_discapacidad":"0","baremo_validar_tipo_familia":"0","tributantes_nombre1":"","tributantes_id_tributante1":"320","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"","tributantes_nombre2":"","tributantes_id_tributante2":"321","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"322","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"323","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","baremo_ptstotal":"","baremo_tutores_centro":0,"baremo_renta_inferior":0,"nuevaesc":0,"num_hadmision":0,"num_hbaremo":0,"cumplen":0,"oponenautorizar":0,"sol_vacantes":0,"sol_plaza":0}
+[23-Jun-2020 11:03:32] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[23-Jun-2020 11:03:32] : [WARNING] - Array
+(
+    [fase_solicitud9816] => baremada
+    [estado_solicitud9816] => apta
+    [apellido1] => ADIEGO
+    [apellido2] => FASIUS
+    [nombre] => ALEJANDRO
+    [dni_alumno] => nodata
+    [fnac] => 2019-03-29
+    [nacionalidad] => ESPAÑOLA
+    [datos_tutor1] => JESUS ADIEGO BALLARIN
+    [dni_tutor1] => 72972627K
+    [datos_tutor2] => NATALIA FASIUS BURGES
+    [dni_tutor2] => 76919983W
+    [calle_dfamiliar] => C/ SAN JOSÉ DE CALASANZ
+    [num_dfamiliar] => 15
+    [piso_dfamiliar] => 3º IZD
+    [cp_dfamiliar] => 50008
+    [loc_dfamiliar] => Zaragoza
+    [tel_dfamiliar1] => 649301271
+    [tel_dfamiliar2] => 669300106
+    [email] => natifbi@hotmail.com
+    [hermanos_datos_admision1] => 
+    [hermanos_id_registro_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [id_centro_destino] => 50600166
+    [loc_centro_destino] => nodata
+    [prov_centro_destino] => Zaragoza
+    [tipoestudios9816] => 2019
+    [hore9816] => 7:45
+    [hors9816] => 16:00
+    [baremo_puntos_totales] => 0
+    [baremo_puntos_validados] => 0
+    [baremo_validar_sitlaboral] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_iprem9816] => mayor
+    [hermanos_datos_baremo1] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [baremo_validar_hnos_centro] => 0
+    [baremo_discapacidad9816] => no
+    [baremo_tipo_familia9816] => no
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [tributantes_nombre1] => 
+    [tributantes_id_tributante1] => 320
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 321
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 322
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 323
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [baremo_ptstotal] => 
+    [baremo_tutores_centro] => 0
+    [baremo_renta_inferior] => 0
+    [nuevaesc] => 0
+    [num_hadmision] => 0
+    [num_hbaremo] => 0
+    [cumplen] => 0
+    [oponenautorizar] => 0
+    [sol_vacantes] => 0
+    [sol_plaza] => 0
+)
+
+[23-Jun-2020 11:03:32] : [WARNING] - ENTRANDO EN UPDATE: 50600166
+[23-Jun-2020 11:03:32] : [WARNING] - ENTRANDO EN UPDATE DESPUES DE OBTENER FASE
+[23-Jun-2020 11:03:32] : [WARNING] - CONSULTA ACTUALIZACION BAREMO
+[23-Jun-2020 11:03:32] : [WARNING] - UPDATE baremo set puntos_totales='0',puntos_validados='0',validar_sitlaboral='0',validar_tutores_centro='0',validar_renta_inferior='0',iprem='mayor',validar_hnos_centro='0',discapacidad='no',tipo_familia='no',validar_discapacidad='0',validar_tipo_familia='0',tutores_centro='0',renta_inferior='0' WHERE id_alumno=9816
+[23-Jun-2020 11:03:32] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[23-Jun-2020 11:03:32] : [WARNING] - UPDATE alumnos set fase_solicitud='baremada',estado_solicitud='apta',apellido1='ADIEGO',apellido2='FASIUS',nombre='ALEJANDRO',dni_alumno='nodata',fnac='2019-03-29',nacionalidad='ESPAÑOLA',datos_tutor1='JESUS ADIEGO BALLARIN',dni_tutor1='72972627K',datos_tutor2='NATALIA FASIUS BURGES',dni_tutor2='76919983W',calle_dfamiliar='C/ SAN JOSÉ DE CALASANZ',num_dfamiliar='15',piso_dfamiliar='3º IZD',cp_dfamiliar='50008',loc_dfamiliar='Zaragoza',tel_dfamiliar1='649301271',tel_dfamiliar2='669300106',email='natifbi@hotmail.com',id_centro_destino='50600166',loc_centro_destino='nodata',prov_centro_destino='Zaragoza',tipoestudios='2019',hore='7:45',hors='16:00',nuevaesc='0',num_hadmision='0',num_hbaremo='0',cumplen='0',oponenautorizar='0',sol_vacantes='0',sol_plaza='0' WHERE id_alumno=9816
+[23-Jun-2020 11:03:32] : [WARNING] - DATOS ACTUALIZACION SOLICITUD HERMANOS: 
+[23-Jun-2020 11:03:32] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [2] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [3] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+)
+
+[23-Jun-2020 11:03:32] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:03:32] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:03:32] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:03:32] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:03:32] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:03:32] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:03:32] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:03:32] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 320
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 321
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 322
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 323
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[23-Jun-2020 11:03:32] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:03:32] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:03:32] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='320'
+[23-Jun-2020 11:03:32] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:03:32] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:03:32] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='321'
+[23-Jun-2020 11:03:32] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:03:32] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:03:32] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='322'
+[23-Jun-2020 11:03:32] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:03:32] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:03:32] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='323'
+[23-Jun-2020 11:04:22] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:04:22] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 11:04:22] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:04:22] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600166'
+[23-Jun-2020 11:04:52] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:04:52] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 11:04:52] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:04:52] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600166'
+[23-Jun-2020 11:04:56] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[23-Jun-2020 11:04:56] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=0&baremo_puntos_validados=0&baremo_validar_sitlaboral=0&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=320&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=321&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=322&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=323&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=
+[23-Jun-2020 11:04:56] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[23-Jun-2020 11:04:56] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=0&baremo_puntos_validados=0&baremo_validar_sitlaboral=0&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=320&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=321&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=322&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=323&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&baremo_ptstotal=
+[23-Jun-2020 11:04:56] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 22 
+[23-Jun-2020 11:04:56] : [WARNING] - {"fase_solicitud9816":"baremada","estado_solicitud9816":"apta","apellido1":"ADIEGO","apellido2":"FASIUS","nombre":"ALEJANDRO","dni_alumno":"nodata","fnac":"2019-03-29","nacionalidad":"ESPA\u00d1OLA","datos_tutor1":"JESUS ADIEGO BALLARIN","dni_tutor1":"72972627K","datos_tutor2":"NATALIA FASIUS BURGES","dni_tutor2":"76919983W","calle_dfamiliar":"C\/ SAN JOS\u00c9 DE CALASANZ","num_dfamiliar":"15","piso_dfamiliar":"3\u00ba IZD","cp_dfamiliar":"50008","loc_dfamiliar":"Zaragoza","tel_dfamiliar1":"649301271","tel_dfamiliar2":"669300106","email":"natifbi@hotmail.com","hermanos_datos_admision1":"","hermanos_id_registro_admision1":"","hermanos_fnacimiento_admision1":"","hermanos_hcurso_admision1":"","hermanos_nivel_educativo_admision1":"","hermanos_datos_admision2":"","hermanos_id_registro_admision2":"","hermanos_fnacimiento_admision2":"","hermanos_hcurso_admision2":"","hermanos_nivel_educativo_admision2":"","hermanos_datos_admision3":"","hermanos_id_registro_admision3":"","hermanos_fnacimiento_admision3":"","hermanos_hcurso_admision3":"","hermanos_nivel_educativo_admision3":"","id_centro_destino":"50600166","loc_centro_destino":"nodata","prov_centro_destino":"Zaragoza","tipoestudios9816":"2019","hore9816":"7:45","hors9816":"16:00","baremo_puntos_totales":"0","baremo_puntos_validados":"0","baremo_validar_sitlaboral":"0","baremo_validar_tutores_centro":"0","baremo_validar_renta_inferior":"0","baremo_iprem9816":"mayor","hermanos_datos_baremo1":"","hermanos_id_registro_baremo1":"","hermanos_fnacimiento_baremo1":"","hermanos_hcurso_baremo1":"","hermanos_nivel_educativo_baremo1":"","hermanos_datos_baremo2":"","hermanos_id_registro_baremo2":"","hermanos_fnacimiento_baremo2":"","hermanos_hcurso_baremo2":"","hermanos_nivel_educativo_baremo2":"","hermanos_datos_baremo3":"","hermanos_id_registro_baremo3":"","hermanos_fnacimiento_baremo3":"","hermanos_hcurso_baremo3":"","hermanos_nivel_educativo_baremo3":"","baremo_validar_hnos_centro":"0","baremo_discapacidad9816":"no","baremo_tipo_familia9816":"no","baremo_validar_discapacidad":"0","baremo_validar_tipo_familia":"0","tributantes_nombre1":"","tributantes_id_tributante1":"320","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"","tributantes_nombre2":"","tributantes_id_tributante2":"321","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"322","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"323","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","baremo_ptstotal":"","baremo_tutores_centro":0,"baremo_renta_inferior":0,"nuevaesc":0,"num_hadmision":0,"num_hbaremo":0,"cumplen":0,"oponenautorizar":0,"sol_vacantes":0,"sol_plaza":0}
+[23-Jun-2020 11:04:56] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[23-Jun-2020 11:04:56] : [WARNING] - Array
+(
+    [fase_solicitud9816] => baremada
+    [estado_solicitud9816] => apta
+    [apellido1] => ADIEGO
+    [apellido2] => FASIUS
+    [nombre] => ALEJANDRO
+    [dni_alumno] => nodata
+    [fnac] => 2019-03-29
+    [nacionalidad] => ESPAÑOLA
+    [datos_tutor1] => JESUS ADIEGO BALLARIN
+    [dni_tutor1] => 72972627K
+    [datos_tutor2] => NATALIA FASIUS BURGES
+    [dni_tutor2] => 76919983W
+    [calle_dfamiliar] => C/ SAN JOSÉ DE CALASANZ
+    [num_dfamiliar] => 15
+    [piso_dfamiliar] => 3º IZD
+    [cp_dfamiliar] => 50008
+    [loc_dfamiliar] => Zaragoza
+    [tel_dfamiliar1] => 649301271
+    [tel_dfamiliar2] => 669300106
+    [email] => natifbi@hotmail.com
+    [hermanos_datos_admision1] => 
+    [hermanos_id_registro_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [id_centro_destino] => 50600166
+    [loc_centro_destino] => nodata
+    [prov_centro_destino] => Zaragoza
+    [tipoestudios9816] => 2019
+    [hore9816] => 7:45
+    [hors9816] => 16:00
+    [baremo_puntos_totales] => 0
+    [baremo_puntos_validados] => 0
+    [baremo_validar_sitlaboral] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_iprem9816] => mayor
+    [hermanos_datos_baremo1] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [baremo_validar_hnos_centro] => 0
+    [baremo_discapacidad9816] => no
+    [baremo_tipo_familia9816] => no
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [tributantes_nombre1] => 
+    [tributantes_id_tributante1] => 320
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 321
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 322
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 323
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [baremo_ptstotal] => 
+    [baremo_tutores_centro] => 0
+    [baremo_renta_inferior] => 0
+    [nuevaesc] => 0
+    [num_hadmision] => 0
+    [num_hbaremo] => 0
+    [cumplen] => 0
+    [oponenautorizar] => 0
+    [sol_vacantes] => 0
+    [sol_plaza] => 0
+)
+
+[23-Jun-2020 11:04:56] : [WARNING] - ENTRANDO EN UPDATE: 50600166
+[23-Jun-2020 11:04:56] : [WARNING] - ENTRANDO EN UPDATE DESPUES DE OBTENER FASE
+[23-Jun-2020 11:04:56] : [WARNING] - CONSULTA ACTUALIZACION BAREMO
+[23-Jun-2020 11:04:56] : [WARNING] - UPDATE baremo set puntos_totales='0',puntos_validados='0',validar_sitlaboral='0',validar_tutores_centro='0',validar_renta_inferior='0',iprem='mayor',validar_hnos_centro='0',discapacidad='no',tipo_familia='no',validar_discapacidad='0',validar_tipo_familia='0',tutores_centro='0',renta_inferior='0' WHERE id_alumno=9816
+[23-Jun-2020 11:04:56] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[23-Jun-2020 11:04:56] : [WARNING] - UPDATE alumnos set fase_solicitud='baremada',estado_solicitud='apta',apellido1='ADIEGO',apellido2='FASIUS',nombre='ALEJANDRO',dni_alumno='nodata',fnac='2019-03-29',nacionalidad='ESPAÑOLA',datos_tutor1='JESUS ADIEGO BALLARIN',dni_tutor1='72972627K',datos_tutor2='NATALIA FASIUS BURGES',dni_tutor2='76919983W',calle_dfamiliar='C/ SAN JOSÉ DE CALASANZ',num_dfamiliar='15',piso_dfamiliar='3º IZD',cp_dfamiliar='50008',loc_dfamiliar='Zaragoza',tel_dfamiliar1='649301271',tel_dfamiliar2='669300106',email='natifbi@hotmail.com',id_centro_destino='50600166',loc_centro_destino='nodata',prov_centro_destino='Zaragoza',tipoestudios='2019',hore='7:45',hors='16:00',nuevaesc='0',num_hadmision='0',num_hbaremo='0',cumplen='0',oponenautorizar='0',sol_vacantes='0',sol_plaza='0' WHERE id_alumno=9816
+[23-Jun-2020 11:04:56] : [WARNING] - DATOS ACTUALIZACION SOLICITUD HERMANOS: 
+[23-Jun-2020 11:04:56] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [2] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [3] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+)
+
+[23-Jun-2020 11:04:56] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:04:56] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:04:56] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:04:56] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:04:56] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:04:56] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:04:56] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:04:56] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 320
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 321
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 322
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 323
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[23-Jun-2020 11:04:56] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:04:56] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:04:56] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='320'
+[23-Jun-2020 11:04:56] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:04:56] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:04:56] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='321'
+[23-Jun-2020 11:04:56] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:04:56] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:04:56] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='322'
+[23-Jun-2020 11:04:56] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:04:56] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:04:56] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='323'
+[23-Jun-2020 11:05:00] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:05:00] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 11:05:00] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:05:00] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600166'
+[23-Jun-2020 11:05:32] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:05:32] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 11:05:32] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:05:32] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600166'
+[23-Jun-2020 11:05:36] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[23-Jun-2020 11:05:36] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=0&baremo_puntos_validados=0&baremo_validar_sitlaboral=0&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=320&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=321&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=322&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=323&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=
+[23-Jun-2020 11:05:36] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[23-Jun-2020 11:05:36] : [WARNING] - fase_solicitud9816=baremada&estado_solicitud9816=apta&apellido1=ADIEGO&apellido2=FASIUS&nombre=ALEJANDRO&dni_alumno=nodata&fnac=2019-03-29&nacionalidad=ESPA%C3%91OLA&datos_tutor1=JESUS+ADIEGO+BALLARIN&dni_tutor1=72972627K&datos_tutor2=NATALIA+FASIUS+BURGES&dni_tutor2=76919983W&calle_dfamiliar=C%2F+SAN+JOS%C3%89+DE+CALASANZ&num_dfamiliar=15&piso_dfamiliar=3%C2%BA+IZD&cp_dfamiliar=50008&loc_dfamiliar=Zaragoza&tel_dfamiliar1=649301271&tel_dfamiliar2=669300106&email=natifbi%40hotmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=SANTA+MAR%C3%8DA+DEL+PILAR&loc_centro_destino=nodata&prov_centro_destino=Zaragoza&tipoestudios9816=2019&hore9816=7%3A45&hors9816=16%3A00&baremo_puntos_totales=0&baremo_puntos_validados=0&baremo_validar_sitlaboral=0&baremo_validar_tutores_centro=0&baremo_validar_renta_inferior=0&baremo_iprem9816=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9816=no&baremo_tipo_familia9816=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=0&tributantes_nombre1=&tributantes_id_tributante1=320&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=321&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=322&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=323&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&baremo_ptstotal=
+[23-Jun-2020 11:05:36] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 22 
+[23-Jun-2020 11:05:36] : [WARNING] - {"fase_solicitud9816":"baremada","estado_solicitud9816":"apta","apellido1":"ADIEGO","apellido2":"FASIUS","nombre":"ALEJANDRO","dni_alumno":"nodata","fnac":"2019-03-29","nacionalidad":"ESPA\u00d1OLA","datos_tutor1":"JESUS ADIEGO BALLARIN","dni_tutor1":"72972627K","datos_tutor2":"NATALIA FASIUS BURGES","dni_tutor2":"76919983W","calle_dfamiliar":"C\/ SAN JOS\u00c9 DE CALASANZ","num_dfamiliar":"15","piso_dfamiliar":"3\u00ba IZD","cp_dfamiliar":"50008","loc_dfamiliar":"Zaragoza","tel_dfamiliar1":"649301271","tel_dfamiliar2":"669300106","email":"natifbi@hotmail.com","hermanos_datos_admision1":"","hermanos_id_registro_admision1":"","hermanos_fnacimiento_admision1":"","hermanos_hcurso_admision1":"","hermanos_nivel_educativo_admision1":"","hermanos_datos_admision2":"","hermanos_id_registro_admision2":"","hermanos_fnacimiento_admision2":"","hermanos_hcurso_admision2":"","hermanos_nivel_educativo_admision2":"","hermanos_datos_admision3":"","hermanos_id_registro_admision3":"","hermanos_fnacimiento_admision3":"","hermanos_hcurso_admision3":"","hermanos_nivel_educativo_admision3":"","id_centro_destino":"50600166","loc_centro_destino":"nodata","prov_centro_destino":"Zaragoza","tipoestudios9816":"2019","hore9816":"7:45","hors9816":"16:00","baremo_puntos_totales":"0","baremo_puntos_validados":"0","baremo_validar_sitlaboral":"0","baremo_validar_tutores_centro":"0","baremo_validar_renta_inferior":"0","baremo_iprem9816":"mayor","hermanos_datos_baremo1":"","hermanos_id_registro_baremo1":"","hermanos_fnacimiento_baremo1":"","hermanos_hcurso_baremo1":"","hermanos_nivel_educativo_baremo1":"","hermanos_datos_baremo2":"","hermanos_id_registro_baremo2":"","hermanos_fnacimiento_baremo2":"","hermanos_hcurso_baremo2":"","hermanos_nivel_educativo_baremo2":"","hermanos_datos_baremo3":"","hermanos_id_registro_baremo3":"","hermanos_fnacimiento_baremo3":"","hermanos_hcurso_baremo3":"","hermanos_nivel_educativo_baremo3":"","baremo_validar_hnos_centro":"0","baremo_discapacidad9816":"no","baremo_tipo_familia9816":"no","baremo_validar_discapacidad":"0","baremo_validar_tipo_familia":"0","tributantes_nombre1":"","tributantes_id_tributante1":"320","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"","tributantes_nombre2":"","tributantes_id_tributante2":"321","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"322","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"323","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","baremo_ptstotal":"","baremo_tutores_centro":0,"baremo_renta_inferior":0,"baremo_sitlaboral":0,"nuevaesc":0,"num_hadmision":0,"num_hbaremo":0,"cumplen":0,"oponenautorizar":0,"sol_vacantes":0,"sol_plaza":0}
+[23-Jun-2020 11:05:36] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[23-Jun-2020 11:05:36] : [WARNING] - Array
+(
+    [fase_solicitud9816] => baremada
+    [estado_solicitud9816] => apta
+    [apellido1] => ADIEGO
+    [apellido2] => FASIUS
+    [nombre] => ALEJANDRO
+    [dni_alumno] => nodata
+    [fnac] => 2019-03-29
+    [nacionalidad] => ESPAÑOLA
+    [datos_tutor1] => JESUS ADIEGO BALLARIN
+    [dni_tutor1] => 72972627K
+    [datos_tutor2] => NATALIA FASIUS BURGES
+    [dni_tutor2] => 76919983W
+    [calle_dfamiliar] => C/ SAN JOSÉ DE CALASANZ
+    [num_dfamiliar] => 15
+    [piso_dfamiliar] => 3º IZD
+    [cp_dfamiliar] => 50008
+    [loc_dfamiliar] => Zaragoza
+    [tel_dfamiliar1] => 649301271
+    [tel_dfamiliar2] => 669300106
+    [email] => natifbi@hotmail.com
+    [hermanos_datos_admision1] => 
+    [hermanos_id_registro_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [id_centro_destino] => 50600166
+    [loc_centro_destino] => nodata
+    [prov_centro_destino] => Zaragoza
+    [tipoestudios9816] => 2019
+    [hore9816] => 7:45
+    [hors9816] => 16:00
+    [baremo_puntos_totales] => 0
+    [baremo_puntos_validados] => 0
+    [baremo_validar_sitlaboral] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_iprem9816] => mayor
+    [hermanos_datos_baremo1] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [baremo_validar_hnos_centro] => 0
+    [baremo_discapacidad9816] => no
+    [baremo_tipo_familia9816] => no
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [tributantes_nombre1] => 
+    [tributantes_id_tributante1] => 320
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 321
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 322
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 323
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [baremo_ptstotal] => 
+    [baremo_tutores_centro] => 0
+    [baremo_renta_inferior] => 0
+    [baremo_sitlaboral] => 0
+    [nuevaesc] => 0
+    [num_hadmision] => 0
+    [num_hbaremo] => 0
+    [cumplen] => 0
+    [oponenautorizar] => 0
+    [sol_vacantes] => 0
+    [sol_plaza] => 0
+)
+
+[23-Jun-2020 11:05:36] : [WARNING] - ENTRANDO EN UPDATE: 50600166
+[23-Jun-2020 11:05:36] : [WARNING] - ENTRANDO EN UPDATE DESPUES DE OBTENER FASE
+[23-Jun-2020 11:05:36] : [WARNING] - CONSULTA ACTUALIZACION BAREMO
+[23-Jun-2020 11:05:36] : [WARNING] - UPDATE baremo set puntos_totales='0',puntos_validados='0',validar_sitlaboral='0',validar_tutores_centro='0',validar_renta_inferior='0',iprem='mayor',validar_hnos_centro='0',discapacidad='no',tipo_familia='no',validar_discapacidad='0',validar_tipo_familia='0',tutores_centro='0',renta_inferior='0',sitlaboral='0' WHERE id_alumno=9816
+[23-Jun-2020 11:05:36] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[23-Jun-2020 11:05:36] : [WARNING] - UPDATE alumnos set fase_solicitud='baremada',estado_solicitud='apta',apellido1='ADIEGO',apellido2='FASIUS',nombre='ALEJANDRO',dni_alumno='nodata',fnac='2019-03-29',nacionalidad='ESPAÑOLA',datos_tutor1='JESUS ADIEGO BALLARIN',dni_tutor1='72972627K',datos_tutor2='NATALIA FASIUS BURGES',dni_tutor2='76919983W',calle_dfamiliar='C/ SAN JOSÉ DE CALASANZ',num_dfamiliar='15',piso_dfamiliar='3º IZD',cp_dfamiliar='50008',loc_dfamiliar='Zaragoza',tel_dfamiliar1='649301271',tel_dfamiliar2='669300106',email='natifbi@hotmail.com',id_centro_destino='50600166',loc_centro_destino='nodata',prov_centro_destino='Zaragoza',tipoestudios='2019',hore='7:45',hors='16:00',nuevaesc='0',num_hadmision='0',num_hbaremo='0',cumplen='0',oponenautorizar='0',sol_vacantes='0',sol_plaza='0' WHERE id_alumno=9816
+[23-Jun-2020 11:05:36] : [WARNING] - DATOS ACTUALIZACION SOLICITUD HERMANOS: 
+[23-Jun-2020 11:05:36] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [2] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [3] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+)
+
+[23-Jun-2020 11:05:36] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:05:36] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:05:36] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:05:36] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:05:36] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:05:36] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:05:36] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:05:36] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 320
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 321
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 322
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 323
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[23-Jun-2020 11:05:36] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:05:36] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:05:36] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='320'
+[23-Jun-2020 11:05:36] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:05:36] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:05:36] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='321'
+[23-Jun-2020 11:05:36] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:05:36] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:05:36] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='322'
+[23-Jun-2020 11:05:36] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:05:36] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:05:36] : [WARNING] - UPDATE tributantes set nombre='',apellido1='',apellido2='',parentesco='',dni='' WHERE id_tributante='323'
+[23-Jun-2020 11:05:41] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:05:41] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 11:05:41] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:05:41] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600166'
+[23-Jun-2020 11:11:17] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:11:17] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 11:11:17] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 11:11:17] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600154'
+[23-Jun-2020 11:11:24] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[23-Jun-2020 11:11:24] : [WARNING] - fase_solicitud9658=baremada&estado_solicitud9658=apta&apellido1=A%C3%B1on&apellido2=Mart%C3%ADnez&nombre=Luc%C3%ADa&dni_alumno=nodata&fnac=2020-06-02&nacionalidad=Espa%C3%B1a&datos_tutor1=Javier+A%C3%B1%C3%B3n+Mata&dni_tutor1=46986635G&datos_tutor2=Elena+Mart%C3%ADnez+Bernuz&dni_tutor2=25193273Q&calle_dfamiliar=Calle+Ant%C3%B3n+Garc%C3%ADa+Abril&num_dfamiliar=21&piso_dfamiliar=1B&cp_dfamiliar=50018&loc_dfamiliar=Zaragoza&tel_dfamiliar1=625480059&tel_dfamiliar2=646529565&email=javier.anon.mata%40gmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=MONSALUD&loc_centro_destino=ZARAGOZA&prov_centro_destino=Zaragoza&sol_vacantes=1&tipoestudios9658=2020&hore9658=7%3A45&hors9658=16%3A00&baremo_puntos_totales=5&baremo_puntos_validados=5&baremo_sitlaboral=1&baremo_validar_sitlaboral=1&baremo_tutores_centro=1&baremo_validar_tutores_centro=1&baremo_validar_renta_inferior=0&baremo_iprem9658=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9658=no&baremo_tipo_familia9658=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=1&tributantes_nombre1=&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=
+[23-Jun-2020 11:11:24] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[23-Jun-2020 11:11:24] : [WARNING] - fase_solicitud9658=baremada&estado_solicitud9658=apta&apellido1=A%C3%B1on&apellido2=Mart%C3%ADnez&nombre=Luc%C3%ADa&dni_alumno=nodata&fnac=2020-06-02&nacionalidad=Espa%C3%B1a&datos_tutor1=Javier+A%C3%B1%C3%B3n+Mata&dni_tutor1=46986635G&datos_tutor2=Elena+Mart%C3%ADnez+Bernuz&dni_tutor2=25193273Q&calle_dfamiliar=Calle+Ant%C3%B3n+Garc%C3%ADa+Abril&num_dfamiliar=21&piso_dfamiliar=1B&cp_dfamiliar=50018&loc_dfamiliar=Zaragoza&tel_dfamiliar1=625480059&tel_dfamiliar2=646529565&email=javier.anon.mata%40gmail.com&hermanos_datos_admision1=&hermanos_id_registro_admision1=&hermanos_fnacimiento_admision1=&hermanos_hcurso_admision1=&hermanos_nivel_educativo_admision1=&hermanos_datos_admision2=&hermanos_id_registro_admision2=&hermanos_fnacimiento_admision2=&hermanos_hcurso_admision2=&hermanos_nivel_educativo_admision2=&hermanos_datos_admision3=&hermanos_id_registro_admision3=&hermanos_fnacimiento_admision3=&hermanos_hcurso_admision3=&hermanos_nivel_educativo_admision3=&id_centro_destino=MONSALUD&loc_centro_destino=ZARAGOZA&prov_centro_destino=Zaragoza&sol_vacantes=1&tipoestudios9658=2020&hore9658=7%3A45&hors9658=16%3A00&baremo_puntos_totales=5&baremo_puntos_validados=5&baremo_sitlaboral=1&baremo_validar_sitlaboral=1&baremo_tutores_centro=1&baremo_validar_tutores_centro=1&baremo_validar_renta_inferior=0&baremo_iprem9658=mayor&hermanos_datos_baremo1=&hermanos_id_registro_baremo1=&hermanos_fnacimiento_baremo1=&hermanos_hcurso_baremo1=&hermanos_nivel_educativo_baremo1=&hermanos_datos_baremo2=&hermanos_id_registro_baremo2=&hermanos_fnacimiento_baremo2=&hermanos_hcurso_baremo2=&hermanos_nivel_educativo_baremo2=&hermanos_datos_baremo3=&hermanos_id_registro_baremo3=&hermanos_fnacimiento_baremo3=&hermanos_hcurso_baremo3=&hermanos_nivel_educativo_baremo3=&baremo_validar_hnos_centro=0&baremo_discapacidad9658=no&baremo_tipo_familia9658=no&baremo_validar_discapacidad=0&baremo_validar_tipo_familia=1&tributantes_nombre1=&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&baremo_ptstotal=
+[23-Jun-2020 11:11:24] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 22 
+[23-Jun-2020 11:11:24] : [WARNING] - {"fase_solicitud9658":"baremada","estado_solicitud9658":"apta","apellido1":"A\u00f1on","apellido2":"Mart\u00ednez","nombre":"Luc\u00eda","dni_alumno":"nodata","fnac":"2020-06-02","nacionalidad":"Espa\u00f1a","datos_tutor1":"Javier A\u00f1\u00f3n Mata","dni_tutor1":"46986635G","datos_tutor2":"Elena Mart\u00ednez Bernuz","dni_tutor2":"25193273Q","calle_dfamiliar":"Calle Ant\u00f3n Garc\u00eda Abril","num_dfamiliar":"21","piso_dfamiliar":"1B","cp_dfamiliar":"50018","loc_dfamiliar":"Zaragoza","tel_dfamiliar1":"625480059","tel_dfamiliar2":"646529565","email":"javier.anon.mata@gmail.com","hermanos_datos_admision1":"","hermanos_id_registro_admision1":"","hermanos_fnacimiento_admision1":"","hermanos_hcurso_admision1":"","hermanos_nivel_educativo_admision1":"","hermanos_datos_admision2":"","hermanos_id_registro_admision2":"","hermanos_fnacimiento_admision2":"","hermanos_hcurso_admision2":"","hermanos_nivel_educativo_admision2":"","hermanos_datos_admision3":"","hermanos_id_registro_admision3":"","hermanos_fnacimiento_admision3":"","hermanos_hcurso_admision3":"","hermanos_nivel_educativo_admision3":"","id_centro_destino":"50600154","loc_centro_destino":"ZARAGOZA","prov_centro_destino":"Zaragoza","sol_vacantes":"1","tipoestudios9658":"2020","hore9658":"7:45","hors9658":"16:00","baremo_puntos_totales":"5","baremo_puntos_validados":"5","baremo_sitlaboral":"1","baremo_validar_sitlaboral":"1","baremo_tutores_centro":"1","baremo_validar_tutores_centro":"1","baremo_validar_renta_inferior":"0","baremo_iprem9658":"mayor","hermanos_datos_baremo1":"","hermanos_id_registro_baremo1":"","hermanos_fnacimiento_baremo1":"","hermanos_hcurso_baremo1":"","hermanos_nivel_educativo_baremo1":"","hermanos_datos_baremo2":"","hermanos_id_registro_baremo2":"","hermanos_fnacimiento_baremo2":"","hermanos_hcurso_baremo2":"","hermanos_nivel_educativo_baremo2":"","hermanos_datos_baremo3":"","hermanos_id_registro_baremo3":"","hermanos_fnacimiento_baremo3":"","hermanos_hcurso_baremo3":"","hermanos_nivel_educativo_baremo3":"","baremo_validar_hnos_centro":"0","baremo_discapacidad9658":"no","baremo_tipo_familia9658":"no","baremo_validar_discapacidad":"0","baremo_validar_tipo_familia":"1","tributantes_nombre1":"","tributantes_id_tributante1":"0","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","baremo_ptstotal":"","baremo_renta_inferior":0,"nuevaesc":0,"num_hadmision":0,"num_hbaremo":0,"cumplen":0,"oponenautorizar":0,"sol_plaza":0}
+[23-Jun-2020 11:11:24] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[23-Jun-2020 11:11:24] : [WARNING] - Array
+(
+    [fase_solicitud9658] => baremada
+    [estado_solicitud9658] => apta
+    [apellido1] => Añon
+    [apellido2] => Martínez
+    [nombre] => Lucía
+    [dni_alumno] => nodata
+    [fnac] => 2020-06-02
+    [nacionalidad] => España
+    [datos_tutor1] => Javier Añón Mata
+    [dni_tutor1] => 46986635G
+    [datos_tutor2] => Elena Martínez Bernuz
+    [dni_tutor2] => 25193273Q
+    [calle_dfamiliar] => Calle Antón García Abril
+    [num_dfamiliar] => 21
+    [piso_dfamiliar] => 1B
+    [cp_dfamiliar] => 50018
+    [loc_dfamiliar] => Zaragoza
+    [tel_dfamiliar1] => 625480059
+    [tel_dfamiliar2] => 646529565
+    [email] => javier.anon.mata@gmail.com
+    [hermanos_datos_admision1] => 
+    [hermanos_id_registro_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [id_centro_destino] => 50600154
+    [loc_centro_destino] => ZARAGOZA
+    [prov_centro_destino] => Zaragoza
+    [sol_vacantes] => 1
+    [tipoestudios9658] => 2020
+    [hore9658] => 7:45
+    [hors9658] => 16:00
+    [baremo_puntos_totales] => 5
+    [baremo_puntos_validados] => 5
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [baremo_tutores_centro] => 1
+    [baremo_validar_tutores_centro] => 1
+    [baremo_validar_renta_inferior] => 0
+    [baremo_iprem9658] => mayor
+    [hermanos_datos_baremo1] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [baremo_validar_hnos_centro] => 0
+    [baremo_discapacidad9658] => no
+    [baremo_tipo_familia9658] => no
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 1
+    [tributantes_nombre1] => 
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [baremo_ptstotal] => 
+    [baremo_renta_inferior] => 0
+    [nuevaesc] => 0
+    [num_hadmision] => 0
+    [num_hbaremo] => 0
+    [cumplen] => 0
+    [oponenautorizar] => 0
+    [sol_plaza] => 0
+)
+
+[23-Jun-2020 11:11:24] : [WARNING] - ENTRANDO EN UPDATE: 50600154
+[23-Jun-2020 11:11:24] : [WARNING] - ENTRANDO EN UPDATE DESPUES DE OBTENER FASE
+[23-Jun-2020 11:11:24] : [WARNING] - CONSULTA ACTUALIZACION BAREMO
+[23-Jun-2020 11:11:24] : [WARNING] - UPDATE baremo set puntos_totales='5',puntos_validados='5',sitlaboral='1',validar_sitlaboral='1',tutores_centro='1',validar_tutores_centro='1',validar_renta_inferior='0',iprem='mayor',validar_hnos_centro='0',discapacidad='no',tipo_familia='no',validar_discapacidad='0',validar_tipo_familia='1',renta_inferior='0' WHERE id_alumno=9658
+[23-Jun-2020 11:11:24] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[23-Jun-2020 11:11:24] : [WARNING] - UPDATE alumnos set fase_solicitud='baremada',estado_solicitud='apta',apellido1='Añon',apellido2='Martínez',nombre='Lucía',dni_alumno='nodata',fnac='2020-06-02',nacionalidad='España',datos_tutor1='Javier Añón Mata',dni_tutor1='46986635G',datos_tutor2='Elena Martínez Bernuz',dni_tutor2='25193273Q',calle_dfamiliar='Calle Antón García Abril',num_dfamiliar='21',piso_dfamiliar='1B',cp_dfamiliar='50018',loc_dfamiliar='Zaragoza',tel_dfamiliar1='625480059',tel_dfamiliar2='646529565',email='javier.anon.mata@gmail.com',id_centro_destino='50600154',loc_centro_destino='ZARAGOZA',prov_centro_destino='Zaragoza',sol_vacantes='1',tipoestudios='2020',hore='7:45',hors='16:00',nuevaesc='0',num_hadmision='0',num_hbaremo='0',cumplen='0',oponenautorizar='0',sol_plaza='0' WHERE id_alumno=9658
+[23-Jun-2020 11:11:24] : [WARNING] - DATOS ACTUALIZACION SOLICITUD HERMANOS: 
+[23-Jun-2020 11:11:24] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [2] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+    [3] => Array
+        (
+            [datos] => 
+            [id_registro] => 
+            [fnacimiento] => 
+            [hcurso] => 
+            [nivel_educativo] => 
+        )
+
+)
+
+[23-Jun-2020 11:11:24] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:11:24] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:11:24] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:11:24] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:11:24] : [WARNING] - BORRANDO HERMANOS ADMISION
+[23-Jun-2020 11:11:24] : [WARNING] - DELETE from hermanos where id_registro=
+[23-Jun-2020 11:11:24] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:11:24] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[23-Jun-2020 11:11:24] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:11:24] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:11:24] : [WARNING] - INSERT INTO tributantes VALUES(9658,0,'','','','','')
+[23-Jun-2020 11:11:24] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:11:24] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:11:24] : [WARNING] - INSERT INTO tributantes VALUES(9658,0,'','','','','')
+[23-Jun-2020 11:11:24] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:11:24] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:11:24] : [WARNING] - INSERT INTO tributantes VALUES(9658,0,'','','','','')
+[23-Jun-2020 11:11:24] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
+[23-Jun-2020 11:11:24] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[23-Jun-2020 11:11:24] : [WARNING] - INSERT INTO tributantes VALUES(9658,0,'','','','','')
