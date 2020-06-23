@@ -1090,6 +1090,7 @@ return valido;
 function disableForm(formID){
   $(formID).find(':input').attr('disabled', 'disabled');
 }
+
 $('body').on('click', '.calumno', function(e){
   var ots = $(this);
   var vmodo='normal';
@@ -1107,10 +1108,52 @@ $('body').on('click', '.calumno', function(e){
 	$('#fsolicitud'+vid).toggle();
 	return;
 	}
-   console.log("idd de alumno:"+vid);
 $.ajax({
   method: "POST",
-  data: {id_alumno:vid,modo:vmodo,pin:vpin,rol:vrol,id_centro:vidcentro,estado_convocatoria:vestado_convocatoria,finsol:vfinsol},
+  data: {id_alumno:vid,modo:vmodo,pin:vpin,rol:vrol,id_centro:vidcentro,estado_convocatoria:vestado_convocatoria,finsol:vfinsol,tipoform:'normal'},
+  url:'../guarderias/scripts/ajax/editar_solicitud.php',
+   	success: function(data) 
+	{
+		if(vrol.indexOf("alumno")!=-1)
+		{
+			if(data.indexOf("DUP")!=-1)
+				$.alert({
+					title: 'LA SOLICITUD ESTÁ MARCADA COMO APTA, NO PUEDE MODIFICARSE',
+					content: 'CONTINUAR'
+					});
+		
+			if($("#tablasolicitud").length!=0)
+				$("#tablasolicitud").toggle();
+			else	$("#l_matricula").after(data);
+		}
+      	$("#"+idappend).after(data);
+	if(vestado_convocatoria=='3') {disableForm($('#fsolicitud'+vid)) ;}
+      	},
+      	error: function() {
+        alert('PROBLEMAS EDITANDO SOLICITUD!');
+      	}
+});
+});
+$('body').on('click', '.canexo4', function(e){
+  var ots = $(this);
+  var vmodo='normal';
+  var vid=$(this).attr("data-idal");
+  var vfinsol=$(this).attr("data-finsol");//si ha expirado plazo de alumno permitimos ver, no modificar, la sol.
+  var idappend="filasol"+vid;
+  var vestado_convocatoria=$('#estado_convocatoria').val();
+  var vpin=$('#pin').attr("value");
+  var vrol=$('#rol').attr("value");
+
+  if(vrol=='alumno') return; 
+  var vidcentro=$('#id_centro').text();
+  if($('#fsolicitud'+vid).length) 
+  	{
+	$('#fsolicitud'+vid).toggle();
+	return;
+	}
+$.ajax({
+  method: "POST",
+  data: {id_alumno:vid,modo:vmodo,pin:vpin,rol:vrol,id_centro:vidcentro,estado_convocatoria:vestado_convocatoria,finsol:vfinsol,tipoform:'fanexo4'},
   url:'../guarderias/scripts/ajax/editar_solicitud.php',
    	success: function(data) 
 	{
@@ -1182,7 +1225,42 @@ $(".show_solicitudes").click(function () {
 $.ajax({
   method: "POST",
   url: "../guarderias/scripts/ajax/listados_solicitudes.php",
-  data: {id_centro:vid_centro,rol:vrol,estado_convocatoria:vestado_convocatoria,provincia:vprovincia},
+  data: {id_centro:vid_centro,rol:vrol,estado_convocatoria:vestado_convocatoria,provincia:vprovincia,tipolistado:'normal'},
+      success: function(data) {
+				if(vrol=='admin' || vrol=='sp')
+				{
+            $(".row").show(); 
+            $("#map-canvas").hide();
+            $("#mapcontrol").hide(); 
+				$(".tresumensol").remove();
+				$(".tresumenmat").remove();
+				$("#l_matricula").html(data);
+				}
+				else
+				{
+            $(".row").show(); 
+            $("#map-canvas").hide();
+            $("#mapcontrol").hide(); 
+				$(".tresumensol").remove();
+				$(".tresumenmat").hide();
+				$("#tresumen").hide();
+				$("#l_matricula").html(data);
+				}
+      },
+      error: function() {
+        alert('Erorr LISTADO solicitudes');
+      }
+});
+});
+$(".show_anexo4").click(function () {  
+  var vid_centro=$('#id_centro').text();
+  var vrol=$('#rol').attr("value");
+  var vprovincia=$('#provincia').attr("value");
+  var vestado_convocatoria=$('#estado_convocatoria').attr("value");
+$.ajax({
+  method: "POST",
+  url: "../guarderias/scripts/ajax/listados_solicitudes.php",
+  data: {id_centro:vid_centro,rol:vrol,estado_convocatoria:vestado_convocatoria,provincia:vprovincia,tipolistado:'anexo4'},
       success: function(data) {
 				if(vrol=='admin' || vrol=='sp')
 				{

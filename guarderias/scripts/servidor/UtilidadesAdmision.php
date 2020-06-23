@@ -432,10 +432,10 @@ left join
 	}
   public function copiaTablaProvisionales($centro=0)
 	{
-		$sql_provisionales='DELETE from alumnos_provisional';
+		$sql_provisionales='DELETE from alumnos_provisional_final';
 		if($this->con->query($sql_provisionales)==0) return 0;
 
-		$sql_provisionales='INSERT IGNORE INTO alumnos_provisional SELECT * from alumnos';
+		$sql_provisionales='INSERT IGNORE INTO alumnos_provisional_final SELECT a.*,b.puntos_validados,c.nombre_centro from alumnos a, baremo b,centros c where a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino';
 		if($this->con->query($sql_provisionales)) return 1;
 		else return 0;
 

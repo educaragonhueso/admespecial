@@ -12,7 +12,7 @@ class ACCESO
 	{
 		$this->bd=$bd;
 		$this->c =$this->dbconnect($bd['host'],$bd['user'],$bd['pass']);
-      $this->c->autocommit(FALSE);
+      $this->c->autocommit(TRUE);
 		mysqli_select_db($this->c,$bd['database']);
 		$this->c->set_charset("utf8");
 		$q="SET NAMES 'UTF8'";
@@ -126,6 +126,39 @@ class ACCESO
 	return $usu;
 
 	}
+  public function carga_vacantes() 
+	{
+	$total_filas=0;
+	$total_filas_insertadas=0;
+	$total_filas_fallidas=0;
+	if (($gestor = fopen($this->csv_file, "r")) !== FALSE) 
+	{
+		while (($datos = fgetcsv($gestor, 0, "\n")) !== FALSE) 
+		{  
+         $centros = explode(";",$datos[0]);
+         //preparando datos
+         $total_filas++;		
+         $c_ce=$centros[0];	
+         $c_vuno=$centros[1];
+         $c_vuno_acneae=$centros[2];
+         $c_vdos=$centros[3];
+         $c_vdos_acneae=$centros[4];
+         $c_vtres=$centros[5];
+         $c_vtres_acneae=$centros[6];
+         
+         $sql="UPDATE  premarquesa_produccion.centros SET vuno=$c_vuno,vuno_original=$c_vuno,vuno_acneae=$c_vuno_acneae,vuno_acneae_original=$c_vuno_acneae,vdos=$c_vdos,vdos_original=$c_vdos,vdos_acneae=$c_vdos_acneae,vdos_acneae_original=$c_vdos_acneae ,vtres=$c_vtres,vtres_original=$c_vtres,vtres_acneae=$c_vtres_acneae,vtres_acneae_original=$c_vtres_acneae WHERE id_centro='$c_ce'"; 
+
+            print($sql.PHP_EOL);
+            if(!$result = mysqli_query($this->c, $sql)) 
+            {
+               die(PHP_EOL."Error actualizando centros vacantes: ".mysqli_error($this->c));
+            }
+         print($result);
+        }
+	}
+ 	fclose($gestor);
+   return 1;
+   }
   public function carga_guarderias() 
 	{
 	$total_filas=0;

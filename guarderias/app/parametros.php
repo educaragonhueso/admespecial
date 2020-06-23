@@ -56,8 +56,8 @@ $campos_cabecera_pdf_mat=array('Centro','2020','2019','2018');
 $campos_bbdd_pdf_mat=array('nombre_centro','vuno','vdos','vtres');
 
 //DATOS PARA LISTADOS PROVISIONALES
-$campos_cabecera_admitidos_prov=array('Tipo','Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Criterios prioritarios','Puntos Baremo');
-$campos_bbdd_admitidos_prov=array('tipoestudios','nordensorteo','nasignado','apellido1','apellido2','nombre','transporte','puntos_validados');
+$campos_cabecera_admitidos_prov=array('Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
+$campos_bbdd_admitidos_prov=array('nordensorteo','nasignado','apellido1','apellido2','nombre','puntos_validados');
 
 $campos_cabecera_noadmitidos_prov=array('Tipo','Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Tipo','Criterios prioritarios','Puntos Baremo');
 $campos_bbdd_noadmitidos_prov=array('tipoestudios','nordensorteo','nasignado','apellido1','apellido2','nombre','tipoestudios','transporte','puntos_validados');

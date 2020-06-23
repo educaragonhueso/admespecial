@@ -74,7 +74,7 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 		//para cada centro calculamos solicitudes admitidas
 		//Si hemos llegado al dia d elas provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
 		$acentros=array();
-		$centros=$ccentros->getAllCentros('todas','especial');
+		$centros=$ccentros->getAllCentros('todas','todos','guarderias');
 		$ccentros=new CentrosController(0,$conexion);
 		while($row = $centros->fetch_assoc()) { $acentros[]=$row;}
 		
@@ -91,7 +91,8 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 			$nsolicitudescentro=$centrotmp->getNumSolicitudes($dcentro['id_centro'],1);
 			if($nsolicitudescentro==0) continue;
 			$nombrecentro=$centrotmp->getNombre();
-			$log_sorteo->warning("NOMBRE: ".$nombrecentro.PHP_EOL);
+			
+         $log_sorteo->warning("NOMBRE: ".$nombrecentro.PHP_EOL);
 			$log_sorteo->warning("FASE: ".$centrotmp->getFase().PHP_EOL);
 			$log_sorteo->warning("NSOLICITUDES: ".$nsolicitudescentro.PHP_EOL);
 			$log_sorteo->warning("ENTRANDO SORTEO TABLA CENTRO: $nombrecentro");
@@ -104,20 +105,26 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 			 return 0;
 			}
 			$log_sorteo->warning("OBTENIENDO VACANTES CENTRO: $nombrecentro");
-			$dsorteo=$centrotmp->getVacantesGuarderias('centro');
-			$log_sorteo->warning(print_r($dsorteo,true));
-			$vuno=$dsorteo[0]->vuno;
+		
+      	$dsorteo=$centrotmp->getVacantesGuarderias('centro');
+		
+      	$log_sorteo->warning(print_r($dsorteo,true));
+		
+      	$vuno=$dsorteo[0]->vuno;
+			$vuno_acneae=$dsorteo[0]->vuno_acneae;
 			$vdos=$dsorteo[0]->vdos;
+			$vdos_acneae=$dsorteo[0]->vdos_acneae;
 			$vtres=$dsorteo[0]->vtres;
-			if($tsolicitud->setSolicitudesSorteoGuarderias($id_centro,$nsolicitudescentro,$vuno,$vdos,$vtres)==0) 
+			$vtres_acneae=$dsorteo[0]->vtres_acneae;
+         if($tsolicitud->setSolicitudesSorteoGuarderias($id_centro,$nsolicitudescentro,$vuno,$vuno_acneae,$vdos,$vdos_acneae,$vtres,$vtres_acneae)==0) 
 		   {
-      		print("NO HAY VACANTES<br>");
+      		print("ERROR ESTABLECIENDO SOL ADMITIDAS<br>");
             exit();
          }
 		}	
       //copiar tabla de solicitudes definitivas a la tabla de fase2
-      $res=$utils->copiaTablaBaremada('alumnos_baremada_definitivo','4');
-		$log_sorteo->warning("SORTEO REALIZADO CON EXISTO");
+      $res=$utils->copiaTablaProvisionales();
+		$log_sorteo->warning("SORTEO REALIZADO CON EXITO");
 	}
 }
 else//accedemos como centro

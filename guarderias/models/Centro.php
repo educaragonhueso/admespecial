@@ -39,9 +39,9 @@ class Centro extends EntidadBase{
 			$this->log_matricula->warning("EN vACANTES GUARDERIAS : ");
 			$resultSet=array();
 			if($rol=='admin') 
-				$sql="SELECT sum(vuno) as vuno,sum(vdos) as vdos,sum(vtres) as vtres FROM centros";
+				$sql="SELECT sum(vuno) as vuno, sum(vuno_acneae) as vuno_acneae,sum(vdos) as vdos,sum(vdos_acenae) as vdos_acneae, sum(vtres) as vtres, sum(vtres_acneae) as vtres_acneae FROM centros";
 	      else
-				$sql="SELECT sum(vuno) as vuno,sum(vdos) as vdos,sum(vtres) as vtres FROM centros WHERE id_centro=$this->id_centro";
+				$sql="SELECT vuno,vuno_acneae,vdos,vdos_acneae,vtres,vtres_acneae FROM centros WHERE id_centro=$this->id_centro";
 	
 			$this->log_matricula->warning("CONSULTA DATOS GUARDERIAS : ".$sql);
 			$this->log_sorteo->warning("CONSULTA DATOS GUARDERIAS : ROL: ".$rol.$sql);

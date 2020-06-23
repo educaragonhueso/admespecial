@@ -33831,3 +33831,3999 @@
     [dni3] => 
 )
 
+[23-Jun-2020 14:12:49] : [WARNING] - BAREMO
+[23-Jun-2020 14:12:49] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9559
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 14:12:49] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9559
+[23-Jun-2020 14:12:49] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 14:12:49] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9559
+[23-Jun-2020 14:12:49] : [WARNING] - HERMANOS: 
+[23-Jun-2020 14:12:49] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 14:12:49] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 14:12:49] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9559
+[23-Jun-2020 14:12:49] : [WARNING] - HERMANOS: 
+[23-Jun-2020 14:12:49] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 14:12:49] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 14:12:49] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9559
+[23-Jun-2020 14:12:49] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 14:12:49] : [WARNING] - 1
+[23-Jun-2020 14:12:49] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 14:12:49] : [WARNING] - 1
+[23-Jun-2020 14:12:49] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 14:12:49] : [WARNING] - Array
+(
+    [id_alumno] => 9559
+    [id_usuario] => 500600473
+    [apellido1] => BALLESTA
+    [apellido2] => CARRUESCO
+    [nombre] => LAIA
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-01-07
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => ROMÁN BALLESTA MOLTÓ
+    [datos_tutor2] => IRENE CARRUESCO CRESPO
+    [dni_tutor2] => 76919986M
+    [dni_tutor1] => 47715052B
+    [calle_dfamiliar] => FLORIAN
+    [num_dfamiliar] => 12
+    [piso_dfamiliar] => ESC 1 6A
+    [loc_dfamiliar] => ZARAGOZA
+    [cp_dfamiliar] => 50021
+    [tel_dfamiliar1] => 635226746
+    [tel_dfamiliar2] => 687434025
+    [email] => irecarru@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => ARAGÓN
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Zaragoza
+    [prov_centro_destino] => zaragoza
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 146
+    [nordensorteo] => 676
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 0
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9559
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 14:21:03] : [WARNING] - BAREMO
+[23-Jun-2020 14:21:03] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9550
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 14:21:03] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9550
+[23-Jun-2020 14:21:03] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 14:21:03] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9550
+[23-Jun-2020 14:21:03] : [WARNING] - HERMANOS: 
+[23-Jun-2020 14:21:03] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 14:21:03] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 14:21:03] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9550
+[23-Jun-2020 14:21:03] : [WARNING] - HERMANOS: 
+[23-Jun-2020 14:21:03] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 14:21:03] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 14:21:03] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9550
+[23-Jun-2020 14:21:03] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 14:21:03] : [WARNING] - 1
+[23-Jun-2020 14:21:03] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 14:21:03] : [WARNING] - 1
+[23-Jun-2020 14:21:03] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 14:21:03] : [WARNING] - Array
+(
+    [id_alumno] => 9550
+    [id_usuario] => 500600464
+    [apellido1] => BAILO
+    [apellido2] => SALVADOR
+    [nombre] => LEO
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-02-06
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => ERIC BAILO CHAVARRI
+    [datos_tutor2] => AURORA SALVADOR DIARTE
+    [dni_tutor2] => 72994379S
+    [dni_tutor1] => 25480509M
+    [calle_dfamiliar] => JOSE LOBEZ PUEYO
+    [num_dfamiliar] => 19
+    [piso_dfamiliar] => 3 IZDA
+    [loc_dfamiliar] => ZARAGOZA
+    [cp_dfamiliar] => 50007
+    [tel_dfamiliar1] => 658618332
+    [tel_dfamiliar2] => 646313421
+    [email] => eric_bailo@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => ARAGÓN
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Zaragoza
+    [prov_centro_destino] => zaragoza
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 248
+    [nordensorteo] => 778
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 1
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9550
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 14:28:41] : [WARNING] - BAREMO
+[23-Jun-2020 14:28:41] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9550
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 14:28:41] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9550
+[23-Jun-2020 14:28:41] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 14:28:41] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9550
+[23-Jun-2020 14:28:41] : [WARNING] - HERMANOS: 
+[23-Jun-2020 14:28:41] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 14:28:41] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 14:28:41] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9550
+[23-Jun-2020 14:28:41] : [WARNING] - HERMANOS: 
+[23-Jun-2020 14:28:41] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 14:28:41] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 14:28:41] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9550
+[23-Jun-2020 14:28:41] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 14:28:41] : [WARNING] - 1
+[23-Jun-2020 14:28:41] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 14:28:41] : [WARNING] - 1
+[23-Jun-2020 14:28:41] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 14:28:41] : [WARNING] - Array
+(
+    [id_alumno] => 9550
+    [id_usuario] => 500600464
+    [apellido1] => BAILO
+    [apellido2] => SALVADOR
+    [nombre] => LEO
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-02-06
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => ERIC BAILO CHAVARRI
+    [datos_tutor2] => AURORA SALVADOR DIARTE
+    [dni_tutor2] => 72994379S
+    [dni_tutor1] => 25480509M
+    [calle_dfamiliar] => JOSE LOBEZ PUEYO
+    [num_dfamiliar] => 19
+    [piso_dfamiliar] => 3 IZDA
+    [loc_dfamiliar] => ZARAGOZA
+    [cp_dfamiliar] => 50007
+    [tel_dfamiliar1] => 658618332
+    [tel_dfamiliar2] => 646313421
+    [email] => eric_bailo@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => ARAGÓN
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Zaragoza
+    [prov_centro_destino] => zaragoza
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 248
+    [nordensorteo] => 778
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 1
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9550
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 14:39:09] : [WARNING] - BAREMO
+[23-Jun-2020 14:39:09] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9550
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 14:39:09] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9550
+[23-Jun-2020 14:39:09] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 14:39:09] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9550
+[23-Jun-2020 14:39:09] : [WARNING] - HERMANOS: 
+[23-Jun-2020 14:39:09] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 14:39:09] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 14:39:09] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9550
+[23-Jun-2020 14:39:09] : [WARNING] - HERMANOS: 
+[23-Jun-2020 14:39:09] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 14:39:09] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 14:39:09] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9550
+[23-Jun-2020 14:39:09] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 14:39:09] : [WARNING] - 1
+[23-Jun-2020 14:39:09] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 14:39:09] : [WARNING] - 1
+[23-Jun-2020 14:39:09] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 14:39:09] : [WARNING] - Array
+(
+    [id_alumno] => 9550
+    [id_usuario] => 500600464
+    [apellido1] => BAILO
+    [apellido2] => SALVADOR
+    [nombre] => LEO
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-02-06
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => ERIC BAILO CHAVARRI
+    [datos_tutor2] => AURORA SALVADOR DIARTE
+    [dni_tutor2] => 72994379S
+    [dni_tutor1] => 25480509M
+    [calle_dfamiliar] => JOSE LOBEZ PUEYO
+    [num_dfamiliar] => 19
+    [piso_dfamiliar] => 3 IZDA
+    [loc_dfamiliar] => ZARAGOZA
+    [cp_dfamiliar] => 50007
+    [tel_dfamiliar1] => 658618332
+    [tel_dfamiliar2] => 646313421
+    [email] => eric_bailo@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => ARAGÓN
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Zaragoza
+    [prov_centro_destino] => zaragoza
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 248
+    [nordensorteo] => 778
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 1
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9550
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 15:23:52] : [WARNING] - BAREMO
+[23-Jun-2020 15:23:52] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9550
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 15:23:52] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9550
+[23-Jun-2020 15:23:52] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 15:23:52] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9550
+[23-Jun-2020 15:23:52] : [WARNING] - HERMANOS: 
+[23-Jun-2020 15:23:52] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 15:23:52] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 15:23:52] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9550
+[23-Jun-2020 15:23:52] : [WARNING] - HERMANOS: 
+[23-Jun-2020 15:23:52] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 15:23:52] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 15:23:52] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9550
+[23-Jun-2020 15:23:52] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 15:23:52] : [WARNING] - 1
+[23-Jun-2020 15:23:52] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 15:23:52] : [WARNING] - 1
+[23-Jun-2020 15:23:52] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 15:23:52] : [WARNING] - Array
+(
+    [id_alumno] => 9550
+    [id_usuario] => 500600464
+    [apellido1] => BAILO
+    [apellido2] => SALVADOR
+    [nombre] => LEO
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-02-06
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => ERIC BAILO CHAVARRI
+    [datos_tutor2] => AURORA SALVADOR DIARTE
+    [dni_tutor2] => 72994379S
+    [dni_tutor1] => 25480509M
+    [calle_dfamiliar] => JOSE LOBEZ PUEYO
+    [num_dfamiliar] => 19
+    [piso_dfamiliar] => 3 IZDA
+    [loc_dfamiliar] => ZARAGOZA
+    [cp_dfamiliar] => 50007
+    [tel_dfamiliar1] => 658618332
+    [tel_dfamiliar2] => 646313421
+    [email] => eric_bailo@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => ARAGÓN
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Zaragoza
+    [prov_centro_destino] => zaragoza
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 248
+    [nordensorteo] => 778
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 1
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9550
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 15:32:21] : [WARNING] - BAREMO
+[23-Jun-2020 15:32:21] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9550
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 15:32:21] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9550
+[23-Jun-2020 15:32:21] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 15:32:21] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9550
+[23-Jun-2020 15:32:21] : [WARNING] - HERMANOS: 
+[23-Jun-2020 15:32:21] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 15:32:21] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 15:32:21] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9550
+[23-Jun-2020 15:32:21] : [WARNING] - HERMANOS: 
+[23-Jun-2020 15:32:21] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 15:32:21] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 15:32:21] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9550
+[23-Jun-2020 15:32:21] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 15:32:21] : [WARNING] - 1
+[23-Jun-2020 15:32:21] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 15:32:21] : [WARNING] - 1
+[23-Jun-2020 15:32:21] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 15:32:21] : [WARNING] - Array
+(
+    [id_alumno] => 9550
+    [id_usuario] => 500600464
+    [apellido1] => BAILO
+    [apellido2] => SALVADOR
+    [nombre] => LEO
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-02-06
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => ERIC BAILO CHAVARRI
+    [datos_tutor2] => AURORA SALVADOR DIARTE
+    [dni_tutor2] => 72994379S
+    [dni_tutor1] => 25480509M
+    [calle_dfamiliar] => JOSE LOBEZ PUEYO
+    [num_dfamiliar] => 19
+    [piso_dfamiliar] => 3 IZDA
+    [loc_dfamiliar] => ZARAGOZA
+    [cp_dfamiliar] => 50007
+    [tel_dfamiliar1] => 658618332
+    [tel_dfamiliar2] => 646313421
+    [email] => eric_bailo@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => ARAGÓN
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Zaragoza
+    [prov_centro_destino] => zaragoza
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 248
+    [nordensorteo] => 778
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 1
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9550
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 15:36:01] : [WARNING] - BAREMO
+[23-Jun-2020 15:36:01] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9550
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 15:36:01] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9550
+[23-Jun-2020 15:36:01] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 15:36:01] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9550
+[23-Jun-2020 15:36:01] : [WARNING] - HERMANOS: 
+[23-Jun-2020 15:36:01] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 15:36:01] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 15:36:01] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9550
+[23-Jun-2020 15:36:01] : [WARNING] - HERMANOS: 
+[23-Jun-2020 15:36:01] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 15:36:01] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 15:36:01] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9550
+[23-Jun-2020 15:36:01] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 15:36:01] : [WARNING] - 1
+[23-Jun-2020 15:36:01] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 15:36:01] : [WARNING] - 1
+[23-Jun-2020 15:36:01] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 15:36:01] : [WARNING] - Array
+(
+    [id_alumno] => 9550
+    [id_usuario] => 500600464
+    [apellido1] => BAILO
+    [apellido2] => SALVADOR
+    [nombre] => LEO
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-02-06
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => ERIC BAILO CHAVARRI
+    [datos_tutor2] => AURORA SALVADOR DIARTE
+    [dni_tutor2] => 72994379S
+    [dni_tutor1] => 25480509M
+    [calle_dfamiliar] => JOSE LOBEZ PUEYO
+    [num_dfamiliar] => 19
+    [piso_dfamiliar] => 3 IZDA
+    [loc_dfamiliar] => ZARAGOZA
+    [cp_dfamiliar] => 50007
+    [tel_dfamiliar1] => 658618332
+    [tel_dfamiliar2] => 646313421
+    [email] => eric_bailo@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => ARAGÓN
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Zaragoza
+    [prov_centro_destino] => zaragoza
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 248
+    [nordensorteo] => 778
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 1
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9550
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 15:36:30] : [WARNING] - BAREMO
+[23-Jun-2020 15:36:30] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9550
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 15:36:30] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9550
+[23-Jun-2020 15:36:30] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 15:36:30] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9550
+[23-Jun-2020 15:36:30] : [WARNING] - HERMANOS: 
+[23-Jun-2020 15:36:30] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 15:36:30] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 15:36:30] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9550
+[23-Jun-2020 15:36:30] : [WARNING] - HERMANOS: 
+[23-Jun-2020 15:36:30] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 15:36:30] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 15:36:30] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9550
+[23-Jun-2020 15:36:30] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 15:36:30] : [WARNING] - 1
+[23-Jun-2020 15:36:30] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 15:36:30] : [WARNING] - 1
+[23-Jun-2020 15:36:30] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 15:36:30] : [WARNING] - Array
+(
+    [id_alumno] => 9550
+    [id_usuario] => 500600464
+    [apellido1] => BAILO
+    [apellido2] => SALVADOR
+    [nombre] => LEO
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-02-06
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => ERIC BAILO CHAVARRI
+    [datos_tutor2] => AURORA SALVADOR DIARTE
+    [dni_tutor2] => 72994379S
+    [dni_tutor1] => 25480509M
+    [calle_dfamiliar] => JOSE LOBEZ PUEYO
+    [num_dfamiliar] => 19
+    [piso_dfamiliar] => 3 IZDA
+    [loc_dfamiliar] => ZARAGOZA
+    [cp_dfamiliar] => 50007
+    [tel_dfamiliar1] => 658618332
+    [tel_dfamiliar2] => 646313421
+    [email] => eric_bailo@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => ARAGÓN
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Zaragoza
+    [prov_centro_destino] => zaragoza
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 248
+    [nordensorteo] => 778
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 1
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9550
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 22:15:10] : [WARNING] - BAREMO
+[23-Jun-2020 22:15:10] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 22:15:10] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9543
+[23-Jun-2020 22:15:10] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 22:15:10] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9543
+[23-Jun-2020 22:15:10] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:15:10] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 22:15:10] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 22:15:10] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9543
+[23-Jun-2020 22:15:10] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:15:10] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 22:15:10] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 22:15:10] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9543
+[23-Jun-2020 22:15:10] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 22:15:10] : [WARNING] - 1
+[23-Jun-2020 22:15:10] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 22:15:10] : [WARNING] - 1
+[23-Jun-2020 22:15:10] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 22:15:10] : [WARNING] - Array
+(
+    [id_alumno] => 9543
+    [id_usuario] => 500600457
+    [apellido1] => ANDREU
+    [apellido2] => PERA
+    [nombre] => PAULA
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-06-20
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => IZARBE PERA SEIJO
+    [datos_tutor2] => DAVID ANDREU ALCAIDE
+    [dni_tutor2] => 73209838X
+    [dni_tutor1] => 18048416V
+    [calle_dfamiliar] => CALLE CONDE BERENGUER
+    [num_dfamiliar] => 11
+    [piso_dfamiliar] => 3ºF
+    [loc_dfamiliar] => Barbastro
+    [cp_dfamiliar] => BARBASTRO
+    [tel_dfamiliar1] => 660968973
+    [tel_dfamiliar2] => 669546493
+    [email] => izaa8@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => LA PAZ
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Barbastro
+    [prov_centro_destino] => huesca
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 0
+    [nordensorteo] => 0
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 0
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 22:15:19] : [WARNING] - BAREMO
+[23-Jun-2020 22:15:19] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 22:15:19] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9543
+[23-Jun-2020 22:15:19] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 22:15:19] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9543
+[23-Jun-2020 22:15:19] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:15:19] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 22:15:19] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 22:15:19] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9543
+[23-Jun-2020 22:15:19] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:15:19] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 22:15:19] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 22:15:19] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9543
+[23-Jun-2020 22:15:19] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 22:15:19] : [WARNING] - 1
+[23-Jun-2020 22:15:19] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 22:15:19] : [WARNING] - 1
+[23-Jun-2020 22:15:19] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 22:15:19] : [WARNING] - Array
+(
+    [id_alumno] => 9543
+    [id_usuario] => 500600457
+    [apellido1] => ANDREU
+    [apellido2] => PERA
+    [nombre] => PAULA
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-06-20
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => IZARBE PERA SEIJO
+    [datos_tutor2] => DAVID ANDREU ALCAIDE
+    [dni_tutor2] => 73209838X
+    [dni_tutor1] => 18048416V
+    [calle_dfamiliar] => CALLE CONDE BERENGUER
+    [num_dfamiliar] => 11
+    [piso_dfamiliar] => 3ºF
+    [loc_dfamiliar] => Barbastro
+    [cp_dfamiliar] => BARBASTRO
+    [tel_dfamiliar1] => 660968973
+    [tel_dfamiliar2] => 669546493
+    [email] => izaa8@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => LA PAZ
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Barbastro
+    [prov_centro_destino] => huesca
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 0
+    [nordensorteo] => 0
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 0
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 22:15:30] : [WARNING] - BAREMO
+[23-Jun-2020 22:15:30] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9182
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 1
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 22:15:30] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9182
+[23-Jun-2020 22:15:30] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 22:15:30] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9182
+[23-Jun-2020 22:15:30] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:15:30] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 22:15:30] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 22:15:30] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9182
+[23-Jun-2020 22:15:30] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:15:30] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 22:15:30] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 22:15:30] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9182
+[23-Jun-2020 22:15:30] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 22:15:30] : [WARNING] - 1
+[23-Jun-2020 22:15:30] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 22:15:30] : [WARNING] - 1
+[23-Jun-2020 22:15:30] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 22:15:30] : [WARNING] - Array
+(
+    [id_alumno] => 9182
+    [id_usuario] => 60021209
+    [apellido1] => ALAGON
+    [apellido2] => ESPERANZA
+    [nombre] => GONZALO
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑA
+    [fnac] => 2020-02-28
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => VERONICA ESPERANZA MENDOZA
+    [datos_tutor2] => RAMON ALAGON ABADIA
+    [dni_tutor2] => 18051267Q
+    [dni_tutor1] => 18053382S
+    [calle_dfamiliar] => FIDEL PAGES MIRAVE
+    [num_dfamiliar] => 20
+    [piso_dfamiliar] => 4ºF
+    [loc_dfamiliar] => HUESCA
+    [cp_dfamiliar] => 22004
+    [tel_dfamiliar1] => 677974235
+    [tel_dfamiliar2] => 646916815
+    [email] => verespe@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => NUESTRA SEÑORA DE SAN LORENZO
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Huesca
+    [prov_centro_destino] => huesca
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 0
+    [nordensorteo] => 0
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 0
+    [hore] => 9:00
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9182
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 1
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 22:15:35] : [WARNING] - BAREMO
+[23-Jun-2020 22:15:35] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 22:15:35] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9543
+[23-Jun-2020 22:15:35] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 22:15:35] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9543
+[23-Jun-2020 22:15:35] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:15:35] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 22:15:35] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 22:15:35] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9543
+[23-Jun-2020 22:15:35] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:15:35] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 22:15:35] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 22:15:35] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9543
+[23-Jun-2020 22:15:35] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 22:15:35] : [WARNING] - 1
+[23-Jun-2020 22:15:35] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 22:15:35] : [WARNING] - 1
+[23-Jun-2020 22:15:35] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 22:15:35] : [WARNING] - Array
+(
+    [id_alumno] => 9543
+    [id_usuario] => 500600457
+    [apellido1] => ANDREU
+    [apellido2] => PERA
+    [nombre] => PAULA
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-06-20
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => IZARBE PERA SEIJO
+    [datos_tutor2] => DAVID ANDREU ALCAIDE
+    [dni_tutor2] => 73209838X
+    [dni_tutor1] => 18048416V
+    [calle_dfamiliar] => CALLE CONDE BERENGUER
+    [num_dfamiliar] => 11
+    [piso_dfamiliar] => 3ºF
+    [loc_dfamiliar] => Barbastro
+    [cp_dfamiliar] => BARBASTRO
+    [tel_dfamiliar1] => 660968973
+    [tel_dfamiliar2] => 669546493
+    [email] => izaa8@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => LA PAZ
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Barbastro
+    [prov_centro_destino] => huesca
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 0
+    [nordensorteo] => 0
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 0
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 22:16:56] : [WARNING] - BAREMO
+[23-Jun-2020 22:16:56] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 22:16:56] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9543
+[23-Jun-2020 22:16:56] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 22:16:56] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9543
+[23-Jun-2020 22:16:56] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:16:56] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 22:16:56] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 22:16:56] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9543
+[23-Jun-2020 22:16:56] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:16:56] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 22:16:56] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 22:16:56] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9543
+[23-Jun-2020 22:16:56] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 22:16:56] : [WARNING] - 1
+[23-Jun-2020 22:16:56] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 22:16:56] : [WARNING] - 1
+[23-Jun-2020 22:16:56] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 22:16:56] : [WARNING] - Array
+(
+    [id_alumno] => 9543
+    [id_usuario] => 500600457
+    [apellido1] => ANDREU
+    [apellido2] => PERA
+    [nombre] => PAULA
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-06-20
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => IZARBE PERA SEIJO
+    [datos_tutor2] => DAVID ANDREU ALCAIDE
+    [dni_tutor2] => 73209838X
+    [dni_tutor1] => 18048416V
+    [calle_dfamiliar] => CALLE CONDE BERENGUER
+    [num_dfamiliar] => 11
+    [piso_dfamiliar] => 3ºF
+    [loc_dfamiliar] => Barbastro
+    [cp_dfamiliar] => BARBASTRO
+    [tel_dfamiliar1] => 660968973
+    [tel_dfamiliar2] => 669546493
+    [email] => izaa8@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => LA PAZ
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Barbastro
+    [prov_centro_destino] => huesca
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 0
+    [nordensorteo] => 0
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 0
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 22:18:58] : [WARNING] - BAREMO
+[23-Jun-2020 22:18:58] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9564
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 22:18:58] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9564
+[23-Jun-2020 22:18:58] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 22:18:58] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9564
+[23-Jun-2020 22:18:58] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:18:58] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 22:18:58] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 22:18:58] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9564
+[23-Jun-2020 22:18:58] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:18:58] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 22:18:58] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 22:18:58] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9564
+[23-Jun-2020 22:18:58] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 22:18:58] : [WARNING] - 1
+[23-Jun-2020 22:18:58] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 22:18:58] : [WARNING] - 1
+[23-Jun-2020 22:18:58] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 22:18:58] : [WARNING] - Array
+(
+    [id_alumno] => 9564
+    [id_usuario] => 500600478
+    [apellido1] => BEGUERIA
+    [apellido2] => GAIRIN
+    [nombre] => MARTINA
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-05-20
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => PATRICIA GAIRIN LACAMBRA
+    [datos_tutor2] => DANIEL BEGUERIA SALAMERO
+    [dni_tutor2] => 25481654T
+    [dni_tutor1] => 18037248G
+    [calle_dfamiliar] => PLAZA FERROCARRIL
+    [num_dfamiliar] => 2
+    [piso_dfamiliar] => 1ºB
+    [loc_dfamiliar] => Barbastro
+    [cp_dfamiliar] => 22300
+    [tel_dfamiliar1] => 659075629
+    [tel_dfamiliar2] => 605137473
+    [email] => begue33@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => LA PAZ
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Barbastro
+    [prov_centro_destino] => huesca
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 0
+    [nordensorteo] => 0
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 0
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9564
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 22:21:40] : [WARNING] - BAREMO
+[23-Jun-2020 22:21:40] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 22:21:40] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9543
+[23-Jun-2020 22:21:40] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 22:21:40] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9543
+[23-Jun-2020 22:21:40] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:21:40] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 22:21:40] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 22:21:40] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9543
+[23-Jun-2020 22:21:40] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:21:40] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 22:21:40] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 22:21:40] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9543
+[23-Jun-2020 22:21:40] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 22:21:40] : [WARNING] - 1
+[23-Jun-2020 22:21:40] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 22:21:40] : [WARNING] - 1
+[23-Jun-2020 22:21:40] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 22:21:40] : [WARNING] - Array
+(
+    [id_alumno] => 9543
+    [id_usuario] => 500600457
+    [apellido1] => ANDREU
+    [apellido2] => PERA
+    [nombre] => PAULA
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-06-20
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => IZARBE PERA SEIJO
+    [datos_tutor2] => DAVID ANDREU ALCAIDE
+    [dni_tutor2] => 73209838X
+    [dni_tutor1] => 18048416V
+    [calle_dfamiliar] => CALLE CONDE BERENGUER
+    [num_dfamiliar] => 11
+    [piso_dfamiliar] => 3ºF
+    [loc_dfamiliar] => Barbastro
+    [cp_dfamiliar] => BARBASTRO
+    [tel_dfamiliar1] => 660968973
+    [tel_dfamiliar2] => 669546493
+    [email] => izaa8@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => LA PAZ
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Barbastro
+    [prov_centro_destino] => huesca
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 0
+    [nordensorteo] => 0
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 0
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 22:32:05] : [WARNING] - BAREMO
+[23-Jun-2020 22:32:05] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 22:32:05] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9543
+[23-Jun-2020 22:32:05] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 22:32:05] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9543
+[23-Jun-2020 22:32:05] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:32:05] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 22:32:05] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 22:32:05] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9543
+[23-Jun-2020 22:32:05] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:32:05] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 22:32:05] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 22:32:05] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9543
+[23-Jun-2020 22:32:05] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 22:32:05] : [WARNING] - 1
+[23-Jun-2020 22:32:05] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 22:32:05] : [WARNING] - 1
+[23-Jun-2020 22:32:05] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 22:32:05] : [WARNING] - Array
+(
+    [id_alumno] => 9543
+    [id_usuario] => 500600457
+    [apellido1] => ANDREU
+    [apellido2] => PERA
+    [nombre] => PAULA
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-06-20
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => IZARBE PERA SEIJO
+    [datos_tutor2] => DAVID ANDREU ALCAIDE
+    [dni_tutor2] => 73209838X
+    [dni_tutor1] => 18048416V
+    [calle_dfamiliar] => CALLE CONDE BERENGUER
+    [num_dfamiliar] => 11
+    [piso_dfamiliar] => 3ºF
+    [loc_dfamiliar] => Barbastro
+    [cp_dfamiliar] => BARBASTRO
+    [tel_dfamiliar1] => 660968973
+    [tel_dfamiliar2] => 669546493
+    [email] => izaa8@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => LA PAZ
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Barbastro
+    [prov_centro_destino] => huesca
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 0
+    [nordensorteo] => 0
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 0
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 22:35:33] : [WARNING] - BAREMO
+[23-Jun-2020 22:35:33] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 22:35:33] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9543
+[23-Jun-2020 22:35:33] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 22:35:33] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9543
+[23-Jun-2020 22:35:33] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:35:33] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 22:35:33] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 22:35:33] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9543
+[23-Jun-2020 22:35:33] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:35:33] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 22:35:33] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 22:35:33] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9543
+[23-Jun-2020 22:35:33] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 22:35:33] : [WARNING] - 1
+[23-Jun-2020 22:35:33] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 22:35:33] : [WARNING] - 1
+[23-Jun-2020 22:35:33] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 22:35:33] : [WARNING] - Array
+(
+    [id_alumno] => 9543
+    [id_usuario] => 500600457
+    [apellido1] => ANDREU
+    [apellido2] => PERA
+    [nombre] => PAULA
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-06-20
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => IZARBE PERA SEIJO
+    [datos_tutor2] => DAVID ANDREU ALCAIDE
+    [dni_tutor2] => 73209838X
+    [dni_tutor1] => 18048416V
+    [calle_dfamiliar] => CALLE CONDE BERENGUER
+    [num_dfamiliar] => 11
+    [piso_dfamiliar] => 3ºF
+    [loc_dfamiliar] => Barbastro
+    [cp_dfamiliar] => BARBASTRO
+    [tel_dfamiliar1] => 660968973
+    [tel_dfamiliar2] => 669546493
+    [email] => izaa8@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => LA PAZ
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Barbastro
+    [prov_centro_destino] => huesca
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 0
+    [nordensorteo] => 0
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 0
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+
+[23-Jun-2020 22:38:48] : [WARNING] - BAREMO
+[23-Jun-2020 22:38:48] : [WARNING] - Array
+(
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+)
+
+[23-Jun-2020 22:38:48] : [WARNING] - CONSULTA ALUMNO: select * from alumnos a where a.id_alumno=9543
+[23-Jun-2020 22:38:48] : [WARNING] - OBtENIENDO DATOS DE admision
+[23-Jun-2020 22:38:48] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='admision' and id_alumno=9543
+[23-Jun-2020 22:38:48] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:38:48] : [WARNING] - Array
+(
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+)
+
+[23-Jun-2020 22:38:48] : [WARNING] - OBtENIENDO DATOS DE baremo
+[23-Jun-2020 22:38:48] : [WARNING] - CONSULTA HERMANOS: SELECT id_registro,datos,fnacimiento,hcurso,nivel_educativo FROM hermanos where tipo='baremo' and id_alumno=9543
+[23-Jun-2020 22:38:48] : [WARNING] - HERMANOS: 
+[23-Jun-2020 22:38:48] : [WARNING] - Array
+(
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+)
+
+[23-Jun-2020 22:38:48] : [WARNING] - OBtENIENDO DATOS DE tributantes
+[23-Jun-2020 22:38:48] : [WARNING] - OBtENIENDO DATOS DE TRIBUTANTES: SELECT id_tributante,nombre,apellido1,apellido2,parentesco,dni FROM tributantes where id_alumno=9543
+[23-Jun-2020 22:38:48] : [WARNING] - HERMANOS ADMISION
+[23-Jun-2020 22:38:48] : [WARNING] - 1
+[23-Jun-2020 22:38:48] : [WARNING] - HERMANOS BAREMO
+[23-Jun-2020 22:38:48] : [WARNING] - 1
+[23-Jun-2020 22:38:48] : [WARNING] - EDITAR SOLICITUD
+[23-Jun-2020 22:38:48] : [WARNING] - Array
+(
+    [id_alumno] => 9543
+    [id_usuario] => 500600457
+    [apellido1] => ANDREU
+    [apellido2] => PERA
+    [nombre] => PAULA
+    [dni_alumno] => nodata
+    [nacionalidad] => ESPAÑOLA
+    [fnac] => 2020-06-20
+    [num_hbaremo] => 0
+    [num_hadmision] => 0
+    [datos_tutor1] => IZARBE PERA SEIJO
+    [datos_tutor2] => DAVID ANDREU ALCAIDE
+    [dni_tutor2] => 73209838X
+    [dni_tutor1] => 18048416V
+    [calle_dfamiliar] => CALLE CONDE BERENGUER
+    [num_dfamiliar] => 11
+    [piso_dfamiliar] => 3ºF
+    [loc_dfamiliar] => Barbastro
+    [cp_dfamiliar] => BARBASTRO
+    [tel_dfamiliar1] => 660968973
+    [tel_dfamiliar2] => 669546493
+    [email] => izaa8@hotmail.com
+    [nuevaesc] => 0
+    [id_centro_estudios_origen] => 0
+    [loc_centro_origen] => nodata
+    [modalidad_origen] => nodata
+    [id_centro_destino] => LA PAZ
+    [curso_solicitado] => nodata
+    [loc_centro_destino] => Barbastro
+    [prov_centro_destino] => huesca
+    [modalidad_destino] => nodata
+    [id_centro_destino1] => 
+    [id_centro_destino2] => 
+    [id_centro_destino3] => 
+    [id_centro_destino4] => 
+    [id_centro_destino5] => 
+    [id_centro_destino6] => 
+    [fotocopia_resolucion] => 0
+    [reserva] => 0
+    [prematuridad] => 0
+    [acred_dom_familiar] => 0
+    [cer_rec_discapacidad] => 0
+    [fam_numerosa] => 0
+    [acred_dom_laboral] => 0
+    [permiten_renta] => 0
+    [cumplen_resta] => 0
+    [fase_solicitud] => baremada
+    [transporte] => 1
+    [nasignado] => 0
+    [nordensorteo] => 0
+    [estado_solicitud] => apta
+    [oponenautorizar] => 0
+    [cumplen] => 0
+    [tipoestudios] => 2020
+    [est_desp_sorteo] => noadmitida
+    [sol_plaza] => 0
+    [sol_vacantes] => 0
+    [hore] => 7:45
+    [hors] => 16:00
+    [importe_renta] => 0
+    [puntos_renta] => 0
+    [cuota] => 0
+    [tipoalumno] => nuevo
+    [nodatos] => 0
+    [baremo_id_alumno] => 9543
+    [baremo_hermanos_centro] => 0
+    [baremo_tutores_centro] => 0
+    [baremo_tipo_domicilio] => familiar
+    [baremo_renta_inferior] => 0
+    [baremo_iprem] => no
+    [baremo_discapacidad] => no
+    [baremo_tipo_familia] => no
+    [baremo_monoparental] => 0
+    [baremo_zona_dfamiliar] => DESC
+    [baremo_zona_dtrabajo] => DESC
+    [baremo_zona_limitrofe] => DESC
+    [baremo_zona_trabajo_limitrofe] => DESC
+    [baremo_proximidad_domicilio] => sindomicilio
+    [baremo_validar_proximidad_domicilio] => 0
+    [baremo_validar_tutores_centro] => 0
+    [baremo_validar_renta_inferior] => 0
+    [baremo_validar_hnos_centro] => 0
+    [baremo_validar_discapacidad] => 0
+    [baremo_validar_tipo_familia] => 0
+    [baremo_calle_dlaboral] => 
+    [baremo_puntos_validados] => 4
+    [baremo_puntos_totales] => 4
+    [baremo_calle_dllimitrofe] => 
+    [baremo_sitlaboral] => 1
+    [baremo_validar_sitlaboral] => 1
+    [hermanos_id_registro_admision1] => 
+    [hermanos_datos_admision1] => 
+    [hermanos_fnacimiento_admision1] => 
+    [hermanos_hcurso_admision1] => 
+    [hermanos_nivel_educativo_admision1] => 
+    [hermanos_id_registro_admision2] => 
+    [hermanos_datos_admision2] => 
+    [hermanos_fnacimiento_admision2] => 
+    [hermanos_hcurso_admision2] => 
+    [hermanos_nivel_educativo_admision2] => 
+    [hermanos_id_registro_admision3] => 
+    [hermanos_datos_admision3] => 
+    [hermanos_fnacimiento_admision3] => 
+    [hermanos_hcurso_admision3] => 
+    [hermanos_nivel_educativo_admision3] => 
+    [hermanos_id_registro_baremo1] => 
+    [hermanos_datos_baremo1] => 
+    [hermanos_fnacimiento_baremo1] => 
+    [hermanos_hcurso_baremo1] => 
+    [hermanos_nivel_educativo_baremo1] => 
+    [hermanos_id_registro_baremo2] => 
+    [hermanos_datos_baremo2] => 
+    [hermanos_fnacimiento_baremo2] => 
+    [hermanos_hcurso_baremo2] => 
+    [hermanos_nivel_educativo_baremo2] => 
+    [hermanos_id_registro_baremo3] => 
+    [hermanos_datos_baremo3] => 
+    [hermanos_fnacimiento_baremo3] => 
+    [hermanos_hcurso_baremo3] => 
+    [hermanos_nivel_educativo_baremo3] => 
+    [nombre1] => 
+    [apellido11] => 
+    [apellido21] => 
+    [parentesco1] => 
+    [dni1] => 
+    [nombre2] => 
+    [apellido12] => 
+    [apellido22] => 
+    [parentesco2] => 
+    [dni2] => 
+    [nombre3] => 
+    [apellido13] => 
+    [apellido23] => 
+    [parentesco3] => 
+    [dni3] => 
+)
+

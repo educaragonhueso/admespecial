@@ -278,10 +278,14 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 	{
 	return '<button type="button" class="btn btn-outline-dark filtrosol" id="'.$texto.'">'.$texto.'</button>';
 	}
-  public function showSolicitud($sol){
-		
+  public function showSolicitud($sol,$tipolistado='normal')
+   {
+	   //si es para listados normales permitimos editar todo el formulario, sino solo el anexo4
+      if($tipolistado=='normal') $editaralumno='calumno';
+      else $editaralumno='canexo4';
+	
 		$li="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:black'>";
-    $li.="<td class='calumno dalumno' data-idal='".$sol->id_alumno."'>".$sol->id_alumno."-".strtoupper($sol->apellido1).",".strtoupper($sol->nombre)."</td>";
+    $li.="<td class='$editaralumno dalumno' data-idal='".$sol->id_alumno."'>".$sol->id_alumno."-".strtoupper($sol->apellido1).",".strtoupper($sol->nombre)."</td>";
 		$li.="<td id='print".$sol->id_alumno."' class='fase printsol'><i class='fa fa-print psol' aria-hidden='true'></i></td>";
 		$li.="<td id='fase".$sol->id_alumno."' class='fase'>".$sol->fase_solicitud."</td>";
 		$li.="<td id='estado".$sol->id_alumno."' class='estado'>".$sol->estado_solicitud."</td>";
@@ -292,7 +296,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 		$li.="</tr>";
 	return $li;
 	}
-  public function showSolicitudes($a,$rol='centro')
+  public function showSolicitudes($a,$rol='centro',$tipolistado='normal')
 	{
 	//codigo para mostrar alumnos según tipo de inscripcion
 	$html='<table class="table table-striped" id="sol_table" style="color:white">';
@@ -311,7 +315,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 	$html.="<tbody>";
 		foreach($a as $user) 
 		{
-			$html.=$this->showSolicitud($user);	
+			$html.=$this->showSolicitud($user,$tipolistado);	
 		}
 	$html.="</tbody>";
 	$html.='</table>';
@@ -389,6 +393,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 		$centros=$this->getCentrosNombreVacantes();
 		$htmlcentros="";
 		$fase=2;
+      /*
 		//preparamos desplegable con centros y vacantes 
 		if($subtipo=='lfase2_sol_ebo')
 		foreach($centros as $centro)
@@ -409,11 +414,13 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 		{
 			$fase=3;
 		}
-	
+	   */
 	$centroanterior='';
 	$centroactual='';
 	$tipoanterior='';
 	$tipoactual='';
+	$solvacanterior='';
+	$solvacactual='';
 	$alumno_anterior='';
 	$alumno_actual='';
 
@@ -437,6 +444,10 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 		
       $tipoanterior=$tipoactual;
 		$tipoactual=$sol->tipoestudios;
+
+      $solvacanterior=$solvacactual;
+		$solvacactual=$sol->sol_vacantes;
+
 		if($rol=='admin' || $rol=='centro' || $rol=='sp')
 		{
 			$centroanterior=$centroactual;
@@ -450,6 +461,12 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
          else $ncentro=0;
 			if($tipoactual!=$tipoanterior and $subtipo!='tributantes')
 				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
+			if($solvacactual!=$solvacanterior and $subtipo!='tributantes')
+			{
+            if($solvacactual==1) $solvac='ACNEAE';
+            else $solvac='NORMAL';
+         	$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #b2b1d8;font-size:9px'><td colspan='".$ncolumnas."'><b>".strtoupper($solvac)."</b></td></tr>";
+         }
 			if($alumno_actual!=$alumno_anterior and $subtipo=='tributantes')
          {
             $html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'>";

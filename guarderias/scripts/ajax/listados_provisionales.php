@@ -8,6 +8,7 @@ require_once DIR_BASE.'controllers/ListadosController.php';
 require_once DIR_BASE.'controllers/CentrosController.php';
 require_once DIR_BASE.'models/Centro.php';
 require_once DIR_BASE.'scripts/informes/pdf/fpdf/classpdf.php';
+require_once DIR_BASE.'scripts/servidor/UtilidadesAdmision.php';
 require_once DIR_BASE.'models/Solicitud.php';
 
 ######################################################################################
@@ -30,6 +31,7 @@ $tcentro=new Centro($conexion,$_POST['id_centro'],'ajax');
 $tcentro->setNombre();
 $tsolicitud=new Solicitud($conexion);
 $ccentros=new CentrosController(0,$conexion);
+$utils=new UtilidadesAdmision($conexion,$ccentros,$tcentro);
 
 $nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
 $dsorteo=$tcentro->getVacantes($id_centro);
@@ -38,11 +40,11 @@ $vacantes_tva=$dsorteo[1]->vacantes;
 
 $titulo_listado=strtoupper($tipo_listado)." ".strtoupper($subtipo_listado).$tcentro->getNombre();
 //obtenemos estado de la convocatoria ara el centro
-$fase_sorteo=$tcentro->getFaseSorteo();
+$fase_sorteo=$tcentro->getFase();
 //OPERACIONES ACTUALIZACION SOLICITUDES SEGUN ESTADO CONVOCATORIA
 //Si se ha realizado ya el sorteo en ese centro y aun no estamos en el estado de provisionales
 
-if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=2)
+if($fase_sorteo==4 and $estado_convocatoria<30 and $estado_convocatoria>=2)
 {
 	if($_POST['rol']=='centro')
 	{
@@ -60,7 +62,7 @@ if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=2)
 		//para cada centro calculamos solicitudes admitidas
 		//Si hemos llegado al dia d elas provisionales o posterior, generamos la tabla de soliciutdes para los listados provisionales
 		$acentros=array();
-		$centros=$ccentros->getAllCentros('todas','especial');
+		$centros=$ccentros->getAllCentros('todas','todas','guarderias');
 		$ccentros=new CentrosController(0,$conexion);
 		while($row = $centros->fetch_assoc()) { $acentros[]=$row;}
 		
@@ -68,7 +70,7 @@ if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=2)
 		{
 			$id_centrotmp=$dcentro['id_centro'];
 			########################################################################################
-			$log_baremacion->warning("INICIANDO GESTION CENTRO");
+         $log_listados_provisionales->warning("INCIANDO CENTRO $id_centro");
 			########################################################################################
 			$centrotmp=new Centro($conexion,$dcentro['id_centro'],'no',0);
 			$centrotmp->setId($dcentro['id_centro']);
@@ -76,19 +78,29 @@ if($fase_sorteo==3 and $estado_convocatoria<30 and $estado_convocatoria>=2)
 			$nsolicitudescentro=$centrotmp->getNumSolicitudes($dcentro['id_centro'],1);
 			if($nsolicitudescentro==0) continue;
 			$nombrecentro=$centrotmp->getNombre();
-			$log_baremacion->warning("NOMBRE: ".$nombrecentro.PHP_EOL);
-			$log_baremacion->warning("FASE: ".$centrotmp->getFaseSorteo().PHP_EOL);
-			$log_baremacion->warning("NSOLICITUDES: ".$nsolicitudescentro.PHP_EOL);
-			$log_baremacion->warning("ENTRANDO SORTEO TABLA CENTRO: $nombrecentro");
+			
+         $log_listados_provisionales->warning("NOMBRE: ".$nombrecentro.PHP_EOL);
+			$log_listados_provisionales->warning("FASE: ".$centrotmp->getFase().PHP_EOL);
+			$log_listados_provisionales->warning("NSOLICITUDES: ".$nsolicitudescentro.PHP_EOL);
+			$log_listados_provisionales->warning("ENTRANDO SORTEO TABLA CENTRO: $nombrecentro");
 		
-			$dsorteo=$centrotmp->getVacantes('centro');
-			$vacantes_ebo=$dsorteo[0]->vacantes;
-			$vacantes_tva=$dsorteo[1]->vacantes;
-			if($tsolicitud->setSolicitudesSorteo($id_centrotmp,$nsolicitudescentro,$vacantes_ebo,$vacantes_tva)==0) 
-            $log_listados_provisionales->warning("NO VACANTES $id_centrotmp");
+			$dsorteo=$centrotmp->getVacantesGuarderias('centro');
+      	$vuno=$dsorteo[0]->vuno;
+			$vuno_acneae=$dsorteo[0]->vuno_acneae;
+			$vdos=$dsorteo[0]->vdos;
+			$vdos_acneae=$dsorteo[0]->vdos_acneae;
+			$vtres=$dsorteo[0]->vtres;
+			$vtres_acneae=$dsorteo[0]->vtres_acneae;
+			$log_listados_provisionales->warning(print_r($dsorteo,true));
+         if($tsolicitud->setSolicitudesSorteoGuarderias($id_centrotmp,$nsolicitudescentro,$vuno,$vuno_acneae,$vdos,$vdos_acneae,$vtres,$vtres_acneae)==0) 
+		   {
+      		print("ERROR ESTABLECIENDO SOL ADMITIDAS<br>");
+            exit();
+         }
 		}
 		//copiamos todos los datos a tabla de provisionales	
-		$ct=$tsolicitud->copiaTablaCentro(1,'alumnos_provisional_final');	
+      $res=$utils->copiaTablaProvisionales();
+		//$ct=$tsolicitud->copiaTablaCentro(1,'alumnos_provisional_final');	
 	}	
 ########################################################################################
 $log_listados_provisionales->warning("ACTUALIZADA TABLA PROVISIONALES $ct");
@@ -102,8 +114,8 @@ $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CENT
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, ESTADO CONVOCATORIA:  ".$estado_convocatoria);
 ######################################################################################
 
-//mostramos las solitudes completas sin incluir borrador
-$solicitudes=$list->getSolicitudes($id_centro,1,$estado_centro,$modo='provisionales',$subtipo_listado,'todas',$estado_convocatoria); 
+//mostramos las solitudes completas sin incluir borrador, ponemos fase a 4 para indicar despues del sorteo
+$solicitudes=$list->getSolicitudes($id_centro,1,4,$modo='provisionales',$subtipo_listado,'todas',$estado_convocatoria); 
 
 ######################################################################################
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, DATOS: ");

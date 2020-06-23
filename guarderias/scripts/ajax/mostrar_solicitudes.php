@@ -17,7 +17,7 @@ if($_POST['rol']=='admin' || $_POST['provincia']!='todas')
 	$solicitudes=$list->getSolicitudes($id_centro,0,$fase_sorteo=0); 
 	$log_mostrar_solicitudes->warning('MOSTRAR SOLICITUDES');
 	$log_mostrar_solicitudes->warning(print_r($solicitudes,true));
-	print($list->showSolicitudes($solicitudes,'centro'));
+	print($list->showSolicitudes($solicitudes,'centro','normal'));
 }
 else
 {

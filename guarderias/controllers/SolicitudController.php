@@ -9,6 +9,7 @@ class SolicitudController extends ControladorBase{
 		{
         parent::__construct();
         require_once DIR_BASE.'/includes/form_solicitud.php';
+        require_once DIR_BASE.'/includes/form_anexo4.php';
 	require_once DIR_CLASES.'LOGGER.php';
 	require_once DIR_APP.'parametros.php';
 	$this->log_editar=new logWriter('log_editar_solicitud',DIR_LOGS);
@@ -17,6 +18,7 @@ class SolicitudController extends ControladorBase{
         $this->conectar=new Conectar();
         $this->adapter=$this->conectar->conexion();
         $this->formulario=$formsol;
+        $this->formularioanexo4=$formsolanexo4;
         $this->rol=$rol;
     }
  
@@ -48,9 +50,20 @@ class SolicitudController extends ControladorBase{
 		{
     		return $this->showFormSolicitud($id,$id_centro=0,$this->rol,$collapsed=0,$imprimir=1);
 		}
-    public function procesarFormularioExistente($id,$dsolicitud,$collapsed=1,$rol='centro',$imprimir=0)
-		{
-			//si es para imprimir o para solo lectura quitamos el boton de actualizar
+    public function procesarFormularioExistenteAnexo4($id,$dsolicitud,$collapsed=1,$rol='centro',$imprimir=0)
+    {
+     $this->procesarFormularioExistente($id,$dsolicitud,$collapsed,$rol,$imprimir,'anexo4'); 
+    }
+    public function procesarFormularioExistente($id,$dsolicitud,$collapsed=1,$rol='centro',$imprimir=0,$tipoform='normal')
+	 {
+         if($tipoform=='anexo4')
+         {
+            $this->formulario=$this->formularioanexo4;
+			$this->log_editar->warning("SOL EXISTENTE ANEXO 4 TIPOF:".$tipoform);
+			}
+         else
+			   $this->log_editar->warning("SOL EXISTENTE NO ANEXO4 TIPOF:".$tipoform);
+         //si es para imprimir o para solo lectura quitamos el boton de actualizar
 			if($imprimir==1) 
 			{
 				$this->formulario=str_replace('<a class="btn btn-primary send" >GRABAR SOLICITUD</a>','',$this->formulario);
@@ -401,7 +414,7 @@ class SolicitudController extends ControladorBase{
 		return 1;
 		}
 
-    public function showFormSolicitud($id=0,$id_centro=0,$rol='alumno',$collapsed=1,$imprimir=0,$fase_sorteo=0,$estado_convocatoria=0)
+    public function showFormSolicitud($id=0,$id_centro=0,$rol='alumno',$collapsed=1,$imprimir=0,$fase_sorteo=0,$estado_convocatoria=0,$tipoformulario='normal')
 		{
 			//Creamos una nueva solicitud
 			$solicitud=new Solicitud($this->adapter);
@@ -412,17 +425,21 @@ class SolicitudController extends ControladorBase{
 				$this->lastid=$solicitud->getNuevoId();	
 				$nuevoid=$this->lastid+1;
 				$dsolicitud=$solicitud->getSolData($this->lastid,'nueva',$id_centro);
-					
-				$this->procesarFormularioNuevo($nuevoid,$dsolicitud,$rol);
+		      if($tipoformulario=='normal')			
+   				$this->procesarFormularioNuevo($nuevoid,$dsolicitud,$rol);
+		      else			
+   				$this->procesarFormularioNuevoAnexo4($nuevoid,$dsolicitud,$rol);
 			}
 			//modificacion solicitud
 			else
 			{
 				$dsolicitud=$solicitud->getSolData($id,'existente',0,'alumnos');
-				$this->log_editar->warning("DATOS SOLICITUD A EDITAR");
+				$this->log_editar->warning("DATOS SOLICITUD A EDITAR, TIPOF:".$tipoformulario);
 				$this->log_editar->warning(print_r($dsolicitud,true));
-				
-				$this->procesarFormularioExistente($id,$dsolicitud,$collapsed,$rol,$imprimir);
+		      if($tipoformulario=='normal')			
+				   $this->procesarFormularioExistente($id,$dsolicitud,$collapsed,$rol,$imprimir);
+		      else			
+   				$this->procesarFormularioExistenteAnexo4($id,$dsolicitud,$collapsed,$rol,$imprimir);
 			}
 		return $this->formulario;
 		}
