@@ -123,9 +123,9 @@ class ListadosController extends ControladorBase{
 		}
 	return $allmatriculas;
 	}
-  public function getSolicitudes($id_centro=1,$tiposol=0,$fase_sorteo=0,$modo='normal',$subtipo_listado='',$provincia='todas',$estado_convocatoria=0)
+  public function getSolicitudes($id_centro=1,$tiposol=0,$fase_sorteo=0,$modo='normal',$subtipo_listado='normal',$provincia='todas',$estado_convocatoria=0)
 	{
-		$this->log_listados_solicitudes->warning('ENTRANDO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: '.$subtipo_listado.'/'.$fase_sorteo.'/'.$modo.'/'.$provincia);
+		$this->log_listados_solicitudes->warning('ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: '.$subtipo_listado.'/'.$fase_sorteo.'/'.$modo.'/'.$provincia);
 		$solicitud=new Solicitud($this->adapter);
 		if($modo=='normal')// listados previos al sorteo
     	{

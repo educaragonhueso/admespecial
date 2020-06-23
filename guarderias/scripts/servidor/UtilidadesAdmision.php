@@ -13,6 +13,7 @@ class UtilidadesAdmision{
 			
 		$this->log_fase2=new logWriter('log_fase2',DIR_LOGS);
 		$this->log_sorteo_fase2=new logWriter('log_sorteo_fase2',DIR_LOGS);
+		$this->log_listado_solicitudes=new logWriter('log_listado_solicitudes',DIR_LOGS);
     		}
   public function asignarNumSorteoFase2(){
 		$this->log_sorteo_fase2->warning("ASIGNANDO NUMERO SORTEO");
@@ -360,12 +361,25 @@ vacantes_tva_original=".$vac_final_tva.",vacantes_tva=".$vac_final_tva." where i
 		else return $this->con->error;
 
 	}
-  public function copiaTablaBaremada($tdestino,$fase)
+  public function copiaTablaBaremada($tdestino,$fase,$id_centro=1,$provincia='todas')
 	{
 		//copiamos registros de centros que todavía no han realizado el sorteo o q están en fase menos q 2
-		$delete="delete from $tdestino";
-      $sql="INSERT into $tdestino SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' order by c.id_centro,a.tipoestudios, a.apellido1,a.nombre,c.id_centro, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc";
-		$fase="UPDATE centros set fase_sorteo='$fase'";
+      if($id_centro==1 and $provincia=='todas')
+	   {
+   	$delete="delete from $tdestino";
+      $sql="INSERT into $tdestino SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador'";
+      $sqlfase="UPDATE centros set fase_sorteo='$fase'";
+      }
+      else if($id_centro>1)
+	   {
+   	$delete="delete from $tdestino where id_centro_destino=$id_centro";
+      $sql="INSERT into $tdestino SELECT a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado as nasignado,a.num_hadmision,a.fnac, b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,b.sitlaboral,a.id_centro_destino,c.nombre_centro FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' and c.id_centro=$id_centro";
+      $sqlfase="UPDATE centros set fase_sorteo='$fase' where id_centro=$id_centro";
+      }
+		
+      $this->log_listado_solicitudes->warning("COPIANDO BAREMADA, TABLA/FASE/CENTRO/PROVINCIA:$tdestino -  $fase - $id_centro - $provincia");
+      $this->log_listado_solicitudes->warning("CONSULTA BORRADO: $delete");
+      $this->log_listado_solicitudes->warning("CONSULTA INSERCION: $sql");
       if($this->con->query($delete) and $this->con->query($sql) and $this->con->query($fase)) return 1;
 		else return $this->con->error;
 

@@ -5,8 +5,10 @@ require_once DIR_APP.'parametros.php';
 require_once DIR_BASE.'core/ControladorBase.php';
 require_once DIR_BASE.'core/EntidadBase.php';
 require_once DIR_BASE.'controllers/ListadosController.php';
+require_once DIR_BASE.'controllers/CentrosController.php';
 require_once DIR_BASE.'models/Centro.php';
 require_once DIR_BASE.'scripts/informes/pdf/fpdf/classpdf.php';
+require_once DIR_BASE.'scripts/servidor/UtilidadesAdmision.php';
 
 ######################################################################################
 $log_listados_generales=new logWriter('log_listados_generales',DIR_LOGS);
@@ -33,6 +35,9 @@ $cabecera="campos_cabecera_".$subtipo_listado;
 $camposdatos="campos_bbdd_".$subtipo_listado;
 $modo='baremadas';
 
+$ccentros=new CentrosController(0,$conexion);
+$utils=new UtilidadesAdmision($conexion,$ccentros,$tcentro);
+
 $formato=''; //formato listado en el pdf
 if($subtipo_listado=='sor_ale') $nombre_listado='LISTADO ALUMNOS SEGUN NUMERO ALEATORIO PARA SORTEO';
 if($subtipo_listado=='sor_bar') {$nombre_listado='LISTADO SOLICITUDES BAREMADAS';$modo='baremadas';}
@@ -40,8 +45,11 @@ if($subtipo_listado=='sor_bardef') {$nombre_listado='LISTADO SOLICITUDES BAREMAD
 if($subtipo_listado=='sor_det') {$nombre_listado='LISTADO DETALLE BAREMO';$formato='provisional';}
 
 ######################################################################################
-$log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALES, FASE/CENTRO7PROVINCIA: $fase - $id_centro - $provincia");
+$log_listados_generales->warning("OBTENIENDO SOLICITUDES GENERALESS, FASE/CENTRO/PROVINCIA: $fase - $id_centro - $provincia");
 ######################################################################################
+
+//copiamos tabla de defintivas baremadas para ese centro
+$res=$utils->copiaTablaBaremada('alumnos_baremada_definitivo','2',$id_centro,'todas');
 
 //mostramos las solitudes completas sin incluir borrador
 $solicitudes=$list->getSolicitudes($id_centro,0,$fase,$modo,$subtipo_listado,$provincia,$estado_convocatoria); 
@@ -90,6 +98,6 @@ print("<button type='button' class='btn btn-info' onclick='window.open(\"".DIR_S
 print($filtro_datos);
 print("<div style='text-align:center'><h1>LISTADO ".strtoupper($tipo_listado)." ".strtoupper($subtipo)."</h1></div>");
 #print($list->showFiltrosTipo());
-print($list->showListado($solicitudes,$_POST['rol'],$$cabecera,$$camposdatos));
+print($list->showListado($solicitudes,$_POST['rol'],$$cabecera,$$camposdatos,1));
 
 ?>

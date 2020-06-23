@@ -349,3 +349,4 @@ PRUEBAS INSCRIPCION CENTROS ED ESPECIAL
 				usuario y clave: 50018131
 
   -Trabajar con autocommit=FALSE en base de datos
+ COMANDO GIT FICHEROS GRANDES: git filter-branch -f --tree-filter 'rm -rf guarderias/scripts/datos/logs/log_gencsvs' HEAD

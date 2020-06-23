@@ -94,6 +94,7 @@ print("<button type='button' class='btn btn-info' onclick='window.open(\"".DIR_S
 print($filtro_datos);
 print("<div style='text-align:center'><h1>LISTADO ".strtoupper($tipo_listado)." ".strtoupper($subtipo)."</h1></div>");
 print($list->showFiltrosTipo());
+//mostramos listados con el campo final a 1 para no ermitir editar el registro
 print($list->showListado($solicitudes,$_POST['rol'],$$cabecera,$$camposdatos));
 
 ?>

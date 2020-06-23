@@ -51,3 +51,976 @@
 [16-Jun-2020 08:49:50] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
 [16-Jun-2020 08:49:58] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
 [16-Jun-2020 08:56:38] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[23-Jun-2020 07:35:57] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: admin
+[23-Jun-2020 07:35:59] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT distinct(id_centro) from centros_grupos
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22002338
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - PÍO XII
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => PÍO XII
+            [borrador] => 0
+            [validada] => 3
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22002511
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - PIRÁMIDE
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => PIRÁMIDE
+            [borrador] => 0
+            [validada] => 3
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22003835
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - MONTECORONA
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MONTECORONA
+            [borrador] => 1
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22004891
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - BIELLO ARAGÓN
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => BIELLO ARAGÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22005157
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - LA ALEGRÍA
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LA ALEGRÍA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22010001
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - SAN JORGE
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN JORGE
+            [borrador] => 0
+            [validada] => 6
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44003259
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - ARBOLEDA
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ARBOLEDA
+            [borrador] => 0
+            [validada] => 3
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44004148
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - GLORIA FUERTES
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => GLORIA FUERTES
+            [borrador] => 0
+            [validada] => 2
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50000850
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - CAMPO DE BORJA
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => CAMPO DE BORJA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50004612
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - MONCAYO
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MONCAYO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50006049
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - JULIÁN SANZ IBÁÑEZ
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => JULIÁN SANZ IBÁÑEZ
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 1
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50006128
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - SAN BRAULIO
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN BRAULIO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 1
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50007376
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - LA PURÍSIMA PARA NIÑOS SORDOS
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LA PURÍSIMA PARA NIÑOS SORDOS
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 8
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50007674
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 6
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50008630
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - CEDES
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => CEDES
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50008678
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - RECTOR MAMÉS ESPERABÉ
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => RECTOR MAMÉS ESPERABÉ
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 1
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50008915
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - SAN GERMÁN
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN GERMÁN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50009488
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - LOS PUEYOS
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LOS PUEYOS
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 1
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50009646
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - MARÍA SORIANO
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MARÍA SORIANO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50010387
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - ALBORADA
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ALBORADA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 6
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50011537
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - RINCÓN DE GOYA
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => RINCÓN DE GOYA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 10
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50017369
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - ANGEL RIVIÈRE
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ANGEL RIVIÈRE
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 12
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50018131
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - JEAN PIAGET
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => JEAN PIAGET
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 20
+        )
+
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:35:59] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50019408
+)
+
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:35:59] : [WARNING] - SEGEDA
+[23-Jun-2020 07:35:59] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SEGEDA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 2
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES CON ROL: admin
+[23-Jun-2020 07:36:00] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT distinct(id_centro) from centros_grupos
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22002338
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - PÍO XII
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => PÍO XII
+            [borrador] => 0
+            [validada] => 3
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22002511
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - PIRÁMIDE
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => PIRÁMIDE
+            [borrador] => 0
+            [validada] => 3
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22003835
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - MONTECORONA
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MONTECORONA
+            [borrador] => 1
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22004891
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - BIELLO ARAGÓN
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => BIELLO ARAGÓN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22005157
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - LA ALEGRÍA
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LA ALEGRÍA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 22010001
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - SAN JORGE
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN JORGE
+            [borrador] => 0
+            [validada] => 6
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44003259
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - ARBOLEDA
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ARBOLEDA
+            [borrador] => 0
+            [validada] => 3
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 44004148
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - GLORIA FUERTES
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => GLORIA FUERTES
+            [borrador] => 0
+            [validada] => 2
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50000850
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - CAMPO DE BORJA
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => CAMPO DE BORJA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50004612
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - MONCAYO
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MONCAYO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50006049
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - JULIÁN SANZ IBÁÑEZ
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => JULIÁN SANZ IBÁÑEZ
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 1
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50006128
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - SAN BRAULIO
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN BRAULIO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 1
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50007376
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - LA PURÍSIMA PARA NIÑOS SORDOS
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LA PURÍSIMA PARA NIÑOS SORDOS
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 8
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50007674
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ATADES, CENTRO DE EDUCACIÓN ESPECIAL SAN MARTÍN DE PORRES
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 6
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50008630
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - CEDES
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => CEDES
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50008678
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - RECTOR MAMÉS ESPERABÉ
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => RECTOR MAMÉS ESPERABÉ
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 1
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50008915
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - SAN GERMÁN
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SAN GERMÁN
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50009488
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - LOS PUEYOS
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => LOS PUEYOS
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 1
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50009646
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - MARÍA SORIANO
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => MARÍA SORIANO
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 0
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50010387
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - ALBORADA
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ALBORADA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 6
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50011537
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - RINCÓN DE GOYA
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => RINCÓN DE GOYA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 10
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50017369
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - ANGEL RIVIÈRE
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => ANGEL RIVIÈRE
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 12
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50018131
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - JEAN PIAGET
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => JEAN PIAGET
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 20
+        )
+
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NOMBRE CENTRO paraadmin
+[23-Jun-2020 07:36:00] : [WARNING] - stdClass Object
+(
+    [id_centro] => 50019408
+)
+
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO SOLICITUDES COMO ADMINISTRADOR: admin
+[23-Jun-2020 07:36:00] : [WARNING] - SEGEDA
+[23-Jun-2020 07:36:00] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [centro] => SEGEDA
+            [borrador] => 0
+            [validada] => 0
+            [baremada] => 2
+        )
+
+)
+
+[23-Jun-2020 07:36:04] : [WARNING] - CONSULTA SOLICITUDES SORTEO
+[23-Jun-2020 07:36:04] : [WARNING] - SELECT
+a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado
+as nasignado,
+b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,a.id_centro_destino
+as id_centro,c.nombre_centro as nombre_centro FROM alumnos_baremacion_final a left join
+baremo_baremacion_final b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' order by c.id_centro,a.tipoestudios, a.apellido1,a.nombre,c.id_centro, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 07:36:04] : [WARNING] - CONSULTA LISTADO SOLICITUDES: SELECT id_centro,nombre_centro,vacantes_ebo,vacantes_tva from centros WHERE clase_centro='especial'

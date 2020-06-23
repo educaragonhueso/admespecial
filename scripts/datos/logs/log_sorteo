@@ -7506,3 +7506,15 @@
 [21-Jun-2020 16:44:03] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50017369
 [21-Jun-2020 16:44:03] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50018131
 [21-Jun-2020 16:44:03] : [WARNING] - CONSULTA OBTENCION NUMERO DE SORTEO: select num_sorteo from centros where id_centro=50019408
+[23-Jun-2020 07:35:57] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[23-Jun-2020 07:35:57] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos 
+[23-Jun-2020 07:35:57] : [WARNING] - OBTENIENDO FASE SORTEO
+[23-Jun-2020 07:35:57] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO FASE SORTEO
+[23-Jun-2020 07:35:59] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[23-Jun-2020 07:35:59] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[23-Jun-2020 07:35:59] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos 
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO FASE SORTEO
+[23-Jun-2020 07:36:00] : [WARNING] - SELECT fase_sorteo FROM centros WHERE id_centro=1
+[23-Jun-2020 07:36:00] : [WARNING] - OBTENIENDO NUMERO DE SOLICITUDES
+[23-Jun-2020 07:36:00] : [WARNING] - SELECT count(*) as nsolicitudes FROM alumnos 

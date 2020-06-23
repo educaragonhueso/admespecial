@@ -4652,3 +4652,14 @@
 [22-Jun-2020 11:20:55] : [WARNING] - NOMBRE TRIBUTANTE EXISTE
 [22-Jun-2020 11:20:55] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
 [22-Jun-2020 11:20:55] : [WARNING] - INSERT INTO tributantes VALUES(9548,0,'','','','','')
+[22-Jun-2020 21:42:17] : [WARNING] - CONSULTA ESTADO DE SOLICITUD: 
+[22-Jun-2020 21:42:17] : [WARNING] - select estado_solicitud from alumnos where id_alumno='9816'
+[22-Jun-2020 21:42:17] : [WARNING] - ESTADO SOLICITUD: apta
+[22-Jun-2020 21:42:17] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[22-Jun-2020 21:42:17] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[22-Jun-2020 21:42:17] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[22-Jun-2020 21:42:17] : [WARNING] - select nombre_centro from centros c where c.id_centro='50600166'
+[23-Jun-2020 06:59:03] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 06:59:03] : [WARNING] - select nombre_centro from centros c where c.id_centro='0'
+[23-Jun-2020 06:59:03] : [WARNING] - DEVOLVIENDO NOMBRE DE CENTRO
+[23-Jun-2020 06:59:03] : [WARNING] - select nombre_centro from centros c where c.id_centro='22600060'

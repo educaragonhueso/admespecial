@@ -350,3 +350,798 @@ FROM alumnos a left join baremo b on b.id_alumno=a.id_alumno where id_centro_des
 [16-Jun-2020 08:49:50] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
 [16-Jun-2020 08:49:58] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo:  estado: 3 modo fase2
 [16-Jun-2020 08:56:38] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: lfase2_sol_ebo estado: 3 modo fase2
+[23-Jun-2020 07:35:57] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: admitidos_prov estado: 40 modo provisionales
+[23-Jun-2020 07:36:04] : [WARNING] - OBTENIENDO SOLICITUDES
+[23-Jun-2020 07:36:04] : [WARNING] - Array
+(
+    [id_centro] => 1
+    [rol] => admin
+    [tipo] => sorteo
+    [subtipo] => sor_bar
+    [pdf] => 1
+    [estado_convocatoria] => 40
+)
+
+[23-Jun-2020 07:36:04] : [WARNING] - OBTENIENDO SOLICITUDES GENERALES, CENTRO: 1
+[23-Jun-2020 07:36:04] : [WARNING] - OBTENIENDO SOLICITUDES GENERALES EN
+BAREMACION substipo: sor_bar estado 40
+[23-Jun-2020 07:36:04] : [WARNING] - ENTRANDO EN GETSOLICITUDEs,BAREMACION subtipo: sor_bar estado: 40 modo normal
+[23-Jun-2020 07:36:04] : [WARNING] - ENTRANDO EN
+GETSOLICITUDEs,BAREMACION SOR_BAR
+[23-Jun-2020 07:36:04] : [WARNING] - CONSULTA GENERALES:
+[23-Jun-2020 07:36:04] : [WARNING] - SELECT
+a.id_alumno,a.nombre,a.apellido1,a.apellido2,a.tipoestudios,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.nasignado
+as nasignado,
+b.puntos_validados,b.proximidad_domicilio,b.tutores_centro,b.renta_inferior,b.discapacidad,b.tipo_familia,b.hermanos_centro,a.id_centro_destino
+as id_centro,c.nombre_centro as nombre_centro FROM alumnos_baremacion_final a left join
+baremo_baremacion_final b on b.id_alumno=a.id_alumno left join centros c on c.id_centro=a.id_centro_destino where fase_solicitud!='borrador' order by c.id_centro,a.tipoestudios, a.apellido1,a.nombre,c.id_centro, a.transporte desc,b.puntos_validados desc,a.nordensorteo asc,a.nasignado desc
+[23-Jun-2020 07:36:04] : [WARNING] - OBTENIDAS SOLICITUDES GENERALES
+[23-Jun-2020 07:36:04] : [WARNING] - Array
+(
+    [0] => stdClass Object
+        (
+            [apellido1] => HERNÁNDEZ
+            [apellido2] => FORTUNA
+            [nombre] => NOEL
+            [nasignado] => 83
+            [puntos_validados] => 0
+        )
+
+    [1] => stdClass Object
+        (
+            [apellido1] => MEJÍA 
+            [apellido2] => BONILLA
+            [nombre] => MARCO ORESTES
+            [nasignado] => 27
+            [puntos_validados] => 0
+        )
+
+    [2] => stdClass Object
+        (
+            [apellido1] => SHOSHIASHVILI
+            [apellido2] => nodata
+            [nombre] => GIORGI
+            [nasignado] => 82
+            [puntos_validados] => 0
+        )
+
+    [3] => stdClass Object
+        (
+            [apellido1] => BECANA
+            [apellido2] => PRATS
+            [nombre] => HECTOR
+            [nasignado] => 4
+            [puntos_validados] => 1
+        )
+
+    [4] => stdClass Object
+        (
+            [apellido1] => HOLA
+            [apellido2] => nodata
+            [nombre] => DENISA MARIANA
+            [nasignado] => 35
+            [puntos_validados] => 0
+        )
+
+    [5] => stdClass Object
+        (
+            [apellido1] => JIMÉNEZ
+            [apellido2] => GIMÉNEZ
+            [nombre] => AITANA
+            [nasignado] => 63
+            [puntos_validados] => 2.75
+        )
+
+    [6] => stdClass Object
+        (
+            [apellido1] => COLMENAR
+            [apellido2] => PÉREZ DEL CAMINO
+            [nombre] => MANUEL DIEGO
+            [nasignado] => 61
+            [puntos_validados] => 0
+        )
+
+    [7] => stdClass Object
+        (
+            [apellido1] => GIMÉNEZ
+            [apellido2] => GIMÉNEZ
+            [nombre] => JESÚS
+            [nasignado] => 75
+            [puntos_validados] => 0
+        )
+
+    [8] => stdClass Object
+        (
+            [apellido1] => HAPA 
+            [apellido2] => URSU
+            [nombre] => MATEO
+            [nasignado] => 81
+            [puntos_validados] => 0
+        )
+
+    [9] => stdClass Object
+        (
+            [apellido1] => RUZ
+            [apellido2] => DE MIGUEL 
+            [nombre] => MARCOS
+            [nasignado] => 84
+            [puntos_validados] => 0
+        )
+
+    [10] => stdClass Object
+        (
+            [apellido1] => SUÁREZ
+            [apellido2] => PÉREZ
+            [nombre] => GABRIEL
+            [nasignado] => 22
+            [puntos_validados] => 0
+        )
+
+    [11] => stdClass Object
+        (
+            [apellido1] => VIEDMA 
+            [apellido2] => BONED
+            [nombre] => JESÚS
+            [nasignado] => 20
+            [puntos_validados] => 0
+        )
+
+    [12] => stdClass Object
+        (
+            [apellido1] => COLÁS
+            [apellido2] => BELMONTE
+            [nombre] => GEMA
+            [nasignado] => 60
+            [puntos_validados] => 2
+        )
+
+    [13] => stdClass Object
+        (
+            [apellido1] => GALLEGO
+            [apellido2] => SÁNCHEZ TORIL
+            [nombre] => HECTOR
+            [nasignado] => 21
+            [puntos_validados] => 1
+        )
+
+    [14] => stdClass Object
+        (
+            [apellido1] => GARCÍA
+            [apellido2] => FORTEA
+            [nombre] => ÁLVARO
+            [nasignado] => 72
+            [puntos_validados] => 0
+        )
+
+    [15] => stdClass Object
+        (
+            [apellido1] => Larhlid
+            [apellido2] => Ghani
+            [nombre] => Nourddine
+            [nasignado] => 23
+            [puntos_validados] => 0
+        )
+
+    [16] => stdClass Object
+        (
+            [apellido1] => Pando
+            [apellido2] => Moya
+            [nombre] => Nerea
+            [nasignado] => 15
+            [puntos_validados] => 0
+        )
+
+    [17] => stdClass Object
+        (
+            [apellido1] => CAMARA
+            [apellido2] => KEITA
+            [nombre] => OUMAR
+            [nasignado] => 40
+            [puntos_validados] => 9
+        )
+
+    [18] => stdClass Object
+        (
+            [apellido1] => CALDERON
+            [apellido2] => FERRERO
+            [nombre] => FELIX
+            [nasignado] => 42
+            [puntos_validados] => 1
+        )
+
+    [19] => stdClass Object
+        (
+            [apellido1] => Bellagh
+            [apellido2] => nodata
+            [nombre] => Samir
+            [nasignado] => 57
+            [puntos_validados] => 8
+        )
+
+    [20] => stdClass Object
+        (
+            [apellido1] => Buil
+            [apellido2] => García
+            [nombre] => Martin
+            [nasignado] => 55
+            [puntos_validados] => 5
+        )
+
+    [21] => stdClass Object
+        (
+            [apellido1] => Enfedaque
+            [apellido2] => Piquer
+            [nombre] => Elisa Valentina
+            [nasignado] => 52
+            [puntos_validados] => 1
+        )
+
+    [22] => stdClass Object
+        (
+            [apellido1] => Gabarre
+            [apellido2] => Giménez
+            [nombre] => Sandra
+            [nasignado] => 80
+            [puntos_validados] => 3
+        )
+
+    [23] => stdClass Object
+        (
+            [apellido1] => Hernández
+            [apellido2] => Pérez
+            [nombre] => Alvaro
+            [nasignado] => 46
+            [puntos_validados] => 2
+        )
+
+    [24] => stdClass Object
+        (
+            [apellido1] => Jiménez
+            [apellido2] => Jiménez
+            [nombre] => Jaqueline
+            [nasignado] => 2
+            [puntos_validados] => 9
+        )
+
+    [25] => stdClass Object
+        (
+            [apellido1] => Osei
+            [apellido2] => Appiah
+            [nombre] => Seth
+            [nasignado] => 70
+            [puntos_validados] => 6
+        )
+
+    [26] => stdClass Object
+        (
+            [apellido1] => Salas
+            [apellido2] => Cid
+            [nombre] => César
+            [nasignado] => 74
+            [puntos_validados] => 8
+        )
+
+    [27] => stdClass Object
+        (
+            [apellido1] => Morfioli
+            [apellido2] => García
+            [nombre] => Noa
+            [nasignado] => 45
+            [puntos_validados] => 5
+        )
+
+    [28] => stdClass Object
+        (
+            [apellido1] => Morfioli
+            [apellido2] => Garcia
+            [nombre] => Sara
+            [nasignado] => 67
+            [puntos_validados] => 5
+        )
+
+    [29] => stdClass Object
+        (
+            [apellido1] => PARICIO 
+            [apellido2] => ALVAREZ
+            [nombre] => NORA
+            [nasignado] => 5
+            [puntos_validados] => 0
+        )
+
+    [30] => stdClass Object
+        (
+            [apellido1] => Pérez
+            [apellido2] => Rubio
+            [nombre] => Hugo
+            [nasignado] => 68
+            [puntos_validados] => 6
+        )
+
+    [31] => stdClass Object
+        (
+            [apellido1] => PINA
+            [apellido2] => GAYA
+            [nombre] => MARCOS
+            [nasignado] => 38
+            [puntos_validados] => 15.75
+        )
+
+    [32] => stdClass Object
+        (
+            [apellido1] => Senso
+            [apellido2] => Juanas
+            [nombre] => Marcos
+            [nasignado] => 59
+            [puntos_validados] => 8
+        )
+
+    [33] => stdClass Object
+        (
+            [apellido1] => SANTILLÁN
+            [apellido2] => ORTEGA
+            [nombre] => NATALIA PAOLA
+            [nasignado] => 37
+            [puntos_validados] => 8
+        )
+
+    [34] => stdClass Object
+        (
+            [apellido1] => MBO 
+            [apellido2] => NCHAMA
+            [nombre] => CIRILO ALEJANDRO
+            [nasignado] => 3
+            [puntos_validados] => 0
+        )
+
+    [35] => stdClass Object
+        (
+            [apellido1] => FERRERO
+            [apellido2] => BAUTISTA
+            [nombre] => MIGUEL ANGEL
+            [nasignado] => 64
+            [puntos_validados] => 1
+        )
+
+    [36] => stdClass Object
+        (
+            [apellido1] => GARCIA
+            [apellido2] => TRIGUERO
+            [nombre] => ELSA
+            [nasignado] => 62
+            [puntos_validados] => 7
+        )
+
+    [37] => stdClass Object
+        (
+            [apellido1] => LAGUNA
+            [apellido2] => QUIROS
+            [nombre] => ANDRES
+            [nasignado] => 58
+            [puntos_validados] => 9
+        )
+
+    [38] => stdClass Object
+        (
+            [apellido1] => METAUTE 
+            [apellido2] => POLO
+            [nombre] => GORKA
+            [nasignado] => 77
+            [puntos_validados] => 12
+        )
+
+    [39] => stdClass Object
+        (
+            [apellido1] => STAN
+            [apellido2] => nodata
+            [nombre] => DAVID COSTIN
+            [nasignado] => 54
+            [puntos_validados] => 1
+        )
+
+    [40] => stdClass Object
+        (
+            [apellido1] => VALERO 
+            [apellido2] => SAZ
+            [nombre] => TAGORE
+            [nasignado] => 1
+            [puntos_validados] => 
+        )
+
+    [41] => stdClass Object
+        (
+            [apellido1] => APARICIO
+            [apellido2] => REYES
+            [nombre] => DAVID HABRAHAM
+            [nasignado] => 32
+            [puntos_validados] => 0
+        )
+
+    [42] => stdClass Object
+        (
+            [apellido1] => BAUTISTA
+            [apellido2] => LASOBRAS
+            [nombre] => OLIVIA
+            [nasignado] => 30
+            [puntos_validados] => 2
+        )
+
+    [43] => stdClass Object
+        (
+            [apellido1] => CAMPILLOS
+            [apellido2] => MENÉNDEZ
+            [nombre] => VERA
+            [nasignado] => 44
+            [puntos_validados] => 1
+        )
+
+    [44] => stdClass Object
+        (
+            [apellido1] => Huerta
+            [apellido2] => Ramo
+            [nombre] => Alicia Valentina
+            [nasignado] => 36
+            [puntos_validados] => 1
+        )
+
+    [45] => stdClass Object
+        (
+            [apellido1] => Ilie
+            [apellido2] => nodata
+            [nombre] => Sergio Bogdan 
+            [nasignado] => 78
+            [puntos_validados] => 1
+        )
+
+    [46] => stdClass Object
+        (
+            [apellido1] => LÁZARO
+            [apellido2] => GARAY
+            [nombre] => ANDRÉS
+            [nasignado] => 11
+            [puntos_validados] => 17
+        )
+
+    [47] => stdClass Object
+        (
+            [apellido1] => PINAR
+            [apellido2] => CHETIOUI
+            [nombre] => RAYAN
+            [nasignado] => 56
+            [puntos_validados] => 1
+        )
+
+    [48] => stdClass Object
+        (
+            [apellido1] => SIMAHA
+            [apellido2] => SINERA
+            [nombre] => MARIAMA
+            [nasignado] => 18
+            [puntos_validados] => 1
+        )
+
+    [49] => stdClass Object
+        (
+            [apellido1] => ZHU
+            [apellido2] => nodata
+            [nombre] => YUTONG
+            [nasignado] => 33
+            [puntos_validados] => 8
+        )
+
+    [50] => stdClass Object
+        (
+            [apellido1] => ZIDÁN
+            [apellido2] => EL MESSAOUDI
+            [nombre] => MOHAMED
+            [nasignado] => 24
+            [puntos_validados] => 8
+        )
+
+    [51] => stdClass Object
+        (
+            [apellido1] =>               JIMÉNEZ 
+            [apellido2] => OLIVER
+            [nombre] => TONY
+            [nasignado] => 34
+            [puntos_validados] => 7
+        )
+
+    [52] => stdClass Object
+        (
+            [apellido1] => AKKAOUI
+            [apellido2] => nodata
+            [nombre] => DOUAE
+            [nasignado] => 73
+            [puntos_validados] => 0
+        )
+
+    [53] => stdClass Object
+        (
+            [apellido1] => CATALAN 
+            [apellido2] => PEREZ
+            [nombre] => VALERIA
+            [nasignado] => 51
+            [puntos_validados] => 7
+        )
+
+    [54] => stdClass Object
+        (
+            [apellido1] => Contamina
+            [apellido2] => Lucas
+            [nombre] => Paola
+            [nasignado] => 69
+            [puntos_validados] => 7
+        )
+
+    [55] => stdClass Object
+        (
+            [apellido1] => De León
+            [apellido2] => Domínguez
+            [nombre] => Ashley Ariadna
+            [nasignado] => 31
+            [puntos_validados] => 2
+        )
+
+    [56] => stdClass Object
+        (
+            [apellido1] => FRANCO 
+            [apellido2] => URREA
+            [nombre] => ANGEL
+            [nasignado] => 49
+            [puntos_validados] => 8
+        )
+
+    [57] => stdClass Object
+        (
+            [apellido1] => LATORRE
+            [apellido2] => CASANOVA
+            [nombre] => SERGI
+            [nasignado] => 7
+            [puntos_validados] => 8
+        )
+
+    [58] => stdClass Object
+        (
+            [apellido1] => MARTÍNEZ
+            [apellido2] => PABLO
+            [nombre] => ERIC
+            [nasignado] => 26
+            [puntos_validados] => 2
+        )
+
+    [59] => stdClass Object
+        (
+            [apellido1] => Sánchez
+            [apellido2] => Marín
+            [nombre] => David
+            [nasignado] => 12
+            [puntos_validados] => 8
+        )
+
+    [60] => stdClass Object
+        (
+            [apellido1] => Sancho
+            [apellido2] => Benito
+            [nombre] => Hugo David
+            [nasignado] => 17
+            [puntos_validados] => 7
+        )
+
+    [61] => stdClass Object
+        (
+            [apellido1] => Thiam
+            [apellido2] => nodata
+            [nombre] => Mor
+            [nasignado] => 13
+            [puntos_validados] => 16
+        )
+
+    [62] => stdClass Object
+        (
+            [apellido1] => TINTOI
+            [apellido2] => nodata
+            [nombre] => AMEDEA
+            [nasignado] => 48
+            [puntos_validados] => 16
+        )
+
+    [63] => stdClass Object
+        (
+            [apellido1] => BEGOUG
+            [apellido2] => nodata
+            [nombre] => DJAWAD
+            [nasignado] => 29
+            [puntos_validados] => 7
+        )
+
+    [64] => stdClass Object
+        (
+            [apellido1] => BENITO
+            [apellido2] => CARCELLER
+            [nombre] => ALEJANDRO
+            [nasignado] => 39
+            [puntos_validados] => 7
+        )
+
+    [65] => stdClass Object
+        (
+            [apellido1] => FERRER
+            [apellido2] => RUBIO
+            [nombre] => LEO
+            [nasignado] => 71
+            [puntos_validados] => 4
+        )
+
+    [66] => stdClass Object
+        (
+            [apellido1] => GABARRE 
+            [apellido2] => MORENO
+            [nombre] => SONIA
+            [nasignado] => 66
+            [puntos_validados] => 4
+        )
+
+    [67] => stdClass Object
+        (
+            [apellido1] => GARCÍA
+            [apellido2] => PELAYO
+            [nombre] => MARIO
+            [nasignado] => 8
+            [puntos_validados] => 3
+        )
+
+    [68] => stdClass Object
+        (
+            [apellido1] => GIMENO
+            [apellido2] => MACIPE
+            [nombre] => MARTA
+            [nasignado] => 9
+            [puntos_validados] => 5
+        )
+
+    [69] => stdClass Object
+        (
+            [apellido1] => GÓMEZ
+            [apellido2] => CASTAÑEDA
+            [nombre] => MARA NATASHA
+            [nasignado] => 65
+            [puntos_validados] => 6
+        )
+
+    [70] => stdClass Object
+        (
+            [apellido1] => GONZÁLEZ
+            [apellido2] => ANDRÉS
+            [nombre] => JULIA
+            [nasignado] => 41
+            [puntos_validados] => 6
+        )
+
+    [71] => stdClass Object
+        (
+            [apellido1] => HERNÁNDEZ
+            [apellido2] => ARÓS
+            [nombre] => JOSÉ ANDRÉS
+            [nasignado] => 43
+            [puntos_validados] => 8
+        )
+
+    [72] => stdClass Object
+        (
+            [apellido1] => HOSTALED
+            [apellido2] => CORTÉS
+            [nombre] => CLARA BEATRIZ
+            [nasignado] => 85
+            [puntos_validados] => 6
+        )
+
+    [73] => stdClass Object
+        (
+            [apellido1] => JADAN
+            [apellido2] => CRESPO
+            [nombre] => ANA YAMILETH
+            [nasignado] => 10
+            [puntos_validados] => 0
+        )
+
+    [74] => stdClass Object
+        (
+            [apellido1] => KHODER
+            [apellido2] => AL MOHAMED
+            [nombre] => ROWAIDEH
+            [nasignado] => 50
+            [puntos_validados] => 0
+        )
+
+    [75] => stdClass Object
+        (
+            [apellido1] => LARGO
+            [apellido2] => GÓMEZ
+            [nombre] => ALBERTO
+            [nasignado] => 28
+            [puntos_validados] => 5
+        )
+
+    [76] => stdClass Object
+        (
+            [apellido1] => MARTÍN
+            [apellido2] => ABAD
+            [nombre] => RUTH
+            [nasignado] => 47
+            [puntos_validados] => 3
+        )
+
+    [77] => stdClass Object
+        (
+            [apellido1] => NALVAY
+            [apellido2] => GIMÉNEZ
+            [nombre] => ALEJANDRO
+            [nasignado] => 14
+            [puntos_validados] => 0.75
+        )
+
+    [78] => stdClass Object
+        (
+            [apellido1] => RODRIGO
+            [apellido2] => GARCÍA
+            [nombre] => SERGIO
+            [nasignado] => 19
+            [puntos_validados] => 2
+        )
+
+    [79] => stdClass Object
+        (
+            [apellido1] => SALAS
+            [apellido2] => MARTÍN
+            [nombre] => CLAUDIA
+            [nasignado] => 25
+            [puntos_validados] => 7
+        )
+
+    [80] => stdClass Object
+        (
+            [apellido1] => SALAVERA
+            [apellido2] => VIDAURRE
+            [nombre] => AITOR
+            [nasignado] => 76
+            [puntos_validados] => 0
+        )
+
+    [81] => stdClass Object
+        (
+            [apellido1] => SEGURA
+            [apellido2] => LOREN
+            [nombre] => IGNACIO
+            [nasignado] => 16
+            [puntos_validados] => 0
+        )
+
+    [82] => stdClass Object
+        (
+            [apellido1] => VLASCEANU
+            [apellido2] => nodata
+            [nombre] => EDUARD GABRIEL
+            [nasignado] => 79
+            [puntos_validados] => 0
+        )
+
+    [83] => stdClass Object
+        (
+            [apellido1] => Beldjilali
+            [apellido2] => Osmani
+            [nombre] => Malik
+            [nasignado] => 53
+            [puntos_validados] => 9
+        )
+
+    [84] => stdClass Object
+        (
+            [apellido1] => Riza
+            [apellido2] => nodata
+            [nombre] => Emil Cristian
+            [nasignado] => 6
+            [puntos_validados] => 1
+        )
+
+)
+
