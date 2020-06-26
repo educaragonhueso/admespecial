@@ -47,8 +47,8 @@
                { 
                   echo '<a class="dropdown-item" href="/guarderias/documentacion/vac_prov_def.pdf" target="_blank" id="pdf_vacantes" data-tipo="pdf" data-subtipo="pdf_vac">Listado vacantes provisional y definitivo (pdf)  </a>';
                   echo '<a class="exportcsv dropdown-item" href="#" id="csv_mat" data-tipo="csv" data-subtipo="csv_mat">Listado vacantes (csv)  </a>';
-                  echo '<a class="exportcsv dropdown-item" href="#"
-id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  </a>';
+                  echo '<a class="exportcsv dropdown-item" href="#" id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  </a>';
+                  echo '<a class="exportcsv dropdown-item" href="#" id="csv_a4" data-tipo="csv" data-subtipo="csv_a4">Listado tributantes Anexo4 (csv)  </a>';
                }
                if($_SESSION['rol']=='centro')
                { 
@@ -100,9 +100,6 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
              <li class="nav-item active msuperior dropdown" id="mtributantes">
                 <a class="show_tributantes nav-link" id="navbardrop" data-toggle="dropdow" href="#">Datos Tributantes</a>
             </li>
-             <li class="nav-item active msuperior dropdown" id="manexo4">
-                <a class="show_anexo4 nav-link" id="navbardrop" data-toggle="dropdow" href="#">Confirmar Tributantes</a>
-            </li>
              <li class="nav-item active msuperior dropdown" id="mprovisional">
                 <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Provisional</a>
                 <div class="dropdown-menu">
@@ -111,38 +108,31 @@ id="csv_tri" data-tipo="csv" data-subtipo="csv_tri">Listado tributantes (csv)  <
                    <a class="lprovisionales dropdown-item" href="#" data-subtipo="excluidos_prov">Excluidos provisional</a>
                 </div>
             </li>
-			<?php }?>
 		<?php if($_SESSION['estado_convocatoria']>=30){?>
-                            <li class="nav-item active msuperior dropdown" id="mdefinitivo">
-                                 <a class="show_definitivos nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Definitivos</a>
-		                 <div class="dropdown-menu">
-				 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="admitidos_def">Admitidos definitivo</a>
-				 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="noadmitidos_def">No admitidos definitivo</a>
-				 <a class="ldefinitivos dropdown-item" href="#" data-subtipo="excluidos_def">Excluidos definitivo</a>
-				 </div>
-                            </li>
-		<?php }?>
-		<?php if(($_SESSION['rol']=='admin' or $_SESSION['rol']=='sp') and $_SESSION['estado_convocatoria']>30) {?>
-                            <li class="nav-item active msuperior dropdown" id="mdefinitivo">
-                                 <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASEII</a>
-		                 <div class="dropdown-menu">
-				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_ebo">Listado Solicitudes fase2 EBO</a>
-				 <a class="lfase2 dropdown-item" href="#" data-subtipo="lfase2_sol_tva">Listado Solicitudes fase2 TVA</a>
-				 </div>
-                            </li>
-                            <li class="nav-item active msuperior dropdown" id="mdefinitivo">
-                                 <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASEIII</a>
-		                 <div class="dropdown-menu">
-				 <a class="lfase3 dropdown-item" href="#" data-subtipo="lfase3_sol_ebo">Listado Solicitudes fase3 EBO</a>
-				 <a class="lfase3 dropdown-item" href="#" data-subtipo="lfase3_sol_tva">Listado Solicitudes fase3 TVA</a>
-				 </div>
-                            </li>
+              <li class="nav-item active msuperior dropdown" id="mdefinitivo">
+                 <a class="show_definitivos nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Definitivos</a>
+		           <div class="dropdown-menu">
+                   <a class="ldefinitivos dropdown-item" href="#" data-subtipo="admitidos_def">Admitidos definitivo</a>
+                   <a class="ldefinitivos dropdown-item" href="#" data-subtipo="noadmitidos_def">No admitidos definitivo</a>
+                   <a class="ldefinitivos dropdown-item" href="#" data-subtipo="excluidos_def">Excluidos definitivo</a>
+				      </div>
+              </li>
 		<?php }?>
 		<?php }?>
+		<?php if(($_SESSION['rol']=='admin' or $_SESSION['rol']=='sp' or $_SESSION['rol']=='centro') and $_SESSION['estado_convocatoria']>30) {?>
+              <li class="nav-item active msuperior dropdown" id="mdefinitivo">
+                  <a class="nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">FASEII</a>
+		            <div class="dropdown-menu">
+                     <a class="show_anexo4 nav-link" id="navbardrop" data-toggle="dropdow" href="#">Confirmar Tributantes</a>
+				      </div>
+              </li>
+		<?php }?>
+			<?php }?>
 	<?php }?>
         </ul>
 </nav>
 <?php 
-if($_SESSION['id_centro']<=1 and $_SESSION['id_centro']>=-2) 
-echo '<input class="form-control" id="fcentrosadminzgz" placeholder="Introduce datos del centro a suplantar" type="text">';
+
+//if($_SESSION['id_centro']<=1 and $_SESSION['id_centro']>=-2) 
+//echo '<input class="form-control" id="fcentrosadminzgz" placeholder="Introduce datos del centro a suplantar" type="text">';
 ?>

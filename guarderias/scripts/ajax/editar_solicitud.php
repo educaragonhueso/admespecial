@@ -12,13 +12,14 @@ require_once DIR_APP.'parametros.php';
 $log_editar_solicitud=new logWriter('log_editar_solicitud',DIR_LOGS);
 
 $consulta=$_POST['modo'];
-if(isset($_POST['id_alumno'])) $id=$_POST['id_alumno'];
-else $id=0;
+if(isset($_POST['id_alumno'])) $id_alumno=$_POST['id_alumno'];
+else $id_alumno=0;
 if(isset($_POST['rol'])) $rol=$_POST['rol'];
 else $rol='alumno';
 
 $log_editar_solicitud->warning("EDITANDO ALUMNO");
 $log_editar_solicitud->warning(print_r($_POST,true));
+
 $scontroller=new SolicitudController($rol);
 $conexion=$scontroller->getConexion();
 $tsol=new Solicitud($conexion);
@@ -27,7 +28,6 @@ $tcentro=new Centro($conexion,$_POST['id_centro'],'ajax');
 if(isset($_POST['tipoform']))
    $tipoform=$_POST['tipoform'];
 else $tipoform='normal';
-
 
 if(isset($_POST['id_centro']))
 {
@@ -49,23 +49,18 @@ $log_editar_solicitud->warning(print_r($_POST,true));
 #si es un ciudadano obtenemos el id usando el pin proporcionado
 if($rol=='alumno')
 {
-   print_r($_POST);
    if(isset($_POST['finsol'])) $finsol=$_POST['finsol'];
    else $finsol=0;
-
-	$pin=$_POST['pin'];
-   if($id==0) 	$id=$scontroller->getIdAlumnoPin($pin);
-//obtenemos el estado de la solicitud
-	$log_editar_solicitud->warning("idalumno-pin: ".$id.'-'.$pin);
-	$fase_sol=$tsol->getEstadoSol($id);
+   //obtenemos el estado de la solicitud
+	$fase_sol=$tsol->getEstadoSol($id_alumno);
 	if($fase_sol=='validada' or $finsol!=0) $solo_lectura=1;
 }
 
 if(isset($_POST['codigo_centro'])) $id_centro=$_POST['codigo_centro'];
 
-$log_editar_solicitud->warning("DATOS CENTRO/TIPOFORM: ".$id_centro.$tipoform);
+$log_editar_solicitud->warning("DATOS CENTRO/TIPOFORM/IDALUMNO: ".$id_centro.$tipoform.$id_alumno);
 //obtenemos formulario con los datos
-$sform=$scontroller->showFormSolicitud($id,$id_centro,$rol,1,$solo_lectura,$fase_sorteo,$estado_convocatoria,$tipoform);
+$sform=$scontroller->showFormSolicitud($id_alumno,$id_centro,$rol,1,$solo_lectura,$fase_sorteo,$estado_convocatoria,$tipoform);
 
 $botonimp='<a href="imprimirsolicitud.php?id='.$id.'" target="_blank"><input class="btn btn-primary imprimirsolicitud"  type="button" value="Vista Previa Impresion Documento"/></a>';
 //Si el id es cero obentemos el nuevo id

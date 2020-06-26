@@ -14,6 +14,7 @@ class UtilidadesAdmision{
 		$this->log_fase2=new logWriter('log_fase2',DIR_LOGS);
 		$this->log_sorteo_fase2=new logWriter('log_sorteo_fase2',DIR_LOGS);
 		$this->log_listado_solicitudes=new logWriter('log_listado_solicitudes',DIR_LOGS);
+		$this->log_listados_definitivos=new logWriter('log_listados_definitivos',DIR_LOGS);
     		}
   public function asignarNumSorteoFase2(){
 		$this->log_sorteo_fase2->warning("ASIGNANDO NUMERO SORTEO");
@@ -430,12 +431,46 @@ left join
 //si alguien reserva laza incorrectamente debe anularse esa reserva y anotarse en un fichero asi como en la base de datos, añadiendo un campo llamado reserva incorrecta
 //en el formulario de fase 2 deberá aparecer si tiene o no reserva y esta es correcta 
 	}
-  public function copiaTablaProvisionales($centro=0)
+  public function copiaTablaDefinitivos($centro=1)
 	{
+		$this->log_listados_definitivos->warning("COPIANDO TABLA DEF, CENTRO: $centro");
+      if($centro==1)
+      {
+		$sql_definitivos='DELETE from alumnos_definitiva_final';
+		if($this->con->query($sql_definitivos)==0) return 0;
+
+		$sql_definitivos='INSERT IGNORE INTO alumnos_definitiva_final SELECT a.*,b.puntos_validados,c.nombre_centro from alumnos a, baremo b,centros c where a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino';
+		$this->log_listados_definitivos->warning("COPIANDO TABLA DEF CONSULTA: $sql_definitivos");
+      }
+      else
+      {
+		$sql_definitivos="DELETE from alumnos_definitiva_final WHERE id_centro=$centro";
+		if($this->con->query($sql_definitivos)==0) return 0;
+
+		$sql_definitivos="INSERT INTO alumnos_definitiva_final SELECT a.*,b.puntos_validados,c.nombre_centro from alumnos a, baremo b,centros c where a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino WHERE a.id_centro_destino=$centro";
+      }
+
+		if($this->con->query($sql_definitivos)) return 1;
+		else return 0;
+
+	}
+  public function copiaTablaProvisionales($centro=1)
+	{
+      if($centro==1)
+      {
 		$sql_provisionales='DELETE from alumnos_provisional_final';
 		if($this->con->query($sql_provisionales)==0) return 0;
 
 		$sql_provisionales='INSERT IGNORE INTO alumnos_provisional_final SELECT a.*,b.puntos_validados,c.nombre_centro from alumnos a, baremo b,centros c where a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino';
+      }
+      else
+      {
+		$sql_provisionales="DELETE from alumnos_provisional_final WHERE id_centro=$centro";
+		if($this->con->query($sql_provisionales)==0) return 0;
+
+		$sql_provisionales="INSERT INTO alumnos_provisional_final SELECT a.*,b.puntos_validados,c.nombre_centro from alumnos a, baremo b,centros c where a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino WHERE a.id_centro_destino=$centro";
+      }
+
 		if($this->con->query($sql_provisionales)) return 1;
 		else return 0;
 

@@ -127,9 +127,9 @@ class ListadosController extends ControladorBase{
 	{
 		$this->log_listados_solicitudes->warning('ENTRANDOO EN GETSOLICITUDEs,SUBTIPO/FASE/MODO/PROVINCIA: '.$subtipo_listado.'/'.$fase_sorteo.'/'.$modo.'/'.$provincia);
 		$solicitud=new Solicitud($this->adapter);
-		if($modo=='normal')// listados previos al sorteo
+		if($modo=='normal' or $modo=='anexo4')// listados previos al sorteo
     	{
-	    		$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia);
+	    		$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia,'alumno');
  		}
 		if($modo=='baremadas' or $modo=='baremadasdef')// listados previos al sorteo
     	{
@@ -138,9 +138,9 @@ class ListadosController extends ControladorBase{
 		elseif($modo=='csv')
 		{
 			$this->log_gencsvs->warning("OBTENIENDO DATOS CSV SUBTIPO: $subtipo_listado");
-         if($subtipo_listado=='tri'){ //para el caso de tributantes 
-		    	$allsolicitudes=$solicitud->getAllSolTributantes($id_centro,$provincia);
-			$this->log_gencsvs->warning("OBTENIDOS DATOS CSV.");
+         if($subtipo_listado=='tri' or $subtipo_listado=='a4'){ //para el caso de tributantes 
+		    	$allsolicitudes=$solicitud->getAllSolTributantes($id_centro,$provincia,$subtipo_listado);
+			$this->log_gencsvs->warning("OBTENIDOSs DATOS CSV.");
          return $allsolicitudes;
             }
          else $allsolicitudes=$solicitud->getAllSolListados($id_centro,$tiposol,$subtipo_listado,0,$estado_convocatoria,$provincia);
@@ -164,7 +164,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 		elseif($modo=='tributantes') //listados de tributantes para web
 		{
 			$this->log_listados_tributantes->warning("Cargando datos de tributantes , centro/provinciia: $id_centro/$provincia");
-		    	$allsolicitudes=$solicitud->getAllSolTributantes($id_centro,$provincia);
+		    	$allsolicitudes=$solicitud->getAllSolTributantes($id_centro,$provincia,'a4');
 		}
 	return $allsolicitudes;
 	}
@@ -278,15 +278,16 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 	{
 	return '<button type="button" class="btn btn-outline-dark filtrosol" id="'.$texto.'">'.$texto.'</button>';
 	}
-  public function showSolicitud($sol,$tipolistado='normal')
+  public function showSolicitud($sol,$tipoform='normal')
    {
 	   //si es para listados normales permitimos editar todo el formulario, sino solo el anexo4
-      if($tipolistado=='normal') $editaralumno='calumno';
+      if($tipoform=='normal') $editaralumno='calumno';
       else $editaralumno='canexo4';
 	
 		$li="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:black'>";
-    $li.="<td class='$editaralumno dalumno' data-idal='".$sol->id_alumno."'>".$sol->id_alumno."-".strtoupper($sol->apellido1).",".strtoupper($sol->nombre)."</td>";
+    $li.="<td class='$editaralumno dalumno' data-tipoform='$tipoform' data-idal='".$sol->id_alumno."'>".$sol->id_alumno."-".strtoupper($sol->apellido1).",".strtoupper($sol->nombre)."</td>";
 		$li.="<td id='print".$sol->id_alumno."' class='fase printsol'><i class='fa fa-print psol' aria-hidden='true'></i></td>";
+		$li.="<td id='tipoalumno".$sol->id_alumno."' class='tipoalumno'>".$sol->tipoalumno."</td>";
 		$li.="<td id='fase".$sol->id_alumno."' class='fase'>".$sol->fase_solicitud."</td>";
 		$li.="<td id='estado".$sol->id_alumno."' class='estado'>".$sol->estado_solicitud."</td>";
 		$li.="<td id='tipoens".$sol->id_alumno."' class='estado'>".$sol->tipoestudios."</td>";
@@ -296,7 +297,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 		$li.="</tr>";
 	return $li;
 	}
-  public function showSolicitudes($a,$rol='centro',$tipolistado='normal')
+  public function showSolicitudes($a,$rol='centro',$tipoform='normal')
 	{
 	//codigo para mostrar alumnos según tipo de inscripcion
 	$html='<table class="table table-striped" id="sol_table" style="color:white">';
@@ -304,6 +305,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
       <tr>
         <th>DATOS ALUMNO</th>
         <th></th>
+        <th>TIPO ALUMNO</th>
         <th>FASE</th>
         <th>ESTADO</th>
         <th>TIPO</th>
@@ -315,7 +317,7 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 	$html.="<tbody>";
 		foreach($a as $user) 
 		{
-			$html.=$this->showSolicitud($user,$tipolistado);	
+			$html.=$this->showSolicitud($user,$tipoform);	
 		}
 	$html.="</tbody>";
 	$html.='</table>';
@@ -419,8 +421,8 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 	$centroactual='';
 	$tipoanterior='';
 	$tipoactual='';
-	$solvacanterior='';
-	$solvacactual='';
+	$solplazaanterior='';
+	$solplazaactual='';
 	$alumno_anterior='';
 	$alumno_actual='';
 
@@ -445,8 +447,8 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
       $tipoanterior=$tipoactual;
 		$tipoactual=$sol->tipoestudios;
 
-      $solvacanterior=$solvacactual;
-		$solvacactual=$sol->sol_vacantes;
+      $solplazaanterior=$solplazaactual;
+		$solplazaactual=$sol->sol_plaza;
 
 		if($rol=='admin' || $rol=='centro' || $rol=='sp')
 		{
@@ -461,11 +463,11 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
          else $ncentro=0;
 			if($tipoactual!=$tipoanterior and $subtipo!='tributantes')
 				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
-			if($solvacactual!=$solvacanterior and $subtipo!='tributantes')
+			if($solplazaactual!=$solplazaanterior and $subtipo!='tributantes')
 			{
-            if($solvacactual==1) $solvac='ACNEAE';
-            else $solvac='NORMAL';
-         	$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #b2b1d8;font-size:9px'><td colspan='".$ncolumnas."'><b>".strtoupper($solvac)."</b></td></tr>";
+            if($solplazaactual==1) $solplaza='ACNEAE';
+            else $solplaza='NORMAL';
+         	$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #b2b1d8;font-size:9px'><td colspan='".$ncolumnas."'><b>".strtoupper($solplaza)."</b></td></tr>";
          }
 			if($alumno_actual!=$alumno_anterior and $subtipo=='tributantes')
          {
@@ -645,9 +647,11 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 		
 	return $tres;
 	}
-  public function showTablaResumenSolicitudes($a,$nombre_centro='',$id_centro)
+  public function showTablaResumenSolicitudes($a,$nombre_centro='',$id_centro,$tipoform='normal')
 	{
-	$tres='<div id="tresumen'.$id_centro.'" class="container tresumensol"><h2>Solicitudes centro:  <span class="cabcensol" id="cabcensol'.$id_centro.'">'.strtoupper($nombre_centro).'</span></h2>';
+   if($tipoform=='normal') $textocentro='Solicitudes centro: ';
+   else $textocentro='Alumnado centro: ';
+	$tres='<div id="tresumen'.$id_centro.'" class="container tresumensol"><h2>'.$textocentro.'  <span class="cabcensol" data-tipoform="'.$tipoform.'" id="cabcensol'.$id_centro.'">'.strtoupper($nombre_centro).'</span></h2>';
 	$movil=array();
 	if(sizeof($a)>0)
 	{

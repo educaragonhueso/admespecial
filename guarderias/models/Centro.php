@@ -401,7 +401,6 @@ class Centro extends EntidadBase{
 	else
 	{
 	$query="SELECT nombre_centro FROM centros WHERE id_centro =".$this->id_centro; 
-	$this->log_fase1->warning("CONSULTA CENTRO  $query");
 	$nombre_centro = $this->conexion->query($query)->fetch_object()->nombre_centro; 
 	$this->nombre_centro = $nombre_centro;
 	}

@@ -30,9 +30,18 @@ centros se ponen a fase 4
 
 FASE II
 
+Precargar alumnos antiguos, usando telefono como identificador (recordar eliminar espacios en los datos), tener en cuenta q los alumnos son ADMITIDOS
+
+Tener en cuenta q las tablas de prov y definitivos han cambiado al acambiar la estructura de alumnos original. Hay q recrearlas.
 ver listados provisionales con admistidos por centro y curso y acneae según vacantes enviadas por mila
 q se vea si es acneae en el listado provisional
 
+se pasa a fase 5 para fijar la tabla de provisionales
+
+   script: (por dearrollar)
+
+         sc_copia_provisional_final.php (calcula las listas y pone los cnetro a fase5)
+         sc_copia_defintivo_final.php (calcula las listas y pone los cnetro a fase5)
 
 
 FASE III

@@ -37,6 +37,10 @@ $campos_bbdd_csv_sol=array('num_hadmision','fnac','nombre_centro','apellido1','a
 
 $campos_cabecera_csv_tri=array('Nombre Centro','Primer apellido Alumno','Segundo apellido Alumno','Nombre Alumno','Parentesco','Primer apellido tributante','Segundo apellido tributante','Nombre tributante','DNI Tributante');
 $campos_bbdd_csv_tri=array('nombre_centro','apellido1_alumno','apellido2_alumno','nombre_alumno','parentesco','apellido1_tributante','apellido2_tributante','nombre_tributante','dni_tributante');
+
+//LISTADO CSV ANEXO4
+$campos_cabecera_csv_a4=array('Nombre Centro','Primer apellido Alumno','Segundo apellido Alumno','Nombre Alumno','Importe Renta','Cuota','Parentesco','Primer apellido tributante','Segundo apellido tributante','Nombre tributante','DNI Tributante');
+$campos_bbdd_csv_a4=array('nombre_centro','apellido1_alumno','apellido2_alumno','nombre_alumno','importe_renta','cuota','parentesco','apellido1_tributante','apellido2_tributante','nombre_tributante','dni_tributante');
 //listado de alumnos que promocionan, la matricula
 $campos_cabecera_csv_pro=array('Centro','Apellidos','Nombre','Enseñanza','Fecha Nacimiento','estado');
 $campos_bbdd_csv_pro=array('nombre_centro','apellidos','nombre','tipo_alumno_actual','fnac','estado');
@@ -56,13 +60,13 @@ $campos_cabecera_pdf_mat=array('Centro','2020','2019','2018');
 $campos_bbdd_pdf_mat=array('nombre_centro','vuno','vdos','vtres');
 
 //DATOS PARA LISTADOS PROVISIONALES
-$campos_cabecera_admitidos_prov=array('Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
-$campos_bbdd_admitidos_prov=array('nordensorteo','nasignado','apellido1','apellido2','nombre','puntos_validados');
+$campos_cabecera_admitidos_prov=array('Año','Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
+$campos_bbdd_admitidos_prov=array('tipoestudios','nordensorteo','nasignado','apellido1','apellido2','nombre','puntos_validados');
 
-$campos_cabecera_noadmitidos_prov=array('Tipo','Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Tipo','Criterios prioritarios','Puntos Baremo');
+$campos_cabecera_noadmitidos_prov=array('Año','Nº Orden','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Tipo','Criterios prioritarios','Puntos Baremo');
 $campos_bbdd_noadmitidos_prov=array('tipoestudios','nordensorteo','nasignado','apellido1','apellido2','nombre','tipoestudios','transporte','puntos_validados');
 
-$campos_cabecera_excluidos_prov=array('Tipo','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
+$campos_cabecera_excluidos_prov=array('Año','NºAleatorio','Primer Apellido','Segundo apellido','Nombre','Puntos Baremo');
 $campos_bbdd_excluidos_prov=array('tipoestudios','nasignado','apellido1','apellido2','nombre','puntos_validados');
 
 //DATOS PARA LISTADOS DEFINITIVOS

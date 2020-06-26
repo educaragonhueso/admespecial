@@ -624,6 +624,34 @@ $formsolanexo4.='
 <!--INICIO FILA DATOS-->
                 <div class="row formrow">
                     <div class="col-md-12">
+                            <input type="checkbox" id="solcalcbon" value="0" name="solcalcbon" class="solcalcbon" placeholder=""  >Solicitan cálculo bonificación
+                    </div>
+                </div>
+<!--FIN FILA DATOS-->
+<!--INICIO FILA DATOS-->
+                <div class="row formrow">
+                    <div class="col-md-3">
+                        <div class="md-form mb-0">
+                     		Número miembros unidad familiar
+				               <div class="form-group">
+					               <select class="form-contro" name="nmunidad" id="nmunidad" value="">
+                                  <option>0</option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                  <option>6</option>
+                              </select>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+<br>
+<!--FIN FILA DATOS-->
+<!--INICIO FILA DATOS-->
+                <div class="row formrow">
+                    <div class="col-md-12">
                             <input type="checkbox" id="oponenautorizar" value="0" name="oponenautorizar" class="oponenautorizar" placeholder=""  >Los abajo firmantes se oponen a autorizar expresamente al Departamento de Educación, Cultura y Deporte para que recabe, de la Agencia Estatal de Administración Tributaria (AEAT), la información de carácter tributario del ejercicio fiscal 2017, y aportan certificación expedida por la AEAT de cada uno de los miembros de la unidad familiar, correspondiente al ejercicio fiscal 2017. Se hará constar los miembros computables de la familia a 31 de diciembre de 2017.
                     </div>
                 </div>
@@ -757,13 +785,23 @@ Los abajo firmantes declaran responsablemente que cumplen con sus obligaciones t
                     </div>
                 </div>
 <!--FIN FILA DATOS-->
+<!--INICIO FILA DATOS-->
+                <div class="row formrow">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                           <input type="hidden" id="validar_infotributaria" value="0" name="validar_infotributaria">
+                           <button name="boton_validar_infotributaria" type="button" class="btn btn-outline-dark">Validar información tributaria</button>
+                        </div>
+                    </div>
+                </div>
+<!--FIN FILA DATOS-->
 </div>
 </div>
 <!--FIN SECCION TRIBUTO-->
 
 			<br>
 	    <div class="text-center text-md-left">
-                <a class="btn btn-primary send" >GRABAR SOLICITUD</a>
+                <a class="btn btn-primary senda4" >GRABAR SOLICITUD</a>
             </div>
             <div class="status"></div>
 </form> 

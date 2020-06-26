@@ -1011,7 +1011,6 @@ $.ajax({
 			else	$("#l_matricula").after(data);
 		}
       	$("#"+idappend).after(data);
-	console.log(data);
 	if(vestado_convocatoria=='3') {disableForm($('#fsolicitud'+vid)) ;}
       	},
       	error: function() {

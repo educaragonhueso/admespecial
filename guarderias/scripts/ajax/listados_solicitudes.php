@@ -17,9 +17,14 @@ $log_listado_solicitudes=new logWriter('log_listado_solicitudes',DIR_LOGS);
 $menu_provisionales=''; //añadirlo si se ha realizado el sorteo
 $modo='presorteo';
 $id_centro=$_POST['id_centro'];
-
-if(isset($_POST['tipolistado'])) $tipolistado=$_POST['tipolistado'];
-else $tipolistado='normal';
+$titulo="<h3>LISTADO SOLICITUDES</h3>";
+//tipo formulario, el normal o el de los datos de tributantes, anexo4
+if(isset($_POST['tipoform'])) 
+{
+   $tipoform=$_POST['tipoform'];
+   $titulo='<h3>LISTADO ANEXO4</h3>';
+}
+else $tipoform='normal';
 
 $estado_convocatoria=$_POST['estado_convocatoria'];
 $hoy = date("Y/m/d");
@@ -41,8 +46,6 @@ $nombre_centro=$tcentro->getNombre();
 $fase=$tcentro->getFase();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
 $numero_sorteo=$tcentro->getNumeroSorteo();// FASE0: no realizado, 1, dia sorteo pero asignaciones no realizadas, 2 numero asignado, 3 sorteo realizado
 $nsolicitudes=$tcentro->getNumSolicitudes($id_centro,$fase);
-
-//$nsolicitudesneto=$nsolicitudes-$nalumnosconhermanos/2;
 
 //Segun el estado del sorteo deshabilitamos el sorteo
 //fase 0 inicio, fase 1 inicio en baremacion provisional, fase2 publicadas listado baremacion, fase 3 pub list bar def.
@@ -69,8 +72,8 @@ $form_sorteo_completo='<div id="form_sorteo" class="input-group mb-3">
 	<input type="hidden" id="num_solicitudes" name="num_solicitudes" value="'.$nsolicitudes.'" placeholder="NUMERO OBTENIDO" disabled>
 </div>';
 
-//variable para controlar si se actualiza el sorteo en la tabla de centros
-$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES CON ROL: ".$_POST['rol']);
+$log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES POSTT: ");
+
 //Para el caso de acceso del administrador o servicios provinciales
 if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 {
@@ -100,8 +103,9 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 	$log_listado_solicitudes->warning(print_r($tablaresumen,true));
 	########################################################################################
 	
+   print($titulo);
    print($filtro_solicitudes);
-	print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$centro->id_centro));
+	print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$centro->id_centro,$tipoform));
 	print('<br>');
 	}
 }
@@ -121,27 +125,27 @@ else//accedemos como centro
    $fase=$tcentro->getFase();
 	#Mostramos formulario para el sorteo si es el dia correcto
 
-
+   print($titulo);
 	if($fase==0)
 	{
-			if($_POST['id_centro']!='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
+			if($_POST['id_centro']!='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro,$tipoform));
 			print($filtro_solicitudes);
-			print($list->showSolicitudes($solicitudes,$_POST['rol'],$tipolistado));
+			print($list->showSolicitudes($solicitudes,$_POST['rol'],$tipoform));
 	}
 	elseif($fase==1)
    {
-         if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
+         if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro,$tipofom));
          print('<br>');
          print($filtro_solicitudes);
-         print($list->showSolicitudes($solicitudes,$_POST['rol'],$tipolistado));
+         print($list->showSolicitudes($solicitudes,$_POST['rol'],$tipoform));
    }
 	//elseif($fase_sorteo==2 and $estado_convocatoria<30)
 	elseif($fase>=2)
 	{
 			//print($menu_provisionales);
-         if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro));
+         if($_POST['id_centro']>='1') print($list->showTablaResumenSolicitudes($tablaresumen,$nombre_centro,$id_centro,$tipoform));
          print($filtro_solicitudes);
-			print($list->showSolicitudes($solicitudes,$_POST['rol'],$tipolistado));
+			print($list->showSolicitudes($solicitudes,$_POST['rol'],$tipoform));
 	}
 }
 

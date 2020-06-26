@@ -49,13 +49,21 @@ if($fase_sorteo==4 and $estado_convocatoria<30 and $estado_convocatoria>=2)
 	if($_POST['rol']=='centro')
 	{
 		$nsolicitudes=$tcentro->getNumSolicitudes($id_centro);
-		$dsorteo=$tcentro->getVacantes('centro');
-		$vacantes_ebo=$dsorteo[0]->vacantes;
-		$vacantes_tva=$dsorteo[1]->vacantes;
+		$dsorteo=$tcentro->getVacantesGuarderias('centro');
+      $vuno=$dsorteo[0]->vuno;
+      $vuno_acneae=$dsorteo[0]->vuno_acneae;
+      $vdos=$dsorteo[0]->vdos;
+      $vdos_acneae=$dsorteo[0]->vdos_acneae;
+      $vtres=$dsorteo[0]->vtres;
+      $vtres_acneae=$dsorteo[0]->vtres_acneae;
+      $log_listados_provisionales->warning(print_r($dsorteo,true));
+      if($tsolicitud->setSolicitudesSorteoGuarderias($id_centro,$nsolicitudescentro,$vuno,$vuno_acneae,$vdos,$vdos_acneae,$vtres,$vtres_acneae)==0) 
+      {
+         print("ERROR ESTABLECIENDO SOL ADMITIDAS<br>");
+         exit();
+      }
+      $res=$utils->copiaTablaProvisionales($id_centro);
 	
-		if($tsolicitud->setSolicitudesSorteo($id_centro,$nsolicitudes,$vacantes_ebo,$vacantes_tva)==0) 
-            $log_listados_provisionales->warning("NO VACANTES $id_centro");
-		$ct=$tsolicitud->copiaTablaCentro($id_centro,'alumnos_provisional_final');	
 	}
 	elseif($_POST['rol']=='admin' or $_POST['rol']=='sp')
 	{
@@ -111,7 +119,7 @@ $camposdatos="campos_bbdd_".$subtipo_listado;
 ######################################################################################
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CABECERA: ".$cabecera);
 $log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, CENTRO:ESTADO ".$id_centro.":".$estado_centro);
-$log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, ESTADO CONVOCATORIA:  ".$estado_convocatoria);
+$log_listados_provisionales->warning("OBTENIENDO SOLICITUDES PROVISIONALES, ESTADO CONVOCATORIA/SUBTIPO:  ".$estado_convocatoria.'/'.$subtipo_listado);
 ######################################################################################
 
 //mostramos las solitudes completas sin incluir borrador, ponemos fase a 4 para indicar despues del sorteo

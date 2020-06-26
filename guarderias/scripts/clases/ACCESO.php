@@ -25,10 +25,11 @@ class ACCESO
 		$clave=rand(1000,99999);
 		$sql="INSERT INTO usuarios values(0,'$nusuario','alumno',md5($clave),$clave)";
       print($sql);
-      if (mysqli_query($this->c, $sql)) {
-         $id_usuario = mysqli_insert_id($this->c);
-         echo "New record created successfully. Last inserted ID is: " . $id_usuario;
-         } 
+      if (mysqli_query($this->c, $sql)) 
+      {
+         echo "New record created successfully. Last inserted ID is: ";
+       $id_usuario = mysqli_insert_id($this->c);
+       } 
        else 
        {
          echo "Error: " . $sql . "<br>" . mysqli_error($this->c);
@@ -38,7 +39,7 @@ class ACCESO
          echo "Commit de insercion usuario fallo";
          exit();
        }
-      else return $id_usuario; 
+       else return $id_usuario; 
    }
   public function generar_solicitudes($ns)
 	{
@@ -294,38 +295,40 @@ class ACCESO
 		$m_apellido1=$matricula[1];	
 		$m_apellido2=$matricula[2];	
 		$m_nombre=$matricula[3];	
-		$m_fnac=$matricula[4];
+		$m_fnac=$this->make_fecha2($matricula[4]);
 		$m_acneae=$matricula[5];
 		$m_tipoestudios=$matricula[6];
 		$m_hore=$matricula[7];
 		$m_hors=$matricula[8];
 		$m_email=$matricula[9];
-	   if($m_email=='') {print("email vacio");return 0;}
-      else 
-      {   
-         $id_usuario=$this->insertar_usuario($m_email);  
-         if($id_usuario!=0)  
-		   {  
-            $sql="insert into alumnos(id_usuario,apellido1,apellido2,nombre,fnac,id_centro_destino,sol_plaza,tipoestudios,hore,hors,email,tipoalumno) values($id_usuario,'$m_apellido1','$m_apellido2','$m_nombre','$m_fnac','$m_codcentro','$m_acneae','$m_tipoestudios','$m_hore','$m_hors','$m_email','anterior')"; 
-         print($sql);
-            if(!$result = mysqli_query($this->c, $sql)) 
-            {
-               print($sql);
-               die(PHP_EOL."Error insertando: ".mysqli_error($this->c));
-            }
-            else	
-            {	
-            if (!$this->c->commit()) 
+		$m_telefono1=$matricula[11];
+	   //if($m_email=='') {print("email vacio");return 0;}
+      //else 
+        // {   
+            if($m_telefono1=='') $m_telefono1='202020';
+            $id_usuario=$this->insertar_usuario($m_telefono1);  
+            if($id_usuario!=0)  
+            {  
+               $sql="insert into alumnos(id_usuario,apellido1,apellido2,nombre,fnac,id_centro_destino,sol_plaza,tipoestudios,hore,hors,email,tipoalumno,est_desp_sorteo) values($id_usuario,'$m_apellido1','$m_apellido2','$m_nombre','$m_fnac','$m_codcentro','$m_acneae','$m_tipoestudios','$m_hore','$m_hors','$m_email','anterior','admitido')"; 
+            print($sql);
+               if(!$result = mysqli_query($this->c, $sql)) 
                {
-            echo "Commit de insercion guarderia fallo";
-            exit();
+                  print($sql);
+                  die(PHP_EOL."Error insertando: ".mysqli_error($this->c));
                }
-		      $total_filas_insertadas++;
-		      }	
-		      }
-            else print("error ins usuario");
-      }
-	}
+               else	
+               {	
+               if (!$this->c->commit()) 
+                  {
+               echo "Commit de insercion guarderia fallo";
+               exit();
+                  }
+               $total_filas_insertadas++;
+               }	
+               }
+               else print("error ins usuario");
+            //}
+	   }
  	fclose($gestor);
 	return 1;
    }
@@ -408,6 +411,14 @@ class ACCESO
 	else $t='out';
 	return $t;
 	}
+  public function make_fecha2($s) 
+	{
+	$afecha=explode("/",$s);
+	$sfecha=$afecha[2]."-".$afecha[1]."-".$afecha[0];
+	$timestamp = strtotime($sfecha);
+	$fecha=date("Y-m-d", $timestamp);
+	return $fecha ;
+	} 
   public function make_fecha($s) 
 	{
 	$afecha=explode("/",$s);

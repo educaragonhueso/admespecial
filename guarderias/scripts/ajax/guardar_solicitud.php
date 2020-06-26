@@ -13,7 +13,7 @@ require_once DIR_APP.'parametros.php';
 $log_nueva=new logWriter('log_nueva_solicitud',DIR_LOGS);
 $log_actualizar=new logWriter('log_actualizar_solicitud',DIR_LOGS);
 ######################################################################################
-$log_nueva->warning("SOLICITUD RECIBIDA, DATOS POST:");
+$log_nueva->warning("SOLICITUD RECIBIDA, DATOS POST BRUTOS:");
 $log_nueva->warning(print_r($_POST,true));
 ######################################################################################
 

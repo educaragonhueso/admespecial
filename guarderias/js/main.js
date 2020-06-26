@@ -950,6 +950,140 @@ $('body').on('click', '.send', function(e){
 	}
 });
 
+//JS ASOCIADO FORMULARIO ANEXO4
+
+$('body').on('change', 'input[type=checkbox][name*=solcalcbon]', function(e){
+var vid=$(this).attr("id");
+var vid=vid.replace('solcalcbon','');
+var val=$(this).attr("value");
+
+if(val=='0')
+	$(this).attr('value','1');
+else
+	{
+   //ponemos el valor 0 al campo y obligamos a validar de nuevo
+	$(this).attr('value','0');
+	}
+});  
+
+$('body').on('click', 'button[name*=boton_validar_infotributaria]', function(e){
+   var vid=$(this).attr("name");
+   vid=vid.replace('boton_validar_infotributaria','');
+   var texto=$(this).text();
+
+   if(texto=='Validar información tributaria')
+   {
+         $('#validar_infotributaria'+vid).val('1');
+         $(this).text('Invalidar información tributaria');
+   }
+   else
+      {
+      $(this).text('Validar información tributaria');
+      $('#validar_infotributaria'+vid).val('0');
+      }
+});
+//ACTUALIZAR - CREAR NUEVA ANEXO4
+$('body').on('click', '.senda4', function(e){
+  var vestado_convocatoria=$('#estado_convocatoria').val();
+  var tipo=$(this).text();
+  var vrol=$('#rol').attr("value");
+  var vid_centro='';
+  //if(vrol=='alumno') 	
+//	vid_centro=$("input[name='id_centro_destino']").val();	
+  //else 
+  vid_centro=$('#id_centro').text();
+  if(typeof tipo === 'undefined' || tipo === null) tipo="ACTUALIZAR SOLICITUD";
+
+  var vid=$(this).attr("data-idal");
+  var vptsbaremo=$("#id_puntos_baremo"+vid).text();
+  var fsolicitud=$('#fsolicitud'+vid).serialize();
+  //Validacion formulario, de momento se omite
+  var valid=validarAnexo4(fsolicitud,vid);
+  if(valid!=1){ alert(valid);return;}
+	
+   $.ajax({
+	  method: "POST",
+	  data: { fsol:fsolicitud,idsol:vid,modo:tipo,id_centro_destino:vid_centro,ptsbaremo:vptsbaremo,rol:vrol,estado_convocatoria:vestado_convocatoria},
+	  url:'../guarderias/scripts/ajax/guardar_solicitudanexo4.php',
+	 	success: function(data) {
+		if(data.indexOf('1062')!=-1) 
+		{
+			error='El dni del tutor ya existe';
+			$('input[name=dni_tutor1]').focus();	
+			$.alert({
+				title: 'ERROR CREANDO SOLICITUD',
+				content: error
+				});
+		}
+		else if(data.indexOf('no_nombre_usuario')!=-1) 
+		{
+			error='debes introducir un nombre de usuario';
+			$('input[name=dni_tutor1]').focus();	
+			$.alert({
+				title: 'ERROR CREANDO SOLICITUD',
+				content: error
+				});
+		}
+		else{
+			if(tipo=='GRABAR SOLICITUD')
+			{
+			if(vrol.indexOf('alumno')!=-1)
+			{	
+				if(data.indexOf('ERROR')!=-1) 
+				$.alert({
+					title: data+'</b>',
+					content: ''
+					});
+				else
+				{
+				$.alert({
+					title: 'SOLICITUD GUARDADA CORRECTAMENTE.<br> Para modificarla accede con el NIF de tu tutor y al clave:<br><br><b> '+data+'</b><br><i>No olvides imprimir y entragar la solicitud en el centro elegido, previa cita previa por teléfono</i>',
+					content: 'OK'
+					});
+					//añadimos boton para imprimir
+					var bimp= $('<a href="imprimirsolicitud.php?id='+vid+'"><input class="btn btn-primary imprimirsolicitud" style="background-color:brown;padding-left:20px" type="button" value="Vista Previa Impresion Documento"/></a>');
+					$('.send').text("ACTUALIZAR SOLICITUD");
+					$('.send').after(bimp);
+				}
+			return;
+			}
+			if(data.indexOf('ERROR')!=-1){ alert(data);return ;}
+  			else {
+						$('#sol_table').find('tbody').prepend(data);
+							$.alert({
+								title: 'SOLICITUD GUARDADA CORRECTAMENTE',
+								content: 'DE ACUERDO'
+								});
+					}
+		 			$('#fnuevasolicitud').remove();
+			}
+			else if(tipo=='ACTUALIZAR SOLICITUD')
+			{
+				if(vrol.indexOf('alumno')!=-1)
+				{
+				$.alert({
+					title: 'SOLICITUD ACTUALIZADA',
+					content: 'OK'
+					});
+				var bimp= $('<a href="imprimirsolicitud.php?id='+vid+'"><input class="btn btn-primary imprimirsolicitud" style="background-color:brown;padding-left:20px" type="button" value="Vista Previa Impresion Documento"/></a>');
+				$('.send').after(bimp);
+				return;
+				}
+				$.alert({
+					title: 'SOLICITUD ACTUALIZADA',
+					content: 'OK'
+					});
+		 		//$('#fsolicitud'+vid).hide();
+		 		//$('.show_anexo4').click();
+			}
+			}
+		},
+			error: function (request, status, error) {
+							alert(error);
+					}
+	});
+});
+
 function campo_dnisol(str) {
 	//determina si 
   var res = str.match(/&dni_alumno=.*&fnac/g);
@@ -1086,6 +1220,89 @@ if(renta=='1')
 return valido;
 };
 
+function validarAnexo4(fd,id)
+{
+var valido='1';
+var res = fd.split("&");
+
+var cumplen=0
+var oponen=0
+
+var botontrib=0;
+var ntrib1=0;
+var renta=0;
+console.log(res);
+for (let i = 0; i < res.length; i++)
+{
+	d=res[i].split("=");
+if(d[0]=='solcalcbon')
+	{
+	if(d[1]==0) { return "Para actualizar debes marcar el check de solicita cálculo de bonificación";}
+	}
+//comp datos identificadores
+if(d[0].indexOf('tributantes_dni1')==0)
+	{
+	var nomt1=$("input[name='tributantes_nombre1']").val();
+	if(nomt1.length!=0) 
+		{
+		if(d[1].length!=9) 
+			return 'El DNI DEL PRIMER TRIBUTANTE DEBE TENER 9 CARACTERES';
+		//else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni1';
+		}
+   else return 'DEBES INCLUIR UN NOMBRE PARA EL PRIMER TRIBUTANTE';
+	}
+if(d[0].indexOf('tributantes_dni2')==0)
+	{
+	var nomt2=$("input[name='tributantes_nombre2']").val();
+	if(nomt2.length!=0) 
+		{
+		if(d[1].length!=9) 
+			return 'El DNI DEL SEGUNDO TRIBUTANTE DEBE TENER 9 CARACTERES';
+		//else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni12';
+		}
+	}
+if(d[0].indexOf('tributantes_dni3')==0)
+	{
+	var nomt3=$("input[name='tributantes_nombre3']").val();
+	if(nomt3.length!=0) 
+		{
+		if(d[1].length!=9) 
+			return 'El DNI DEL TERCER TRIBUTANTE DEBE TENER 9 CARACTERES';
+		//else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni3';
+		}
+	}
+if(d[0].indexOf('tributantes_dni4')==0)
+	{
+	var nomt4=$("input[name='tributantes_nombre4']").val();
+	if(nomt4.length!=0) 
+		{
+		if(d[1].length!=9) 
+			return 'El DNI DEL CUARTO TRIBUTANTE DEBE TENER 9 CARACTERES';
+		//else if(comprobar_nif(d[1])==0) return 'DNI TRIBUTANTE VÁLIDO-tributantes_dni4';
+		}
+	}
+if(d[0]=='oponenautorizar')
+	{
+	if(d[1]=='1') { oponen=1;}
+	}
+if(d[0]=='cumplen')
+	{
+	if(d[1]=='1') { cumplen=1;}
+	}
+if(d[0]=='nmunidad')
+	{
+	if(d[1]==0) { return "DEBES INCLUIR AL MENOS UN MIEMBRO EN LA UNIDAD FAMILIAR";}
+	}
+if(d[0]=='tributantes_nombre1')
+	{
+	if(d[1]=='') {return "DEBES INCLUIR AL MENOS UN TRIBUTANTE";}
+	}
+}
+if(cumplen==1 & oponen==1) return "NO PUEDES MARCAR LAS DOS OPCIONES";
+if(cumplen==0 & oponen==0) return "DEBES MARCAR AL MENOS UNA OPCION";
+return valido;
+};
+
 //AÑADIR FORMULARIO DE MODIFICACION DE SOLICITUD
 function disableForm(formID){
   $(formID).find(':input').attr('disabled', 'disabled');
@@ -1143,8 +1360,10 @@ $('body').on('click', '.canexo4', function(e){
   var vestado_convocatoria=$('#estado_convocatoria').val();
   var vpin=$('#pin').attr("value");
   var vrol=$('#rol').attr("value");
+  if(vrol.indexOf('alumno')!=-1) var vid=$("#idalumno").attr("value");
 
-  if(vrol=='alumno') return; 
+   console.log("vidalumno");
+   console.log(vid);
   var vidcentro=$('#id_centro').text();
   if($('#fsolicitud'+vid).length) 
   	{
@@ -1159,6 +1378,7 @@ $.ajax({
 	{
 		if(vrol.indexOf("alumno")!=-1)
 		{
+         console.log("datosal");
 			if(data.indexOf("DUP")!=-1)
 				$.alert({
 					title: 'LA SOLICITUD ESTÁ MARCADA COMO APTA, NO PUEDE MODIFICARSE',
@@ -1169,6 +1389,7 @@ $.ajax({
 				$("#tablasolicitud").toggle();
 			else	$("#l_matricula").after(data);
 		}
+         
       	$("#"+idappend).after(data);
 	if(vestado_convocatoria=='3') {disableForm($('#fsolicitud'+vid)) ;}
       	},
@@ -1255,12 +1476,13 @@ $.ajax({
 $(".show_anexo4").click(function () {  
   var vid_centro=$('#id_centro').text();
   var vrol=$('#rol').attr("value");
+  var vidalumno=$('#alumno').attr("value");
   var vprovincia=$('#provincia').attr("value");
   var vestado_convocatoria=$('#estado_convocatoria').attr("value");
 $.ajax({
   method: "POST",
   url: "../guarderias/scripts/ajax/listados_solicitudes.php",
-  data: {id_centro:vid_centro,rol:vrol,estado_convocatoria:vestado_convocatoria,provincia:vprovincia,tipolistado:'anexo4'},
+  data: {id_centro:vid_centro,rol:vrol,estado_convocatoria:vestado_convocatoria,provincia:vprovincia,tipoform:'anexo4'},
       success: function(data) {
 				if(vrol=='admin' || vrol=='sp')
 				{
@@ -1443,11 +1665,12 @@ $('body').on('click', '.cabcensol', function(e){
   var vid_centro=$(this).attr('id');
   vid_centro=vid_centro.replace('cabcensol','');
   var vrol=$('#rol').attr("value");
+  var vtipoform=$(this).attr("data-tipoform");
   var vprovincia=$('#provincia').attr("value");
 $.ajax({
   method: "POST",
   url: "../guarderias/scripts/ajax/mostrar_solicitudes.php",
-  data: {id_centro:vid_centro,rol:vrol,provincia:vprovincia},
+  data: {id_centro:vid_centro,rol:vrol,provincia:vprovincia,tipoform:vtipoform},
       success: function(data) 
 			{
 				if(vrol.indexOf('admin')!=-1 || vrol.indexOf('sp')!=-1)

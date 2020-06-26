@@ -26,11 +26,14 @@ $provincia=$_POST['provincia'];
 $subtipo_csv=$subtipo;//dentro de cada tipo, el subtipo de listado
 $cabecera="campos_cabecera_csv_".$subtipo_csv;
 $camposdatos="campos_bbdd_csv_".$subtipo_csv;
+$modo='csv';
 
+/*
 if($subtipo=='fase2' or $subtipo=='fase3') $tipo=3;
 else $tipo=0;
+
 $fase_sorteo=0;
-$modo='csv';
+*/
 
 $list=new ListadosController('alumnos');
 $centros_cont=new CentrosController(0);
@@ -81,6 +84,14 @@ if($subtipo_original=='csv_tri')
 {
    $tributantes=$list->getSolicitudes($id_centro,0,0,'csv','tri',$provincia,3); 
 	$log_gencsvs->warning("DATOS CSSVS TRIBUTANTES GUARDERIAS: ");
+	$log_gencsvs->warning(print_r($tributantes,true));
+   $solicitudes=$tributantes;
+   $fcsv=$list->genCsv($tributantes,$id_centro,$subtipo_original,$$cabecera,$$camposdatos,DIR_CSVS);
+}
+else if($subtipo_original=='csv_a4')
+{
+   $tributantes=$list->getSolicitudes($id_centro,0,0,'csv','a4',$provincia,3); 
+	$log_gencsvs->warning("DATOS CSSVS TRIBUTANTES GUARDERIAS ANEXO4: ");
 	$log_gencsvs->warning(print_r($tributantes,true));
    $solicitudes=$tributantes;
    $fcsv=$list->genCsv($tributantes,$id_centro,$subtipo_original,$$cabecera,$$camposdatos,DIR_CSVS);

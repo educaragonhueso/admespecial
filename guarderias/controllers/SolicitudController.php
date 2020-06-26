@@ -126,6 +126,7 @@ class SolicitudController extends ControladorBase{
 			$this->formulario=str_replace('GRABAR','ACTUALIZAR',$this->formulario);
 			$this->formulario=str_replace('form lang="es" id="fsolicitud"','form id="fsolicitud'.$id.'"',$this->formulario);
 			$this->formulario=str_replace('send"','send" data-idal="'.$id.'"',$this->formulario);
+			$this->formulario=str_replace('senda4"','senda4" data-idal="'.$id.'"',$this->formulario);
 			foreach($dsolicitud as $skey=>$sval)
 				{
 				//calculo escolariazacion
@@ -246,7 +247,6 @@ class SolicitudController extends ControladorBase{
 				//controles de validacion de baremo tipo check
 				if($skey=='baremo_validar_tutores_centro' or $skey=='baremo_validar_renta_inferior' or $skey=='baremo_validar_sitlaboral' or $skey=='baremo_validar_hnos_centro')
 					{
-						$this->log_editar->warning("DATOS CAMPO VALIDACION CHECK: ");
 						$soriginal='<input type="hidden" id="'.$skey.'" value="0" name="'.$skey.'">';
 						$sdestino='<input type="hidden" id="'.$skey.$id.'" value="'.$sval.'" name="'.$skey.'">';
 						$this->formulario=str_replace($soriginal,$sdestino,$this->formulario);
@@ -260,13 +260,25 @@ class SolicitudController extends ControladorBase{
 						$sdestino='<button name="boton_'.$skey.'" type="button" class="btn btn-outline-dark">Invalidar';
 						$this->formulario=str_replace($soriginal,$sdestino,$this->formulario);
 						}
-				//botones de validacion de baremo
-				$origen='<button name="boton_'.$skey.'" type="button" class="btn btn-outline-dark">';
-				$destino='<button name="boton_'.$skey.$id.'" type="button" class="btn btn-outline-dark">';
-				$this->formulario=str_replace($origen,$destino,$this->formulario);
+				//botones de validacion de baremo y anexo4
+                  $origen='<button name="boton_'.$skey.'" type="button" class="btn btn-outline-dark">';
+                  $destino='<button name="boton_'.$skey.$id.'" type="button" class="btn btn-outline-dark">';
+                  $this->formulario=str_replace($origen,$destino,$this->formulario);
 					continue;
 					}
-				if($skey=='baremo_tutores_centro' or $skey=='baremo_sitlaboral' or $skey=='baremo_renta_inferior' or $skey=='oponenautorizar' or $skey=='cumplen' or $skey=='sol_vacantes' or $skey=='sol_plaza')
+               if($skey=='validar_infotributaria')
+               {
+                  $origen='<button name="boton_'.$skey.'" type="button" class="btn btn-outline-dark">';
+                  $destino='<button name="boton_'.$skey.$id.'" type="button" class="btn btn-outline-dark">';
+                  $this->formulario=str_replace($origen,$destino,$this->formulario);
+					   if($sval==1)
+						{
+						   $soriginal='<button name="boton_'.$skey.$id.'" type="button" class="btn btn-outline-dark">Validar información tributaria</button>';
+						   $sdestino='<button name="boton_'.$skey.$id.'" type="button" class="btn btn-outline-dark">Invalidar información tributaria</button>';
+						   $this->formulario=str_replace($soriginal,$sdestino,$this->formulario);
+						}
+               }
+				if($skey=='baremo_tutores_centro' or $skey=='baremo_sitlaboral' or $skey=='baremo_renta_inferior' or $skey=='oponenautorizar' or $skey=='cumplen' or $skey=='sol_vacantes' or $skey=='sol_plaza' or $skey=='solcalcbon')
 					{
 					if($sval==0) $check="";
 					else
@@ -284,6 +296,13 @@ class SolicitudController extends ControladorBase{
 					}
             //cambiamos valor de provincia en la lista de opciones
 				if($skey=='prov_centro_destino')
+            {
+               $soriginal="<option>".ucfirst($sval);
+               $sdestino="<option selected>".ucfirst($sval);
+					$this->formulario=str_replace($soriginal,$sdestino,$this->formulario);
+            } 
+            //cambiamos valor de numero de tributantes unidad familiar
+				if($skey=='nmunidad')
             {
                $soriginal="<option>".ucfirst($sval);
                $sdestino="<option selected>".ucfirst($sval);

@@ -48,7 +48,7 @@ if($_SESSION['version']=='PRE') print_r($_SESSION);
             }
       ?>
 		<?php 
-		if($_SESSION['rol']=='alumno' && $_SESSION['dia_inicio_inscripcion']==1)
+		if($_SESSION['rol']=='alumno' && $_SESSION['estado_convocatoria']==1)
 		{
 			if(isset($_SESSION['clave']))
 	  			echo '<input type="hidden" id="pin" name="pin" value="'.$_SESSION['clave'].'" ></input> ';
@@ -70,7 +70,7 @@ if($_SESSION['version']=='PRE') print_r($_SESSION);
 			   //echo '<b>La solicitud no se puede modificar en la web, deberás dirigrte al centro para ello</b>';
          	}
 		}
-		elseif($_SESSION['dia_inicio_inscripcion']==0 and $_SESSION['rol']=='alumno')
+		elseif($_SESSION['estado_convocatoria']==0 and $_SESSION['rol']=='alumno')
 		{
 				echo '<row><div class="col-12"><p><h1></h1></p></div></row>';
 				echo '<row><p><h2></h2></p></row>';	
@@ -85,6 +85,14 @@ if($_SESSION['version']=='PRE') print_r($_SESSION);
 				<a href="'.URL_BASE.'"><button class="btn btn-outline-info" id="inicio" type="button">VOLVER</button></a>    </div>
 
 			    </main><!-- /.container -->';
+		}
+		elseif($_SESSION['rol']=='alumno' && $_SESSION['estado_convocatoria']>1)
+		{
+	         echo '<input type="hidden" id="idalumno" name="idalumno" value="'.$_SESSION['id_alumno'].'"></input>';
+				if($_SESSION['admitido']=='admitida' or $_SESSION['tipoalumno']=='anterior') echo '<button class="btn btn-outline-info canexo4" id="veranexo4" type="button">Permitir cálculo cuota (Anexo IV)</button>';
+            else echo "<h4>EL PROCESO DE MATRÍCULA HA FINALIZADO</h4>";
+			//echo '<a href="'.URL_BASE.'"><button class="btn btn-outline-info" id="inicio" type="button">INICIO</button></a>';
+			echo '<br>';
 		}
 		?>
 		</div>

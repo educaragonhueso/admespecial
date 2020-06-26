@@ -16,6 +16,10 @@ $_SESSION['version']=VERSION;
 $_SESSION['sorteo_fase2'] =0;      
 $_SESSION['id_centro'] =-10;      
 $_SESSION['matricula'] =0;//par amostrar o no la matrícula, en ppio no hay      
+$_SESSION['id_alumno'] =0;      
+$_SESSION['admitida'] ='noadmitido';      
+$_SESSION['tipoalumno'] ='nuevo';      
+$_SESSION['solcalcbon'] =0;      
 //variable para controlar el acceso para mantenimiento
 $_SESSION['anonimo']=0; 
 //finaiza plazo inscripcion alumno
@@ -53,7 +57,7 @@ elseif($_SESSION['fecha_actual']>DIA_BAREMACION and $_SESSION['fecha_actual']<DI
  		$_SESSION['estado_convocatoria'] =22;//0. inicio inscripciones, 1. dia de sorteo, 2. baremacion, 3. Provisionales, 4. Definitivos      
 elseif($_SESSION['fecha_actual']>=DIA_PROVISIONALES and $_SESSION['fecha_actual']<DIA_DEFINITIVOS) //Periodo reclamacin provisionales
  		$_SESSION['estado_convocatoria'] =30;//0. inicio inscripciones, 1. dia de sorteo, 2. baremacion, 3. Provisionales, 4. Definitivos      
-elseif($_SESSION['fecha_actual']==DIA_DEFINITIVOS) //jueves 16 abril
+elseif($_SESSION['fecha_actual']>=DIA_DEFINITIVOS) //jueves 16 abril
  		$_SESSION['estado_convocatoria'] =40;//0. inicio inscripciones, 1. dia de sorteo, 2. baremacion, 3. Provisionales, 4. Definitivos      
 elseif($_SESSION['fecha_actual']>=DIA_SORTEO_FASE2) //jueves 16 abril
  		$_SESSION['estado_convocatoria'] =50;//0. inicio inscripciones, 1. dia de sorteo, 2. baremacion, 3. Provisionales, 4. Definitivos      
@@ -97,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
    if(empty($nombre_usuario_err) && empty($clave_err))
    {
       $sql = "SELECT nombre_usuario, clave,rol,nombre_centro,id_centro,primera_conexion,num_sorteo,fase_sorteo FROM usuarios u left join centros c  ON u.id_usuario=c.id_usuario WHERE  u.nombre_usuario = ? and u.clave= ?";
-      $sql_alumno = "SELECT id_centro_destino,a.id_alumno as id_alumno FROM usuarios u  join alumnos a on  u.id_usuario=a.id_usuario where u.nombre_usuario= ? and u.clave= ?";
+      $sql_alumno = "SELECT a.id_centro_destino,a.id_alumno as id_alumno,a.solcalcbon,a.est_desp_sorteo as admitido,a.tipoalumno as tipoalumno FROM usuarios u  join alumnos a on  u.id_usuario=a.id_usuario where u.nombre_usuario= ? and u.clave= ?";
       if($stmt = $conexion->prepare($sql))
       {
       // Bind variables to the prepared statement as parameters
@@ -142,11 +146,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                                     if($stmt_alumno->num_rows == 1)
                                     {                    
                                        // Bind result variables
-                                       $stmt_alumno->bind_result($id_centro_destino,$id_alumno);
+                                       $stmt_alumno->bind_result($id_centro_destino,$id_alumno,$solcalcbon,$admitido,$tipoalumno);
                                        if($stmt_alumno->fetch())
                                        {
                                           $_SESSION['id_centro'] =$id_centro_destino;      
                                           $_SESSION['id_alumno'] =$id_alumno;      
+                                          $_SESSION['solcalcbon'] =$solcalcbon;      
+                                          $_SESSION['admitida'] =$admitido;      
+                                          $_SESSION['tipoalumno'] =$tipoalumno;      
                                        }
                                     }
                               }
