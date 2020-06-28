@@ -1402,7 +1402,7 @@ We can now print a cell with Cell(). A cell is a rectangular area, possibly fram
          if($modo=='anexo4') $where=" and solcalcbon=1";
 			$centro='id_centro_destino';
 				//si no son para actualizar el sorteo o son las normales listado normal completo.Antes de asignar el numero de sorteo
-				if($fase_sorteo==0 or $subtipo_listado=='normal')
+				if($fase_sorteo==0 or $subtipo_listado=='normal' or $subtipo_listado=='sor_ale')
 				{
 					if($c>1)//para acceso de centros
 						$sql="SELECT a.tipoalumno, a.num_hadmision,a.id_alumno,a.nombre,a.apellido1,a.fase_solicitud,a.estado_solicitud,a.transporte,a.nordensorteo,a.tipoestudios,nasignado, b.puntos_validados,b.sitlaboral FROM $tabla_alumnos a left join baremo b on b.id_alumno=a.id_alumno where $centro=".$c." $where order by a.tipoestudios, a.tipoalumno, a.apellido1,a.nombre,a.transporte desc,b.puntos_validados desc,b.hermanos_centro desc,b.proximidad_domicilio,b.renta_inferior,b.discapacidad,b.tipo_familia,a.nordensorteo asc,a.nasignado desc";

@@ -84,19 +84,19 @@
                                 <a class="show_provisionales nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Listas baremadas</a>
 				 <div class="dropdown-menu">
             
-				<?php if($_SESSION['rol']!='alumno'){?>
 				 <a class="lgenerales dropdown-item" href="#" id="sor_ale" data-subtipo="sor_ale" data-tipo="sorteo">Numero aleatorio </a>
+				<?php if($_SESSION['rol']!='alumno'){?>
 				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_bar">Solicitudes baremadas provisional</a>
 				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_bardef">Solicitudes baremadas definitiva</a>
 				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_det">Detalle baremo</a>
 				<?php }?>
 				<?php if($_SESSION['rol']=='alumno'){?>
-				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_bar">Solicitudes baremadas provisional</a>
+				 <a class="lgenerales dropdown-item" href="#" data-tipo="sorteo" data-subtipo="sor_bardef">Solicitudes baremadas definitiva</a>
 				<?php }?>
 				 </div>
 				<?php }?>
                             </li>
-		<?php if(($_SESSION['estado_convocatoria']<=30 and $_SESSION['estado_convocatoria']>22)  or $_SESSION['fase_sorteo']==2 or $_SESSION['rol']=='sp' or $_SESSION['rol']=='centro' or $_SESSION['rol']=='admin') {?>
+		<?php if($_SESSION['estado_convocatoria']>22 and ($_SESSION['rol']=='sp' or $_SESSION['rol']=='centro' or $_SESSION['rol']=='admin')) {?>
              <li class="nav-item active msuperior dropdown" id="mtributantes">
                 <a class="show_tributantes nav-link" id="navbardrop" data-toggle="dropdow" href="#">Datos Tributantes</a>
             </li>
