@@ -104,7 +104,7 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 			 $log_sorteo->warning("ERROR ACT FASE: $nombrecentro");
 			 return 0;
 			}
-			$log_sorteo->warning("OBTENIENDO VACANTES CENTRO: $nombrecentro");
+			$log_sorteo->warning("OBTENIENDO VACANTESS CENTRO: $nombrecentro");
 		
       	$dsorteo=$centrotmp->getVacantesGuarderias('centro');
 		
@@ -123,7 +123,7 @@ if($_POST['rol']=='admin' or $_POST['rol']=='sp')
          }
 		}	
       //copiar tabla de solicitudes definitivas a la tabla de fase2
-      $res=$utils->copiaTablaProvisionales();
+      $res=$utils->copiaTablaProvisionales(1);
 		$log_sorteo->warning("SORTEO REALIZADO CON EXITO");
 	}
 }

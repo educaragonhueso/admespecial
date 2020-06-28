@@ -19,7 +19,7 @@ $conexion=$list->getConexion();
 $tcentro=new Centro($conexion,$_POST['id_centro'],'ajax');
 $tcentro->setNombre();
 $matriculas=$list->getAlumnosCentro($_POST['id_centro']);
-	$tablaresumen=$tcentro->getResumen('centro','matricula');
-	print($list->showMatriculados($matriculas,$_POST['$rol'],$_POST['id_centro']));
+$tablaresumen=$tcentro->getResumen('centro','matricula');
+print($list->showMatriculados($matriculas,$_POST['$rol'],$_POST['id_centro']));
 }
 ?>

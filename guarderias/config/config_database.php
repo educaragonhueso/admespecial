@@ -4,7 +4,8 @@ return array(
     "host"      =>"localhost",
     "user"      =>"preadmespecial",
     "pass"      =>"preadmespecial",
-    "database"  =>"premarquesa_produccion",
+    "database"  =>"guarderias_pro",
+    //"database"  =>"premarquesa_produccion",
     //"database"  =>"premarquesa",
     "charset"   =>"utf8"
 ); 

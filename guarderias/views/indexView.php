@@ -89,7 +89,7 @@ if($_SESSION['version']=='PRE') print_r($_SESSION);
 		elseif($_SESSION['rol']=='alumno' && $_SESSION['estado_convocatoria']>1)
 		{
 	         echo '<input type="hidden" id="idalumno" name="idalumno" value="'.$_SESSION['id_alumno'].'"></input>';
-				if($_SESSION['admitido']=='admitida' or $_SESSION['tipoalumno']=='anterior') echo '<button class="btn btn-outline-info canexo4" id="veranexo4" type="button">Permitir cálculo cuota (Anexo IV)</button>';
+				if($_SESSION['admitida']=='admitida' or $_SESSION['tipoalumno']=='anterior') echo '<button class="btn btn-outline-info canexo4" id="veranexo4" type="button">Permitir cálculo cuota (Anexo IV)</button>';
             else echo "<h4>EL PROCESO DE MATRÍCULA HA FINALIZADO</h4>";
 			//echo '<a href="'.URL_BASE.'"><button class="btn btn-outline-info" id="inicio" type="button">INICIO</button></a>';
 			echo '<br>';

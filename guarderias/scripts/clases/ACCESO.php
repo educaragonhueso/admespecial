@@ -12,7 +12,7 @@ class ACCESO
 	{
 		$this->bd=$bd;
 		$this->c =$this->dbconnect($bd['host'],$bd['user'],$bd['pass']);
-      $this->c->autocommit(TRUE);
+      $this->c->autocommit(FALSE);
 		mysqli_select_db($this->c,$bd['database']);
 		$this->c->set_charset("utf8");
 		$q="SET NAMES 'UTF8'";
@@ -147,13 +147,18 @@ class ACCESO
          $c_vtres=$centros[5];
          $c_vtres_acneae=$centros[6];
          
-         $sql="UPDATE  premarquesa_produccion.centros SET vuno=$c_vuno,vuno_original=$c_vuno,vuno_acneae=$c_vuno_acneae,vuno_acneae_original=$c_vuno_acneae,vdos=$c_vdos,vdos_original=$c_vdos,vdos_acneae=$c_vdos_acneae,vdos_acneae_original=$c_vdos_acneae ,vtres=$c_vtres,vtres_original=$c_vtres,vtres_acneae=$c_vtres_acneae,vtres_acneae_original=$c_vtres_acneae WHERE id_centro='$c_ce'"; 
+         $sql="UPDATE  centros SET vuno=$c_vuno,vuno_original=$c_vuno,vuno_acneae=$c_vuno_acneae,vuno_acneae_original=$c_vuno_acneae,vdos=$c_vdos,vdos_original=$c_vdos,vdos_acneae=$c_vdos_acneae,vdos_acneae_original=$c_vdos_acneae ,vtres=$c_vtres,vtres_original=$c_vtres,vtres_acneae=$c_vtres_acneae,vtres_acneae_original=$c_vtres_acneae WHERE id_centro='$c_ce'"; 
 
             print($sql.PHP_EOL);
             if(!$result = mysqli_query($this->c, $sql)) 
             {
                die(PHP_EOL."Error actualizando centros vacantes: ".mysqli_error($this->c));
             }
+       if(!$this->c->commit()) 
+       {
+         echo "Commit de insercion usuario fallo";
+         exit();
+       }
          print($result);
         }
 	}

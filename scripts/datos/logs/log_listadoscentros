@@ -33269,3 +33269,63 @@
     [type] => 0
 )
 
+[26-Jun-2020 13:59:49] : [WARNING] - CONSULTA CENTROS
+[26-Jun-2020 13:59:49] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[26-Jun-2020 13:59:49] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[26-Jun-2020 13:59:49] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[26-Jun-2020 19:29:55] : [WARNING] - CONSULTA CENTROS
+[26-Jun-2020 19:29:55] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[26-Jun-2020 19:29:55] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[26-Jun-2020 19:29:55] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[26-Jun-2020 21:04:54] : [WARNING] - CONSULTA CENTROS
+[26-Jun-2020 21:04:54] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[26-Jun-2020 21:04:54] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[26-Jun-2020 21:04:54] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[27-Jun-2020 22:43:05] : [WARNING] - CONSULTA CENTROS
+[27-Jun-2020 22:43:05] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[27-Jun-2020 22:43:05] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[27-Jun-2020 22:43:05] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+
+[28-Jun-2020 11:23:45] : [WARNING] - CONSULTA CENTROS
+[28-Jun-2020 11:23:45] : [WARNING] - SELECT id_centro FROM centros where id_centro>1 and id_centro in(select id_centro from matricula) and provincia=''
+[28-Jun-2020 11:23:45] : [WARNING] - OBTENIENDO CENTROS PARA TABLAS
+[28-Jun-2020 11:23:45] : [WARNING] - mysqli_result Object
+(
+    [current_field] => 0
+    [field_count] => 1
+    [lengths] => 
+    [num_rows] => 0
+    [type] => 0
+)
+

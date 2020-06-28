@@ -108,7 +108,7 @@
                    <a class="lprovisionales dropdown-item" href="#" data-subtipo="excluidos_prov">Excluidos provisional</a>
                 </div>
             </li>
-		<?php if($_SESSION['estado_convocatoria']>=30){?>
+		<?php if($_SESSION['estado_convocatoria']>=40){?>
               <li class="nav-item active msuperior dropdown" id="mdefinitivo">
                  <a class="show_definitivos nav-link dropdown-toggle desplegable2" id="navbardrop" data-toggle="dropdown" href="#">Definitivos</a>
 		           <div class="dropdown-menu">

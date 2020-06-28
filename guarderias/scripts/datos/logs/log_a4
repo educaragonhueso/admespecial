@@ -1496,3 +1496,2344 @@
 [26-Jun-2020 10:33:46] : [WARNING] - tributante nuevo:
 [26-Jun-2020 10:33:46] : [WARNING] - 
 [26-Jun-2020 10:33:46] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:17:33] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[26-Jun-2020 12:17:33] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=sr&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=676854995&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11439
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 50600154
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[26-Jun-2020 12:17:33] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[26-Jun-2020 12:17:33] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=sr&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=676854995&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 12:17:33] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[26-Jun-2020 12:17:33] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=sr&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=676854995&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 12:17:33] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[26-Jun-2020 12:17:33] : [WARNING] - {"solcalcbon":"1","nmunidad":"4","cumplen":"1","tributantes_nombre1":"sr","tributantes_id_tributante1":"0","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"676854995","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"oponenautorizar":0}
+[26-Jun-2020 12:17:33] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[26-Jun-2020 12:17:33] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 4
+    [cumplen] => 1
+    [tributantes_nombre1] => sr
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 676854995
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [oponenautorizar] => 0
+)
+
+[26-Jun-2020 12:17:33] : [WARNING] - ENTRANDO EN UPDATE: 
+[26-Jun-2020 12:17:33] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[26-Jun-2020 12:17:33] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='4',cumplen='1',validar_infotributaria='0',oponenautorizar='0' WHERE id_alumno=11439
+[26-Jun-2020 12:17:33] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:17:33] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => sr
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 676854995
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[26-Jun-2020 12:17:33] : [WARNING] - sr
+[26-Jun-2020 12:17:33] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:17:33] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:17:33] : [WARNING] - INSERT INTO tributantes VALUES(11439,0,'sr','','','','676854995')
+[26-Jun-2020 12:17:33] : [WARNING] - 
+[26-Jun-2020 12:17:33] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:17:33] : [WARNING] - 
+[26-Jun-2020 12:17:33] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:17:33] : [WARNING] - 
+[26-Jun-2020 12:17:33] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:17:51] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[26-Jun-2020 12:17:51] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=sr&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=676854995&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11439
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 50600154
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[26-Jun-2020 12:17:51] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[26-Jun-2020 12:17:51] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=sr&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=676854995&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 12:17:51] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[26-Jun-2020 12:17:51] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=sr&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=676854995&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 12:17:51] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[26-Jun-2020 12:17:51] : [WARNING] - {"solcalcbon":"1","nmunidad":"4","cumplen":"1","tributantes_nombre1":"sr","tributantes_id_tributante1":"0","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"676854995","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"oponenautorizar":0}
+[26-Jun-2020 12:17:51] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[26-Jun-2020 12:17:51] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 4
+    [cumplen] => 1
+    [tributantes_nombre1] => sr
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 676854995
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [oponenautorizar] => 0
+)
+
+[26-Jun-2020 12:17:51] : [WARNING] - ENTRANDO EN UPDATE: 
+[26-Jun-2020 12:17:51] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[26-Jun-2020 12:17:51] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='4',cumplen='1',validar_infotributaria='0',oponenautorizar='0' WHERE id_alumno=11439
+[26-Jun-2020 12:17:51] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:17:51] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => sr
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 676854995
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[26-Jun-2020 12:17:51] : [WARNING] - sr
+[26-Jun-2020 12:17:51] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:17:51] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:17:51] : [WARNING] - INSERT INTO tributantes VALUES(11439,0,'sr','','','','676854995')
+[26-Jun-2020 12:17:51] : [WARNING] - 
+[26-Jun-2020 12:17:51] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:17:51] : [WARNING] - 
+[26-Jun-2020 12:17:51] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:17:51] : [WARNING] - 
+[26-Jun-2020 12:17:51] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:20:35] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[26-Jun-2020 12:20:35] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=sr&tributantes_id_tributante1=367&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=676854995&tributantes_nombre2=sr&tributantes_id_tributante2=368&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=676854995&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11439
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 50600154
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[26-Jun-2020 12:20:35] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[26-Jun-2020 12:20:35] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=sr&tributantes_id_tributante1=367&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=676854995&tributantes_nombre2=sr&tributantes_id_tributante2=368&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=676854995&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 12:20:35] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[26-Jun-2020 12:20:35] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=sr&tributantes_id_tributante1=367&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=676854995&tributantes_nombre2=sr&tributantes_id_tributante2=368&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=676854995&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 12:20:35] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[26-Jun-2020 12:20:35] : [WARNING] - {"solcalcbon":"1","nmunidad":"4","cumplen":"1","tributantes_nombre1":"sr","tributantes_id_tributante1":"367","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"676854995","tributantes_nombre2":"sr","tributantes_id_tributante2":"368","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"676854995","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"oponenautorizar":0}
+[26-Jun-2020 12:20:35] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[26-Jun-2020 12:20:35] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 4
+    [cumplen] => 1
+    [tributantes_nombre1] => sr
+    [tributantes_id_tributante1] => 367
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 676854995
+    [tributantes_nombre2] => sr
+    [tributantes_id_tributante2] => 368
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 676854995
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [oponenautorizar] => 0
+)
+
+[26-Jun-2020 12:20:35] : [WARNING] - ENTRANDO EN UPDATE: 
+[26-Jun-2020 12:20:35] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[26-Jun-2020 12:20:35] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='4',cumplen='1',validar_infotributaria='0',oponenautorizar='0' WHERE id_alumno=11439
+[26-Jun-2020 12:20:35] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:20:35] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => sr
+            [id_tributante] => 367
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 676854995
+        )
+
+    [2] => Array
+        (
+            [nombre] => sr
+            [id_tributante] => 368
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 676854995
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[26-Jun-2020 12:20:35] : [WARNING] - sr
+[26-Jun-2020 12:20:35] : [WARNING] - tributante existe:
+[26-Jun-2020 12:20:35] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:20:35] : [WARNING] - UPDATE tributantes SET nombre='sr',apellido1='',apellido2='',parentesco='',dni='676854995' WHERE id_tributante='367'
+[26-Jun-2020 12:20:35] : [WARNING] - sr
+[26-Jun-2020 12:20:35] : [WARNING] - tributante existe:
+[26-Jun-2020 12:20:35] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:20:35] : [WARNING] - UPDATE tributantes SET nombre='sr',apellido1='',apellido2='',parentesco='',dni='676854995' WHERE id_tributante='368'
+[26-Jun-2020 12:20:35] : [WARNING] - 
+[26-Jun-2020 12:20:35] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:20:35] : [WARNING] - 
+[26-Jun-2020 12:20:35] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:30:22] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[26-Jun-2020 12:30:22] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=3&oponenautorizar=1&tributantes_nombre1=Nombre+bea&tributantes_id_tributante1=0&tributantes_apellido11=primerbea&tributantes_apellido21=segunbea&tributantes_parentesco1=parentescobea&tributantes_dni1=10010010x&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11295
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 22600060
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[26-Jun-2020 12:30:22] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[26-Jun-2020 12:30:22] : [WARNING] - solcalcbon=1&nmunidad=3&oponenautorizar=1&tributantes_nombre1=Nombre+bea&tributantes_id_tributante1=0&tributantes_apellido11=primerbea&tributantes_apellido21=segunbea&tributantes_parentesco1=parentescobea&tributantes_dni1=10010010x&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 12:30:22] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[26-Jun-2020 12:30:22] : [WARNING] - solcalcbon=1&nmunidad=3&oponenautorizar=1&tributantes_nombre1=Nombre+bea&tributantes_id_tributante1=0&tributantes_apellido11=primerbea&tributantes_apellido21=segunbea&tributantes_parentesco1=parentescobea&tributantes_dni1=10010010x&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 12:30:22] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[26-Jun-2020 12:30:22] : [WARNING] - {"solcalcbon":"1","nmunidad":"3","oponenautorizar":"1","tributantes_nombre1":"Nombre bea","tributantes_id_tributante1":"0","tributantes_apellido11":"primerbea","tributantes_apellido21":"segunbea","tributantes_parentesco1":"parentescobea","tributantes_dni1":"10010010x","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"cumplen":0}
+[26-Jun-2020 12:30:22] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[26-Jun-2020 12:30:22] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 3
+    [oponenautorizar] => 1
+    [tributantes_nombre1] => Nombre bea
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => primerbea
+    [tributantes_apellido21] => segunbea
+    [tributantes_parentesco1] => parentescobea
+    [tributantes_dni1] => 10010010x
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [cumplen] => 0
+)
+
+[26-Jun-2020 12:30:22] : [WARNING] - ENTRANDO EN UPDATE: 
+[26-Jun-2020 12:30:22] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[26-Jun-2020 12:30:22] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='3',oponenautorizar='1',validar_infotributaria='0',cumplen='0' WHERE id_alumno=11295
+[26-Jun-2020 12:30:22] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:30:22] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => Nombre bea
+            [id_tributante] => 0
+            [apellido1] => primerbea
+            [apellido2] => segunbea
+            [parentesco] => parentescobea
+            [dni] => 10010010x
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[26-Jun-2020 12:30:22] : [WARNING] - Nombre bea
+[26-Jun-2020 12:30:22] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:30:22] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:30:22] : [WARNING] - INSERT INTO tributantes VALUES(11295,0,'Nombre bea','primerbea','segunbea','parentescobea','10010010x')
+[26-Jun-2020 12:30:22] : [WARNING] - 
+[26-Jun-2020 12:30:22] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:30:22] : [WARNING] - 
+[26-Jun-2020 12:30:22] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:30:22] : [WARNING] - 
+[26-Jun-2020 12:30:22] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:31:33] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[26-Jun-2020 12:31:33] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=3&oponenautorizar=1&tributantes_nombre1=Nombre+bea&tributantes_id_tributante1=0&tributantes_apellido11=primerbea&tributantes_apellido21=segunbea&tributantes_parentesco1=parentescobea&tributantes_dni1=10010010x&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11295
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 22600060
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[26-Jun-2020 12:31:33] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[26-Jun-2020 12:31:33] : [WARNING] - solcalcbon=1&nmunidad=3&oponenautorizar=1&tributantes_nombre1=Nombre+bea&tributantes_id_tributante1=0&tributantes_apellido11=primerbea&tributantes_apellido21=segunbea&tributantes_parentesco1=parentescobea&tributantes_dni1=10010010x&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 12:31:33] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[26-Jun-2020 12:31:33] : [WARNING] - solcalcbon=1&nmunidad=3&oponenautorizar=1&tributantes_nombre1=Nombre+bea&tributantes_id_tributante1=0&tributantes_apellido11=primerbea&tributantes_apellido21=segunbea&tributantes_parentesco1=parentescobea&tributantes_dni1=10010010x&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 12:31:33] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[26-Jun-2020 12:31:33] : [WARNING] - {"solcalcbon":"1","nmunidad":"3","oponenautorizar":"1","tributantes_nombre1":"Nombre bea","tributantes_id_tributante1":"0","tributantes_apellido11":"primerbea","tributantes_apellido21":"segunbea","tributantes_parentesco1":"parentescobea","tributantes_dni1":"10010010x","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"cumplen":0}
+[26-Jun-2020 12:31:33] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[26-Jun-2020 12:31:33] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 3
+    [oponenautorizar] => 1
+    [tributantes_nombre1] => Nombre bea
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => primerbea
+    [tributantes_apellido21] => segunbea
+    [tributantes_parentesco1] => parentescobea
+    [tributantes_dni1] => 10010010x
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [cumplen] => 0
+)
+
+[26-Jun-2020 12:31:33] : [WARNING] - ENTRANDO EN UPDATE: 
+[26-Jun-2020 12:31:33] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[26-Jun-2020 12:31:33] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='3',oponenautorizar='1',validar_infotributaria='0',cumplen='0' WHERE id_alumno=11295
+[26-Jun-2020 12:31:33] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:31:33] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => Nombre bea
+            [id_tributante] => 0
+            [apellido1] => primerbea
+            [apellido2] => segunbea
+            [parentesco] => parentescobea
+            [dni] => 10010010x
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[26-Jun-2020 12:31:33] : [WARNING] - Nombre bea
+[26-Jun-2020 12:31:33] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:31:33] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:31:33] : [WARNING] - INSERT INTO tributantes VALUES(11295,0,'Nombre bea','primerbea','segunbea','parentescobea','10010010x')
+[26-Jun-2020 12:31:33] : [WARNING] - 
+[26-Jun-2020 12:31:33] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:31:33] : [WARNING] - 
+[26-Jun-2020 12:31:33] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:31:33] : [WARNING] - 
+[26-Jun-2020 12:31:33] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:33:24] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[26-Jun-2020 12:33:24] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=nombre+bea&tributantes_id_tributante1=0&tributantes_apellido11=prmer+bea&tributantes_apellido21=segun+bea&tributantes_parentesco1=paren+bea&tributantes_dni1=10010010x&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11296
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 22600060
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[26-Jun-2020 12:33:24] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[26-Jun-2020 12:33:24] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=nombre+bea&tributantes_id_tributante1=0&tributantes_apellido11=prmer+bea&tributantes_apellido21=segun+bea&tributantes_parentesco1=paren+bea&tributantes_dni1=10010010x&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 12:33:24] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[26-Jun-2020 12:33:24] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=nombre+bea&tributantes_id_tributante1=0&tributantes_apellido11=prmer+bea&tributantes_apellido21=segun+bea&tributantes_parentesco1=paren+bea&tributantes_dni1=10010010x&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 12:33:24] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[26-Jun-2020 12:33:24] : [WARNING] - {"solcalcbon":"1","nmunidad":"4","cumplen":"1","tributantes_nombre1":"nombre bea","tributantes_id_tributante1":"0","tributantes_apellido11":"prmer bea","tributantes_apellido21":"segun bea","tributantes_parentesco1":"paren bea","tributantes_dni1":"10010010x","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"oponenautorizar":0}
+[26-Jun-2020 12:33:24] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[26-Jun-2020 12:33:24] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 4
+    [cumplen] => 1
+    [tributantes_nombre1] => nombre bea
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => prmer bea
+    [tributantes_apellido21] => segun bea
+    [tributantes_parentesco1] => paren bea
+    [tributantes_dni1] => 10010010x
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [oponenautorizar] => 0
+)
+
+[26-Jun-2020 12:33:24] : [WARNING] - ENTRANDO EN UPDATE: 
+[26-Jun-2020 12:33:24] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[26-Jun-2020 12:33:24] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='4',cumplen='1',validar_infotributaria='0',oponenautorizar='0' WHERE id_alumno=11296
+[26-Jun-2020 12:33:24] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:33:24] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => nombre bea
+            [id_tributante] => 0
+            [apellido1] => prmer bea
+            [apellido2] => segun bea
+            [parentesco] => paren bea
+            [dni] => 10010010x
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[26-Jun-2020 12:33:24] : [WARNING] - nombre bea
+[26-Jun-2020 12:33:24] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:33:24] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:33:24] : [WARNING] - INSERT INTO tributantes VALUES(11296,0,'nombre bea','prmer bea','segun bea','paren bea','10010010x')
+[26-Jun-2020 12:33:24] : [WARNING] - 
+[26-Jun-2020 12:33:24] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:33:24] : [WARNING] - 
+[26-Jun-2020 12:33:24] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:33:24] : [WARNING] - 
+[26-Jun-2020 12:33:24] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:35:33] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[26-Jun-2020 12:35:33] : [WARNING] - Array
+(
+    [fsol] => nmunidad=1&oponenautorizar=1&tributantes_nombre1=ss&tributantes_id_tributante1=0&tributantes_apellido11=ss&tributantes_apellido21=ss&tributantes_parentesco1=ss&tributantes_dni1=10010010x&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11297
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 22600060
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[26-Jun-2020 12:35:33] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[26-Jun-2020 12:35:33] : [WARNING] - nmunidad=1&oponenautorizar=1&tributantes_nombre1=ss&tributantes_id_tributante1=0&tributantes_apellido11=ss&tributantes_apellido21=ss&tributantes_parentesco1=ss&tributantes_dni1=10010010x&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 12:35:33] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[26-Jun-2020 12:35:33] : [WARNING] - nmunidad=1&oponenautorizar=1&tributantes_nombre1=ss&tributantes_id_tributante1=0&tributantes_apellido11=ss&tributantes_apellido21=ss&tributantes_parentesco1=ss&tributantes_dni1=10010010x&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 12:35:33] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[26-Jun-2020 12:35:33] : [WARNING] - {"nmunidad":"1","oponenautorizar":"1","tributantes_nombre1":"ss","tributantes_id_tributante1":"0","tributantes_apellido11":"ss","tributantes_apellido21":"ss","tributantes_parentesco1":"ss","tributantes_dni1":"10010010x","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"cumplen":0,"solcalcbon":0}
+[26-Jun-2020 12:35:33] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[26-Jun-2020 12:35:33] : [WARNING] - Array
+(
+    [nmunidad] => 1
+    [oponenautorizar] => 1
+    [tributantes_nombre1] => ss
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => ss
+    [tributantes_apellido21] => ss
+    [tributantes_parentesco1] => ss
+    [tributantes_dni1] => 10010010x
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [cumplen] => 0
+    [solcalcbon] => 0
+)
+
+[26-Jun-2020 12:35:33] : [WARNING] - ENTRANDO EN UPDATE: 
+[26-Jun-2020 12:35:33] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[26-Jun-2020 12:35:33] : [WARNING] - UPDATE alumnos SET nmunidad='1',oponenautorizar='1',validar_infotributaria='0',cumplen='0',solcalcbon='0' WHERE id_alumno=11297
+[26-Jun-2020 12:35:33] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:35:33] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => ss
+            [id_tributante] => 0
+            [apellido1] => ss
+            [apellido2] => ss
+            [parentesco] => ss
+            [dni] => 10010010x
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[26-Jun-2020 12:35:33] : [WARNING] - ss
+[26-Jun-2020 12:35:33] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:35:33] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 12:35:33] : [WARNING] - INSERT INTO tributantes VALUES(11297,0,'ss','ss','ss','ss','10010010x')
+[26-Jun-2020 12:35:33] : [WARNING] - 
+[26-Jun-2020 12:35:33] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:35:33] : [WARNING] - 
+[26-Jun-2020 12:35:33] : [WARNING] - tributante nuevo:
+[26-Jun-2020 12:35:33] : [WARNING] - 
+[26-Jun-2020 12:35:33] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:16:00] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[26-Jun-2020 13:16:00] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=1&oponenautorizar=1&tributantes_nombre1=CARLOS&tributantes_id_tributante1=0&tributantes_apellido11=CRESPO&tributantes_apellido21=&tributantes_parentesco1=TUTOR&tributantes_dni1=15246380L&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11206
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 22600084
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[26-Jun-2020 13:16:00] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[26-Jun-2020 13:16:00] : [WARNING] - solcalcbon=1&nmunidad=1&oponenautorizar=1&tributantes_nombre1=CARLOS&tributantes_id_tributante1=0&tributantes_apellido11=CRESPO&tributantes_apellido21=&tributantes_parentesco1=TUTOR&tributantes_dni1=15246380L&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 13:16:00] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[26-Jun-2020 13:16:00] : [WARNING] - solcalcbon=1&nmunidad=1&oponenautorizar=1&tributantes_nombre1=CARLOS&tributantes_id_tributante1=0&tributantes_apellido11=CRESPO&tributantes_apellido21=&tributantes_parentesco1=TUTOR&tributantes_dni1=15246380L&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 13:16:00] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[26-Jun-2020 13:16:00] : [WARNING] - {"solcalcbon":"1","nmunidad":"1","oponenautorizar":"1","tributantes_nombre1":"CARLOS","tributantes_id_tributante1":"0","tributantes_apellido11":"CRESPO","tributantes_apellido21":"","tributantes_parentesco1":"TUTOR","tributantes_dni1":"15246380L","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"cumplen":0}
+[26-Jun-2020 13:16:00] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[26-Jun-2020 13:16:00] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 1
+    [oponenautorizar] => 1
+    [tributantes_nombre1] => CARLOS
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => CRESPO
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => TUTOR
+    [tributantes_dni1] => 15246380L
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [cumplen] => 0
+)
+
+[26-Jun-2020 13:16:00] : [WARNING] - ENTRANDO EN UPDATE: 
+[26-Jun-2020 13:16:00] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[26-Jun-2020 13:16:00] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='1',oponenautorizar='1',validar_infotributaria='0',cumplen='0' WHERE id_alumno=11206
+[26-Jun-2020 13:16:00] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 13:16:00] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => CARLOS
+            [id_tributante] => 0
+            [apellido1] => CRESPO
+            [apellido2] => 
+            [parentesco] => TUTOR
+            [dni] => 15246380L
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[26-Jun-2020 13:16:00] : [WARNING] - CARLOS
+[26-Jun-2020 13:16:00] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:16:00] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 13:16:00] : [WARNING] - INSERT INTO tributantes VALUES(11206,0,'CARLOS','CRESPO','','TUTOR','15246380L')
+[26-Jun-2020 13:16:00] : [WARNING] - 
+[26-Jun-2020 13:16:00] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:16:00] : [WARNING] - 
+[26-Jun-2020 13:16:00] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:16:00] : [WARNING] - 
+[26-Jun-2020 13:16:00] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:21:11] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[26-Jun-2020 13:21:11] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=2&oponenautorizar=1&tributantes_nombre1=ANA&tributantes_id_tributante1=0&tributantes_apellido11=HERNANDEZ&tributantes_apellido21=&tributantes_parentesco1=MADRE&tributantes_dni1=36765485P&tributantes_nombre2=JORGE&tributantes_id_tributante2=0&tributantes_apellido12=HERNANDEZ&tributantes_apellido22=&tributantes_parentesco2=PADRE&tributantes_dni2=32878856B&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11207
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 22600084
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[26-Jun-2020 13:21:11] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[26-Jun-2020 13:21:11] : [WARNING] - solcalcbon=1&nmunidad=2&oponenautorizar=1&tributantes_nombre1=ANA&tributantes_id_tributante1=0&tributantes_apellido11=HERNANDEZ&tributantes_apellido21=&tributantes_parentesco1=MADRE&tributantes_dni1=36765485P&tributantes_nombre2=JORGE&tributantes_id_tributante2=0&tributantes_apellido12=HERNANDEZ&tributantes_apellido22=&tributantes_parentesco2=PADRE&tributantes_dni2=32878856B&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 13:21:11] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[26-Jun-2020 13:21:11] : [WARNING] - solcalcbon=1&nmunidad=2&oponenautorizar=1&tributantes_nombre1=ANA&tributantes_id_tributante1=0&tributantes_apellido11=HERNANDEZ&tributantes_apellido21=&tributantes_parentesco1=MADRE&tributantes_dni1=36765485P&tributantes_nombre2=JORGE&tributantes_id_tributante2=0&tributantes_apellido12=HERNANDEZ&tributantes_apellido22=&tributantes_parentesco2=PADRE&tributantes_dni2=32878856B&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 13:21:11] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[26-Jun-2020 13:21:11] : [WARNING] - {"solcalcbon":"1","nmunidad":"2","oponenautorizar":"1","tributantes_nombre1":"ANA","tributantes_id_tributante1":"0","tributantes_apellido11":"HERNANDEZ","tributantes_apellido21":"","tributantes_parentesco1":"MADRE","tributantes_dni1":"36765485P","tributantes_nombre2":"JORGE","tributantes_id_tributante2":"0","tributantes_apellido12":"HERNANDEZ","tributantes_apellido22":"","tributantes_parentesco2":"PADRE","tributantes_dni2":"32878856B","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"cumplen":0}
+[26-Jun-2020 13:21:11] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[26-Jun-2020 13:21:11] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 2
+    [oponenautorizar] => 1
+    [tributantes_nombre1] => ANA
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => HERNANDEZ
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => MADRE
+    [tributantes_dni1] => 36765485P
+    [tributantes_nombre2] => JORGE
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => HERNANDEZ
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => PADRE
+    [tributantes_dni2] => 32878856B
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [cumplen] => 0
+)
+
+[26-Jun-2020 13:21:11] : [WARNING] - ENTRANDO EN UPDATE: 
+[26-Jun-2020 13:21:11] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[26-Jun-2020 13:21:11] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='2',oponenautorizar='1',validar_infotributaria='0',cumplen='0' WHERE id_alumno=11207
+[26-Jun-2020 13:21:11] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 13:21:11] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => ANA
+            [id_tributante] => 0
+            [apellido1] => HERNANDEZ
+            [apellido2] => 
+            [parentesco] => MADRE
+            [dni] => 36765485P
+        )
+
+    [2] => Array
+        (
+            [nombre] => JORGE
+            [id_tributante] => 0
+            [apellido1] => HERNANDEZ
+            [apellido2] => 
+            [parentesco] => PADRE
+            [dni] => 32878856B
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[26-Jun-2020 13:21:11] : [WARNING] - ANA
+[26-Jun-2020 13:21:11] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:21:11] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 13:21:11] : [WARNING] - INSERT INTO tributantes VALUES(11207,0,'ANA','HERNANDEZ','','MADRE','36765485P')
+[26-Jun-2020 13:21:11] : [WARNING] - JORGE
+[26-Jun-2020 13:21:11] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:21:11] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 13:21:11] : [WARNING] - INSERT INTO tributantes VALUES(11207,0,'JORGE','HERNANDEZ','','PADRE','32878856B')
+[26-Jun-2020 13:21:11] : [WARNING] - 
+[26-Jun-2020 13:21:11] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:21:11] : [WARNING] - 
+[26-Jun-2020 13:21:11] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:43:38] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[26-Jun-2020 13:43:38] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=1&cumplen=1&tributantes_nombre1=DAVID&tributantes_id_tributante1=0&tributantes_apellido11=MORILLO&tributantes_apellido21=PEREZ&tributantes_parentesco1=PADRE&tributantes_dni1=98958473F&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11208
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 22600084
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[26-Jun-2020 13:43:38] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[26-Jun-2020 13:43:38] : [WARNING] - solcalcbon=1&nmunidad=1&cumplen=1&tributantes_nombre1=DAVID&tributantes_id_tributante1=0&tributantes_apellido11=MORILLO&tributantes_apellido21=PEREZ&tributantes_parentesco1=PADRE&tributantes_dni1=98958473F&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 13:43:38] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[26-Jun-2020 13:43:38] : [WARNING] - solcalcbon=1&nmunidad=1&cumplen=1&tributantes_nombre1=DAVID&tributantes_id_tributante1=0&tributantes_apellido11=MORILLO&tributantes_apellido21=PEREZ&tributantes_parentesco1=PADRE&tributantes_dni1=98958473F&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 13:43:38] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[26-Jun-2020 13:43:38] : [WARNING] - {"solcalcbon":"1","nmunidad":"1","cumplen":"1","tributantes_nombre1":"DAVID","tributantes_id_tributante1":"0","tributantes_apellido11":"MORILLO","tributantes_apellido21":"PEREZ","tributantes_parentesco1":"PADRE","tributantes_dni1":"98958473F","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"oponenautorizar":0}
+[26-Jun-2020 13:43:38] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[26-Jun-2020 13:43:38] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 1
+    [cumplen] => 1
+    [tributantes_nombre1] => DAVID
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => MORILLO
+    [tributantes_apellido21] => PEREZ
+    [tributantes_parentesco1] => PADRE
+    [tributantes_dni1] => 98958473F
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [oponenautorizar] => 0
+)
+
+[26-Jun-2020 13:43:38] : [WARNING] - ENTRANDO EN UPDATE: 
+[26-Jun-2020 13:43:38] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[26-Jun-2020 13:43:38] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='1',cumplen='1',validar_infotributaria='0',oponenautorizar='0' WHERE id_alumno=11208
+[26-Jun-2020 13:43:38] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 13:43:38] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => DAVID
+            [id_tributante] => 0
+            [apellido1] => MORILLO
+            [apellido2] => PEREZ
+            [parentesco] => PADRE
+            [dni] => 98958473F
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[26-Jun-2020 13:43:38] : [WARNING] - DAVID
+[26-Jun-2020 13:43:38] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:43:38] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 13:43:38] : [WARNING] - INSERT INTO tributantes VALUES(11208,0,'DAVID','MORILLO','PEREZ','PADRE','98958473F')
+[26-Jun-2020 13:43:38] : [WARNING] - 
+[26-Jun-2020 13:43:38] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:43:38] : [WARNING] - 
+[26-Jun-2020 13:43:38] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:43:38] : [WARNING] - 
+[26-Jun-2020 13:43:38] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:49:05] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[26-Jun-2020 13:49:05] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=1&oponenautorizar=1&tributantes_nombre1=SAMUEL&tributantes_id_tributante1=0&tributantes_apellido11=VEGA&tributantes_apellido21=&tributantes_parentesco1=PADRE&tributantes_dni1=50915206Z&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11370
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 44600021
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[26-Jun-2020 13:49:05] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[26-Jun-2020 13:49:05] : [WARNING] - solcalcbon=1&nmunidad=1&oponenautorizar=1&tributantes_nombre1=SAMUEL&tributantes_id_tributante1=0&tributantes_apellido11=VEGA&tributantes_apellido21=&tributantes_parentesco1=PADRE&tributantes_dni1=50915206Z&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 13:49:05] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[26-Jun-2020 13:49:05] : [WARNING] - solcalcbon=1&nmunidad=1&oponenautorizar=1&tributantes_nombre1=SAMUEL&tributantes_id_tributante1=0&tributantes_apellido11=VEGA&tributantes_apellido21=&tributantes_parentesco1=PADRE&tributantes_dni1=50915206Z&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 13:49:05] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[26-Jun-2020 13:49:05] : [WARNING] - {"solcalcbon":"1","nmunidad":"1","oponenautorizar":"1","tributantes_nombre1":"SAMUEL","tributantes_id_tributante1":"0","tributantes_apellido11":"VEGA","tributantes_apellido21":"","tributantes_parentesco1":"PADRE","tributantes_dni1":"50915206Z","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"cumplen":0}
+[26-Jun-2020 13:49:05] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[26-Jun-2020 13:49:05] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 1
+    [oponenautorizar] => 1
+    [tributantes_nombre1] => SAMUEL
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => VEGA
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => PADRE
+    [tributantes_dni1] => 50915206Z
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [cumplen] => 0
+)
+
+[26-Jun-2020 13:49:05] : [WARNING] - ENTRANDO EN UPDATE: 
+[26-Jun-2020 13:49:05] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[26-Jun-2020 13:49:05] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='1',oponenautorizar='1',validar_infotributaria='0',cumplen='0' WHERE id_alumno=11370
+[26-Jun-2020 13:49:05] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 13:49:05] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => SAMUEL
+            [id_tributante] => 0
+            [apellido1] => VEGA
+            [apellido2] => 
+            [parentesco] => PADRE
+            [dni] => 50915206Z
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[26-Jun-2020 13:49:05] : [WARNING] - SAMUEL
+[26-Jun-2020 13:49:05] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:49:05] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 13:49:05] : [WARNING] - INSERT INTO tributantes VALUES(11370,0,'SAMUEL','VEGA','','PADRE','50915206Z')
+[26-Jun-2020 13:49:05] : [WARNING] - 
+[26-Jun-2020 13:49:05] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:49:05] : [WARNING] - 
+[26-Jun-2020 13:49:05] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:49:05] : [WARNING] - 
+[26-Jun-2020 13:49:05] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:53:39] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[26-Jun-2020 13:53:39] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=2&cumplen=1&tributantes_nombre1=JUAN&tributantes_id_tributante1=0&tributantes_apellido11=ALBESA&tributantes_apellido21=&tributantes_parentesco1=PADRE&tributantes_dni1=72300664A&tributantes_nombre2=MAR%C3%8DA&tributantes_id_tributante2=0&tributantes_apellido12=MART%C3%8DN&tributantes_apellido22=&tributantes_parentesco2=MADRE&tributantes_dni2=76883836B&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11371
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 44600021
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[26-Jun-2020 13:53:39] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[26-Jun-2020 13:53:39] : [WARNING] - solcalcbon=1&nmunidad=2&cumplen=1&tributantes_nombre1=JUAN&tributantes_id_tributante1=0&tributantes_apellido11=ALBESA&tributantes_apellido21=&tributantes_parentesco1=PADRE&tributantes_dni1=72300664A&tributantes_nombre2=MAR%C3%8DA&tributantes_id_tributante2=0&tributantes_apellido12=MART%C3%8DN&tributantes_apellido22=&tributantes_parentesco2=MADRE&tributantes_dni2=76883836B&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 13:53:39] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[26-Jun-2020 13:53:39] : [WARNING] - solcalcbon=1&nmunidad=2&cumplen=1&tributantes_nombre1=JUAN&tributantes_id_tributante1=0&tributantes_apellido11=ALBESA&tributantes_apellido21=&tributantes_parentesco1=PADRE&tributantes_dni1=72300664A&tributantes_nombre2=MAR%C3%8DA&tributantes_id_tributante2=0&tributantes_apellido12=MART%C3%8DN&tributantes_apellido22=&tributantes_parentesco2=MADRE&tributantes_dni2=76883836B&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 13:53:39] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[26-Jun-2020 13:53:39] : [WARNING] - {"solcalcbon":"1","nmunidad":"2","cumplen":"1","tributantes_nombre1":"JUAN","tributantes_id_tributante1":"0","tributantes_apellido11":"ALBESA","tributantes_apellido21":"","tributantes_parentesco1":"PADRE","tributantes_dni1":"72300664A","tributantes_nombre2":"MAR\u00cdA","tributantes_id_tributante2":"0","tributantes_apellido12":"MART\u00cdN","tributantes_apellido22":"","tributantes_parentesco2":"MADRE","tributantes_dni2":"76883836B","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"oponenautorizar":0}
+[26-Jun-2020 13:53:39] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[26-Jun-2020 13:53:39] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 2
+    [cumplen] => 1
+    [tributantes_nombre1] => JUAN
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => ALBESA
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => PADRE
+    [tributantes_dni1] => 72300664A
+    [tributantes_nombre2] => MARÍA
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => MARTÍN
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => MADRE
+    [tributantes_dni2] => 76883836B
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [oponenautorizar] => 0
+)
+
+[26-Jun-2020 13:53:39] : [WARNING] - ENTRANDO EN UPDATE: 
+[26-Jun-2020 13:53:39] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[26-Jun-2020 13:53:39] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='2',cumplen='1',validar_infotributaria='0',oponenautorizar='0' WHERE id_alumno=11371
+[26-Jun-2020 13:53:39] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 13:53:39] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => JUAN
+            [id_tributante] => 0
+            [apellido1] => ALBESA
+            [apellido2] => 
+            [parentesco] => PADRE
+            [dni] => 72300664A
+        )
+
+    [2] => Array
+        (
+            [nombre] => MARÍA
+            [id_tributante] => 0
+            [apellido1] => MARTÍN
+            [apellido2] => 
+            [parentesco] => MADRE
+            [dni] => 76883836B
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[26-Jun-2020 13:53:39] : [WARNING] - JUAN
+[26-Jun-2020 13:53:39] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:53:39] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 13:53:39] : [WARNING] - INSERT INTO tributantes VALUES(11371,0,'JUAN','ALBESA','','PADRE','72300664A')
+[26-Jun-2020 13:53:39] : [WARNING] - MARÍA
+[26-Jun-2020 13:53:39] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:53:39] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 13:53:39] : [WARNING] - INSERT INTO tributantes VALUES(11371,0,'MARÍA','MARTÍN','','MADRE','76883836B')
+[26-Jun-2020 13:53:39] : [WARNING] - 
+[26-Jun-2020 13:53:39] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:53:39] : [WARNING] - 
+[26-Jun-2020 13:53:39] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:56:34] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[26-Jun-2020 13:56:34] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=1&oponenautorizar=1&tributantes_nombre1=JAVIER&tributantes_id_tributante1=0&tributantes_apellido11=ALQUEZAR&tributantes_apellido21=&tributantes_parentesco1=TUTOR&tributantes_dni1=56071635G&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11372
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 44600021
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[26-Jun-2020 13:56:34] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[26-Jun-2020 13:56:34] : [WARNING] - solcalcbon=1&nmunidad=1&oponenautorizar=1&tributantes_nombre1=JAVIER&tributantes_id_tributante1=0&tributantes_apellido11=ALQUEZAR&tributantes_apellido21=&tributantes_parentesco1=TUTOR&tributantes_dni1=56071635G&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 13:56:34] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[26-Jun-2020 13:56:34] : [WARNING] - solcalcbon=1&nmunidad=1&oponenautorizar=1&tributantes_nombre1=JAVIER&tributantes_id_tributante1=0&tributantes_apellido11=ALQUEZAR&tributantes_apellido21=&tributantes_parentesco1=TUTOR&tributantes_dni1=56071635G&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[26-Jun-2020 13:56:34] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[26-Jun-2020 13:56:34] : [WARNING] - {"solcalcbon":"1","nmunidad":"1","oponenautorizar":"1","tributantes_nombre1":"JAVIER","tributantes_id_tributante1":"0","tributantes_apellido11":"ALQUEZAR","tributantes_apellido21":"","tributantes_parentesco1":"TUTOR","tributantes_dni1":"56071635G","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"cumplen":0}
+[26-Jun-2020 13:56:34] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[26-Jun-2020 13:56:34] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 1
+    [oponenautorizar] => 1
+    [tributantes_nombre1] => JAVIER
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => ALQUEZAR
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => TUTOR
+    [tributantes_dni1] => 56071635G
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [cumplen] => 0
+)
+
+[26-Jun-2020 13:56:34] : [WARNING] - ENTRANDO EN UPDATE: 
+[26-Jun-2020 13:56:34] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[26-Jun-2020 13:56:34] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='1',oponenautorizar='1',validar_infotributaria='0',cumplen='0' WHERE id_alumno=11372
+[26-Jun-2020 13:56:34] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 13:56:34] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => JAVIER
+            [id_tributante] => 0
+            [apellido1] => ALQUEZAR
+            [apellido2] => 
+            [parentesco] => TUTOR
+            [dni] => 56071635G
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[26-Jun-2020 13:56:34] : [WARNING] - JAVIER
+[26-Jun-2020 13:56:34] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:56:34] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[26-Jun-2020 13:56:34] : [WARNING] - INSERT INTO tributantes VALUES(11372,0,'JAVIER','ALQUEZAR','','TUTOR','56071635G')
+[26-Jun-2020 13:56:34] : [WARNING] - 
+[26-Jun-2020 13:56:34] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:56:34] : [WARNING] - 
+[26-Jun-2020 13:56:34] : [WARNING] - tributante nuevo:
+[26-Jun-2020 13:56:34] : [WARNING] - 
+[26-Jun-2020 13:56:34] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:01:59] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[27-Jun-2020 16:01:59] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=vvv&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=26283808Y&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 9793
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 50600154
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[27-Jun-2020 16:01:59] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[27-Jun-2020 16:01:59] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=vvv&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=26283808Y&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:01:59] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[27-Jun-2020 16:01:59] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=vvv&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=26283808Y&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:01:59] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[27-Jun-2020 16:01:59] : [WARNING] - {"solcalcbon":"1","nmunidad":"4","cumplen":"1","tributantes_nombre1":"vvv","tributantes_id_tributante1":"0","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"26283808Y","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"oponenautorizar":0}
+[27-Jun-2020 16:01:59] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[27-Jun-2020 16:01:59] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 4
+    [cumplen] => 1
+    [tributantes_nombre1] => vvv
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 26283808Y
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [oponenautorizar] => 0
+)
+
+[27-Jun-2020 16:01:59] : [WARNING] - ENTRANDO EN UPDATE: 
+[27-Jun-2020 16:01:59] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[27-Jun-2020 16:01:59] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='4',cumplen='1',validar_infotributaria='0',oponenautorizar='0' WHERE id_alumno=9793
+[27-Jun-2020 16:01:59] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:01:59] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => vvv
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 26283808Y
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[27-Jun-2020 16:01:59] : [WARNING] - vvv
+[27-Jun-2020 16:01:59] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:01:59] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:01:59] : [WARNING] - INSERT INTO tributantes VALUES(9793,0,'vvv','','','','26283808Y')
+[27-Jun-2020 16:01:59] : [WARNING] - 
+[27-Jun-2020 16:01:59] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:01:59] : [WARNING] - 
+[27-Jun-2020 16:01:59] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:01:59] : [WARNING] - 
+[27-Jun-2020 16:01:59] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:08:32] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[27-Jun-2020 16:08:32] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=vvv&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=26283808Y&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 9793
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 50600154
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[27-Jun-2020 16:08:32] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[27-Jun-2020 16:08:32] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=vvv&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=26283808Y&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:08:32] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[27-Jun-2020 16:08:32] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=vvv&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=26283808Y&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:08:32] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[27-Jun-2020 16:08:32] : [WARNING] - {"solcalcbon":"1","nmunidad":"4","cumplen":"1","tributantes_nombre1":"vvv","tributantes_id_tributante1":"0","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"26283808Y","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"oponenautorizar":0}
+[27-Jun-2020 16:08:32] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[27-Jun-2020 16:08:32] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 4
+    [cumplen] => 1
+    [tributantes_nombre1] => vvv
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 26283808Y
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [oponenautorizar] => 0
+)
+
+[27-Jun-2020 16:08:32] : [WARNING] - ENTRANDO EN UPDATE: 
+[27-Jun-2020 16:08:32] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[27-Jun-2020 16:08:32] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='4',cumplen='1',validar_infotributaria='0',oponenautorizar='0' WHERE id_alumno=9793
+[27-Jun-2020 16:08:32] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:08:32] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => vvv
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 26283808Y
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[27-Jun-2020 16:08:32] : [WARNING] - vvv
+[27-Jun-2020 16:08:32] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:08:32] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:08:32] : [WARNING] - INSERT INTO tributantes VALUES(9793,0,'vvv','','','','26283808Y')
+[27-Jun-2020 16:08:32] : [WARNING] - 
+[27-Jun-2020 16:08:32] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:08:32] : [WARNING] - 
+[27-Jun-2020 16:08:32] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:08:32] : [WARNING] - 
+[27-Jun-2020 16:08:32] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:17:32] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[27-Jun-2020 16:17:32] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=rrrr&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=29124182H&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 10393
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 50600154
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[27-Jun-2020 16:17:32] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[27-Jun-2020 16:17:32] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=rrrr&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=29124182H&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:17:32] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[27-Jun-2020 16:17:32] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=rrrr&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=29124182H&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:17:32] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[27-Jun-2020 16:17:32] : [WARNING] - {"solcalcbon":"1","nmunidad":"4","cumplen":"1","tributantes_nombre1":"rrrr","tributantes_id_tributante1":"0","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"29124182H","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"oponenautorizar":0}
+[27-Jun-2020 16:17:32] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[27-Jun-2020 16:17:32] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 4
+    [cumplen] => 1
+    [tributantes_nombre1] => rrrr
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 29124182H
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [oponenautorizar] => 0
+)
+
+[27-Jun-2020 16:17:32] : [WARNING] - ENTRANDO EN UPDATE: 
+[27-Jun-2020 16:17:32] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[27-Jun-2020 16:17:32] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='4',cumplen='1',validar_infotributaria='0',oponenautorizar='0' WHERE id_alumno=10393
+[27-Jun-2020 16:17:32] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:17:32] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => rrrr
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 29124182H
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[27-Jun-2020 16:17:32] : [WARNING] - rrrr
+[27-Jun-2020 16:17:32] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:17:32] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:17:32] : [WARNING] - INSERT INTO tributantes VALUES(10393,0,'rrrr','','','','29124182H')
+[27-Jun-2020 16:17:32] : [WARNING] - 
+[27-Jun-2020 16:17:32] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:17:32] : [WARNING] - 
+[27-Jun-2020 16:17:32] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:17:32] : [WARNING] - 
+[27-Jun-2020 16:17:32] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:17:44] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[27-Jun-2020 16:17:44] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=rrrr&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=29124182H&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 10393
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 50600154
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[27-Jun-2020 16:17:44] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[27-Jun-2020 16:17:44] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=rrrr&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=29124182H&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:17:44] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[27-Jun-2020 16:17:44] : [WARNING] - solcalcbon=1&nmunidad=4&cumplen=1&tributantes_nombre1=rrrr&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=29124182H&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:17:44] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[27-Jun-2020 16:17:44] : [WARNING] - {"solcalcbon":"1","nmunidad":"4","cumplen":"1","tributantes_nombre1":"rrrr","tributantes_id_tributante1":"0","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"29124182H","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"oponenautorizar":0}
+[27-Jun-2020 16:17:44] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[27-Jun-2020 16:17:44] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 4
+    [cumplen] => 1
+    [tributantes_nombre1] => rrrr
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 29124182H
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [oponenautorizar] => 0
+)
+
+[27-Jun-2020 16:17:44] : [WARNING] - ENTRANDO EN UPDATE: 
+[27-Jun-2020 16:17:44] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[27-Jun-2020 16:17:44] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='4',cumplen='1',validar_infotributaria='0',oponenautorizar='0' WHERE id_alumno=10393
+[27-Jun-2020 16:17:44] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:17:44] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => rrrr
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 29124182H
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[27-Jun-2020 16:17:44] : [WARNING] - rrrr
+[27-Jun-2020 16:17:44] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:17:44] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:17:44] : [WARNING] - INSERT INTO tributantes VALUES(10393,0,'rrrr','','','','29124182H')
+[27-Jun-2020 16:17:44] : [WARNING] - 
+[27-Jun-2020 16:17:44] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:17:44] : [WARNING] - 
+[27-Jun-2020 16:17:44] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:17:44] : [WARNING] - 
+[27-Jun-2020 16:17:44] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:19:19] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[27-Jun-2020 16:19:19] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=5&cumplen=1&tributantes_nombre1=yyyy&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=646187933&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11455
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 50600154
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[27-Jun-2020 16:19:19] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[27-Jun-2020 16:19:19] : [WARNING] - solcalcbon=1&nmunidad=5&cumplen=1&tributantes_nombre1=yyyy&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=646187933&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:19:19] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[27-Jun-2020 16:19:19] : [WARNING] - solcalcbon=1&nmunidad=5&cumplen=1&tributantes_nombre1=yyyy&tributantes_id_tributante1=0&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=646187933&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:19:19] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[27-Jun-2020 16:19:19] : [WARNING] - {"solcalcbon":"1","nmunidad":"5","cumplen":"1","tributantes_nombre1":"yyyy","tributantes_id_tributante1":"0","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"646187933","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"oponenautorizar":0}
+[27-Jun-2020 16:19:19] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[27-Jun-2020 16:19:19] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 5
+    [cumplen] => 1
+    [tributantes_nombre1] => yyyy
+    [tributantes_id_tributante1] => 0
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 646187933
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [oponenautorizar] => 0
+)
+
+[27-Jun-2020 16:19:19] : [WARNING] - ENTRANDO EN UPDATE: 
+[27-Jun-2020 16:19:19] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[27-Jun-2020 16:19:19] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='5',cumplen='1',validar_infotributaria='0',oponenautorizar='0' WHERE id_alumno=11455
+[27-Jun-2020 16:19:19] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:19:19] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => yyyy
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 646187933
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[27-Jun-2020 16:19:19] : [WARNING] - yyyy
+[27-Jun-2020 16:19:19] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:19:19] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:19:19] : [WARNING] - INSERT INTO tributantes VALUES(11455,0,'yyyy','','','','646187933')
+[27-Jun-2020 16:19:19] : [WARNING] - 
+[27-Jun-2020 16:19:19] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:19:19] : [WARNING] - 
+[27-Jun-2020 16:19:19] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:19:19] : [WARNING] - 
+[27-Jun-2020 16:19:19] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:20:38] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[27-Jun-2020 16:20:38] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=5&cumplen=1&tributantes_nombre1=yyyy&tributantes_id_tributante1=385&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=646187933&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11455
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 50600154
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[27-Jun-2020 16:20:38] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[27-Jun-2020 16:20:38] : [WARNING] - solcalcbon=1&nmunidad=5&cumplen=1&tributantes_nombre1=yyyy&tributantes_id_tributante1=385&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=646187933&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:20:38] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[27-Jun-2020 16:20:38] : [WARNING] - solcalcbon=1&nmunidad=5&cumplen=1&tributantes_nombre1=yyyy&tributantes_id_tributante1=385&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=646187933&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:20:38] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[27-Jun-2020 16:20:38] : [WARNING] - {"solcalcbon":"1","nmunidad":"5","cumplen":"1","tributantes_nombre1":"yyyy","tributantes_id_tributante1":"385","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"646187933","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"oponenautorizar":0}
+[27-Jun-2020 16:20:38] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[27-Jun-2020 16:20:38] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 5
+    [cumplen] => 1
+    [tributantes_nombre1] => yyyy
+    [tributantes_id_tributante1] => 385
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 646187933
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [oponenautorizar] => 0
+)
+
+[27-Jun-2020 16:20:38] : [WARNING] - ENTRANDO EN UPDATE: 
+[27-Jun-2020 16:20:38] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[27-Jun-2020 16:20:38] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='5',cumplen='1',validar_infotributaria='0',oponenautorizar='0' WHERE id_alumno=11455
+[27-Jun-2020 16:20:38] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:20:38] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => yyyy
+            [id_tributante] => 385
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 646187933
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[27-Jun-2020 16:20:38] : [WARNING] - yyyy
+[27-Jun-2020 16:20:38] : [WARNING] - tributante existe:
+[27-Jun-2020 16:20:38] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:20:38] : [WARNING] - UPDATE tributantes SET nombre='yyyy',apellido1='',apellido2='',parentesco='',dni='646187933' WHERE id_tributante='385'
+[27-Jun-2020 16:20:38] : [WARNING] - 
+[27-Jun-2020 16:20:38] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:20:38] : [WARNING] - 
+[27-Jun-2020 16:20:38] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:20:38] : [WARNING] - 
+[27-Jun-2020 16:20:38] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:29:33] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[27-Jun-2020 16:29:33] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=5&cumplen=1&tributantes_nombre1=yyyy&tributantes_id_tributante1=385&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=646187933&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 11455
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 50600154
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[27-Jun-2020 16:29:33] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[27-Jun-2020 16:29:33] : [WARNING] - solcalcbon=1&nmunidad=5&cumplen=1&tributantes_nombre1=yyyy&tributantes_id_tributante1=385&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=646187933&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:29:33] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[27-Jun-2020 16:29:33] : [WARNING] - solcalcbon=1&nmunidad=5&cumplen=1&tributantes_nombre1=yyyy&tributantes_id_tributante1=385&tributantes_apellido11=&tributantes_apellido21=&tributantes_parentesco1=&tributantes_dni1=646187933&tributantes_nombre2=&tributantes_id_tributante2=0&tributantes_apellido12=&tributantes_apellido22=&tributantes_parentesco2=&tributantes_dni2=&tributantes_nombre3=&tributantes_id_tributante3=0&tributantes_apellido13=&tributantes_apellido23=&tributantes_parentesco3=&tributantes_dni3=&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:29:33] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[27-Jun-2020 16:29:33] : [WARNING] - {"solcalcbon":"1","nmunidad":"5","cumplen":"1","tributantes_nombre1":"yyyy","tributantes_id_tributante1":"385","tributantes_apellido11":"","tributantes_apellido21":"","tributantes_parentesco1":"","tributantes_dni1":"646187933","tributantes_nombre2":"","tributantes_id_tributante2":"0","tributantes_apellido12":"","tributantes_apellido22":"","tributantes_parentesco2":"","tributantes_dni2":"","tributantes_nombre3":"","tributantes_id_tributante3":"0","tributantes_apellido13":"","tributantes_apellido23":"","tributantes_parentesco3":"","tributantes_dni3":"","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"oponenautorizar":0}
+[27-Jun-2020 16:29:33] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[27-Jun-2020 16:29:33] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 5
+    [cumplen] => 1
+    [tributantes_nombre1] => yyyy
+    [tributantes_id_tributante1] => 385
+    [tributantes_apellido11] => 
+    [tributantes_apellido21] => 
+    [tributantes_parentesco1] => 
+    [tributantes_dni1] => 646187933
+    [tributantes_nombre2] => 
+    [tributantes_id_tributante2] => 0
+    [tributantes_apellido12] => 
+    [tributantes_apellido22] => 
+    [tributantes_parentesco2] => 
+    [tributantes_dni2] => 
+    [tributantes_nombre3] => 
+    [tributantes_id_tributante3] => 0
+    [tributantes_apellido13] => 
+    [tributantes_apellido23] => 
+    [tributantes_parentesco3] => 
+    [tributantes_dni3] => 
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [oponenautorizar] => 0
+)
+
+[27-Jun-2020 16:29:33] : [WARNING] - ENTRANDO EN UPDATE: 
+[27-Jun-2020 16:29:33] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[27-Jun-2020 16:29:33] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='5',cumplen='1',validar_infotributaria='0',oponenautorizar='0' WHERE id_alumno=11455
+[27-Jun-2020 16:29:33] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:29:33] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => yyyy
+            [id_tributante] => 385
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 646187933
+        )
+
+    [2] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [3] => Array
+        (
+            [nombre] => 
+            [id_tributante] => 0
+            [apellido1] => 
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[27-Jun-2020 16:29:33] : [WARNING] - yyyy
+[27-Jun-2020 16:29:33] : [WARNING] - tributante existe:
+[27-Jun-2020 16:29:33] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:29:33] : [WARNING] - UPDATE tributantes SET nombre='yyyy',apellido1='',apellido2='',parentesco='',dni='646187933' WHERE id_tributante='385'
+[27-Jun-2020 16:29:33] : [WARNING] - 
+[27-Jun-2020 16:29:33] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:29:33] : [WARNING] - 
+[27-Jun-2020 16:29:33] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:29:33] : [WARNING] - 
+[27-Jun-2020 16:29:33] : [WARNING] - tributante nuevo:
+[27-Jun-2020 16:31:56] : [WARNING] - SOLICITUD a4 RECIBIDA, DATOS POST BRUTOS:
+[27-Jun-2020 16:31:56] : [WARNING] - Array
+(
+    [fsol] => solcalcbon=1&nmunidad=3&cumplen=1&tributantes_nombre1=MARIA+TERESA&tributantes_id_tributante1=21&tributantes_apellido11=MATEO&tributantes_apellido21=SANMARTIN&tributantes_parentesco1=MADRE&tributantes_dni1=72977279G&tributantes_nombre2=DAVID&tributantes_id_tributante2=22&tributantes_apellido12=GARCIA&tributantes_apellido22=SANMARTIN&tributantes_parentesco2=PADRE&tributantes_dni2=72978481X&tributantes_nombre3=IZAN&tributantes_id_tributante3=307&tributantes_apellido13=GARCIA&tributantes_apellido23=MATEO&tributantes_parentesco3=HERMANO&tributantes_dni3=000000000&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+    [idsol] => 9059
+    [modo] => ACTUALIZAR SOLICITUD
+    [id_centro_destino] => 50600129
+    [ptsbaremo] => 
+    [rol] => alumno
+    [estado_convocatoria] => 40
+)
+
+[27-Jun-2020 16:31:56] : [WARNING] - POST RECIBIDO ACTUALIZANDO:
+[27-Jun-2020 16:31:56] : [WARNING] - solcalcbon=1&nmunidad=3&cumplen=1&tributantes_nombre1=MARIA+TERESA&tributantes_id_tributante1=21&tributantes_apellido11=MATEO&tributantes_apellido21=SANMARTIN&tributantes_parentesco1=MADRE&tributantes_dni1=72977279G&tributantes_nombre2=DAVID&tributantes_id_tributante2=22&tributantes_apellido12=GARCIA&tributantes_apellido22=SANMARTIN&tributantes_parentesco2=PADRE&tributantes_dni2=72978481X&tributantes_nombre3=IZAN&tributantes_id_tributante3=307&tributantes_apellido13=GARCIA&tributantes_apellido23=MATEO&tributantes_parentesco3=HERMANO&tributantes_dni3=000000000&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:31:56] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO - DATOS BRUTOS:
+[27-Jun-2020 16:31:56] : [WARNING] - solcalcbon=1&nmunidad=3&cumplen=1&tributantes_nombre1=MARIA+TERESA&tributantes_id_tributante1=21&tributantes_apellido11=MATEO&tributantes_apellido21=SANMARTIN&tributantes_parentesco1=MADRE&tributantes_dni1=72977279G&tributantes_nombre2=DAVID&tributantes_id_tributante2=22&tributantes_apellido12=GARCIA&tributantes_apellido22=SANMARTIN&tributantes_parentesco2=PADRE&tributantes_dni2=72978481X&tributantes_nombre3=IZAN&tributantes_id_tributante3=307&tributantes_apellido13=GARCIA&tributantes_apellido23=MATEO&tributantes_parentesco3=HERMANO&tributantes_dni3=000000000&tributantes_nombre4=&tributantes_apellido14=&tributantes_id_tributante4=0&tributantes_apellido24=&tributantes_parentesco4=&tributantes_dni4=&validar_infotributaria=0
+[27-Jun-2020 16:31:56] : [WARNING] - ACTUALIZAR FORMULARIO RECIBIDO: ACTUALIZAR SOLICITUDESTADO CONVOCATORIA: 40 
+[27-Jun-2020 16:31:56] : [WARNING] - {"solcalcbon":"1","nmunidad":"3","cumplen":"1","tributantes_nombre1":"MARIA TERESA","tributantes_id_tributante1":"21","tributantes_apellido11":"MATEO","tributantes_apellido21":"SANMARTIN","tributantes_parentesco1":"MADRE","tributantes_dni1":"72977279G","tributantes_nombre2":"DAVID","tributantes_id_tributante2":"22","tributantes_apellido12":"GARCIA","tributantes_apellido22":"SANMARTIN","tributantes_parentesco2":"PADRE","tributantes_dni2":"72978481X","tributantes_nombre3":"IZAN","tributantes_id_tributante3":"307","tributantes_apellido13":"GARCIA","tributantes_apellido23":"MATEO","tributantes_parentesco3":"HERMANO","tributantes_dni3":"000000000","tributantes_nombre4":"","tributantes_apellido14":"","tributantes_id_tributante4":"0","tributantes_apellido24":"","tributantes_parentesco4":"","tributantes_dni4":"","validar_infotributaria":"0","id_centro_destino":null,"oponenautorizar":0}
+[27-Jun-2020 16:31:56] : [WARNING] - ACTUALIZANDO SOLICITUD...
+[27-Jun-2020 16:31:56] : [WARNING] - Array
+(
+    [solcalcbon] => 1
+    [nmunidad] => 3
+    [cumplen] => 1
+    [tributantes_nombre1] => MARIA TERESA
+    [tributantes_id_tributante1] => 21
+    [tributantes_apellido11] => MATEO
+    [tributantes_apellido21] => SANMARTIN
+    [tributantes_parentesco1] => MADRE
+    [tributantes_dni1] => 72977279G
+    [tributantes_nombre2] => DAVID
+    [tributantes_id_tributante2] => 22
+    [tributantes_apellido12] => GARCIA
+    [tributantes_apellido22] => SANMARTIN
+    [tributantes_parentesco2] => PADRE
+    [tributantes_dni2] => 72978481X
+    [tributantes_nombre3] => IZAN
+    [tributantes_id_tributante3] => 307
+    [tributantes_apellido13] => GARCIA
+    [tributantes_apellido23] => MATEO
+    [tributantes_parentesco3] => HERMANO
+    [tributantes_dni3] => 000000000
+    [tributantes_nombre4] => 
+    [tributantes_apellido14] => 
+    [tributantes_id_tributante4] => 0
+    [tributantes_apellido24] => 
+    [tributantes_parentesco4] => 
+    [tributantes_dni4] => 
+    [validar_infotributaria] => 0
+    [id_centro_destino] => 
+    [oponenautorizar] => 0
+)
+
+[27-Jun-2020 16:31:56] : [WARNING] - ENTRANDO EN UPDATE: 
+[27-Jun-2020 16:31:56] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD ALUMNOS
+[27-Jun-2020 16:31:56] : [WARNING] - UPDATE alumnos SET solcalcbon='1',nmunidad='3',cumplen='1',validar_infotributaria='0',oponenautorizar='0' WHERE id_alumno=9059
+[27-Jun-2020 16:31:56] : [WARNING] - INICIANDO ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:31:56] : [WARNING] - Array
+(
+    [1] => Array
+        (
+            [nombre] => MARIA TERESA
+            [id_tributante] => 21
+            [apellido1] => MATEO
+            [apellido2] => SANMARTIN
+            [parentesco] => MADRE
+            [dni] => 72977279G
+        )
+
+    [2] => Array
+        (
+            [nombre] => DAVID
+            [id_tributante] => 22
+            [apellido1] => GARCIA
+            [apellido2] => SANMARTIN
+            [parentesco] => PADRE
+            [dni] => 72978481X
+        )
+
+    [3] => Array
+        (
+            [nombre] => IZAN
+            [id_tributante] => 307
+            [apellido1] => GARCIA
+            [apellido2] => MATEO
+            [parentesco] => HERMANO
+            [dni] => 000000000
+        )
+
+    [4] => Array
+        (
+            [nombre] => 
+            [apellido1] => 
+            [id_tributante] => 0
+            [apellido2] => 
+            [parentesco] => 
+            [dni] => 
+        )
+
+)
+
+[27-Jun-2020 16:31:56] : [WARNING] - MARIA TERESA
+[27-Jun-2020 16:31:56] : [WARNING] - tributante existe:
+[27-Jun-2020 16:31:56] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:31:56] : [WARNING] - UPDATE tributantes SET nombre='MARIA TERESA',apellido1='MATEO',apellido2='SANMARTIN',parentesco='MADRE',dni='72977279G' WHERE id_tributante='21'
+[27-Jun-2020 16:31:56] : [WARNING] - DAVID
+[27-Jun-2020 16:31:56] : [WARNING] - tributante existe:
+[27-Jun-2020 16:31:56] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:31:56] : [WARNING] - UPDATE tributantes SET nombre='DAVID',apellido1='GARCIA',apellido2='SANMARTIN',parentesco='PADRE',dni='72978481X' WHERE id_tributante='22'
+[27-Jun-2020 16:31:56] : [WARNING] - IZAN
+[27-Jun-2020 16:31:56] : [WARNING] - tributante existe:
+[27-Jun-2020 16:31:56] : [WARNING] - CONSULTA ACTUALIZACION SOLICITUD TRIBUTANTES
+[27-Jun-2020 16:31:56] : [WARNING] - UPDATE tributantes SET nombre='IZAN',apellido1='GARCIA',apellido2='MATEO',parentesco='HERMANO',dni='000000000' WHERE id_tributante='307'
+[27-Jun-2020 16:31:56] : [WARNING] - 
+[27-Jun-2020 16:31:56] : [WARNING] - tributante nuevo:

@@ -92,6 +92,14 @@ select a.id_centro_destino, a.id_alumno,a.nombre,a.apellido1,a.apellido1,b.apell
 
 Tabla de alumnos con hermanos, para la asignacion de n aleatorio
 create table alumnos_conhermanos select a.nasignado, a.id_centro_destino, a.id_alumno,a.nombre,a.apellido1,b.nombre as nombrehermano,b.id_alumno as idhermano from alumnos a, alumnos b where  a.apellido1=b.apellido1 and a.apellido2=b.apellido2 and a.fnac=b.fnac and a.id_alumno!=b.id_alumno and a.fase_solicitud!='borrador' and b.fase_solicitud!='borrador';
+
+Tablas de alumnnos de guarderias provisional y definitiva
+
+create table alumnos_provisional_final SELECT a.*,b.puntos_validados,c.nombre_centro from alumnos a, baremo b,centros c where a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino;
+create table alumnos_definitiva_final SELECT a.*,b.puntos_validados,c.nombre_centro from alumnos a, baremo b,centros c where a.id_alumno=b.id_alumno and c.id_centro=a.id_centro_destino;
+
+
+
 #################################################################################################################
 PREVIO ADMESPECIAL
 

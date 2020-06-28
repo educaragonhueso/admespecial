@@ -129,7 +129,7 @@ class ListadosController extends ControladorBase{
 		$solicitud=new Solicitud($this->adapter);
 		if($modo=='normal' or $modo=='anexo4')// listados previos al sorteo
     	{
-	    		$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia,'alumno');
+	    		$allsolicitudes=$solicitud->getAllSolSorteo($id_centro,$tiposol,$fase_sorteo,$subtipo_listado,$provincia,'alumnos');
  		}
 		if($modo=='baremadas' or $modo=='baremadasdef')// listados previos al sorteo
     	{
@@ -423,6 +423,8 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 	$tipoactual='';
 	$solplazaanterior='';
 	$solplazaactual='';
+	$solplaza='NORMAL';
+   
 	$alumno_anterior='';
 	$alumno_actual='';
 
@@ -462,8 +464,13 @@ DEFINITIVOS ESTADO: '.$estado_convocatoria);
 				}
          else $ncentro=0;
 			if($tipoactual!=$tipoanterior and $subtipo!='tributantes')
+         {
 				$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #84839e;'><td colspan='".$ncolumnas."'><b>".strtoupper($sol->tipoestudios)."</b></td></tr>";
-			if($solplazaactual!=$solplazaanterior and $subtipo!='tributantes')
+            if($solplazaactual==1) $solplaza='ACNEAE';
+            else $solplaza='NORMAL';
+         	$html.="<tr class='filasol' id='filasol".$sol->id_alumno."' style='color:white;background-color: #b2b1d8;font-size:9px'><td colspan='".$ncolumnas."'><b>".strtoupper($solplaza)."</b></td></tr>";
+         }
+			if($solplazaactual!=$solplazaanterior and $subtipo!='tributantes' and $tipoactual==$tipoanterior)
 			{
             if($solplazaactual==1) $solplaza='ACNEAE';
             else $solplaza='NORMAL';

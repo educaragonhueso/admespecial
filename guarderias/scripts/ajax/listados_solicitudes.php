@@ -77,6 +77,7 @@ $log_listado_solicitudes->warning("OBTENIENDO SOLICITUDES POSTT: ");
 //Para el caso de acceso del administrador o servicios provinciales
 if($_POST['rol']=='admin' or $_POST['rol']=='sp')
 {
+	$log_listado_solicitudes->warning("OBTENIENDO FASE SORTEO: ".$fase);
    if($numero_sorteo==0) print("<h2  style='text-align:end'>SORTEO NO REALIZADO</h2>");
    else   print("<h2 style='text-align:end'>NUMERO DE SORTEO: $numero_sorteo</h2>");
    if($_POST['rol']=='admin')
